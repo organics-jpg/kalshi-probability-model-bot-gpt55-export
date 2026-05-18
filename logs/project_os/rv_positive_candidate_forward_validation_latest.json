@@ -1,0 +1,465 @@
+{
+  "candidate_ids": [
+    "RVTERMLOCK001",
+    "RV600NEAR001"
+  ],
+  "candidate_results": [
+    {
+      "blocking_gates": [
+        "beats_current_calibrated_pnl",
+        "beats_current_probability",
+        "beats_market_probability",
+        "positive_ev_rank",
+        "positive_top_ev_bucket",
+        "all_terminal_oos_gates_passed"
+      ],
+      "candidate_id": "RVTERMLOCK001",
+      "family": "v28_successor",
+      "forward_or_oos_entries": 4108,
+      "forward_or_oos_markets": 7,
+      "forward_or_oos_pnl_cents": 17528.0,
+      "gate_results": {
+        "all_passed": false,
+        "beats_brownian_probability": true,
+        "beats_current_calibrated_pnl": false,
+        "beats_current_probability": false,
+        "beats_market_probability": false,
+        "beats_static_particle_pnl": true,
+        "enough_candidates": true,
+        "enough_markets": true,
+        "enough_selected": true,
+        "locked_oos_scope": true,
+        "positive_avg_pnl": true,
+        "positive_ev_rank": false,
+        "positive_top_ev_bucket": false,
+        "positive_total_pnl": true
+      },
+      "gates": [
+        {
+          "gate": "registry_pnl_positive",
+          "note": "This only qualifies the candidate for the validation sweep.",
+          "source": "Research OS registry normalized 7-day metric",
+          "status": "pass",
+          "threshold": "> 0",
+          "value": "$16826.88"
+        },
+        {
+          "gate": "locked_oos_scope",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": "true",
+          "value": true
+        },
+        {
+          "gate": "enough_candidates",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": ">= 1000",
+          "value": 4512
+        },
+        {
+          "gate": "enough_markets",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": ">= 5",
+          "value": 7
+        },
+        {
+          "gate": "enough_selected",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": ">= 250",
+          "value": 4108
+        },
+        {
+          "gate": "positive_total_pnl",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": "> 0c",
+          "value": 17528.0
+        },
+        {
+          "gate": "positive_avg_pnl",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": ">= 0.01c",
+          "value": 4.266796494644596
+        },
+        {
+          "gate": "beats_static_particle_pnl",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": "true",
+          "value": true
+        },
+        {
+          "gate": "beats_current_calibrated_pnl",
+          "note": "",
+          "source": "OOS report",
+          "status": "fail",
+          "threshold": "true",
+          "value": false
+        },
+        {
+          "gate": "beats_current_probability",
+          "note": "",
+          "source": "OOS report",
+          "status": "fail",
+          "threshold": "true",
+          "value": false
+        },
+        {
+          "gate": "beats_market_probability",
+          "note": "",
+          "source": "OOS report",
+          "status": "fail",
+          "threshold": "true",
+          "value": false
+        },
+        {
+          "gate": "beats_brownian_probability",
+          "note": "",
+          "source": "OOS report",
+          "status": "pass",
+          "threshold": "true",
+          "value": true
+        },
+        {
+          "gate": "positive_ev_rank",
+          "note": "",
+          "source": "OOS report",
+          "status": "fail",
+          "threshold": "true",
+          "value": -0.029958648511946667
+        },
+        {
+          "gate": "positive_top_ev_bucket",
+          "note": "",
+          "source": "OOS report",
+          "status": "fail",
+          "threshold": "> 0c",
+          "value": -3.356382978723404
+        },
+        {
+          "gate": "all_terminal_oos_gates_passed",
+          "note": "",
+          "source": "OOS report",
+          "status": "fail",
+          "threshold": "true",
+          "value": false
+        }
+      ],
+      "node_id": "candidate:v28_successor:RVTERMLOCK001",
+      "recommendation": "Do not promote RVTERMLOCK001; headline P&L is positive, but the linked OOS robustness gates still fail.",
+      "registry_evidence_level": "forward_shadow",
+      "registry_pnl_7d_display": "$16826.88",
+      "registry_pnl_7d_value_dollars": 16826.88,
+      "registry_pnl_confidence": "high",
+      "registry_pnl_display": "17528c (~$175.28)",
+      "registry_pnl_observed_window_days": 0.07291667,
+      "registry_pnl_standardization_status": "standardized",
+      "registry_pnl_value_dollars": 175.28,
+      "registry_pnl_window_display": "1.75h (assumed)",
+      "registry_status": "blocked",
+      "selected_variant": {
+        "avg_counterfactual_pnl_cents_per_selected": 4.266796494644596,
+        "beats_brownian": true,
+        "beats_current_calibrated": false,
+        "beats_market": false,
+        "brier": 0.13325159566712222,
+        "candidate_count": 4512,
+        "ev_rank_correlation_sign": -0.029958648511946667,
+        "log_loss": 0.4303351355101056,
+        "name": "rv233_blend50_fixed65",
+        "selected_count": 4108,
+        "top_ev_bucket_pnl_cents": -3.356382978723404,
+        "total_counterfactual_pnl_cents": 17528.0
+      },
+      "source_path": "logs\\particle_research\\locked_oos_plans\\particle_spot_rv_terminal_oos_RVTERMLOCK001_locked_oos_plan.json",
+      "validation_kind": "linked_oos_report",
+      "validation_source": "logs\\particle_research\\real_shadow\\particle_spot_rv_terminal_oos_RVTERMLOCK001\\reports\\spot_realized_vol_terminal_oos_locked.json",
+      "verdict": "blocked_oos_robustness_failed"
+    },
+    {
+      "blocking_gates": [
+        "prior_avg_entry_at_least_10c",
+        "forward_entries_at_least_target",
+        "forward_markets_at_least_target",
+        "forward_calendar_days_at_least_target",
+        "forward_weekend_sessions_at_least_target",
+        "forward_avg_entry_at_least_10c",
+        "forward_positive_roots_at_least_60pct",
+        "forward_positive_markets_at_least_60pct",
+        "forward_concentration_at_most_25pct",
+        "forward_repeated_entry_gate_pass",
+        "matched_v28_beaten_by_20pct",
+        "forward_gate_bundle_clean"
+      ],
+      "candidate_id": "RV600NEAR001",
+      "family": "rv600",
+      "forward_or_oos_entries": 31,
+      "forward_or_oos_markets": 24,
+      "forward_or_oos_pnl_cents": 133.0,
+      "gates": [
+        {
+          "gate": "registry_pnl_positive",
+          "note": "This only qualifies the candidate for the validation sweep.",
+          "source": "Research OS registry normalized 7-day metric",
+          "status": "pass",
+          "threshold": "> 0",
+          "value": "$9.31"
+        },
+        {
+          "gate": "prior_selected_pnl_positive",
+          "note": "",
+          "source": "locked plan prior diagnostic",
+          "status": "pass",
+          "threshold": "> 0c",
+          "value": 339.0
+        },
+        {
+          "gate": "prior_avg_entry_at_least_10c",
+          "note": "",
+          "source": "locked plan prior diagnostic",
+          "status": "fail",
+          "threshold": ">= 10c",
+          "value": 8.268292682926829
+        },
+        {
+          "gate": "prior_positive_roots_at_least_60pct",
+          "note": "",
+          "source": "locked plan prior diagnostic",
+          "status": "pass",
+          "threshold": ">= 0.60",
+          "value": 0.6363636363636364
+        },
+        {
+          "gate": "prior_positive_markets_at_least_60pct",
+          "note": "",
+          "source": "locked plan prior diagnostic",
+          "status": "pass",
+          "threshold": ">= 0.60",
+          "value": 0.6071428571428571
+        },
+        {
+          "gate": "prior_concentration_at_most_25pct",
+          "note": "",
+          "source": "locked plan prior diagnostic",
+          "status": "pass",
+          "threshold": "<= 0.25",
+          "value": 0.1799410029498525
+        },
+        {
+          "gate": "prior_last_window_positive",
+          "note": "",
+          "source": "locked plan prior diagnostic",
+          "status": "pass",
+          "threshold": "> 0c",
+          "value": 27.0
+        },
+        {
+          "gate": "forward_audit_available",
+          "note": "",
+          "source": "logs\\particle_research\\locked_oos_plans\\rv600_breadth_nearmiss_RV600NEAR001_locked_plan.json",
+          "status": "pass",
+          "threshold": "report exists",
+          "value": "locked_plan_forward_incomplete_or_failed"
+        },
+        {
+          "gate": "forward_entries_at_least_target",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 100",
+          "value": 31
+        },
+        {
+          "gate": "forward_markets_at_least_target",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 40",
+          "value": 24
+        },
+        {
+          "gate": "forward_calendar_days_at_least_target",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 10",
+          "value": 1
+        },
+        {
+          "gate": "forward_weekend_sessions_at_least_target",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 2",
+          "value": 0
+        },
+        {
+          "gate": "forward_selected_pnl_positive",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "pass",
+          "threshold": "> 0c",
+          "value": 133.0
+        },
+        {
+          "gate": "forward_avg_entry_at_least_10c",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 10.0c",
+          "value": 4.290322580645161
+        },
+        {
+          "gate": "forward_positive_roots_at_least_60pct",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 0.6",
+          "value": 0.5555555555555556
+        },
+        {
+          "gate": "forward_positive_markets_at_least_60pct",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": ">= 0.6",
+          "value": 0.4166666666666667
+        },
+        {
+          "gate": "forward_concentration_at_most_25pct",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": "<= 0.25",
+          "value": 0.5263157894736842
+        },
+        {
+          "gate": "forward_last_window_positive",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "pass",
+          "threshold": "> 0c",
+          "value": 40.0
+        },
+        {
+          "gate": "forward_no_fill_penalty_positive",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "pass",
+          "threshold": "> 0c",
+          "value": 133.0
+        },
+        {
+          "gate": "forward_repeated_entry_gate_pass",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": "true",
+          "value": false
+        },
+        {
+          "gate": "matched_v28_beaten_by_20pct",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": "selected >= matched v28 + 20%",
+          "value": {
+            "matched_v28_control_pnl_cents": 120.0,
+            "matched_v28_delta_cents": 13.0,
+            "selected_pnl_cents": 133.0
+          }
+        },
+        {
+          "gate": "all_required_accounting_modes_present",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "pass",
+          "threshold": "all_entries, one_per_side_per_market, position_capped",
+          "value": [
+            "all_entries",
+            "one_per_side_per_market",
+            "position_capped"
+          ]
+        },
+        {
+          "gate": "forward_gate_bundle_clean",
+          "note": "",
+          "source": "locked-plan forward audit",
+          "status": "fail",
+          "threshold": "no rejection reasons",
+          "value": "avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct"
+        }
+      ],
+      "node_id": "candidate:rv600:RV600NEAR001",
+      "primary_summary": {
+        "accepted_entries": 31,
+        "accounting_mode": "position_capped",
+        "added_entry_count": 7,
+        "added_entry_pnl_cents": 116.0,
+        "avg_added_entry_pnl_cents": 16.571428571428573,
+        "avg_pnl_per_entry_cents": 4.290322580645161,
+        "avg_pnl_per_market_cents": 5.541666666666667,
+        "candidate_rows": 14110,
+        "distinct_markets": 24,
+        "fill_adjusted_expected_pnl_cents": 206.5847057168079,
+        "gate_count": 3,
+        "last_window_pnl_cents": 40.0,
+        "locked_candidate_eligible": false,
+        "matched_v28_control_pnl_cents": 120.0,
+        "matched_v28_delta_cents": 13.0,
+        "max_single_market_pnl_share": 0.5263157894736842,
+        "no_fill_penalty_pnl_cents": 133.0,
+        "positive_market_rate": 0.4166666666666667,
+        "positive_root_count": 10,
+        "positive_root_rate": 0.5555555555555556,
+        "rejection_reason": "avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct",
+        "repeated_entry_gate_pass": false,
+        "retrospective_gate_pass": false,
+        "run_count": 18,
+        "selected_pnl_cents": 133.0,
+        "variant": "rv600_primary_side_flip_only_broad_70_600_ev4",
+        "worst_market_pnl_cents": -43.0
+      },
+      "recommendation": "Keep RV600NEAR001 frozen as diagnostic-only; positive P&L is not enough until breadth, matched-v28, concentration, and sample gates clear together.",
+      "registry_evidence_level": "forward_shadow",
+      "registry_pnl_7d_display": "$9.31",
+      "registry_pnl_7d_value_dollars": 9.31,
+      "registry_pnl_confidence": "high",
+      "registry_pnl_display": "133c (~$1.33)",
+      "registry_pnl_observed_window_days": 1.0,
+      "registry_pnl_standardization_status": "standardized",
+      "registry_pnl_value_dollars": 1.33,
+      "registry_pnl_window_display": "1d (exact)",
+      "registry_status": "blocked",
+      "sample_gates": {
+        "accepted_entries": false,
+        "calendar_days": false,
+        "distinct_markets": false,
+        "weekend_sessions": false
+      },
+      "source_path": "logs\\particle_research\\locked_oos_plans\\rv600_breadth_nearmiss_RV600NEAR001_locked_plan.json",
+      "validation_kind": "rv600_locked_plan_forward_audit",
+      "validation_source": "logs\\project_os\\rv_positive_candidate_forward_audit_RV600NEAR001.json",
+      "verdict": "blocked_forward_failed_and_underpowered"
+    }
+  ],
+  "generated_utc": "2026-05-18T18:32:46Z",
+  "overall_decision": "positive_pnl_candidates_remain_blocked_or_underpowered",
+  "positive_rv_candidate_count": 2,
+  "registry_generated_at_utc": "2026-05-18T18:32:31Z",
+  "registry_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\project_os\\registry_latest.json",
+  "research_only": true,
+  "schema_version": "research-os-rv-positive-forward-validation-v1",
+  "scope": "Positive-PnL RV candidates from the current Research OS registry; no live bot, order, scorer, threshold, secret, live state, or 8501 dashboard changes."
+}

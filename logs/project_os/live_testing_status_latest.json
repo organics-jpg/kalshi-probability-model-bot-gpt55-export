@@ -1,0 +1,72 @@
+{
+  "generated_at_utc": "2026-05-18T19:24:52Z",
+  "live_tests": [
+    {
+      "bot_storage_tag": "live_v28_successor_time_safe_size2",
+      "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+      "family": "v28_successor",
+      "implementation": {
+        "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+        "entry_mode": "tested_shadow_rule",
+        "exit_guard_mode": "disabled",
+        "exit_stop_loss_enabled": false,
+        "model_hash": "9b461a310d06c06b55af2e2d",
+        "mushroom_v28_live_exit_enabled": false,
+        "position_size": 2,
+        "shadow_min_edge_cents": 1.0,
+        "source_row_gate": "raw v28 mushroom_v28_approved gate",
+        "successor_gate": "candidate_edge_cents >= 1.0, matching frozen shadow_enter"
+      },
+      "label": "v28s_boundary_monotonic_time_safe_v001 / logged_events_diagnostic",
+      "launch_status": "running",
+      "mode": "live_order",
+      "next_action": "Monitor fills, settlement, and successor telemetry; keep live testing bounded to this explicit candidate.",
+      "no_max_drawdown": true,
+      "node_id": "candidate:v28_successor:v28s_boundary_monotonic_time_safe_v001_logged_events_diagnostic",
+      "pid": 26816,
+      "position_size": 2,
+      "started_at_utc": "2026-05-18T19:24:52Z",
+      "strategy_tag": "v28_successor_time_safe_live_size2",
+      "summary": "Controlled live test for the frozen time-safe v28 successor surface at position size 2."
+    }
+  ],
+  "outputs": {
+    "json": "logs/project_os/live_testing_status_latest.json",
+    "markdown": "logs/project_os/live_testing_status_latest.md"
+  },
+  "schema": "project_os_live_testing_status_v1",
+  "shadow_tests": [
+    {
+      "bot_storage_tag": "v28_successor_shadow_candidates",
+      "candidate_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+      "family": "v28_successor",
+      "label": "v28s_live_pnl_midband_no_fade_yes_v019",
+      "launch_status": "running",
+      "mode": "live_shadow",
+      "next_action": "Live-shadow collection is running; refresh the atlas after the next sidecar cycle for updated evidence.",
+      "no_max_drawdown": true,
+      "node_id": "candidate:v28_successor:v28s_live_pnl_midband_no_fade_yes_v019",
+      "pid": 26984,
+      "position_size": 0,
+      "started_at_utc": "2026-05-18T19:24:52Z",
+      "strategy_tag": "v28_successor_market_coverage_shadow_loop",
+      "summary": "No-order v28 successor market coverage shadow collection."
+    },
+    {
+      "bot_storage_tag": "v28_successor_shadow_candidates",
+      "candidate_id": "CONSENSUSLOCK001",
+      "family": "v28_successor",
+      "label": "CONSENSUSLOCK001",
+      "launch_status": "running",
+      "mode": "live_shadow",
+      "next_action": "Live-shadow collection is running; refresh the atlas after the next sidecar cycle for updated evidence.",
+      "no_max_drawdown": true,
+      "node_id": "candidate:v28_successor:CONSENSUSLOCK001",
+      "pid": 26984,
+      "position_size": 0,
+      "started_at_utc": "2026-05-18T19:24:52Z",
+      "strategy_tag": "v28_successor_market_coverage_shadow_loop",
+      "summary": "No-order v28 successor market coverage shadow collection."
+    }
+  ]
+}

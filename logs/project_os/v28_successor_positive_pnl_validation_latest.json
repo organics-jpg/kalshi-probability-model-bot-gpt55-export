@@ -1,0 +1,41 @@
+{
+  "generated_date": "2026-05-18",
+  "scope": "research_only_v28_successor_positive_pnl_validation",
+  "no_live_bot_logic_touched": true,
+  "pslice_verdict": {
+    "readiness_candidate_count": 0,
+    "hard_veto_count": 3,
+    "conclusion": "No particle-like PSLICE lock clears the combined readiness screen; keep locks shadow-only."
+  },
+  "live_pnl_policy": {
+    "policy_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+    "policy_hash": "5bf8d66dbe2b31e01d38abe8a0238e68",
+    "readiness_verdict": "level_1_bootstrap_complete",
+    "level_2_controlled_live_test_ready": false,
+    "primary_rows_after_policy_hash": 314,
+    "primary_markets_after_policy_hash": 12,
+    "primary_entered_rows_after_policy_hash": 3,
+    "primary_net_pnl_cents": 70.0,
+    "primary_delta_vs_v28_cents": 762.3,
+    "primary_v28_net_pnl_cents": -692.3
+  },
+  "hard_promotion_verifier": {
+    "overall_verdict": "promotable",
+    "candidate_count": 20,
+    "promotable_candidate_count": 1,
+    "blocked_candidate_count": 19,
+    "promotable_candidate": {
+      "variant": "logged_events_diagnostic",
+      "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+      "model_type": "monotonic_tabular_calibration",
+      "model_track": "pure_physics",
+      "model_hash": "9b461a310d06c06b55af2e2d",
+      "forward_rows": 226,
+      "forward_markets": 44,
+      "delta_brier_candidate_minus_v28": -0.0002283605261196031,
+      "delta_logloss_candidate_minus_v28": -0.0023925328139765556,
+      "near_boundary_delta_brier_candidate_minus_v28": -0.00008205392621885022
+    }
+  },
+  "recommended_next_move": "Continue no-order live-forward collection and review for v28s_live_pnl_midband_no_fade_yes_v019 plus v28s_boundary_monotonic_time_safe_v001; require explicit Level 2 controlled-live-test gate before orders."
+}

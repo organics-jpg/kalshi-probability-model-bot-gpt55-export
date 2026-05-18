@@ -1,0 +1,948 @@
+{
+  "counts": {
+    "completed": 28
+  },
+  "generated_at_utc": "2026-05-18T18:32:03Z",
+  "outcomes": [
+    {
+      "blockers": [
+        "next_step:beats_brownian_probability",
+        "next_step:beats_current_calibrated_pnl",
+        "next_step:beats_current_probability",
+        "next_step:beats_market_probability",
+        "next_step:beats_static_particle_pnl",
+        "next_step:positive_avg_pnl",
+        "next_step:positive_ev_rank",
+        "next_step:positive_top_ev_bucket",
+        "next_step:positive_total_pnl"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $-38793.22; source -28864c (~$-288.64); gates beats_brownian_probability, beats_current_calibrated_pnl, beats_current_probability, beats_market_probability, beats_static_particle_pnl, positive_avg_pnl, positive_ev_rank, positive_top_ev_bucket, positive_total_pnl",
+      "family": "rv600",
+      "kind": "candidate",
+      "label": "RESIDLOCK001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_brownian_probability",
+          "beats_current_calibrated_pnl",
+          "beats_current_probability",
+          "beats_market_probability",
+          "beats_static_particle_pnl",
+          "positive_avg_pnl",
+          "positive_ev_rank",
+          "positive_top_ev_bucket",
+          "positive_total_pnl"
+        ],
+        "next_step_pnl_7d_display": "$-38793.22",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "-28864c (~$-288.64)",
+        "next_step_window": "1.25h (assumed)"
+      },
+      "next_action": "Archive residual-blend-as-is; fresh locked OOS failed hard, so do not collect more rows without a new predeclared blocker mechanism.",
+      "node_id": "candidate:rv600:RESIDLOCK001",
+      "outcome": "local_gate_review_completed_negative_or_nonpositive",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_residual_blend_oos_RESIDLOCK001\\reports\\residual_blend_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\residual_blend_RESIDLOCK001_locked_oos_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:sample_accepted_entries",
+        "next_step:sample_calendar_days",
+        "next_step:sample_distinct_markets",
+        "next_step:sample_weekend_sessions",
+        "next_step:avg_entry_below_10c",
+        "next_step:positive_roots_below_60pct",
+        "next_step:positive_markets_below_60pct",
+        "next_step:single_market_share_above_25pct",
+        "next_step:does_not_beat_matched_v28_by_20pct"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $9.31; source 133c (~$1.33); gates sample_accepted_entries, sample_calendar_days, sample_distinct_markets, sample_weekend_sessions, avg_entry_below_10c, positive_roots_below_60pct, positive_markets_below_60pct, single_market_share_above_25pct, does_not_beat_matched_v28_by_20pct",
+      "family": "rv600",
+      "kind": "candidate",
+      "label": "RV600NEAR001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "sample_accepted_entries",
+          "sample_calendar_days",
+          "sample_distinct_markets",
+          "sample_weekend_sessions",
+          "avg_entry_below_10c",
+          "positive_roots_below_60pct",
+          "positive_markets_below_60pct",
+          "single_market_share_above_25pct",
+          "does_not_beat_matched_v28_by_20pct"
+        ],
+        "next_step_pnl_7d_display": "$9.31",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "133c (~$1.33)",
+        "next_step_window": "1d (exact)"
+      },
+      "next_action": "Keep frozen diagnostic, not promotable; positive P&L is too thin/concentrated and still fails sample, breadth, and matched-v28 gates.",
+      "node_id": "candidate:rv600:RV600NEAR001",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\project_os\\rv_positive_candidate_forward_audit_RV600NEAR001.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\rv600_breadth_nearmiss_RV600NEAR001_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:sample_accepted_entries",
+        "next_step:sample_calendar_days",
+        "next_step:sample_distinct_markets",
+        "next_step:sample_weekend_sessions",
+        "next_step:nonpositive_pnl",
+        "next_step:avg_entry_below_10c",
+        "next_step:positive_roots_below_60pct",
+        "next_step:positive_markets_below_60pct",
+        "next_step:does_not_beat_matched_v28_by_20pct",
+        "next_step:no_fill_penalty_nonpositive",
+        "next_step:does_not_beat_single_market",
+        "next_step:added_entries_nonpositive",
+        "next_step:avg_market_not_improved",
+        "next_step:market_drawdown_worse_than_25pct"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $-9.52; source -136c (~$-1.36); gates sample_accepted_entries, sample_calendar_days, sample_distinct_markets, sample_weekend_sessions, nonpositive_pnl, avg_entry_below_10c, positive_roots_below_60pct, positive_markets_below_60pct, does_not_beat_matched_v28_by_20pct, no_fill_penalty_nonpositive, does_not_beat_single_market, added_entries_nonpositive, avg_market_not_improved, market_drawdown_worse_than_25pct",
+      "family": "rv600",
+      "kind": "candidate",
+      "label": "RV600REV001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "sample_accepted_entries",
+          "sample_calendar_days",
+          "sample_distinct_markets",
+          "sample_weekend_sessions",
+          "nonpositive_pnl",
+          "avg_entry_below_10c",
+          "positive_roots_below_60pct",
+          "positive_markets_below_60pct",
+          "does_not_beat_matched_v28_by_20pct",
+          "no_fill_penalty_nonpositive",
+          "does_not_beat_single_market",
+          "added_entries_nonpositive",
+          "avg_market_not_improved",
+          "market_drawdown_worse_than_25pct"
+        ],
+        "next_step_pnl_7d_display": "$-9.52",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "-136c (~$-1.36)",
+        "next_step_window": "1d (exact)"
+      },
+      "next_action": "Archive or park this revision unless a newly predeclared RV600 mechanism changes the trade set; current forward economics are negative.",
+      "node_id": "candidate:rv600:RV600REV001",
+      "outcome": "local_gate_review_completed_negative_or_nonpositive",
+      "source_paths": [
+        "logs\\project_os\\rv_positive_candidate_forward_audit_RV600REV001.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\rv600_revision_RV600REV001_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:positive_top_ev_bucket"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $1620.64; source 1447c (~$14.47); gates positive_top_ev_bucket",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "CONSENSUSLOCK001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "positive_top_ev_bucket"
+        ],
+        "next_step_pnl_7d_display": "$1620.64",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "1447c (~$14.47)",
+        "next_step_window": "1.5h (assumed)"
+      },
+      "next_action": "Do not rerun unchanged; redesign the candidate to address positive_top_ev_bucket before more rows.",
+      "node_id": "candidate:v28_successor:CONSENSUSLOCK001",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_side_consensus_oos_CONSENSUSLOCK001\\reports\\side_consensus_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\side_consensus_CONSENSUSLOCK001_locked_oos_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_brownian_probability",
+        "next_step:beats_static_particle_pnl",
+        "next_step:enough_markets"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $79514.40; source 47330c (~$473.30); gates beats_brownian_probability, beats_static_particle_pnl, enough_markets",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "GAUSS45LOCK001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_brownian_probability",
+          "beats_static_particle_pnl",
+          "enough_markets"
+        ],
+        "next_step_pnl_7d_display": "$79514.40",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "47330c (~$473.30)",
+        "next_step_window": "1h (assumed)"
+      },
+      "next_action": "Block for insufficient markets plus benchmark failures; collect fresh locked OOS only after the mechanism changes.",
+      "node_id": "candidate:v28_successor:GAUSS45LOCK001",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_fixed_terminal_oos_GAUSS45LOCK001\\reports\\fixed_terminal_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\fixed_terminal_GAUSS45LOCK001_locked_oos_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_brownian_probability"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $47714.88; source 49703c (~$497.03); gates beats_brownian_probability",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "GAUSS45LOCK002",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_brownian_probability"
+        ],
+        "next_step_pnl_7d_display": "$47714.88",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "49703c (~$497.03)",
+        "next_step_window": "1.75h (assumed)"
+      },
+      "next_action": "Keep as near-miss only; require Brownian-probability improvement before any more collection.",
+      "node_id": "candidate:v28_successor:GAUSS45LOCK002",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_fixed_terminal_oos_GAUSS45LOCK002\\reports\\fixed_terminal_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\fixed_terminal_GAUSS45LOCK002_locked_oos_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_current_probability",
+        "next_step:beats_market_probability",
+        "next_step:beats_static_particle_pnl",
+        "next_step:positive_avg_pnl",
+        "next_step:positive_ev_rank",
+        "next_step:positive_top_ev_bucket",
+        "next_step:positive_total_pnl"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $-8128.96; source -7258c (~$-72.58); gates beats_current_probability, beats_market_probability, beats_static_particle_pnl, positive_avg_pnl, positive_ev_rank, positive_top_ev_bucket, positive_total_pnl",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "GAUSS45LOCK003",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_current_probability",
+          "beats_market_probability",
+          "beats_static_particle_pnl",
+          "positive_avg_pnl",
+          "positive_ev_rank",
+          "positive_top_ev_bucket",
+          "positive_total_pnl"
+        ],
+        "next_step_pnl_7d_display": "$-8128.96",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "-7258c (~$-72.58)",
+        "next_step_window": "1.5h (assumed)"
+      },
+      "next_action": "Archive or redesign this candidate; local OOS/forward evidence is nonpositive and failed beats_current_probability, beats_market_probability, beats_static_particle_pnl, positive_avg_pnl.",
+      "node_id": "candidate:v28_successor:GAUSS45LOCK003",
+      "outcome": "local_gate_review_completed_negative_or_nonpositive",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_fixed_terminal_oos_GAUSS45LOCK003\\reports\\fixed_terminal_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\particle_fixed_terminal_oos_GAUSS45LOCK003_locked_oos_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_baseline_brier",
+        "next_step:beats_baseline_logloss",
+        "next_step:positive_selected_market_share",
+        "next_step:positive_top_ev_market_share"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $126.14; source 450.5c (~$4.50); gates beats_baseline_brier, beats_baseline_logloss, positive_selected_market_share, positive_top_ev_market_share",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "PSLICELOCK001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_baseline_brier",
+          "beats_baseline_logloss",
+          "positive_selected_market_share",
+          "positive_top_ev_market_share"
+        ],
+        "next_step_pnl_7d_display": "$126.14",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "450.5c (~$4.50)",
+        "next_step_window": "6h (assumed)"
+      },
+      "next_action": "Repair slice calibration and positive-market-share gates before collecting more rows.",
+      "node_id": "candidate:v28_successor:PSLICELOCK001",
+      "outcome": "local_slice_oos_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\reports\\paired_sidecar_slice_oos_PSLICELOCK001_latest.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\paired_sidecar_slice_PSLICELOCK001_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_baseline_brier",
+        "next_step:beats_baseline_logloss",
+        "next_step:positive_selected_market_share",
+        "next_step:positive_top_ev_market_share"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $467.20; source 1460c (~$14.60); gates beats_baseline_brier, beats_baseline_logloss, positive_selected_market_share, positive_top_ev_market_share",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "PSLICELOCK002",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_baseline_brier",
+          "beats_baseline_logloss",
+          "positive_selected_market_share",
+          "positive_top_ev_market_share"
+        ],
+        "next_step_pnl_7d_display": "$467.20",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "1460c (~$14.60)",
+        "next_step_window": "5.25h (assumed)"
+      },
+      "next_action": "Repair slice calibration and positive-market-share gates before collecting more rows.",
+      "node_id": "candidate:v28_successor:PSLICELOCK002",
+      "outcome": "local_slice_oos_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\reports\\paired_sidecar_slice_oos_PSLICELOCK002_latest.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\paired_sidecar_slice_PSLICELOCK002_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_baseline_brier",
+        "next_step:beats_baseline_logloss",
+        "next_step:positive_selected_market_share",
+        "next_step:positive_top_ev_market_share"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $485.28; source 1516.5c (~$15.16); gates beats_baseline_brier, beats_baseline_logloss, positive_selected_market_share, positive_top_ev_market_share",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "PSLICELOCK003",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_baseline_brier",
+          "beats_baseline_logloss",
+          "positive_selected_market_share",
+          "positive_top_ev_market_share"
+        ],
+        "next_step_pnl_7d_display": "$485.28",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "1516.5c (~$15.16)",
+        "next_step_window": "5.25h (assumed)"
+      },
+      "next_action": "Repair slice calibration and positive-market-share gates before collecting more rows.",
+      "node_id": "candidate:v28_successor:PSLICELOCK003",
+      "outcome": "local_slice_oos_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\reports\\paired_sidecar_slice_oos_PSLICELOCK003_latest.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\paired_sidecar_slice_PSLICELOCK003_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_baseline_brier",
+        "next_step:beats_baseline_logloss",
+        "next_step:enough_fresh_markets",
+        "next_step:enough_selected",
+        "next_step:enough_slice_markets",
+        "next_step:enough_slice_rows",
+        "next_step:positive_avg_pnl",
+        "next_step:positive_selected_market_share",
+        "next_step:positive_selected_pnl",
+        "next_step:positive_top_ev_market_share"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $-15.22; source -31.7c (~$-0.32); gates beats_baseline_brier, beats_baseline_logloss, enough_fresh_markets, enough_selected, enough_slice_markets, enough_slice_rows, positive_avg_pnl, positive_selected_market_share, positive_selected_pnl, positive_top_ev_market_share",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "PSLICELOCK004",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_baseline_brier",
+          "beats_baseline_logloss",
+          "enough_fresh_markets",
+          "enough_selected",
+          "enough_slice_markets",
+          "enough_slice_rows",
+          "positive_avg_pnl",
+          "positive_selected_market_share",
+          "positive_selected_pnl",
+          "positive_top_ev_market_share"
+        ],
+        "next_step_pnl_7d_display": "$-15.22",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "-31.7c (~$-0.32)",
+        "next_step_window": "3.5h (assumed)"
+      },
+      "next_action": "Block or archive this slice unless redesigned; current local OOS is negative or underpowered after fees.",
+      "node_id": "candidate:v28_successor:PSLICELOCK004",
+      "outcome": "local_slice_oos_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\reports\\paired_sidecar_slice_oos_PSLICELOCK004_latest.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\paired_sidecar_slice_PSLICELOCK004_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_baseline_brier",
+        "next_step:beats_baseline_logloss",
+        "next_step:enough_fresh_markets",
+        "next_step:enough_selected",
+        "next_step:enough_slice_markets",
+        "next_step:enough_slice_rows",
+        "next_step:positive_avg_pnl",
+        "next_step:positive_selected_market_share",
+        "next_step:positive_selected_pnl",
+        "next_step:positive_top_ev_bucket",
+        "next_step:positive_top_ev_market_share"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $-3.22; source -6.7c (~$-0.07); gates beats_baseline_brier, beats_baseline_logloss, enough_fresh_markets, enough_selected, enough_slice_markets, enough_slice_rows, positive_avg_pnl, positive_selected_market_share, positive_selected_pnl, positive_top_ev_bucket, positive_top_ev_market_share",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "PSLICELOCK005",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_baseline_brier",
+          "beats_baseline_logloss",
+          "enough_fresh_markets",
+          "enough_selected",
+          "enough_slice_markets",
+          "enough_slice_rows",
+          "positive_avg_pnl",
+          "positive_selected_market_share",
+          "positive_selected_pnl",
+          "positive_top_ev_bucket",
+          "positive_top_ev_market_share"
+        ],
+        "next_step_pnl_7d_display": "$-3.22",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "-6.7c (~$-0.07)",
+        "next_step_window": "3.5h (assumed)"
+      },
+      "next_action": "Block or archive this slice unless redesigned; current local OOS is negative or underpowered after fees.",
+      "node_id": "candidate:v28_successor:PSLICELOCK005",
+      "outcome": "local_slice_oos_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\reports\\paired_sidecar_slice_oos_PSLICELOCK005_latest.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\paired_sidecar_slice_PSLICELOCK005_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_current_calibrated_pnl",
+        "next_step:beats_current_probability",
+        "next_step:beats_market_probability",
+        "next_step:positive_ev_rank",
+        "next_step:positive_top_ev_bucket"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $16826.88; source 17528c (~$175.28); gates beats_current_calibrated_pnl, beats_current_probability, beats_market_probability, positive_ev_rank, positive_top_ev_bucket",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "RVTERMLOCK001",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_current_calibrated_pnl",
+          "beats_current_probability",
+          "beats_market_probability",
+          "positive_ev_rank",
+          "positive_top_ev_bucket"
+        ],
+        "next_step_pnl_7d_display": "$16826.88",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "17528c (~$175.28)",
+        "next_step_window": "1.75h (assumed)"
+      },
+      "next_action": "Do not rerun unchanged; redesign the candidate to address beats_current_calibrated_pnl, beats_current_probability, beats_market_probability, positive_ev_rank before more rows.",
+      "node_id": "candidate:v28_successor:RVTERMLOCK001",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_spot_rv_terminal_oos_RVTERMLOCK001\\reports\\spot_realized_vol_terminal_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\particle_spot_rv_terminal_oos_RVTERMLOCK001_locked_oos_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_current_calibrated_pnl",
+        "next_step:beats_current_probability",
+        "next_step:beats_market_probability",
+        "next_step:beats_static_particle_pnl",
+        "next_step:positive_ev_rank"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $5124.00; source 4575c (~$45.75); gates beats_current_calibrated_pnl, beats_current_probability, beats_market_probability, beats_static_particle_pnl, positive_ev_rank",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "dynamic_particle600_next_locked_plan",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_current_calibrated_pnl",
+          "beats_current_probability",
+          "beats_market_probability",
+          "beats_static_particle_pnl",
+          "positive_ev_rank"
+        ],
+        "next_step_pnl_7d_display": "$5124.00",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "4575c (~$45.75)",
+        "next_step_window": "1.5h (assumed)"
+      },
+      "next_action": "Do not rerun unchanged; redesign the candidate to address beats_current_calibrated_pnl, beats_current_probability, beats_market_probability, beats_static_particle_pnl before more rows.",
+      "node_id": "candidate:v28_successor:dynamic_particle600_next_locked_plan",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_dynamic600_oos_20260511TLOCKEDNEXT2\\reports\\dynamic_particle_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\dynamic_particle600_next_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_current_calibrated_pnl"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $43553.66; source 32406c (~$324.06); gates beats_current_calibrated_pnl",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "dynamic_particle_next_locked_plan",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_current_calibrated_pnl"
+        ],
+        "next_step_pnl_7d_display": "$43553.66",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "32406c (~$324.06)",
+        "next_step_window": "1.25h (assumed)"
+      },
+      "next_action": "Do not rerun unchanged; redesign the candidate to address beats_current_calibrated_pnl before more rows.",
+      "node_id": "candidate:v28_successor:dynamic_particle_next_locked_plan",
+      "outcome": "local_gate_review_completed",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_dynamic_oos_20260511TLOCKEDNEXT\\reports\\dynamic_particle_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\dynamic_particle_next_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "next_step:beats_base_pnl",
+        "next_step:positive_avg_pnl",
+        "next_step:positive_top_ev_bucket",
+        "next_step:positive_total_pnl"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "forward_shadow",
+      "evidence_summary": "P&L/7d $-17673.60; source -13150c (~$-131.50); gates beats_base_pnl, positive_avg_pnl, positive_top_ev_bucket, positive_total_pnl",
+      "family": "v28_successor",
+      "kind": "candidate",
+      "label": "side_safety_oos_next_locked_plan",
+      "metrics": {
+        "next_step_failed_gates": [
+          "beats_base_pnl",
+          "positive_avg_pnl",
+          "positive_top_ev_bucket",
+          "positive_total_pnl"
+        ],
+        "next_step_pnl_7d_display": "$-17673.60",
+        "next_step_review_source": "registry_and_linked_local_artifacts",
+        "next_step_source_pnl_display": "-13150c (~$-131.50)",
+        "next_step_window": "1.25h (assumed)"
+      },
+      "next_action": "Archive or redesign this candidate; local OOS/forward evidence is nonpositive and failed beats_base_pnl, positive_avg_pnl, positive_top_ev_bucket, positive_total_pnl.",
+      "node_id": "candidate:v28_successor:side_safety_oos_next_locked_plan",
+      "outcome": "local_gate_review_completed_negative_or_nonpositive",
+      "source_paths": [
+        "logs\\particle_research\\real_shadow\\particle_side_safety_oos_20260511TLOCKED\\reports\\side_safety_oos_locked.json",
+        "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\locked_oos_plans\\side_safety_oos_next_locked_plan.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 0 stats; 0 forward; 0 live; flags NONE",
+      "family": "dashboard_ui",
+      "kind": "family",
+      "label": "Dashboard Ui",
+      "metrics": {
+        "family_next_step_flags": [],
+        "family_next_step_kind": "support_tooling",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep out of strategy ranking; link only as provenance, dashboard, or infrastructure support.",
+      "node_id": "family:dashboard_ui",
+      "outcome": "support_tooling",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "archived"
+    },
+    {
+      "blockers": [],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 1 stats; 0 forward; 0 live; flags NONE",
+      "family": "infrastructure",
+      "kind": "family",
+      "label": "Infrastructure",
+      "metrics": {
+        "family_next_step_flags": [],
+        "family_next_step_kind": "support_tooling",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep out of strategy ranking; link only as provenance, dashboard, or infrastructure support.",
+      "node_id": "family:infrastructure",
+      "outcome": "support_tooling",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "active"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_FORWARD_EVIDENCE",
+        "family_next_step:DATA_WITHOUT_CANDIDATE"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 5 stats; 0 forward; 5 live; flags NO_CANDIDATE, NO_FORWARD_EVIDENCE, DATA_WITHOUT_CANDIDATE",
+      "family": "legacy_live",
+      "kind": "family",
+      "label": "Legacy Live",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_FORWARD_EVIDENCE",
+          "DATA_WITHOUT_CANDIDATE"
+        ],
+        "family_next_step_kind": "baseline_or_live_reference",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep as baseline/stat reference unless one artifact is explicitly wrapped as a frozen candidate with forward validation criteria.",
+      "node_id": "family:legacy_live",
+      "outcome": "baseline_or_live_reference",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "worth_watching"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_FORWARD_EVIDENCE",
+        "family_next_step:DATA_WITHOUT_CANDIDATE"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 32 stats; 0 forward; 52 live; flags NO_CANDIDATE, NO_FORWARD_EVIDENCE, DATA_WITHOUT_CANDIDATE",
+      "family": "live_v28",
+      "kind": "family",
+      "label": "Live V28",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_FORWARD_EVIDENCE",
+          "DATA_WITHOUT_CANDIDATE"
+        ],
+        "family_next_step_kind": "baseline_or_live_reference",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep as baseline/stat reference unless one artifact is explicitly wrapped as a frozen candidate with forward validation criteria.",
+      "node_id": "family:live_v28",
+      "outcome": "baseline_or_live_reference",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "worth_watching"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_FORWARD_EVIDENCE",
+        "family_next_step:NO_STATS"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 0 stats; 0 forward; 0 live; flags NO_CANDIDATE, NO_FORWARD_EVIDENCE, NO_STATS",
+      "family": "ninety_touch",
+      "kind": "family",
+      "label": "Ninety Touch",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_FORWARD_EVIDENCE",
+          "NO_STATS"
+        ],
+        "family_next_step_kind": "archive_or_unscoped",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Do not score as a strategy family until a named candidate and evidence chain exist.",
+      "node_id": "family:ninety_touch",
+      "outcome": "archive_or_unscoped",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "diagnostic_only"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_FORWARD_EVIDENCE",
+        "family_next_step:NO_STATS",
+        "family_next_step:DATA_WITHOUT_CANDIDATE",
+        "family_next_step:POSITIVE_DIAGNOSTIC_NO_FREEZE"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 2 reports; 0 stats; 0 forward; 0 live; flags NO_CANDIDATE, NO_FORWARD_EVIDENCE, NO_STATS, DATA_WITHOUT_CANDIDATE, POSITIVE_DIAGNOSTIC_NO_FREEZE",
+      "family": "ou_mispricing",
+      "kind": "family",
+      "label": "Ou Mispricing",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_FORWARD_EVIDENCE",
+          "NO_STATS",
+          "DATA_WITHOUT_CANDIDATE",
+          "POSITIVE_DIAGNOSTIC_NO_FREEZE"
+        ],
+        "family_next_step_kind": "diagnostic_or_unowned_evidence",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Either freeze the strongest artifact as a named candidate with forward gates, or archive the family as diagnostic/support evidence.",
+      "node_id": "family:ou_mispricing",
+      "outcome": "diagnostic_or_unowned_evidence",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "diagnostic_only"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_STATS",
+        "family_next_step:DATA_WITHOUT_CANDIDATE"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 1 reports; 0 stats; 17 forward; 0 live; flags NO_CANDIDATE, NO_STATS, DATA_WITHOUT_CANDIDATE",
+      "family": "particle_sim",
+      "kind": "family",
+      "label": "Particle Sim",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_STATS",
+          "DATA_WITHOUT_CANDIDATE"
+        ],
+        "family_next_step_kind": "diagnostic_or_unowned_evidence",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Either freeze the strongest artifact as a named candidate with forward gates, or archive the family as diagnostic/support evidence.",
+      "node_id": "family:particle_sim",
+      "outcome": "diagnostic_or_unowned_evidence",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "diagnostic_only"
+    },
+    {
+      "blockers": [],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 0 stats; 0 forward; 0 live; flags NONE",
+      "family": "research_os",
+      "kind": "family",
+      "label": "Research Os",
+      "metrics": {
+        "family_next_step_flags": [],
+        "family_next_step_kind": "support_tooling",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep out of strategy ranking; link only as provenance, dashboard, or infrastructure support.",
+      "node_id": "family:research_os",
+      "outcome": "support_tooling",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "unknown"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_STATS",
+        "family_next_step:REPEAT_RISK_HIGH"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "3 candidates; 41 reports; 0 stats; 100 forward; 0 live; flags NO_STATS, REPEAT_RISK_HIGH",
+      "family": "rv600",
+      "kind": "family",
+      "label": "Rv600",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_STATS",
+          "REPEAT_RISK_HIGH"
+        ],
+        "family_next_step_kind": "blocked_candidate_family",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Stop sibling variants until the changed assumption is explicit; repair breadth, average entries, root/market positivity, and matched-v28 comparison before more collection.",
+      "node_id": "family:rv600",
+      "outcome": "blocked_candidate_family",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_STATS",
+        "family_next_step:DATA_WITHOUT_CANDIDATE"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 0 stats; 8 forward; 9 live; flags NO_CANDIDATE, NO_STATS, DATA_WITHOUT_CANDIDATE",
+      "family": "strategy_research",
+      "kind": "family",
+      "label": "Strategy Research",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_STATS",
+          "DATA_WITHOUT_CANDIDATE"
+        ],
+        "family_next_step_kind": "baseline_or_live_reference",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep as baseline/stat reference unless one artifact is explicitly wrapped as a frozen candidate with forward validation criteria.",
+      "node_id": "family:strategy_research",
+      "outcome": "baseline_or_live_reference",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "unknown"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_CANDIDATE",
+        "family_next_step:NO_FORWARD_EVIDENCE",
+        "family_next_step:DATA_WITHOUT_CANDIDATE"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "0 candidates; 0 reports; 1 stats; 0 forward; 1 live; flags NO_CANDIDATE, NO_FORWARD_EVIDENCE, DATA_WITHOUT_CANDIDATE",
+      "family": "truffle",
+      "kind": "family",
+      "label": "Truffle",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_CANDIDATE",
+          "NO_FORWARD_EVIDENCE",
+          "DATA_WITHOUT_CANDIDATE"
+        ],
+        "family_next_step_kind": "baseline_or_live_reference",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Keep as baseline/stat reference unless one artifact is explicitly wrapped as a frozen candidate with forward validation criteria.",
+      "node_id": "family:truffle",
+      "outcome": "baseline_or_live_reference",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "unknown"
+    },
+    {
+      "blockers": [
+        "family_next_step:NO_STATS",
+        "family_next_step:REPEAT_RISK_HIGH"
+      ],
+      "completion_status": "completed",
+      "evidence_level": "metadata_only",
+      "evidence_summary": "13 candidates; 20 reports; 0 stats; 106 forward; 39 live; flags NO_STATS, REPEAT_RISK_HIGH",
+      "family": "v28_successor",
+      "kind": "family",
+      "label": "V28 Successor",
+      "metrics": {
+        "family_next_step_flags": [
+          "NO_STATS",
+          "REPEAT_RISK_HIGH"
+        ],
+        "family_next_step_kind": "blocked_candidate_family",
+        "family_next_step_review_source": "family_gap_rows"
+      },
+      "next_action": "Freeze sibling runs; classify OOS gate failures, then only test a pre-registered variant with a changed blocker mechanism and stats reconciliation.",
+      "node_id": "family:v28_successor",
+      "outcome": "blocked_candidate_family",
+      "source_paths": [
+        "logs/project_os/registry_latest.json",
+        "logs/project_os/research_os_v2_patterns_latest.json"
+      ],
+      "status": "blocked"
+    }
+  ],
+  "registry_generated_at_utc": "2026-05-18T18:32:03Z",
+  "research_only": true,
+  "schema": "research_os_next_step_outcomes_v1",
+  "summary": "Candidate and family atlas next steps were reviewed against local linked evidence; no live bot, order, threshold, secret, or state changes were made."
+}
