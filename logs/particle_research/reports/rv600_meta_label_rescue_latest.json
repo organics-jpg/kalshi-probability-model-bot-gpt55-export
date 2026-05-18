@@ -1,0 +1,66 @@
+{
+  "aggregate": {
+    "diagnostic_selection_count": 0,
+    "positive_test_split_rate": 0.0,
+    "preliminary_gate_pass": false,
+    "rejection_reason": "no_train_gate_selection;fewer_than_25_test_entries;nonpositive_test_pnl;does_not_beat_matched_v28",
+    "split_count": 0,
+    "test_avg_pnl_per_entry_cents": 0.0,
+    "test_matched_v28_control_pnl_cents": 0,
+    "test_matched_v28_delta_cents": 0,
+    "test_selected_pnl_cents": 0,
+    "test_total_entries": 0,
+    "train_gate_selection_count": 0
+  },
+  "filter_count": 35,
+  "generated_utc": "2026-05-15T21:05:15+00:00",
+  "inputs": {
+    "native_json": "logs\\particle_research\\reports\\rv600_native_forward_opportunity_latest.json",
+    "root_base": "logs\\particle_research\\real_shadow"
+  },
+  "method_choice": "Meta-label style one-feature filter over the RV600 primary signal with anchored prequential selection.",
+  "min_train_roots": 5,
+  "modeling_options": [
+    {
+      "decision": "chosen",
+      "fit": "Best fit: preserves RV600 as the primary signal and learns only whether to accept or suppress a candidate.",
+      "method": "meta_label_filter",
+      "source": "Joubert 2022, Meta-Labeling: Theory and Framework",
+      "source_url": "https://ssrn.com/abstract=4032018"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Useful for uncertainty bands, but current labels are sparse settled trade outcomes rather than a long residual stream.",
+      "method": "conformal_time_series_abstention",
+      "source": "Xu and Xie 2020/2023, Conformal prediction for time series",
+      "source_url": "https://arxiv.org/abs/2010.09107"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Handles non-exchangeable time series, but needs a larger sequential residual history than the current RV600 sample.",
+      "method": "sequential_conformal_inference",
+      "source": "Xu and Xie 2022, Sequential Predictive Conformal Inference for Time Series",
+      "source_url": "https://arxiv.org/abs/2212.03463"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Can improve probability reliability, but the immediate blocker is trade acceptance/profitability after fees and fills.",
+      "method": "post_hoc_probability_calibration",
+      "source": "Guo et al. 2017, On Calibration of Modern Neural Networks",
+      "source_url": "https://arxiv.org/abs/1706.04599"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Plausible for adapting among candidate families, but every existing family is already rejected and the sample is too small.",
+      "method": "online_expert_weighting",
+      "source": "Freund and Schapire 1997, A Decision-Theoretic Generalization of On-Line Learning",
+      "source_url": "https://doi.org/10.1006/jcss.1997.1504"
+    }
+  ],
+  "research_only": true,
+  "roots": [
+    "rv600_next_evidence_shadow_20260514T031420Z"
+  ],
+  "schema_version": "rv600-meta-label-rescue-v1",
+  "split_rows": []
+}

@@ -1,0 +1,304 @@
+{
+  "bucket_rows": [
+    {
+      "avg_counterfactual_pnl_cents": -19.953789279112755,
+      "bucket": "no",
+      "bucket_type": "side",
+      "selected_count": 541,
+      "total_counterfactual_pnl_cents": -10795.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": 50.0,
+      "bucket": "yes",
+      "bucket_type": "side",
+      "selected_count": 3,
+      "total_counterfactual_pnl_cents": 150.0,
+      "win_count": 3,
+      "win_rate": 1.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -18.533980582524272,
+      "bucket": "against_market_current",
+      "bucket_type": "consensus",
+      "selected_count": 515,
+      "total_counterfactual_pnl_cents": -9545.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -52.0,
+      "bucket": "aligned_with_market_current",
+      "bucket_type": "consensus",
+      "selected_count": 1,
+      "total_counterfactual_pnl_cents": -52.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -37.42857142857143,
+      "bucket": "market_current_disagree",
+      "bucket_type": "consensus",
+      "selected_count": 28,
+      "total_counterfactual_pnl_cents": -1048.0,
+      "win_count": 3,
+      "win_rate": 0.10714285714285714
+    },
+    {
+      "avg_counterfactual_pnl_cents": -36.85454545454545,
+      "bucket": "against_strong_05pp_consensus",
+      "bucket_type": "confidence",
+      "selected_count": 55,
+      "total_counterfactual_pnl_cents": -2027.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -35.114285714285714,
+      "bucket": "against_strong_10pp_consensus",
+      "bucket_type": "confidence",
+      "selected_count": 105,
+      "total_counterfactual_pnl_cents": -3687.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -8.91641791044776,
+      "bucket": "against_strong_20pp_consensus",
+      "bucket_type": "confidence",
+      "selected_count": 335,
+      "total_counterfactual_pnl_cents": -2987.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -52.0,
+      "bucket": "aligned_consensus",
+      "bucket_type": "confidence",
+      "selected_count": 1,
+      "total_counterfactual_pnl_cents": -52.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -39.416666666666664,
+      "bucket": "mixed_or_weak",
+      "bucket_type": "confidence",
+      "selected_count": 48,
+      "total_counterfactual_pnl_cents": -1892.0,
+      "win_count": 3,
+      "win_rate": 0.0625
+    },
+    {
+      "avg_counterfactual_pnl_cents": 0.0,
+      "bucket": "061_180s",
+      "bucket_type": "time_to_close",
+      "selected_count": 23,
+      "total_counterfactual_pnl_cents": 0.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -0.8365384615384616,
+      "bucket": "181_300s",
+      "bucket_type": "time_to_close",
+      "selected_count": 104,
+      "total_counterfactual_pnl_cents": -87.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -21.825174825174827,
+      "bucket": "301_600s",
+      "bucket_type": "time_to_close",
+      "selected_count": 286,
+      "total_counterfactual_pnl_cents": -6242.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -32.94656488549618,
+      "bucket": "gt_600s",
+      "bucket_type": "time_to_close",
+      "selected_count": 131,
+      "total_counterfactual_pnl_cents": -4316.0,
+      "win_count": 3,
+      "win_rate": 0.022900763358778626
+    }
+  ],
+  "conclusion": "No predeclared side/regime diagnostic rule is positive in every supplied run.",
+  "rule_run_rows": [
+    {
+      "rule": "base",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 544,
+      "total_counterfactual_pnl_cents": -10645.0,
+      "win_count": 3,
+      "win_rate": 0.0055147058823529415
+    },
+    {
+      "rule": "require_market_agreement",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 1,
+      "total_counterfactual_pnl_cents": -52.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "rule": "require_current_agreement",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 29,
+      "total_counterfactual_pnl_cents": -1100.0,
+      "win_count": 3,
+      "win_rate": 0.10344827586206896
+    },
+    {
+      "rule": "require_market_current_consensus_alignment",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 1,
+      "total_counterfactual_pnl_cents": -52.0,
+      "win_count": 0,
+      "win_rate": 0.0
+    },
+    {
+      "rule": "skip_against_consensus_any",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 29,
+      "total_counterfactual_pnl_cents": -1100.0,
+      "win_count": 3,
+      "win_rate": 0.10344827586206896
+    },
+    {
+      "rule": "skip_against_consensus_05",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 49,
+      "total_counterfactual_pnl_cents": -1944.0,
+      "win_count": 3,
+      "win_rate": 0.061224489795918366
+    },
+    {
+      "rule": "skip_against_consensus_10",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 104,
+      "total_counterfactual_pnl_cents": -3971.0,
+      "win_count": 3,
+      "win_rate": 0.028846153846153848
+    },
+    {
+      "rule": "skip_against_consensus_20",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 209,
+      "total_counterfactual_pnl_cents": -7658.0,
+      "win_count": 3,
+      "win_rate": 0.014354066985645933
+    },
+    {
+      "rule": "skip_late_300s_against_consensus_05",
+      "run": "particle_shadow_spotmerge_oos_20260511T121730Z",
+      "selected_count": 417,
+      "total_counterfactual_pnl_cents": -10558.0,
+      "win_count": 3,
+      "win_rate": 0.007194244604316547
+    }
+  ],
+  "rule_summary_rows": [
+    {
+      "min_run_pnl_cents": -52.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "require_market_agreement",
+      "run_count": 1,
+      "selected_count": 1,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -52.0
+    },
+    {
+      "min_run_pnl_cents": -52.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "require_market_current_consensus_alignment",
+      "run_count": 1,
+      "selected_count": 1,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -52.0
+    },
+    {
+      "min_run_pnl_cents": -1100.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "require_current_agreement",
+      "run_count": 1,
+      "selected_count": 29,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -1100.0
+    },
+    {
+      "min_run_pnl_cents": -1100.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "skip_against_consensus_any",
+      "run_count": 1,
+      "selected_count": 29,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -1100.0
+    },
+    {
+      "min_run_pnl_cents": -1944.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "skip_against_consensus_05",
+      "run_count": 1,
+      "selected_count": 49,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -1944.0
+    },
+    {
+      "min_run_pnl_cents": -3971.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "skip_against_consensus_10",
+      "run_count": 1,
+      "selected_count": 104,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -3971.0
+    },
+    {
+      "min_run_pnl_cents": -7658.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "skip_against_consensus_20",
+      "run_count": 1,
+      "selected_count": 209,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -7658.0
+    },
+    {
+      "min_run_pnl_cents": -10558.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "skip_late_300s_against_consensus_05",
+      "run_count": 1,
+      "selected_count": 417,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -10558.0
+    },
+    {
+      "min_run_pnl_cents": -10645.0,
+      "nonzero_run_count": 1,
+      "positive_run_count": 0,
+      "rule": "base",
+      "run_count": 1,
+      "selected_count": 544,
+      "stable_positive": false,
+      "total_counterfactual_pnl_cents": -10645.0
+    }
+  ],
+  "run_count": 1,
+  "selected_count": 544,
+  "source_reports": [
+    "logs\\particle_research\\real_shadow\\particle_shadow_spotmerge_oos_20260511T121730Z\\reports\\spotmerge_oos_replay_resolved_subset.json"
+  ],
+  "stable_positive_rules": [],
+  "total_counterfactual_pnl_cents": -10645.0
+}

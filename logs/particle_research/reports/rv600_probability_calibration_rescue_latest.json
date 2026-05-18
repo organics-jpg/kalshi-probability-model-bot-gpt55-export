@@ -1,0 +1,59 @@
+{
+  "aggregate": {
+    "diagnostic_selection_count": 0,
+    "positive_test_split_rate": 0.0,
+    "preliminary_gate_pass": false,
+    "rejection_reason": "no_train_gate_selection;fewer_than_25_test_entries;nonpositive_test_pnl;does_not_beat_matched_v28",
+    "split_count": 0,
+    "test_avg_pnl_per_entry_cents": 0.0,
+    "test_matched_v28_control_pnl_cents": 0,
+    "test_matched_v28_delta_cents": 0,
+    "test_selected_pnl_cents": 0,
+    "test_total_entries": 0,
+    "train_gate_selection_count": 0
+  },
+  "generated_utc": "2026-05-15T21:05:16+00:00",
+  "inputs": {
+    "native_json": "logs\\particle_research\\reports\\rv600_native_forward_opportunity_latest.json",
+    "root_base": "logs\\particle_research\\real_shadow"
+  },
+  "method_choice": "Low-complexity probability calibration over RV600 with anchored prequential strategy selection.",
+  "min_train_roots": 5,
+  "modeling_options": [
+    {
+      "decision": "chosen_as_grid_platt",
+      "fit": "Small parametric logit recalibration; feasible with little data if selected only from prior roots.",
+      "method": "platt_scaling",
+      "source": "Platt 1999, Probabilistic Outputs for Support Vector Machines",
+      "source_url": "https://www.researchgate.net/publication/2594015_Probabilistic_Outputs_for_Support_Vector_Machines_and_Comparisons_to_Regularized_Likelihood_Methods"
+    },
+    {
+      "decision": "chosen_as_fixed_candidates",
+      "fit": "One-parameter confidence scaling; useful as a low-complexity RV600 shrink/expand check.",
+      "method": "temperature_scaling",
+      "source": "Guo et al. 2017, On Calibration of Modern Neural Networks",
+      "source_url": "https://arxiv.org/abs/1706.04599"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Flexible but too easy to overfit with the current small number of settled markets.",
+      "method": "isotonic_calibration",
+      "source": "Niculescu-Mizil and Caruana 2005, Predicting Good Probabilities with Supervised Learning",
+      "source_url": "https://icml.cc/Conferences/2005/proceedings/papers/079_GoodProbabilities_NiculescuMizilCaruana.pdf"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Attractive calibration intervals, but assumes a larger calibration set than the current forward market count.",
+      "method": "venn_abers",
+      "source": "Vovk and Petej 2012, Venn-Abers predictors",
+      "source_url": "https://arxiv.org/abs/1211.0025"
+    }
+  ],
+  "research_only": true,
+  "roots": [
+    "rv600_next_evidence_shadow_20260514T031420Z"
+  ],
+  "schema_version": "rv600-probability-calibration-rescue-v1",
+  "split_rows": [],
+  "strategy_count": 8
+}

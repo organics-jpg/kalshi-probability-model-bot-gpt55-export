@@ -1,0 +1,145 @@
+{
+  "base_avg_counterfactual_pnl_cents_per_selected": -7.21301775147929,
+  "base_total_counterfactual_pnl_cents": -4876.0,
+  "candidate_count": 753,
+  "denominator_scope": "all_labeled_candidates",
+  "forced_no": {
+    "avg_counterfactual_pnl_cents_per_selected": -37.47520661157025,
+    "avg_selected_ev_cents": 8.776743801652893,
+    "candidate_count": 753,
+    "filled_count": 242,
+    "selected_count": 242,
+    "side": "no",
+    "total_counterfactual_pnl_cents": -9069.0,
+    "win_count": 0,
+    "win_rate": 0.0
+  },
+  "forced_yes": {
+    "avg_counterfactual_pnl_cents_per_selected": 9.661290322580646,
+    "avg_selected_ev_cents": 17.0524400921659,
+    "candidate_count": 753,
+    "filled_count": 434,
+    "selected_count": 434,
+    "side": "yes",
+    "total_counterfactual_pnl_cents": 4193.0,
+    "win_count": 101,
+    "win_rate": 0.23271889400921658
+  },
+  "margin_buckets": [
+    {
+      "avg_abs_ev_margin_cents": 50.74046666666666,
+      "bucket": "abs_ev_margin_rank_1_of_5",
+      "candidate_count": 135,
+      "selected_count": 135,
+      "selected_minus_opposite_pnl_cents": -945.0,
+      "selected_no_count": 0,
+      "selected_yes_count": 135,
+      "total_counterfactual_pnl_cents": -578.0
+    },
+    {
+      "avg_abs_ev_margin_cents": 45.02420740740741,
+      "bucket": "abs_ev_margin_rank_2_of_5",
+      "candidate_count": 135,
+      "selected_count": 135,
+      "selected_minus_opposite_pnl_cents": -1695.0,
+      "selected_no_count": 9,
+      "selected_yes_count": 126,
+      "total_counterfactual_pnl_cents": -969.0
+    },
+    {
+      "avg_abs_ev_margin_cents": 33.43179340740741,
+      "bucket": "abs_ev_margin_rank_3_of_5",
+      "candidate_count": 135,
+      "selected_count": 135,
+      "selected_minus_opposite_pnl_cents": -4642.0,
+      "selected_no_count": 84,
+      "selected_yes_count": 51,
+      "total_counterfactual_pnl_cents": -2497.0
+    },
+    {
+      "avg_abs_ev_margin_cents": 17.099762962962963,
+      "bucket": "abs_ev_margin_rank_4_of_5",
+      "candidate_count": 135,
+      "selected_count": 135,
+      "selected_minus_opposite_pnl_cents": -420.0,
+      "selected_no_count": 76,
+      "selected_yes_count": 59,
+      "total_counterfactual_pnl_cents": -413.0
+    },
+    {
+      "avg_abs_ev_margin_cents": 6.718944191176471,
+      "bucket": "abs_ev_margin_rank_5_of_5",
+      "candidate_count": 136,
+      "selected_count": 136,
+      "selected_minus_opposite_pnl_cents": -372.0,
+      "selected_no_count": 73,
+      "selected_yes_count": 63,
+      "total_counterfactual_pnl_cents": -419.0
+    }
+  ],
+  "market_summaries": [
+    {
+      "candidate_count": 333,
+      "forced_no_pnl_cents": 0,
+      "forced_yes_pnl_cents": -1487.0,
+      "market_ticker": "KXBTC15M-26MAY110145-45",
+      "selected_count": 333,
+      "selected_minus_opposite_pnl_cents": -2444.0,
+      "selected_no_count": 0,
+      "selected_no_pnl_cents": 0,
+      "selected_yes_count": 333,
+      "selected_yes_pnl_cents": -1487.0,
+      "settlement_result_yes": false
+    },
+    {
+      "candidate_count": 420,
+      "forced_no_pnl_cents": -9069.0,
+      "forced_yes_pnl_cents": 5680.0,
+      "market_ticker": "KXBTC15M-26MAY110200-00",
+      "selected_count": 343,
+      "selected_minus_opposite_pnl_cents": -5630.0,
+      "selected_no_count": 242,
+      "selected_no_pnl_cents": -9069.0,
+      "selected_yes_count": 101,
+      "selected_yes_pnl_cents": 5680.0,
+      "settlement_result_yes": true
+    }
+  ],
+  "note": "Side failure analysis is diagnostic only. Forced-side and side-flip counterfactuals are not a trading rule unless predeclared and validated on fresh locked OOS/shadow data.",
+  "promotion_safe": false,
+  "selected_count": 676,
+  "selected_no": {
+    "avg_counterfactual_pnl_cents": -37.47520661157025,
+    "avg_current_calibrated_p_yes": 0.5716672314049587,
+    "avg_ev_margin_cents": 20.754051280991735,
+    "avg_market_p_yes": 0.631301652892562,
+    "avg_particle_p_yes": 0.5280413223140495,
+    "avg_selected_ev_cents": 8.776743801652893,
+    "opposite_side_total_pnl_cents": 8248.0,
+    "selected_count": 242,
+    "selected_minus_opposite_pnl_cents": -17317.0,
+    "side": "no",
+    "total_counterfactual_pnl_cents": -9069.0,
+    "win_count": 0,
+    "win_rate": 0.0,
+    "worse_than_opposite_count": 242
+  },
+  "selected_yes": {
+    "avg_counterfactual_pnl_cents": 9.661290322580646,
+    "avg_current_calibrated_p_yes": 0.19793264285714285,
+    "avg_ev_margin_cents": 36.039832050691246,
+    "avg_market_p_yes": 0.127926267281106,
+    "avg_particle_p_yes": 0.3062315668202765,
+    "avg_selected_ev_cents": 17.0524400921659,
+    "opposite_side_total_pnl_cents": -5050.0,
+    "selected_count": 434,
+    "selected_minus_opposite_pnl_cents": 9243.0,
+    "side": "yes",
+    "total_counterfactual_pnl_cents": 4193.0,
+    "win_count": 101,
+    "win_rate": 0.23271889400921658,
+    "worse_than_opposite_count": 287
+  },
+  "skipped_unlabeled_count": 0,
+  "source_candidate_count": 753
+}

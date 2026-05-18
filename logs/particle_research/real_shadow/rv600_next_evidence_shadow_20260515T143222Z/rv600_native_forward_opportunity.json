@@ -1,0 +1,81 @@
+{
+  "best_grid_candidate": {
+    "accepted_entries": 0,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 0.0,
+    "decisions": [],
+    "distinct_markets": 0,
+    "early_gt_420s_entries": 0,
+    "gate_count": 3,
+    "last_window_pnl_cents": 0,
+    "late_lt_70s_entries": 0,
+    "locked_70_420s_entries": 0,
+    "matched_v28_delta_cents": 0,
+    "max_single_market_pnl_share": 0.0,
+    "positive_market_rate": 0.0,
+    "positive_root_rate": 0.0,
+    "rejection_reason": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "selected_pnl_cents": 0,
+    "variant": "rv600_primary_single_market_late_70_180_ev10"
+  },
+  "best_locked_candidate": {
+    "accepted_entries": 0,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 0.0,
+    "decisions": [],
+    "distinct_markets": 0,
+    "early_gt_420s_entries": 0,
+    "gate_count": 3,
+    "last_window_pnl_cents": 0,
+    "late_lt_70s_entries": 0,
+    "locked_70_420s_entries": 0,
+    "matched_v28_delta_cents": 0,
+    "max_single_market_pnl_share": 0.0,
+    "positive_market_rate": 0.0,
+    "positive_root_rate": 0.0,
+    "rejection_reason": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "selected_pnl_cents": 0,
+    "variant": "rv600_primary_max_3_entries_mid_120_420_ev12"
+  },
+  "best_rv600_primary_candidate": {
+    "accepted_entries": 0,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 0.0,
+    "decisions": [],
+    "distinct_markets": 0,
+    "early_gt_420s_entries": 0,
+    "gate_count": 3,
+    "last_window_pnl_cents": 0,
+    "late_lt_70s_entries": 0,
+    "locked_70_420s_entries": 0,
+    "matched_v28_delta_cents": 0,
+    "max_single_market_pnl_share": 0.0,
+    "positive_market_rate": 0.0,
+    "positive_root_rate": 0.0,
+    "rejection_reason": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "selected_pnl_cents": 0,
+    "variant": "rv600_primary_single_market_late_70_180_ev10"
+  },
+  "conclusion": "Locked entries exist, but RV600-primary native forward PnL is nonpositive.",
+  "generated_utc": "2026-05-15T15:01:25+00:00",
+  "locked_total_entries": 1,
+  "locked_total_pnl_cents": -29.0,
+  "min_decision_ts_utc": "2026-05-13T05:37:07+00:00",
+  "output_json": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260515T143222Z\\rv600_native_forward_opportunity.json",
+  "output_md": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260515T143222Z\\rv600_native_forward_opportunity.md",
+  "root_summaries": [
+    {
+      "candidate_rows": 809,
+      "first_decision_ts_utc": "2026-05-15T14:32:33.925510+00:00",
+      "last_decision_ts_utc": "2026-05-15T14:47:32.185686+00:00",
+      "root_name": "rv600_next_evidence_shadow_20260515T143222Z",
+      "settled_markets": 2
+    }
+  ],
+  "roots": [
+    "rv600_next_evidence_shadow_20260515T143222Z"
+  ],
+  "schema_version": "rv600-native-forward-opportunity-v1",
+  "total_candidate_rows": 809,
+  "total_settled_markets": 2
+}

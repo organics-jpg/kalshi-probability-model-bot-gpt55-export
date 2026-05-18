@@ -1,0 +1,70 @@
+{
+  "schema_version": "rv600-locked-forward-plan-v1",
+  "plan_id": "RV600NEAR001",
+  "generated_utc": "2026-05-15T04:53:47Z",
+  "research_only": true,
+  "candidate": {
+    "variant": "rv600_primary_side_flip_only_broad_70_600_ev4",
+    "probability_mode": "rv600_primary",
+    "min_seconds_to_close": 70.0,
+    "max_seconds_to_close": 600.0,
+    "min_ev_cents": 4.0,
+    "entry_rule": "side_flip_only",
+    "max_entries_per_market": 2,
+    "gate_count": 3,
+    "primary_accounting_mode": "position_capped",
+    "required_accounting_modes": [
+      "all_entries",
+      "one_per_side_per_market",
+      "position_capped"
+    ]
+  },
+  "rationale": {
+    "source_reports": [
+      "logs/particle_research/reports/rv600_bounded_current_grid_latest.json",
+      "logs/particle_research/reports/rv600_stability_selection_rescue_latest.json",
+      "logs/particle_research/reports/rv600_shadow_bounded_cumulative_audit_latest.json"
+    ],
+    "prior_sample_status": "diagnostic_only_not_promotable",
+    "why_this_candidate": "It is a simple three-gate RV600 candidate, already in the locked candidate set, with clean anti-replay accounting because side-flip-only makes one_per_side_per_market and position_capped equivalent on the current sample. It clears root breadth, market breadth, concentration, recency, and matched-v28 delta on the 22-root diagnostic sample, but fails the average-entry gate.",
+    "prior_diagnostic_metrics": {
+      "accepted_entries": 41,
+      "selected_pnl_cents": 339.0,
+      "matched_v28_delta_cents": 218.0,
+      "avg_pnl_per_entry_cents": 8.268292682926829,
+      "positive_root_rate": 0.6363636363636364,
+      "positive_market_rate": 0.6071428571428571,
+      "max_single_market_pnl_share": 0.1799410029498525,
+      "last_window_pnl_cents": 27.0,
+      "rejection_reason": "avg_entry_below_10c"
+    }
+  },
+  "pre_registration": {
+    "forward_evidence_starts_after_utc": "2026-05-15T04:53:47Z",
+    "prior_evidence_policy": "Prior 22-root evidence can explain why the candidate was frozen, but cannot by itself promote the candidate or complete the goal.",
+    "selection_policy": "Do not tune this candidate using its future outcomes. Score this frozen variant against matched v28 at accepted timestamps.",
+    "failure_policy": "If future-only evidence remains below the average-entry, matched-v28, concentration, or breadth gates, reject this near-miss instead of lowering gates."
+  },
+  "forward_gates": {
+    "selected_pnl_after_fees_fills_positive": true,
+    "matched_v28_edge_min_percent": 20,
+    "avg_pnl_per_entry_cents_min": 10.0,
+    "avg_pnl_per_market_positive": true,
+    "positive_root_rate_min": 0.60,
+    "positive_market_rate_min": 0.60,
+    "last_20_accepted_entries_positive": true,
+    "max_single_market_pnl_share_max": 0.25,
+    "fill_adjusted_pnl_positive": true,
+    "target_accepted_entries": 100,
+    "target_distinct_markets": 40,
+    "target_calendar_days": 10,
+    "target_weekend_sessions": 2
+  },
+  "guardrails": [
+    "Research-only: no live trades.",
+    "Do not change live v28 order logic.",
+    "Do not restart the live bot.",
+    "Use offline matched-v28 replay from passive checkpoints and independent spot.",
+    "Do not call update_goal unless the objective audit is green on future-only evidence."
+  ]
+}

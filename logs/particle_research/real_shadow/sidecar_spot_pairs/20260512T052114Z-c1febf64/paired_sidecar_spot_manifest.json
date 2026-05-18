@@ -1,0 +1,140 @@
+{
+  "alignment_rows": [
+    {
+      "bundle_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\research_particle\\v28_successor\\sidecar_input_bundles\\20260512T052115665Z_KXBTC15M-26MAY120130-30.json",
+      "decision_ts_utc": "2026-05-12T05:21:15.665000+00:00",
+      "first_spot_after_age_ms": 683.3320000000001,
+      "first_spot_after_ts_utc": "2026-05-12T05:21:16.348332+00:00",
+      "independent_spot_source": "coinbase_btcusd_matches",
+      "issue": "",
+      "latest_spot_before_age_ms": 320.44,
+      "latest_spot_before_exchange_ts_utc": "2026-05-12T05:21:15.360309+00:00",
+      "latest_spot_before_ts_utc": "2026-05-12T05:21:15.344560+00:00",
+      "market_ticker": "KXBTC15M-26MAY120130-30",
+      "schema_version": "sidecar-spot-alignment-v1",
+      "spot_ready_no_future": true
+    }
+  ],
+  "sidecar_batch_markets": [
+    {
+      "blocker_counts": {},
+      "bundle_ready": true,
+      "bundle_status": "input_bundle_ready_for_collection",
+      "contract_detail_count": 298,
+      "market_close_ts_utc": "2026-05-12T05:30:00.000Z",
+      "market_ticker": "KXBTC15M-26MAY120130-30",
+      "output_bundle_json": "research_particle/v28_successor/sidecar_input_bundles/20260512T052115665Z_KXBTC15M-26MAY120130-30.json",
+      "packet_error": "",
+      "packet_rows": 16,
+      "strike": 81195.96
+    }
+  ],
+  "sidecar_batch_summary": {
+    "batch_status": "batch_bundles_ready_for_freeze",
+    "blocker_counts": {},
+    "builder_script": "build_v28_successor_public_rest_sidecar_batch.py",
+    "bundle_ready_files": 1,
+    "diagnostic_only": false,
+    "generated_utc": "2026-05-12T05:21:19.000Z",
+    "markets_selected": 1,
+    "mode": "public_rest",
+    "outputs": {
+      "audit_json": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+      "audit_md": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.md",
+      "demo_batch_json": "research_particle/v28_successor/public_rest_sidecar_batch_demo_latest.json"
+    },
+    "packet_markets": 1,
+    "packet_rows": 16,
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "public REST sidecar batch bundles are collector inputs only; promotion requires pre-close freeze, post-resolution labels, source contract, coverage, evidence scoring, and verifier approval"
+    },
+    "simulated": false,
+    "status_counts": {
+      "input_bundle_ready_for_collection": 1
+    }
+  },
+  "sidecar_cycle_summary": {
+    "blockers": [
+      "no_sidecar_candidate_beats_v28_under_gates"
+    ],
+    "builder_script": "run_v28_successor_sidecar_collection_cycle.py",
+    "collect_mode": "public_rest",
+    "cycle_status": "sidecar_evidence_scored_no_promotable_candidate",
+    "generated_utc": "2026-05-12T05:21:15Z",
+    "minimum_forward_markets": 40,
+    "minimum_forward_rows": 200,
+    "next_actions": [
+      "Score more settled rows before interpreting candidate-vs-v28 deltas."
+    ],
+    "outputs": {
+      "cycle_json": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json",
+      "cycle_md": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.md"
+    },
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "collection cycles can create forward evidence, but promotion still requires source contract, coverage, evidence, verifier, and frozen forward gates"
+    },
+    "research_only_guardrails": [
+      "does not start or stop live bot processes",
+      "does not read or write secrets",
+      "does not place orders",
+      "does not mutate live thresholds or order logic",
+      "does not write canonical promotion ledgers directly",
+      "promotion_allowed is always false for this cycle report"
+    ],
+    "sidecar_clean_forward_markets": 79,
+    "sidecar_clean_forward_rows": 2390,
+    "sidecar_frozen_markets": 80,
+    "sidecar_frozen_rows": 2438,
+    "sidecar_joined_markets": 79,
+    "sidecar_joined_rows": 2390,
+    "sidecar_promotable_candidate_count": 0,
+    "steps_run": 5
+  },
+  "summary": {
+    "alignment_issue_count": 0,
+    "alignment_ready_count": 1,
+    "alignment_row_count": 1,
+    "artifact_root": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\real_shadow\\sidecar_spot_pairs\\20260512T052114Z-c1febf64",
+    "collect_mode": "public-rest",
+    "generated_utc": "2026-05-12T05:21:44.694256+00:00",
+    "manifest_json": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\real_shadow\\sidecar_spot_pairs\\20260512T052114Z-c1febf64\\paired_sidecar_spot_manifest.json",
+    "manifest_md": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\real_shadow\\sidecar_spot_pairs\\20260512T052114Z-c1febf64\\paired_sidecar_spot_manifest.md",
+    "paired_capture_ready": true,
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "paired sidecar spot capture is instrumentation evidence only; it cannot promote trading without locked OOS probability, EV-rank, and PnL gates"
+    },
+    "research_only_guardrails": [
+      "research-only paired capture",
+      "does not start or stop live bot processes",
+      "does not read or write secrets",
+      "does not place orders",
+      "does not mutate live thresholds or order logic",
+      "promotion_allowed is always false",
+      "does not write canonical promotion ledgers directly",
+      "promotion_allowed is always false for this cycle report"
+    ],
+    "run_id": "20260512T052114Z-c1febf64",
+    "schema_version": "paired-sidecar-spot-capture-v1",
+    "sidecar_cycle_status": "sidecar_evidence_scored_no_promotable_candidate",
+    "sidecar_frozen_markets": 80,
+    "sidecar_frozen_rows": 2438,
+    "sidecar_latest_batch_json": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+    "sidecar_markets_selected": 1,
+    "sidecar_packet_rows": 16,
+    "spot_feed": "coinbase_btcusd_matches",
+    "spot_issue_count": 0,
+    "spot_issues": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\real_shadow\\sidecar_spot_pairs\\20260512T052114Z-c1febf64\\spot_issues.ndjson",
+    "spot_max_age_ms": 2000.0,
+    "spot_output": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\real_shadow\\sidecar_spot_pairs\\20260512T052114Z-c1febf64\\spot_ticks.ndjson",
+    "spot_return_error": "",
+    "spot_status": "stopped",
+    "spot_status_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\particle_research\\real_shadow\\sidecar_spot_pairs\\20260512T052114Z-c1febf64\\spot_status.json",
+    "spot_ticks_written": 65
+  }
+}

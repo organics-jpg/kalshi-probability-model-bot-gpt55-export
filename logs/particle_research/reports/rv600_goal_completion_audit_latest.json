@@ -1,0 +1,864 @@
+{
+  "best_locked_candidate": "rv600_primary_max_3_entries_mid_120_420_ev12",
+  "best_locked_row": {
+    "accepted_entries": 70,
+    "accounting_mode": "position_capped",
+    "added_entry_count": 44,
+    "added_entry_pnl_cents": 728.0,
+    "avg_added_entry_pnl_cents": 16.545454545454547,
+    "avg_pnl_per_entry_cents": 18.814285714285713,
+    "avg_pnl_per_market_cents": 50.65384615384615,
+    "candidate_rows": 33958,
+    "distinct_markets": 26,
+    "fill_adjusted_expected_pnl_cents": 1042.9523419142793,
+    "gate_count": 3,
+    "last_window_pnl_cents": 113.0,
+    "locked_candidate_eligible": true,
+    "matched_v28_control_pnl_cents": 1029.0,
+    "matched_v28_delta_cents": 288.0,
+    "max_single_market_pnl_share": 0.2034927866362946,
+    "no_fill_penalty_pnl_cents": 1317.0,
+    "positive_market_rate": 0.6153846153846154,
+    "positive_root_count": 8,
+    "positive_root_rate": 0.8,
+    "rejection_reason": "",
+    "repeated_entry_gate_pass": true,
+    "retrospective_gate_pass": true,
+    "run_count": 10,
+    "selected_pnl_cents": 1317.0,
+    "variant": "rv600_primary_max_3_entries_mid_120_420_ev12",
+    "worst_market_pnl_cents": -111.0
+  },
+  "checklist": [
+    {
+      "evidence": "plan=docs\\research\\RV600_VARIATION_TEST_PLAN.md exists=True",
+      "next_action": "Restore or write the RV600 variation plan before auditing implementation.",
+      "requirement": "Named RV600 variation plan exists and is the source of truth",
+      "status": "pass"
+    },
+    {
+      "evidence": "harness=research_particle\\rv600_variation_test.py exists=True; locked_note=docs\\research\\RV600_LOCKED_CANDIDATES_2026-05-13.md exists=True; audit probe is read/report only",
+      "next_action": "Keep RV600 work in research reports and shadow scoring; do not edit live launchers or order logic.",
+      "requirement": "Research-only implementation path exists; no live launcher/v28 order logic is required",
+      "status": "pass"
+    },
+    {
+      "evidence": "report=logs\\particle_research\\reports\\rv600_variation_test_latest.json phase=first_candidates; variant_count=6; root_count=10",
+      "next_action": "Run `python -m research_particle.rv600_variation_test --phase first_candidates --write`.",
+      "requirement": "First candidate set from the plan was built and scored",
+      "status": "pass"
+    },
+    {
+      "evidence": "report=logs\\particle_research\\reports\\rv600_variation_grid_latest.json phase=grid; variant_count=3948; root_count=10",
+      "next_action": "Run the grid phase and inspect rejected high-PnL rows with gate reasons.",
+      "requirement": "Phase 1 grid explored timing, EV, repeated-entry, side/control/regime/micro/price variants",
+      "status": "pass"
+    },
+    {
+      "evidence": "report=logs\\particle_research\\reports\\rv600_variation_locked_latest.json phase=locked; locked_candidate_count=5; candidates=['rv600_primary_max_3_entries_mid_120_420_ev12', 'rv600_primary_max_3_entries_base_70_420_ev12', 'rv600_primary_risk_cap_200c_mid_120_420_ev12', 'rv600_primary_risk_cap_200c_base_70_420_ev12', 'rv600_primary_max_2_entries_mid_120_420_ev12']",
+      "next_action": "Freeze at most five simple candidates from the grid before any forward-shadow scoring.",
+      "requirement": "Locked Phase 2 candidate set contains at most five simple candidates",
+      "status": "pass"
+    },
+    {
+      "evidence": "accounting_modes=['all_entries', 'one_per_side_per_market', 'position_capped']",
+      "next_action": "Extend the report to emit all three repeated-entry accounting modes.",
+      "requirement": "Fair repeated-entry accounting is present for all_entries, one_per_side_per_market, and position_capped",
+      "status": "pass"
+    },
+    {
+      "evidence": "variant=rv600_primary_max_3_entries_mid_120_420_ev12; accounting=position_capped; selected_pnl_cents=1317.0; fill_adjusted_expected_pnl_cents=1042.9523419142793",
+      "next_action": "Keep the candidate research-only until non-all_entries accounting remains positive.",
+      "requirement": "Best locked candidate is profitable after fees/fills and not only profitable under all_entries",
+      "status": "pass"
+    },
+    {
+      "evidence": "selected_pnl_cents=1317.0; matched_v28_control_pnl_cents=1029.0; matched_v28_delta_cents=288.0",
+      "next_action": "Keep matched timestamp controls in every locked and forward-shadow report.",
+      "requirement": "Matched v28/current control is scored on the same accepted timestamps and beaten by at least 20%",
+      "status": "pass"
+    },
+    {
+      "evidence": "positive_root_rate=0.8; positive_market_rate=0.6153846153846154; max_single_market_pnl_share=0.2034927866362946; last_window_pnl_cents=113.0; avg_added_entry_pnl_cents=16.545454545454547; rejection_reason=''",
+      "next_action": "Reject or simplify any candidate that fails the anti-overfitting gates.",
+      "requirement": "Anti-overfitting gates pass retrospectively: roots/markets, recent window, concentration, added entries",
+      "status": "pass"
+    },
+    {
+      "evidence": "accepted_entries=15; distinct_markets=15; calendar_days=1; weekend_days=0; source=logs/particle_research/reports/rv600_variation_forward_latest.json; latest_labeled_root_update=2026-05-15T20:33:42+00:00",
+      "next_action": "Collect/label fresh RV600 locked forward-shadow markets until the plan's sample gates pass.",
+      "requirement": "Incoming live markets are moderately validated in shadow mode",
+      "status": "fail"
+    },
+    {
+      "evidence": "native_candidate_rows=7584; native_distinct_markets=23; sidecar_candidate_rows=4; sidecar_distinct_markets=3; source_quality_note=forward report mixes native and sidecar evidence; completion should rely on native continuous rows",
+      "next_action": "Collect native/continuous RV600 forward roots with matching current-control contexts; sparse sidecar snapshots are diagnostic only for completion.",
+      "requirement": "Forward-shadow evidence is not only sparse sidecar or fallback-vol artifacts",
+      "status": "fail"
+    },
+    {
+      "evidence": "selected_pnl_cents=-155.3; matched_v28_control_pnl_cents=-148.2; avg_pnl_per_entry_cents=-10.353333333333333; max_single_market_pnl_share=0.0; last_window_pnl_cents=-6.3",
+      "next_action": "Do not mark the goal complete until fresh shadow PnL clears all promotion gates.",
+      "requirement": "Forward-shadow PnL is positive and passes the same artifact checks",
+      "status": "fail"
+    },
+    {
+      "evidence": "test_file=test_research_particle_synthetic.py mentions_rv600_variation=True",
+      "next_action": "Add or restore the synthetic RV600 accounting regression test.",
+      "requirement": "Regression coverage verifies repeated-entry and matched-control accounting",
+      "status": "pass"
+    }
+  ],
+  "conclusion": "RV600 objective is not complete. Retrospective locked candidate rv600_primary_max_3_entries_mid_120_420_ev12 is available, but remaining blockers are: Incoming live markets are moderately validated in shadow mode; Forward-shadow evidence is not only sparse sidecar or fallback-vol artifacts; Forward-shadow PnL is positive and passes the same artifact checks. Current forward-shadow sample is 15 entries, 15 markets, 1 calendar days, 0 weekend days.",
+  "forward_report": "logs/particle_research/reports/rv600_variation_forward_latest.json",
+  "forward_shadow_sample": {
+    "accepted_entries": 15,
+    "avg_pnl_per_entry_cents": -10.353333333333333,
+    "avg_pnl_per_market_cents": -10.353333333333333,
+    "calendar_days": 1,
+    "candidate_rows": 7724,
+    "decision_dates": [
+      "2026-05-13"
+    ],
+    "distinct_markets": 15,
+    "last_window_pnl_cents": -6.3,
+    "latest_root_update": "2026-05-15T17:54:56+00:00",
+    "matched_v28_control_pnl_cents": -148.2,
+    "max_single_market_pnl_share": 0.0,
+    "native_candidate_rows": 7584,
+    "native_distinct_markets": 23,
+    "note": "This forward report is intended to be generated with `--phase locked --min-decision-ts-utc <candidate-freeze-time>` so it contains only post-lock incoming-market shadow evidence.",
+    "other_candidate_rows": 136,
+    "other_distinct_markets": 1,
+    "positive_market_rate": 0.06666666666666667,
+    "report_exists": true,
+    "report_phase": "locked",
+    "report_root_count": 25,
+    "selected_pnl_cents": -155.3,
+    "sidecar_candidate_rows": 4,
+    "sidecar_distinct_markets": 3,
+    "source": "logs/particle_research/reports/rv600_variation_forward_latest.json",
+    "source_quality_note": "forward report mixes native and sidecar evidence; completion should rely on native continuous rows",
+    "weekend_days": 0,
+    "weekend_decision_dates": []
+  },
+  "generated_utc": "2026-05-15T21:22:01+00:00",
+  "goal_complete": false,
+  "locked_candidate_count": 5,
+  "objective": "Build and validate RV600 strategy variations from docs/research/RV600_VARIATION_TEST_PLAN.md with research-only execution, fair repeated-entry accounting after fees/fills, matched v28 controls, anti-overfitting gates, and moderate incoming-market shadow validation before completion.",
+  "real_shadow_census": {
+    "candidate_and_label_root_count": 76,
+    "latest_labeled_root_update": "2026-05-15T20:33:42+00:00",
+    "root_count": 117,
+    "roots": [
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_dynamic600_oos_20260511TLOCKEDNEXT2",
+        "updated": "2026-05-11T11:57:54+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_dynamic_oos_20260511TLOCKEDNEXT",
+        "updated": "2026-05-11T11:57:50+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_fixed_terminal_oos_GAUSS45LOCK001",
+        "updated": "2026-05-11T18:48:55+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_fixed_terminal_oos_GAUSS45LOCK002",
+        "updated": "2026-05-11T20:48:21+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_fixed_terminal_oos_GAUSS45LOCK003",
+        "updated": "2026-05-11T23:15:39+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_residual_blend_oos_RESIDLOCK001",
+        "updated": "2026-05-11T17:24:33+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": false,
+        "root": "particle_shadow_forward_20260511T053112Z-47457a12",
+        "updated": "2026-05-11T05:32:08+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": false,
+        "root": "particle_shadow_forward_20260511T053340Z-0dc86f34",
+        "updated": "2026-05-11T05:34:31+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_shadow_forward_20260511T053741Z-long900",
+        "updated": "2026-05-11T06:26:12+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": false,
+        "root": "particle_shadow_readonly",
+        "updated": "2026-05-11T05:27:00+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": false,
+        "root": "particle_shadow_readonly_fresh_20260511T113926Z",
+        "updated": "2026-05-11T11:57:14+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": false,
+        "root": "particle_shadow_spotmerge_oos_20260511T121730Z",
+        "updated": "2026-05-11T12:54:54+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": false,
+        "root": "particle_shadow_spotmerge_smoke_20260511T120911Z",
+        "updated": "2026-05-11T12:15:32+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_side_consensus_oos_CONSENSUSLOCK001",
+        "updated": "2026-05-11T14:23:23+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_side_safety_oos_20260511TLOCKED",
+        "updated": "2026-05-11T11:57:46+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "particle_spot_rv_terminal_oos_RVTERMLOCK001",
+        "updated": "2026-05-12T01:54:35+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow",
+        "updated": "2026-05-13T12:00:48+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1220Z",
+        "updated": "2026-05-13T12:31:53+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1235Z",
+        "updated": "2026-05-13T12:48:56+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1259Z",
+        "updated": "2026-05-13T13:17:47+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1331Z",
+        "updated": "2026-05-13T13:31:43+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1333Z",
+        "updated": "2026-05-13T13:51:17+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1407Z",
+        "updated": "2026-05-13T14:25:20+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_20260513T1439Z",
+        "updated": "2026-05-13T14:57:19+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1522Z",
+        "updated": "2026-05-13T15:35:23+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1541Z",
+        "updated": "2026-05-13T15:50:30+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1556Z",
+        "updated": "2026-05-13T16:05:07+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1610Z",
+        "updated": "2026-05-13T16:19:43+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1626Z",
+        "updated": "2026-05-13T16:35:13+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1640Z",
+        "updated": "2026-05-13T16:49:05+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1656Z",
+        "updated": "2026-05-13T17:05:09+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1712Z",
+        "updated": "2026-05-13T17:21:40+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1722Z",
+        "updated": "2026-05-13T17:31:01+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1737Z",
+        "updated": "2026-05-13T17:45:58+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1752Z",
+        "updated": "2026-05-13T18:01:50+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1808Z",
+        "updated": "2026-05-13T18:17:02+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_native_shadow_capture_20260513T1819Z",
+        "updated": "2026-05-13T18:32:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T115640Z",
+        "updated": "2026-05-13T18:36:24+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1220Z",
+        "updated": "2026-05-13T18:36:24+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1235Z",
+        "updated": "2026-05-13T18:36:24+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1259Z",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1333Z",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1333Z_1400",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1407Z",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1407Z_1430",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1439Z",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1439Z_1500",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1522Z_1530",
+        "updated": "2026-05-13T18:36:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1541Z_1545",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1556Z_1600",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1610Z_1615",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1626Z_1630",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1640Z_1645",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1656Z_1700",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1712Z_1715",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1722Z_1730",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1737Z_1745",
+        "updated": "2026-05-13T18:36:26+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1752Z_1800",
+        "updated": "2026-05-13T18:36:27+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1808Z_1815",
+        "updated": "2026-05-13T18:36:27+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_native_shadow_offline_v28_20260513T1819Z_1830",
+        "updated": "2026-05-13T18:36:27+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_forward_shadow_20260513T054445Z",
+        "updated": "2026-05-15T17:54:56+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_shadow_20260513T055209Z",
+        "updated": "2026-05-13T10:53:34+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_forward_shadow_20260513T105451Z",
+        "updated": "2026-05-13T10:58:05+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T195001Z",
+        "updated": "2026-05-15T18:02:54+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260513T202001Z",
+        "updated": "2026-05-13T20:20:01+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T202034Z",
+        "updated": "2026-05-15T18:02:55+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T205117Z",
+        "updated": "2026-05-15T18:02:55+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T211949Z",
+        "updated": "2026-05-15T18:02:55+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T215130Z",
+        "updated": "2026-05-15T18:02:56+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T222021Z",
+        "updated": "2026-05-15T18:02:56+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260513T230000Z",
+        "updated": "2026-05-13T23:00:00+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T230108Z",
+        "updated": "2026-05-15T18:02:57+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260513T234759Z",
+        "updated": "2026-05-15T18:02:57+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T002426Z",
+        "updated": "2026-05-15T18:02:59+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260514T010633Z",
+        "updated": "2026-05-14T01:06:33+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260514T010744Z",
+        "updated": "2026-05-14T01:08:23+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T010859Z",
+        "updated": "2026-05-15T18:02:59+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T014324Z",
+        "updated": "2026-05-15T18:02:59+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T021209Z",
+        "updated": "2026-05-15T18:02:59+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T024042Z",
+        "updated": "2026-05-15T18:03:00+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T031420Z",
+        "updated": "2026-05-15T18:03:00+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T035926Z",
+        "updated": "2026-05-15T18:03:00+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T045722Z",
+        "updated": "2026-05-15T18:03:01+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T053423Z",
+        "updated": "2026-05-15T18:03:01+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260514T061107Z",
+        "updated": "2026-05-14T06:15:45+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T122254Z",
+        "updated": "2026-05-15T18:03:01+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260514T130107Z",
+        "updated": "2026-05-15T18:03:02+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T024708Z",
+        "updated": "2026-05-15T18:03:02+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T032104Z",
+        "updated": "2026-05-15T18:03:03+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T034820Z",
+        "updated": "2026-05-15T18:03:03+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T045448Z",
+        "updated": "2026-05-15T18:03:04+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T053557Z",
+        "updated": "2026-05-15T18:03:04+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T063046Z",
+        "updated": "2026-05-15T18:03:04+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T071544Z",
+        "updated": "2026-05-15T18:03:05+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T080148Z",
+        "updated": "2026-05-15T18:03:05+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T083925Z",
+        "updated": "2026-05-15T18:03:06+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T091646Z",
+        "updated": "2026-05-15T18:03:06+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T100014Z",
+        "updated": "2026-05-15T18:03:06+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T105111Z",
+        "updated": "2026-05-15T18:03:07+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T113027Z",
+        "updated": "2026-05-15T18:03:07+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260515T134212Z",
+        "updated": "2026-05-15T13:59:19+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260515T140002Z",
+        "updated": "2026-05-15T14:15:28+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "rv600_next_evidence_shadow_20260515T141602Z",
+        "updated": "2026-05-15T14:31:18+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T143222Z",
+        "updated": "2026-05-15T18:03:07+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T151536Z",
+        "updated": "2026-05-15T18:03:08+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T160221Z",
+        "updated": "2026-05-15T18:03:08+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T164836Z",
+        "updated": "2026-05-15T18:03:09+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T173507Z",
+        "updated": "2026-05-15T18:06:25+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T182447Z",
+        "updated": "2026-05-15T18:49:30+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T190705Z",
+        "updated": "2026-05-15T19:33:57+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_20260515T200306Z",
+        "updated": "2026-05-15T20:33:42+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_next_evidence_shadow_smoke_20260513T193315Z",
+        "updated": "2026-05-15T18:03:09+00:00"
+      },
+      {
+        "has_candidates": true,
+        "has_labels": true,
+        "root": "rv600_sidecar_spot_pairs_forward",
+        "updated": "2026-05-13T12:02:21+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "sidecar_spot_pairs",
+        "updated": "2026-05-13T11:54:13+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "spot_ticker_smoke_20260511T120430Z",
+        "updated": "2026-05-11T12:04:31+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "spot_ticker_smoke_binanceus_20260511T120443Z",
+        "updated": "2026-05-11T12:04:55+00:00"
+      },
+      {
+        "has_candidates": false,
+        "has_labels": false,
+        "root": "spot_ticker_smoke_coinbase_20260511T120626Z",
+        "updated": "2026-05-11T12:06:27+00:00"
+      }
+    ]
+  },
+  "schema_version": "rv600-goal-completion-audit-v1",
+  "status_counts": {
+    "fail": 3,
+    "partial": 0,
+    "pass": 10
+  }
+}

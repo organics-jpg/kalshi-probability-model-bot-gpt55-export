@@ -1,0 +1,143 @@
+{
+  "best_by_matched_v28_delta": {
+    "accepted_entries": 84,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 13.333333333333334,
+    "distinct_markets": 30,
+    "last_window_pnl_cents": -68.0,
+    "max_single_market_pnl_share": 0.25357142857142856,
+    "mean_delta_cents_per_root": 18.75,
+    "positive_market_rate": 0.36666666666666664,
+    "positive_root_rate": 0.275,
+    "rejection_reason": "positive_roots_below_60pct;positive_markets_below_60pct;single_market_share_above_25pct;last_window_nonpositive;market_drawdown_worse_than_25pct",
+    "spa_screen_pass": false,
+    "studentized_delta_t": 1.257844781156382,
+    "total_matched_v28_control_pnl_cents": 370.0,
+    "total_matched_v28_delta_cents": 750.0,
+    "total_selected_pnl_cents": 1120.0,
+    "variant": "rv600_primary_max_3_entries_late_70_300_ev4"
+  },
+  "best_by_spa_stat": {
+    "accepted_entries": 50,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 13.18,
+    "distinct_markets": 26,
+    "last_window_pnl_cents": -20.0,
+    "max_single_market_pnl_share": 0.27769347496206376,
+    "mean_delta_cents_per_root": 12.275,
+    "positive_market_rate": 0.38461538461538464,
+    "positive_root_rate": 0.25,
+    "rejection_reason": "positive_roots_below_60pct;positive_markets_below_60pct;single_market_share_above_25pct;last_window_nonpositive;market_drawdown_worse_than_25pct",
+    "spa_screen_pass": false,
+    "studentized_delta_t": 1.2731303804731615,
+    "total_matched_v28_control_pnl_cents": 168.0,
+    "total_matched_v28_delta_cents": 491.0,
+    "total_selected_pnl_cents": 659.0,
+    "variant": "rv600_primary_max_2_entries_late_70_300_ev6"
+  },
+  "bootstrap": {
+    "bootstrap_candidate_count": 2890,
+    "bootstrap_count": 1000,
+    "exceedance_count": 529,
+    "observed_studentized_max": 1.2731303804731615,
+    "studentized_p_value": 0.5294705294705294
+  },
+  "candidate_count": 7482,
+  "chosen_method": {
+    "name": "Hansen-style superior predictive ability benchmark audit",
+    "reason": "The current RV600 blocker is not raw PnL but failure to beat matched v28 after searching thousands of variants. A studentized root-block bootstrap over matched-v28 deltas tests whether any candidate has superior predictive ability versus the benchmark while screening irrelevant poor alternatives."
+  },
+  "decision": "spa_benchmark_rejects_current_grid",
+  "generated_utc": "2026-05-15T21:21:18+00:00",
+  "inputs": {
+    "base_dir": "logs\\particle_research\\real_shadow",
+    "min_decision_ts_utc": "2026-05-13T19:50:00+00:00",
+    "min_root_name": "rv600_next_evidence_shadow_20260513T195001Z",
+    "reports_dir": "logs\\particle_research\\reports",
+    "seed": 901
+  },
+  "positive_delta_candidate_count": 2890,
+  "research_only": true,
+  "root_count": 40,
+  "roots": [
+    "rv600_next_evidence_shadow_20260513T195001Z",
+    "rv600_next_evidence_shadow_20260513T202034Z",
+    "rv600_next_evidence_shadow_20260513T205117Z",
+    "rv600_next_evidence_shadow_20260513T211949Z",
+    "rv600_next_evidence_shadow_20260513T215130Z",
+    "rv600_next_evidence_shadow_20260513T222021Z",
+    "rv600_next_evidence_shadow_20260513T230108Z",
+    "rv600_next_evidence_shadow_20260513T234759Z",
+    "rv600_next_evidence_shadow_20260514T002426Z",
+    "rv600_next_evidence_shadow_20260514T010859Z",
+    "rv600_next_evidence_shadow_20260514T014324Z",
+    "rv600_next_evidence_shadow_20260514T021209Z",
+    "rv600_next_evidence_shadow_20260514T024042Z",
+    "rv600_next_evidence_shadow_20260514T031420Z",
+    "rv600_next_evidence_shadow_20260514T035926Z",
+    "rv600_next_evidence_shadow_20260514T045722Z",
+    "rv600_next_evidence_shadow_20260514T053423Z",
+    "rv600_next_evidence_shadow_20260514T122254Z",
+    "rv600_next_evidence_shadow_20260514T130107Z",
+    "rv600_next_evidence_shadow_20260515T024708Z",
+    "rv600_next_evidence_shadow_20260515T032104Z",
+    "rv600_next_evidence_shadow_20260515T034820Z",
+    "rv600_next_evidence_shadow_20260515T045448Z",
+    "rv600_next_evidence_shadow_20260515T053557Z",
+    "rv600_next_evidence_shadow_20260515T063046Z",
+    "rv600_next_evidence_shadow_20260515T071544Z",
+    "rv600_next_evidence_shadow_20260515T080148Z",
+    "rv600_next_evidence_shadow_20260515T083925Z",
+    "rv600_next_evidence_shadow_20260515T091646Z",
+    "rv600_next_evidence_shadow_20260515T100014Z",
+    "rv600_next_evidence_shadow_20260515T105111Z",
+    "rv600_next_evidence_shadow_20260515T113027Z",
+    "rv600_next_evidence_shadow_20260515T143222Z",
+    "rv600_next_evidence_shadow_20260515T151536Z",
+    "rv600_next_evidence_shadow_20260515T160221Z",
+    "rv600_next_evidence_shadow_20260515T164836Z",
+    "rv600_next_evidence_shadow_20260515T173507Z",
+    "rv600_next_evidence_shadow_20260515T182447Z",
+    "rv600_next_evidence_shadow_20260515T190705Z",
+    "rv600_next_evidence_shadow_20260515T200306Z"
+  ],
+  "schema_version": "rv600-spa-benchmark-audit-v1",
+  "sources_considered": [
+    {
+      "label": "selected: Hansen Superior Predictive Ability test",
+      "reason": "Directly targets whether any searched rule beats a benchmark after multiple-comparison adjustment.",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=264569"
+    },
+    {
+      "label": "supporting: White Reality Check",
+      "reason": "Existing audit already uses the max-statistic idea; SPA is more focused on benchmark superiority.",
+      "url": "https://www.fmg.ac.uk/publications/discussion-papers/data-snooping-technical-trading-rule-performance-and-bootstrap"
+    },
+    {
+      "label": "supporting: false discovery rate for trading rules",
+      "reason": "Reinforces treating apparent winners as possible data-snooping discoveries after transaction costs.",
+      "url": "https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID1095202_code517200.pdf?abstractid=1095202"
+    },
+    {
+      "label": "supporting: Bayesian backtest overfitting",
+      "reason": "Motivates estimating whether the selected best strategy is likely a true discovery.",
+      "url": "https://www.mdpi.com/2227-9091/9/1/18"
+    },
+    {
+      "label": "not selected: hierarchical partial pooling",
+      "reason": "Useful for shrinkage, but less direct than a matched-v28 superior-predictive-ability test.",
+      "url": "https://mc-stan.org/rstanarm/articles/pooling.html"
+    }
+  ],
+  "spa_screen_candidate_count": 0,
+  "thresholds": {
+    "bootstrap_count": 1000,
+    "max_p_value": 0.05,
+    "min_matched_delta_cents": 1.0,
+    "min_positive_market_rate": 0.6,
+    "min_positive_root_rate": 0.6,
+    "min_selected_pnl_cents": 0.0,
+    "min_total_entries": 25,
+    "screen_poor_alternatives": true
+  }
+}

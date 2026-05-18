@@ -1,0 +1,28 @@
+{
+  "api_key_present": true,
+  "artifact_root": "logs\\particle_research\\real_shadow\\particle_shadow_readonly",
+  "checkpoint_file_count": 1,
+  "checkpoint_row_count": 72,
+  "context_file_exists": true,
+  "context_row_count": 60,
+  "context_tailer_command": "python -m research_particle.v28_context_tailer --input \"C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\execution_events.ndjson\" --output \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\passive_contexts.ndjson\" --issues \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\passive_context_issues.ndjson\" --status \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\passive_context_tailer_status.json\" --follow --start-at-end --seed-last-contexts --append-ok",
+  "context_tailer_exists": true,
+  "dataset": "particle_shadow_readonly",
+  "env_file_exists": true,
+  "generated_utc": "2026-05-13T11:56:27.681592+00:00",
+  "market_results_exists": true,
+  "market_results_row_count": 1,
+  "notes": [
+    "Pipeline prerequisites are present; run the command template with a fresh artifact root."
+  ],
+  "online_report_command": "python -m research_particle.reports --candidates \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\candidate_snapshots\\candidate_snapshots.ndjson\" --labels \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\settlement_labels\\settlement_labels.ndjson\" --output-dir \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\reports\" --stem online_calibrated_particle_replay --online-calibrated --min-fill-prob 0.5 --counterfactual-fill-threshold 0.5",
+  "paired_run_command": "python -m research_particle.paired_passive_shadow_run --run-seconds 900 --checkpoint-interval-seconds 1 --checkpoint-depth 5 --record-independent-spot --independent-spot-feed coinbase --independent-spot-max-age-ms 5000",
+  "paired_runner_exists": true,
+  "passive_recorder_exists": true,
+  "pipeline_command": "python -m research_particle.shadow_pipeline --source-type passive_checkpoint --checkpoints \"C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\research_data\\particle_shadow_readonly\\book_checkpoints\\**\\*.ndjson\" --contexts \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\passive_contexts.ndjson\" --market-results \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\\market_results.json\" --root \"logs\\particle_research\\real_shadow\\particle_shadow_readonly\" --annualized-vol 0.65 --sample-count 2000 --seed 1 --min-fill-prob 0.5 --counterfactual-fill-threshold 0.5",
+  "private_key_file_exists": true,
+  "private_key_path_present": true,
+  "ready_to_collect": true,
+  "ready_to_pipeline": true,
+  "recorder_command": "python research_native_passive_ws_recorder.py --dataset particle_shadow_readonly --strategy-tag particle_shadow_readonly --bot-tag particle_shadow_readonly --checkpoint-interval-seconds 1 --checkpoint-depth 5"
+}

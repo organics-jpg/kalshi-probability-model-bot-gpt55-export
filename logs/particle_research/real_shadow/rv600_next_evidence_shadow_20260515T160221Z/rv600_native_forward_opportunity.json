@@ -1,0 +1,135 @@
+{
+  "best_grid_candidate": {
+    "accepted_entries": 3,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 35.333333333333336,
+    "decisions": [
+      {
+        "ask_cents": 30.0,
+        "decision_ts_utc": "2026-05-15T16:11:00.977212+00:00",
+        "is_added_entry": false,
+        "market_ticker": "KXBTC15M-26MAY151215-15",
+        "matched_v28_ev_cents": 11.65942358390799,
+        "matched_v28_pnl_cents": -30.0,
+        "matched_v28_side": "no",
+        "pnl_cents": -30.0,
+        "seconds_to_close": 239.022788,
+        "selected_ev_cents": 11.300376584930426,
+        "side": "no"
+      },
+      {
+        "ask_cents": 31.0,
+        "decision_ts_utc": "2026-05-15T16:11:20.735888+00:00",
+        "is_added_entry": true,
+        "market_ticker": "KXBTC15M-26MAY151215-15",
+        "matched_v28_ev_cents": 1.008691747480853,
+        "matched_v28_pnl_cents": 67.0,
+        "matched_v28_side": "yes",
+        "pnl_cents": 67.0,
+        "seconds_to_close": 219.264112,
+        "selected_ev_cents": 0.4258008396867261,
+        "side": "yes"
+      },
+      {
+        "ask_cents": 29.0,
+        "decision_ts_utc": "2026-05-15T16:11:37.639390+00:00",
+        "is_added_entry": true,
+        "market_ticker": "KXBTC15M-26MAY151215-15",
+        "matched_v28_ev_cents": 4.610179854848589,
+        "matched_v28_pnl_cents": 69.0,
+        "matched_v28_side": "yes",
+        "pnl_cents": 69.0,
+        "seconds_to_close": 202.36061,
+        "selected_ev_cents": 4.062300633838845,
+        "side": "yes"
+      }
+    ],
+    "distinct_markets": 1,
+    "early_gt_420s_entries": 0,
+    "gate_count": 4,
+    "last_window_pnl_cents": 106.0,
+    "late_lt_70s_entries": 0,
+    "locked_70_420s_entries": 3,
+    "matched_v28_delta_cents": 0.0,
+    "max_single_market_pnl_share": 1.0,
+    "positive_market_rate": 1.0,
+    "positive_root_rate": 1.0,
+    "rejection_reason": "fewer_than_25_entries;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct",
+    "selected_pnl_cents": 106.0,
+    "variant": "blend_90_10_same_side_ev_step_3c_late_70_240_ev0"
+  },
+  "best_locked_candidate": {
+    "accepted_entries": 1,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": -40.0,
+    "decisions": [
+      {
+        "ask_cents": 40.0,
+        "decision_ts_utc": "2026-05-15T16:05:00.939692+00:00",
+        "is_added_entry": false,
+        "market_ticker": "KXBTC15M-26MAY151215-15",
+        "matched_v28_ev_cents": 6.667000859803558,
+        "matched_v28_pnl_cents": -40.0,
+        "matched_v28_side": "no",
+        "pnl_cents": -40.0,
+        "seconds_to_close": 599.060308,
+        "selected_ev_cents": 4.260819065917193,
+        "side": "no"
+      }
+    ],
+    "distinct_markets": 1,
+    "early_gt_420s_entries": 1,
+    "gate_count": 3,
+    "last_window_pnl_cents": -40.0,
+    "late_lt_70s_entries": 0,
+    "locked_70_420s_entries": 0,
+    "matched_v28_delta_cents": 0.0,
+    "max_single_market_pnl_share": 0.0,
+    "positive_market_rate": 0.0,
+    "positive_root_rate": 0.0,
+    "rejection_reason": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "selected_pnl_cents": -40.0,
+    "variant": "rv600_primary_side_flip_only_broad_70_600_ev4"
+  },
+  "best_rv600_primary_candidate": {
+    "accepted_entries": 0,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 0.0,
+    "decisions": [],
+    "distinct_markets": 0,
+    "early_gt_420s_entries": 0,
+    "gate_count": 3,
+    "last_window_pnl_cents": 0,
+    "late_lt_70s_entries": 0,
+    "locked_70_420s_entries": 0,
+    "matched_v28_delta_cents": 0,
+    "max_single_market_pnl_share": 0.0,
+    "positive_market_rate": 0.0,
+    "positive_root_rate": 0.0,
+    "rejection_reason": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "selected_pnl_cents": 0,
+    "variant": "rv600_primary_single_market_late_70_180_ev20"
+  },
+  "conclusion": "Locked entries exist, but RV600-primary native forward PnL is nonpositive.",
+  "generated_utc": "2026-05-15T16:34:06+00:00",
+  "locked_total_entries": 15,
+  "locked_total_pnl_cents": -532.0,
+  "min_decision_ts_utc": "2026-05-13T05:37:07+00:00",
+  "output_json": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260515T160221Z\\rv600_native_forward_opportunity.json",
+  "output_md": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260515T160221Z\\rv600_native_forward_opportunity.md",
+  "root_summaries": [
+    {
+      "candidate_rows": 824,
+      "first_decision_ts_utc": "2026-05-15T16:02:42.302054+00:00",
+      "last_decision_ts_utc": "2026-05-15T16:17:40.828232+00:00",
+      "root_name": "rv600_next_evidence_shadow_20260515T160221Z",
+      "settled_markets": 2
+    }
+  ],
+  "roots": [
+    "rv600_next_evidence_shadow_20260515T160221Z"
+  ],
+  "schema_version": "rv600-native-forward-opportunity-v1",
+  "total_candidate_rows": 824,
+  "total_settled_markets": 2
+}

@@ -1,0 +1,55 @@
+{
+  "aggregate": {
+    "diagnostic_selection_count": 0,
+    "positive_test_split_rate": 0.0,
+    "preliminary_gate_pass": false,
+    "rejection_reason": "no_train_gate_selection;fewer_than_25_test_entries;nonpositive_test_pnl;does_not_beat_matched_v28",
+    "split_count": 0,
+    "test_avg_pnl_per_entry_cents": 0.0,
+    "test_matched_v28_control_pnl_cents": 0,
+    "test_matched_v28_delta_cents": 0,
+    "test_selected_pnl_cents": 0,
+    "test_total_entries": 0,
+    "train_gate_selection_count": 0
+  },
+  "eta": 1.0,
+  "expert_count": 3948,
+  "generated_utc": "2026-05-15T21:05:25+00:00",
+  "inputs": {
+    "native_json": "logs\\particle_research\\reports\\rv600_native_forward_opportunity_latest.json",
+    "root_base": "logs\\particle_research\\real_shadow"
+  },
+  "method_choice": "Multiplicative-weights expert selection over existing RV600 plan variants using prior-root rewards only.",
+  "min_train_roots": 5,
+  "modeling_options": [
+    {
+      "decision": "chosen",
+      "fit": "Best fit: choose among existing plan variants online from prior-root rewards without inventing new strategy families.",
+      "method": "multiplicative_weights",
+      "source": "Freund and Schapire 1997, A Decision-Theoretic Generalization of On-Line Learning",
+      "source_url": "https://doi.org/10.1006/jcss.1997.1504"
+    },
+    {
+      "decision": "chosen_as_validation_frame",
+      "fit": "General framework for sequentially competing with a reference class of experts; used here as an audit framing.",
+      "method": "prediction_with_expert_advice",
+      "source": "Cesa-Bianchi and Lugosi 2006, Prediction, Learning, and Games",
+      "source_url": "https://doi.org/10.1017/CBO9780511546921"
+    },
+    {
+      "decision": "deferred",
+      "fit": "Interesting for payoff scale adaptation, but heavier than needed for the current small root count.",
+      "method": "second_order_expert_bounds",
+      "source": "Cesa-Bianchi, Mansour, and Stoltz 2006, Improved Second-Order Bounds for Prediction with Expert Advice",
+      "source_url": "https://arxiv.org/abs/math/0602629"
+    }
+  ],
+  "research_only": true,
+  "reward_scale_cents": 100.0,
+  "roots": [
+    "rv600_next_evidence_shadow_20260514T031420Z"
+  ],
+  "schema_version": "rv600-online-expert-rescue-v1",
+  "split_rows": [],
+  "variant_count": 3948
+}

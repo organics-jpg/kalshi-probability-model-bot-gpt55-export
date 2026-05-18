@@ -1,0 +1,440 @@
+{
+  "candidate_count": 3398,
+  "ev_buckets": [
+    {
+      "avg_counterfactual_pnl_cents": 18.851251840942563,
+      "avg_predicted_ev_cents": 9.91223937048112,
+      "bucket": "ev_rank_1_of_5",
+      "candidate_count": 679,
+      "selected_count": 679,
+      "total_counterfactual_pnl_cents": 12800.0,
+      "win_rate": 0.5287187039764359
+    },
+    {
+      "avg_counterfactual_pnl_cents": 16.84264705882353,
+      "avg_predicted_ev_cents": 4.61571884835082,
+      "bucket": "ev_rank_2_of_5",
+      "candidate_count": 680,
+      "selected_count": 680,
+      "total_counterfactual_pnl_cents": 11453.0,
+      "win_rate": 0.6514705882352941
+    },
+    {
+      "avg_counterfactual_pnl_cents": 12.035346097201767,
+      "avg_predicted_ev_cents": 2.6547328898748375,
+      "bucket": "ev_rank_3_of_5",
+      "candidate_count": 679,
+      "selected_count": 679,
+      "total_counterfactual_pnl_cents": 8172.0,
+      "win_rate": 0.6701030927835051
+    },
+    {
+      "avg_counterfactual_pnl_cents": 7.9867647058823525,
+      "avg_predicted_ev_cents": 1.1430765713105715,
+      "bucket": "ev_rank_4_of_5",
+      "candidate_count": 680,
+      "selected_count": 680,
+      "total_counterfactual_pnl_cents": 5431.0,
+      "win_rate": 0.625
+    },
+    {
+      "avg_counterfactual_pnl_cents": 8.623318385650224,
+      "avg_predicted_ev_cents": -0.4268747292470073,
+      "bucket": "ev_rank_5_of_5",
+      "candidate_count": 680,
+      "selected_count": 223,
+      "total_counterfactual_pnl_cents": 1923.0,
+      "win_rate": 0.40358744394618834
+    }
+  ],
+  "markets": [
+    {
+      "candidate_count": 659,
+      "market_ticker": "KXBTC15M-26MAY110245-45",
+      "mean_particle_minus_current": -0.05526563836166715,
+      "mean_particle_minus_market": -0.02243529997016488,
+      "models": {
+        "brownian_p_yes": {
+          "brier": 0.15027409464549724,
+          "log_loss": 0.4760352602707554,
+          "mean_abs_error": 0.3693558493119706,
+          "mean_p_yes": 0.3693558493119706
+        },
+        "current_calibrated_p_yes": {
+          "brier": 0.09818729997036571,
+          "log_loss": 0.34380674791901933,
+          "mean_abs_error": 0.2764342837632777,
+          "mean_p_yes": 0.2764342837632777
+        },
+        "market_p_yes": {
+          "brier": 0.08587226858877087,
+          "log_loss": 0.30288644980794616,
+          "mean_abs_error": 0.2436039453717754,
+          "mean_p_yes": 0.2436039453717754
+        },
+        "particle_p_yes": {
+          "brier": 0.0700268665147323,
+          "log_loss": 0.2677731341130163,
+          "mean_abs_error": 0.22116864540161055,
+          "mean_p_yes": 0.22116864540161055
+        }
+      },
+      "selected_count": 523,
+      "settlement_result_yes": false,
+      "sides": {
+        "no": {
+          "selected_count": 307,
+          "total_pnl_cents": 9805.0,
+          "win_count": 307,
+          "win_rate": 1.0
+        },
+        "yes": {
+          "selected_count": 216,
+          "total_pnl_cents": -2931.0,
+          "win_count": 0,
+          "win_rate": 0.0
+        }
+      },
+      "total_counterfactual_pnl_cents": 6874.0
+    },
+    {
+      "candidate_count": 814,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "mean_particle_minus_current": 0.0007213969199126292,
+      "mean_particle_minus_market": -0.04641366573365003,
+      "models": {
+        "brownian_p_yes": {
+          "brier": 0.238067570479913,
+          "log_loss": 0.6670756221463945,
+          "mean_abs_error": 0.47933563103633764,
+          "mean_p_yes": 0.5206643689636623
+        },
+        "current_calibrated_p_yes": {
+          "brier": 0.23703504769025677,
+          "log_loss": 0.6598977002025712,
+          "mean_abs_error": 0.4519815,
+          "mean_p_yes": 0.5480185
+        },
+        "market_p_yes": {
+          "brier": 0.22109229115479115,
+          "log_loss": 0.6041137467429812,
+          "mean_abs_error": 0.4048464373464374,
+          "mean_p_yes": 0.5951535626535627
+        },
+        "particle_p_yes": {
+          "brier": 0.24930983851772495,
+          "log_loss": 0.6777790297038336,
+          "mean_abs_error": 0.45126010308008735,
+          "mean_p_yes": 0.5487398969199127
+        }
+      },
+      "selected_count": 715,
+      "settlement_result_yes": true,
+      "sides": {
+        "no": {
+          "selected_count": 585,
+          "total_pnl_cents": -19072.0,
+          "win_count": 0,
+          "win_rate": 0.0
+        },
+        "yes": {
+          "selected_count": 130,
+          "total_pnl_cents": 7659.0,
+          "win_count": 130,
+          "win_rate": 1.0
+        }
+      },
+      "total_counterfactual_pnl_cents": -11413.0
+    },
+    {
+      "candidate_count": 756,
+      "market_ticker": "KXBTC15M-26MAY110315-15",
+      "mean_particle_minus_current": -0.01779351475405375,
+      "mean_particle_minus_market": -0.023985928775217775,
+      "models": {
+        "brownian_p_yes": {
+          "brier": 0.08556202845679607,
+          "log_loss": 0.33918785964174686,
+          "mean_abs_error": 0.2842354981688072,
+          "mean_p_yes": 0.2842354981688072
+        },
+        "current_calibrated_p_yes": {
+          "brier": 0.01630954319072619,
+          "log_loss": 0.11223245349430057,
+          "mean_abs_error": 0.10276261243386244,
+          "mean_p_yes": 0.10276261243386244
+        },
+        "market_p_yes": {
+          "brier": 0.021491732804232805,
+          "log_loss": 0.12197496831933241,
+          "mean_abs_error": 0.10895502645502646,
+          "mean_p_yes": 0.10895502645502646
+        },
+        "particle_p_yes": {
+          "brier": 0.014014473991888071,
+          "log_loss": 0.0931578182979429,
+          "mean_abs_error": 0.08496909767980868,
+          "mean_p_yes": 0.08496909767980868
+        }
+      },
+      "selected_count": 708,
+      "settlement_result_yes": false,
+      "sides": {
+        "no": {
+          "selected_count": 530,
+          "total_pnl_cents": 6096.0,
+          "win_count": 530,
+          "win_rate": 1.0
+        },
+        "yes": {
+          "selected_count": 178,
+          "total_pnl_cents": -513.0,
+          "win_count": 0,
+          "win_rate": 0.0
+        }
+      },
+      "total_counterfactual_pnl_cents": 5583.0
+    },
+    {
+      "candidate_count": 803,
+      "market_ticker": "KXBTC15M-26MAY110330-30",
+      "mean_particle_minus_current": -0.004047455717445969,
+      "mean_particle_minus_market": -0.042632357336374986,
+      "models": {
+        "brownian_p_yes": {
+          "brier": 0.23426963167191034,
+          "log_loss": 0.6593962233669365,
+          "mean_abs_error": 0.4770474561791968,
+          "mean_p_yes": 0.4770474561791968
+        },
+        "current_calibrated_p_yes": {
+          "brier": 0.24447807844450312,
+          "log_loss": 0.6761651303577613,
+          "mean_abs_error": 0.46188832378580325,
+          "mean_p_yes": 0.46188832378580325
+        },
+        "market_p_yes": {
+          "brier": 0.2972030510585305,
+          "log_loss": 0.7891003369616043,
+          "mean_abs_error": 0.5004732254047323,
+          "mean_p_yes": 0.5004732254047323
+        },
+        "particle_p_yes": {
+          "brier": 0.241791915326105,
+          "log_loss": 0.6688099891439894,
+          "mean_abs_error": 0.4578408680683573,
+          "mean_p_yes": 0.4578408680683573
+        }
+      },
+      "selected_count": 719,
+      "settlement_result_yes": false,
+      "sides": {
+        "no": {
+          "selected_count": 564,
+          "total_pnl_cents": 32207.0,
+          "win_count": 564,
+          "win_rate": 1.0
+        },
+        "yes": {
+          "selected_count": 155,
+          "total_pnl_cents": -3333.0,
+          "win_count": 0,
+          "win_rate": 0.0
+        }
+      },
+      "total_counterfactual_pnl_cents": 28874.0
+    },
+    {
+      "candidate_count": 366,
+      "market_ticker": "KXBTC15M-26MAY110345-45",
+      "mean_particle_minus_current": -0.021027225681289303,
+      "mean_particle_minus_market": -0.029198086337027012,
+      "models": {
+        "brownian_p_yes": {
+          "brier": 0.24037000140802964,
+          "log_loss": 0.6737651710143064,
+          "mean_abs_error": 0.48927511092593645,
+          "mean_p_yes": 0.48927511092593645
+        },
+        "current_calibrated_p_yes": {
+          "brier": 0.24732298553687704,
+          "log_loss": 0.6867265132974837,
+          "mean_abs_error": 0.489875587431694,
+          "mean_p_yes": 0.489875587431694
+        },
+        "market_p_yes": {
+          "brier": 0.25568353825136614,
+          "log_loss": 0.7039658357327013,
+          "mean_abs_error": 0.4980464480874317,
+          "mean_p_yes": 0.4980464480874317
+        },
+        "particle_p_yes": {
+          "brier": 0.22812237524961268,
+          "log_loss": 0.6471594871471098,
+          "mean_abs_error": 0.4688483617504047,
+          "mean_p_yes": 0.4688483617504047
+        }
+      },
+      "selected_count": 276,
+      "settlement_result_yes": false,
+      "sides": {
+        "no": {
+          "selected_count": 241,
+          "total_pnl_cents": 11586.0,
+          "win_count": 241,
+          "win_rate": 1.0
+        },
+        "yes": {
+          "selected_count": 35,
+          "total_pnl_cents": -1725.0,
+          "win_count": 0,
+          "win_rate": 0.0
+        }
+      },
+      "total_counterfactual_pnl_cents": 9861.0
+    }
+  ],
+  "particle_brier_minus_current_brier": -0.00573441158835708,
+  "particle_brier_minus_market_brier": -0.01404013293916287,
+  "particle_logloss_minus_current_logloss": -0.02070596923433199,
+  "particle_logloss_minus_market_logloss": -0.030119532963168993,
+  "selected_count": 2941,
+  "selected_no_count": 2227,
+  "selected_no_pnl_cents": 40622.0,
+  "selected_yes_count": 714,
+  "selected_yes_pnl_cents": -843.0,
+  "source_report": "logs\\particle_research\\real_shadow\\particle_side_safety_oos_20260511TLOCKED\\reports\\materialized_online_logit_market_mean_rolling_vol_600s.json",
+  "total_counterfactual_pnl_cents": 39779.0,
+  "worst_decisions": [
+    {
+      "counterfactual_pnl_cents": -74.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:54.975838+00:00",
+      "ev_no_cents": 0.25455518751874706,
+      "ev_yes_cents": -3.254555187518747,
+      "market_p_yes": 0.265,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.24230045727021685,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -74.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:55.981840+00:00",
+      "ev_no_cents": 0.2722454798301541,
+      "ev_yes_cents": -3.2722454798301577,
+      "market_p_yes": 0.265,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.24211994408336576,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -74.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:57.032988+00:00",
+      "ev_no_cents": 0.2907692281751686,
+      "ev_yes_cents": -3.290769228175172,
+      "market_p_yes": 0.265,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.2419309262431105,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -74.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:58.069727+00:00",
+      "ev_no_cents": 0.3090788109454259,
+      "ev_yes_cents": -3.309078810945426,
+      "market_p_yes": 0.265,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.241744093765863,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -74.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:59.081437+00:00",
+      "ev_no_cents": 0.3269845607119102,
+      "ev_yes_cents": -3.32698456071191,
+      "market_p_yes": 0.265,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.24156138203355196,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -73.0,
+      "current_calibrated_p_yes": 0.257455,
+      "decision_ts_utc": "2026-05-11T06:49:40.377916+00:00",
+      "ev_no_cents": 0.34715004057444787,
+      "ev_yes_cents": -3.3471500405744443,
+      "market_p_yes": 0.275,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.2515596934635261,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -73.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:53.941379+00:00",
+      "ev_no_cents": 1.2364029810631507,
+      "ev_yes_cents": -4.236402981063147,
+      "market_p_yes": 0.275,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.24248568386670258,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -73.0,
+      "current_calibrated_p_yes": 0.241992,
+      "decision_ts_utc": "2026-05-11T06:50:02.126910+00:00",
+      "ev_no_cents": 1.6533150673384434,
+      "ev_yes_cents": -4.653315067338443,
+      "market_p_yes": 0.275,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.23823147890470978,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -72.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:48.712530+00:00",
+      "ev_no_cents": 2.3508941936125787,
+      "ev_yes_cents": -5.350894193612575,
+      "market_p_yes": 0.285,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.2413174061876268,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -72.0,
+      "current_calibrated_p_yes": 0.245845,
+      "decision_ts_utc": "2026-05-11T06:49:52.807100+00:00",
+      "ev_no_cents": 2.2165438812560048,
+      "ev_yes_cents": -5.216543881256005,
+      "market_p_yes": 0.285,
+      "market_ticker": "KXBTC15M-26MAY110300-00",
+      "particle_p_yes": 0.24268832774228566,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    }
+  ]
+}

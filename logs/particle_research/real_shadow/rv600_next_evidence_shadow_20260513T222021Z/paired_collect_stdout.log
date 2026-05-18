@@ -1,0 +1,16 @@
+dataset=rv600_next_evidence_shadow_20260513T222021Z
+run_id=20260513T222021Z-b268bf25
+recorder_returncode=0
+tailer_returncode=0
+checkpoint_file_count=2
+checkpoint_row_count=819
+context_row_count=213
+context_issue_count=0
+independent_spot_returncode=0
+independent_spot_row_count=4341
+independent_spot_issue_count=0
+merged_context_row_count=213
+merged_context_issue_count=213
+context_path_for_pipeline=logs\particle_research\real_shadow\rv600_next_evidence_shadow_20260513T222021Z\passive_contexts_independent_spot.ndjson
+manifest=logs\particle_research\real_shadow\rv600_next_evidence_shadow_20260513T222021Z\paired_passive_run_manifest.json
+pipeline_command=python -m research_particle.shadow_pipeline --source-type passive_checkpoint --checkpoints "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\research_data\rv600_next_evidence_shadow_20260513T222021Z\book_checkpoints\**\*.ndjson" --contexts "logs\particle_research\real_shadow\rv600_next_evidence_shadow_20260513T222021Z\passive_contexts_independent_spot.ndjson" --root "logs\particle_research\real_shadow\rv600_next_evidence_shadow_20260513T222021Z" --annualized-vol 0.65 --sample-count 2000 --seed 1 --min-fill-prob 0.5 --counterfactual-fill-threshold 0.5

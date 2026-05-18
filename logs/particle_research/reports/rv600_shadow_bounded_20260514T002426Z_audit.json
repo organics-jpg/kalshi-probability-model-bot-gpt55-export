@@ -1,0 +1,39 @@
+{
+  "collection_ok": true,
+  "decision": "bounded_run_scored_with_entries",
+  "generated_utc": "2026-05-14T00:55:40+00:00",
+  "inputs": {
+    "opportunity_json": "logs\\particle_research\\reports\\rv600_next_evidence_shadow_20260514T002426Z_opportunity.json",
+    "refresh_json": "logs\\particle_research\\reports\\rv600_next_evidence_shadow_20260514T002426Z_refresh.json",
+    "root": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260514T002426Z"
+  },
+  "interpretation": "The bounded read-only path is fully scored and produced accepted RV600-style entries. Locked entries=5, locked_pnl_cents=-145.0, best_grid_entries=6; this is still a small fresh-shadow slice and must be judged by the objective completion gates.",
+  "labels_ok": true,
+  "offline_v28_context_ok": true,
+  "pipeline_ok": true,
+  "research_only": true,
+  "run_label": "bounded_run",
+  "schema_version": "rv600-shadow-smoke-audit-v1",
+  "scored_ok": true,
+  "summary": {
+    "best_grid_accepted_entries": 6,
+    "best_grid_matched_v28_delta_cents": 0.0,
+    "best_grid_rejection": "fewer_than_25_entries;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct",
+    "best_grid_selected_pnl_cents": 164.0,
+    "best_grid_variant": "blend_95_5_max_3_entries_broad_70_600_ev2",
+    "candidate_rows": 763,
+    "checkpoint_row_count": 820,
+    "context_row_count": 213,
+    "independent_spot_row_count": 4360,
+    "labels_written": 2,
+    "locked_total_entries": 5,
+    "locked_total_pnl_cents": -145.0,
+    "merged_context_issue_count": 213,
+    "offline_context_issues": 2,
+    "offline_contexts_written": 818,
+    "pipeline_context_issues": 0,
+    "pipeline_contexts_written": 763,
+    "root": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260514T002426Z",
+    "settled_markets": 2
+  }
+}

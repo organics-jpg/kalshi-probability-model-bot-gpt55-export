@@ -1,0 +1,84 @@
+{
+  "schema_version": "rv600-locked-forward-plan-v1",
+  "plan_id": "RV600REV001",
+  "generated_utc": "2026-05-15T07:10:45Z",
+  "research_only": true,
+  "candidate": {
+    "variant": "rv600_primary_same_side_ev_step_3c_base_70_420_ev2",
+    "probability_mode": "rv600_primary",
+    "min_seconds_to_close": 70.0,
+    "max_seconds_to_close": 420.0,
+    "min_ev_cents": 2.0,
+    "entry_rule": "same_side_ev_step_3c",
+    "max_entries_per_market": 3,
+    "risk_cap_cents": null,
+    "gate_count": 3,
+    "primary_accounting_mode": "position_capped",
+    "required_accounting_modes": [
+      "all_entries",
+      "one_per_side_per_market",
+      "position_capped"
+    ]
+  },
+  "rationale": {
+    "source_reports": [
+      "logs/particle_research/reports/rv600_next_evidence_shadow_cumulative_latest_opportunity.json",
+      "logs/particle_research/reports/rv600_shadow_bounded_cumulative_audit_latest.json",
+      "logs/particle_research/reports/rv600_failure_pattern_audit_latest.json",
+      "logs/particle_research/reports/rv600_pbo_stability_audit_latest.json",
+      "logs/particle_research/reports/rv600_reality_check_audit_latest.json",
+      "logs/particle_research/reports/rv600_stability_selection_rescue_latest.json"
+    ],
+    "prior_sample_status": "diagnostic_only_not_promotable",
+    "why_this_candidate": "After adding the 25th bounded root, this simple rv600-primary same-side EV-step candidate became the simplest support row with no local summary rejection under position-capped repeated-entry accounting. It is frozen only to test future evidence; it is not promoted because PBO, root-bootstrap reality-check, and stability-selection audits still reject the current grid as a promoted strategy.",
+    "prior_diagnostic_metrics": {
+      "accepted_entries": 63,
+      "distinct_markets": 28,
+      "selected_pnl_cents": 1198.0,
+      "matched_v28_delta_cents": 542.0,
+      "avg_pnl_per_entry_cents": 19.015873015873016,
+      "positive_root_rate": 0.6,
+      "positive_market_rate": 0.6071428571428571,
+      "max_single_market_pnl_share": 0.2362270450751252,
+      "last_window_pnl_cents": 28.0,
+      "rejection_reason": ""
+    },
+    "anti_overfit_status": {
+      "pbo_decision": "pbo_rejects_current_grid",
+      "pbo": 0.5449,
+      "reality_check_decision": "reality_check_rejects_current_grid",
+      "mean_reality_check_p_value": 0.2498,
+      "studentized_reality_check_p_value": 0.2278,
+      "stability_selection_decision": "stability_selection_rescue_failed",
+      "stability_selection_rejection": "selection_rate_below_threshold;avg_test_entry_below_10c;positive_test_splits_below_60pct"
+    }
+  },
+  "pre_registration": {
+    "forward_evidence_starts_after_utc": "2026-05-15T07:10:45Z",
+    "prior_evidence_policy": "Prior 25-root evidence can explain why the candidate was frozen, but cannot by itself promote the candidate or complete the goal.",
+    "selection_policy": "Do not tune this candidate using future outcomes. Score this frozen variant against matched v28 at accepted timestamps under all required accounting modes.",
+    "failure_policy": "If future-only evidence falls below PnL, average-entry, matched-v28, concentration, breadth, or recency gates, reject this revision instead of lowering gates."
+  },
+  "forward_gates": {
+    "selected_pnl_after_fees_fills_positive": true,
+    "matched_v28_edge_min_percent": 20,
+    "avg_pnl_per_entry_cents_min": 10.0,
+    "avg_pnl_per_market_positive": true,
+    "positive_root_rate_min": 0.60,
+    "positive_market_rate_min": 0.60,
+    "last_20_accepted_entries_positive": true,
+    "max_single_market_pnl_share_max": 0.25,
+    "fill_adjusted_pnl_positive": true,
+    "target_accepted_entries": 100,
+    "target_distinct_markets": 40,
+    "target_calendar_days": 10,
+    "target_weekend_sessions": 2
+  },
+  "guardrails": [
+    "Research-only: no live trades.",
+    "Do not change live v28 order logic.",
+    "Do not restart the live bot.",
+    "Use offline matched-v28 replay from passive checkpoints and independent spot.",
+    "Do not call update_goal unless the objective audit is green on future-only evidence."
+  ]
+}

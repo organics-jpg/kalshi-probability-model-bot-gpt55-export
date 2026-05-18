@@ -1,0 +1,39 @@
+{
+  "collection_ok": true,
+  "decision": "smoke_scored_no_rv600_entries",
+  "generated_utc": "2026-05-13T20:18:24+00:00",
+  "inputs": {
+    "opportunity_json": "logs\\particle_research\\reports\\rv600_next_evidence_shadow_smoke_opportunity_latest.json",
+    "refresh_json": "logs\\particle_research\\reports\\rv600_next_evidence_shadow_smoke_refresh_latest.json",
+    "root": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_smoke_20260513T193315Z"
+  },
+  "interpretation": "The bounded read-only path is operational and fully scored, but it produced zero accepted RV600 entries. It is pipeline validation, not strategy validation.",
+  "labels_ok": true,
+  "offline_v28_context_ok": true,
+  "pipeline_ok": true,
+  "research_only": true,
+  "run_label": "smoke",
+  "schema_version": "rv600-shadow-smoke-audit-v1",
+  "scored_ok": true,
+  "summary": {
+    "best_grid_accepted_entries": 0,
+    "best_grid_matched_v28_delta_cents": 0.0,
+    "best_grid_rejection": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "best_grid_selected_pnl_cents": 0.0,
+    "best_grid_variant": "rv600_primary_single_market_late_70_180_ev0",
+    "candidate_rows": 115,
+    "checkpoint_row_count": 115,
+    "context_row_count": 213,
+    "independent_spot_row_count": 545,
+    "labels_written": 1,
+    "locked_total_entries": 0,
+    "locked_total_pnl_cents": 0.0,
+    "merged_context_issue_count": 213,
+    "offline_context_issues": 0,
+    "offline_contexts_written": 115,
+    "pipeline_context_issues": 0,
+    "pipeline_contexts_written": 115,
+    "root": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_smoke_20260513T193315Z",
+    "settled_markets": 1
+  }
+}

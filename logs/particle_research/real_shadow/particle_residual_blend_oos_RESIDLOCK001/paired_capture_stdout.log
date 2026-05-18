@@ -1,0 +1,16 @@
+dataset=particle_residual_blend_oos_RESIDLOCK001
+run_id=RESIDLOCK001
+recorder_returncode=0
+tailer_returncode=0
+checkpoint_file_count=5
+checkpoint_row_count=3633
+context_row_count=896
+context_issue_count=29
+independent_spot_returncode=0
+independent_spot_row_count=44784
+independent_spot_issue_count=0
+merged_context_row_count=835
+merged_context_issue_count=61
+context_path_for_pipeline=logs\particle_research\real_shadow\particle_residual_blend_oos_RESIDLOCK001\passive_contexts_independent_spot.ndjson
+manifest=logs\particle_research\real_shadow\particle_residual_blend_oos_RESIDLOCK001\paired_passive_run_manifest.json
+pipeline_command=python -m research_particle.shadow_pipeline --source-type passive_checkpoint --checkpoints "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\research_data\particle_residual_blend_oos_RESIDLOCK001\book_checkpoints\**\*.ndjson" --contexts "logs\particle_research\real_shadow\particle_residual_blend_oos_RESIDLOCK001\passive_contexts_independent_spot.ndjson" --root "logs\particle_research\real_shadow\particle_residual_blend_oos_RESIDLOCK001" --annualized-vol 0.65 --sample-count 2000 --seed 1 --min-fill-prob 0.5 --counterfactual-fill-threshold 0.5

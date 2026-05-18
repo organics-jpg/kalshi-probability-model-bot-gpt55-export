@@ -1,0 +1,52 @@
+{
+  "aggregate": {
+    "diagnostic_selection_count": 0,
+    "positive_test_split_rate": 0.0,
+    "preliminary_gate_pass": false,
+    "rejection_reason": "no_train_gate_selection;fewer_than_25_test_entries;nonpositive_test_pnl;does_not_beat_matched_v28",
+    "split_count": 0,
+    "test_avg_pnl_per_entry_cents": 0.0,
+    "test_matched_v28_control_pnl_cents": 0,
+    "test_matched_v28_delta_cents": 0,
+    "test_selected_pnl_cents": 0,
+    "test_total_entries": 0,
+    "train_gate_selection_count": 0
+  },
+  "generated_utc": "2026-05-15T21:05:21+00:00",
+  "inputs": {
+    "native_json": "logs\\particle_research\\reports\\rv600_native_forward_opportunity_latest.json",
+    "root_base": "logs\\particle_research\\real_shadow"
+  },
+  "method_choice": "Conformal abstention over RV600 probability using prior-root residual quantiles.",
+  "min_train_roots": 5,
+  "modeling_options": [
+    {
+      "decision": "chosen",
+      "fit": "Use prior-root residual quantiles as a conservative RV600 probability error band before accepting EV.",
+      "method": "split_conformal_abstention",
+      "source": "Xu and Xie 2020/2023, Conformal prediction for time series",
+      "source_url": "https://arxiv.org/abs/2010.09107"
+    },
+    {
+      "decision": "deferred",
+      "fit": "More adaptive, but heavier than needed for a first rescue and needs more stable residual history.",
+      "method": "sequential_conformal_inference",
+      "source": "Xu and Xie 2022, Sequential Predictive Conformal Inference for Time Series",
+      "source_url": "https://arxiv.org/abs/2212.03463"
+    },
+    {
+      "decision": "previously_rejected",
+      "fit": "Already tested; failed prequential gates on the current RV600 sample.",
+      "method": "meta_label_filter",
+      "source": "Joubert 2022, Meta-Labeling: Theory and Framework",
+      "source_url": "https://ssrn.com/abstract=4032018"
+    }
+  ],
+  "research_only": true,
+  "roots": [
+    "rv600_next_evidence_shadow_20260514T031420Z"
+  ],
+  "schema_version": "rv600-conformal-abstention-rescue-v1",
+  "split_rows": [],
+  "strategy_count": 8
+}

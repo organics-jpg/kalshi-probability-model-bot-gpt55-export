@@ -1,0 +1,53 @@
+{
+  "collection_ok": true,
+  "decision": "cumulative_bounded_scored_with_entries",
+  "generated_utc": "2026-05-14T05:18:33+00:00",
+  "inputs": {
+    "opportunity_json": "logs\\particle_research\\reports\\rv600_next_evidence_shadow_20260514T045722Z_opportunity.json",
+    "refresh_jsons": [
+      "logs\\particle_research\\reports\\rv600_next_evidence_shadow_20260514T045722Z_refresh.json"
+    ],
+    "roots": [
+      "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260514T045722Z"
+    ]
+  },
+  "interpretation": "Cumulative bounded read-only evidence has accepted RV600-style entries (locked_pnl_cents=730.0, best_grid_pnl_cents=253.0), but the best row is still gate-rejected: fewer_than_25_entries;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct.",
+  "labels_ok": true,
+  "offline_v28_context_ok": true,
+  "pipeline_ok": true,
+  "research_only": true,
+  "root_rows": [
+    {
+      "checkpoint_row_count": 847,
+      "collection_ok": true,
+      "independent_spot_row_count": 3714,
+      "offline_context_issues": 5,
+      "offline_contexts_written": 842,
+      "offline_v28_context_ok": true,
+      "pipeline_context_issues": 0,
+      "pipeline_contexts_written": 823,
+      "pipeline_ok": true,
+      "root": "logs\\particle_research\\real_shadow\\rv600_next_evidence_shadow_20260514T045722Z"
+    }
+  ],
+  "schema_version": "rv600-bounded-cumulative-audit-v1",
+  "scored_ok": true,
+  "summary": {
+    "best_grid_accepted_entries": 3,
+    "best_grid_distinct_markets": 1,
+    "best_grid_matched_v28_delta_cents": 0.0,
+    "best_grid_rejection": "fewer_than_25_entries;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct",
+    "best_grid_selected_pnl_cents": 253.0,
+    "best_grid_variant": "blend_95_5_max_3_entries_late_70_300_ev10",
+    "best_locked_accepted_entries": 4,
+    "best_locked_matched_v28_delta_cents": 0.0,
+    "best_locked_rejection": "fewer_than_25_entries;positive_markets_below_60pct;single_market_share_above_25pct;does_not_beat_matched_v28_by_20pct",
+    "best_locked_selected_pnl_cents": 150.0,
+    "best_locked_variant": "rv600_primary_max_2_entries_mid_120_420_ev12",
+    "candidate_rows": 823,
+    "locked_total_entries": 24,
+    "locked_total_pnl_cents": 730.0,
+    "root_count": 1,
+    "settled_markets": 2
+  }
+}

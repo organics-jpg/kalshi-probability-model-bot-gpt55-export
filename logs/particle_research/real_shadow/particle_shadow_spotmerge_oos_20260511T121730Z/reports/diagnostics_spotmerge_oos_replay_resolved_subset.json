@@ -1,0 +1,244 @@
+{
+  "candidate_count": 556,
+  "ev_buckets": [
+    {
+      "avg_counterfactual_pnl_cents": -12.621621621621621,
+      "avg_predicted_ev_cents": 24.166441441441442,
+      "bucket": "ev_rank_1_of_5",
+      "candidate_count": 111,
+      "selected_count": 111,
+      "total_counterfactual_pnl_cents": -1401.0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -20.83783783783784,
+      "avg_predicted_ev_cents": 15.321193693693694,
+      "bucket": "ev_rank_2_of_5",
+      "candidate_count": 111,
+      "selected_count": 111,
+      "total_counterfactual_pnl_cents": -2313.0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -17.855855855855857,
+      "avg_predicted_ev_cents": 11.644108108108107,
+      "bucket": "ev_rank_3_of_5",
+      "candidate_count": 111,
+      "selected_count": 111,
+      "total_counterfactual_pnl_cents": -1982.0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -13.693693693693694,
+      "avg_predicted_ev_cents": 8.873864864864865,
+      "bucket": "ev_rank_4_of_5",
+      "candidate_count": 111,
+      "selected_count": 111,
+      "total_counterfactual_pnl_cents": -1520.0,
+      "win_rate": 0.0
+    },
+    {
+      "avg_counterfactual_pnl_cents": -34.29,
+      "avg_predicted_ev_cents": 3.7899419642857146,
+      "bucket": "ev_rank_5_of_5",
+      "candidate_count": 112,
+      "selected_count": 100,
+      "total_counterfactual_pnl_cents": -3429.0,
+      "win_rate": 0.03
+    }
+  ],
+  "markets": [
+    {
+      "candidate_count": 556,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "mean_particle_minus_current": -0.13072137769784173,
+      "mean_particle_minus_market": -0.1376861510791367,
+      "models": {
+        "brownian_p_yes": {
+          "brier": 0.14162639977642555,
+          "log_loss": 0.4446196021305525,
+          "mean_abs_error": 0.34111614032538723,
+          "mean_p_yes": 0.6588838596746127
+        },
+        "current_calibrated_p_yes": {
+          "brier": 0.07814798656716906,
+          "log_loss": 0.26594318987322385,
+          "mean_abs_error": 0.21032808273381295,
+          "mean_p_yes": 0.7896719172661871
+        },
+        "market_p_yes": {
+          "brier": 0.06992293165467625,
+          "log_loss": 0.2512503874236062,
+          "mean_abs_error": 0.20336330935251798,
+          "mean_p_yes": 0.796636690647482
+        },
+        "particle_p_yes": {
+          "brier": 0.1414113160971223,
+          "log_loss": 0.4443650998395844,
+          "mean_abs_error": 0.3410494604316547,
+          "mean_p_yes": 0.6589505395683454
+        }
+      },
+      "selected_count": 544,
+      "settlement_result_yes": true,
+      "sides": {
+        "no": {
+          "selected_count": 541,
+          "total_pnl_cents": -10795.0,
+          "win_count": 0,
+          "win_rate": 0.0
+        },
+        "yes": {
+          "selected_count": 3,
+          "total_pnl_cents": 150.0,
+          "win_count": 3,
+          "win_rate": 1.0
+        }
+      },
+      "total_counterfactual_pnl_cents": -10645.0
+    }
+  ],
+  "particle_brier_minus_current_brier": 0.06326332952995323,
+  "particle_brier_minus_market_brier": 0.07148838444244604,
+  "particle_logloss_minus_current_logloss": 0.17842190996636054,
+  "particle_logloss_minus_market_logloss": 0.19311471241597816,
+  "selected_count": 544,
+  "selected_no_count": 541,
+  "selected_no_pnl_cents": -10795.0,
+  "selected_yes_count": 3,
+  "selected_yes_pnl_cents": 150.0,
+  "source_report": "logs\\particle_research\\real_shadow\\particle_shadow_spotmerge_oos_20260511T121730Z\\reports\\spotmerge_oos_replay_resolved_subset.json",
+  "total_counterfactual_pnl_cents": -10645.0,
+  "worst_decisions": [
+    {
+      "counterfactual_pnl_cents": -52.0,
+      "current_calibrated_p_yes": 0.423661,
+      "decision_ts_utc": "2026-05-11T12:17:34.146815+00:00",
+      "ev_no_cents": 1.213999999999995,
+      "ev_yes_cents": -4.213999999999995,
+      "market_p_yes": 0.485,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.457,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:44.259241+00:00",
+      "ev_no_cents": 2.8910000000000053,
+      "ev_yes_cents": -5.891000000000009,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.4705,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:45.265515+00:00",
+      "ev_no_cents": 0.7350000000000065,
+      "ev_yes_cents": -3.735000000000003,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.4925,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:46.280243+00:00",
+      "ev_no_cents": 2.450000000000003,
+      "ev_yes_cents": -5.450000000000003,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.475,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:47.327358+00:00",
+      "ev_no_cents": 1.176000000000002,
+      "ev_yes_cents": -4.176000000000002,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.488,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:48.329389+00:00",
+      "ev_no_cents": 3.136000000000003,
+      "ev_yes_cents": -6.135999999999999,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.468,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:49.514816+00:00",
+      "ev_no_cents": 1.5679999999999978,
+      "ev_yes_cents": -4.568000000000001,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.484,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:50.534883+00:00",
+      "ev_no_cents": 1.8620000000000019,
+      "ev_yes_cents": -4.862000000000002,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.481,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:51.624122+00:00",
+      "ev_no_cents": 2.7929999999999993,
+      "ev_yes_cents": -5.792999999999999,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.4715,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    },
+    {
+      "counterfactual_pnl_cents": -49.0,
+      "current_calibrated_p_yes": 0.438034,
+      "decision_ts_utc": "2026-05-11T12:17:52.628295+00:00",
+      "ev_no_cents": 3.2339999999999947,
+      "ev_yes_cents": -6.233999999999991,
+      "market_p_yes": 0.515,
+      "market_ticker": "KXBTC15M-26MAY110830-30",
+      "particle_p_yes": 0.467,
+      "settlement_result_yes": true,
+      "side": "no",
+      "won": false
+    }
+  ]
+}

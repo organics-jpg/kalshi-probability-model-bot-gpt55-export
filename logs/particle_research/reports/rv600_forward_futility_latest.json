@@ -1,0 +1,79 @@
+{
+  "audit": {
+    "goal_complete": false,
+    "status_counts": {
+      "fail": 3,
+      "partial": 0,
+      "pass": 10
+    }
+  },
+  "bootstrap": {
+    "iterations": 20000,
+    "median_final_entries": 100.0,
+    "median_final_markets": 100.0,
+    "median_final_pnl_cents": -1043.5,
+    "p90_final_pnl_cents": -786.7,
+    "seed": 600,
+    "success_count": 0,
+    "success_definition": "final entries >= target, markets >= target, selected PnL >= target_entries * target_avg_entry_cents, avg entry >= target, and matched-v28 delta > 0",
+    "success_probability": 0.0,
+    "usable_root_blocks": 14
+  },
+  "current_forward_row": {
+    "accepted_entries": 15,
+    "accounting_mode": "one_per_side_per_market",
+    "avg_pnl_per_entry_cents": -10.353333333333333,
+    "distinct_markets": 15,
+    "matched_v28_control_pnl_cents": -148.2,
+    "matched_v28_delta_cents": -7.100000000000023,
+    "rejection_reason": "fewer_than_25_entries;nonpositive_pnl;avg_entry_below_10c;positive_roots_below_60pct;positive_markets_below_60pct;last_window_nonpositive;no_fill_penalty_nonpositive",
+    "selected_pnl_cents": -155.3,
+    "variant": "rv600_primary_max_3_entries_mid_120_420_ev12"
+  },
+  "decision": "reject_current_locked_family_for_promotion",
+  "futility_probability_threshold": 0.05,
+  "generated_utc": "2026-05-15T21:22:01+00:00",
+  "inputs": {
+    "audit_json": "logs\\particle_research\\reports\\rv600_goal_completion_audit_latest.json",
+    "forward_json": "logs\\particle_research\\reports\\rv600_variation_forward_latest.json",
+    "native_json": "logs\\particle_research\\reports\\rv600_native_forward_opportunity_latest.json",
+    "prequential_json": "logs\\particle_research\\reports\\rv600_prequential_selection_latest.json"
+  },
+  "native": {
+    "locked_total_entries": 14,
+    "locked_total_pnl_cents": 1167.0,
+    "roots": 1,
+    "total_candidate_rows": 812,
+    "total_settled_markets": 1
+  },
+  "prequential": {
+    "diagnostic_fallback_selection_count": 20,
+    "locked_gate_selection_count": 0,
+    "positive_test_split_rate": 0.15,
+    "split_count": 20,
+    "test_matched_v28_delta_cents": 0.0,
+    "test_selected_pnl_cents": -394.0
+  },
+  "reasons": [
+    "forward_locked_selected_pnl_nonpositive",
+    "forward_locked_avg_entry_negative",
+    "does_not_beat_matched_v28_on_forward_timestamps",
+    "prequential_locked_gate_selection_count_zero",
+    "bootstrap_predictive_success_probability_below_threshold"
+  ],
+  "recovery_math": {
+    "current_avg_pnl_per_entry_cents": -10.353333333333333,
+    "current_entries": 15,
+    "current_markets": 15,
+    "current_pnl_cents": -155.3,
+    "remaining_entries_to_target": 85,
+    "remaining_markets_to_target": 25,
+    "required_remaining_avg_pnl_per_entry_cents": 13.591764705882353,
+    "required_remaining_avg_to_positive_cents": 1.8270588235294118,
+    "target_entries": 100,
+    "target_markets": 40,
+    "target_total_pnl_cents": 1000.0
+  },
+  "research_only": true,
+  "schema_version": "rv600-forward-futility-v1"
+}

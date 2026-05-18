@@ -1,0 +1,148 @@
+{
+  "best_by_matched_v28_delta": {
+    "accepted_entries": 84,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 13.333333333333334,
+    "distinct_markets": 30,
+    "last_window_pnl_cents": -68.0,
+    "max_single_market_pnl_share": 0.25357142857142856,
+    "mean_delta_cents_per_root": 18.75,
+    "positive_market_rate": 0.36666666666666664,
+    "positive_root_rate": 0.275,
+    "rejection_reason": "positive_roots_below_60pct;positive_markets_below_60pct;single_market_share_above_25pct;last_window_nonpositive;market_drawdown_worse_than_25pct",
+    "studentized_delta_t": 1.257844781156382,
+    "total_matched_v28_control_pnl_cents": 370.0,
+    "total_matched_v28_delta_cents": 750.0,
+    "total_selected_pnl_cents": 1120.0,
+    "variant": "rv600_primary_max_3_entries_late_70_300_ev4"
+  },
+  "best_by_selected_pnl": {
+    "accepted_entries": 100,
+    "accounting_mode": "all_entries",
+    "avg_pnl_per_entry_cents": 17.0,
+    "distinct_markets": 34,
+    "last_window_pnl_cents": 91.0,
+    "max_single_market_pnl_share": 0.14823529411764705,
+    "mean_delta_cents_per_root": 0.0,
+    "positive_market_rate": 0.5,
+    "positive_root_rate": 0.4,
+    "rejection_reason": "positive_roots_below_60pct;positive_markets_below_60pct;does_not_beat_matched_v28_by_20pct;market_drawdown_worse_than_25pct",
+    "studentized_delta_t": 0.0,
+    "total_matched_v28_control_pnl_cents": 1700.0,
+    "total_matched_v28_delta_cents": 0.0,
+    "total_selected_pnl_cents": 1700.0,
+    "variant": "blend_90_10_max_3_entries_base_70_420_ev4"
+  },
+  "candidate_count": 7482,
+  "chosen_method": {
+    "name": "Root bootstrap reality check over matched-v28 deltas",
+    "reason": "The current RV600 risk is data snooping across thousands of grid variants. A root-level bootstrap of the maximum matched-v28 delta tests whether the best apparent edge is larger than the selection effect expected from the full tested universe."
+  },
+  "decision": "reality_check_rejects_current_grid",
+  "generated_utc": "2026-05-15T21:21:42+00:00",
+  "inputs": {
+    "base_dir": "logs\\particle_research\\real_shadow",
+    "min_decision_ts_utc": "2026-05-13T19:50:00+00:00",
+    "min_root_name": "rv600_next_evidence_shadow_20260513T195001Z",
+    "reports_dir": "logs\\particle_research\\reports",
+    "seed": 600
+  },
+  "mean_reality_check": {
+    "bootstrap_count": 1000,
+    "exceedance_count": 373,
+    "metric": "matched_delta",
+    "observed_stat": 118.58541225631423,
+    "p_value": 0.37362637362637363,
+    "statistic": "mean"
+  },
+  "research_only": true,
+  "root_count": 40,
+  "roots": [
+    "rv600_next_evidence_shadow_20260513T195001Z",
+    "rv600_next_evidence_shadow_20260513T202034Z",
+    "rv600_next_evidence_shadow_20260513T205117Z",
+    "rv600_next_evidence_shadow_20260513T211949Z",
+    "rv600_next_evidence_shadow_20260513T215130Z",
+    "rv600_next_evidence_shadow_20260513T222021Z",
+    "rv600_next_evidence_shadow_20260513T230108Z",
+    "rv600_next_evidence_shadow_20260513T234759Z",
+    "rv600_next_evidence_shadow_20260514T002426Z",
+    "rv600_next_evidence_shadow_20260514T010859Z",
+    "rv600_next_evidence_shadow_20260514T014324Z",
+    "rv600_next_evidence_shadow_20260514T021209Z",
+    "rv600_next_evidence_shadow_20260514T024042Z",
+    "rv600_next_evidence_shadow_20260514T031420Z",
+    "rv600_next_evidence_shadow_20260514T035926Z",
+    "rv600_next_evidence_shadow_20260514T045722Z",
+    "rv600_next_evidence_shadow_20260514T053423Z",
+    "rv600_next_evidence_shadow_20260514T122254Z",
+    "rv600_next_evidence_shadow_20260514T130107Z",
+    "rv600_next_evidence_shadow_20260515T024708Z",
+    "rv600_next_evidence_shadow_20260515T032104Z",
+    "rv600_next_evidence_shadow_20260515T034820Z",
+    "rv600_next_evidence_shadow_20260515T045448Z",
+    "rv600_next_evidence_shadow_20260515T053557Z",
+    "rv600_next_evidence_shadow_20260515T063046Z",
+    "rv600_next_evidence_shadow_20260515T071544Z",
+    "rv600_next_evidence_shadow_20260515T080148Z",
+    "rv600_next_evidence_shadow_20260515T083925Z",
+    "rv600_next_evidence_shadow_20260515T091646Z",
+    "rv600_next_evidence_shadow_20260515T100014Z",
+    "rv600_next_evidence_shadow_20260515T105111Z",
+    "rv600_next_evidence_shadow_20260515T113027Z",
+    "rv600_next_evidence_shadow_20260515T143222Z",
+    "rv600_next_evidence_shadow_20260515T151536Z",
+    "rv600_next_evidence_shadow_20260515T160221Z",
+    "rv600_next_evidence_shadow_20260515T164836Z",
+    "rv600_next_evidence_shadow_20260515T173507Z",
+    "rv600_next_evidence_shadow_20260515T182447Z",
+    "rv600_next_evidence_shadow_20260515T190705Z",
+    "rv600_next_evidence_shadow_20260515T200306Z"
+  ],
+  "schema_version": "rv600-reality-check-audit-v1",
+  "sources_considered": [
+    {
+      "decision": "selected",
+      "name": "White-style Reality Check for technical trading rules",
+      "reason": "Direct fit for testing the best rule after searching a full universe of trading rules.",
+      "url": "https://www.fmg.ac.uk/publications/discussion-papers/data-snooping-technical-trading-rule-performance-and-bootstrap"
+    },
+    {
+      "decision": "partially_used",
+      "name": "Hansen Superior Predictive Ability test",
+      "reason": "Motivates the studentized companion statistic, but a full SPA implementation is unnecessary for this small root-level audit.",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=264569"
+    },
+    {
+      "decision": "not_selected",
+      "name": "Deflated Sharpe Ratio",
+      "reason": "Corrects Sharpe inflation, while RV600 has sparse binary-settlement PnL and a matched-v28 benchmark.",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2460551"
+    },
+    {
+      "decision": "not_selected",
+      "name": "Backtest PnL discounting",
+      "reason": "Useful for shrinkage, but less directly tied to selecting one candidate from the tested grid.",
+      "url": "https://arxiv.org/abs/1902.01802"
+    },
+    {
+      "decision": "not_selected",
+      "name": "Optimal trading rules without backtesting",
+      "reason": "Interesting direction, but RV600 lacks a closed-form process model reliable enough to replace shadow/replay evidence.",
+      "url": "https://arxiv.org/abs/1408.1159"
+    }
+  ],
+  "studentized_reality_check": {
+    "bootstrap_count": 1000,
+    "exceedance_count": 702,
+    "metric": "matched_delta",
+    "observed_stat": 1.2731303804731615,
+    "p_value": 0.7022977022977023,
+    "statistic": "studentized"
+  },
+  "thresholds": {
+    "bootstrap_count": 1000,
+    "max_p_value": 0.05,
+    "min_total_entries": 25
+  }
+}

@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\probe_rv600_native_offline_v28_contexts.py", line 429, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\probe_rv600_native_offline_v28_contexts.py", line 368, in main
+    summary = run(args)
+              ^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\probe_rv600_native_offline_v28_contexts.py", line 226, in run
+    candles = fetch_coinbase_candles(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\build_v28_successor_public_rest_sidecar_bundle.py", line 201, in fetch_coinbase_candles
+    payload = get_json(
+              ^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\build_v28_successor_public_rest_sidecar_bundle.py", line 98, in get_json
+    return http_json(url, timeout_seconds=timeout_seconds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\build_v28_successor_public_rest_sidecar_bundle.py", line 90, in http_json
+    return json.loads(response.read().decode("utf-8"))
+                      ^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\client.py", line 473, in read
+    return self._read_chunked(amt)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\client.py", line 603, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\client.py", line 642, in _safe_read
+    data = self.fp.read(amt)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out

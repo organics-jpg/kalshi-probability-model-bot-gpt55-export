@@ -1,0 +1,22 @@
+2026-05-15 10:00:22,866 | INFO | Starting native passive recorder. run_id=20260515T140022Z-b84493a1 dataset=rv600_next_evidence_shadow_20260515T140002Z ws_url=wss://api.elections.kalshi.com/trade-api/ws/v2
+2026-05-15 10:00:23,319 | INFO | Watching market KXBTC15M-26MAY151000-00 close_time=2026-05-15T14:00:00Z status=closed strike=79136.64
+2026-05-15 10:00:23,873 | INFO | Watching market KXBTC15M-26MAY151015-15 close_time=2026-05-15T14:15:00Z status=active strike=78766.14
+2026-05-15 10:09:52,194 | WARNING | Active market refresh failed inside recorder watch loop: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Read timed out. (read timeout=5.0)
+2026-05-15 10:10:08,433 | WARNING | Active market refresh failed inside recorder watch loop: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/markets?series_ticker=KXBTC15M&status=active&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FFB28A6960>: Failed to resolve 'api.elections.kalshi.com' ([Errno 11001] getaddrinfo failed)"))
+2026-05-15 10:10:08,445 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: no close frame received or sent
+2026-05-15 10:10:19,479 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: timed out during opening handshake
+2026-05-15 10:10:20,605 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:10:42,777 | WARNING | Active market refresh failed inside recorder watch loop: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/markets?series_ticker=KXBTC15M&status=active&limit=100 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FFB294B530>, 'Connection to api.elections.kalshi.com timed out. (connect timeout=5.0)'))
+2026-05-15 10:11:02,826 | WARNING | Active market refresh failed inside recorder watch loop: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/markets?series_ticker=KXBTC15M&status=active&limit=100 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FFB3CD0AD0>, 'Connection to api.elections.kalshi.com timed out. (connect timeout=5.0)'))
+2026-05-15 10:11:02,841 | WARNING | Active market refresh failed inside recorder watch loop: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/markets?series_ticker=KXBTC15M&status=active&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FFB3CB6C60>: Failed to resolve 'api.elections.kalshi.com' ([Errno 11001] getaddrinfo failed)"))
+2026-05-15 10:11:12,760 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-05-15 10:11:13,961 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:14,988 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:26,003 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: timed out during opening handshake
+2026-05-15 10:11:37,042 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: timed out during opening handshake
+2026-05-15 10:11:38,166 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:39,195 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:40,223 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:41,243 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:42,270 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: [Errno 11001] getaddrinfo failed
+2026-05-15 10:11:53,300 | WARNING | Native passive WS loop error for KXBTC15M-26MAY151015-15: timed out during opening handshake

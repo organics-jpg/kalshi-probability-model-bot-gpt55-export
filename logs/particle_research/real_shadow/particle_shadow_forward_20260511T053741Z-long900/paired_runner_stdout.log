@@ -1,0 +1,10 @@
+dataset=particle_shadow_forward_20260511T053741Z-long900
+run_id=20260511T053741Z-long900
+recorder_returncode=0
+tailer_returncode=0
+checkpoint_file_count=2
+checkpoint_row_count=818
+context_row_count=724
+context_issue_count=185
+manifest=logs\particle_research\real_shadow\particle_shadow_forward_20260511T053741Z-long900\paired_passive_run_manifest.json
+pipeline_command=python -m research_particle.shadow_pipeline --source-type passive_checkpoint --checkpoints "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\research_data\particle_shadow_forward_20260511T053741Z-long900\book_checkpoints\**\*.ndjson" --contexts "logs\particle_research\real_shadow\particle_shadow_forward_20260511T053741Z-long900\passive_contexts.ndjson" --root "logs\particle_research\real_shadow\particle_shadow_forward_20260511T053741Z-long900" --annualized-vol 0.65 --sample-count 2000 --seed 1 --min-fill-prob 0.5 --counterfactual-fill-threshold 0.5
