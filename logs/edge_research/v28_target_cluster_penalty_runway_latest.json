@@ -1,0 +1,71 @@
+{
+  "diagnostic_runway": {
+    "blockers": [
+      "net_not_positive",
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3"
+    ],
+    "candidate": "diagnostic_target_window_cluster_penalty_heavy",
+    "coverage_pct": 75.1937984496124,
+    "delta_vs_target_cents": 326.0,
+    "entries": 97,
+    "freeze_ts_utc": "2026-05-05T23:30:17.615882+00:00",
+    "future_denominator": 129,
+    "future_entries_needed_for_coverage": 0,
+    "future_net_cents_needed_for_cushion3": 384.0,
+    "future_settled_rows_needed_for_sample": 0,
+    "lane": "diagnostic_target_window",
+    "losses": 61,
+    "net_cents": -84.0,
+    "ready_for_promotion_review": false,
+    "required_entries_for_75pct_coverage": 97,
+    "settled": 97,
+    "source_runway": {
+      "approved_rows": 24,
+      "future_clean_approved_rows_needed_for_source_gate": 112,
+      "reconstructed_or_rejected_rows": 73,
+      "reconstructed_share": 0.7525773195876289,
+      "selected_rows": 97
+    },
+    "wins": 36
+  },
+  "freeze_ts_utc": "2026-05-06T21:38:42.476858+00:00",
+  "generated_at_utc": "2026-05-11T01:06:57.714389+00:00",
+  "interpretation": [
+    "This is a runway/source-quality audit only; it does not change the frozen cluster-penalty watch.",
+    "Post-birth post_cluster_penalty_birth_cluster_penalty_medium has 33 settled rows, 76.74418604651163% coverage, -96.0c net, and 0.9090909090909091 reconstructed share.",
+    "Post-birth still needs 0 settled rows, 53 clean approved selected rows for source, and 396.0c for a three-full-loss cushion.",
+    "Diagnostic best remains source-blocked too: 0.7525773195876289 reconstructed share and 112 clean rows needed for source."
+  ],
+  "post_birth_runway": {
+    "blockers": [
+      "net_not_positive",
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3"
+    ],
+    "candidate": "post_cluster_penalty_birth_cluster_penalty_medium",
+    "coverage_pct": 76.74418604651163,
+    "delta_vs_target_cents": -490.0,
+    "entries": 33,
+    "freeze_ts_utc": "2026-05-06T21:38:42.476858+00:00",
+    "future_denominator": 43,
+    "future_entries_needed_for_coverage": 0,
+    "future_net_cents_needed_for_cushion3": 396.0,
+    "future_settled_rows_needed_for_sample": 0,
+    "lane": "post_cluster_penalty_birth",
+    "losses": 25,
+    "net_cents": -96.0,
+    "ready_for_promotion_review": false,
+    "required_entries_for_75pct_coverage": 33,
+    "settled": 33,
+    "source_runway": {
+      "approved_rows": 3,
+      "future_clean_approved_rows_needed_for_source_gate": 53,
+      "reconstructed_or_rejected_rows": 30,
+      "reconstructed_share": 0.9090909090909091,
+      "selected_rows": 33
+    },
+    "wins": 8
+  },
+  "source_artifact": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_cluster_penalty_watch_latest.json"
+}

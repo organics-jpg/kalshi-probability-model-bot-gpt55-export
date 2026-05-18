@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-05-04T09:12:51+00:00",
+  "diagnostic_metrics": {
+    "audit": "hazard_pricecap_granular_frontier_latest",
+    "combined_all_net_pnl_cents": 2129.0,
+    "current_all_accuracy": 0.7407407407407407,
+    "current_all_coverage": 0.9152542372881356,
+    "current_all_net_pnl_cents": 899.0,
+    "current_all_net_roi_on_cost": 0.047065598659756035,
+    "live_posthoc_accuracy": 0.9090909090909091,
+    "live_posthoc_net_pnl_cents": 235.0,
+    "live_posthoc_resolved_coverage": 0.8461538461538461,
+    "min_oos_coverage": 0.8181818181818182,
+    "selection_warning": "This cap was selected after seeing live registered outcomes through 2026-05-04T09:00:00+00:00; the lock is forward-test only and not promotion evidence.",
+    "strict_80_oos_coverage_pass": true,
+    "v21_all_accuracy": 0.764102564102564,
+    "v21_all_coverage": 0.8823529411764706,
+    "v21_all_net_pnl_cents": 1230.0,
+    "v21_all_net_roi_on_cost": 0.08997805413313825
+  },
+  "lock_close_dt": "2026-05-04T09:00:00+00:00",
+  "policy": {
+    "ask_max": 76.0,
+    "ask_min": 0.0,
+    "chooser": "hazard_discounted_mean_15",
+    "gate": "touch_loss15<=0.80",
+    "label": "choose=hazard_discounted_mean_15; hazard_discounted_mean_15>=0.45; 0<=ask<=76; sec>=60; gate=touch_loss15<=0.80",
+    "min_score": 0.45,
+    "min_seconds_to_close": 60.0
+  },
+  "research_note": "Forward-registered after the granular hazard price-cap scan. Physical hypothesis: path/touch hazard is useful, but BTC 15m markets overpay for near-expiry directional certainty once the ask gets above the mid/high-70s; capping at 76c keeps broad recurring-market coverage while reducing overreaction losses. This lock is research-only and requires strict live validation before any promotion.",
+  "source_frontier_csv": "logs\\edge_research\\hazard_pricecap_granular_frontier_latest.csv"
+}

@@ -1,0 +1,293 @@
+{
+  "account_balance_cents": 2640,
+  "additional_candidate_slots_by_risk": 5,
+  "any_live_ready": false,
+  "current_live_exposure": {
+    "count": 0,
+    "entry_price_cents": null,
+    "market": null,
+    "open_position": false,
+    "risk_cents": 0,
+    "side": null
+  },
+  "live_ready_candidates": [],
+  "matrix_notes": [
+    "Discovery best by Brier is conditional_book_no_late_discount (-0.025583191549724993); this is not promotion evidence.",
+    "34 candidate rows have at least one post-freeze forward entry; 34 have at least 30 settled rows.",
+    "Reward-memory +5pp is robust but discovery Brier delta (0.004831451270001064) is weaker than simple +5pp (0.006406016572098855).",
+    "Best coverage valve is raw_p50_turbulence_valve_edge4_p60_recross90_near20 with forward coverage 82.23684210526315 and net -333.0c.",
+    "Cleanest actual-approved FV evidence is book_probability: 133 settled rows, Brier/logloss deltas 0.006168655138428583/-0.025019035845109228.",
+    "Approved-entry book-edge actionability best is skip_discount15_book_edge_lt_5pp: retained coverage 84.21052631578948, net 927.0c, delta 226.0c versus keeping all actual v28-approved entries.",
+    "Frozen approved-entry book-edge gate now has future entries/settled 88/71; delta 152.0c and blockers [].",
+    "Frozen target-coverage book-edge gate has denominator/entries/settled 97/60/60; coverage 61.855670103092784, delta -161.0c, blockers ['coverage_too_low', 'delta_not_positive']."
+  ],
+  "max_parallel_risk_cents": 923.9999999999999,
+  "max_parallel_risk_fraction": 0.35,
+  "nearest_candidates": [
+    {
+      "avg_brier": 0.20947039770105683,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "target",
+      "coverage_pct": 77.19298245614036,
+      "entries": 88,
+      "gate": "raw_p52_boundary_turbulence_skip",
+      "net_cents_after_entry_fee": 266.0,
+      "policy": "raw_p52_skip_weakraw_nearstrike_recross90",
+      "settled": 88
+    },
+    {
+      "avg_brier": null,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "target",
+      "coverage_pct": 75.63025210084034,
+      "entries": 90,
+      "gate": "boundary_clock_fv_entry_bridge",
+      "net_cents_after_entry_fee": 229.0,
+      "policy": "boundary_clock_adjusted_edge_floor_0p02_repair_lowest_recross",
+      "settled": 90
+    },
+    {
+      "avg_brier": null,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "target",
+      "coverage_pct": 75.47169811320755,
+      "entries": 80,
+      "gate": "early_boundary_opposite_wait_repair",
+      "net_cents_after_entry_fee": 98.0,
+      "policy": "early_boundary_wait480_p50_opposite_side_delay480",
+      "settled": 80
+    },
+    {
+      "avg_brier": null,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "target",
+      "coverage_pct": 75.47169811320755,
+      "entries": 80,
+      "gate": "early_boundary_wait_repair",
+      "net_cents_after_entry_fee": 82.0,
+      "policy": "early_boundary_wait480_p50_any_side",
+      "settled": 80
+    },
+    {
+      "avg_brier": null,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "target",
+      "coverage_pct": 75.22123893805309,
+      "entries": 85,
+      "gate": "early_no_boundary_decay_repair_entry",
+      "net_cents_after_entry_fee": 27.0,
+      "policy": "skip_early_no_boundary_decay_repair_calm_geometry",
+      "settled": 85
+    },
+    {
+      "avg_brier": -0.011711620895563213,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "low",
+      "coverage_pct": 73.72881355932203,
+      "entries": 87,
+      "gate": "side_asymmetry_fv_overlay",
+      "net_cents_after_entry_fee": -321.0,
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + clock_then_side_no_midboundary_0p00",
+      "settled": 87
+    },
+    {
+      "avg_brier": -0.007305008905659105,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "low",
+      "coverage_pct": 73.33333333333333,
+      "entries": 88,
+      "gate": "boundary_clock_fv_overlay",
+      "net_cents_after_entry_fee": -401.0,
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + clock_shrink_0p00",
+      "settled": 88
+    },
+    {
+      "avg_brier": -0.004505350022369005,
+      "blockers": [
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "unknown",
+      "coverage_pct": null,
+      "entries": 78,
+      "gate": "boundary_temperature_fv",
+      "net_cents_after_entry_fee": null,
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + boundary_temp_strong",
+      "settled": 78
+    },
+    {
+      "avg_brier": null,
+      "blockers": [
+        "exit:suppressed_loss_control_cost_negative",
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "unknown",
+      "coverage_pct": null,
+      "entries": 132,
+      "gate": "exit_reduce_suppression",
+      "net_cents_after_entry_fee": 337.0,
+      "policy": "suppress_reduce_p_hold_ge_075",
+      "settled": 132
+    },
+    {
+      "avg_brier": null,
+      "blockers": [
+        "exit:suppressed_loss_control_cost_negative",
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "unknown",
+      "coverage_pct": null,
+      "entries": 120,
+      "gate": "exit_book_gap_suppression",
+      "net_cents_after_entry_fee": 235.0,
+      "policy": "suppress_soft_gap15_or_p_hold75",
+      "settled": 120
+    },
+    {
+      "avg_brier": 0.006168655138428583,
+      "blockers": [
+        "fv:brier_not_better_than_raw",
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "unknown",
+      "coverage_pct": null,
+      "entries": 133,
+      "gate": "approved_entry_book_fv",
+      "net_cents_after_entry_fee": 701.0,
+      "policy": "actual_approved_entries + book_probability",
+      "settled": 133
+    },
+    {
+      "avg_brier": 0.21364327924082643,
+      "blockers": [
+        "fv_entry:coverage_too_low",
+        "control_risk_stop_active"
+      ],
+      "coverage_fit": "low",
+      "coverage_pct": 70.1923076923077,
+      "entries": 73,
+      "gate": "boundary_energy_fv_entry",
+      "net_cents_after_entry_fee": 156.0,
+      "policy": "boundary_energy_fv_entry",
+      "settled": 73
+    }
+  ],
+  "nominal_candidate_risk_cents": 170,
+  "portfolio_blockers": [
+    "no_candidate_live_ready",
+    "control_risk_stop_active"
+  ],
+  "portfolio_live_trial_ready": false,
+  "recommendations": [
+    "Do not start live multi-candidate trading from this state.",
+    "Keep candidate validation in shadow with distinct policy tags and actual-vs-simulated attribution.",
+    "Closest validation lane is p50_book_plus_05_edge_nonnegative needing 172 future rows."
+  ],
+  "remaining_parallel_risk_cents": 923.9999999999999,
+  "risk_stop_active": true,
+  "validation_lanes": [
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct"
+      ],
+      "coverage_pct": 83.42541436464089,
+      "future_actual_needed": 172,
+      "gross_cents": 890.0,
+      "minimum_future_validation_rows_needed": 172,
+      "policy": "p50_book_plus_05_edge_nonnegative",
+      "simulated_share": 0.7483443708609272
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct"
+      ],
+      "coverage_pct": 80.11049723756905,
+      "future_actual_needed": 175,
+      "gross_cents": -1486.0,
+      "minimum_future_validation_rows_needed": 175,
+      "policy": "p65_book_plus_03",
+      "simulated_share": 0.7724137931034483
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct"
+      ],
+      "coverage_pct": 79.55801104972376,
+      "future_actual_needed": 188,
+      "gross_cents": -1376.0,
+      "minimum_future_validation_rows_needed": 188,
+      "policy": "p65_v28_premium_anchor_plus_02",
+      "simulated_share": 0.8055555555555556
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct"
+      ],
+      "coverage_pct": 80.11049723756905,
+      "future_actual_needed": 193,
+      "gross_cents": -1198.0,
+      "minimum_future_validation_rows_needed": 193,
+      "policy": "p65_large_disagreement_anchor_plus_02",
+      "simulated_share": 0.8137931034482758
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct"
+      ],
+      "coverage_pct": 83.97790055248619,
+      "future_actual_needed": 206,
+      "gross_cents": -1542.0,
+      "minimum_future_validation_rows_needed": 206,
+      "policy": "p65_book_plus_02",
+      "simulated_share": 0.8223684210526315
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct"
+      ],
+      "coverage_pct": 83.42541436464089,
+      "future_actual_needed": 209,
+      "gross_cents": 305.0,
+      "minimum_future_validation_rows_needed": 209,
+      "policy": "p55_edge_nonnegative",
+      "simulated_share": 0.8344370860927153
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct",
+        "coverage_below_75pct"
+      ],
+      "coverage_pct": 50.82872928176796,
+      "future_actual_needed": 171,
+      "gross_cents": 916.0,
+      "minimum_future_validation_rows_needed": 171,
+      "policy": "book_plus_03_cheap_convex",
+      "simulated_share": 1.0
+    },
+    {
+      "blockers": [
+        "candidate_simulated_share_gt_35pct",
+        "coverage_above_90pct"
+      ],
+      "coverage_pct": 90.60773480662984,
+      "future_actual_needed": 216,
+      "gross_cents": 646.0,
+      "minimum_future_validation_rows_needed": 216,
+      "policy": "book_plus_05_no_cheap_yes_boundary",
+      "simulated_share": 0.8109756097560976
+    }
+  ]
+}

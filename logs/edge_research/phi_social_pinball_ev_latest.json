@@ -1,0 +1,5052 @@
+{
+  "baselines": {
+    "last_phi_probe_best_wfa_standard3": {
+      "note": "For control context from the previous phi-frame feature comparison: standard_3 robust overlay was +$12.33 on 69 filled rows."
+    },
+    "live_all_recorded_forward_after_200": {
+      "avg_cents_per_entry": 1.5427509293680295,
+      "entries": 269,
+      "flats": 5,
+      "losses": 138,
+      "net_cents": 414.99999999999994,
+      "net_dollars": 4.1499999999999995,
+      "win_rate_ex_flat": 0.4772727272727273,
+      "wins": 126
+    },
+    "robust_hybrid_forward_after_200": {
+      "avg_cents_per_entry": 11.626373626373626,
+      "entries": 91,
+      "flats": 1,
+      "losses": 42,
+      "net_cents": 1058.0,
+      "net_dollars": 10.58,
+      "win_rate_ex_flat": 0.5333333333333333,
+      "wins": 48
+    },
+    "robust_p_cal_ge_0p70_forward_after_200": {
+      "avg_cents_per_entry": 16.37142857142857,
+      "entries": 70,
+      "flats": 1,
+      "losses": 31,
+      "net_cents": 1146.0,
+      "net_dollars": 11.46,
+      "win_rate_ex_flat": 0.5507246376811594,
+      "wins": 38
+    },
+    "robust_p_cal_ge_0p80_forward_after_200": {
+      "avg_cents_per_entry": 20.51923076923077,
+      "entries": 52,
+      "flats": 1,
+      "losses": 19,
+      "net_cents": 1067.0,
+      "net_dollars": 10.67,
+      "win_rate_ex_flat": 0.6274509803921569,
+      "wins": 32
+    }
+  },
+  "diagnostics": {
+    "aci_locked_calibrator": {
+      "cap": 0.9,
+      "eta": 0.2,
+      "max_bias": 0.25,
+      "name": "capped_aci_brownian_terminal_p_side_eta0.20_cap0.90",
+      "scores": {
+        "all": {
+          "brier": 0.16422649376615975,
+          "coverage": 0.8976545842217484,
+          "log_loss": 0.5113244516148143,
+          "rows": 469
+        },
+        "all_after_200": {
+          "brier": 0.16437360997275574,
+          "coverage": 0.8996282527881041,
+          "log_loss": 0.5127190013662928,
+          "rows": 269
+        },
+        "first_400": {
+          "brier": 0.16496984612766172,
+          "coverage": 0.8947368421052632,
+          "log_loss": 0.5146111978923869,
+          "rows": 399
+        },
+        "holdout_401_end": {
+          "brier": 0.15998938530559845,
+          "coverage": 0.9142857142857143,
+          "log_loss": 0.4925899978326515,
+          "rows": 70
+        },
+        "train_1_200": {
+          "brier": 0.16402862246828812,
+          "coverage": 0.895,
+          "log_loss": 0.5094487821990759,
+          "rows": 200
+        },
+        "validation_201_400": {
+          "brier": 0.16591579955416785,
+          "coverage": 0.8944723618090452,
+          "log_loss": 0.5197995553731013,
+          "rows": 199
+        }
+      },
+      "selection_score": {
+        "train_brier": 0.16402862246828812,
+        "train_log_loss": 0.5094487821990759
+      },
+      "source_key": "brownian_terminal_p_side",
+      "target_coverage": 0.9
+    },
+    "candle_stats": {
+      "cache_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\coinbase_btc_usd_1m_cache.parquet",
+      "candle_max_utc": "2026-05-07 17:14:00+00:00",
+      "candle_min_utc": "2026-03-14 00:54:00+00:00",
+      "candle_rows": 78736,
+      "fetch_missing": false,
+      "fetched_rows": 0
+    },
+    "dropped": {
+      "missing_btc_frame": 0,
+      "missing_label": 1
+    },
+    "pinball_pegs": [
+      "peg_p_cal_ge_70",
+      "peg_p_cal_ge_75",
+      "peg_p_cal_ge_80",
+      "peg_p_cal_ge_85",
+      "peg_brownian_ge_70",
+      "peg_brownian_ge_80",
+      "peg_cal_edge_pos",
+      "peg_cal_edge_ge_2c",
+      "peg_cal_edge_ge_5c",
+      "peg_raw_edge_ge_3c",
+      "peg_raw_edge_ge_8c",
+      "peg_depth_ge_8",
+      "peg_depth_ge_20",
+      "peg_depth_lt_8",
+      "peg_book_fresh_250ms",
+      "peg_book_fresh_500ms",
+      "peg_book_stale_750ms",
+      "peg_btc_fresh_250ms",
+      "peg_btc_stale_750ms",
+      "peg_absd_70_110",
+      "peg_absd_80_120",
+      "peg_seconds_ge_120",
+      "peg_seconds_ge_300",
+      "peg_late_le_300",
+      "peg_ask_le_70",
+      "peg_ask_le_80",
+      "peg_ask_ge_85",
+      "peg_volshock_abs_ge_80",
+      "peg_model_agree_close",
+      "peg_phi_1m_with_side",
+      "peg_phi_3m_with_side",
+      "peg_phi_8m_with_side",
+      "peg_phi_13m_with_side",
+      "peg_social_liquidity_good",
+      "peg_social_stale_gap",
+      "peg_social_chase",
+      "peg_social_panic"
+    ],
+    "raw_rows": 470,
+    "row_diagnostics": {
+      "detailed_feature_matches": 470,
+      "feature_event_type_counts": {
+        "plan_built": 470
+      },
+      "feature_index_keys": 1368,
+      "matched_trade_count": 470,
+      "raw_trade_count": 470,
+      "settled_label_rows": 469
+    },
+    "social_features": [
+      "state_liquidity_trust",
+      "state_stale_book_risk",
+      "state_stale_btc_risk",
+      "state_stale_mm_gap",
+      "state_chase_pressure",
+      "state_panic_vol",
+      "state_crowding_depth",
+      "state_late_boundary_pressure",
+      "state_model_disagreement",
+      "state_price_expensive",
+      "state_social_attention"
+    ],
+    "usable_row_idx_max": 470,
+    "usable_row_idx_min": 1,
+    "usable_rows": 469
+  },
+  "generated_at_utc": "2026-05-10T04:47:16.985247+00:00",
+  "hypothesis": "Test phi-frame features, social/microstructure state proxies, and pinball peg features for expected-PnL selection.",
+  "limitations": [
+    "Uses historical filled rows only; skipped candidates and no-fill IOC attempts are not represented.",
+    "Social/microstructure states are proxies from logged depth/book age/BTC age/ask/edge/vol fields, not full order-flow psychology.",
+    "BTC data is still 1-minute candles, so phi frames are minute approximations rather than true 1-second phi frames.",
+    "EV thresholds are selected on each training window only, then applied forward."
+  ],
+  "results": {
+    "all3_phi_social_pinball": {
+      "aggregate_model_metrics": {
+        "mae_cents": 41.66467852197645,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": -1.2659484872602842,
+        "rmse_cents": 55.963982724946796,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.01364045032820285,
+        "top_quartile": {
+          "avg_cents_per_entry": 3.3088235294117645,
+          "entries": 68,
+          "flats": 0,
+          "losses": 34,
+          "net_cents": 225.0,
+          "net_dollars": 2.25,
+          "win_rate_ex_flat": 0.5,
+          "wins": 34
+        }
+      },
+      "feature_count": 79,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_13m_side_ret_z",
+        "frame_13m_abs_ret_z",
+        "frame_13m_range_pct",
+        "frame_13m_side_dollar",
+        "state_liquidity_trust",
+        "state_stale_book_risk",
+        "state_stale_btc_risk",
+        "state_stale_mm_gap",
+        "state_chase_pressure",
+        "state_panic_vol",
+        "state_crowding_depth",
+        "state_late_boundary_pressure",
+        "state_model_disagreement",
+        "state_price_expensive",
+        "state_social_attention",
+        "peg_p_cal_ge_70",
+        "peg_p_cal_ge_75",
+        "peg_p_cal_ge_80",
+        "peg_p_cal_ge_85",
+        "peg_brownian_ge_70",
+        "peg_brownian_ge_80",
+        "peg_cal_edge_pos",
+        "peg_cal_edge_ge_2c",
+        "peg_cal_edge_ge_5c",
+        "peg_raw_edge_ge_3c",
+        "peg_raw_edge_ge_8c",
+        "peg_depth_ge_8",
+        "peg_depth_ge_20",
+        "peg_depth_lt_8",
+        "peg_book_fresh_250ms",
+        "peg_book_fresh_500ms",
+        "peg_book_stale_750ms",
+        "peg_btc_fresh_250ms",
+        "peg_btc_stale_750ms",
+        "peg_absd_70_110",
+        "peg_absd_80_120",
+        "peg_seconds_ge_120",
+        "peg_seconds_ge_300",
+        "peg_late_le_300",
+        "peg_ask_le_70",
+        "peg_ask_le_80",
+        "peg_ask_ge_85",
+        "peg_volshock_abs_ge_80",
+        "peg_model_agree_close",
+        "peg_phi_1m_with_side",
+        "peg_phi_3m_with_side",
+        "peg_phi_8m_with_side",
+        "peg_phi_13m_with_side",
+        "peg_social_liquidity_good",
+        "peg_social_stale_gap",
+        "peg_social_chase",
+        "peg_social_panic"
+      ],
+      "feature_set": "all3_phi_social_pinball",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.49238578680203043,
+          "pnl_cv_abs": 5.245667602751081,
+          "positive_windows": 1,
+          "stats": {
+            "avg_cents_per_entry": -2.2795698924731185,
+            "entries": 93,
+            "flats": 0,
+            "losses": 52,
+            "net_cents": -212.00000000000003,
+            "net_dollars": -2.12,
+            "win_rate_ex_flat": 0.44086021505376344,
+            "wins": 41
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            22,
+            37,
+            17,
+            17
+          ],
+          "window_net_cents": [
+            -388.0,
+            -15.000000000000009,
+            -97.0,
+            288.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.40956651718983555,
+          "pnl_cv_abs": 7.044781157482135,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 4.84,
+            "entries": 25,
+            "flats": 0,
+            "losses": 14,
+            "net_cents": 121.0,
+            "net_dollars": 1.21,
+            "win_rate_ex_flat": 0.44,
+            "wins": 11
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            6,
+            2,
+            8,
+            9
+          ],
+          "window_net_cents": [
+            -274.0,
+            50.0,
+            135.0,
+            210.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": -2.6716417910447765,
+              "entries": 67,
+              "flats": 0,
+              "losses": 36,
+              "net_cents": -179.00000000000003,
+              "net_dollars": -1.7900000000000003,
+              "win_rate_ex_flat": 0.4626865671641791,
+              "wins": 31
+            },
+            "threshold_ev_cents": 20,
+            "train_stats": {
+              "avg_cents_per_entry": 35.610169491525426,
+              "entries": 59,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 2101.0,
+              "net_dollars": 21.01,
+              "win_rate_ex_flat": 0.7966101694915254,
+              "wins": 47
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 6.047619047619047,
+              "entries": 21,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": 126.99999999999999,
+              "net_dollars": 1.2699999999999998,
+              "win_rate_ex_flat": 0.47619047619047616,
+              "wins": 10
+            },
+            "threshold_ev_cents": 20,
+            "train_stats": {
+              "avg_cents_per_entry": 44.35294117647059,
+              "entries": 17,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 754.0,
+              "net_dollars": 7.54,
+              "win_rate_ex_flat": 0.7058823529411765,
+              "wins": 12
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 41.082419064105196,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 5.310064714661572,
+          "rmse_cents": 54.651208138710686,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.03913053890688974,
+          "top_quartile": {
+            "avg_cents_per_entry": -4.250000000000001,
+            "entries": 68,
+            "flats": 0,
+            "losses": 37,
+            "net_cents": -289.00000000000006,
+            "net_dollars": -2.8900000000000006,
+            "win_rate_ex_flat": 0.45588235294117646,
+            "wins": 31
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -17.636363636363637,
+                "entries": 22,
+                "flats": 0,
+                "losses": 15,
+                "net_cents": -388.0,
+                "net_dollars": -3.88,
+                "win_rate_ex_flat": 0.3181818181818182,
+                "wins": 7
+              },
+              "threshold_ev_cents": 20,
+              "train_stats": {
+                "avg_cents_per_entry": 35.610169491525426,
+                "entries": 59,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 2101.0,
+                "net_dollars": 21.01,
+                "win_rate_ex_flat": 0.7966101694915254,
+                "wins": 47
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -45.666666666666664,
+                "entries": 6,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": -274.0,
+                "net_dollars": -2.74,
+                "win_rate_ex_flat": 0.0,
+                "wins": 0
+              },
+              "threshold_ev_cents": 20,
+              "train_stats": {
+                "avg_cents_per_entry": 44.35294117647059,
+                "entries": 17,
+                "flats": 0,
+                "losses": 5,
+                "net_cents": 754.0,
+                "net_dollars": 7.54,
+                "win_rate_ex_flat": 0.7058823529411765,
+                "wins": 12
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 50.04479184107998,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 2.6895556652863175,
+            "rmse_cents": 66.44535586596102,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.07177253447681034,
+            "top_quartile": {
+              "avg_cents_per_entry": -16.77777777777778,
+              "entries": 18,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": -302.0,
+              "net_dollars": -3.02,
+              "win_rate_ex_flat": 0.2777777777777778,
+              "wins": 5
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.40540540540540565,
+                "entries": 37,
+                "flats": 0,
+                "losses": 20,
+                "net_cents": -15.000000000000009,
+                "net_dollars": -0.15000000000000008,
+                "win_rate_ex_flat": 0.4594594594594595,
+                "wins": 17
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 25.79591836734694,
+                "entries": 98,
+                "flats": 0,
+                "losses": 27,
+                "net_cents": 2528.0,
+                "net_dollars": 25.28,
+                "win_rate_ex_flat": 0.7244897959183674,
+                "wins": 71
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 25.0,
+                "entries": 2,
+                "flats": 0,
+                "losses": 0,
+                "net_cents": 50.0,
+                "net_dollars": 0.5,
+                "win_rate_ex_flat": 1.0,
+                "wins": 2
+              },
+              "threshold_ev_cents": 15,
+              "train_stats": {
+                "avg_cents_per_entry": 39.714285714285715,
+                "entries": 21,
+                "flats": 0,
+                "losses": 5,
+                "net_cents": 834.0,
+                "net_dollars": 8.34,
+                "win_rate_ex_flat": 0.7619047619047619,
+                "wins": 16
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 44.431318147358326,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 3.2908000542304543,
+            "rmse_cents": 57.42063284263329,
+            "rows": 70,
+            "spearman_pred_vs_pnl": 0.042132721547296643,
+            "top_quartile": {
+              "avg_cents_per_entry": 0.5,
+              "entries": 18,
+              "flats": 0,
+              "losses": 10,
+              "net_cents": 9.0,
+              "net_dollars": 0.09,
+              "win_rate_ex_flat": 0.4444444444444444,
+              "wins": 8
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -5.705882352941177,
+                "entries": 17,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": -97.0,
+                "net_dollars": -0.97,
+                "win_rate_ex_flat": 0.47058823529411764,
+                "wins": 8
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 26.714285714285715,
+                "entries": 77,
+                "flats": 0,
+                "losses": 20,
+                "net_cents": 2057.0,
+                "net_dollars": 20.57,
+                "win_rate_ex_flat": 0.7402597402597403,
+                "wins": 57
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 16.875,
+                "entries": 8,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": 135.0,
+                "net_dollars": 1.35,
+                "win_rate_ex_flat": 0.5,
+                "wins": 4
+              },
+              "threshold_ev_cents": 0,
+              "train_stats": {
+                "avg_cents_per_entry": 25.641025641025642,
+                "entries": 39,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 1000.0,
+                "net_dollars": 10.0,
+                "win_rate_ex_flat": 0.6923076923076923,
+                "wins": 27
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 34.694681089179284,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -5.890327888859216,
+            "rmse_cents": 46.67130731963817,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.09346171967161784,
+            "top_quartile": {
+              "avg_cents_per_entry": -3.1666666666666665,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": -57.0,
+              "net_dollars": -0.57,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 16.941176470588236,
+                "entries": 17,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 288.0,
+                "net_dollars": 2.88,
+                "win_rate_ex_flat": 0.5294117647058824,
+                "wins": 9
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 26.78481012658228,
+                "entries": 79,
+                "flats": 0,
+                "losses": 19,
+                "net_cents": 2116.0,
+                "net_dollars": 21.16,
+                "win_rate_ex_flat": 0.759493670886076,
+                "wins": 60
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 23.333333333333332,
+                "entries": 9,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": 210.0,
+                "net_dollars": 2.1,
+                "win_rate_ex_flat": 0.5555555555555556,
+                "wins": 5
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 28.37837837837838,
+                "entries": 37,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 1050.0,
+                "net_dollars": 10.5,
+                "win_rate_ex_flat": 0.7567567567567568,
+                "wins": 28
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 36.70920588099037,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -5.878679512187211,
+            "rmse_cents": 50.45159589234491,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.07050327646619482,
+            "top_quartile": {
+              "avg_cents_per_entry": 16.666666666666668,
+              "entries": 15,
+              "flats": 0,
+              "losses": 7,
+              "net_cents": 250.0,
+              "net_dollars": 2.5,
+              "win_rate_ex_flat": 0.5333333333333333,
+              "wins": 8
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "base_ev": {
+      "aggregate_model_metrics": {
+        "mae_cents": 36.28062602612844,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": 3.6587098482032836,
+        "rmse_cents": 49.01946636628385,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.07345443706316682,
+        "top_quartile": {
+          "avg_cents_per_entry": -8.794117647058824,
+          "entries": 68,
+          "flats": 0,
+          "losses": 38,
+          "net_cents": -598.0,
+          "net_dollars": -5.98,
+          "win_rate_ex_flat": 0.4411764705882353,
+          "wins": 30
+        }
+      },
+      "feature_count": 7,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma"
+      ],
+      "feature_set": "base_ev",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.6397415185783522,
+          "pnl_cv_abs": 5.482820707324071,
+          "positive_windows": 1,
+          "stats": {
+            "avg_cents_per_entry": 0.8199052132701419,
+            "entries": 211,
+            "flats": 4,
+            "losses": 110,
+            "net_cents": 172.99999999999994,
+            "net_dollars": 1.7299999999999995,
+            "win_rate_ex_flat": 0.46859903381642515,
+            "wins": 97
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            55,
+            64,
+            41,
+            51
+          ],
+          "window_net_cents": [
+            -116.00000000000001,
+            -63.00000000000002,
+            -44.0,
+            396.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.40441176470588236,
+          "pnl_cv_abs": 0.8237526271165428,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 14.39080459770115,
+            "entries": 87,
+            "flats": 1,
+            "losses": 39,
+            "net_cents": 1252.0,
+            "net_dollars": 12.52,
+            "win_rate_ex_flat": 0.5465116279069767,
+            "wins": 47
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            18,
+            15,
+            30,
+            24
+          ],
+          "window_net_cents": [
+            -54.0,
+            550.0,
+            386.0,
+            370.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 1.4826086956521736,
+              "entries": 230,
+              "flats": 4,
+              "losses": 123,
+              "net_cents": 340.99999999999994,
+              "net_dollars": 3.4099999999999993,
+              "win_rate_ex_flat": 0.4557522123893805,
+              "wins": 103
+            },
+            "threshold_ev_cents": 4,
+            "train_stats": {
+              "avg_cents_per_entry": 13.479289940828401,
+              "entries": 169,
+              "flats": 0,
+              "losses": 76,
+              "net_cents": 2278.0,
+              "net_dollars": 22.78,
+              "win_rate_ex_flat": 0.5502958579881657,
+              "wins": 93
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 12.444444444444445,
+              "entries": 81,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 1008.0,
+              "net_dollars": 10.08,
+              "win_rate_ex_flat": 0.5185185185185185,
+              "wins": 42
+            },
+            "threshold_ev_cents": 4,
+            "train_stats": {
+              "avg_cents_per_entry": 15.275862068965518,
+              "entries": 58,
+              "flats": 0,
+              "losses": 31,
+              "net_cents": 886.0,
+              "net_dollars": 8.86,
+              "win_rate_ex_flat": 0.46551724137931033,
+              "wins": 27
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 37.06888213114775,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 8.491214666331961,
+          "rmse_cents": 49.00275511895543,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.04524822183285716,
+          "top_quartile": {
+            "avg_cents_per_entry": 0.9264705882352936,
+            "entries": 68,
+            "flats": 0,
+            "losses": 37,
+            "net_cents": 62.999999999999964,
+            "net_dollars": 0.6299999999999997,
+            "win_rate_ex_flat": 0.45588235294117646,
+            "wins": 31
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.1090909090909093,
+                "entries": 55,
+                "flats": 0,
+                "losses": 30,
+                "net_cents": -116.00000000000001,
+                "net_dollars": -1.1600000000000001,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 25
+              },
+              "threshold_ev_cents": 4,
+              "train_stats": {
+                "avg_cents_per_entry": 13.479289940828401,
+                "entries": 169,
+                "flats": 0,
+                "losses": 76,
+                "net_cents": 2278.0,
+                "net_dollars": 22.78,
+                "win_rate_ex_flat": 0.5502958579881657,
+                "wins": 93
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -3.0,
+                "entries": 18,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": -54.0,
+                "net_dollars": -0.54,
+                "win_rate_ex_flat": 0.3888888888888889,
+                "wins": 7
+              },
+              "threshold_ev_cents": 4,
+              "train_stats": {
+                "avg_cents_per_entry": 15.275862068965518,
+                "entries": 58,
+                "flats": 0,
+                "losses": 31,
+                "net_cents": 886.0,
+                "net_dollars": 8.86,
+                "win_rate_ex_flat": 0.46551724137931033,
+                "wins": 27
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 43.0379715263322,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 8.093026882727463,
+            "rmse_cents": 57.51727767734376,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.09355468448636196,
+            "top_quartile": {
+              "avg_cents_per_entry": -6.4444444444444455,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": -116.00000000000001,
+              "net_dollars": -1.1600000000000001,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.9843750000000003,
+                "entries": 64,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": -63.00000000000002,
+                "net_dollars": -0.6300000000000002,
+                "win_rate_ex_flat": 0.484375,
+                "wins": 31
+              },
+              "threshold_ev_cents": 0,
+              "train_stats": {
+                "avg_cents_per_entry": 7.5,
+                "entries": 172,
+                "flats": 0,
+                "losses": 77,
+                "net_cents": 1290.0,
+                "net_dollars": 12.9,
+                "win_rate_ex_flat": 0.5523255813953488,
+                "wins": 95
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 36.666666666666664,
+                "entries": 15,
+                "flats": 0,
+                "losses": 1,
+                "net_cents": 550.0,
+                "net_dollars": 5.5,
+                "win_rate_ex_flat": 0.9333333333333333,
+                "wins": 14
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 11.352941176470589,
+                "entries": 34,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 386.0,
+                "net_dollars": 3.86,
+                "win_rate_ex_flat": 0.5294117647058824,
+                "wins": 18
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 40.8352142712497,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 5.126290579592501,
+            "rmse_cents": 51.96568597195256,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.09429537639189324,
+            "top_quartile": {
+              "avg_cents_per_entry": -4.111111111111112,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -74.00000000000001,
+              "net_dollars": -0.7400000000000001,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -1.0731707317073171,
+                "entries": 41,
+                "flats": 1,
+                "losses": 21,
+                "net_cents": -44.0,
+                "net_dollars": -0.44,
+                "win_rate_ex_flat": 0.475,
+                "wins": 19
+              },
+              "threshold_ev_cents": 0,
+              "train_stats": {
+                "avg_cents_per_entry": 5.377049180327869,
+                "entries": 122,
+                "flats": 0,
+                "losses": 58,
+                "net_cents": 656.0,
+                "net_dollars": 6.56,
+                "win_rate_ex_flat": 0.5245901639344263,
+                "wins": 64
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 12.866666666666667,
+                "entries": 30,
+                "flats": 1,
+                "losses": 14,
+                "net_cents": 386.0,
+                "net_dollars": 3.86,
+                "win_rate_ex_flat": 0.5172413793103449,
+                "wins": 15
+              },
+              "threshold_ev_cents": -20,
+              "train_stats": {
+                "avg_cents_per_entry": 11.071428571428571,
+                "entries": 56,
+                "flats": 0,
+                "losses": 24,
+                "net_cents": 620.0,
+                "net_dollars": 6.2,
+                "win_rate_ex_flat": 0.5714285714285714,
+                "wins": 32
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 29.430327782701436,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": 0.5230546363119573,
+            "rmse_cents": 40.23423886675607,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.11014443532006359,
+            "top_quartile": {
+              "avg_cents_per_entry": -10.055555555555555,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": -181.0,
+              "net_dollars": -1.81,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 7.764705882352941,
+                "entries": 51,
+                "flats": 3,
+                "losses": 26,
+                "net_cents": 396.0,
+                "net_dollars": 3.96,
+                "win_rate_ex_flat": 0.4583333333333333,
+                "wins": 22
+              },
+              "threshold_ev_cents": -5,
+              "train_stats": {
+                "avg_cents_per_entry": 2.347058823529412,
+                "entries": 170,
+                "flats": 2,
+                "losses": 83,
+                "net_cents": 399.0,
+                "net_dollars": 3.99,
+                "win_rate_ex_flat": 0.5059523809523809,
+                "wins": 85
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 15.416666666666666,
+                "entries": 24,
+                "flats": 0,
+                "losses": 13,
+                "net_cents": 370.0,
+                "net_dollars": 3.7,
+                "win_rate_ex_flat": 0.4583333333333333,
+                "wins": 11
+              },
+              "threshold_ev_cents": -15,
+              "train_stats": {
+                "avg_cents_per_entry": 11.968253968253968,
+                "entries": 63,
+                "flats": 1,
+                "losses": 26,
+                "net_cents": 754.0,
+                "net_dollars": 7.54,
+                "win_rate_ex_flat": 0.5806451612903226,
+                "wins": 36
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 30.987160176418886,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": 0.3767271569906583,
+            "rmse_cents": 43.65888834955144,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.07965612820154072,
+            "top_quartile": {
+              "avg_cents_per_entry": 5.333333333333333,
+              "entries": 15,
+              "flats": 1,
+              "losses": 9,
+              "net_cents": 80.0,
+              "net_dollars": 0.8,
+              "win_rate_ex_flat": 0.35714285714285715,
+              "wins": 5
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_only": {
+      "aggregate_model_metrics": {
+        "mae_cents": 40.587753614521425,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": 0.6956436849387557,
+        "rmse_cents": 72.60249789756612,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.08098768786943848,
+        "top_quartile": {
+          "avg_cents_per_entry": -5.470588235294118,
+          "entries": 68,
+          "flats": 0,
+          "losses": 41,
+          "net_cents": -372.0,
+          "net_dollars": -3.72,
+          "win_rate_ex_flat": 0.39705882352941174,
+          "wins": 27
+        }
+      },
+      "feature_count": 31,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_13m_side_ret_z",
+        "frame_13m_abs_ret_z",
+        "frame_13m_range_pct",
+        "frame_13m_side_dollar"
+      ],
+      "feature_set": "phi_only",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.3571428571428572,
+          "pnl_cv_abs": 22.903986390857707,
+          "positive_windows": 2,
+          "stats": {
+            "avg_cents_per_entry": 0.07142857142857126,
+            "entries": 168,
+            "flats": 2,
+            "losses": 94,
+            "net_cents": 11.999999999999972,
+            "net_dollars": 0.11999999999999972,
+            "win_rate_ex_flat": 0.43373493975903615,
+            "wins": 72
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            49,
+            33,
+            62,
+            24
+          ],
+          "window_net_cents": [
+            -80.00000000000001,
+            -26.000000000000007,
+            68.0,
+            49.99999999999999
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.45993031358885017,
+          "pnl_cv_abs": 1.5565771042238221,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 8.478260869565217,
+            "entries": 46,
+            "flats": 1,
+            "losses": 23,
+            "net_cents": 390.0,
+            "net_dollars": 3.9,
+            "win_rate_ex_flat": 0.4888888888888889,
+            "wins": 22
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            13,
+            10,
+            11,
+            12
+          ],
+          "window_net_cents": [
+            -92.0,
+            264.0,
+            160.0,
+            57.999999999999986
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 2.2186046511627904,
+              "entries": 215,
+              "flats": 3,
+              "losses": 114,
+              "net_cents": 476.99999999999994,
+              "net_dollars": 4.77,
+              "win_rate_ex_flat": 0.46226415094339623,
+              "wins": 98
+            },
+            "threshold_ev_cents": 2,
+            "train_stats": {
+              "avg_cents_per_entry": 16.420382165605094,
+              "entries": 157,
+              "flats": 0,
+              "losses": 62,
+              "net_cents": 2578.0,
+              "net_dollars": 25.78,
+              "win_rate_ex_flat": 0.6050955414012739,
+              "wins": 95
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 12.32,
+              "entries": 75,
+              "flats": 0,
+              "losses": 36,
+              "net_cents": 924.0,
+              "net_dollars": 9.24,
+              "win_rate_ex_flat": 0.52,
+              "wins": 39
+            },
+            "threshold_ev_cents": 2,
+            "train_stats": {
+              "avg_cents_per_entry": 17.346153846153847,
+              "entries": 52,
+              "flats": 0,
+              "losses": 26,
+              "net_cents": 902.0,
+              "net_dollars": 9.02,
+              "win_rate_ex_flat": 0.5,
+              "wins": 26
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 41.710254070010656,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 6.780528670056319,
+          "rmse_cents": 72.58665003966671,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.055260797693697856,
+          "top_quartile": {
+            "avg_cents_per_entry": -10.367647058823529,
+            "entries": 68,
+            "flats": 1,
+            "losses": 43,
+            "net_cents": -705.0,
+            "net_dollars": -7.05,
+            "win_rate_ex_flat": 0.3582089552238806,
+            "wins": 24
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -1.63265306122449,
+                "entries": 49,
+                "flats": 0,
+                "losses": 27,
+                "net_cents": -80.00000000000001,
+                "net_dollars": -0.8000000000000002,
+                "win_rate_ex_flat": 0.4489795918367347,
+                "wins": 22
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 16.420382165605094,
+                "entries": 157,
+                "flats": 0,
+                "losses": 62,
+                "net_cents": 2578.0,
+                "net_dollars": 25.78,
+                "win_rate_ex_flat": 0.6050955414012739,
+                "wins": 95
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -7.076923076923077,
+                "entries": 13,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": -92.0,
+                "net_dollars": -0.92,
+                "win_rate_ex_flat": 0.3076923076923077,
+                "wins": 4
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 17.346153846153847,
+                "entries": 52,
+                "flats": 0,
+                "losses": 26,
+                "net_cents": 902.0,
+                "net_dollars": 9.02,
+                "win_rate_ex_flat": 0.5,
+                "wins": 26
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 56.97700776536231,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": -3.8656820065920092,
+            "rmse_cents": 117.94657198835216,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.13827462912011987,
+            "top_quartile": {
+              "avg_cents_per_entry": -24.333333333333332,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -438.0,
+              "net_dollars": -4.38,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.7878787878787881,
+                "entries": 33,
+                "flats": 0,
+                "losses": 18,
+                "net_cents": -26.000000000000007,
+                "net_dollars": -0.26000000000000006,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 15
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 18.98507462686567,
+                "entries": 67,
+                "flats": 0,
+                "losses": 23,
+                "net_cents": 1272.0,
+                "net_dollars": 12.72,
+                "win_rate_ex_flat": 0.6567164179104478,
+                "wins": 44
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 26.4,
+                "entries": 10,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 264.0,
+                "net_dollars": 2.64,
+                "win_rate_ex_flat": 0.8,
+                "wins": 8
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 19.257142857142856,
+                "entries": 35,
+                "flats": 0,
+                "losses": 14,
+                "net_cents": 674.0,
+                "net_dollars": 6.74,
+                "win_rate_ex_flat": 0.6,
+                "wins": 21
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 42.44938065593878,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 7.223843980584044,
+            "rmse_cents": 53.4294288866488,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.09448792310440686,
+            "top_quartile": {
+              "avg_cents_per_entry": -8.0,
+              "entries": 18,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": -144.0,
+              "net_dollars": -1.44,
+              "win_rate_ex_flat": 0.3333333333333333,
+              "wins": 6
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 1.096774193548387,
+                "entries": 62,
+                "flats": 1,
+                "losses": 33,
+                "net_cents": 68.0,
+                "net_dollars": 0.68,
+                "win_rate_ex_flat": 0.45901639344262296,
+                "wins": 28
+              },
+              "threshold_ev_cents": -10,
+              "train_stats": {
+                "avg_cents_per_entry": 7.076470588235294,
+                "entries": 170,
+                "flats": 0,
+                "losses": 81,
+                "net_cents": 1203.0,
+                "net_dollars": 12.03,
+                "win_rate_ex_flat": 0.5235294117647059,
+                "wins": 89
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 14.545454545454545,
+                "entries": 11,
+                "flats": 1,
+                "losses": 5,
+                "net_cents": 160.0,
+                "net_dollars": 1.6,
+                "win_rate_ex_flat": 0.5,
+                "wins": 5
+              },
+              "threshold_ev_cents": 0,
+              "train_stats": {
+                "avg_cents_per_entry": 16.5,
+                "entries": 36,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 594.0,
+                "net_dollars": 5.94,
+                "win_rate_ex_flat": 0.6666666666666666,
+                "wins": 24
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 29.345960027678803,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -0.9153433476262673,
+            "rmse_cents": 40.70566217731924,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.024192563511177347,
+            "top_quartile": {
+              "avg_cents_per_entry": -5.5,
+              "entries": 18,
+              "flats": 1,
+              "losses": 8,
+              "net_cents": -99.0,
+              "net_dollars": -0.99,
+              "win_rate_ex_flat": 0.5294117647058824,
+              "wins": 9
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 2.083333333333333,
+                "entries": 24,
+                "flats": 1,
+                "losses": 16,
+                "net_cents": 49.99999999999999,
+                "net_dollars": 0.49999999999999994,
+                "win_rate_ex_flat": 0.30434782608695654,
+                "wins": 7
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 19.655172413793103,
+                "entries": 87,
+                "flats": 1,
+                "losses": 28,
+                "net_cents": 1710.0,
+                "net_dollars": 17.1,
+                "win_rate_ex_flat": 0.6744186046511628,
+                "wins": 58
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 4.833333333333332,
+                "entries": 12,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 57.999999999999986,
+                "net_dollars": 0.5799999999999998,
+                "win_rate_ex_flat": 0.4166666666666667,
+                "wins": 5
+              },
+              "threshold_ev_cents": 4,
+              "train_stats": {
+                "avg_cents_per_entry": 31.642857142857142,
+                "entries": 28,
+                "flats": 1,
+                "losses": 6,
+                "net_cents": 886.0,
+                "net_dollars": 8.86,
+                "win_rate_ex_flat": 0.7777777777777778,
+                "wins": 21
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 32.271886964028305,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": 0.2734041932698596,
+            "rmse_cents": 46.63573249626106,
+            "rows": 59,
+            "spearman_pred_vs_pnl": -0.021317664265390304,
+            "top_quartile": {
+              "avg_cents_per_entry": 10.4,
+              "entries": 15,
+              "flats": 0,
+              "losses": 10,
+              "net_cents": 156.0,
+              "net_dollars": 1.56,
+              "win_rate_ex_flat": 0.3333333333333333,
+              "wins": 5
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_pinball": {
+      "aggregate_model_metrics": {
+        "mae_cents": 40.793090642891734,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": -0.9653546474247221,
+        "rmse_cents": 55.18482872747307,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.004281237207149722,
+        "top_quartile": {
+          "avg_cents_per_entry": 3.014705882352941,
+          "entries": 68,
+          "flats": 0,
+          "losses": 34,
+          "net_cents": 205.0,
+          "net_dollars": 2.05,
+          "win_rate_ex_flat": 0.5,
+          "wins": 34
+        }
+      },
+      "feature_count": 68,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_13m_side_ret_z",
+        "frame_13m_abs_ret_z",
+        "frame_13m_range_pct",
+        "frame_13m_side_dollar",
+        "peg_p_cal_ge_70",
+        "peg_p_cal_ge_75",
+        "peg_p_cal_ge_80",
+        "peg_p_cal_ge_85",
+        "peg_brownian_ge_70",
+        "peg_brownian_ge_80",
+        "peg_cal_edge_pos",
+        "peg_cal_edge_ge_2c",
+        "peg_cal_edge_ge_5c",
+        "peg_raw_edge_ge_3c",
+        "peg_raw_edge_ge_8c",
+        "peg_depth_ge_8",
+        "peg_depth_ge_20",
+        "peg_depth_lt_8",
+        "peg_book_fresh_250ms",
+        "peg_book_fresh_500ms",
+        "peg_book_stale_750ms",
+        "peg_btc_fresh_250ms",
+        "peg_btc_stale_750ms",
+        "peg_absd_70_110",
+        "peg_absd_80_120",
+        "peg_seconds_ge_120",
+        "peg_seconds_ge_300",
+        "peg_late_le_300",
+        "peg_ask_le_70",
+        "peg_ask_le_80",
+        "peg_ask_ge_85",
+        "peg_volshock_abs_ge_80",
+        "peg_model_agree_close",
+        "peg_phi_1m_with_side",
+        "peg_phi_3m_with_side",
+        "peg_phi_8m_with_side",
+        "peg_phi_13m_with_side",
+        "peg_social_liquidity_good",
+        "peg_social_stale_gap",
+        "peg_social_chase",
+        "peg_social_panic"
+      ],
+      "feature_set": "phi_pinball",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.4972170686456401,
+          "pnl_cv_abs": 256.8351539339893,
+          "positive_windows": 1,
+          "stats": {
+            "avg_cents_per_entry": -0.030612244897959346,
+            "entries": 98,
+            "flats": 0,
+            "losses": 53,
+            "net_cents": -3.000000000000016,
+            "net_dollars": -0.03000000000000016,
+            "win_rate_ex_flat": 0.45918367346938777,
+            "wins": 45
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            29,
+            35,
+            17,
+            17
+          ],
+          "window_net_cents": [
+            -190.0,
+            -33.00000000000001,
+            -48.0,
+            268.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.3427620632279534,
+          "pnl_cv_abs": 3.600595512853459,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 6.096774193548387,
+            "entries": 31,
+            "flats": 0,
+            "losses": 16,
+            "net_cents": 189.0,
+            "net_dollars": 1.89,
+            "win_rate_ex_flat": 0.4838709677419355,
+            "wins": 15
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            9,
+            3,
+            5,
+            14
+          ],
+          "window_net_cents": [
+            -206.0,
+            110.0,
+            125.0,
+            160.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": -1.947916666666667,
+              "entries": 96,
+              "flats": 1,
+              "losses": 52,
+              "net_cents": -187.00000000000003,
+              "net_dollars": -1.8700000000000003,
+              "win_rate_ex_flat": 0.45263157894736844,
+              "wins": 43
+            },
+            "threshold_ev_cents": 15,
+            "train_stats": {
+              "avg_cents_per_entry": 29.571428571428573,
+              "entries": 77,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 2277.0,
+              "net_dollars": 22.77,
+              "win_rate_ex_flat": 0.7272727272727273,
+              "wins": 56
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 6.2333333333333325,
+              "entries": 30,
+              "flats": 0,
+              "losses": 16,
+              "net_cents": 186.99999999999997,
+              "net_dollars": 1.8699999999999997,
+              "win_rate_ex_flat": 0.4666666666666667,
+              "wins": 14
+            },
+            "threshold_ev_cents": 15,
+            "train_stats": {
+              "avg_cents_per_entry": 31.6,
+              "entries": 25,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": 790.0,
+              "net_dollars": 7.9,
+              "win_rate_ex_flat": 0.56,
+              "wins": 14
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 40.59378531867611,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 5.173349595806126,
+          "rmse_cents": 53.883746617028216,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.03359098487997927,
+          "top_quartile": {
+            "avg_cents_per_entry": 0.602941176470588,
+            "entries": 68,
+            "flats": 1,
+            "losses": 34,
+            "net_cents": 40.999999999999986,
+            "net_dollars": 0.40999999999999986,
+            "win_rate_ex_flat": 0.4925373134328358,
+            "wins": 33
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -6.551724137931035,
+                "entries": 29,
+                "flats": 0,
+                "losses": 17,
+                "net_cents": -190.0,
+                "net_dollars": -1.9,
+                "win_rate_ex_flat": 0.41379310344827586,
+                "wins": 12
+              },
+              "threshold_ev_cents": 15,
+              "train_stats": {
+                "avg_cents_per_entry": 29.571428571428573,
+                "entries": 77,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": 2277.0,
+                "net_dollars": 22.77,
+                "win_rate_ex_flat": 0.7272727272727273,
+                "wins": 56
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -22.88888888888889,
+                "entries": 9,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": -206.0,
+                "net_dollars": -2.06,
+                "win_rate_ex_flat": 0.2222222222222222,
+                "wins": 2
+              },
+              "threshold_ev_cents": 15,
+              "train_stats": {
+                "avg_cents_per_entry": 31.6,
+                "entries": 25,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": 790.0,
+                "net_dollars": 7.9,
+                "win_rate_ex_flat": 0.56,
+                "wins": 14
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 49.208085931163716,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 2.736966060557192,
+            "rmse_cents": 65.45575690970809,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.07418888230745192,
+            "top_quartile": {
+              "avg_cents_per_entry": -9.555555555555555,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -172.0,
+              "net_dollars": -1.72,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.9428571428571431,
+                "entries": 35,
+                "flats": 0,
+                "losses": 20,
+                "net_cents": -33.00000000000001,
+                "net_dollars": -0.33000000000000007,
+                "win_rate_ex_flat": 0.42857142857142855,
+                "wins": 15
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 26.695652173913043,
+                "entries": 92,
+                "flats": 0,
+                "losses": 24,
+                "net_cents": 2456.0,
+                "net_dollars": 24.56,
+                "win_rate_ex_flat": 0.7391304347826086,
+                "wins": 68
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 36.666666666666664,
+                "entries": 3,
+                "flats": 0,
+                "losses": 0,
+                "net_cents": 110.0,
+                "net_dollars": 1.1,
+                "win_rate_ex_flat": 1.0,
+                "wins": 3
+              },
+              "threshold_ev_cents": 10,
+              "train_stats": {
+                "avg_cents_per_entry": 37.666666666666664,
+                "entries": 24,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": 904.0,
+                "net_dollars": 9.04,
+                "win_rate_ex_flat": 0.75,
+                "wins": 18
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 44.16233321110309,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 2.870958734409722,
+            "rmse_cents": 57.221059195301514,
+            "rows": 70,
+            "spearman_pred_vs_pnl": 0.04376061648036627,
+            "top_quartile": {
+              "avg_cents_per_entry": 5.944444444444445,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": 107.0,
+              "net_dollars": 1.07,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.823529411764706,
+                "entries": 17,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": -48.0,
+                "net_dollars": -0.48,
+                "win_rate_ex_flat": 0.5294117647058824,
+                "wins": 9
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 23.9875,
+                "entries": 80,
+                "flats": 0,
+                "losses": 24,
+                "net_cents": 1919.0,
+                "net_dollars": 19.19,
+                "win_rate_ex_flat": 0.7,
+                "wins": 56
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 25.0,
+                "entries": 5,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 125.0,
+                "net_dollars": 1.25,
+                "win_rate_ex_flat": 0.6,
+                "wins": 3
+              },
+              "threshold_ev_cents": 10,
+              "train_stats": {
+                "avg_cents_per_entry": 30.142857142857142,
+                "entries": 28,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 844.0,
+                "net_dollars": 8.44,
+                "win_rate_ex_flat": 0.75,
+                "wins": 21
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 33.243131158333355,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -4.456916016760553,
+            "rmse_cents": 45.05615954560039,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.07854705678339562,
+            "top_quartile": {
+              "avg_cents_per_entry": -3.7777777777777777,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": -68.0,
+              "net_dollars": -0.68,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 15.764705882352942,
+                "entries": 17,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 268.0,
+                "net_dollars": 2.68,
+                "win_rate_ex_flat": 0.5294117647058824,
+                "wins": 9
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 28.056338028169016,
+                "entries": 71,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 1992.0,
+                "net_dollars": 19.92,
+                "win_rate_ex_flat": 0.7746478873239436,
+                "wins": 55
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 11.428571428571429,
+                "entries": 14,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 160.0,
+                "net_dollars": 1.6,
+                "win_rate_ex_flat": 0.5,
+                "wins": 7
+              },
+              "threshold_ev_cents": -5,
+              "train_stats": {
+                "avg_cents_per_entry": 25.104166666666668,
+                "entries": 48,
+                "flats": 1,
+                "losses": 15,
+                "net_cents": 1205.0,
+                "net_dollars": 12.05,
+                "win_rate_ex_flat": 0.6808510638297872,
+                "wins": 32
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 35.769370540607895,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -5.766966349689757,
+            "rmse_cents": 50.08295570187338,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.08772701343782019,
+            "top_quartile": {
+              "avg_cents_per_entry": 18.8,
+              "entries": 15,
+              "flats": 0,
+              "losses": 6,
+              "net_cents": 282.0,
+              "net_dollars": 2.82,
+              "win_rate_ex_flat": 0.6,
+              "wins": 9
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_social": {
+      "aggregate_model_metrics": {
+        "mae_cents": 41.704884303075936,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": -1.0741525025815255,
+        "rmse_cents": 72.68167995518961,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.05524938928342313,
+        "top_quartile": {
+          "avg_cents_per_entry": -11.044117647058824,
+          "entries": 68,
+          "flats": 0,
+          "losses": 44,
+          "net_cents": -751.0,
+          "net_dollars": -7.51,
+          "win_rate_ex_flat": 0.35294117647058826,
+          "wins": 24
+        }
+      },
+      "feature_count": 42,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_13m_side_ret_z",
+        "frame_13m_abs_ret_z",
+        "frame_13m_range_pct",
+        "frame_13m_side_dollar",
+        "state_liquidity_trust",
+        "state_stale_book_risk",
+        "state_stale_btc_risk",
+        "state_stale_mm_gap",
+        "state_chase_pressure",
+        "state_panic_vol",
+        "state_crowding_depth",
+        "state_late_boundary_pressure",
+        "state_model_disagreement",
+        "state_price_expensive",
+        "state_social_attention"
+      ],
+      "feature_set": "phi_social",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.4313304721030043,
+          "pnl_cv_abs": 1.985686845847157,
+          "positive_windows": 1,
+          "stats": {
+            "avg_cents_per_entry": -4.8,
+            "entries": 110,
+            "flats": 0,
+            "losses": 64,
+            "net_cents": -528.0,
+            "net_dollars": -5.28,
+            "win_rate_ex_flat": 0.41818181818181815,
+            "wins": 46
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            29,
+            34,
+            31,
+            16
+          ],
+          "window_net_cents": [
+            -402.0,
+            -263.0,
+            -65.0,
+            202.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.4308176100628931,
+          "pnl_cv_abs": 9.545887436071554,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 3.8260869565217392,
+            "entries": 23,
+            "flats": 0,
+            "losses": 13,
+            "net_cents": 88.0,
+            "net_dollars": 0.88,
+            "win_rate_ex_flat": 0.43478260869565216,
+            "wins": 10
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            6,
+            3,
+            5,
+            9
+          ],
+          "window_net_cents": [
+            -274.0,
+            26.0,
+            136.0,
+            200.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": -2.2539682539682544,
+              "entries": 126,
+              "flats": 0,
+              "losses": 72,
+              "net_cents": -284.00000000000006,
+              "net_dollars": -2.8400000000000007,
+              "win_rate_ex_flat": 0.42857142857142855,
+              "wins": 54
+            },
+            "threshold_ev_cents": 12,
+            "train_stats": {
+              "avg_cents_per_entry": 26.15909090909091,
+              "entries": 88,
+              "flats": 0,
+              "losses": 28,
+              "net_cents": 2302.0,
+              "net_dollars": 23.02,
+              "win_rate_ex_flat": 0.6818181818181818,
+              "wins": 60
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 8.195121951219512,
+              "entries": 41,
+              "flats": 0,
+              "losses": 22,
+              "net_cents": 336.0,
+              "net_dollars": 3.36,
+              "win_rate_ex_flat": 0.4634146341463415,
+              "wins": 19
+            },
+            "threshold_ev_cents": 12,
+            "train_stats": {
+              "avg_cents_per_entry": 26.344827586206897,
+              "entries": 29,
+              "flats": 0,
+              "losses": 14,
+              "net_cents": 764.0,
+              "net_dollars": 7.64,
+              "win_rate_ex_flat": 0.5172413793103449,
+              "wins": 15
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 41.71777307575648,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 5.201587951156462,
+          "rmse_cents": 71.84740932691604,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.05350451918221604,
+          "top_quartile": {
+            "avg_cents_per_entry": -10.470588235294118,
+            "entries": 68,
+            "flats": 0,
+            "losses": 45,
+            "net_cents": -712.0,
+            "net_dollars": -7.12,
+            "win_rate_ex_flat": 0.3382352941176471,
+            "wins": 23
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -13.862068965517242,
+                "entries": 29,
+                "flats": 0,
+                "losses": 18,
+                "net_cents": -402.0,
+                "net_dollars": -4.02,
+                "win_rate_ex_flat": 0.3793103448275862,
+                "wins": 11
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 26.15909090909091,
+                "entries": 88,
+                "flats": 0,
+                "losses": 28,
+                "net_cents": 2302.0,
+                "net_dollars": 23.02,
+                "win_rate_ex_flat": 0.6818181818181818,
+                "wins": 60
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -45.666666666666664,
+                "entries": 6,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": -274.0,
+                "net_dollars": -2.74,
+                "win_rate_ex_flat": 0.0,
+                "wins": 0
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 26.344827586206897,
+                "entries": 29,
+                "flats": 0,
+                "losses": 14,
+                "net_cents": 764.0,
+                "net_dollars": 7.64,
+                "win_rate_ex_flat": 0.5172413793103449,
+                "wins": 15
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 57.486828676762485,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": -6.1351808039961515,
+            "rmse_cents": 116.00655658558844,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.1402882523123212,
+            "top_quartile": {
+              "avg_cents_per_entry": -18.333333333333332,
+              "entries": 18,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": -330.0,
+              "net_dollars": -3.3,
+              "win_rate_ex_flat": 0.2777777777777778,
+              "wins": 5
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -7.735294117647059,
+                "entries": 34,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": -263.0,
+                "net_dollars": -2.63,
+                "win_rate_ex_flat": 0.38235294117647056,
+                "wins": 13
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 25.806451612903224,
+                "entries": 62,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 1600.0,
+                "net_dollars": 16.0,
+                "win_rate_ex_flat": 0.7419354838709677,
+                "wins": 46
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 8.666666666666666,
+                "entries": 3,
+                "flats": 0,
+                "losses": 1,
+                "net_cents": 26.0,
+                "net_dollars": 0.26,
+                "win_rate_ex_flat": 0.6666666666666666,
+                "wins": 2
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 37.76470588235294,
+                "entries": 17,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": 642.0,
+                "net_dollars": 6.42,
+                "win_rate_ex_flat": 0.7647058823529411,
+                "wins": 13
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 42.84048261479893,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 6.437034215227844,
+            "rmse_cents": 55.35840485307388,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.02830436673950091,
+            "top_quartile": {
+              "avg_cents_per_entry": 0.7222222222222224,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": 13.000000000000004,
+              "net_dollars": 0.13000000000000003,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.096774193548387,
+                "entries": 31,
+                "flats": 0,
+                "losses": 17,
+                "net_cents": -65.0,
+                "net_dollars": -0.65,
+                "win_rate_ex_flat": 0.45161290322580644,
+                "wins": 14
+              },
+              "threshold_ev_cents": 0,
+              "train_stats": {
+                "avg_cents_per_entry": 12.704347826086957,
+                "entries": 115,
+                "flats": 0,
+                "losses": 50,
+                "net_cents": 1461.0,
+                "net_dollars": 14.61,
+                "win_rate_ex_flat": 0.5652173913043478,
+                "wins": 65
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 27.2,
+                "entries": 5,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 136.0,
+                "net_dollars": 1.36,
+                "win_rate_ex_flat": 0.6,
+                "wins": 3
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 23.833333333333332,
+                "entries": 24,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 572.0,
+                "net_dollars": 5.72,
+                "win_rate_ex_flat": 0.6666666666666666,
+                "wins": 16
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 31.77344548763188,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -2.3370433976271507,
+            "rmse_cents": 42.943552234887704,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.11985997276485622,
+            "top_quartile": {
+              "avg_cents_per_entry": 8.944444444444445,
+              "entries": 18,
+              "flats": 0,
+              "losses": 7,
+              "net_cents": 161.0,
+              "net_dollars": 1.61,
+              "win_rate_ex_flat": 0.6111111111111112,
+              "wins": 11
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 12.625,
+                "entries": 16,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 202.0,
+                "net_dollars": 2.02,
+                "win_rate_ex_flat": 0.5,
+                "wins": 8
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 24.1864406779661,
+                "entries": 59,
+                "flats": 0,
+                "losses": 17,
+                "net_cents": 1427.0,
+                "net_dollars": 14.27,
+                "win_rate_ex_flat": 0.711864406779661,
+                "wins": 42
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 22.22222222222222,
+                "entries": 9,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": 200.0,
+                "net_dollars": 2.0,
+                "win_rate_ex_flat": 0.5555555555555556,
+                "wins": 5
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 28.285714285714285,
+                "entries": 28,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 792.0,
+                "net_dollars": 7.92,
+                "win_rate_ex_flat": 0.7142857142857143,
+                "wins": 20
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 33.4162864912525,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -2.482774985538104,
+            "rmse_cents": 47.90367401944738,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.040208214492334256,
+            "top_quartile": {
+              "avg_cents_per_entry": 11.2,
+              "entries": 15,
+              "flats": 0,
+              "losses": 8,
+              "net_cents": 168.0,
+              "net_dollars": 1.68,
+              "win_rate_ex_flat": 0.4666666666666667,
+              "wins": 7
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "pinball_only": {
+      "aggregate_model_metrics": {
+        "mae_cents": 39.83271258255995,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": 0.10484705925502819,
+        "rmse_cents": 52.698275486686654,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.0010828748043458496,
+        "top_quartile": {
+          "avg_cents_per_entry": 2.411764705882353,
+          "entries": 68,
+          "flats": 0,
+          "losses": 34,
+          "net_cents": 164.0,
+          "net_dollars": 1.64,
+          "win_rate_ex_flat": 0.5,
+          "wins": 34
+        }
+      },
+      "feature_count": 37,
+      "feature_names": [
+        "peg_p_cal_ge_70",
+        "peg_p_cal_ge_75",
+        "peg_p_cal_ge_80",
+        "peg_p_cal_ge_85",
+        "peg_brownian_ge_70",
+        "peg_brownian_ge_80",
+        "peg_cal_edge_pos",
+        "peg_cal_edge_ge_2c",
+        "peg_cal_edge_ge_5c",
+        "peg_raw_edge_ge_3c",
+        "peg_raw_edge_ge_8c",
+        "peg_depth_ge_8",
+        "peg_depth_ge_20",
+        "peg_depth_lt_8",
+        "peg_book_fresh_250ms",
+        "peg_book_fresh_500ms",
+        "peg_book_stale_750ms",
+        "peg_btc_fresh_250ms",
+        "peg_btc_stale_750ms",
+        "peg_absd_70_110",
+        "peg_absd_80_120",
+        "peg_seconds_ge_120",
+        "peg_seconds_ge_300",
+        "peg_late_le_300",
+        "peg_ask_le_70",
+        "peg_ask_le_80",
+        "peg_ask_ge_85",
+        "peg_volshock_abs_ge_80",
+        "peg_model_agree_close",
+        "peg_phi_1m_with_side",
+        "peg_phi_3m_with_side",
+        "peg_phi_8m_with_side",
+        "peg_phi_13m_with_side",
+        "peg_social_liquidity_good",
+        "peg_social_stale_gap",
+        "peg_social_chase",
+        "peg_social_panic"
+      ],
+      "feature_set": "pinball_only",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.40570522979397783,
+          "pnl_cv_abs": 8.456373295182708,
+          "positive_windows": 2,
+          "stats": {
+            "avg_cents_per_entry": 0.7661290322580644,
+            "entries": 124,
+            "flats": 0,
+            "losses": 68,
+            "net_cents": 94.99999999999999,
+            "net_dollars": 0.9499999999999998,
+            "win_rate_ex_flat": 0.45161290322580644,
+            "wins": 56
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            38,
+            30,
+            38,
+            18
+          ],
+          "window_net_cents": [
+            -62.000000000000014,
+            107.0,
+            -206.0,
+            256.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.33136094674556216,
+          "pnl_cv_abs": 3.211897342460802,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 6.146341463414634,
+            "entries": 41,
+            "flats": 0,
+            "losses": 22,
+            "net_cents": 252.0,
+            "net_dollars": 2.52,
+            "win_rate_ex_flat": 0.4634146341463415,
+            "wins": 19
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            12,
+            6,
+            15,
+            8
+          ],
+          "window_net_cents": [
+            -212.0,
+            206.0,
+            34.0,
+            224.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 0.5798319327731087,
+              "entries": 119,
+              "flats": 2,
+              "losses": 64,
+              "net_cents": 68.99999999999994,
+              "net_dollars": 0.6899999999999994,
+              "win_rate_ex_flat": 0.452991452991453,
+              "wins": 53
+            },
+            "threshold_ev_cents": 8,
+            "train_stats": {
+              "avg_cents_per_entry": 21.517857142857142,
+              "entries": 112,
+              "flats": 0,
+              "losses": 42,
+              "net_cents": 2410.0,
+              "net_dollars": 24.1,
+              "win_rate_ex_flat": 0.625,
+              "wins": 70
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 10.833333333333334,
+              "entries": 30,
+              "flats": 0,
+              "losses": 16,
+              "net_cents": 325.0,
+              "net_dollars": 3.25,
+              "win_rate_ex_flat": 0.4666666666666667,
+              "wins": 14
+            },
+            "threshold_ev_cents": 12,
+            "train_stats": {
+              "avg_cents_per_entry": 21.05263157894737,
+              "entries": 38,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 800.0,
+              "net_dollars": 8.0,
+              "win_rate_ex_flat": 0.4473684210526316,
+              "wins": 17
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 39.29289000923766,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 4.84083739519013,
+          "rmse_cents": 52.00566733872492,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.021467118674405775,
+          "top_quartile": {
+            "avg_cents_per_entry": 5.029411764705882,
+            "entries": 68,
+            "flats": 0,
+            "losses": 32,
+            "net_cents": 342.0,
+            "net_dollars": 3.42,
+            "win_rate_ex_flat": 0.5294117647058824,
+            "wins": 36
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -1.6315789473684215,
+                "entries": 38,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": -62.000000000000014,
+                "net_dollars": -0.6200000000000001,
+                "win_rate_ex_flat": 0.4473684210526316,
+                "wins": 17
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 21.517857142857142,
+                "entries": 112,
+                "flats": 0,
+                "losses": 42,
+                "net_cents": 2410.0,
+                "net_dollars": 24.1,
+                "win_rate_ex_flat": 0.625,
+                "wins": 70
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -17.666666666666668,
+                "entries": 12,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": -212.0,
+                "net_dollars": -2.12,
+                "win_rate_ex_flat": 0.25,
+                "wins": 3
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 21.05263157894737,
+                "entries": 38,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": 800.0,
+                "net_dollars": 8.0,
+                "win_rate_ex_flat": 0.4473684210526316,
+                "wins": 17
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 45.852950017282346,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 7.450805853604677,
+            "rmse_cents": 60.43032040310029,
+            "rows": 70,
+            "spearman_pred_vs_pnl": 0.028357563632532893,
+            "top_quartile": {
+              "avg_cents_per_entry": -2.444444444444445,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -44.000000000000014,
+              "net_dollars": -0.44000000000000017,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 3.566666666666667,
+                "entries": 30,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 107.0,
+                "net_dollars": 1.07,
+                "win_rate_ex_flat": 0.4666666666666667,
+                "wins": 14
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 22.652631578947368,
+                "entries": 95,
+                "flats": 0,
+                "losses": 27,
+                "net_cents": 2152.0,
+                "net_dollars": 21.52,
+                "win_rate_ex_flat": 0.7157894736842105,
+                "wins": 68
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 34.333333333333336,
+                "entries": 6,
+                "flats": 0,
+                "losses": 1,
+                "net_cents": 206.0,
+                "net_dollars": 2.06,
+                "win_rate_ex_flat": 0.8333333333333334,
+                "wins": 5
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 30.714285714285715,
+                "entries": 28,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 860.0,
+                "net_dollars": 8.6,
+                "win_rate_ex_flat": 0.6428571428571429,
+                "wins": 18
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 43.48869048800468,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 0.663780911903503,
+            "rmse_cents": 55.71006338339632,
+            "rows": 70,
+            "spearman_pred_vs_pnl": 0.04268447872642187,
+            "top_quartile": {
+              "avg_cents_per_entry": -3.7222222222222223,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -67.0,
+              "net_dollars": -0.67,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -5.421052631578948,
+                "entries": 38,
+                "flats": 0,
+                "losses": 22,
+                "net_cents": -206.0,
+                "net_dollars": -2.06,
+                "win_rate_ex_flat": 0.42105263157894735,
+                "wins": 16
+              },
+              "threshold_ev_cents": -5,
+              "train_stats": {
+                "avg_cents_per_entry": 15.796747967479675,
+                "entries": 123,
+                "flats": 0,
+                "losses": 49,
+                "net_cents": 1943.0,
+                "net_dollars": 19.43,
+                "win_rate_ex_flat": 0.6016260162601627,
+                "wins": 74
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 2.2666666666666666,
+                "entries": 15,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 34.0,
+                "net_dollars": 0.34,
+                "win_rate_ex_flat": 0.4,
+                "wins": 6
+              },
+              "threshold_ev_cents": -5,
+              "train_stats": {
+                "avg_cents_per_entry": 21.61904761904762,
+                "entries": 42,
+                "flats": 0,
+                "losses": 15,
+                "net_cents": 908.0,
+                "net_dollars": 9.08,
+                "win_rate_ex_flat": 0.6428571428571429,
+                "wins": 27
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 33.26659317064992,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -2.9592157247486988,
+            "rmse_cents": 43.61361970301915,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.08022898590049682,
+            "top_quartile": {
+              "avg_cents_per_entry": -4.666666666666667,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": -84.0,
+              "net_dollars": -0.84,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 14.222222222222221,
+                "entries": 18,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 256.0,
+                "net_dollars": 2.56,
+                "win_rate_ex_flat": 0.5,
+                "wins": 9
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 26.3015873015873,
+                "entries": 63,
+                "flats": 0,
+                "losses": 17,
+                "net_cents": 1657.0,
+                "net_dollars": 16.57,
+                "win_rate_ex_flat": 0.7301587301587301,
+                "wins": 46
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 28.0,
+                "entries": 8,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 224.0,
+                "net_dollars": 2.24,
+                "win_rate_ex_flat": 0.625,
+                "wins": 5
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 34.96,
+                "entries": 25,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": 874.0,
+                "net_dollars": 8.74,
+                "win_rate_ex_flat": 0.76,
+                "wins": 19
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 36.14276826089898,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -5.638510405314592,
+            "rmse_cents": 48.88785743623201,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.0664970761858677,
+            "top_quartile": {
+              "avg_cents_per_entry": 11.866666666666667,
+              "entries": 15,
+              "flats": 0,
+              "losses": 8,
+              "net_cents": 178.0,
+              "net_dollars": 1.78,
+              "win_rate_ex_flat": 0.4666666666666667,
+              "wins": 7
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "social_only": {
+      "aggregate_model_metrics": {
+        "mae_cents": 37.61929364656258,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": 1.4309138102393506,
+        "rmse_cents": 51.05285065933871,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.05198134224283402,
+        "top_quartile": {
+          "avg_cents_per_entry": -4.367647058823529,
+          "entries": 68,
+          "flats": 1,
+          "losses": 36,
+          "net_cents": -297.0,
+          "net_dollars": -2.97,
+          "win_rate_ex_flat": 0.4626865671641791,
+          "wins": 31
+        }
+      },
+      "feature_count": 18,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "state_liquidity_trust",
+        "state_stale_book_risk",
+        "state_stale_btc_risk",
+        "state_stale_mm_gap",
+        "state_chase_pressure",
+        "state_panic_vol",
+        "state_crowding_depth",
+        "state_late_boundary_pressure",
+        "state_model_disagreement",
+        "state_price_expensive",
+        "state_social_attention"
+      ],
+      "feature_set": "social_only",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.5416666666666666,
+          "pnl_cv_abs": 0.9916083082735022,
+          "positive_windows": 0,
+          "stats": {
+            "avg_cents_per_entry": -5.393258426966292,
+            "entries": 89,
+            "flats": 1,
+            "losses": 51,
+            "net_cents": -480.0,
+            "net_dollars": -4.8,
+            "win_rate_ex_flat": 0.42045454545454547,
+            "wins": 37
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            11,
+            49,
+            18,
+            11
+          ],
+          "window_net_cents": [
+            -260.0,
+            -43.00000000000001,
+            -175.0,
+            -2.0000000000000036
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.3502454991816694,
+          "pnl_cv_abs": 3.8941625257175385,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 7.956521739130435,
+            "entries": 23,
+            "flats": 0,
+            "losses": 12,
+            "net_cents": 183.0,
+            "net_dollars": 1.83,
+            "win_rate_ex_flat": 0.4782608695652174,
+            "wins": 11
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            4,
+            6,
+            7,
+            6
+          ],
+          "window_net_cents": [
+            -214.0,
+            188.0,
+            87.0,
+            122.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": -5.636363636363637,
+              "entries": 44,
+              "flats": 0,
+              "losses": 26,
+              "net_cents": -248.0,
+              "net_dollars": -2.48,
+              "win_rate_ex_flat": 0.4090909090909091,
+              "wins": 18
+            },
+            "threshold_ev_cents": 20,
+            "train_stats": {
+              "avg_cents_per_entry": 32.12820512820513,
+              "entries": 39,
+              "flats": 0,
+              "losses": 8,
+              "net_cents": 1253.0,
+              "net_dollars": 12.53,
+              "win_rate_ex_flat": 0.7948717948717948,
+              "wins": 31
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 5.517241379310345,
+              "entries": 29,
+              "flats": 0,
+              "losses": 15,
+              "net_cents": 160.0,
+              "net_dollars": 1.6,
+              "win_rate_ex_flat": 0.4827586206896552,
+              "wins": 14
+            },
+            "threshold_ev_cents": 15,
+            "train_stats": {
+              "avg_cents_per_entry": 23.0,
+              "entries": 26,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 598.0,
+              "net_dollars": 5.98,
+              "win_rate_ex_flat": 0.5,
+              "wins": 13
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 38.225420249709245,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 7.20302390469716,
+          "rmse_cents": 50.4408273410018,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.05525401431461559,
+          "top_quartile": {
+            "avg_cents_per_entry": -3.8529411764705883,
+            "entries": 68,
+            "flats": 0,
+            "losses": 41,
+            "net_cents": -262.0,
+            "net_dollars": -2.62,
+            "win_rate_ex_flat": 0.39705882352941174,
+            "wins": 27
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -23.636363636363637,
+                "entries": 11,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": -260.0,
+                "net_dollars": -2.6,
+                "win_rate_ex_flat": 0.2727272727272727,
+                "wins": 3
+              },
+              "threshold_ev_cents": 20,
+              "train_stats": {
+                "avg_cents_per_entry": 32.12820512820513,
+                "entries": 39,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 1253.0,
+                "net_dollars": 12.53,
+                "win_rate_ex_flat": 0.7948717948717948,
+                "wins": 31
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -53.5,
+                "entries": 4,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": -214.0,
+                "net_dollars": -2.14,
+                "win_rate_ex_flat": 0.0,
+                "wins": 0
+              },
+              "threshold_ev_cents": 15,
+              "train_stats": {
+                "avg_cents_per_entry": 23.0,
+                "entries": 26,
+                "flats": 0,
+                "losses": 13,
+                "net_cents": 598.0,
+                "net_dollars": 5.98,
+                "win_rate_ex_flat": 0.5,
+                "wins": 13
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 44.486528243357014,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 4.085233050165501,
+            "rmse_cents": 59.537971261316244,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.07686787664142411,
+            "top_quartile": {
+              "avg_cents_per_entry": -15.0,
+              "entries": 18,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": -270.0,
+              "net_dollars": -2.7,
+              "win_rate_ex_flat": 0.3333333333333333,
+              "wins": 6
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.8775510204081635,
+                "entries": 49,
+                "flats": 0,
+                "losses": 26,
+                "net_cents": -43.00000000000001,
+                "net_dollars": -0.43000000000000005,
+                "win_rate_ex_flat": 0.46938775510204084,
+                "wins": 23
+              },
+              "threshold_ev_cents": 0,
+              "train_stats": {
+                "avg_cents_per_entry": 14.842857142857143,
+                "entries": 140,
+                "flats": 0,
+                "losses": 56,
+                "net_cents": 2078.0,
+                "net_dollars": 20.78,
+                "win_rate_ex_flat": 0.6,
+                "wins": 84
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 31.333333333333332,
+                "entries": 6,
+                "flats": 0,
+                "losses": 1,
+                "net_cents": 188.0,
+                "net_dollars": 1.88,
+                "win_rate_ex_flat": 0.8333333333333334,
+                "wins": 5
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 22.5,
+                "entries": 20,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 450.0,
+                "net_dollars": 4.5,
+                "win_rate_ex_flat": 0.6,
+                "wins": 12
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 41.802490492056336,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 5.297890065336319,
+            "rmse_cents": 54.41017468553437,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.012270476861094703,
+            "top_quartile": {
+              "avg_cents_per_entry": -23.0,
+              "entries": 18,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": -414.0,
+              "net_dollars": -4.14,
+              "win_rate_ex_flat": 0.3333333333333333,
+              "wins": 6
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -9.722222222222221,
+                "entries": 18,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": -175.0,
+                "net_dollars": -1.75,
+                "win_rate_ex_flat": 0.3888888888888889,
+                "wins": 7
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 13.880597014925373,
+                "entries": 67,
+                "flats": 0,
+                "losses": 26,
+                "net_cents": 930.0,
+                "net_dollars": 9.3,
+                "win_rate_ex_flat": 0.6119402985074627,
+                "wins": 41
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 12.428571428571429,
+                "entries": 7,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": 87.0,
+                "net_dollars": 0.87,
+                "win_rate_ex_flat": 0.42857142857142855,
+                "wins": 3
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 23.91304347826087,
+                "entries": 23,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 550.0,
+                "net_dollars": 5.5,
+                "win_rate_ex_flat": 0.6956521739130435,
+                "wins": 16
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 31.366342794039973,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -1.0497465934271268,
+            "rmse_cents": 41.99074906064287,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.22226698907483267,
+            "top_quartile": {
+              "avg_cents_per_entry": -9.722222222222221,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -175.0,
+              "net_dollars": -1.75,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.18181818181818213,
+                "entries": 11,
+                "flats": 1,
+                "losses": 6,
+                "net_cents": -2.0000000000000036,
+                "net_dollars": -0.020000000000000035,
+                "win_rate_ex_flat": 0.4,
+                "wins": 4
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 12.17142857142857,
+                "entries": 35,
+                "flats": 0,
+                "losses": 14,
+                "net_cents": 426.0,
+                "net_dollars": 4.26,
+                "win_rate_ex_flat": 0.6,
+                "wins": 21
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 20.333333333333332,
+                "entries": 6,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 122.0,
+                "net_dollars": 1.22,
+                "win_rate_ex_flat": 0.5,
+                "wins": 3
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 29.352941176470587,
+                "entries": 17,
+                "flats": 0,
+                "losses": 5,
+                "net_cents": 499.0,
+                "net_dollars": 4.99,
+                "win_rate_ex_flat": 0.7058823529411765,
+                "wins": 12
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 31.927367523111887,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -3.3630600269634434,
+            "rmse_cents": 45.534054699790225,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.08135218379467192,
+            "top_quartile": {
+              "avg_cents_per_entry": 8.133333333333333,
+              "entries": 15,
+              "flats": 1,
+              "losses": 8,
+              "net_cents": 122.0,
+              "net_dollars": 1.22,
+              "win_rate_ex_flat": 0.42857142857142855,
+              "wins": 6
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "social_pinball": {
+      "aggregate_model_metrics": {
+        "mae_cents": 39.962552657353086,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": -0.637840036921208,
+        "rmse_cents": 53.380222216943785,
+        "rows": 269,
+        "spearman_pred_vs_pnl": 0.010335094702661257,
+        "top_quartile": {
+          "avg_cents_per_entry": 3.9411764705882355,
+          "entries": 68,
+          "flats": 0,
+          "losses": 34,
+          "net_cents": 268.0,
+          "net_dollars": 2.68,
+          "win_rate_ex_flat": 0.5,
+          "wins": 34
+        }
+      },
+      "feature_count": 55,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "state_liquidity_trust",
+        "state_stale_book_risk",
+        "state_stale_btc_risk",
+        "state_stale_mm_gap",
+        "state_chase_pressure",
+        "state_panic_vol",
+        "state_crowding_depth",
+        "state_late_boundary_pressure",
+        "state_model_disagreement",
+        "state_price_expensive",
+        "state_social_attention",
+        "peg_p_cal_ge_70",
+        "peg_p_cal_ge_75",
+        "peg_p_cal_ge_80",
+        "peg_p_cal_ge_85",
+        "peg_brownian_ge_70",
+        "peg_brownian_ge_80",
+        "peg_cal_edge_pos",
+        "peg_cal_edge_ge_2c",
+        "peg_cal_edge_ge_5c",
+        "peg_raw_edge_ge_3c",
+        "peg_raw_edge_ge_8c",
+        "peg_depth_ge_8",
+        "peg_depth_ge_20",
+        "peg_depth_lt_8",
+        "peg_book_fresh_250ms",
+        "peg_book_fresh_500ms",
+        "peg_book_stale_750ms",
+        "peg_btc_fresh_250ms",
+        "peg_btc_stale_750ms",
+        "peg_absd_70_110",
+        "peg_absd_80_120",
+        "peg_seconds_ge_120",
+        "peg_seconds_ge_300",
+        "peg_late_le_300",
+        "peg_ask_le_70",
+        "peg_ask_le_80",
+        "peg_ask_ge_85",
+        "peg_volshock_abs_ge_80",
+        "peg_model_agree_close",
+        "peg_phi_1m_with_side",
+        "peg_phi_3m_with_side",
+        "peg_phi_8m_with_side",
+        "peg_phi_13m_with_side",
+        "peg_social_liquidity_good",
+        "peg_social_stale_gap",
+        "peg_social_chase",
+        "peg_social_panic"
+      ],
+      "feature_set": "social_pinball",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.5188118811881188,
+          "pnl_cv_abs": 3.1628736546005007,
+          "positive_windows": 2,
+          "stats": {
+            "avg_cents_per_entry": 2.2967032967032965,
+            "entries": 91,
+            "flats": 0,
+            "losses": 47,
+            "net_cents": 209.0,
+            "net_dollars": 2.09,
+            "win_rate_ex_flat": 0.4835164835164835,
+            "wins": 44
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            28,
+            26,
+            20,
+            17
+          ],
+          "window_net_cents": [
+            -28.000000000000007,
+            95.0,
+            -120.0,
+            262.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.32503660322108346,
+          "pnl_cv_abs": 1.5460607326448037,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 14.586206896551724,
+            "entries": 29,
+            "flats": 0,
+            "losses": 13,
+            "net_cents": 423.0,
+            "net_dollars": 4.23,
+            "win_rate_ex_flat": 0.5517241379310345,
+            "wins": 16
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            9,
+            5,
+            6,
+            9
+          ],
+          "window_net_cents": [
+            -130.0,
+            222.0,
+            121.0,
+            210.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 1.4123711340206182,
+              "entries": 97,
+              "flats": 1,
+              "losses": 50,
+              "net_cents": 136.99999999999997,
+              "net_dollars": 1.3699999999999997,
+              "win_rate_ex_flat": 0.4791666666666667,
+              "wins": 46
+            },
+            "threshold_ev_cents": 15,
+            "train_stats": {
+              "avg_cents_per_entry": 29.743589743589745,
+              "entries": 78,
+              "flats": 0,
+              "losses": 22,
+              "net_cents": 2320.0,
+              "net_dollars": 23.2,
+              "win_rate_ex_flat": 0.717948717948718,
+              "wins": 56
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 13.033333333333333,
+              "entries": 30,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 391.0,
+              "net_dollars": 3.91,
+              "win_rate_ex_flat": 0.5666666666666667,
+              "wins": 17
+            },
+            "threshold_ev_cents": 15,
+            "train_stats": {
+              "avg_cents_per_entry": 30.615384615384617,
+              "entries": 26,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 796.0,
+              "net_dollars": 7.96,
+              "win_rate_ex_flat": 0.5384615384615384,
+              "wins": 14
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 40.168740094131316,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 6.144646266734885,
+          "rmse_cents": 53.103787552013614,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.029321156083104278,
+          "top_quartile": {
+            "avg_cents_per_entry": 1.5147058823529407,
+            "entries": 68,
+            "flats": 0,
+            "losses": 34,
+            "net_cents": 102.99999999999997,
+            "net_dollars": 1.0299999999999998,
+            "win_rate_ex_flat": 0.5,
+            "wins": 34
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -1.0000000000000002,
+                "entries": 28,
+                "flats": 0,
+                "losses": 15,
+                "net_cents": -28.000000000000007,
+                "net_dollars": -0.2800000000000001,
+                "win_rate_ex_flat": 0.4642857142857143,
+                "wins": 13
+              },
+              "threshold_ev_cents": 15,
+              "train_stats": {
+                "avg_cents_per_entry": 29.743589743589745,
+                "entries": 78,
+                "flats": 0,
+                "losses": 22,
+                "net_cents": 2320.0,
+                "net_dollars": 23.2,
+                "win_rate_ex_flat": 0.717948717948718,
+                "wins": 56
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -14.444444444444445,
+                "entries": 9,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": -130.0,
+                "net_dollars": -1.3,
+                "win_rate_ex_flat": 0.3333333333333333,
+                "wins": 3
+              },
+              "threshold_ev_cents": 15,
+              "train_stats": {
+                "avg_cents_per_entry": 30.615384615384617,
+                "entries": 26,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 796.0,
+                "net_dollars": 7.96,
+                "win_rate_ex_flat": 0.5384615384615384,
+                "wins": 14
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 46.80974087949186,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 5.551253284742178,
+            "rmse_cents": 61.941461065877235,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.021501993739332304,
+            "top_quartile": {
+              "avg_cents_per_entry": -6.777777777777779,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -122.00000000000001,
+              "net_dollars": -1.2200000000000002,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 3.6538461538461537,
+                "entries": 26,
+                "flats": 0,
+                "losses": 13,
+                "net_cents": 95.0,
+                "net_dollars": 0.95,
+                "win_rate_ex_flat": 0.5,
+                "wins": 13
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 27.34285714285714,
+                "entries": 70,
+                "flats": 0,
+                "losses": 17,
+                "net_cents": 1914.0,
+                "net_dollars": 19.14,
+                "win_rate_ex_flat": 0.7571428571428571,
+                "wins": 53
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 44.4,
+                "entries": 5,
+                "flats": 0,
+                "losses": 0,
+                "net_cents": 222.0,
+                "net_dollars": 2.22,
+                "win_rate_ex_flat": 1.0,
+                "wins": 5
+              },
+              "threshold_ev_cents": 10,
+              "train_stats": {
+                "avg_cents_per_entry": 31.6,
+                "entries": 25,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 790.0,
+                "net_dollars": 7.9,
+                "win_rate_ex_flat": 0.68,
+                "wins": 17
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 42.60750538560324,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 2.6066248422351057,
+            "rmse_cents": 55.51796000743125,
+            "rows": 70,
+            "spearman_pred_vs_pnl": 0.1268707792998779,
+            "top_quartile": {
+              "avg_cents_per_entry": 3.5,
+              "entries": 18,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": 63.0,
+              "net_dollars": 0.63,
+              "win_rate_ex_flat": 0.5,
+              "wins": 9
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -6.0,
+                "entries": 20,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": -120.0,
+                "net_dollars": -1.2,
+                "win_rate_ex_flat": 0.45,
+                "wins": 9
+              },
+              "threshold_ev_cents": 4,
+              "train_stats": {
+                "avg_cents_per_entry": 21.839080459770116,
+                "entries": 87,
+                "flats": 0,
+                "losses": 27,
+                "net_cents": 1900.0,
+                "net_dollars": 19.0,
+                "win_rate_ex_flat": 0.6896551724137931,
+                "wins": 60
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 20.166666666666668,
+                "entries": 6,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 121.0,
+                "net_dollars": 1.21,
+                "win_rate_ex_flat": 0.5,
+                "wins": 3
+              },
+              "threshold_ev_cents": 8,
+              "train_stats": {
+                "avg_cents_per_entry": 27.285714285714285,
+                "entries": 28,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 764.0,
+                "net_dollars": 7.64,
+                "win_rate_ex_flat": 0.7142857142857143,
+                "wins": 20
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 33.456523427446385,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -5.143269984690611,
+            "rmse_cents": 44.98882955770753,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.08033261501649265,
+            "top_quartile": {
+              "avg_cents_per_entry": -6.055555555555555,
+              "entries": 18,
+              "flats": 0,
+              "losses": 10,
+              "net_cents": -109.0,
+              "net_dollars": -1.09,
+              "win_rate_ex_flat": 0.4444444444444444,
+              "wins": 8
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 15.411764705882353,
+                "entries": 17,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 262.0,
+                "net_dollars": 2.62,
+                "win_rate_ex_flat": 0.5294117647058824,
+                "wins": 9
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 24.415730337078653,
+                "entries": 89,
+                "flats": 1,
+                "losses": 26,
+                "net_cents": 2173.0,
+                "net_dollars": 21.73,
+                "win_rate_ex_flat": 0.7045454545454546,
+                "wins": 62
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 23.333333333333332,
+                "entries": 9,
+                "flats": 0,
+                "losses": 4,
+                "net_cents": 210.0,
+                "net_dollars": 2.1,
+                "win_rate_ex_flat": 0.5555555555555556,
+                "wins": 5
+              },
+              "threshold_ev_cents": 2,
+              "train_stats": {
+                "avg_cents_per_entry": 30.857142857142858,
+                "entries": 35,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 1080.0,
+                "net_dollars": 10.8,
+                "win_rate_ex_flat": 0.7428571428571429,
+                "wins": 26
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 36.41970824322164,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -6.484771862574102,
+            "rmse_cents": 48.79787377693231,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.0751235658405867,
+            "top_quartile": {
+              "avg_cents_per_entry": 19.6,
+              "entries": 15,
+              "flats": 0,
+              "losses": 6,
+              "net_cents": 294.0,
+              "net_dollars": 2.94,
+              "win_rate_ex_flat": 0.6,
+              "wins": 9
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    },
+    "standard6_social_pinball_control": {
+      "aggregate_model_metrics": {
+        "mae_cents": 41.91587242775487,
+        "mean_actual_pnl_cents": 1.5427509293680297,
+        "mean_pred_ev_cents": -1.76920929186298,
+        "rmse_cents": 56.41117312169953,
+        "rows": 269,
+        "spearman_pred_vs_pnl": -0.006741137130710435,
+        "top_quartile": {
+          "avg_cents_per_entry": 0.7058823529411764,
+          "entries": 68,
+          "flats": 0,
+          "losses": 38,
+          "net_cents": 47.99999999999999,
+          "net_dollars": 0.4799999999999999,
+          "win_rate_ex_flat": 0.4411764705882353,
+          "wins": 30
+        }
+      },
+      "feature_count": 79,
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_10m_side_ret_z",
+        "frame_10m_abs_ret_z",
+        "frame_10m_range_pct",
+        "frame_10m_side_dollar",
+        "frame_15m_side_ret_z",
+        "frame_15m_abs_ret_z",
+        "frame_15m_range_pct",
+        "frame_15m_side_dollar",
+        "state_liquidity_trust",
+        "state_stale_book_risk",
+        "state_stale_btc_risk",
+        "state_stale_mm_gap",
+        "state_chase_pressure",
+        "state_panic_vol",
+        "state_crowding_depth",
+        "state_late_boundary_pressure",
+        "state_model_disagreement",
+        "state_price_expensive",
+        "state_social_attention",
+        "peg_p_cal_ge_70",
+        "peg_p_cal_ge_75",
+        "peg_p_cal_ge_80",
+        "peg_p_cal_ge_85",
+        "peg_brownian_ge_70",
+        "peg_brownian_ge_80",
+        "peg_cal_edge_pos",
+        "peg_cal_edge_ge_2c",
+        "peg_cal_edge_ge_5c",
+        "peg_raw_edge_ge_3c",
+        "peg_raw_edge_ge_8c",
+        "peg_depth_ge_8",
+        "peg_depth_ge_20",
+        "peg_depth_lt_8",
+        "peg_book_fresh_250ms",
+        "peg_book_fresh_500ms",
+        "peg_book_stale_750ms",
+        "peg_btc_fresh_250ms",
+        "peg_btc_stale_750ms",
+        "peg_absd_70_110",
+        "peg_absd_80_120",
+        "peg_seconds_ge_120",
+        "peg_seconds_ge_300",
+        "peg_late_le_300",
+        "peg_ask_le_70",
+        "peg_ask_le_80",
+        "peg_ask_ge_85",
+        "peg_volshock_abs_ge_80",
+        "peg_model_agree_close",
+        "peg_phi_1m_with_side",
+        "peg_phi_3m_with_side",
+        "peg_phi_8m_with_side",
+        "peg_phi_13m_with_side",
+        "peg_social_liquidity_good",
+        "peg_social_stale_gap",
+        "peg_social_chase",
+        "peg_social_panic"
+      ],
+      "feature_set": "standard6_social_pinball_control",
+      "gates": {
+        "ev_all": {
+          "max_window_share_abs": 0.4,
+          "pnl_cv_abs": 3.718315573269126,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 3.25,
+            "entries": 92,
+            "flats": 0,
+            "losses": 48,
+            "net_cents": 299.0,
+            "net_dollars": 2.99,
+            "win_rate_ex_flat": 0.4782608695652174,
+            "wins": 44
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            32,
+            30,
+            13,
+            17
+          ],
+          "window_net_cents": [
+            -298.0,
+            185.0,
+            54.0,
+            358.0
+          ]
+        },
+        "robust_ev_overlay": {
+          "max_window_share_abs": 0.5118279569892473,
+          "pnl_cv_abs": 3.5138063634315295,
+          "positive_windows": 2,
+          "stats": {
+            "avg_cents_per_entry": 8.227272727272727,
+            "entries": 22,
+            "flats": 0,
+            "losses": 12,
+            "net_cents": 181.0,
+            "net_dollars": 1.81,
+            "win_rate_ex_flat": 0.45454545454545453,
+            "wins": 10
+          },
+          "traded_windows": 3,
+          "window_entries": [
+            10,
+            0,
+            4,
+            8
+          ],
+          "window_net_cents": [
+            -142.0,
+            0.0,
+            85.0,
+            238.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "ev_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": -0.3923076923076927,
+              "entries": 130,
+              "flats": 2,
+              "losses": 73,
+              "net_cents": -51.00000000000005,
+              "net_dollars": -0.5100000000000005,
+              "win_rate_ex_flat": 0.4296875,
+              "wins": 55
+            },
+            "threshold_ev_cents": 10,
+            "train_stats": {
+              "avg_cents_per_entry": 26.04040404040404,
+              "entries": 99,
+              "flats": 0,
+              "losses": 31,
+              "net_cents": 2578.0,
+              "net_dollars": 25.78,
+              "win_rate_ex_flat": 0.6868686868686869,
+              "wins": 68
+            }
+          },
+          "robust_ev_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 12.073170731707316,
+              "entries": 41,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 495.0,
+              "net_dollars": 4.95,
+              "win_rate_ex_flat": 0.5121951219512195,
+              "wins": 21
+            },
+            "threshold_ev_cents": 10,
+            "train_stats": {
+              "avg_cents_per_entry": 25.3125,
+              "entries": 32,
+              "flats": 0,
+              "losses": 16,
+              "net_cents": 810.0,
+              "net_dollars": 8.1,
+              "win_rate_ex_flat": 0.5,
+              "wins": 16
+            }
+          }
+        },
+        "model_metrics": {
+          "mae_cents": 41.224452387344925,
+          "mean_actual_pnl_cents": 1.5427509293680297,
+          "mean_pred_ev_cents": 5.3121264264116625,
+          "rmse_cents": 55.02071941412455,
+          "rows": 269,
+          "spearman_pred_vs_pnl": -0.03597133426702975,
+          "top_quartile": {
+            "avg_cents_per_entry": -1.0441176470588238,
+            "entries": 68,
+            "flats": 0,
+            "losses": 35,
+            "net_cents": -71.00000000000001,
+            "net_dollars": -0.7100000000000002,
+            "win_rate_ex_flat": 0.4852941176470588,
+            "wins": 33
+          }
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "splits": [
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -9.3125,
+                "entries": 32,
+                "flats": 0,
+                "losses": 19,
+                "net_cents": -298.0,
+                "net_dollars": -2.98,
+                "win_rate_ex_flat": 0.40625,
+                "wins": 13
+              },
+              "threshold_ev_cents": 10,
+              "train_stats": {
+                "avg_cents_per_entry": 26.04040404040404,
+                "entries": 99,
+                "flats": 0,
+                "losses": 31,
+                "net_cents": 2578.0,
+                "net_dollars": 25.78,
+                "win_rate_ex_flat": 0.6868686868686869,
+                "wins": 68
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -14.2,
+                "entries": 10,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": -142.0,
+                "net_dollars": -1.42,
+                "win_rate_ex_flat": 0.3,
+                "wins": 3
+              },
+              "threshold_ev_cents": 10,
+              "train_stats": {
+                "avg_cents_per_entry": 25.3125,
+                "entries": 32,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 810.0,
+                "net_dollars": 8.1,
+                "win_rate_ex_flat": 0.5,
+                "wins": 16
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 50.68647503414909,
+            "mean_actual_pnl_cents": -1.4857142857142858,
+            "mean_pred_ev_cents": 2.2636610700628754,
+            "rmse_cents": 67.87976458616723,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.05489311919609672,
+            "top_quartile": {
+              "avg_cents_per_entry": -14.666666666666666,
+              "entries": 18,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": -264.0,
+              "net_dollars": -2.64,
+              "win_rate_ex_flat": 0.3333333333333333,
+              "wins": 6
+            }
+          },
+          "name": "wfa_201_270",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 6.166666666666667,
+                "entries": 30,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 185.0,
+                "net_dollars": 1.85,
+                "win_rate_ex_flat": 0.4666666666666667,
+                "wins": 14
+              },
+              "threshold_ev_cents": 10,
+              "train_stats": {
+                "avg_cents_per_entry": 28.214285714285715,
+                "entries": 84,
+                "flats": 0,
+                "losses": 20,
+                "net_cents": 2370.0,
+                "net_dollars": 23.7,
+                "win_rate_ex_flat": 0.7619047619047619,
+                "wins": 64
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": null,
+                "entries": 0,
+                "flats": 0,
+                "losses": 0,
+                "net_cents": 0,
+                "net_dollars": 0.0,
+                "win_rate_ex_flat": null,
+                "wins": 0
+              },
+              "threshold_ev_cents": 20,
+              "train_stats": {
+                "avg_cents_per_entry": 43.294117647058826,
+                "entries": 17,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 736.0,
+                "net_dollars": 7.36,
+                "win_rate_ex_flat": 0.8235294117647058,
+                "wins": 14
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 44.62256336711889,
+            "mean_actual_pnl_cents": -2.7,
+            "mean_pred_ev_cents": 3.665550924148751,
+            "rmse_cents": 56.90728709959368,
+            "rows": 70,
+            "spearman_pred_vs_pnl": 0.06908926129920227,
+            "top_quartile": {
+              "avg_cents_per_entry": -0.16666666666666646,
+              "entries": 18,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": -2.9999999999999964,
+              "net_dollars": -0.029999999999999964,
+              "win_rate_ex_flat": 0.3888888888888889,
+              "wins": 7
+            }
+          },
+          "name": "wfa_271_340",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 4.153846153846154,
+                "entries": 13,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": 54.0,
+                "net_dollars": 0.54,
+                "win_rate_ex_flat": 0.5384615384615384,
+                "wins": 7
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 29.06896551724138,
+                "entries": 58,
+                "flats": 0,
+                "losses": 14,
+                "net_cents": 1686.0,
+                "net_dollars": 16.86,
+                "win_rate_ex_flat": 0.7586206896551724,
+                "wins": 44
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 21.25,
+                "entries": 4,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 85.0,
+                "net_dollars": 0.85,
+                "win_rate_ex_flat": 0.5,
+                "wins": 2
+              },
+              "threshold_ev_cents": 12,
+              "train_stats": {
+                "avg_cents_per_entry": 32.4,
+                "entries": 25,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": 810.0,
+                "net_dollars": 8.1,
+                "win_rate_ex_flat": 0.76,
+                "wins": 19
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 34.89916135361436,
+            "mean_actual_pnl_cents": 2.8857142857142857,
+            "mean_pred_ev_cents": -5.819860513247164,
+            "rmse_cents": 46.46133001866013,
+            "rows": 70,
+            "spearman_pred_vs_pnl": -0.11679651501199369,
+            "top_quartile": {
+              "avg_cents_per_entry": -5.444444444444445,
+              "entries": 18,
+              "flats": 0,
+              "losses": 10,
+              "net_cents": -98.0,
+              "net_dollars": -0.98,
+              "win_rate_ex_flat": 0.4444444444444444,
+              "wins": 8
+            }
+          },
+          "name": "wfa_341_410",
+          "test_rows": 70,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "ev_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 21.058823529411764,
+                "entries": 17,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 358.0,
+                "net_dollars": 3.58,
+                "win_rate_ex_flat": 0.5882352941176471,
+                "wins": 10
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 26.164556962025316,
+                "entries": 79,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": 2067.0,
+                "net_dollars": 20.67,
+                "win_rate_ex_flat": 0.7341772151898734,
+                "wins": 58
+              }
+            },
+            "robust_ev_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 29.75,
+                "entries": 8,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 238.0,
+                "net_dollars": 2.38,
+                "win_rate_ex_flat": 0.625,
+                "wins": 5
+              },
+              "threshold_ev_cents": 6,
+              "train_stats": {
+                "avg_cents_per_entry": 31.1875,
+                "entries": 32,
+                "flats": 0,
+                "losses": 8,
+                "net_cents": 998.0,
+                "net_dollars": 9.98,
+                "win_rate_ex_flat": 0.75,
+                "wins": 24
+              }
+            }
+          },
+          "model_metrics": {
+            "mae_cents": 36.623655936004994,
+            "mean_actual_pnl_cents": 8.576271186440678,
+            "mean_pred_ev_cents": -8.196133952180576,
+            "rmse_cents": 51.36844562983863,
+            "rows": 59,
+            "spearman_pred_vs_pnl": 0.07579613961027665,
+            "top_quartile": {
+              "avg_cents_per_entry": 25.2,
+              "entries": 15,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 378.0,
+              "net_dollars": 3.78,
+              "win_rate_ex_flat": 0.6666666666666666,
+              "wins": 10
+            }
+          },
+          "name": "wfa_411_end",
+          "test_rows": 59,
+          "train_rows": 200
+        }
+      ]
+    }
+  },
+  "scope": "research_only_filled_trade_replay",
+  "summary_rows": [
+    {
+      "avg_cents_per_entry": 14.39080459770115,
+      "entries": 87,
+      "feature_count": 7,
+      "feature_set": "base_ev",
+      "flats": 1,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 12.444444444444445,
+      "locked_train200_entries": 81,
+      "locked_train200_losses": 39,
+      "locked_train200_net_dollars": 10.08,
+      "locked_train200_wins": 42,
+      "losses": 39,
+      "net_dollars": 12.52,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.07345443706316682,
+      "top_quartile_net_dollars": -5.98,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5465116279069767,
+      "window_entries": "18,15,30,24",
+      "window_net_cents": "-54.0,550.0,386.0,370.0",
+      "wins": 47
+    },
+    {
+      "avg_cents_per_entry": 14.586206896551724,
+      "entries": 29,
+      "feature_count": 55,
+      "feature_set": "social_pinball",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 13.033333333333333,
+      "locked_train200_entries": 30,
+      "locked_train200_losses": 13,
+      "locked_train200_net_dollars": 3.91,
+      "locked_train200_wins": 17,
+      "losses": 13,
+      "net_dollars": 4.23,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": 0.010335094702661257,
+      "top_quartile_net_dollars": 2.68,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5517241379310345,
+      "window_entries": "9,5,6,9",
+      "window_net_cents": "-130.0,222.0,121.0,210.0",
+      "wins": 16
+    },
+    {
+      "avg_cents_per_entry": 8.478260869565217,
+      "entries": 46,
+      "feature_count": 31,
+      "feature_set": "phi_only",
+      "flats": 1,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 12.32,
+      "locked_train200_entries": 75,
+      "locked_train200_losses": 36,
+      "locked_train200_net_dollars": 9.24,
+      "locked_train200_wins": 39,
+      "losses": 23,
+      "net_dollars": 3.9,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.08098768786943848,
+      "top_quartile_net_dollars": -3.72,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4888888888888889,
+      "window_entries": "13,10,11,12",
+      "window_net_cents": "-92.0,264.0,160.0,58.0",
+      "wins": 22
+    },
+    {
+      "avg_cents_per_entry": 3.25,
+      "entries": 92,
+      "feature_count": 79,
+      "feature_set": "standard6_social_pinball_control",
+      "flats": 0,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": -0.3923076923076927,
+      "locked_train200_entries": 130,
+      "locked_train200_losses": 73,
+      "locked_train200_net_dollars": -0.5100000000000005,
+      "locked_train200_wins": 55,
+      "losses": 48,
+      "net_dollars": 2.99,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.006741137130710435,
+      "top_quartile_net_dollars": 0.4799999999999999,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4782608695652174,
+      "window_entries": "32,30,13,17",
+      "window_net_cents": "-298.0,185.0,54.0,358.0",
+      "wins": 44
+    },
+    {
+      "avg_cents_per_entry": 6.146341463414634,
+      "entries": 41,
+      "feature_count": 37,
+      "feature_set": "pinball_only",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 10.833333333333334,
+      "locked_train200_entries": 30,
+      "locked_train200_losses": 16,
+      "locked_train200_net_dollars": 3.25,
+      "locked_train200_wins": 14,
+      "losses": 22,
+      "net_dollars": 2.52,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.0010828748043458496,
+      "top_quartile_net_dollars": 1.64,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4634146341463415,
+      "window_entries": "12,6,15,8",
+      "window_net_cents": "-212.0,206.0,34.0,224.0",
+      "wins": 19
+    },
+    {
+      "avg_cents_per_entry": 6.096774193548387,
+      "entries": 31,
+      "feature_count": 68,
+      "feature_set": "phi_pinball",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 6.2333333333333325,
+      "locked_train200_entries": 30,
+      "locked_train200_losses": 16,
+      "locked_train200_net_dollars": 1.8699999999999997,
+      "locked_train200_wins": 14,
+      "losses": 16,
+      "net_dollars": 1.89,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.004281237207149722,
+      "top_quartile_net_dollars": 2.05,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4838709677419355,
+      "window_entries": "9,3,5,14",
+      "window_net_cents": "-206.0,110.0,125.0,160.0",
+      "wins": 15
+    },
+    {
+      "avg_cents_per_entry": 7.956521739130435,
+      "entries": 23,
+      "feature_count": 18,
+      "feature_set": "social_only",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 5.517241379310345,
+      "locked_train200_entries": 29,
+      "locked_train200_losses": 15,
+      "locked_train200_net_dollars": 1.6,
+      "locked_train200_wins": 14,
+      "losses": 12,
+      "net_dollars": 1.83,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.05198134224283402,
+      "top_quartile_net_dollars": -2.97,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4782608695652174,
+      "window_entries": "4,6,7,6",
+      "window_net_cents": "-214.0,188.0,87.0,122.0",
+      "wins": 11
+    },
+    {
+      "avg_cents_per_entry": 4.84,
+      "entries": 25,
+      "feature_count": 79,
+      "feature_set": "all3_phi_social_pinball",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 6.047619047619047,
+      "locked_train200_entries": 21,
+      "locked_train200_losses": 11,
+      "locked_train200_net_dollars": 1.2699999999999998,
+      "locked_train200_wins": 10,
+      "losses": 14,
+      "net_dollars": 1.21,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.01364045032820285,
+      "top_quartile_net_dollars": 2.25,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.44,
+      "window_entries": "6,2,8,9",
+      "window_net_cents": "-274.0,50.0,135.0,210.0",
+      "wins": 11
+    },
+    {
+      "avg_cents_per_entry": 3.8260869565217392,
+      "entries": 23,
+      "feature_count": 42,
+      "feature_set": "phi_social",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 8.195121951219512,
+      "locked_train200_entries": 41,
+      "locked_train200_losses": 22,
+      "locked_train200_net_dollars": 3.36,
+      "locked_train200_wins": 19,
+      "losses": 13,
+      "net_dollars": 0.88,
+      "positive_windows": 3,
+      "spearman_pred_vs_pnl": -0.05524938928342313,
+      "top_quartile_net_dollars": -7.51,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.43478260869565216,
+      "window_entries": "6,3,5,9",
+      "window_net_cents": "-274.0,26.0,136.0,200.0",
+      "wins": 10
+    },
+    {
+      "avg_cents_per_entry": 2.2967032967032965,
+      "entries": 91,
+      "feature_count": 55,
+      "feature_set": "social_pinball",
+      "flats": 0,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": 1.4123711340206182,
+      "locked_train200_entries": 97,
+      "locked_train200_losses": 50,
+      "locked_train200_net_dollars": 1.3699999999999997,
+      "locked_train200_wins": 46,
+      "losses": 47,
+      "net_dollars": 2.09,
+      "positive_windows": 2,
+      "spearman_pred_vs_pnl": 0.010335094702661257,
+      "top_quartile_net_dollars": 2.68,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4835164835164835,
+      "window_entries": "28,26,20,17",
+      "window_net_cents": "-28.0,95.0,-120.0,262.0",
+      "wins": 44
+    },
+    {
+      "avg_cents_per_entry": 8.227272727272727,
+      "entries": 22,
+      "feature_count": 79,
+      "feature_set": "standard6_social_pinball_control",
+      "flats": 0,
+      "gate": "robust_ev_overlay",
+      "locked_train200_avg_cents_per_entry": 12.073170731707316,
+      "locked_train200_entries": 41,
+      "locked_train200_losses": 20,
+      "locked_train200_net_dollars": 4.95,
+      "locked_train200_wins": 21,
+      "losses": 12,
+      "net_dollars": 1.81,
+      "positive_windows": 2,
+      "spearman_pred_vs_pnl": -0.006741137130710435,
+      "top_quartile_net_dollars": 0.4799999999999999,
+      "traded_windows": 3,
+      "win_rate_ex_flat": 0.45454545454545453,
+      "window_entries": "10,0,4,8",
+      "window_net_cents": "-142.0,0.0,85.0,238.0",
+      "wins": 10
+    },
+    {
+      "avg_cents_per_entry": 0.7661290322580644,
+      "entries": 124,
+      "feature_count": 37,
+      "feature_set": "pinball_only",
+      "flats": 0,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": 0.5798319327731087,
+      "locked_train200_entries": 119,
+      "locked_train200_losses": 64,
+      "locked_train200_net_dollars": 0.6899999999999994,
+      "locked_train200_wins": 53,
+      "losses": 68,
+      "net_dollars": 0.9499999999999998,
+      "positive_windows": 2,
+      "spearman_pred_vs_pnl": -0.0010828748043458496,
+      "top_quartile_net_dollars": 1.64,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.45161290322580644,
+      "window_entries": "38,30,38,18",
+      "window_net_cents": "-62.0,107.0,-206.0,256.0",
+      "wins": 56
+    },
+    {
+      "avg_cents_per_entry": 0.07142857142857126,
+      "entries": 168,
+      "feature_count": 31,
+      "feature_set": "phi_only",
+      "flats": 2,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": 2.2186046511627904,
+      "locked_train200_entries": 215,
+      "locked_train200_losses": 114,
+      "locked_train200_net_dollars": 4.77,
+      "locked_train200_wins": 98,
+      "losses": 94,
+      "net_dollars": 0.11999999999999972,
+      "positive_windows": 2,
+      "spearman_pred_vs_pnl": -0.08098768786943848,
+      "top_quartile_net_dollars": -3.72,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.43373493975903615,
+      "window_entries": "49,33,62,24",
+      "window_net_cents": "-80.0,-26.0,68.0,50.0",
+      "wins": 72
+    },
+    {
+      "avg_cents_per_entry": 0.8199052132701419,
+      "entries": 211,
+      "feature_count": 7,
+      "feature_set": "base_ev",
+      "flats": 4,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": 1.4826086956521736,
+      "locked_train200_entries": 230,
+      "locked_train200_losses": 123,
+      "locked_train200_net_dollars": 3.4099999999999993,
+      "locked_train200_wins": 103,
+      "losses": 110,
+      "net_dollars": 1.7299999999999995,
+      "positive_windows": 1,
+      "spearman_pred_vs_pnl": -0.07345443706316682,
+      "top_quartile_net_dollars": -5.98,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.46859903381642515,
+      "window_entries": "55,64,41,51",
+      "window_net_cents": "-116.0,-63.0,-44.0,396.0",
+      "wins": 97
+    },
+    {
+      "avg_cents_per_entry": -0.030612244897959346,
+      "entries": 98,
+      "feature_count": 68,
+      "feature_set": "phi_pinball",
+      "flats": 0,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": -1.947916666666667,
+      "locked_train200_entries": 96,
+      "locked_train200_losses": 52,
+      "locked_train200_net_dollars": -1.8700000000000003,
+      "locked_train200_wins": 43,
+      "losses": 53,
+      "net_dollars": -0.03000000000000016,
+      "positive_windows": 1,
+      "spearman_pred_vs_pnl": -0.004281237207149722,
+      "top_quartile_net_dollars": 2.05,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.45918367346938777,
+      "window_entries": "29,35,17,17",
+      "window_net_cents": "-190.0,-33.0,-48.0,268.0",
+      "wins": 45
+    },
+    {
+      "avg_cents_per_entry": -2.2795698924731185,
+      "entries": 93,
+      "feature_count": 79,
+      "feature_set": "all3_phi_social_pinball",
+      "flats": 0,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": -2.6716417910447765,
+      "locked_train200_entries": 67,
+      "locked_train200_losses": 36,
+      "locked_train200_net_dollars": -1.7900000000000003,
+      "locked_train200_wins": 31,
+      "losses": 52,
+      "net_dollars": -2.12,
+      "positive_windows": 1,
+      "spearman_pred_vs_pnl": -0.01364045032820285,
+      "top_quartile_net_dollars": 2.25,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.44086021505376344,
+      "window_entries": "22,37,17,17",
+      "window_net_cents": "-388.0,-15.0,-97.0,288.0",
+      "wins": 41
+    },
+    {
+      "avg_cents_per_entry": -4.8,
+      "entries": 110,
+      "feature_count": 42,
+      "feature_set": "phi_social",
+      "flats": 0,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": -2.2539682539682544,
+      "locked_train200_entries": 126,
+      "locked_train200_losses": 72,
+      "locked_train200_net_dollars": -2.8400000000000007,
+      "locked_train200_wins": 54,
+      "losses": 64,
+      "net_dollars": -5.28,
+      "positive_windows": 1,
+      "spearman_pred_vs_pnl": -0.05524938928342313,
+      "top_quartile_net_dollars": -7.51,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.41818181818181815,
+      "window_entries": "29,34,31,16",
+      "window_net_cents": "-402.0,-263.0,-65.0,202.0",
+      "wins": 46
+    },
+    {
+      "avg_cents_per_entry": -5.393258426966292,
+      "entries": 89,
+      "feature_count": 18,
+      "feature_set": "social_only",
+      "flats": 1,
+      "gate": "ev_all",
+      "locked_train200_avg_cents_per_entry": -5.636363636363637,
+      "locked_train200_entries": 44,
+      "locked_train200_losses": 26,
+      "locked_train200_net_dollars": -2.48,
+      "locked_train200_wins": 18,
+      "losses": 51,
+      "net_dollars": -4.8,
+      "positive_windows": 0,
+      "spearman_pred_vs_pnl": -0.05198134224283402,
+      "top_quartile_net_dollars": -2.97,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.42045454545454547,
+      "window_entries": "11,49,18,11",
+      "window_net_cents": "-260.0,-43.0,-175.0,-2.0",
+      "wins": 37
+    }
+  ]
+}

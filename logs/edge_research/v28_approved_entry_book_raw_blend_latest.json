@@ -1,0 +1,1121 @@
+{
+  "alphas": [
+    0.0,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "best": {
+    "alpha_raw_weight": 0.35,
+    "avg_brier": 0.12584233713929222,
+    "avg_logloss": 0.41526221297976185,
+    "avg_p": 0.8146323346820808,
+    "bootstrap_vs_raw": {
+      "brier_delta_p05": -0.02063620624502098,
+      "brier_delta_p50": -0.007265211877012942,
+      "brier_delta_p95": 0.0035903825386584265,
+      "brier_prob_negative": 0.862,
+      "logloss_delta_p05": -0.15285231582195208,
+      "logloss_delta_p50": -0.05130579663278295,
+      "logloss_delta_p95": 0.009404569721470635,
+      "logloss_prob_negative": 0.8964,
+      "reference_alpha_raw_weight": 1.0,
+      "runs": 5000
+    },
+    "brier_delta_vs_raw": -0.007791697570985245,
+    "calibration_error": 0.02929830115606946,
+    "gross_cents": 823.0,
+    "logloss_delta_vs_raw": -0.057993896385894306,
+    "losses": 27,
+    "rows": 173,
+    "win_rate": 0.8439306358381503,
+    "wins": 146
+  },
+  "best_disagreement_buckets": [
+    {
+      "avg_raw_minus_book": 0.07725560273972601,
+      "best_alpha_brier": 0.11403517116831106,
+      "best_alpha_logloss": 0.3870614780923503,
+      "book_brier": 0.11775068493150685,
+      "book_logloss": 0.3991011312885187,
+      "bucket": "raw_above_book_5_15",
+      "losses": 19,
+      "raw_brier": 0.11140649107763013,
+      "raw_logloss": 0.3760803254599696,
+      "rows": 146,
+      "wins": 127
+    },
+    {
+      "avg_raw_minus_book": 0.26493466666666665,
+      "best_alpha_brier": 0.1896884938712644,
+      "best_alpha_logloss": 0.5677550757042836,
+      "book_brier": 0.18865925925925925,
+      "book_logloss": 0.5624935266564505,
+      "bucket": "raw_above_book_gt15",
+      "losses": 8,
+      "raw_brier": 0.2538274187979259,
+      "raw_logloss": 0.998725163077887,
+      "rows": 27,
+      "wins": 19
+    }
+  ],
+  "best_leave_one_failures": [],
+  "best_leave_one_market": [
+    {
+      "brier_delta_vs_raw": -0.0031298968623955925,
+      "left_out_market": "KXBTC15M-26MAY060330-30",
+      "logloss_delta_vs_raw": -0.012791940531014734,
+      "losses": 26,
+      "rows": 171,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.0037902856602160806,
+      "left_out_market": "KXBTC15M-26MAY051715-15",
+      "logloss_delta_vs_raw": -0.04620270404972182,
+      "losses": 24,
+      "rows": 170,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.00491350404768684,
+      "left_out_market": "KXBTC15M-26MAY052245-45",
+      "logloss_delta_vs_raw": -0.048942251655983426,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.00608740488292947,
+      "left_out_market": "KXBTC15M-26MAY070015-15",
+      "logloss_delta_vs_raw": -0.04819594631091234,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.006456305001039983,
+      "left_out_market": "KXBTC15M-26MAY060745-45",
+      "logloss_delta_vs_raw": -0.053972866790235774,
+      "losses": 25,
+      "rows": 171,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.0069929900955988805,
+      "left_out_market": "KXBTC15M-26MAY052045-45",
+      "logloss_delta_vs_raw": -0.05486896909573735,
+      "losses": 25,
+      "rows": 171,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.0070153773926615315,
+      "left_out_market": "KXBTC15M-26MAY062015-15",
+      "logloss_delta_vs_raw": -0.05346529315285198,
+      "losses": 25,
+      "rows": 170,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007019727295716566,
+      "left_out_market": "KXBTC15M-26MAY062130-30",
+      "logloss_delta_vs_raw": -0.055110509288108234,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.007030999185851192,
+      "left_out_market": "KXBTC15M-26MAY060215-15",
+      "logloss_delta_vs_raw": -0.05548954343283663,
+      "losses": 25,
+      "rows": 170,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007108472497094634,
+      "left_out_market": "KXBTC15M-26MAY071015-15",
+      "logloss_delta_vs_raw": -0.05601031051806693,
+      "losses": 25,
+      "rows": 170,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007120245383534909,
+      "left_out_market": "KXBTC15M-26MAY062115-15",
+      "logloss_delta_vs_raw": -0.05695190541699141,
+      "losses": 26,
+      "rows": 170,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.007294871347483106,
+      "left_out_market": "KXBTC15M-26MAY060900-00",
+      "logloss_delta_vs_raw": -0.05689524180473521,
+      "losses": 25,
+      "rows": 169,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.007420111259538412,
+      "left_out_market": "KXBTC15M-26MAY051830-30",
+      "logloss_delta_vs_raw": -0.056737126656751735,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.00744980417265613,
+      "left_out_market": "KXBTC15M-26MAY061300-00",
+      "logloss_delta_vs_raw": -0.05687489134790019,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.007481634405442847,
+      "left_out_market": "KXBTC15M-26MAY051815-15",
+      "logloss_delta_vs_raw": -0.056950206163025374,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.007483085835670769,
+      "left_out_market": "KXBTC15M-26MAY071100-00",
+      "logloss_delta_vs_raw": -0.056792638724199485,
+      "losses": 26,
+      "rows": 172,
+      "wins": 146
+    },
+    {
+      "brier_delta_vs_raw": -0.007824285790115779,
+      "left_out_market": "KXBTC15M-26MAY051615-15",
+      "logloss_delta_vs_raw": -0.058313487974703704,
+      "losses": 26,
+      "rows": 171,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00786222748449747,
+      "left_out_market": "KXBTC15M-26MAY070815-15",
+      "logloss_delta_vs_raw": -0.05853656644983135,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007862332388857585,
+      "left_out_market": "KXBTC15M-26MAY060445-45",
+      "logloss_delta_vs_raw": -0.05853830423613732,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007863208730710114,
+      "left_out_market": "KXBTC15M-26MAY061900-00",
+      "logloss_delta_vs_raw": -0.05855437081977011,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007863545312742831,
+      "left_out_market": "KXBTC15M-26MAY061615-15",
+      "logloss_delta_vs_raw": -0.05856155190894746,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00786401387931307,
+      "left_out_market": "KXBTC15M-26MAY060545-45",
+      "logloss_delta_vs_raw": -0.05857308988785387,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007867903832562168,
+      "left_out_market": "KXBTC15M-26MAY061830-30",
+      "logloss_delta_vs_raw": -0.05856454558607249,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007870846030560735,
+      "left_out_market": "KXBTC15M-26MAY061400-00",
+      "logloss_delta_vs_raw": -0.058665124838037375,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007871706228201658,
+      "left_out_market": "KXBTC15M-26MAY060145-45",
+      "logloss_delta_vs_raw": -0.0585607025044344,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007871968832286802,
+      "left_out_market": "KXBTC15M-26MAY061415-15",
+      "logloss_delta_vs_raw": -0.058563806156992415,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007874761465712421,
+      "left_out_market": "KXBTC15M-26MAY062300-00",
+      "logloss_delta_vs_raw": -0.05855239155649594,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007874893409968248,
+      "left_out_market": "KXBTC15M-26MAY061915-15",
+      "logloss_delta_vs_raw": -0.058553593872630594,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007877155685810294,
+      "left_out_market": "KXBTC15M-26MAY060315-15",
+      "logloss_delta_vs_raw": -0.05854254662357222,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007885384315556687,
+      "left_out_market": "KXBTC15M-26MAY060230-30",
+      "logloss_delta_vs_raw": -0.058551395091187064,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00788601474116779,
+      "left_out_market": "KXBTC15M-26MAY071115-15",
+      "logloss_delta_vs_raw": -0.0585552175848314,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007886986792770029,
+      "left_out_market": "KXBTC15M-26MAY052015-15",
+      "logloss_delta_vs_raw": -0.05858832909493017,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00788806597065031,
+      "left_out_market": "KXBTC15M-26MAY061545-45",
+      "logloss_delta_vs_raw": -0.058567998880106775,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007889481133621784,
+      "left_out_market": "KXBTC15M-26MAY052215-15",
+      "logloss_delta_vs_raw": -0.05855528804060667,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007889875313933536,
+      "left_out_market": "KXBTC15M-26MAY071130-30",
+      "logloss_delta_vs_raw": -0.05861235666788206,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007890877405990954,
+      "left_out_market": "KXBTC15M-26MAY062245-45",
+      "logloss_delta_vs_raw": -0.058699790548841724,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00789092129337124,
+      "left_out_market": "KXBTC15M-26MAY052300-00",
+      "logloss_delta_vs_raw": -0.05862183439042634,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00789092929788085,
+      "left_out_market": "KXBTC15M-26MAY060730-30",
+      "logloss_delta_vs_raw": -0.058586847258047525,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007896432009073806,
+      "left_out_market": "KXBTC15M-26MAY052145-45",
+      "logloss_delta_vs_raw": -0.05868413627174718,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007897378917428227,
+      "left_out_market": "KXBTC15M-26MAY061200-00",
+      "logloss_delta_vs_raw": -0.05857885358528675,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007899511045469154,
+      "left_out_market": "KXBTC15M-26MAY062315-15",
+      "logloss_delta_vs_raw": -0.05865406887010105,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007899802186234706,
+      "left_out_market": "KXBTC15M-26MAY051330-30",
+      "logloss_delta_vs_raw": -0.05859206696296376,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007900152661258403,
+      "left_out_market": "KXBTC15M-26MAY070115-15",
+      "logloss_delta_vs_raw": -0.05859401932157288,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007900418913192736,
+      "left_out_market": "KXBTC15M-26MAY051915-15",
+      "logloss_delta_vs_raw": -0.058595509871413376,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007902596923005878,
+      "left_out_market": "KXBTC15M-26MAY051300-00",
+      "logloss_delta_vs_raw": -0.058586580793102194,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007905590035501203,
+      "left_out_market": "KXBTC15M-26MAY070930-30",
+      "logloss_delta_vs_raw": -0.058583433698633613,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007908192814236076,
+      "left_out_market": "KXBTC15M-26MAY061815-15",
+      "logloss_delta_vs_raw": -0.058781969535903755,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007914618912257254,
+      "left_out_market": "KXBTC15M-26MAY052200-00",
+      "logloss_delta_vs_raw": -0.05860750464928477,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007916003644794,
+      "left_out_market": "KXBTC15M-26MAY052315-15",
+      "logloss_delta_vs_raw": -0.05866048486579223,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007922428109049806,
+      "left_out_market": "KXBTC15M-26MAY070645-45",
+      "logloss_delta_vs_raw": -0.05870315691620098,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007922614776984,
+      "left_out_market": "KXBTC15M-26MAY051900-00",
+      "logloss_delta_vs_raw": -0.058669681811536034,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007923237687145618,
+      "left_out_market": "KXBTC15M-26MAY060815-15",
+      "logloss_delta_vs_raw": -0.05864775688036711,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007923391821145848,
+      "left_out_market": "KXBTC15M-26MAY070030-30",
+      "logloss_delta_vs_raw": -0.05877391008343469,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007923447805407768,
+      "left_out_market": "KXBTC15M-26MAY061130-30",
+      "logloss_delta_vs_raw": -0.05867445607682237,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007923649532537602,
+      "left_out_market": "KXBTC15M-26MAY070545-45",
+      "logloss_delta_vs_raw": -0.058777364213482286,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007926534444157002,
+      "left_out_market": "KXBTC15M-26MAY051845-45",
+      "logloss_delta_vs_raw": -0.058664200739503736,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007940644026007748,
+      "left_out_market": "KXBTC15M-26MAY070000-00",
+      "logloss_delta_vs_raw": -0.05871044221356503,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007942208860550498,
+      "left_out_market": "KXBTC15M-26MAY061445-45",
+      "logloss_delta_vs_raw": -0.05910500065428925,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.00794362591025137,
+      "left_out_market": "KXBTC15M-26MAY060700-00",
+      "logloss_delta_vs_raw": -0.05891060901568457,
+      "losses": 26,
+      "rows": 169,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.007943749994944516,
+      "left_out_market": "KXBTC15M-26MAY060100-00",
+      "logloss_delta_vs_raw": -0.05872704893087233,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007946301907417158,
+      "left_out_market": "KXBTC15M-26MAY062045-45",
+      "logloss_delta_vs_raw": -0.05886666330007578,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007948222131252708,
+      "left_out_market": "KXBTC15M-26MAY071145-45",
+      "logloss_delta_vs_raw": -0.058721033946635026,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007951116567200628,
+      "left_out_market": "KXBTC15M-26MAY060530-30",
+      "logloss_delta_vs_raw": -0.0587699739805273,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007951419304301571,
+      "left_out_market": "KXBTC15M-26MAY071200-00",
+      "logloss_delta_vs_raw": -0.05873701939022907,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007951858931218081,
+      "left_out_market": "KXBTC15M-26MAY060500-00",
+      "logloss_delta_vs_raw": -0.05883039197371098,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00796021951414344,
+      "left_out_market": "KXBTC15M-26MAY060345-45",
+      "logloss_delta_vs_raw": -0.05883383569412659,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007963755222390734,
+      "left_out_market": "KXBTC15M-26MAY061645-45",
+      "logloss_delta_vs_raw": -0.05876928910565099,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007964382099681672,
+      "left_out_market": "KXBTC15M-26MAY070915-15",
+      "logloss_delta_vs_raw": -0.05881010903759315,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007972474501078186,
+      "left_out_market": "KXBTC15M-26MAY052115-15",
+      "logloss_delta_vs_raw": -0.05901854474575685,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.0079765969576919,
+      "left_out_market": "KXBTC15M-26MAY051545-45",
+      "logloss_delta_vs_raw": -0.05880179199365254,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.0079773536019907,
+      "left_out_market": "KXBTC15M-26MAY060830-30",
+      "logloss_delta_vs_raw": -0.05884531138864463,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.007983910886455808,
+      "left_out_market": "KXBTC15M-26MAY060715-15",
+      "logloss_delta_vs_raw": -0.05918539678922735,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.007990389466966119,
+      "left_out_market": "KXBTC15M-26MAY060600-00",
+      "logloss_delta_vs_raw": -0.05887788050609377,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.00800213952760409,
+      "left_out_market": "KXBTC15M-26MAY061100-00",
+      "logloss_delta_vs_raw": -0.05915712925345917,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008006357934967845,
+      "left_out_market": "KXBTC15M-26MAY051945-45",
+      "logloss_delta_vs_raw": -0.05892583023105069,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.008008483114823856,
+      "left_out_market": "KXBTC15M-26MAY060630-30",
+      "logloss_delta_vs_raw": -0.059184473468794296,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008009070482162622,
+      "left_out_market": "KXBTC15M-26MAY061045-45",
+      "logloss_delta_vs_raw": -0.05919323440237817,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008011677678087414,
+      "left_out_market": "KXBTC15M-26MAY060045-45",
+      "logloss_delta_vs_raw": -0.05921239470078954,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008026485494145669,
+      "left_out_market": "KXBTC15M-26MAY060200-00",
+      "logloss_delta_vs_raw": -0.05922675582186615,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008049397365014671,
+      "left_out_market": "KXBTC15M-26MAY051800-00",
+      "logloss_delta_vs_raw": -0.059273868195231505,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008056347053106733,
+      "left_out_market": "KXBTC15M-26MAY060615-15",
+      "logloss_delta_vs_raw": -0.05935644096610787,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008074165726044386,
+      "left_out_market": "KXBTC15M-26MAY051745-45",
+      "logloss_delta_vs_raw": -0.059369373365842026,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008083835413360857,
+      "left_out_market": "KXBTC15M-26MAY070945-45",
+      "logloss_delta_vs_raw": -0.05910501857906453,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.008098458240833994,
+      "left_out_market": "KXBTC15M-26MAY052100-00",
+      "logloss_delta_vs_raw": -0.05928530280191019,
+      "losses": 26,
+      "rows": 170,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008116695546472485,
+      "left_out_market": "KXBTC15M-26MAY071030-30",
+      "logloss_delta_vs_raw": -0.05947825898759518,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008122754600316556,
+      "left_out_market": "KXBTC15M-26MAY070745-45",
+      "logloss_delta_vs_raw": -0.059351383947105485,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.008133672779158468,
+      "left_out_market": "KXBTC15M-26MAY062030-30",
+      "logloss_delta_vs_raw": -0.05928936261245349,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.008140393319338052,
+      "left_out_market": "KXBTC15M-26MAY061800-00",
+      "logloss_delta_vs_raw": -0.059378142008043366,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.008146851024158103,
+      "left_out_market": "KXBTC15M-26MAY071215-15",
+      "logloss_delta_vs_raw": -0.059861371593882995,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008160957100802835,
+      "left_out_market": "KXBTC15M-26MAY071315-15",
+      "logloss_delta_vs_raw": -0.05987076873248309,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008162777639208724,
+      "left_out_market": "KXBTC15M-26MAY071230-30",
+      "logloss_delta_vs_raw": -0.05990924248287882,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008164754010788894,
+      "left_out_market": "KXBTC15M-26MAY061000-00",
+      "logloss_delta_vs_raw": -0.059315082298337984,
+      "losses": 27,
+      "rows": 172,
+      "wins": 145
+    },
+    {
+      "brier_delta_vs_raw": -0.008165062749114882,
+      "left_out_market": "KXBTC15M-26MAY060515-15",
+      "logloss_delta_vs_raw": -0.05974102829313055,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008170935070835578,
+      "left_out_market": "KXBTC15M-26MAY060645-45",
+      "logloss_delta_vs_raw": -0.05993904357417107,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008194297717712101,
+      "left_out_market": "KXBTC15M-26MAY071045-45",
+      "logloss_delta_vs_raw": -0.059742883278743386,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008236959032996344,
+      "left_out_market": "KXBTC15M-26MAY070830-30",
+      "logloss_delta_vs_raw": -0.06018977365346928,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008248983663841969,
+      "left_out_market": "KXBTC15M-26MAY060915-15",
+      "logloss_delta_vs_raw": -0.05985387650761853,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008263589657188403,
+      "left_out_market": "KXBTC15M-26MAY060245-45",
+      "logloss_delta_vs_raw": -0.06024364647685493,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008273563881503104,
+      "left_out_market": "KXBTC15M-26MAY071000-00",
+      "logloss_delta_vs_raw": -0.0599535909830774,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008278387322269043,
+      "left_out_market": "KXBTC15M-26MAY060800-00",
+      "logloss_delta_vs_raw": -0.05996160975596471,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008278941025477021,
+      "left_out_market": "KXBTC15M-26MAY062215-15",
+      "logloss_delta_vs_raw": -0.060046840337769414,
+      "losses": 27,
+      "rows": 171,
+      "wins": 144
+    },
+    {
+      "brier_delta_vs_raw": -0.008281349480784433,
+      "left_out_market": "KXBTC15M-26MAY060300-00",
+      "logloss_delta_vs_raw": -0.06059900264735801,
+      "losses": 27,
+      "rows": 169,
+      "wins": 142
+    },
+    {
+      "brier_delta_vs_raw": -0.008281377350111224,
+      "left_out_market": "KXBTC15M-26MAY061030-30",
+      "logloss_delta_vs_raw": -0.06023873964305965,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.00847888502255964,
+      "left_out_market": "KXBTC15M-26MAY062100-00",
+      "logloss_delta_vs_raw": -0.06085708903758191,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.008531585567505773,
+      "left_out_market": "KXBTC15M-26MAY060930-30",
+      "logloss_delta_vs_raw": -0.06127811689705265,
+      "losses": 27,
+      "rows": 169,
+      "wins": 142
+    },
+    {
+      "brier_delta_vs_raw": -0.008610344958804944,
+      "left_out_market": "KXBTC15M-26MAY061015-15",
+      "logloss_delta_vs_raw": -0.06119626971826936,
+      "losses": 27,
+      "rows": 170,
+      "wins": 143
+    },
+    {
+      "brier_delta_vs_raw": -0.009089533457084048,
+      "left_out_market": "KXBTC15M-26MAY060945-45",
+      "logloss_delta_vs_raw": -0.06276516362177997,
+      "losses": 27,
+      "rows": 169,
+      "wins": 142
+    }
+  ],
+  "blockers": [
+    "bootstrap_brier_p95_not_negative",
+    "bootstrap_logloss_p95_not_negative"
+  ],
+  "hypothesis": "convex FV blend p = book + alpha * (raw - book)",
+  "interpretation": [
+    "Best blend uses raw weight alpha=0.35; alpha=0 is pure book and alpha=1 is raw v28.",
+    "Best Brier/logloss deltas versus raw are -0.007791697570985245/-0.057993896385894306.",
+    "Raw v28 appears useful only as a partial memory term after anchoring to the executable book.",
+    "Promotion blockers: bootstrap_brier_p95_not_negative, bootstrap_logloss_p95_not_negative."
+  ],
+  "ranked": [
+    {
+      "alpha_raw_weight": 0.35,
+      "avg_brier": 0.12584233713929222,
+      "avg_logloss": 0.41526221297976185,
+      "avg_p": 0.8146323346820808,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": -0.02063620624502098,
+        "brier_delta_p50": -0.007265211877012942,
+        "brier_delta_p95": 0.0035903825386584265,
+        "brier_prob_negative": 0.862,
+        "logloss_delta_p05": -0.15285231582195208,
+        "logloss_delta_p50": -0.05130579663278295,
+        "logloss_delta_p95": 0.009404569721470635,
+        "logloss_prob_negative": 0.8964,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": -0.007791697570985245,
+      "calibration_error": 0.02929830115606946,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.057993896385894306,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "alpha_raw_weight": 0.5,
+      "avg_brier": 0.12610387833074854,
+      "avg_logloss": 0.4144821683540732,
+      "avg_p": 0.8306143179190753,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": -0.018018465158294777,
+        "brier_delta_p50": -0.007285306547897399,
+        "brier_delta_p95": 0.0012749975066878305,
+        "brier_prob_negative": 0.919,
+        "logloss_delta_p05": -0.14880098297910876,
+        "logloss_delta_p50": -0.05472615205890269,
+        "logloss_delta_p95": 0.002745985466574341,
+        "logloss_prob_negative": 0.9362,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": -0.007530156379528918,
+      "calibration_error": 0.01331631791907506,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.05877394101158295,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "alpha_raw_weight": 0.2,
+      "avg_brier": 0.12650272166586773,
+      "avg_logloss": 0.4181161270479258,
+      "avg_p": 0.7986503514450867,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": -0.021784190891788208,
+        "brier_delta_p50": -0.006397969852661264,
+        "brier_delta_p95": 0.006357490098177113,
+        "brier_prob_negative": 0.789,
+        "logloss_delta_p05": -0.15009417105319373,
+        "logloss_delta_p50": -0.04840961879084138,
+        "logloss_delta_p95": 0.017709320996403932,
+        "logloss_prob_negative": 0.8558,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": -0.007131313044409726,
+      "calibration_error": 0.04528028439306364,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.055139982317730374,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "alpha_raw_weight": 0.1,
+      "avg_brier": 0.12745515897138024,
+      "avg_logloss": 0.4210014021440165,
+      "avg_p": 0.7879956959537572,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": -0.022409307809097417,
+        "brier_delta_p50": -0.005514162152423396,
+        "brier_delta_p95": 0.00836775605112712,
+        "brier_prob_negative": 0.7334,
+        "logloss_delta_p05": -0.14845757067052207,
+        "logloss_delta_p50": -0.045609550706568636,
+        "logloss_delta_p95": 0.022712462828651414,
+        "logloss_prob_negative": 0.836,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": -0.0061788757388972215,
+      "calibration_error": 0.05593493988439313,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.05225470722163966,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "alpha_raw_weight": 0.75,
+      "avg_brier": 0.12858850413435766,
+      "avg_logloss": 0.41977954048422833,
+      "avg_p": 0.8572509566473989,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": -0.010866879446327304,
+        "brier_delta_p50": -0.004826826055022743,
+        "brier_delta_p95": -0.00017462841106720417,
+        "brier_prob_negative": 0.96,
+        "logloss_delta_p05": -0.13200050388472678,
+        "logloss_delta_p50": -0.04956184324413487,
+        "logloss_delta_p95": -0.0016810208711920405,
+        "logloss_prob_negative": 0.9648,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": -0.005045530575919804,
+      "calibration_error": -0.01332032080924861,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.05347656888142782,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "alpha_raw_weight": 0.0,
+      "avg_brier": 0.1288173410404624,
+      "avg_logloss": 0.4246016785424734,
+      "avg_p": 0.7773410404624277,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": -0.022129009334358407,
+        "brier_delta_p50": -0.00444027130851446,
+        "brier_delta_p95": 0.010643447007670531,
+        "brier_prob_negative": 0.6776,
+        "logloss_delta_p05": -0.1477812992233754,
+        "logloss_delta_p50": -0.043786966884270695,
+        "logloss_delta_p95": 0.02927620804930897,
+        "logloss_prob_negative": 0.8092,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": -0.0048166936698150475,
+      "calibration_error": 0.06658959537572262,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.04865443082318277,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "alpha_raw_weight": 1.0,
+      "avg_brier": 0.13363403471027746,
+      "avg_logloss": 0.47325610936565615,
+      "avg_p": 0.8838875953757226,
+      "bootstrap_vs_raw": {
+        "brier_delta_p05": 0.0,
+        "brier_delta_p50": 0.0,
+        "brier_delta_p95": 0.0,
+        "brier_prob_negative": 0.0,
+        "logloss_delta_p05": 0.0,
+        "logloss_delta_p50": 0.0,
+        "logloss_delta_p95": 0.0,
+        "logloss_prob_negative": 0.0,
+        "reference_alpha_raw_weight": 1.0,
+        "runs": 5000
+      },
+      "brier_delta_vs_raw": 0.0,
+      "calibration_error": -0.03995695953757228,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.0,
+      "losses": 27,
+      "rows": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    }
+  ],
+  "rows": 173,
+  "surface": "actual_v28_approved_entries_only"
+}

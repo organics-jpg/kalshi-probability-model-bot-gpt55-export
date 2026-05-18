@@ -1,0 +1,900 @@
+{
+  "by_escape_class": [
+    {
+      "actual_loss_cents": -1122.0,
+      "best_repair_delta_cents": 0.0,
+      "escape_class": "loss_escapes_current_exit_repairs",
+      "hold_harmful_rows": 8,
+      "hold_helpful_rows": 25,
+      "hold_unknown_rows": 2,
+      "known_hold_rows": 35,
+      "rows": 37
+    },
+    {
+      "actual_loss_cents": -464.0,
+      "best_repair_delta_cents": 0.0,
+      "escape_class": "no_exit_repair_observation",
+      "hold_harmful_rows": 10,
+      "hold_helpful_rows": 9,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 19,
+      "rows": 19
+    },
+    {
+      "actual_loss_cents": -189.0,
+      "best_repair_delta_cents": 807.0,
+      "escape_class": "repair_flips_loss",
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 15,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 15,
+      "rows": 15
+    },
+    {
+      "actual_loss_cents": -18.0,
+      "best_repair_delta_cents": -306.0,
+      "escape_class": "repair_would_worsen",
+      "hold_harmful_rows": 2,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 2,
+      "rows": 2
+    }
+  ],
+  "by_failure_class": [
+    {
+      "actual_loss_cents": -961.0,
+      "best_repair_delta_cents": 807.0,
+      "failure_class": "exit_policy_cost",
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 49,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 49,
+      "rows": 49
+    },
+    {
+      "actual_loss_cents": -784.0,
+      "best_repair_delta_cents": -306.0,
+      "failure_class": "fv_or_entry_timing_error",
+      "hold_harmful_rows": 20,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 22,
+      "rows": 22
+    },
+    {
+      "actual_loss_cents": -48.0,
+      "best_repair_delta_cents": 0.0,
+      "failure_class": "exited_unsettled",
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 2,
+      "known_hold_rows": 0,
+      "rows": 2
+    }
+  ],
+  "first_exit_repair_freeze_ts_utc": "2026-05-06T06:33:56.987999+00:00",
+  "flipped_examples": [
+    {
+      "best_delta_cents": 62.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T06:55:28.494070+00:00",
+      "exit_cents": 69,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 40,
+      "loss_cents": -22.0,
+      "market": "KXBTC15M-26MAY060300-00",
+      "p_hold": 0.753164,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "exit_policy_clip_vs_hold",
+        "rich_entry"
+      ]
+    },
+    {
+      "best_delta_cents": 46.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T18:33:05.291432+00:00",
+      "exit_cents": 77,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 24,
+      "loss_cents": -22.0,
+      "market": "KXBTC15M-26MAY061445-45",
+      "p_hold": 0.79783,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "rich_entry"
+      ]
+    },
+    {
+      "best_delta_cents": 52.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T10:34:24.627024+00:00",
+      "exit_cents": 74,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 36,
+      "loss_cents": -16.0,
+      "market": "KXBTC15M-26MAY060645-45",
+      "p_hold": 0.799349,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 60.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T14:21:21.955274+00:00",
+      "exit_cents": 70,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 44,
+      "loss_cents": -16.0,
+      "market": "KXBTC15M-26MAY061030-30",
+      "p_hold": 0.752739,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 48.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-07T16:07:12.974265+00:00",
+      "exit_cents": 76,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 32,
+      "loss_cents": -16.0,
+      "market": "KXBTC15M-26MAY071215-15",
+      "p_hold": 0.797661,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "exit_policy_clip_vs_hold",
+        "rich_entry"
+      ]
+    },
+    {
+      "best_delta_cents": 52.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T06:48:57.418644+00:00",
+      "exit_cents": 74,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 38,
+      "loss_cents": -14.0,
+      "market": "KXBTC15M-26MAY060300-00",
+      "p_hold": 0.780402,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 62.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T13:21:20.527378+00:00",
+      "exit_cents": 69,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 48,
+      "loss_cents": -14.0,
+      "market": "KXBTC15M-26MAY060930-30",
+      "p_hold": 0.787606,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 54.0,
+      "best_effect": "loss_to_non_loss",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T10:20:56.350151+00:00",
+      "exit_cents": 73,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 42,
+      "loss_cents": -12.0,
+      "market": "KXBTC15M-26MAY060630-30",
+      "p_hold": 0.777774,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "near_boundary"
+      ]
+    }
+  ],
+  "generated_at_utc": "2026-05-07T16:44:22.404823+00:00",
+  "interpretation": [
+    "Research-only diagnostic; this does not create or promote an exit rule.",
+    "56 of 73 losing control rows remain unresolved by the current frozen exit repair family.",
+    "19 losses have no matching frozen exit observation; 19 of them predate the first frozen exit-repair window, so they are historical context rather than a current denominator miss.",
+    "37 losses are matched but unchanged; these are mostly true collapse/value-exit or low-p_hold states where broad suppressions risk holding losers.",
+    "The observable loss-control watch has only 8 post-birth probability-reduce row(s), 7 would-suppress row(s), and worst delta -304.0c, so it remains watch-only."
+  ],
+  "matched_unchanged_examples": [
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-07T00:13:29.676269+00:00",
+      "exit_cents": null,
+      "exit_reason": "",
+      "hold_gross_cents": -134,
+      "loss_cents": -134.0,
+      "market": "KXBTC15M-26MAY062015-15",
+      "p_hold": null,
+      "side": "yes",
+      "tags": [
+        "full_loss_ge_100c",
+        "fv_or_entry_timing_error",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T21:48:44.171608+00:00",
+      "exit_cents": 24,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 66,
+      "loss_cents": -86.0,
+      "market": "KXBTC15M-26MAY061800-00",
+      "p_hold": 0.552607,
+      "side": "no",
+      "tags": [
+        "large_50_99c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T12:52:10.686314+00:00",
+      "exit_cents": 40,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -156,
+      "loss_cents": -76.0,
+      "market": "KXBTC15M-26MAY060900-00",
+      "p_hold": 0.39732,
+      "side": "yes",
+      "tags": [
+        "large_50_99c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T11:40:26.802021+00:00",
+      "exit_cents": 43,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -156,
+      "loss_cents": -70.0,
+      "market": "KXBTC15M-26MAY060745-45",
+      "p_hold": 0.563569,
+      "side": "yes",
+      "tags": [
+        "large_50_99c",
+        "fv_or_entry_timing_error",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-07T00:10:50.463746+00:00",
+      "exit_cents": 12,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 116,
+      "loss_cents": -60.0,
+      "market": "KXBTC15M-26MAY062015-15",
+      "p_hold": 0.268932,
+      "side": "no",
+      "tags": [
+        "large_50_99c",
+        "exit_policy_cost",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T07:23:07.902567+00:00",
+      "exit_cents": 53,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 42,
+      "loss_cents": -52.0,
+      "market": "KXBTC15M-26MAY060330-30",
+      "p_hold": 0.500862,
+      "side": "yes",
+      "tags": [
+        "large_50_99c",
+        "exit_policy_cost",
+        "crowded_depth",
+        "exit_policy_clip_vs_hold"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T14:49:02.524922+00:00",
+      "exit_cents": 63,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 34,
+      "loss_cents": -40.0,
+      "market": "KXBTC15M-26MAY061100-00",
+      "p_hold": 0.704126,
+      "side": "no",
+      "tags": [
+        "medium_25_49c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "unchanged",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-07T16:23:59.930534+00:00",
+      "exit_cents": 65,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": null,
+      "loss_cents": -38.0,
+      "market": "KXBTC15M-26MAY071230-30",
+      "p_hold": 0.662903,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "exited_unsettled",
+        "hold_result_unknown",
+        "thin_raw_edge",
+        "rich_entry"
+      ]
+    }
+  ],
+  "no_observation_examples": [
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-05T22:23:23.870507+00:00",
+      "exit_cents": 34,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -160,
+      "loss_cents": -92.0,
+      "market": "KXBTC15M-26MAY051830-30",
+      "p_hold": null,
+      "side": "no",
+      "tags": [
+        "large_50_99c",
+        "fv_or_entry_timing_error",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-05T21:12:23.873470+00:00",
+      "exit_cents": 45,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -138,
+      "loss_cents": -48.0,
+      "market": "KXBTC15M-26MAY051715-15",
+      "p_hold": null,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "fv_or_entry_timing_error",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-06T03:07:10.446683+00:00",
+      "exit_cents": 62,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": 38,
+      "loss_cents": -38.0,
+      "market": "KXBTC15M-26MAY052315-15",
+      "p_hold": null,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "exit_policy_cost",
+        "exit_policy_clip_vs_hold",
+        "rich_entry"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-06T00:48:43.297538+00:00",
+      "exit_cents": 64,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -158,
+      "loss_cents": -30.0,
+      "market": "KXBTC15M-26MAY052100-00",
+      "p_hold": null,
+      "side": "no",
+      "tags": [
+        "medium_25_49c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "thin_raw_edge",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-05T21:03:37.881802+00:00",
+      "exit_cents": 68,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -164,
+      "loss_cents": -28.0,
+      "market": "KXBTC15M-26MAY051715-15",
+      "p_hold": null,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-06T02:38:40.296092+00:00",
+      "exit_cents": 27,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -80,
+      "loss_cents": -26.0,
+      "market": "KXBTC15M-26MAY052245-45",
+      "p_hold": null,
+      "side": "no",
+      "tags": [
+        "medium_25_49c",
+        "fv_or_entry_timing_error"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-06T06:05:50.082011+00:00",
+      "exit_cents": 70,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -166,
+      "loss_cents": -26.0,
+      "market": "KXBTC15M-26MAY060215-15",
+      "p_hold": null,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "fv_or_entry_timing_error",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": 0.0,
+      "best_effect": "no_policy_matched",
+      "best_policy": null,
+      "entry_ts": "2026-05-05T20:07:14.784265+00:00",
+      "exit_cents": 64,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -152,
+      "loss_cents": -24.0,
+      "market": "KXBTC15M-26MAY051615-15",
+      "p_hold": null,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "near_boundary"
+      ]
+    }
+  ],
+  "observable_opportunity_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_reduce_observable_loss_control_opportunity_latest.json",
+  "policy_freeze_ts_utc": {
+    "dual_exit": "2026-05-06T21:15:42.381999+00:00",
+    "exit_book_gap": "2026-05-06T08:46:39.207330+00:00",
+    "exit_reduce": "2026-05-06T06:33:56.987999+00:00",
+    "loss_guard_v1": "2026-05-06T21:29:32.710906+00:00",
+    "loss_guard_v2": "2026-05-06T22:01:04.415577+00:00",
+    "loss_guard_v3": "2026-05-07T01:01:45.501061+00:00"
+  },
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_loss_escape_analysis_latest.json",
+  "summary": {
+    "actual_loss_cents": -1793.0,
+    "best_repair_delta_cents": 501.0,
+    "loss_rows": 73,
+    "matched_but_unchanged_rows": 37,
+    "no_exit_repair_observation_post_first_freeze_rows": 0,
+    "no_exit_repair_observation_pre_first_freeze_rows": 19,
+    "no_exit_repair_observation_rows": 19,
+    "observable_post_birth_probability_reduce_rows": 8,
+    "observable_post_birth_worst_suppress_delta_cents": -304.0,
+    "observable_post_birth_would_suppress_rows": 7,
+    "repair_flips_loss_rows": 15,
+    "repair_would_worsen_rows": 2,
+    "unresolved_rows": 56,
+    "unresolved_share": 76.71232876712328
+  },
+  "unresolved_by_failure_class": [
+    {
+      "actual_loss_cents": -772.0,
+      "best_repair_delta_cents": 0.0,
+      "failure_class": "exit_policy_cost",
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 34,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 34,
+      "rows": 34
+    },
+    {
+      "actual_loss_cents": -48.0,
+      "best_repair_delta_cents": 0.0,
+      "failure_class": "exited_unsettled",
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 2,
+      "known_hold_rows": 0,
+      "rows": 2
+    },
+    {
+      "actual_loss_cents": -766.0,
+      "best_repair_delta_cents": 0.0,
+      "failure_class": "fv_or_entry_timing_error",
+      "hold_harmful_rows": 18,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 20,
+      "rows": 20
+    }
+  ],
+  "unresolved_exit_reasons": [
+    {
+      "actual_loss_cents": -1434.0,
+      "name": "exit_trigger",
+      "rows": 54
+    },
+    {
+      "actual_loss_cents": -152.0,
+      "name": "unknown",
+      "rows": 2
+    }
+  ],
+  "unresolved_tag_combos": [
+    {
+      "actual_loss_cents": -140.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 7,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 7,
+      "rows": 7,
+      "tags": "exit_policy_cost+near_boundary+recross_hazard_high"
+    },
+    {
+      "actual_loss_cents": -170.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 7,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 7,
+      "rows": 7,
+      "tags": "exit_policy_cost+near_boundary"
+    },
+    {
+      "actual_loss_cents": -122.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 5,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 5,
+      "rows": 5,
+      "tags": "fv_or_entry_timing_error+near_boundary+recross_hazard_high+thin_raw_edge"
+    },
+    {
+      "actual_loss_cents": -308.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 4,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 5,
+      "rows": 5,
+      "tags": "fv_or_entry_timing_error+near_boundary"
+    },
+    {
+      "actual_loss_cents": -78.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 5,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 5,
+      "rows": 5,
+      "tags": "exit_policy_cost+near_boundary+recross_hazard_high+thin_raw_edge"
+    },
+    {
+      "actual_loss_cents": -72.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 3,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 3,
+      "rows": 3,
+      "tags": "fv_or_entry_timing_error+near_boundary+recross_hazard_high+thin_touch_depth"
+    },
+    {
+      "actual_loss_cents": -46.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 2,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 3,
+      "rows": 3,
+      "tags": "fv_or_entry_timing_error"
+    },
+    {
+      "actual_loss_cents": -62.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 3,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 3,
+      "rows": 3,
+      "tags": "exit_policy_cost+rich_entry"
+    },
+    {
+      "actual_loss_cents": -50.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 2,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 2,
+      "rows": 2,
+      "tags": "exit_policy_cost+near_boundary+thin_raw_edge+rich_entry"
+    },
+    {
+      "actual_loss_cents": -66.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 2,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 2,
+      "rows": 2,
+      "tags": "exit_policy_cost+crowded_depth"
+    },
+    {
+      "actual_loss_cents": -100.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 2,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 2,
+      "rows": 2,
+      "tags": "fv_or_entry_timing_error+near_boundary+recross_hazard_high"
+    },
+    {
+      "actual_loss_cents": -32.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 2,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 2,
+      "rows": 2,
+      "tags": "exit_policy_cost+near_boundary+recross_hazard_high+crowded_depth"
+    },
+    {
+      "actual_loss_cents": -92.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 1,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "fv_or_entry_timing_error+near_boundary+rich_entry"
+    },
+    {
+      "actual_loss_cents": -26.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 1,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "fv_or_entry_timing_error+near_boundary+thin_raw_edge+rich_entry"
+    },
+    {
+      "actual_loss_cents": -18.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 1,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "exit_policy_cost+near_boundary+thin_raw_edge"
+    },
+    {
+      "actual_loss_cents": -12.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 1,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "exit_policy_cost+near_boundary+thin_touch_depth"
+    },
+    {
+      "actual_loss_cents": -10.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 1,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "exit_policy_cost+rich_entry+crowded_depth"
+    },
+    {
+      "actual_loss_cents": -86.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 1,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "exit_policy_cost+recross_hazard_high"
+    },
+    {
+      "actual_loss_cents": -12.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 1,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "exit_policy_cost"
+    },
+    {
+      "actual_loss_cents": -36.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 1,
+      "hold_unknown_rows": 0,
+      "known_hold_rows": 1,
+      "rows": 1,
+      "tags": "exit_policy_cost+near_boundary+recross_hazard_high+thin_touch_depth"
+    },
+    {
+      "actual_loss_cents": -10.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 1,
+      "known_hold_rows": 0,
+      "rows": 1,
+      "tags": "exited_unsettled+near_boundary+recross_hazard_high+thin_touch_depth"
+    },
+    {
+      "actual_loss_cents": -38.0,
+      "best_repair_delta_cents": 0.0,
+      "hold_harmful_rows": 0,
+      "hold_helpful_rows": 0,
+      "hold_unknown_rows": 1,
+      "known_hold_rows": 0,
+      "rows": 1,
+      "tags": "exited_unsettled+thin_raw_edge+rich_entry+hold_result_unknown"
+    }
+  ],
+  "worsened_examples": [
+    {
+      "best_delta_cents": -146.0,
+      "best_effect": "worsened",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T12:47:36.190511+00:00",
+      "exit_cents": 73,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -156,
+      "loss_cents": -10.0,
+      "market": "KXBTC15M-26MAY060900-00",
+      "p_hold": 0.78999,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "near_boundary"
+      ]
+    },
+    {
+      "best_delta_cents": -160.0,
+      "best_effect": "worsened",
+      "best_policy": "exit_reduce",
+      "entry_ts": "2026-05-06T10:49:34.845804+00:00",
+      "exit_cents": 80,
+      "exit_reason": "exit_trigger",
+      "hold_gross_cents": -168,
+      "loss_cents": -8.0,
+      "market": "KXBTC15M-26MAY060700-00",
+      "p_hold": 0.799603,
+      "side": "no",
+      "tags": [
+        "micro_lt_10c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "crowded_depth",
+        "thin_raw_edge",
+        "rich_entry"
+      ]
+    }
+  ]
+}

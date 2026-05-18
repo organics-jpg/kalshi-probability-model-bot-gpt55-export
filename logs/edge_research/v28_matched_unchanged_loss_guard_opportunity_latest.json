@@ -1,0 +1,237 @@
+{
+  "all_post_rows": [
+    {
+      "abs_d_sigma": 1.081343,
+      "ask_cents": 68.0,
+      "current_cents": 34.0,
+      "eligible_depth": 1155.7,
+      "entry_ts": "2026-05-07T11:37:05.594286+00:00",
+      "exit_cents": 85.0,
+      "exit_fair_drawdown_cents": -14.170103,
+      "exit_p_hold": 0.821701,
+      "exit_reason": "exit_trigger",
+      "exit_ts": "2026-05-07T11:39:05.928364+00:00",
+      "fail_count": 2,
+      "fail_reasons": [
+        "abs_d_sigma_above_max",
+        "eligible_depth_above_max"
+      ],
+      "hold_book_gap": -0.028298999999999963,
+      "hold_cents": 64.0,
+      "hold_delta_cents": 30.0,
+      "market": "KXBTC15M-26MAY070745-45",
+      "p_side": 0.903807,
+      "raw_edge_cents": 20.380737,
+      "result": "yes",
+      "side": "yes",
+      "would_suppress": false
+    },
+    {
+      "abs_d_sigma": 0.951073,
+      "ask_cents": 82.0,
+      "current_cents": 18.0,
+      "eligible_depth": 1230.2,
+      "entry_ts": "2026-05-07T12:20:30.634461+00:00",
+      "exit_cents": 91.0,
+      "exit_fair_drawdown_cents": -0.535395,
+      "exit_p_hold": 0.825354,
+      "exit_reason": "exit_trigger",
+      "exit_ts": "2026-05-07T12:24:03.276880+00:00",
+      "fail_count": 2,
+      "fail_reasons": [
+        "abs_d_sigma_above_max",
+        "eligible_depth_above_max"
+      ],
+      "hold_book_gap": -0.084646,
+      "hold_cents": 36.0,
+      "hold_delta_cents": 18.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_side": 0.875926,
+      "raw_edge_cents": 4.09255,
+      "result": "no",
+      "side": "no",
+      "would_suppress": false
+    },
+    {
+      "abs_d_sigma": 1.007446,
+      "ask_cents": 77.0,
+      "current_cents": -14.0,
+      "eligible_depth": 2840.98,
+      "entry_ts": "2026-05-07T12:25:30.111031+00:00",
+      "exit_cents": 70.0,
+      "exit_fair_drawdown_cents": 15.700151,
+      "exit_p_hold": 0.612998,
+      "exit_reason": "exit_trigger",
+      "exit_ts": "2026-05-07T12:26:24.408801+00:00",
+      "fail_count": 3,
+      "fail_reasons": [
+        "abs_d_sigma_above_max",
+        "eligible_depth_above_max",
+        "exit_p_hold_below_min"
+      ],
+      "hold_book_gap": -0.08700199999999991,
+      "hold_cents": 46.0,
+      "hold_delta_cents": 60.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_side": 0.890215,
+      "raw_edge_cents": 10.52148,
+      "result": "no",
+      "side": "no",
+      "would_suppress": false
+    },
+    {
+      "abs_d_sigma": 0.865277,
+      "ask_cents": 77.0,
+      "current_cents": 46.0,
+      "eligible_depth": 10.0,
+      "entry_ts": "2026-05-07T12:27:17.947074+00:00",
+      "exit_cents": null,
+      "exit_fair_drawdown_cents": null,
+      "exit_p_hold": null,
+      "exit_reason": "",
+      "exit_ts": "",
+      "fail_count": 2,
+      "fail_reasons": [
+        "missing_exit_cents",
+        "missing_exit_p_hold"
+      ],
+      "hold_book_gap": null,
+      "hold_cents": 46.0,
+      "hold_delta_cents": 0.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_side": 0.852625,
+      "raw_edge_cents": 6.762529,
+      "result": "no",
+      "side": "no",
+      "would_suppress": false
+    }
+  ],
+  "blockers": [
+    "post_rows_lt_30",
+    "selected_rows_lt_30",
+    "rule_has_not_fired",
+    "selected_delta_not_positive"
+  ],
+  "fail_combo_counts": {
+    "abs_d_sigma_above_max+eligible_depth_above_max": 2,
+    "abs_d_sigma_above_max+eligible_depth_above_max+exit_p_hold_below_min": 1,
+    "missing_exit_cents+missing_exit_p_hold": 1
+  },
+  "fail_reason_counts": {
+    "abs_d_sigma_above_max": 3,
+    "eligible_depth_above_max": 3,
+    "exit_p_hold_below_min": 1,
+    "missing_exit_cents": 1,
+    "missing_exit_p_hold": 1
+  },
+  "generated_at_utc": "2026-05-07T13:33:51.425496+00:00",
+  "interpretation": [
+    "Research-only opportunity audit; no live bot logic changes or orders.",
+    "Post-freeze has 4 scored rows and 0 selected rows. This is still a no-fire watch, not a failed positive/negative rule.",
+    "Near-miss rows with one or two failed rule gates: 3, combined hold delta 48.0c."
+  ],
+  "live_ready": false,
+  "near_miss_examples": [
+    {
+      "abs_d_sigma": 1.081343,
+      "ask_cents": 68.0,
+      "current_cents": 34.0,
+      "eligible_depth": 1155.7,
+      "entry_ts": "2026-05-07T11:37:05.594286+00:00",
+      "exit_cents": 85.0,
+      "exit_fair_drawdown_cents": -14.170103,
+      "exit_p_hold": 0.821701,
+      "exit_reason": "exit_trigger",
+      "exit_ts": "2026-05-07T11:39:05.928364+00:00",
+      "fail_count": 2,
+      "fail_reasons": [
+        "abs_d_sigma_above_max",
+        "eligible_depth_above_max"
+      ],
+      "hold_book_gap": -0.028298999999999963,
+      "hold_cents": 64.0,
+      "hold_delta_cents": 30.0,
+      "market": "KXBTC15M-26MAY070745-45",
+      "p_side": 0.903807,
+      "raw_edge_cents": 20.380737,
+      "result": "yes",
+      "side": "yes",
+      "would_suppress": false
+    },
+    {
+      "abs_d_sigma": 0.951073,
+      "ask_cents": 82.0,
+      "current_cents": 18.0,
+      "eligible_depth": 1230.2,
+      "entry_ts": "2026-05-07T12:20:30.634461+00:00",
+      "exit_cents": 91.0,
+      "exit_fair_drawdown_cents": -0.535395,
+      "exit_p_hold": 0.825354,
+      "exit_reason": "exit_trigger",
+      "exit_ts": "2026-05-07T12:24:03.276880+00:00",
+      "fail_count": 2,
+      "fail_reasons": [
+        "abs_d_sigma_above_max",
+        "eligible_depth_above_max"
+      ],
+      "hold_book_gap": -0.084646,
+      "hold_cents": 36.0,
+      "hold_delta_cents": 18.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_side": 0.875926,
+      "raw_edge_cents": 4.09255,
+      "result": "no",
+      "side": "no",
+      "would_suppress": false
+    },
+    {
+      "abs_d_sigma": 0.865277,
+      "ask_cents": 77.0,
+      "current_cents": 46.0,
+      "eligible_depth": 10.0,
+      "entry_ts": "2026-05-07T12:27:17.947074+00:00",
+      "exit_cents": null,
+      "exit_fair_drawdown_cents": null,
+      "exit_p_hold": null,
+      "exit_reason": "",
+      "exit_ts": "",
+      "fail_count": 2,
+      "fail_reasons": [
+        "missing_exit_cents",
+        "missing_exit_p_hold"
+      ],
+      "hold_book_gap": null,
+      "hold_cents": 46.0,
+      "hold_delta_cents": 0.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_side": 0.852625,
+      "raw_edge_cents": 6.762529,
+      "result": "no",
+      "side": "no",
+      "would_suppress": false
+    }
+  ],
+  "near_miss_hold_delta_cents": 48.0,
+  "near_miss_rows": 3,
+  "post_current_cents": 84.0,
+  "post_freeze_rows": 4,
+  "post_hold_cents": 192.0,
+  "post_hold_delta_cents": 108.0,
+  "selected_examples": [],
+  "selected_hold_delta_cents": 0,
+  "selected_rows": 0,
+  "state": {
+    "freeze_ts_utc": "2026-05-07T09:30:07.471830+00:00",
+    "interpretation": "Freeze timestamp for a research-only forward watch. Parent diagnostic rows do not count as promotion evidence.",
+    "not_live_bot_logic": true,
+    "research_only": true,
+    "rule": {
+      "abs_d_sigma_max": 0.888798,
+      "eligible_depth_max": 326.6,
+      "exit_cents_min": 51.0,
+      "exit_p_hold_min": 0.718799
+    },
+    "source_artifact": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_matched_unchanged_loss_guard_refinement_latest.json",
+    "source_probe": "probe_v28_matched_unchanged_loss_guard_refinement.py"
+  }
+}

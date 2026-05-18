@@ -1,0 +1,353 @@
+{
+  "interpretation": [
+    "Best full-surface valve replay is danger_zone_entry_valve / entry_surface with net -349.0c, delta vs base 65.0c, and blockers ['coverage_too_low', 'net_not_positive', 'reconstructed_share_gt_35pct', 'full_loss_cushion_lt_3', 'delta_full_loss_cushion_lt_3', 'does_not_beat_refreshed_live_baseline', 'adapter_replay_not_independently_frozen_candidate', 'live_readiness_not_evaluated'].",
+    "Live baseline used for naive comparison is 925.0c.",
+    "This is an adapter replay, not a new independently frozen candidate; promote nothing from this report."
+  ],
+  "live_net_cents": 925.0,
+  "promotion_ready_rows": [],
+  "rows": [
+    {
+      "base_summary": {
+        "avg_net_cents": -4.549450549450549,
+        "coverage_pct": 75.40983606557377,
+        "entries": 92,
+        "losses": 40,
+        "net_cents": -414.0,
+        "settled": 91,
+        "wins": 51
+      },
+      "blockers": [
+        "coverage_too_low",
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3",
+        "delta_full_loss_cushion_lt_3",
+        "does_not_beat_refreshed_live_baseline",
+        "adapter_replay_not_independently_frozen_candidate",
+        "live_readiness_not_evaluated"
+      ],
+      "candidate_summary": {
+        "avg_net_cents": -4.058139534883721,
+        "coverage_pct": 71.31147540983606,
+        "entries": 87,
+        "losses": 36,
+        "net_cents": -349.0,
+        "settled": 86,
+        "wins": 50
+      },
+      "delta_full_loss_cushion": 0,
+      "delta_vs_base_cents": 65.0,
+      "delta_vs_live_cents": -1274.0,
+      "freeze_ts_utc": "2026-05-06T03:09:58.042066+00:00",
+      "full_loss_cushion": 0,
+      "future_denominator": 122,
+      "policy": "skip_reentry_gap15_or_gap30",
+      "promotion_ready": false,
+      "reconstructed_share": 0.9425287356321839,
+      "skipped_rows": [
+        {
+          "ask_prob": 0.14,
+          "market": "KXBTC15M-26MAY061745-45",
+          "market_side_entry_index": 0,
+          "net_cents": -30.0,
+          "p_side": 0.510383,
+          "raw_book_gap": 0.370383,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-06T21:33:51.536807+00:00"
+        },
+        {
+          "ask_prob": 0.23,
+          "market": "KXBTC15M-26MAY061830-30",
+          "market_side_entry_index": 0,
+          "net_cents": -49.0,
+          "p_side": 0.553162,
+          "raw_book_gap": 0.32316200000000006,
+          "side": "yes",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-06T22:19:06.460649+00:00"
+        },
+        {
+          "ask_prob": 0.22,
+          "market": "KXBTC15M-26MAY062100-00",
+          "market_side_entry_index": 0,
+          "net_cents": -47.0,
+          "p_side": 0.615588,
+          "raw_book_gap": 0.39558800000000005,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-07T00:48:36.454910+00:00"
+        },
+        {
+          "ask_prob": 0.38,
+          "market": "KXBTC15M-26MAY062230-30",
+          "market_side_entry_index": 0,
+          "net_cents": -80.0,
+          "p_side": 0.718015,
+          "raw_book_gap": 0.33801499999999995,
+          "side": "yes",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-07T02:22:19.050425+00:00"
+        },
+        {
+          "ask_prob": 0.28,
+          "market": "KXBTC15M-26MAY070615-15",
+          "market_side_entry_index": 0,
+          "net_cents": 141.0,
+          "p_side": 0.610872,
+          "raw_book_gap": 0.33087199999999994,
+          "side": "no",
+          "side_won": true,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-07T10:03:17.740674+00:00"
+        }
+      ],
+      "skipped_summary": {
+        "avg_net_cents": -13.0,
+        "coverage_pct": 4.098360655737705,
+        "entries": 5,
+        "losses": 4,
+        "net_cents": -65.0,
+        "settled": 5,
+        "wins": 1
+      },
+      "source_counts": {
+        "approved_entry": 5,
+        "rejected_actionable": 82
+      },
+      "surface": "entry_surface",
+      "valve": "danger_zone_entry_valve"
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -4.549450549450549,
+        "coverage_pct": 75.40983606557377,
+        "entries": 92,
+        "losses": 40,
+        "net_cents": -414.0,
+        "settled": 91,
+        "wins": 51
+      },
+      "blockers": [
+        "coverage_too_low",
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3",
+        "delta_full_loss_cushion_lt_3",
+        "does_not_beat_refreshed_live_baseline",
+        "adapter_replay_not_independently_frozen_candidate",
+        "live_readiness_not_evaluated"
+      ],
+      "candidate_summary": {
+        "avg_net_cents": -4.058139534883721,
+        "coverage_pct": 71.31147540983606,
+        "entries": 87,
+        "losses": 36,
+        "net_cents": -349.0,
+        "settled": 86,
+        "wins": 50
+      },
+      "delta_full_loss_cushion": 0,
+      "delta_vs_base_cents": 65.0,
+      "delta_vs_live_cents": -1274.0,
+      "freeze_ts_utc": "2026-05-06T03:09:58.042066+00:00",
+      "full_loss_cushion": 0,
+      "future_denominator": 122,
+      "policy": "skip_reentry_gap15_or_gap30",
+      "promotion_ready": false,
+      "reconstructed_share": 0.9425287356321839,
+      "skipped_rows": [
+        {
+          "ask_prob": 0.14,
+          "market": "KXBTC15M-26MAY061745-45",
+          "market_side_entry_index": 0,
+          "net_cents": -30.0,
+          "p_side": 0.510383,
+          "raw_book_gap": 0.370383,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-06T21:33:51.536807+00:00"
+        },
+        {
+          "ask_prob": 0.23,
+          "market": "KXBTC15M-26MAY061830-30",
+          "market_side_entry_index": 0,
+          "net_cents": -49.0,
+          "p_side": 0.553162,
+          "raw_book_gap": 0.32316200000000006,
+          "side": "yes",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-06T22:19:06.460649+00:00"
+        },
+        {
+          "ask_prob": 0.22,
+          "market": "KXBTC15M-26MAY062100-00",
+          "market_side_entry_index": 0,
+          "net_cents": -47.0,
+          "p_side": 0.615588,
+          "raw_book_gap": 0.39558800000000005,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-07T00:48:36.454910+00:00"
+        },
+        {
+          "ask_prob": 0.38,
+          "market": "KXBTC15M-26MAY062230-30",
+          "market_side_entry_index": 0,
+          "net_cents": -80.0,
+          "p_side": 0.718015,
+          "raw_book_gap": 0.33801499999999995,
+          "side": "yes",
+          "side_won": false,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-07T02:22:19.050425+00:00"
+        },
+        {
+          "ask_prob": 0.28,
+          "market": "KXBTC15M-26MAY070615-15",
+          "market_side_entry_index": 0,
+          "net_cents": 141.0,
+          "p_side": 0.610872,
+          "raw_book_gap": 0.33087199999999994,
+          "side": "no",
+          "side_won": true,
+          "source": "rejected_actionable",
+          "ts_wall": "2026-05-07T10:03:17.740674+00:00"
+        }
+      ],
+      "skipped_summary": {
+        "avg_net_cents": -13.0,
+        "coverage_pct": 4.098360655737705,
+        "entries": 5,
+        "losses": 4,
+        "net_cents": -65.0,
+        "settled": 5,
+        "wins": 1
+      },
+      "source_counts": {
+        "approved_entry": 5,
+        "rejected_actionable": 82
+      },
+      "surface": "fv_bridge_surface",
+      "valve": "danger_zone_entry_valve"
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -2.7384615384615385,
+        "coverage_pct": 75.2,
+        "entries": 94,
+        "losses": 27,
+        "net_cents": -178.0,
+        "settled": 65,
+        "wins": 38
+      },
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3",
+        "delta_full_loss_cushion_lt_3",
+        "delta_vs_base_not_positive",
+        "does_not_beat_refreshed_live_baseline",
+        "adapter_replay_not_independently_frozen_candidate",
+        "live_readiness_not_evaluated"
+      ],
+      "candidate_summary": {
+        "avg_net_cents": -2.7384615384615385,
+        "coverage_pct": 75.2,
+        "entries": 94,
+        "losses": 27,
+        "net_cents": -178.0,
+        "settled": 65,
+        "wins": 38
+      },
+      "delta_full_loss_cushion": 0,
+      "delta_vs_base_cents": 0.0,
+      "delta_vs_live_cents": -1103.0,
+      "freeze_ts_utc": "2026-05-06T02:42:53.253731+00:00",
+      "full_loss_cushion": 0,
+      "future_denominator": 125,
+      "policy": "same_side_reentry_gap_lte_15pp",
+      "promotion_ready": false,
+      "reconstructed_share": 0.925531914893617,
+      "skipped_rows": [],
+      "skipped_summary": {
+        "avg_net_cents": null,
+        "coverage_pct": 0.0,
+        "entries": 0,
+        "losses": 0,
+        "net_cents": 0,
+        "settled": 0,
+        "wins": 0
+      },
+      "source_counts": {
+        "approved_entry": 7,
+        "rejected_actionable": 87
+      },
+      "surface": "fv_bridge_surface",
+      "valve": "approved_entry_state_valve"
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -3.5,
+        "coverage_pct": 75.80645161290323,
+        "entries": 94,
+        "losses": 40,
+        "net_cents": -329.0,
+        "settled": 94,
+        "wins": 54
+      },
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3",
+        "delta_full_loss_cushion_lt_3",
+        "delta_vs_base_not_positive",
+        "does_not_beat_refreshed_live_baseline",
+        "adapter_replay_not_independently_frozen_candidate",
+        "live_readiness_not_evaluated"
+      ],
+      "candidate_summary": {
+        "avg_net_cents": -3.5,
+        "coverage_pct": 75.80645161290323,
+        "entries": 94,
+        "losses": 40,
+        "net_cents": -329.0,
+        "settled": 94,
+        "wins": 54
+      },
+      "delta_full_loss_cushion": 0,
+      "delta_vs_base_cents": 0.0,
+      "delta_vs_live_cents": -1254.0,
+      "freeze_ts_utc": "2026-05-06T02:42:53.253731+00:00",
+      "full_loss_cushion": 0,
+      "future_denominator": 124,
+      "policy": "same_side_reentry_gap_lte_15pp",
+      "promotion_ready": false,
+      "reconstructed_share": 0.925531914893617,
+      "skipped_rows": [],
+      "skipped_summary": {
+        "avg_net_cents": null,
+        "coverage_pct": 0.0,
+        "entries": 0,
+        "losses": 0,
+        "net_cents": 0,
+        "settled": 0,
+        "wins": 0
+      },
+      "source_counts": {
+        "approved_entry": 7,
+        "rejected_actionable": 87
+      },
+      "surface": "entry_surface",
+      "valve": "approved_entry_state_valve"
+    }
+  ]
+}

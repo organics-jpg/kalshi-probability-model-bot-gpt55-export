@@ -1,0 +1,51 @@
+{
+  "fee_formula": "max(1, ceil(7 * count * price_cents * (100 - price_cents) / 10000))",
+  "fee_formula_examples": [
+    {
+      "contract_count": 1,
+      "estimated_taker_fee_cents": 1,
+      "price_cents": 10
+    },
+    {
+      "contract_count": 1,
+      "estimated_taker_fee_cents": 2,
+      "price_cents": 30
+    },
+    {
+      "contract_count": 1,
+      "estimated_taker_fee_cents": 2,
+      "price_cents": 50
+    },
+    {
+      "contract_count": 1,
+      "estimated_taker_fee_cents": 2,
+      "price_cents": 70
+    },
+    {
+      "contract_count": 1,
+      "estimated_taker_fee_cents": 1,
+      "price_cents": 90
+    }
+  ],
+  "fill_model": {
+    "contract_count": 1,
+    "entry_price": "visible side ask cents",
+    "exit_policy": "hold_to_settlement",
+    "fee_model": "conservative local v28 taker fee: ceil(0.07*C*P*(1-P)) to whole cents",
+    "fee_source_urls": [
+      "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+      "https://kalshi.com/fee-schedule",
+      "https://docs.kalshi.com/getting_started/fee_rounding"
+    ],
+    "fill_model_id": "one_contract_visible_taker_ask_hold_to_settlement_v001",
+    "maker_credit": "not assumed",
+    "position_sizing": "unit normalized; exactly one shadow contract"
+  },
+  "fill_model_status": "explicit_assumption_report",
+  "limitations": [
+    "Assumes one whole contract and integer-cent visible taker ask.",
+    "Does not assume maker fills, rebates, queue priority, or partial exits.",
+    "Does not reconcile actual exchange fills because this is shadow research.",
+    "Official fees and product-specific fee schedules can change; refresh before any controlled live test."
+  ]
+}

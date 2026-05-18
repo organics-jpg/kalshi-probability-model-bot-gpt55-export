@@ -1,0 +1,40 @@
+{
+  "ask_cap_cents": 65.0,
+  "coefficients": {
+    "book_v31_time_platt": [
+      -0.004612015842067466,
+      1.1949037009646317,
+      -0.09568923267788405,
+      0.10991831357346939
+    ],
+    "book_v33_drift3_platt": {
+      "beta": [
+        0.27162666229940724,
+        5.7089653104385985,
+        -0.3732936866517675,
+        -0.0191327801620111
+      ],
+      "l2": 0.3,
+      "means": [
+        0.30602584280358985,
+        0.27120764395971714,
+        14.95702720664451
+      ],
+      "scales": [
+        4.79465805377082,
+        4.424230572317068,
+        187.65210760731622
+      ]
+    },
+    "time_logit_weight": 0.15,
+    "v33_drift3_logit_weight": 0.85
+  },
+  "created_utc": "2026-05-04T20:08:37.068758+00:00",
+  "lock_id": "v33_blend_exec_shadow_v1",
+  "min_edge_cents": 0.0,
+  "mode": "two_side_all_heartbeats",
+  "model_defined_utc": "2026-05-04T19:59:38.646976+00:00",
+  "policy": "book_time_v33drift85_exec_ask65_pside60_first",
+  "pside_floor": 0.6,
+  "purpose": "Strict forward shadow validation of executable v33 blended FV candidate."
+}

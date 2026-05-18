@@ -1,0 +1,295 @@
+{
+  "bucket_priorities": [
+    {
+      "bucket": "exit_policy_error",
+      "evidence": "7 selected-side theory winners became live selected-side losses; settlement theory 161c, live selected -456c, swing 617c.",
+      "rank": 1,
+      "repair_read": "Exit/state validation remains first priority, but active exit watches still need strict post-freeze denominators."
+    },
+    {
+      "bucket": "source_quality_error",
+      "evidence": "13 selected losses carry source-quality tags; official broad lane reconstructed share is 43.24%.",
+      "rank": 2,
+      "repair_read": "Needs new clean approved rows or an observable source-risk shrink that clears row source, coverage, live delta, and cushion together."
+    },
+    {
+      "bucket": "fragility_error",
+      "evidence": "Broad post-freeze lane cushion is 2; loss rows total -221c.",
+      "rank": 3,
+      "repair_read": "Current positive net cannot absorb three full losses; any repair must add cushion without reintroducing source risk."
+    },
+    {
+      "bucket": "execution_friction_error",
+      "evidence": "15 selected losses are tagged execution/friction or thin-edge failure.",
+      "rank": 4,
+      "repair_read": "This overlaps source/cheap-touch risk and argues for sizing/entry-quality shrink rather than wider thresholds."
+    },
+    {
+      "bucket": "fv_error",
+      "evidence": "7 selected losses show FV/overconfidence tags, including large approved losses.",
+      "rank": 5,
+      "repair_read": "FV calibration is a later overlay here; entry/exit state currently has clearer forward blockers."
+    },
+    {
+      "bucket": "market_regime_error",
+      "evidence": "9 selected losses carry regime/path tags.",
+      "rank": 6,
+      "repair_read": "Use as warning context for shrink/regime overlays; do not make a brittle cutoff from this small sample."
+    },
+    {
+      "bucket": "entry_timing_error",
+      "evidence": "1 selected loss is explicitly tagged entry timing.",
+      "rank": 7,
+      "repair_read": "Not the dominant post-freeze repair path versus exit/source/cushion blockers."
+    }
+  ],
+  "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+  "conclusion": "exit_state_first_but_watch_only",
+  "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+  "generated_at_utc": "2026-05-07T08:35:39.967272+00:00",
+  "live_exit_mismatch": {
+    "class_counts": {
+      "exit_policy_error": 7,
+      "exited_before_settlement": 7,
+      "opposite_side_state_churn": 1,
+      "probability_reduce_clipped_winner": 4,
+      "same_side_state_churn": 7,
+      "theory_win_selected_live_loss": 7,
+      "value_over_hold_clipped_winner": 2
+    },
+    "live_selected_net_cents": -456.0,
+    "markets": 7,
+    "reason_counts": {
+      "mushroom_v28_exit_value_over_hold": 16,
+      "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 26,
+      "mushroom_v28_probability_collapse_full": 24,
+      "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 40,
+      "mushroom_v28_probability_reduce": 52,
+      "mushroom_v28_probability_reduce_single_shot_visible_depth": 90
+    },
+    "swing_cents": 617.0,
+    "theory_net_cents": 161.0
+  },
+  "loss_analog": {
+    "avg_loss_analog_score": 0.8115694957543862,
+    "max_loss_analog_score": 1.0,
+    "risk_component_counts": {
+      "expensive_touch": 16,
+      "moderate_recross": 5,
+      "none": 2,
+      "reconstructed_source": 16,
+      "thin_raw_edge": 14,
+      "weak_boundary_distance": 16
+    },
+    "rows": 37
+  },
+  "loss_stats": {
+    "loss_count": 15,
+    "loss_net_cents": -221.0,
+    "source_counts": {
+      "approved_entry": 2,
+      "rejected_actionable": 13
+    },
+    "source_net_cents": {
+      "approved_entry": -150.0,
+      "rejected_actionable": -71.0
+    },
+    "tag_counts": {
+      "entry_timing_error": 1,
+      "execution_friction_error": 15,
+      "fragility_error": 15,
+      "fv_error": 7,
+      "market_regime_error": 9,
+      "source_quality_error": 13
+    },
+    "tag_net_cents": {
+      "entry_timing_error": -78.0,
+      "execution_friction_error": -221.0,
+      "fragility_error": -221.0,
+      "fv_error": -181.0,
+      "market_regime_error": -134.0,
+      "source_quality_error": -71.0
+    },
+    "worst_rows": [
+      {
+        "abs_d_sigma": 0.999156,
+        "ask_prob": 0.76,
+        "failure_tags": [
+          "entry_timing_error",
+          "execution_friction_error",
+          "fragility_error",
+          "fv_error",
+          "market_regime_error"
+        ],
+        "market": "KXBTC15M-26MAY062130-30",
+        "net_cents": -78.0,
+        "raw_edge": 0.12777700000000003,
+        "recross_hazard_score": 0.3038697963028121,
+        "side": "no",
+        "source": "approved_entry"
+      },
+      {
+        "abs_d_sigma": 1.543579,
+        "ask_prob": 0.7,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "fv_error"
+        ],
+        "market": "KXBTC15M-26MAY070015-15",
+        "net_cents": -72.0,
+        "raw_edge": 0.2636590000000001,
+        "recross_hazard_score": 0.07375286170271013,
+        "side": "no",
+        "source": "approved_entry"
+      },
+      {
+        "abs_d_sigma": 0.784861,
+        "ask_prob": 0.13,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "market_regime_error",
+          "source_quality_error"
+        ],
+        "market": "KXBTC15M-26MAY062345-45",
+        "net_cents": -15.0,
+        "raw_edge": 0.041601,
+        "recross_hazard_score": 0.13225659322745886,
+        "side": "no",
+        "source": "rejected_actionable"
+      },
+      {
+        "abs_d_sigma": 0.758696,
+        "ask_prob": 0.09,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "fv_error",
+          "market_regime_error",
+          "source_quality_error"
+        ],
+        "market": "KXBTC15M-26MAY070200-00",
+        "net_cents": -11.0,
+        "raw_edge": 0.08693400000000001,
+        "recross_hazard_score": 0.12224159683597033,
+        "side": "yes",
+        "source": "rejected_actionable"
+      },
+      {
+        "abs_d_sigma": 0.791108,
+        "ask_prob": 0.06,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "fv_error",
+          "market_regime_error",
+          "source_quality_error"
+        ],
+        "market": "KXBTC15M-26MAY061600-00",
+        "net_cents": -7.0,
+        "raw_edge": 0.104874,
+        "recross_hazard_score": 0.041740444036135596,
+        "side": "no",
+        "source": "rejected_actionable"
+      },
+      {
+        "abs_d_sigma": 0.997837,
+        "ask_prob": 0.05,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "market_regime_error",
+          "source_quality_error"
+        ],
+        "market": "KXBTC15M-26MAY061830-30",
+        "net_cents": -6.0,
+        "raw_edge": 0.059156,
+        "recross_hazard_score": 0.16075609997197524,
+        "side": "yes",
+        "source": "rejected_actionable"
+      },
+      {
+        "abs_d_sigma": 1.050761,
+        "ask_prob": 0.04,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "source_quality_error"
+        ],
+        "market": "KXBTC15M-26MAY061430-30",
+        "net_cents": -5.0,
+        "raw_edge": 0.062326,
+        "recross_hazard_score": 0.08102015626960654,
+        "side": "no",
+        "source": "rejected_actionable"
+      },
+      {
+        "abs_d_sigma": 0.943937,
+        "ask_prob": 0.04,
+        "failure_tags": [
+          "execution_friction_error",
+          "fragility_error",
+          "fv_error",
+          "market_regime_error",
+          "source_quality_error"
+        ],
+        "market": "KXBTC15M-26MAY061730-30",
+        "net_cents": -5.0,
+        "raw_edge": 0.080622,
+        "recross_hazard_score": 0.09907383677577447,
+        "side": "no",
+        "source": "rejected_actionable"
+      }
+    ]
+  },
+  "residual_after_penalty": {
+    "loss_tag_counts": {
+      "cheap_side_residual": 5,
+      "fv_overconfidence": 2,
+      "moderate_recross_reversal": 1,
+      "source_quality_error": 5,
+      "thin_edge_expensive_touch": 1,
+      "weak_boundary_distance": 2
+    },
+    "post_penalty_net_cents": 312.0,
+    "post_penalty_rows": 29,
+    "residual_tag_counts": {
+      "cheap_side_residual": 7,
+      "clean_or_unclassified": 3,
+      "expensive_yes_near_boundary": 1,
+      "fv_overconfidence": 7,
+      "moderate_recross_reversal": 11,
+      "source_quality_error": 7,
+      "thin_edge_expensive_touch": 9,
+      "weak_boundary_distance": 7
+    }
+  },
+  "selected_summary": {
+    "blockers": [
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3"
+    ],
+    "coverage_pct": 75.51020408163265,
+    "denominator": 49,
+    "full_loss_cushion": 2,
+    "losses": 15,
+    "net_cents": 275.0,
+    "reconstructed_share": 0.43243243243243246,
+    "selected_row_failure_counts": {
+      "clean_or_unclassified": 19,
+      "entry_timing_error": 1,
+      "execution_friction_error": 16,
+      "fragility_error": 15,
+      "fv_error": 7,
+      "market_regime_error": 9,
+      "source_quality_error": 16
+    },
+    "settled": 37,
+    "structural_failure_modes": [
+      "fragility_error",
+      "source_quality_error"
+    ],
+    "wins": 22
+  }
+}

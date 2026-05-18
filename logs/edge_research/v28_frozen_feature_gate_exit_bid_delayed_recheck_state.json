@@ -1,0 +1,8 @@
+{
+  "candidate": "delay60_bid_ge60_drop_lte10",
+  "candidate_family": "feature_gate_exit_bid_delayed_recheck",
+  "freeze_ts_utc": "2026-05-07T07:54:52.452489+00:00",
+  "physics": "High exit bids can be winner clips, but immediate air pockets are a survival risk. The delayed recheck requires the market to keep supporting the held side before overriding the live exit.",
+  "rule": "Delay 60s after selected-side feature-gate exit; suppress only if held-side bid >=60c and window drop <=10c.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only."
+}

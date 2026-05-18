@@ -1,0 +1,57 @@
+{
+  "actionability_interpretation": [
+    "This report does not create or promote an exit rule; it classifies which diagnostic separators are usable at decision time.",
+    "Best separator overall is post_exit_points ge 11.0 and is hindsight-only.",
+    "Best observable separator is entry_depth le 384.0, selected W/L 11/0, delta 587.0c.",
+    "Best observable separator is already covered by frozen watch v28_exit_reduce_depth_gate_opportunity_latest.json; current depth opportunity would-suppress rows 0.",
+    "Side-geometry opportunity remains too strict so far: rejected base candidates 1 for 46.0c."
+  ],
+  "candidate_family": "exit_reduce_observable_loss_control_watch",
+  "freeze_ts_utc": "2026-05-07T00:08:36.297681+00:00",
+  "origin": "Derived from observable separators in v28_exit_reduce_loss_control_actionability; earlier rows are diagnostic only.",
+  "rules": {
+    "reduce_suppress_p75_depth_lte384_and_duration_lte75": {
+      "entry_depth_max": 384.0,
+      "p_hold_min": 0.75,
+      "physics": "Conservative composite: suppress only when shallow entry depth and fast reduce churn agree.",
+      "trade_duration_sec_max": 75.0
+    },
+    "reduce_suppress_p75_depth_lte384_or_duration_lte52": {
+      "entry_depth_max_or": 384.0,
+      "p_hold_min": 0.75,
+      "physics": "Union of the strongest existing shallow-depth mechanism and short-duration churn mechanism.",
+      "trade_duration_sec_max_or": 52.304092
+    },
+    "reduce_suppress_p75_duration_lte_52": {
+      "p_hold_min": 0.75,
+      "physics": "Very short-lived reduce exits after entry look like microstructure churn clipping a still-valid position.",
+      "trade_duration_sec_max": 52.304092
+    },
+    "reduce_suppress_p75_entry_book_age_gte_672": {
+      "entry_book_age_ms_min": 672.0,
+      "p_hold_min": 0.75,
+      "physics": "A slightly older but accepted entry book followed by high p_hold reduce may represent stale-ish entry conservatism rather than true loss control."
+    },
+    "reduce_suppress_p75_entry_stc_lte_596": {
+      "entry_seconds_to_close_max": 596.372,
+      "p_hold_min": 0.75,
+      "physics": "Late-entry reduce exits are more likely to be transient mark churn than a real change in settlement odds."
+    },
+    "reduce_suppress_p75_entry_volshock_gte_0468": {
+      "entry_volshock_min": 0.468181,
+      "p_hold_min": 0.75,
+      "physics": "Positive entry volshock may make early reduce exits overreact to path turbulence rather than settlement odds."
+    },
+    "reduce_suppress_p75_exit_cents_lte_72": {
+      "exit_cents_max": 72.0,
+      "p_hold_min": 0.75,
+      "physics": "Lower exit marks under high p_hold may be underpriced churn where holding recovers value."
+    },
+    "reduce_suppress_p75_exit_sigma_gte_110": {
+      "exit_sigma_t_dollars_min": 110.113616,
+      "p_hold_min": 0.75,
+      "physics": "High remaining sigma at exit means the reduce trigger has more path-noise risk and should need more confirmation before clipping."
+    }
+  },
+  "strict_forward_note": "Only post_observable_birth lanes count as forward evidence."
+}

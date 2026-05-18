@@ -1,0 +1,17 @@
+{
+  "base_rule": "raw03_recross70_abs075",
+  "candidate_family": "feature_gate_observable_source_risk_notional_shrink",
+  "freeze_ts_utc": "2026-05-07T06:51:18.613633+00:00",
+  "physics": "Shrink notional, not row selection, for rows that look like the rejected-slice failure mechanism: cheap/low-p-side boundary tails with thin depth, thin edge, weaker boundary distance, or early observation timing.",
+  "policies": [
+    "no_shrink_control",
+    "risk_half_step",
+    "risk_quarter_step",
+    "risk_linear_20",
+    "risk_linear_30",
+    "cheap_thin_quarter",
+    "cheap_thin_fifth"
+  ],
+  "promotion_note": "This is not live-ready unless the official row-count source gate, sample gate, coverage gate, net gate, and full-loss cushion gate all pass on strict rows.",
+  "updated_at_utc": "2026-05-07T06:53:12.379014+00:00"
+}

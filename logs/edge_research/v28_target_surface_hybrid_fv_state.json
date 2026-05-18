@@ -1,0 +1,14 @@
+{
+  "entry_surface": "fixed_target_coverage_raw_entry_valve",
+  "freeze_ts": "2026-05-06T15:20:56.478006+00:00",
+  "hypothesis": "Hybrid FV should improve calibration on broad target rows without changing selected side.",
+  "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "promotion_floor": {
+    "coverage_max": 90.0,
+    "coverage_min": 75.0,
+    "min_settled": 30,
+    "must_improve_brier_vs_raw": true,
+    "must_improve_logloss_vs_raw": true,
+    "must_not_change_entry_selection": true
+  }
+}

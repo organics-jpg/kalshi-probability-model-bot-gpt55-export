@@ -1,0 +1,63 @@
+{
+  "candidate_policy": {
+    "ask_max": 95.0,
+    "chooser": "score_min_book_rv15",
+    "gate": "none",
+    "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "combined_label": "take frontier_v2 unless first v2 seconds_to_close>=600 and brownian_p_rv_15m<=0.70, then wait for score_min60",
+  "created_utc": "2026-05-03T23:42:23.954125+00:00",
+  "discovery_metrics": {
+    "both_coverage_pass": true,
+    "both_oos_positive": true,
+    "combined_delta_vs_v2_cents": 650.0,
+    "current_all_accuracy": 0.7604562737642585,
+    "current_all_coverage": 0.9887218045112782,
+    "current_all_net_pnl_cents": 1345.0,
+    "current_all_net_roi_on_cost": 0.0720986330742428,
+    "current_delta_vs_v2_cents": 1178.0,
+    "current_holdout_accuracy": 0.7222222222222222,
+    "current_holdout_coverage": 1.0,
+    "current_holdout_net_pnl_cents": 6.0,
+    "min_oos_roi": 0.0015408320493066,
+    "v21_all_accuracy": 0.7431192660550459,
+    "v21_all_coverage": 0.986425339366516,
+    "v21_all_net_pnl_cents": 755.0,
+    "v21_all_net_roi_on_cost": 0.0488831337002266,
+    "v21_delta_vs_v2_cents": -528.0,
+    "v21_holdout_accuracy": 0.7727272727272727,
+    "v21_holdout_coverage": 0.9777777777777776,
+    "v21_holdout_net_pnl_cents": 208.0
+  },
+  "lock_close_dt": "2026-05-03T23:30:00+00:00",
+  "research_note": "Forward-registered rich conditional wait candidate from the V2 rich conditional scan. Diagnostic only: it improves the prior conditional wait in broad current/v21 ledgers, but promotion requires strict pre-resolution live evidence and >=80% recurring-market coverage.",
+  "source_candidate_lock": "logs\\edge_research\\profit_frontier_score_min60_lock.json",
+  "source_scan_csv": "logs\\edge_research\\v2_rich_conditional_wait_scan_latest.csv",
+  "source_v2_lock": "logs\\edge_research\\profit_frontier_v2_fresh_lock.json",
+  "v2_policy": {
+    "ask_max": 95.0,
+    "chooser": "brownian_p_rv_15m",
+    "gate": "none",
+    "label": "choose=brownian_p_rv_15m; brownian_p_rv_15m>=0.55; ask<=95; sec_to_close>=120",
+    "min_score": 0.55,
+    "min_seconds_to_close": 120.0
+  },
+  "wait_rule": {
+    "candidate": "score_min60",
+    "conditions": [
+      {
+        "feature": "seconds_to_close",
+        "op": ">=",
+        "threshold": 600.0
+      },
+      {
+        "feature": "brownian_p_rv_15m",
+        "op": "<=",
+        "threshold": 0.7
+      }
+    ],
+    "label": "wait_for_score_min60_if_v2_seconds_to_close>=600_AND_brownian_p_rv_15m<=0.7"
+  }
+}

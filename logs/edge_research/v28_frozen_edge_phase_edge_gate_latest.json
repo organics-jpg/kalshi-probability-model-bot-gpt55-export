@@ -1,0 +1,43 @@
+{
+  "base": {
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 73.01587301587301,
+    "entries": 92,
+    "losses": 42,
+    "net_cents": -695.0,
+    "settled": 92,
+    "wins": 50
+  },
+  "candidate": {
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 73.01587301587301,
+    "entries": 92,
+    "losses": 42,
+    "net_cents": -695.0,
+    "settled": 92,
+    "wins": 50
+  },
+  "delta_net_cents": 0.0,
+  "freeze": {
+    "adjusted_edge_floor": -0.12,
+    "base_entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "freeze_ts_utc": "2026-05-06T05:46:47.707629+00:00",
+    "fv_variant": "edge_phase_shrink",
+    "physics": "A wide negative adjusted-FV edge is a bad paid-price state; this is a rare safety valve, not a tight selectivity filter.",
+    "rule": "keep target-coverage row only if edge_phase_shrink_probability - ask_prob >= -0.12"
+  },
+  "future_denominator": 126,
+  "interpretation": [
+    "Frozen edge-phase edge gate has 92 entries versus 92 base entries.",
+    "It has skipped 0 future rows so far; promotion requires forward sample size and target coverage.",
+    "This is an adjusted-FV paid-price gate derived from the edge-phase shrink model."
+  ],
+  "pending_kept_rows": [],
+  "skipped_rows": []
+}

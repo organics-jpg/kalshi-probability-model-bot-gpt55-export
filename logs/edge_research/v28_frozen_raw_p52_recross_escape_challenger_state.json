@@ -1,0 +1,23 @@
+{
+  "freeze_ts": "2026-05-06T00:57:12.867086+00:00",
+  "policies": [
+    {
+      "physics": "Same-window raw p52 baseline for the recross-escape challenger.",
+      "policy": "v28_raw_p52_edge0_base",
+      "role": "raw_p52_forward_baseline"
+    },
+    {
+      "physics": "Raw p52 baseline, but weak near-strike/high-recross rows may follow a later opposite p52 confirmation only if that opposite has >=5pp executable edge. Otherwise keep raw p52 to preserve coverage.",
+      "policy": "p52_recross_escape_opp240_oppedge5_keep",
+      "role": "coverage_preserving_recross_escape"
+    }
+  ],
+  "promotion_floor": {
+    "fv_validation_allows_shadow_rows": true,
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

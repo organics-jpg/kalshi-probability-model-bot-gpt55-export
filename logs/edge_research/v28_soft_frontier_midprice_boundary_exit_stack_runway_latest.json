@@ -1,0 +1,2960 @@
+{
+  "generated_at_utc": "2026-05-11T02:50:33.675882+00:00",
+  "interpretation": [
+    "Runway only; no live logic changes and no promotion by itself.",
+    "Post-stack joined rows are the promotion-relevant sample for this combined entry+exit branch.",
+    "Closest runway row post_midprice_shrink_birth_entry_control_no_shrink_loss_guard_v1_weighted_exit_stack has 23 post-stack joined exits, 698.0c post-stack net, 84.0c post-stack delta, needs 7 joined rows and 0.0c for cushion; blockers ['needs_post_stack_joined_rows'].",
+    "Best strict entry-lane runway post_midprice_shrink_birth_entry_control_no_shrink_loss_guard_v1_weighted_exit_stack has 23 post-stack joined exits and needs 7 more joined rows."
+  ],
+  "rows": [
+    {
+      "candidate": "post_midprice_shrink_birth_entry_control_no_shrink_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 84.0,
+      "diagnostic_weighted_exit_net_cents": 704.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 1.0,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 39.0,
+        "net_cents": -46.0,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 84.0,
+      "post_stack_weighted_exit_net_cents": 698.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_half_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 84.0,
+      "diagnostic_weighted_exit_net_cents": 701.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9861111111111112,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -19.5,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 19.5,
+        "net_cents": -65.5,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 84.0,
+      "post_stack_weighted_exit_net_cents": 698.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 84.0,
+      "diagnostic_weighted_exit_net_cents": 699.5,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9791666666666666,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -29.25,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 9.75,
+        "net_cents": -75.25,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 84.0,
+      "post_stack_weighted_exit_net_cents": 698.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_control_no_shrink_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 48.0,
+      "diagnostic_weighted_exit_net_cents": 668.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 1.0,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 39.0,
+        "net_cents": -46.0,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 48.0,
+      "post_stack_weighted_exit_net_cents": 662.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_half_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 48.0,
+      "diagnostic_weighted_exit_net_cents": 665.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9861111111111112,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -19.5,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 19.5,
+        "net_cents": -65.5,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 48.0,
+      "post_stack_weighted_exit_net_cents": 662.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 48.0,
+      "diagnostic_weighted_exit_net_cents": 663.5,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9791666666666666,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -29.25,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 9.75,
+        "net_cents": -75.25,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 48.0,
+      "post_stack_weighted_exit_net_cents": 662.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_control_no_shrink_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 36.0,
+      "diagnostic_weighted_exit_net_cents": 656.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 1.0,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 39.0,
+        "net_cents": -46.0,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 36.0,
+      "post_stack_weighted_exit_net_cents": 650.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_half_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 36.0,
+      "diagnostic_weighted_exit_net_cents": 653.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9861111111111112,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -19.5,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 19.5,
+        "net_cents": -65.5,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 36.0,
+      "post_stack_weighted_exit_net_cents": 650.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 36.0,
+      "diagnostic_weighted_exit_net_cents": 651.5,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9791666666666666,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -29.25,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 9.75,
+        "net_cents": -75.25,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 6,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": 36.0,
+      "post_stack_weighted_exit_net_cents": 650.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_control_no_shrink_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": -134.0,
+      "diagnostic_weighted_exit_net_cents": 486.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 1.0,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 39.0,
+        "net_cents": -46.0,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "book_gap",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 4,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": -160.0,
+      "post_stack_weighted_exit_net_cents": 454.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_half_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": -147.0,
+      "diagnostic_weighted_exit_net_cents": 470.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9861111111111112,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -19.5,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 19.5,
+        "net_cents": -65.5,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "book_gap",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 4,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": -160.0,
+      "post_stack_weighted_exit_net_cents": 454.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_net_not_positive",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": -153.5,
+      "diagnostic_weighted_exit_net_cents": 462.0,
+      "entry_summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9791666666666666,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -29.25,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 9.75,
+        "net_cents": -75.25,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "exit_source": "book_gap",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 4,
+      "post_stack_joined_exit_rows": 23,
+      "post_stack_joined_rows_needed_for_sample_gate": 7,
+      "post_stack_reconstructed_share": 0.08695652173913043,
+      "post_stack_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 0.0,
+      "post_stack_weighted_exit_delta_cents": -160.0,
+      "post_stack_weighted_exit_net_cents": 454.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows"
+      ],
+      "strict_forward": true
+    },
+    {
+      "candidate": "diagnostic_entry_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 56,
+      "diagnostic_weighted_exit_delta_cents": 212.5,
+      "diagnostic_weighted_exit_net_cents": 1270.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9715189873417721,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 788.5,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "book_gap",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 56,
+      "diagnostic_weighted_exit_delta_cents": 212.5,
+      "diagnostic_weighted_exit_net_cents": 1270.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9707792207792207,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 738.5,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "book_gap",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_half_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 56,
+      "diagnostic_weighted_exit_delta_cents": 189.0,
+      "diagnostic_weighted_exit_net_cents": 1240.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9810126582278481,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 765.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "book_gap",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_half_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 56,
+      "diagnostic_weighted_exit_delta_cents": 189.0,
+      "diagnostic_weighted_exit_net_cents": 1240.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9805194805194806,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 715.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "book_gap",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_control_no_shrink_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 56,
+      "diagnostic_weighted_exit_delta_cents": 142.0,
+      "diagnostic_weighted_exit_net_cents": 1180.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 1.0,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 718.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "book_gap",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_control_no_shrink_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 56,
+      "diagnostic_weighted_exit_delta_cents": 142.0,
+      "diagnostic_weighted_exit_net_cents": 1180.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 1.0,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 6,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 668.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "book_gap",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 30,
+      "diagnostic_weighted_exit_delta_cents": 124.5,
+      "diagnostic_weighted_exit_net_cents": 464.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9521276595744681,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 381.5,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "book_gap",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_half_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 30,
+      "diagnostic_weighted_exit_delta_cents": 101.0,
+      "diagnostic_weighted_exit_net_cents": 434.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9680851063829787,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 358.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "book_gap",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 25,
+      "diagnostic_weighted_exit_delta_cents": 100.5,
+      "diagnostic_weighted_exit_net_cents": 378.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.94375,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 274.5,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "book_gap",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_control_no_shrink_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 30,
+      "diagnostic_weighted_exit_delta_cents": 54.0,
+      "diagnostic_weighted_exit_net_cents": 374.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 1.0,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 311.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "book_gap",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_half_midprice_boundary_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 25,
+      "diagnostic_weighted_exit_delta_cents": 77.0,
+      "diagnostic_weighted_exit_net_cents": 348.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.9625,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 251.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "book_gap",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_control_no_shrink_book_gap_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 25,
+      "diagnostic_weighted_exit_delta_cents": 30.0,
+      "diagnostic_weighted_exit_net_cents": 288.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 1.0,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 204.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "book_gap",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 60.0,
+      "post_stack_weighted_exit_delta_cents": 72.0,
+      "post_stack_weighted_exit_net_cents": 240.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_quarter_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 323.5,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9715189873417721,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 788.5,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_quarter_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 323.5,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9707792207792207,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 738.5,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_quarter_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 323.5,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9521276595744681,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 381.5,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_quarter_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 323.5,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.94375,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 274.5,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_half_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 317.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9810126582278481,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 765.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_half_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 317.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9805194805194806,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 715.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_half_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 317.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9680851063829787,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 358.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_half_midprice_boundary_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 317.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.9625,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 251.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_control_no_shrink_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 304.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 1.0,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 718.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_control_no_shrink_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 304.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 1.0,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 6,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 668.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_control_no_shrink_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 304.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 1.0,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 311.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_control_no_shrink_loss_guard_v1_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 24,
+      "diagnostic_weighted_exit_delta_cents": 94.0,
+      "diagnostic_weighted_exit_net_cents": 304.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 1.0,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 204.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v1",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 2,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 90.0,
+      "post_stack_weighted_exit_delta_cents": 42.0,
+      "post_stack_weighted_exit_net_cents": 210.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 355.5,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9715189873417721,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 788.5,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 355.5,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9707792207792207,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 738.5,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 355.5,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9521276595744681,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 381.5,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 355.5,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.94375,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 274.5,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_half_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 349.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9810126582278481,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 765.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_half_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 349.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9805194805194806,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 715.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_half_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 349.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9680851063829787,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 358.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_half_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 349.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.9625,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 251.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_control_no_shrink_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 336.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 1.0,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 718.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_control_no_shrink_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 336.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 1.0,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 6,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 668.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_control_no_shrink_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 336.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 1.0,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 311.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_control_no_shrink_loss_guard_v2_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 23,
+      "diagnostic_weighted_exit_delta_cents": 40.0,
+      "diagnostic_weighted_exit_net_cents": 336.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 1.0,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 204.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v2",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_quarter_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 259.5,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9715189873417721,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 788.5,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_quarter_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 259.5,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9707792207792207,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 738.5,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_quarter_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 259.5,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9521276595744681,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 381.5,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_quarter_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 259.5,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.94375,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 274.5,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_half_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 253.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9810126582278481,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 765.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_half_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 253.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9805194805194806,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 715.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_half_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 253.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9680851063829787,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 358.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_half_midprice_boundary_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 253.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.9625,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 251.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_entry_control_no_shrink_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 240.0,
+      "entry_summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 1.0,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 718.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "diagnostic_bridge_control_no_shrink_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 240.0,
+      "entry_summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 1.0,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 6,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 668.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_feature_freeze_entry_control_no_shrink_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 240.0,
+      "entry_summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 1.0,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 311.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    },
+    {
+      "candidate": "post_soft_frontier_birth_entry_control_no_shrink_loss_guard_v3_weighted_exit_stack",
+      "candidate_blockers": [
+        "entry_lane_not_strict_combo_forward",
+        "entry_reconstructed_share_gt_35pct",
+        "entry_full_loss_cushion_lt_3",
+        "post_stack_joined_exit_rows_lt_30",
+        "post_stack_weighted_exit_full_loss_cushion_lt_3"
+      ],
+      "diagnostic_joined_exit_rows": 15,
+      "diagnostic_weighted_exit_delta_cents": 42.0,
+      "diagnostic_weighted_exit_net_cents": 240.0,
+      "entry_summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 1.0,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 204.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "exit_source": "loss_guard_v3",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink",
+      "post_stack_clean_rows_needed_for_source_gate": 0,
+      "post_stack_full_loss_cushion_estimate": 1,
+      "post_stack_joined_exit_rows": 9,
+      "post_stack_joined_rows_needed_for_sample_gate": 21,
+      "post_stack_reconstructed_share": 0.0,
+      "post_stack_source_counts": {
+        "approved_entry": 9
+      },
+      "post_stack_weighted_cents_needed_for_cushion3": 114.0,
+      "post_stack_weighted_exit_delta_cents": 18.0,
+      "post_stack_weighted_exit_net_cents": 186.0,
+      "runway_blockers": [
+        "needs_post_stack_joined_rows",
+        "needs_weighted_cushion_cents",
+        "entry_lane_not_strict_combo_forward"
+      ],
+      "strict_forward": false
+    }
+  ],
+  "stack_freeze": {
+    "candidate_family": "soft_frontier_midprice_boundary_exit_stack",
+    "entry_parent": "v28_soft_frontier_midprice_boundary_shrink",
+    "exit_parent": "frozen book-gap/loss-guard exit watches",
+    "freeze_ts_utc": "2026-05-07T03:25:40.348957+00:00",
+    "physics": "Entry shrink handles near-boundary mid-price rows by reducing notional instead of cutting coverage. Guarded exits test whether remaining losses are exit-clipping errors rather than entry-selection errors.",
+    "strict_forward_note": "This stack is frozen from its own timestamp. Current rows are overlap diagnostics unless they occur after this freeze with enough matched exit observations."
+  },
+  "stack_generated_at_utc": "2026-05-11T02:47:50.826711+00:00"
+}

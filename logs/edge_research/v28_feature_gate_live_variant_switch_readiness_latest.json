@@ -1,0 +1,231 @@
+{
+  "active_live_trade_summary": {
+    "completed_round_trips": 0,
+    "confirmed_losses_by_sign": 0,
+    "confirmed_wins_by_sign": 0,
+    "entries_total": 0,
+    "entry_fill_count": 0,
+    "exit_fill_count": 0,
+    "fill_full_count": 0,
+    "gross_cost_basis_cents": 0,
+    "net_pnl_cents": 0,
+    "net_pnl_dollars": 0,
+    "open_positions": 0,
+    "sidecar_live_trade_detected": false
+  },
+  "ask35_broader_frontier_candidate": {
+    "blockers": [
+      "coverage_too_low"
+    ],
+    "coverage_pct": 63.41463414634146,
+    "denominator": 82,
+    "entries": 52,
+    "full_loss_cushion": 5,
+    "losses": 4,
+    "net_cents": 514.0,
+    "reconstructed_share": 0.1346153846153846,
+    "rule": "raw03_recross60_abs85_ask35",
+    "rule_config": {
+      "abs_d_min": 0.85,
+      "ask_min": 0.35,
+      "raw_edge_min": 0.03,
+      "recross_max": 0.6
+    },
+    "settled": 52,
+    "source": "coverage_source_frontier",
+    "wins": 48
+  },
+  "ask65_active_candidate": {
+    "blockers": [
+      "coverage_too_low"
+    ],
+    "coverage_pct": 57.31707317073171,
+    "entries": 47,
+    "full_loss_cushion": 3,
+    "losses": 5,
+    "net_cents": 344.0,
+    "reconstructed_share": 0.0425531914893617,
+    "rule": "post_feature_freeze_entry_raw05_recross60_abs085_ask65",
+    "rule_config": {
+      "abs_d_min": 0.85,
+      "ask_min": 0.65,
+      "raw_edge_min": 0.05,
+      "recross_max": 0.6
+    },
+    "settled": 47,
+    "source": "feature_gate_candidate",
+    "wins": 42
+  },
+  "decision": "ask35_is_better_watch_candidate_not_live_promoted",
+  "decision_reasons": [
+    "ask35_has_higher_post_freeze_net_than_ask65",
+    "ask35_source_quality_is_clean",
+    "ask35_keeps_cheap_tail_floor_above_35c",
+    "coverage_still_below_75pct_so_not_promotable",
+    "active_ask65_live_test_is_not_collecting_fill_data_yet"
+  ],
+  "generated_at_utc": "2026-05-07T18:23:12.226080+00:00",
+  "interpretation": [
+    "ask65 is cleanest but too selective; it currently has no fills.",
+    "ask35 is the best clean broader frontier row but remains below the broad-market coverage gate.",
+    "The current live market had no frontier ask35 counterfactual passes, so switching would not have created a trade in the latest observed window."
+  ],
+  "latest_live_gate_counterfactuals": {
+    "ask55": {
+      "ask_min": 0.55,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.55,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "raw05_recross60_abs085_ask55"
+    },
+    "ask65": {
+      "ask_min": 0.65,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.65,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "raw05_recross60_abs085_ask65"
+    },
+    "frontier_ask35": {
+      "ask_min": 0.35,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.35,
+        "raw_edge_min": 0.03,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "frontier_raw03_recross60_abs85_ask35"
+    },
+    "frontier_ask45": {
+      "ask_min": 0.45,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.45,
+        "raw_edge_min": 0.03,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "frontier_raw03_recross60_abs85_ask45"
+    },
+    "no_ask": {
+      "ask_min": null,
+      "market_counts": {
+        "KXBTC15M-26MAY071415-15": 3
+      },
+      "markets": [
+        "KXBTC15M-26MAY071415-15"
+      ],
+      "pass_count": 3,
+      "recent_examples": [
+        {
+          "abs_d": 0.878728,
+          "ask": 0.13,
+          "book_age_ms": 6359.0,
+          "btc_age_ms": 16.0,
+          "depth": 54,
+          "edge_cents": 4.463176,
+          "market": "KXBTC15M-26MAY071415-15",
+          "p_side": 0.184632,
+          "raw_edge_prob": 0.054632,
+          "reason": "book_stale",
+          "recross": 0.279889,
+          "side": "no",
+          "ts_wall": "2026-05-07T18:08:23.758666+00:00"
+        },
+        {
+          "abs_d": 1.168573,
+          "ask": 0.01,
+          "book_age_ms": 625.0,
+          "btc_age_ms": 16.0,
+          "depth": 3830,
+          "edge_cents": 9.274723,
+          "market": "KXBTC15M-26MAY071415-15",
+          "p_side": 0.112747,
+          "raw_edge_prob": 0.102747,
+          "reason": "time_window",
+          "recross": 0.026362,
+          "side": "no",
+          "ts_wall": "2026-05-07T18:14:10.024325+00:00"
+        },
+        {
+          "abs_d": 1.504395,
+          "ask": 0.01,
+          "book_age_ms": 625.0,
+          "btc_age_ms": 625.0,
+          "depth": 7827,
+          "edge_cents": 4.427163,
+          "market": "KXBTC15M-26MAY071415-15",
+          "p_side": 0.064272,
+          "raw_edge_prob": 0.054272,
+          "reason": "time_window",
+          "recross": 0.011299,
+          "side": "no",
+          "ts_wall": "2026-05-07T18:14:30.032702+00:00"
+        }
+      ],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": null,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {
+        "no": 3
+      },
+      "variant": "raw05_recross60_abs085_no_ask"
+    }
+  },
+  "live_action_recommendation": "do_not_switch_without_user_confirmation",
+  "live_lock": {
+    "acquired_at": "2026-05-07T18:08:13.329922+00:00",
+    "pid": 4972,
+    "run_id": "99e01c3f-0a04-4449-b1b4-e6daca2a4580",
+    "strategy_tag": "mushroom_v28_feature_gate_raw05_recross60_abs085_ask65_size1_live"
+  },
+  "no_ask_reference": {
+    "blockers": [
+      "coverage_too_low"
+    ],
+    "coverage_pct": 67.07317073170732,
+    "entries": 55,
+    "full_loss_cushion": 4,
+    "losses": 16,
+    "net_cents": 445.0,
+    "reconstructed_share": 0.2727272727272727,
+    "rule": "post_feature_freeze_entry_raw05_recross60_abs085",
+    "rule_config": {
+      "abs_d_min": 0.85,
+      "ask_min": null,
+      "raw_edge_min": 0.05,
+      "recross_max": 0.6
+    },
+    "settled": 55,
+    "source": "feature_gate_candidate",
+    "wins": 39
+  },
+  "target_coverage_pct": 75.0
+}

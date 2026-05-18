@@ -1,0 +1,170 @@
+{
+  "collection": {
+    "blocker": null,
+    "pending_post_exit_clock_rows": 0,
+    "post_freeze_distinct_markets": 15,
+    "post_freeze_entry_rows": 26,
+    "post_freeze_events": 2842,
+    "settled_post_exit_clock_rows": 26
+  },
+  "decision": "no_live_test",
+  "eligible": [],
+  "evidence_layers": {
+    "diagnostic_pre_own_freeze": {
+      "blockers": [
+        "needs_own_frozen_forward_birth",
+        "live_ready_false"
+      ],
+      "primary": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only",
+      "shared_markets": 27,
+      "sidecar": "post_penalty_birth_entry_cheap_penalty025_rank_only",
+      "sidecar_add_entries": 24,
+      "sidecar_add_net_cents": 177.0,
+      "summary": {
+        "coverage_pct": 82.17821782178217,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "losses": 15,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "source_counts": null,
+        "wins": 68
+      }
+    },
+    "own_freeze_promotion_score": {
+      "note": "Only this layer can make the dual lane live-ready.",
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_dual_lane_own_freeze_watch_latest.json",
+      "strict_forward_only": true
+    },
+    "shadow_feature_preview": {
+      "feature_availability": {
+        "abs_d_sigma": 977,
+        "ask_prob": 977,
+        "raw_edge": 977,
+        "recross_hazard_score": 977
+      },
+      "generated_at_utc": "2026-05-11T03:46:15.775179+00:00",
+      "post_freeze_distinct_markets": 18,
+      "post_freeze_observation_count": 977,
+      "primary_pocket_preview_summary": {
+        "coverage_pct": 88.88888888888889,
+        "entries": 16,
+        "full_loss_cushion": 0,
+        "losses": 12,
+        "net_cents": -40.0,
+        "reconstructed_share": 1.0,
+        "settled": 16,
+        "source_counts": {
+          "rejected_actionable": 16
+        },
+        "wins": 4
+      },
+      "primary_pocket_rule_note": "This is only the observable sizing-pocket proxy. The actual primary lane is selected by the parent-fill composer before this pocket can shrink size.",
+      "scope": "Non-promotional preview over post-freeze shadow approved and rejected-actionable observations. Own-freeze strict scorer remains authoritative for live readiness.",
+      "sidecar_preview_summary": {
+        "coverage_pct": 66.66666666666667,
+        "entries": 12,
+        "full_loss_cushion": 3,
+        "losses": 1,
+        "net_cents": 304.0,
+        "reconstructed_share": 0.0,
+        "settled": 12,
+        "source_counts": {
+          "approved_entry": 12
+        },
+        "wins": 11
+      }
+    },
+    "strict_pre_own_freeze_context": {
+      "blockers": [
+        "needs_own_frozen_forward_birth",
+        "live_ready_false"
+      ],
+      "primary": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary",
+      "shared_markets": 33,
+      "sidecar": "post_penalty_birth_entry_cheap_penalty025_rank_only",
+      "sidecar_add_entries": 18,
+      "sidecar_add_net_cents": 83.0,
+      "summary": {
+        "coverage_pct": 84.4155844155844,
+        "entries": 65,
+        "full_loss_cushion": 4,
+        "losses": 13,
+        "net_cents": 464.5,
+        "reconstructed_share": 0.3384615384615385,
+        "settled": 65,
+        "source_counts": null,
+        "wins": 51
+      }
+    }
+  },
+  "freeze_local_time": "2026-05-07T09:00:17.363339-04:00",
+  "freeze_ts_utc": "2026-05-07T13:00:17.363339+00:00",
+  "generated_at_utc": "2026-05-11T03:47:38.018343+00:00",
+  "interpretation": [
+    "This is the dual-lane-only readiness gate.",
+    "Pre-own-freeze rows explain why the dual lane was created but cannot prove live readiness.",
+    "The shadow feature preview checks collection health only; it is not promotion evidence.",
+    "Diagnostic dual-lane PnL is not promotion evidence; only own-freeze rows count.",
+    "The global controlled live-test gate remains the final arbiter before any live trade test."
+  ],
+  "live_baseline_cents": -255.98999999999998,
+  "next_action": "Review missing score gates on the own-freeze union rows.",
+  "requirements": {
+    "coverage_max_pct": 90.0,
+    "coverage_min_pct": 75.0,
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30,
+    "must_beat_live_baseline_cents": -255.98999999999998
+  },
+  "sample_clock": {
+    "earliest_min_sample_local_time": "2026-05-07T16:30:17.363339-04:00",
+    "earliest_min_sample_utc": "2026-05-07T20:30:17.363339+00:00",
+    "possible_market_windows_since_freeze": 347,
+    "windows_remaining_to_min_sample": 0
+  },
+  "unions": [
+    {
+      "coverage_pct": 77.77777777777777,
+      "delta_vs_live_cents": 304.99,
+      "full_loss_cushion": 0,
+      "live_ready": false,
+      "losses": 2,
+      "missing_gates": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "net_cents": 49.0,
+      "policy": "post_dual_union_birth_entry_cheap_penalty025_rank_only",
+      "reconstructed_share": 0.14285714285714285,
+      "settled": 14,
+      "shared_markets": 0,
+      "sidecar_add_entries": 0,
+      "sidecar_add_net_cents": 0,
+      "strict_forward": true,
+      "wins": 12
+    },
+    {
+      "coverage_pct": 77.77777777777777,
+      "delta_vs_live_cents": 304.99,
+      "full_loss_cushion": 0,
+      "live_ready": false,
+      "losses": 2,
+      "missing_gates": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "net_cents": 49.0,
+      "policy": "post_dual_union_birth_bridge_cheap_penalty025_rank_only",
+      "reconstructed_share": 0.14285714285714285,
+      "settled": 14,
+      "shared_markets": 0,
+      "sidecar_add_entries": 0,
+      "sidecar_add_net_cents": 0,
+      "strict_forward": true,
+      "wins": 12
+    }
+  ]
+}

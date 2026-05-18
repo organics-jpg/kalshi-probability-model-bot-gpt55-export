@@ -1,0 +1,9 @@
+{
+  "candidate": "suppress_soft_gap15_or_p_hold75",
+  "freeze_ts_utc": "2026-05-06T08:46:39.207330+00:00",
+  "gap_floor": 0.15,
+  "p_hold_floor": 0.75,
+  "physics": "Soft exits are allowed to be noisy spread/turbulence events; collapse exits remain operational/model risk exits.",
+  "rule": "If exit reason is mushroom_v28_exit_value_over_hold or mushroom_v28_probability_reduce, hold to settlement when p_hold - exit_bid >= 0.15 or p_hold >= 0.75; otherwise keep current v28 exit. Do not suppress probability_collapse_full.",
+  "source_artifact": "v28_exit_book_gap_candidates_latest.json"
+}

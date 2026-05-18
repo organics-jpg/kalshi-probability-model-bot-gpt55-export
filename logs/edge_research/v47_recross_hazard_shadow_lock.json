@@ -1,0 +1,36 @@
+{
+  "base_model": "v38_long60_antipersist",
+  "created_utc": "2026-05-05T06:19:27.463102+00:00",
+  "entry": {
+    "ask_cap_cents": 100.0,
+    "ask_floor_cents": 1.0,
+    "edge_floor_cents": 0.0,
+    "max_seconds_to_close": 600.0,
+    "min_seconds_to_close": 0.0,
+    "p_side_floor": 0.65
+  },
+  "exit": {
+    "probability_floor": 0.54
+  },
+  "latent_state": {
+    "book_weight": 0.9,
+    "edge_floor_cents": -2.0,
+    "edge_hole_high": 20.0,
+    "edge_hole_low": 8.0,
+    "max_seconds_to_close": 600.0,
+    "min_seconds_to_close": 60.0,
+    "p_side_floor": 0.65,
+    "posterior": "book_blend"
+  },
+  "lock_id": "v47_recross_hazard_shadow_v1",
+  "model_defined_utc": "2026-05-05T06:19:27.463102+00:00",
+  "policy": "v47_recross_sigma1_v3cap68_edge0_p65_stc0_600_prob54",
+  "purpose": "Strict-forward shadow validation of v47 re-cross hazard FV candidate.",
+  "recross_hazard": {
+    "seconds_to_close_max": 600.0,
+    "seconds_to_close_min": 0.0,
+    "selected_p_side_cap": 0.68,
+    "side_margin_sigma15_max": 1.0,
+    "side_velocity_3m_min_dps": 0.5
+  }
+}

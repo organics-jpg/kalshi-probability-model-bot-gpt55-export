@@ -1,0 +1,172 @@
+{
+  "generated_at_utc": "2026-05-07T18:29:13.386015+00:00",
+  "interpretation": [
+    "This watch starts from its own freeze timestamp; pre-freeze omitted-split strength is diagnostic only.",
+    "post_addon_watch_entry: combo settled 0, coverage None%, net 0c, recon None, blockers ['settled_lt_30', 'coverage_too_low', 'net_not_positive', 'full_loss_cushion_lt_3']; addon-only settled 0, net 0c.",
+    "post_addon_watch_bridge: combo settled 0, coverage None%, net 0c, recon None, blockers ['settled_lt_30', 'coverage_too_low', 'net_not_positive', 'full_loss_cushion_lt_3']; addon-only settled 0, net 0c."
+  ],
+  "lanes": [
+    {
+      "freeze_ts": "2026-05-07T18:27:58.644953+00:00",
+      "future_denominator": 0,
+      "lane": "post_addon_watch_entry",
+      "variants": [
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "net_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_addon_watch_entry_base_ask35",
+          "full_loss_cushion_estimate": 0,
+          "reconstructed_share": null,
+          "rows": [],
+          "source_counts": {},
+          "summary": {
+            "avg_net_cents": null,
+            "coverage_pct": null,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0,
+            "settled": 0,
+            "wins": 0
+          }
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "net_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_addon_watch_entry_ask35_plus_midprice_high_edge_addon",
+          "full_loss_cushion_estimate": 0,
+          "reconstructed_share": null,
+          "rows": [],
+          "source_counts": {},
+          "summary": {
+            "avg_net_cents": null,
+            "coverage_pct": null,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0,
+            "settled": 0,
+            "wins": 0
+          }
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "net_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_addon_watch_entry_addon_only_component",
+          "full_loss_cushion_estimate": 0,
+          "reconstructed_share": null,
+          "rows": [],
+          "source_counts": {},
+          "summary": {
+            "avg_net_cents": null,
+            "coverage_pct": null,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0,
+            "settled": 0,
+            "wins": 0
+          }
+        }
+      ]
+    },
+    {
+      "freeze_ts": "2026-05-07T18:27:58.644953+00:00",
+      "future_denominator": 0,
+      "lane": "post_addon_watch_bridge",
+      "variants": [
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "net_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_addon_watch_bridge_base_ask35",
+          "full_loss_cushion_estimate": 0,
+          "reconstructed_share": null,
+          "rows": [],
+          "source_counts": {},
+          "summary": {
+            "avg_net_cents": null,
+            "coverage_pct": null,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0,
+            "settled": 0,
+            "wins": 0
+          }
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "net_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_addon_watch_bridge_ask35_plus_midprice_high_edge_addon",
+          "full_loss_cushion_estimate": 0,
+          "reconstructed_share": null,
+          "rows": [],
+          "source_counts": {},
+          "summary": {
+            "avg_net_cents": null,
+            "coverage_pct": null,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0,
+            "settled": 0,
+            "wins": 0
+          }
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "net_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_addon_watch_bridge_addon_only_component",
+          "full_loss_cushion_estimate": 0,
+          "reconstructed_share": null,
+          "rows": [],
+          "source_counts": {},
+          "summary": {
+            "avg_net_cents": null,
+            "coverage_pct": null,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0,
+            "settled": 0,
+            "wins": 0
+          }
+        }
+      ]
+    }
+  ],
+  "state": {
+    "addon_rule": {
+      "abs_d_max": 0.85,
+      "ask_min": 0.4,
+      "raw_edge_min": 0.1
+    },
+    "base_rule": {
+      "abs_d_min": 0.85,
+      "ask_min": 0.35,
+      "raw_edge_min": 0.03,
+      "recross_max": 0.6
+    },
+    "candidate_family": "feature_gate_ask35_addon_watch",
+    "freeze_ts_utc": "2026-05-07T18:27:58.644953+00:00",
+    "origin": "Ask35 frontier omitted-row split; diagnostic add-on requires own post-birth evidence."
+  }
+}

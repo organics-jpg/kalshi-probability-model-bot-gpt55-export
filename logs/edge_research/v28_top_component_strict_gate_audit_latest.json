@@ -1,0 +1,512 @@
+{
+  "best_gate_distance_row": {
+    "blockers": [
+      "does_not_beat_refreshed_live_baseline",
+      "exit_clock_join_missing",
+      "full_loss_cushion_lt_3",
+      "settled_lt_30"
+    ],
+    "coverage_pct": 75.0,
+    "delta_vs_live_cents": -1167.0,
+    "entries": 21,
+    "full_loss_cushion": 1,
+    "harmful_suppressed": null,
+    "helpful_suppressed": null,
+    "label": "post_parent_fill_child_birth_exit_child_only_control",
+    "live_review_ready": false,
+    "losses": 2,
+    "net_cents": 194.0,
+    "reconstructed_share": 0.23809523809523808,
+    "settled": 21,
+    "source_gate_row_margin": 2,
+    "wins": 19
+  },
+  "diagnostic_blueprints": {
+    "mix_best": {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 354.5,
+      "diagnostic_prefreeze": true,
+      "entries": 76,
+      "full_loss_cushion": 17,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 33,
+      "label": "rescue_drop15_plus_ask_parent_fill_to75",
+      "live_review_ready": false,
+      "losses": 11,
+      "net_cents": 1715.5,
+      "reconstructed_share": 0.34210526315789475,
+      "settled": 76,
+      "source_gate_row_margin": 0,
+      "wins": 65
+    },
+    "parent_fill_child_best": {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 872.0,
+      "diagnostic_prefreeze": true,
+      "entries": 76,
+      "full_loss_cushion": 22,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+      "live_review_ready": false,
+      "losses": 9,
+      "net_cents": 2233.0,
+      "reconstructed_share": 0.34210526315789475,
+      "settled": 76,
+      "source_gate_row_margin": 0,
+      "wins": 67
+    }
+  },
+  "generated_at_utc": "2026-05-07T23:35:06.698842+00:00",
+  "interpretation": [
+    "Research-only top-component gate audit; no live bot changes or orders.",
+    "Live baseline used for deltas is 1361c from the refreshed live summary.",
+    "The top-component stack remains diagnostic only: strict post-birth evidence is too small and does not beat live.",
+    "The parent portfolio has no settled strict selected rows joined to exit-clock rows, so the exit-rescue mechanism has not been forward-proven in this branch.",
+    "The loss drilldown argues against broad holding: on losses with both marks, holding would worsen losses by -52c."
+  ],
+  "live_net_cents": 1361.0,
+  "live_ready_rows": [],
+  "loss_drilldown": {
+    "by_mode": {
+      "missed_exit_rescue_false_negative": {
+        "net_cents": -198.0,
+        "rows": 3,
+        "source_counts": {
+          "approved_entry": 3
+        },
+        "tag_counts": {
+          "exit_policy_error": 3
+        }
+      },
+      "parent_fill_entry_or_fv_loss": {
+        "net_cents": -225.0,
+        "rows": 5,
+        "source_counts": {
+          "rejected_actionable": 5
+        },
+        "tag_counts": {
+          "entry_timing_or_fv_error": 5,
+          "source_quality_risk": 5
+        }
+      },
+      "true_loser_entry_or_fv_loss": {
+        "net_cents": -110.0,
+        "rows": 4,
+        "source_counts": {
+          "approved_entry": 2,
+          "rejected_actionable": 2
+        },
+        "tag_counts": {
+          "fv_or_entry_error": 4,
+          "source_quality_risk": 2
+        }
+      }
+    },
+    "counterfactual_hold_delta_on_losses_cents": -52.0,
+    "loss_count": 12,
+    "loss_net_cents": -533.0
+  },
+  "promotion_gate_pass_count": 0,
+  "sources": {
+    "live_summary": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\summary.json",
+    "loss_drilldown": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_top_component_loss_cluster_drilldown_latest.json",
+    "mix_portfolio": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_top_component_mix_portfolio_latest.json",
+    "parent_fill_child": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_top_component_parent_fill_repair_child_latest.json"
+  },
+  "strict_forward_diagnostics": {
+    "mix": {
+      "future_denominator": 31,
+      "selected_parent_rows": 27,
+      "selected_pending_rows": 0,
+      "selected_settled_rows": 27,
+      "settled_parent_rows_with_exit_clock": 10,
+      "settled_parent_rows_without_exit_clock": 17,
+      "strict_all_scored_rows": 27
+    },
+    "parent_fill_child": {
+      "future_denominator": 28,
+      "selected_parent_rows": 24,
+      "selected_pending_rows": 0,
+      "selected_settled_rows": 24,
+      "settled_parent_rows_with_exit_clock": 10,
+      "settled_parent_rows_without_exit_clock": 14,
+      "strict_absd_fill_rows": 21
+    }
+  },
+  "strict_rows": [
+    {
+      "blockers": [
+        "coverage_too_low",
+        "does_not_beat_refreshed_live_baseline",
+        "full_loss_cushion_lt_3",
+        "harmful_suppression_present",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 32.25806451612903,
+      "delta_vs_live_cents": -1339.0,
+      "entries": 10,
+      "full_loss_cushion": 0,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 8,
+      "label": "post_birth_rescue_drop15_exit_clock_rows_only",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 22.0,
+      "reconstructed_share": 0.1,
+      "settled": 10,
+      "source_gate_row_margin": 2,
+      "wins": 8
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "full_loss_cushion_lt_3",
+        "harmful_suppression_present",
+        "net_not_positive",
+        "settled_lt_30",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 77.41935483870968,
+      "delta_vs_live_cents": -1409.0,
+      "entries": 24,
+      "full_loss_cushion": 0,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 8,
+      "label": "post_birth_rescue_drop15_plus_observable_parent_fill_to75",
+      "live_review_ready": false,
+      "losses": 6,
+      "net_cents": -48.0,
+      "reconstructed_share": 0.3333333333333333,
+      "settled": 24,
+      "source_gate_row_margin": 0,
+      "wins": 18
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "full_loss_cushion_lt_3",
+        "harmful_suppression_present",
+        "settled_lt_30",
+        "source_gate_margin_lt_2"
+      ],
+      "coverage_pct": 76.66666666666667,
+      "delta_vs_live_cents": -1226.0,
+      "entries": 23,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 8,
+      "label": "post_birth_rescue_drop15_plus_absd_parent_fill_to75",
+      "live_review_ready": false,
+      "losses": 3,
+      "net_cents": 135.0,
+      "reconstructed_share": 0.30434782608695654,
+      "settled": 23,
+      "source_gate_row_margin": 1,
+      "wins": 20
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "full_loss_cushion_lt_3",
+        "harmful_suppression_present",
+        "settled_lt_30",
+        "source_gate_margin_lt_2"
+      ],
+      "coverage_pct": 76.66666666666667,
+      "delta_vs_live_cents": -1273.0,
+      "entries": 23,
+      "full_loss_cushion": 0,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 8,
+      "label": "post_birth_rescue_drop15_plus_recross_parent_fill_to75",
+      "live_review_ready": false,
+      "losses": 4,
+      "net_cents": 88.0,
+      "reconstructed_share": 0.30434782608695654,
+      "settled": 23,
+      "source_gate_row_margin": 1,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "full_loss_cushion_lt_3",
+        "harmful_suppression_present",
+        "settled_lt_30",
+        "source_gate_margin_lt_2"
+      ],
+      "coverage_pct": 76.66666666666667,
+      "delta_vs_live_cents": -1226.0,
+      "entries": 23,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 8,
+      "label": "post_birth_rescue_drop15_plus_ask_parent_fill_to75",
+      "live_review_ready": false,
+      "losses": 3,
+      "net_cents": 135.0,
+      "reconstructed_share": 0.30434782608695654,
+      "settled": 23,
+      "source_gate_row_margin": 1,
+      "wins": 20
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "full_loss_cushion_lt_3",
+        "harmful_suppression_present",
+        "net_not_positive",
+        "row_reconstructed_share_gt_35pct",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 87.09677419354838,
+      "delta_vs_live_cents": -1377.0,
+      "entries": 27,
+      "full_loss_cushion": 0,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 8,
+      "label": "post_birth_rescue_drop15_plus_all_parent_fill",
+      "live_review_ready": false,
+      "losses": 6,
+      "net_cents": -16.0,
+      "reconstructed_share": 0.4074074074074074,
+      "settled": 27,
+      "source_gate_row_margin": -2,
+      "wins": 21
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_exit_child_only_control",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "source_label_diagnostic"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_parent_fill_all_rejected_half",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "source_label_diagnostic"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_parent_fill_all_rejected_quarter",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "source_label_diagnostic"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_mid_confidence_parent_fill_half",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "source_label_diagnostic"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_mid_confidence_parent_fill_quarter",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_half",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "source_label_diagnostic"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_smooth_parent_fill_source_risk",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_parent_fill_mid_absd_ask_notch",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    },
+    {
+      "blockers": [
+        "does_not_beat_refreshed_live_baseline",
+        "exit_clock_join_missing",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_live_cents": -1167.0,
+      "entries": 21,
+      "full_loss_cushion": 1,
+      "harmful_suppressed": null,
+      "helpful_suppressed": null,
+      "label": "post_parent_fill_child_birth_parent_fill_wide_mid_absd_ask_notch",
+      "live_review_ready": false,
+      "losses": 2,
+      "net_cents": 194.0,
+      "reconstructed_share": 0.23809523809523808,
+      "settled": 21,
+      "source_gate_row_margin": 2,
+      "wins": 19
+    }
+  ]
+}

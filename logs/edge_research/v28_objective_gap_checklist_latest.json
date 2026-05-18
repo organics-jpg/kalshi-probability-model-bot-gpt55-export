@@ -1,0 +1,602 @@
+{
+  "achieved": false,
+  "checklist": [
+    {
+      "actual": "Pursue exit-policy validation first, with the top-component soft-frontier delayed-recheck plus parent-fill mix as the newest diagnostic blueprint to freeze/watch. Keep hybrid confidence shrink and hybrid-veto as calibration/warning overlays, keep boundary-clock/feature-gate branches in forward watch, and track the cheap-tail plus mid-price size-shrink overlays until strict rows mature.",
+      "evidence": [
+        "logs\\edge_research\\v28_current_direction_decision_latest.json",
+        "logs\\edge_research\\v28_next_action_triage_latest.json"
+      ],
+      "note": "Current direction ledger and triage are v28-specific.",
+      "passed": true,
+      "requirement": "Research starts from v28 and current v28 artifacts.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "sidecar_blockers": [
+          "research_only",
+          "sidecar_process_running",
+          "live_readiness_artifact_false",
+          "no_order_like_events_seen"
+        ],
+        "sidecar_entries_round_trips_net": [
+          0,
+          0,
+          0
+        ],
+        "sidecar_live_trade_detected": false,
+        "this_report_chain": "research-only; no process control/orders"
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_forward_collection_blocker_audit_latest.json",
+        "logs\\edge_research\\v28_next_action_triage_latest.json"
+      ],
+      "note": "The research reports did not control live processes, but the separate feature-gate size1 sidecar produced a live trade while readiness was false.",
+      "passed": true,
+      "requirement": "Research-only; no candidate live trades or live logic changes.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "candidate_vs_live_generated_at_utc": "2026-05-07T18:33:06.404302+00:00",
+        "live_collection_blockers": [
+          "research_only",
+          "exit_watches_still_need_suppression_density_or_cushion",
+          "feature_gate_sidecar_evidence_separate_from_size2_baseline",
+          "feature_gate_sidecar_no_order_like_events_seen"
+        ],
+        "live_net_cents": 1361
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_forward_collection_blocker_audit_latest.json"
+      ],
+      "note": "Last candidate-vs-live table has a refreshed log baseline, but fresh size2 v28 live collection is blocked by watchdog failure and the shared lock currently points at the feature-gate size1 sidecar.",
+      "passed": false,
+      "requirement": "Refresh and compare against current live-only v28 baseline.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "positive_target_coverage_rows": 582,
+        "strict_positive_target_coverage_rows": 530
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json"
+      ],
+      "note": "Strict-positive rows exist, but none clear every promotion gate.",
+      "passed": true,
+      "requirement": "At least one candidate has strict frozen/post-freeze evidence.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "feature_gate_bridge_settled": 64,
+        "feature_gate_entry_settled": 64,
+        "goal_forward_sample_check": {
+          "actual": 112,
+          "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_overlay_validator_latest.json",
+          "name": "forward_sample_size",
+          "note": "Hard blocker for promotion; small samples are not accepted.",
+          "passed": true,
+          "required": ">=30 settled forward rows"
+        }
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json",
+        "logs\\edge_research\\v28_boundary_clock_feature_gate_candidate_latest.json"
+      ],
+      "note": "Sample size alone is no longer the universal blocker for many lanes.",
+      "passed": true,
+      "requirement": "Candidate has >=30 settled forward rows.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "goal_positive_forward_pnl_check": {
+          "actual": -626.0,
+          "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_overlay_validator_latest.json",
+          "name": "positive_forward_pnl",
+          "note": "Profitability is necessary but not sufficient.",
+          "passed": false,
+          "required": ">0 net cents on forward selected rows"
+        },
+        "positive_candidate_count": 787,
+        "top_positive_target": [
+          {
+            "blockers": [
+              "diagnostic_prefreeze",
+              "source_gate_zero_row_margin"
+            ],
+            "coverage_pct": 75.24752475247524,
+            "delta_vs_live_cents": 872.0,
+            "gate": "top_component_parent_fill_repair_child",
+            "live_ready": false,
+            "net_cents": 2233.0,
+            "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+            "settled": 76,
+            "simulated_share": 0.34210526315789475
+          },
+          {
+            "blockers": [
+              "diagnostic_prefreeze",
+              "source_label_diagnostic",
+              "source_gate_zero_row_margin"
+            ],
+            "coverage_pct": 75.24752475247524,
+            "delta_vs_live_cents": 872.0,
+            "gate": "top_component_parent_fill_repair_child",
+            "live_ready": false,
+            "net_cents": 2233.0,
+            "policy": "diagnostic_mid_confidence_parent_fill_quarter",
+            "settled": 76,
+            "simulated_share": 0.34210526315789475
+          },
+          {
+            "blockers": [
+              "diagnostic_prefreeze",
+              "source_gate_zero_row_margin"
+            ],
+            "coverage_pct": 75.24752475247524,
+            "delta_vs_live_cents": 828.5,
+            "gate": "top_component_parent_fill_repair_child",
+            "live_ready": false,
+            "net_cents": 2189.5,
+            "policy": "diagnostic_observable_mid_confidence_parent_fill_half",
+            "settled": 76,
+            "simulated_share": 0.34210526315789475
+          }
+        ]
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json"
+      ],
+      "note": "Profit exists in many rows, but profitability alone is not sufficient.",
+      "passed": true,
+      "requirement": "Candidate is profitable after fees.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "best_joint_feature_gate_clean_rows_needed_for_coverage_and_source": 7,
+        "feature_gate_bridge_coverage_pct": 78.04878048780488,
+        "feature_gate_entry_coverage_pct": 78.04878048780488,
+        "target_coverage_positive_count": 582
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_boundary_clock_feature_gate_candidate_latest.json",
+        "logs\\edge_research\\v28_feature_gate_joint_gate_gap_audit_latest.json"
+      ],
+      "note": "Some rows clear target coverage, but target-coverage rows still fail other gates; raw05-style near-promotion variants remain source/cushion/coverage constrained.",
+      "passed": true,
+      "requirement": "Broad-entry coverage is roughly 75-90%.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "feature_gate_bridge_reconstructed_share": 0.390625,
+        "feature_gate_entry_reconstructed_share": 0.390625,
+        "feature_gate_joint_best_source_gap": {
+          "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+          "clean_rows_needed_for_source_gate": 0,
+          "joint_blockers": [
+            "coverage_too_low",
+            "does_not_beat_live_snapshot",
+            "fresh_v28_live_collection_unhealthy"
+          ],
+          "reconstructed_share": 0.2765957446808511
+        },
+        "top_blocker_count_source_share_high": 102
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json",
+        "logs\\edge_research\\v28_boundary_clock_feature_gate_candidate_latest.json",
+        "logs\\edge_research\\v28_feature_gate_joint_gate_gap_audit_latest.json",
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json"
+      ],
+      "note": "Source quality remains a recurring active blocker; feature-gate raw05 is clean enough but under-covered.",
+      "passed": false,
+      "requirement": "Reconstructed/rejected-actionable share <=35%.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "candidate_blocker_full_loss_cushion_lt_3": 257,
+        "feature_gate_bridge_cushion": 3,
+        "feature_gate_entry_cushion": 3,
+        "feature_gate_joint_best_cents_needed_for_cushion3": 0.0
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_boundary_clock_feature_gate_candidate_latest.json",
+        "logs\\edge_research\\v28_feature_gate_joint_gate_gap_audit_latest.json",
+        "logs\\edge_research\\v28_exit_policy_watch_dashboard_latest.json",
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json"
+      ],
+      "note": "Some narrow/diagnostic rows have cushion, but broad/live-ready candidates still fail fragility gates.",
+      "passed": false,
+      "requirement": "Full-loss cushion >=3.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "candidate_table_live_ready_rows": [
+          {
+            "blockers": [],
+            "coverage_pct": null,
+            "delta_vs_live_cents": -1011.0,
+            "gate": "approved_entry_book_raw_blend_fv",
+            "live_ready": true,
+            "net_cents": 350.0,
+            "policy": "book_raw_blend_alpha_0p50",
+            "settled": 52,
+            "simulated_share": null
+          }
+        ],
+        "goal_live_readiness_check": {
+          "actual": false,
+          "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_trade_readiness_latest.json",
+          "name": "live_readiness_gate",
+          "note": "Must remain false until sample, calibration, coverage, and risk blockers clear.",
+          "passed": false,
+          "required": "any_live_ready true only after all blockers clear"
+        },
+        "live_ready_count": 1,
+        "readiness_any_live_ready": false
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_live_trade_readiness_latest.json",
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json"
+      ],
+      "note": "Hard blocker: the live-readiness artifact and goal audit still say the readiness gate is false; candidate-table live_ready rows are not sufficient by themselves.",
+      "passed": false,
+      "requirement": "Live readiness gate passes.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "closest_exit_watches": [
+          {
+            "blockers": [
+              "suppressed_decisions_lt_30"
+            ],
+            "delta_vs_current_cents": 242.0,
+            "lane": "book_gap_loss_guard",
+            "loss_control_cost_cents": 0.0,
+            "settled": 59,
+            "status": "forward_positive_under_review",
+            "suppressed_exits": 17
+          },
+          {
+            "blockers": [
+              "suppressed_decisions_lt_30"
+            ],
+            "delta_vs_current_cents": 242.0,
+            "lane": "common_clock_strict_forward_v1",
+            "loss_control_cost_cents": 0.0,
+            "settled": 59,
+            "status": "forward_positive_under_review",
+            "suppressed_exits": 17
+          },
+          {
+            "blockers": [
+              "suppressed_decisions_lt_30"
+            ],
+            "delta_vs_current_cents": 242.0,
+            "lane": "common_clock_strict_forward_v2",
+            "loss_control_cost_cents": 0.0,
+            "settled": 58,
+            "status": "forward_positive_under_review",
+            "suppressed_exits": 17
+          },
+          {
+            "blockers": [
+              "suppressed_decisions_lt_30"
+            ],
+            "delta_vs_current_cents": 214.0,
+            "lane": "common_clock_strict_forward_v3",
+            "loss_control_cost_cents": 0.0,
+            "settled": 46,
+            "status": "forward_positive_under_review",
+            "suppressed_exits": 13
+          },
+          {
+            "blockers": [
+              "settled_lt_30",
+              "selected_side_live_overlap_only",
+              "hold_to_settlement_assumption",
+              "not_live_bot_logic"
+            ],
+            "delta_vs_current_cents": 200.00000000000006,
+            "lane": "feature_gate_value_exit",
+            "loss_control_cost_cents": 0.0,
+            "settled": 14,
+            "status": "positive_but_under_sample",
+            "suppressed_exits": 5
+          }
+        ],
+        "exit_dashboard_status_counts": {
+          "blocked_loss_control_cost": 9,
+          "blocked_net_not_positive": 2,
+          "forward_positive_under_review": 10,
+          "not_positive_or_under_sample": 1,
+          "positive_but_under_sample": 4,
+          "waiting_no_post_freeze_rows": 1,
+          "waiting_no_suppressed_exits": 2
+        }
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_exit_policy_watch_dashboard_latest.json",
+        "logs\\edge_research\\v28_next_action_triage_latest.json"
+      ],
+      "note": "Closest exit watches are positive but still under suppression density/cushion, while broader suppressors show loss-control cost.",
+      "passed": false,
+      "requirement": "Exit/state repairs reduce loss-count churn without false-hold damage.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "goal_missing_count": 8,
+        "top_blocker_families": {
+          "calibration": 83,
+          "coverage_high": 53,
+          "coverage_low": 115,
+          "live_evidence_quality": 50,
+          "other": 2524,
+          "profitability": 238,
+          "risk_stop": 88,
+          "sample_size": 202
+        },
+        "top_global_blockers": {
+          "brier_not_better_than_raw": 12,
+          "child_delta_vs_parent_not_positive": 1,
+          "child_loss_control_cost_negative": 1,
+          "child_suppressed_decisions_lt_30": 1,
+          "confirmation_filter_diagnostic": 40,
+          "confirmed_dual_clock_fill_diagnostic": 7,
+          "control_risk_stop_active": 88,
+          "coverage_outside_target": 45,
+          "coverage_too_high": 15,
+          "coverage_too_low": 67
+        }
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_next_action_triage_latest.json",
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json",
+        "logs\\edge_research\\v28_current_direction_decision_latest.json"
+      ],
+      "note": "Failure classification exists; it has not yet produced a promotable repair.",
+      "passed": true,
+      "requirement": "Physical failure modes are classified and active blockers identified.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "forward_collection_blockers": [
+          "research_only",
+          "exit_watches_still_need_suppression_density_or_cushion",
+          "feature_gate_sidecar_evidence_separate_from_size2_baseline",
+          "feature_gate_sidecar_no_order_like_events_seen"
+        ],
+        "latest_hourly_monitor": "2026-05-07 16:57:16 -04:00 | CHECK_ONLY | restart skipped",
+        "live_collection_healthy": true,
+        "live_lock": {
+          "acquired_at": "2026-05-07T18:08:13.329922+00:00",
+          "pid": 4972,
+          "run_id": "99e01c3f-0a04-4449-b1b4-e6daca2a4580",
+          "strategy_tag": "mushroom_v28_feature_gate_raw05_recross60_abs085_ask65_size1_live"
+        }
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_forward_collection_blocker_audit_latest.json"
+      ],
+      "note": "Research can continue from existing logs, but fresh v28 live collection is blocked until live state is resolved.",
+      "passed": true,
+      "requirement": "Fresh frozen/live evidence can continue collecting.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "blocked_checks": [
+          "broad_market_coverage",
+          "positive_forward_pnl",
+          "brier_interval_better_than_raw",
+          "logloss_interval_better_than_raw",
+          "p70_interval_better_than_raw",
+          "live_evidence_quality",
+          "live_readiness_gate",
+          "candidate_integrity_gate"
+        ],
+        "feature_gate_joint_blockers": [
+          "research_only",
+          "not_promotion_evidence",
+          "fresh_v28_live_collection_unhealthy",
+          "no_feature_gate_variant_clears_joint_gates"
+        ],
+        "fresh_collection_blockers": [
+          "research_only",
+          "exit_watches_still_need_suppression_density_or_cushion",
+          "feature_gate_sidecar_evidence_separate_from_size2_baseline",
+          "feature_gate_sidecar_no_order_like_events_seen"
+        ],
+        "goal_achieved": false,
+        "live_ready_count": 1
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json",
+        "logs\\edge_research\\v28_forward_collection_blocker_audit_latest.json",
+        "logs\\edge_research\\v28_feature_gate_joint_gate_gap_audit_latest.json"
+      ],
+      "note": "This is the decisive completion row: individual gates are partially met, but no row clears sample, net, coverage, source, cushion, live readiness, live-baseline comparison, and fresh collection health together.",
+      "passed": false,
+      "requirement": "All promotion gates pass together for at least one candidate.",
+      "status": "blocked"
+    }
+  ],
+  "generated_at_utc": "2026-05-07T20:58:57.243244+00:00",
+  "next_required_work": [
+    "Resolve v28 live collection health before making fresh live-baseline or forward-collection claims.",
+    "Keep exit/state work first: collect suppression density and false-hold safety for the positive exit watches.",
+    "For boundary-clock feature-gate, do not widen raw03/raw05 thresholds; wait for clean forward rows or freeze a real observable source-quality/size proxy.",
+    "Do not promote any diagnostic row until the live-readiness artifact passes and all promotion gates pass together.",
+    "Treat candidate-table live_ready flags as advisory only; the live-readiness artifact and goal audit are the promotion gate of record."
+  ],
+  "objective": "Improve v28 BTC 15m Kalshi strategy into a physics-backed, evidence-disciplined, broad-enough, live-ready strategy with durable positive risk-adjusted ROI.",
+  "summary": {
+    "candidate_count": 995,
+    "checks_blocked": 6,
+    "checks_passed": 8,
+    "checks_total": 14,
+    "checks_unverified": 0,
+    "goal_audit_checks_passed": 102,
+    "goal_audit_checks_total": 110,
+    "live_collection_healthy": true,
+    "live_ready_count": 1,
+    "positive_candidate_count": 787,
+    "readiness_any_live_ready": false,
+    "target_coverage_positive_count": 582
+  },
+  "top_blocker_counts": {
+    "control_risk_stop_active": 88,
+    "coverage_too_low": 67,
+    "diagnostic_prefreeze": 57,
+    "diagnostic_suppressed_losers_present": 99,
+    "does_not_beat_refreshed_live_baseline": 92,
+    "entry_full_loss_cushion_lt_3": 118,
+    "entry_lane_not_strict_combo_forward": 156,
+    "entry_reconstructed_share_gt_35pct": 227,
+    "full_loss_cushion_lt_3": 257,
+    "live_ready_false": 128,
+    "needs_own_frozen_forward_birth": 78,
+    "net_not_positive": 85,
+    "post_stack_joined_exit_rows_lt_30": 195,
+    "post_stack_suppressed_decisions_lt_30": 120,
+    "post_stack_weighted_exit_full_loss_cushion_lt_3": 156,
+    "reconstructed_share_gt_35pct": 102,
+    "row_reconstructed_share_gt_35pct": 218,
+    "settled_lt_30": 316,
+    "simulated_share_gt_35pct": 503,
+    "suppressed_decisions_lt_30": 65
+  },
+  "top_positive_target_candidates": [
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 872.0,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2233.0,
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 872.0,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2233.0,
+      "policy": "diagnostic_mid_confidence_parent_fill_quarter",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 828.5,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2189.5,
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_half",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 828.5,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2189.5,
+      "policy": "diagnostic_mid_confidence_parent_fill_half",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 783.7125317272726,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2144.7125317272726,
+      "policy": "diagnostic_parent_fill_wide_mid_absd_ask_notch",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 780.7780395312502,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2141.77803953125,
+      "policy": "diagnostic_parent_fill_mid_absd_ask_notch",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 766.043909253247,
+      "gate": "top_component_parent_fill_repair_child",
+      "live_ready": false,
+      "net_cents": 2127.043909253247,
+      "policy": "diagnostic_smooth_parent_fill_source_risk",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    },
+    {
+      "blockers": [
+        "diagnostic_prefreeze"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 741.5,
+      "gate": "top_component_false_negative_rescue_child",
+      "live_ready": false,
+      "net_cents": 2102.5,
+      "policy": "diagnostic_union_rebound",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475
+    }
+  ]
+}

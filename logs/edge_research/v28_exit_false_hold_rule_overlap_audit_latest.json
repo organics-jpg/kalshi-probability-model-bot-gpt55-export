@@ -1,0 +1,327 @@
+{
+  "generated_at_utc": "2026-05-07T11:32:46.495012+00:00",
+  "guardrail_harm_example_count": 2,
+  "inputs": {
+    "false_hold_guardrail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_false_hold_guardrail_bridge_latest.json",
+    "promotion_gate": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_watch_promotion_gate_audit_latest.json"
+  },
+  "interpretation": [
+    "Research-only audit; this does not relax the false-hold guardrail or approve any exit watch.",
+    "A lane with zero current harmful suppressed rows can still be blocked by prior false-hold mechanism risk until it has enough strict suppressions.",
+    "Observed current strict harm is stronger evidence than broad tag overlap; prior-risk-only lanes should keep collecting rather than be promoted."
+  ],
+  "rows": [
+    {
+      "gate_blockers": [
+        "delta_not_positive",
+        "full_loss_cushion_lt_3",
+        "loss_control_cost_negative",
+        "net_not_positive",
+        "suppressed_decisions_lt_30",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "blocked_loss_control_cost",
+      "guardrail_example_overlap": 2,
+      "harmful_delta_cents": -606.0,
+      "harmful_guardrail_example_overlap": 2,
+      "harmful_suppressed": 4,
+      "helpful_suppressed": 19,
+      "lane": "book_gap_suppression",
+      "read": "observed_current_strict_harm",
+      "row_groups": {
+        "top_level_rows": 55
+      },
+      "rows": 55,
+      "settled_rows": 55,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_suppression_latest.json",
+      "suppressed": 24,
+      "suppressed_delta_cents": -165.0,
+      "top_harmful": [
+        {
+          "delta_cents": -180.0,
+          "exit_cents": 90,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": 4.764109,
+          "hold_book_gap": -0.08764099999999997,
+          "market": "KXBTC15M-26MAY062015-15",
+          "p_hold": 0.812359,
+          "side": "yes"
+        },
+        {
+          "delta_cents": -160.0,
+          "exit_cents": 80,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 4.039746,
+          "hold_book_gap": -0.0003970000000000917,
+          "market": "KXBTC15M-26MAY060700-00",
+          "p_hold": 0.799603,
+          "side": "no"
+        },
+        {
+          "delta_cents": -146.0,
+          "exit_cents": 73,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": -0.998969,
+          "hold_book_gap": 0.05998999999999999,
+          "market": "KXBTC15M-26MAY060900-00",
+          "p_hold": 0.78999,
+          "side": "yes"
+        },
+        {
+          "delta_cents": -120.0,
+          "exit_cents": 60,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 6.159273,
+          "hold_book_gap": 0.16840699999999997,
+          "market": "KXBTC15M-26MAY062130-30",
+          "p_hold": 0.768407,
+          "side": "no"
+        }
+      ]
+    },
+    {
+      "gate_blockers": [
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "positive_but_under_sample",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 8,
+      "lane": "book_gap_loss_guard",
+      "read": "guardrail_prior_risk_no_current_strict_harm",
+      "row_groups": {
+        "top_level_rows": 28
+      },
+      "rows": 28,
+      "settled_rows": 28,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_loss_guard_latest.json",
+      "suppressed": 8,
+      "suppressed_delta_cents": 76.0,
+      "top_harmful": []
+    },
+    {
+      "gate_blockers": [
+        "delta_not_positive",
+        "full_loss_cushion_lt_3",
+        "net_not_positive",
+        "rule_not_firing_yet",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30"
+      ],
+      "gate_false_hold_guard": false,
+      "gate_read": "collecting_rule_not_firing",
+      "gate_status": "blocked_net_not_positive",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 1,
+      "lane": "book_gap_loss_guard_v2",
+      "read": "current_strict_suppression_clean_but_immature",
+      "row_groups": {
+        "top_level_rows": 27
+      },
+      "rows": 27,
+      "settled_rows": 27,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_loss_guard_v2_latest.json",
+      "suppressed": 1,
+      "suppressed_delta_cents": 22.0,
+      "top_harmful": []
+    },
+    {
+      "gate_blockers": [
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30"
+      ],
+      "gate_false_hold_guard": false,
+      "gate_read": "immature_sample_or_density",
+      "gate_status": "positive_but_under_sample",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 2,
+      "lane": "book_gap_loss_guard_v3",
+      "read": "current_strict_suppression_clean_but_immature",
+      "row_groups": {
+        "top_level_rows": 15
+      },
+      "rows": 15,
+      "settled_rows": 15,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_loss_guard_v3_latest.json",
+      "suppressed": 2,
+      "suppressed_delta_cents": 24.0,
+      "top_harmful": []
+    },
+    {
+      "gate_blockers": [
+        "delta_not_positive",
+        "full_loss_cushion_lt_3",
+        "loss_control_cost_negative",
+        "net_not_positive",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "suppressed_losers_present",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "blocked_loss_control_cost",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 0,
+      "lane": "book_gap_value_only",
+      "read": "guardrail_prior_risk_no_current_strict_harm",
+      "row_groups": {},
+      "rows": 0,
+      "settled_rows": 0,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_value_only_latest.json",
+      "suppressed": 0,
+      "suppressed_delta_cents": 0,
+      "top_harmful": []
+    },
+    {
+      "gate_blockers": [
+        "delta_not_positive",
+        "full_loss_cushion_lt_3",
+        "loss_control_cost_negative",
+        "net_not_positive",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "blocked_loss_control_cost",
+      "guardrail_example_overlap": 2,
+      "harmful_delta_cents": -300.0,
+      "harmful_guardrail_example_overlap": 2,
+      "harmful_suppressed": 2,
+      "helpful_suppressed": 6,
+      "lane": "dual_exit_book_gap_else_reduce",
+      "read": "observed_current_strict_harm",
+      "row_groups": {
+        "top_level_rows": 25
+      },
+      "rows": 25,
+      "settled_rows": 25,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_dual_exit_book_gap_else_reduce_latest.json",
+      "suppressed": 8,
+      "suppressed_delta_cents": -242.0,
+      "top_harmful": [
+        {
+          "delta_cents": -180.0,
+          "exit_cents": 90,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": 4.764109,
+          "hold_book_gap": -0.08764099999999997,
+          "market": "KXBTC15M-26MAY062015-15",
+          "p_hold": 0.812359,
+          "side": "yes"
+        },
+        {
+          "delta_cents": -120.0,
+          "exit_cents": 60,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 6.159273,
+          "hold_book_gap": 0.16840699999999997,
+          "market": "KXBTC15M-26MAY062130-30",
+          "p_hold": 0.768407,
+          "side": "no"
+        }
+      ]
+    },
+    {
+      "gate_blockers": [
+        "delta_not_positive",
+        "full_loss_cushion_lt_3",
+        "loss_control_cost_negative",
+        "net_not_positive",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "suppressed_losers_present",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "blocked_loss_control_cost",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 0,
+      "lane": "reduce_geometry_relaxed",
+      "read": "guardrail_prior_risk_no_current_strict_harm",
+      "row_groups": {},
+      "rows": 0,
+      "settled_rows": 0,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_geometry_relaxed_watch_latest.json",
+      "suppressed": 0,
+      "suppressed_delta_cents": 0,
+      "top_harmful": []
+    },
+    {
+      "gate_blockers": [
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "positive_but_under_sample",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 0,
+      "lane": "exit_shallow_drawdown",
+      "read": "guardrail_prior_risk_no_current_strict_harm",
+      "row_groups": {},
+      "rows": 0,
+      "settled_rows": 0,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_shallow_drawdown_watch_latest.json",
+      "suppressed": 0,
+      "suppressed_delta_cents": 0,
+      "top_harmful": []
+    },
+    {
+      "gate_blockers": [
+        "delta_not_positive",
+        "full_loss_cushion_lt_3",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "strict_false_hold_guardrail_unresolved"
+      ],
+      "gate_false_hold_guard": true,
+      "gate_read": "blocked_false_hold_guardrail",
+      "gate_status": "not_positive_or_under_sample",
+      "guardrail_example_overlap": 0,
+      "harmful_delta_cents": 0,
+      "harmful_guardrail_example_overlap": 0,
+      "harmful_suppressed": 0,
+      "helpful_suppressed": 0,
+      "lane": "value_exit_feature_side_guard",
+      "read": "guardrail_prior_risk_no_current_strict_harm",
+      "row_groups": {},
+      "rows": 0,
+      "settled_rows": 0,
+      "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_value_exit_feature_side_guard_latest.json",
+      "suppressed": 0,
+      "suppressed_delta_cents": 0,
+      "top_harmful": []
+    }
+  ]
+}

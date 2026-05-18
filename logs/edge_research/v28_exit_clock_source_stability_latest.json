@@ -1,0 +1,79 @@
+{
+  "blockers": [
+    "exit_clock_source_not_stable_across_repeated_reads"
+  ],
+  "common_key_count": 15,
+  "generated_at_utc": "2026-05-07T17:06:39.991057+00:00",
+  "interpretation": [
+    "This checks the exit-clock source used by common-clock exit reports.",
+    "If repeated reads differ, new watches should use a materialized snapshot or wait until the source settles before freezing a denominator-sensitive rule."
+  ],
+  "max_rows": 137,
+  "min_rows": 71,
+  "row_count_values": [
+    137,
+    71,
+    91,
+    88,
+    100
+  ],
+  "samples": [
+    {
+      "first_key": [
+        "KXBTC15M-26MAY062030-30",
+        "no",
+        "2026-05-07T00:19:56.490438+00:00"
+      ],
+      "last_entry_ts": "2026-05-07T16:24:52.871742+00:00",
+      "rows": 137,
+      "sample_index": 0,
+      "unique_keys": 137
+    },
+    {
+      "first_key": [
+        "KXBTC15M-26MAY071100-00",
+        "yes",
+        "2026-05-07T14:51:41.534441+00:00"
+      ],
+      "last_entry_ts": "2026-05-07T16:24:52.871742+00:00",
+      "rows": 71,
+      "sample_index": 1,
+      "unique_keys": 71
+    },
+    {
+      "first_key": [
+        "KXBTC15M-26MAY061445-45",
+        "no",
+        "2026-05-06T18:33:05.314671+00:00"
+      ],
+      "last_entry_ts": "2026-05-07T16:24:52.871742+00:00",
+      "rows": 91,
+      "sample_index": 2,
+      "unique_keys": 91
+    },
+    {
+      "first_key": [
+        "KXBTC15M-26MAY062030-30",
+        "no",
+        "2026-05-07T00:19:56.490438+00:00"
+      ],
+      "last_entry_ts": "2026-05-07T16:24:52.871742+00:00",
+      "rows": 88,
+      "sample_index": 3,
+      "unique_keys": 88
+    },
+    {
+      "first_key": [
+        "KXBTC15M-26MAY061445-45",
+        "no",
+        "2026-05-06T18:33:05.314671+00:00"
+      ],
+      "last_entry_ts": "2026-05-07T16:24:52.871742+00:00",
+      "rows": 100,
+      "sample_index": 4,
+      "unique_keys": 100
+    }
+  ],
+  "stable_for_new_freeze": false,
+  "union_key_count": 169
+}

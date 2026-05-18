@@ -1,0 +1,12 @@
+{
+  "candidate_family": "soft_frontier_midprice_delayed_recheck_rescue",
+  "entry_lane": "diagnostic_entry",
+  "entry_policy": "diagnostic_entry_quarter_midprice_boundary",
+  "exit_source": "latest",
+  "freeze_ts_utc": "2026-05-07T08:24:03.515891+00:00",
+  "physics": "The base 10c delayed-recheck avoids blind hold-through risk. The 11c rescue admits only one extra false-negative exit seen in diagnostics, while still rejecting the drop12 row that later fell sharply after recheck.",
+  "promotion_note": "This is watch-only until post-birth rows clear the normal live-readiness gates.",
+  "recheck_policy": "delay60_bid_ge60_drop_lte11",
+  "rule": "Broad soft-frontier/mid-price entry; on latest v28 exit, wait 60s and suppress only if held bid remains >=60c with <=11c immediate drop.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only."
+}

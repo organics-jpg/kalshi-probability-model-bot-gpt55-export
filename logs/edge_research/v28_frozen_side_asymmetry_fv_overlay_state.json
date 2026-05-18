@@ -1,0 +1,8 @@
+{
+  "entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T07:52:22.405861+00:00",
+  "physics": "Boundary-clock and mid-confidence NO hesitation are unresolved path states; FV confidence should collapse to coin-flip until the path resolves.",
+  "rule": "if boundary_clock_composite then p=0.50; else if side_asymmetry_no_p60_70_midboundary_midrecross then p=0.50; else p=raw",
+  "source_artifact": "v28_side_asymmetry_fv_overlay_latest.json",
+  "variant": "clock_then_side_no_midboundary_0p00"
+}

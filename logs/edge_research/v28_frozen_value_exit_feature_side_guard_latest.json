@@ -1,0 +1,264 @@
+{
+  "generated_at_utc": "2026-05-11T01:55:00.957220+00:00",
+  "interpretation": [
+    "Research-only frozen watch; no live bot changes or orders.",
+    "Post-birth has 33 rows, feature-side-guard net 388.0c, W/L 21/12.",
+    "The guard is observable, but evidence starts from this watch timestamp and cannot promote until forward rows settle."
+  ],
+  "lanes": [
+    {
+      "label": "diagnostic_prefreeze_context",
+      "strict_forward": false,
+      "summary": {
+        "all_row_feature_class_counts": {
+          "feature_gate_opposite_side": 7,
+          "feature_gate_same_side": 26,
+          "no_feature_gate_row": 54
+        },
+        "blockers": [
+          "exit_overlap_only",
+          "not_live_bot_logic"
+        ],
+        "current_net_cents": 277.0,
+        "feature_class_counts": {
+          "feature_gate_same_side": 10
+        },
+        "feature_side_guard_delta_cents": 106.0,
+        "feature_side_guard_delta_vs_value_only_cents": 56.0,
+        "feature_side_guard_losses": 38,
+        "feature_side_guard_net_cents": 383.0,
+        "feature_side_guard_suppressed_exits": 10,
+        "feature_side_guard_suppressed_feature_class_counts": {
+          "feature_gate_same_side": 10
+        },
+        "feature_side_guard_suppressed_loser_cost_cents": 0,
+        "feature_side_guard_suppressed_loser_markets": [],
+        "feature_side_guard_suppressed_losers": 0,
+        "feature_side_guard_suppressed_winners": 10,
+        "feature_side_guard_wins": 49,
+        "full_loss_cushion_estimate": 3,
+        "live_ready": false,
+        "rows": 87,
+        "suppressed": 10,
+        "suppressed_exits": 10,
+        "suppressed_loser_cost_cents": 0,
+        "suppressed_loser_markets": [],
+        "suppressed_losers": 0,
+        "suppressed_winners": 10,
+        "value_only_delta_cents": 50.0,
+        "value_only_losses": 39,
+        "value_only_net_cents": 327.0,
+        "value_only_suppressed_exits": 25,
+        "value_only_suppressed_feature_class_counts": {
+          "feature_gate_opposite_side": 2,
+          "feature_gate_same_side": 10,
+          "no_feature_gate_row": 13
+        },
+        "value_only_suppressed_loser_cost_cents": -180.0,
+        "value_only_suppressed_loser_markets": [
+          {
+            "current_cents": 8.0,
+            "entry_cents": 86,
+            "entry_ts": "2026-05-07T00:11:50.351010+00:00",
+            "exit_bid_prob": 0.9,
+            "exit_cents": 90,
+            "exit_ts": "2026-05-07T00:12:22.202586+00:00",
+            "fair_drawdown_cents": 4.764109,
+            "feature_class": "feature_gate_opposite_side",
+            "feature_gate_abs_d_sigma": 0.91646,
+            "feature_gate_ask_prob": 0.42,
+            "feature_gate_raw_edge": 0.451622,
+            "feature_gate_recross_hazard_score": 0.09439569910943164,
+            "feature_gate_side": "no",
+            "feature_gate_side_won": true,
+            "feature_gate_source": "approved_entry",
+            "feature_gate_theory_net_cents": 56.0,
+            "feature_side_guard_candidate_cents": 8.0,
+            "feature_side_guard_delta_cents": 0.0,
+            "feature_side_guard_suppressed": false,
+            "hold_book_gap": -0.08764099999999997,
+            "hold_cents": -172.0,
+            "market": "KXBTC15M-26MAY062015-15",
+            "p_hold": 0.812359,
+            "result": "no",
+            "side": "yes",
+            "side_won": false,
+            "source_lane": "diagnostic_from_book_gap_freeze",
+            "value_only_candidate_cents": -172.0,
+            "value_only_delta_cents": -180.0,
+            "value_only_suppressed": true
+          }
+        ],
+        "value_only_suppressed_losers": 1,
+        "value_only_suppressed_winners": 24,
+        "value_only_wins": 48
+      }
+    },
+    {
+      "label": "post_feature_side_guard_birth",
+      "strict_forward": true,
+      "summary": {
+        "all_row_feature_class_counts": {
+          "feature_gate_opposite_side": 5,
+          "feature_gate_same_side": 28
+        },
+        "blockers": [
+          "exit_overlap_only",
+          "not_live_bot_logic"
+        ],
+        "current_net_cents": 450.0,
+        "feature_class_counts": {
+          "feature_gate_same_side": 9
+        },
+        "feature_side_guard_delta_cents": -62.0,
+        "feature_side_guard_delta_vs_value_only_cents": -72.0,
+        "feature_side_guard_losses": 12,
+        "feature_side_guard_net_cents": 388.0,
+        "feature_side_guard_suppressed_exits": 9,
+        "feature_side_guard_suppressed_feature_class_counts": {
+          "feature_gate_same_side": 9
+        },
+        "feature_side_guard_suppressed_loser_cost_cents": -170.0,
+        "feature_side_guard_suppressed_loser_markets": [
+          {
+            "current_cents": 4.0,
+            "entry_cents": 83,
+            "entry_ts": "2026-05-07T14:51:41.534441+00:00",
+            "exit_bid_prob": 0.85,
+            "exit_cents": 85,
+            "exit_ts": "2026-05-07T14:52:49.109312+00:00",
+            "fair_drawdown_cents": -0.675039,
+            "feature_class": "feature_gate_same_side",
+            "feature_gate_abs_d_sigma": 1.010241,
+            "feature_gate_ask_prob": 0.83,
+            "feature_gate_raw_edge": 0.054041000000000006,
+            "feature_gate_recross_hazard_score": 0.30500573389101787,
+            "feature_gate_side": "yes",
+            "feature_gate_side_won": false,
+            "feature_gate_source": "approved_entry",
+            "feature_gate_theory_net_cents": -84.0,
+            "feature_side_guard_candidate_cents": -166.0,
+            "feature_side_guard_delta_cents": -170.0,
+            "feature_side_guard_suppressed": true,
+            "hold_book_gap": -0.013249999999999984,
+            "hold_cents": -166.0,
+            "market": "KXBTC15M-26MAY071100-00",
+            "p_hold": 0.83675,
+            "result": "no",
+            "side": "yes",
+            "side_won": false,
+            "source_lane": "post_value_only_birth",
+            "value_only_candidate_cents": -166.0,
+            "value_only_delta_cents": -170.0,
+            "value_only_suppressed": true
+          }
+        ],
+        "feature_side_guard_suppressed_losers": 1,
+        "feature_side_guard_suppressed_winners": 8,
+        "feature_side_guard_wins": 21,
+        "full_loss_cushion_estimate": 3,
+        "live_ready": false,
+        "rows": 33,
+        "suppressed": 9,
+        "suppressed_exits": 9,
+        "suppressed_loser_cost_cents": -170.0,
+        "suppressed_loser_markets": [
+          {
+            "current_cents": 4.0,
+            "entry_cents": 83,
+            "entry_ts": "2026-05-07T14:51:41.534441+00:00",
+            "exit_bid_prob": 0.85,
+            "exit_cents": 85,
+            "exit_ts": "2026-05-07T14:52:49.109312+00:00",
+            "fair_drawdown_cents": -0.675039,
+            "feature_class": "feature_gate_same_side",
+            "feature_gate_abs_d_sigma": 1.010241,
+            "feature_gate_ask_prob": 0.83,
+            "feature_gate_raw_edge": 0.054041000000000006,
+            "feature_gate_recross_hazard_score": 0.30500573389101787,
+            "feature_gate_side": "yes",
+            "feature_gate_side_won": false,
+            "feature_gate_source": "approved_entry",
+            "feature_gate_theory_net_cents": -84.0,
+            "feature_side_guard_candidate_cents": -166.0,
+            "feature_side_guard_delta_cents": -170.0,
+            "feature_side_guard_suppressed": true,
+            "hold_book_gap": -0.013249999999999984,
+            "hold_cents": -166.0,
+            "market": "KXBTC15M-26MAY071100-00",
+            "p_hold": 0.83675,
+            "result": "no",
+            "side": "yes",
+            "side_won": false,
+            "source_lane": "post_value_only_birth",
+            "value_only_candidate_cents": -166.0,
+            "value_only_delta_cents": -170.0,
+            "value_only_suppressed": true
+          }
+        ],
+        "suppressed_losers": 1,
+        "suppressed_winners": 8,
+        "value_only_delta_cents": 10.0,
+        "value_only_losses": 12,
+        "value_only_net_cents": 460.0,
+        "value_only_suppressed_exits": 12,
+        "value_only_suppressed_feature_class_counts": {
+          "feature_gate_opposite_side": 3,
+          "feature_gate_same_side": 9
+        },
+        "value_only_suppressed_loser_cost_cents": -170.0,
+        "value_only_suppressed_loser_markets": [
+          {
+            "current_cents": 4.0,
+            "entry_cents": 83,
+            "entry_ts": "2026-05-07T14:51:41.534441+00:00",
+            "exit_bid_prob": 0.85,
+            "exit_cents": 85,
+            "exit_ts": "2026-05-07T14:52:49.109312+00:00",
+            "fair_drawdown_cents": -0.675039,
+            "feature_class": "feature_gate_same_side",
+            "feature_gate_abs_d_sigma": 1.010241,
+            "feature_gate_ask_prob": 0.83,
+            "feature_gate_raw_edge": 0.054041000000000006,
+            "feature_gate_recross_hazard_score": 0.30500573389101787,
+            "feature_gate_side": "yes",
+            "feature_gate_side_won": false,
+            "feature_gate_source": "approved_entry",
+            "feature_gate_theory_net_cents": -84.0,
+            "feature_side_guard_candidate_cents": -166.0,
+            "feature_side_guard_delta_cents": -170.0,
+            "feature_side_guard_suppressed": true,
+            "hold_book_gap": -0.013249999999999984,
+            "hold_cents": -166.0,
+            "market": "KXBTC15M-26MAY071100-00",
+            "p_hold": 0.83675,
+            "result": "no",
+            "side": "yes",
+            "side_won": false,
+            "source_lane": "post_value_only_birth",
+            "value_only_candidate_cents": -166.0,
+            "value_only_delta_cents": -170.0,
+            "value_only_suppressed": true
+          }
+        ],
+        "value_only_suppressed_losers": 1,
+        "value_only_suppressed_winners": 11,
+        "value_only_wins": 21
+      }
+    }
+  ],
+  "state": {
+    "candidate": "value_only_gap15_or_p75_feature_gate_same_side",
+    "candidate_family": "value_exit_feature_side_guard",
+    "feature_candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+    "feature_gate_parent": "post_feature_freeze_entry_raw03_recross70_abs075",
+    "freeze_ts_utc": "2026-05-07T07:42:49.442068+00:00",
+    "physics": "Value-over-hold exits look like winner clips when the entry geometry still agrees with the held side. When feature-gate geometry selects the opposite side, suppressing the exit can override a valid loss-control signal.",
+    "primary_candidate": "value_exit_feature_side_guard",
+    "research_only": true,
+    "rule": "Apply the value_only_gap15_or_p75 exit suppression only when the feature-gate selected side for the same market equals the live position side.",
+    "strict_forward_note": "Rows before this timestamp are diagnostic context only.",
+    "value_exit_parent": "value_only_gap15_or_p75",
+    "value_variant": "value_only_gap15_or_p75"
+  }
+}

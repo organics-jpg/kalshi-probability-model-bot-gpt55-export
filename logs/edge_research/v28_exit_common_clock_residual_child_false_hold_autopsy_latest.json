@@ -1,0 +1,246 @@
+{
+  "child_watch_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_common_clock_residual_child_watch_latest.json",
+  "generated_at_utc": "2026-05-07T15:07:13.429995+00:00",
+  "harmful_summary": {
+    "book_gap_band_counts": {
+      "flat_to_neg_1pp": 1,
+      "positive_0_5pp": 1
+    },
+    "exit_price_band_counts": {
+      "70_74": 1,
+      "75_79": 1
+    },
+    "exit_reason_counts": {
+      "mushroom_v28_probability_reduce": 2
+    },
+    "fair_drawdown_band_counts": {
+      "positive": 1,
+      "shallow_negative": 1
+    },
+    "market_counts": {
+      "KXBTC15M-26MAY071015-15": 2
+    },
+    "net_child_delta_cents": -304.0,
+    "p_hold_band_counts": {
+      "75_79": 2
+    },
+    "rows": 2,
+    "same_market_clusters": {
+      "KXBTC15M-26MAY071015-15": 2
+    },
+    "tag_counts": {
+      "book_gap_0_5pp": 1,
+      "book_gap_negative": 1,
+      "child_residual_suppressed": 2,
+      "exitable_at_70_79": 2,
+      "fair_drawdown_positive": 1,
+      "fair_drawdown_shallow": 1,
+      "p_hold_75_79": 2,
+      "probability_reduce": 2,
+      "settlement_loser": 2
+    }
+  },
+  "helpful_summary": {
+    "book_gap_band_counts": {
+      "flat_to_neg_1pp": 1,
+      "negative_lt_1pp": 1
+    },
+    "exit_price_band_counts": {
+      "70_74": 1,
+      "75_79": 1
+    },
+    "exit_reason_counts": {
+      "mushroom_v28_exit_value_over_hold": 1,
+      "mushroom_v28_probability_reduce": 1
+    },
+    "fair_drawdown_band_counts": {
+      "positive": 2
+    },
+    "market_counts": {
+      "KXBTC15M-26MAY070830-30": 1,
+      "KXBTC15M-26MAY071000-00": 1
+    },
+    "net_child_delta_cents": 102.0,
+    "p_hold_band_counts": {
+      "75_79": 1,
+      "lt75": 1
+    },
+    "rows": 2,
+    "same_market_clusters": {},
+    "tag_counts": {
+      "book_gap_negative": 2,
+      "child_residual_suppressed": 2,
+      "exitable_at_70_79": 2,
+      "fair_drawdown_positive": 2,
+      "p_hold_75_79": 1,
+      "p_hold_lt_75": 1,
+      "probability_reduce": 1,
+      "settlement_winner": 2,
+      "value_over_hold": 1
+    }
+  },
+  "interpretation": [
+    "Research-only autopsy; no live bot changes or orders.",
+    "Strict post-child rows 20 settled, 4 child suppressions, helpful/harmful 2/2, child delta -202.0c.",
+    "False holds are concentrated in probability-reduce exits with p_hold 75-79; the harmful rows are a same-market cluster, so the child cannot be treated as a generic clipped-winner repair."
+  ],
+  "path_risk_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_common_clock_residual_child_path_risk_latest.json",
+  "rows": [
+    {
+      "book_gap_band": "flat_to_neg_1pp",
+      "candidate_delta_vs_current_cents": -158.0,
+      "child_delta_vs_parent_cents": -158.0,
+      "current_cents": 2.0,
+      "exit_price_band": "75_79",
+      "exit_price_cents": 79.0,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fair_drawdown_band": "shallow_negative",
+      "fair_drawdown_cents": -0.913001,
+      "hold_book_gap": -0.0008700000000000374,
+      "hold_cents": -156.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "min_unrealized_hold_gross_cents": null,
+      "p_hold": 0.78913,
+      "p_hold_band": "75_79",
+      "path_matched": false,
+      "result": "yes",
+      "side": "no",
+      "side_won": false,
+      "tags": [
+        "child_residual_suppressed",
+        "settlement_loser",
+        "probability_reduce",
+        "p_hold_75_79",
+        "book_gap_negative",
+        "fair_drawdown_shallow",
+        "exitable_at_70_79"
+      ],
+      "worst_adverse_vs_exit_cents": null
+    },
+    {
+      "book_gap_band": "positive_0_5pp",
+      "candidate_delta_vs_current_cents": -146.0,
+      "child_delta_vs_parent_cents": -146.0,
+      "current_cents": -16.0,
+      "exit_price_band": "70_74",
+      "exit_price_cents": 73.0,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fair_drawdown_band": "positive",
+      "fair_drawdown_cents": 4.602013,
+      "hold_book_gap": 0.03398000000000001,
+      "hold_cents": -162.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "min_unrealized_hold_gross_cents": null,
+      "p_hold": 0.76398,
+      "p_hold_band": "75_79",
+      "path_matched": false,
+      "result": "yes",
+      "side": "no",
+      "side_won": false,
+      "tags": [
+        "child_residual_suppressed",
+        "settlement_loser",
+        "probability_reduce",
+        "p_hold_75_79",
+        "book_gap_0_5pp",
+        "fair_drawdown_positive",
+        "exitable_at_70_79"
+      ],
+      "worst_adverse_vs_exit_cents": null
+    },
+    {
+      "book_gap_band": "flat_to_neg_1pp",
+      "candidate_delta_vs_current_cents": 42.0,
+      "child_delta_vs_parent_cents": 42.0,
+      "current_cents": 16.0,
+      "exit_price_band": "75_79",
+      "exit_price_cents": 79.0,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fair_drawdown_band": "positive",
+      "fair_drawdown_cents": 6.863933,
+      "hold_book_gap": -0.008639000000000063,
+      "hold_cents": 58.0,
+      "market": "KXBTC15M-26MAY071000-00",
+      "min_unrealized_hold_gross_cents": null,
+      "p_hold": 0.781361,
+      "p_hold_band": "75_79",
+      "path_matched": false,
+      "result": "no",
+      "side": "no",
+      "side_won": true,
+      "tags": [
+        "child_residual_suppressed",
+        "settlement_winner",
+        "probability_reduce",
+        "p_hold_75_79",
+        "book_gap_negative",
+        "fair_drawdown_positive",
+        "exitable_at_70_79"
+      ],
+      "worst_adverse_vs_exit_cents": null
+    },
+    {
+      "book_gap_band": "negative_lt_1pp",
+      "candidate_delta_vs_current_cents": 60.0,
+      "child_delta_vs_parent_cents": 60.0,
+      "current_cents": -14.0,
+      "exit_price_band": "70_74",
+      "exit_price_cents": 70.0,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fair_drawdown_band": "positive",
+      "fair_drawdown_cents": 15.700151,
+      "hold_book_gap": -0.08700199999999991,
+      "hold_cents": 46.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "min_unrealized_hold_gross_cents": -24.0,
+      "p_hold": 0.612998,
+      "p_hold_band": "lt75",
+      "path_matched": true,
+      "result": "no",
+      "side": "no",
+      "side_won": true,
+      "tags": [
+        "child_residual_suppressed",
+        "settlement_winner",
+        "value_over_hold",
+        "p_hold_lt_75",
+        "book_gap_negative",
+        "fair_drawdown_positive",
+        "exitable_at_70_79"
+      ],
+      "worst_adverse_vs_exit_cents": -10.0
+    }
+  ],
+  "strict_lane_summary": {
+    "autopsy_blockers": [
+      "settled_lt_30",
+      "child_suppressed_decisions_lt_30",
+      "delta_vs_current_not_positive",
+      "child_delta_vs_parent_not_positive",
+      "child_loss_control_cost_negative",
+      "full_loss_cushion_lt_3",
+      "strict_false_holds_present",
+      "same_market_false_hold_cluster",
+      "p_hold_75_79_false_hold_risk",
+      "probability_reduce_false_hold_risk"
+    ],
+    "candidate_net_cents": 190.0,
+    "child_delta_vs_parent_cents": -202.0,
+    "child_harmful": 2,
+    "child_helpful": 2,
+    "child_loss_control_cost_cents": -304.0,
+    "child_suppressed": 4,
+    "current_net_cents": 338.0,
+    "delta_vs_current_cents": -148.0,
+    "full_loss_cushion_estimate": 1,
+    "original_blockers": [
+      "settled_lt_30",
+      "child_suppressed_decisions_lt_30",
+      "delta_vs_current_not_positive",
+      "child_delta_vs_parent_not_positive",
+      "child_loss_control_cost_negative",
+      "full_loss_cushion_lt_3"
+    ],
+    "settled": 20
+  }
+}

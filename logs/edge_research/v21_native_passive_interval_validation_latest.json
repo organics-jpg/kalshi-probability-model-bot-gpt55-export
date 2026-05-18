@@ -1,0 +1,289 @@
+{
+  "diagnostics": {
+    "candle_info": {
+      "end": "2026-05-02T15:36:59.999000+00:00",
+      "rows": 71438,
+      "start": "2026-03-14T00:54:59.999000+00:00"
+    },
+    "outcome_markets": 216,
+    "physics_side_rows": 6446,
+    "raw_side_rows": 6446,
+    "resolved_intervals": 216,
+    "watch_markets": 217
+  },
+  "generated_utc": "20260502_153954Z",
+  "summaries": [
+    {
+      "metrics": {
+        "all": {
+          "accuracy": 0.9787234042553191,
+          "ask_eq_100": 27,
+          "ask_ge_95": 120,
+          "base_markets": 216,
+          "coverage": 0.6527777777777778,
+          "losses": 3,
+          "markets": 141,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 239.448851,
+          "wilson95_lower": 0.9393155223144777,
+          "wins": 138
+        },
+        "holdout": {
+          "accuracy": 1.0,
+          "ask_eq_100": 3,
+          "ask_ge_95": 23,
+          "base_markets": 44,
+          "coverage": 0.6136363636363636,
+          "losses": 0,
+          "markets": 27,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 239.904829,
+          "wilson95_lower": 0.8754449702581327,
+          "wins": 27
+        },
+        "train": {
+          "accuracy": 0.9651162790697675,
+          "ask_eq_100": 20,
+          "ask_ge_95": 72,
+          "base_markets": 129,
+          "coverage": 0.6666666666666666,
+          "losses": 3,
+          "markets": 86,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 239.050554,
+          "wilson95_lower": 0.9023912889743925,
+          "wins": 83
+        },
+        "validation": {
+          "accuracy": 1.0,
+          "ask_eq_100": 4,
+          "ask_ge_95": 25,
+          "base_markets": 43,
+          "coverage": 0.6511627906976745,
+          "losses": 0,
+          "markets": 28,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 239.8587195,
+          "wilson95_lower": 0.8793566952341543,
+          "wins": 28
+        }
+      },
+      "name": "pure_brownian_rv30_adverse15_high_price_20260502_1522",
+      "policy": {
+        "ask_max": 100.0,
+        "chooser": "brownian_p_rv_30m",
+        "gate": "adverse15<=10",
+        "label": "pure=brownian_p_rv_30m; brownian_p_rv_30m>=0.95; ask<=100; sec>=0; adverse15<=10",
+        "min_score": 0.95,
+        "min_seconds_to_close": 0.0
+      },
+      "source_lock": "logs\\edge_research\\locked_interval_pure_physics.json",
+      "target_pass": false,
+      "wilson_pass": false
+    },
+    {
+      "metrics": {
+        "all": {
+          "accuracy": 0.9858156028368794,
+          "ask_eq_100": 30,
+          "ask_ge_95": 122,
+          "base_markets": 216,
+          "coverage": 0.6527777777777778,
+          "losses": 2,
+          "markets": 141,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 239.523162,
+          "wilson95_lower": 0.949760311092732,
+          "wins": 139
+        },
+        "holdout": {
+          "accuracy": 1.0,
+          "ask_eq_100": 3,
+          "ask_ge_95": 22,
+          "base_markets": 44,
+          "coverage": 0.6136363636363636,
+          "losses": 0,
+          "markets": 27,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 239.533196,
+          "wilson95_lower": 0.8754449702581327,
+          "wins": 27
+        },
+        "train": {
+          "accuracy": 0.9764705882352941,
+          "ask_eq_100": 23,
+          "ask_ge_95": 75,
+          "base_markets": 129,
+          "coverage": 0.6589147286821705,
+          "losses": 2,
+          "markets": 85,
+          "median_ask": 99.0,
+          "median_seconds_to_close": 179.957472,
+          "wilson95_lower": 0.9182130031207928,
+          "wins": 83
+        },
+        "validation": {
+          "accuracy": 1.0,
+          "ask_eq_100": 4,
+          "ask_ge_95": 25,
+          "base_markets": 43,
+          "coverage": 0.6744186046511628,
+          "losses": 0,
+          "markets": 29,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 299.245086,
+          "wilson95_lower": 0.8830302015002593,
+          "wins": 29
+        }
+      },
+      "name": "pure_physics_mean_rv15_rv30_high_price_20260502_1522",
+      "policy": {
+        "ask_max": 100.0,
+        "chooser": "score_physics_mean_rv15_rv30",
+        "gate": "none",
+        "label": "pure=score_physics_mean_rv15_rv30; score_physics_mean_rv15_rv30>=0.95; ask<=100; sec>=0",
+        "min_score": 0.95,
+        "min_seconds_to_close": 0.0
+      },
+      "source_lock": "logs\\edge_research\\locked_interval_pure_physics.json",
+      "target_pass": false,
+      "wilson_pass": false
+    },
+    {
+      "metrics": {
+        "all": {
+          "accuracy": 0.9314285714285714,
+          "ask_eq_100": 12,
+          "ask_ge_95": 90,
+          "base_markets": 216,
+          "coverage": 0.8101851851851852,
+          "losses": 12,
+          "markets": 175,
+          "median_ask": 95.0,
+          "median_seconds_to_close": 299.760256,
+          "wilson95_lower": 0.8839808535169714,
+          "wins": 163
+        },
+        "holdout": {
+          "accuracy": 0.8947368421052632,
+          "ask_eq_100": 1,
+          "ask_ge_95": 17,
+          "base_markets": 44,
+          "coverage": 0.8636363636363636,
+          "losses": 4,
+          "markets": 38,
+          "median_ask": 94.0,
+          "median_seconds_to_close": 359.15468599999997,
+          "wilson95_lower": 0.7586947827711269,
+          "wins": 34
+        },
+        "train": {
+          "accuracy": 0.9326923076923077,
+          "ask_eq_100": 11,
+          "ask_ge_95": 59,
+          "base_markets": 129,
+          "coverage": 0.8062015503875969,
+          "losses": 7,
+          "markets": 104,
+          "median_ask": 95.0,
+          "median_seconds_to_close": 299.3300835,
+          "wilson95_lower": 0.8675421323612021,
+          "wins": 97
+        },
+        "validation": {
+          "accuracy": 0.9696969696969697,
+          "ask_eq_100": 0,
+          "ask_ge_95": 14,
+          "base_markets": 43,
+          "coverage": 0.7674418604651163,
+          "losses": 1,
+          "markets": 33,
+          "median_ask": 93.0,
+          "median_seconds_to_close": 359.567132,
+          "wilson95_lower": 0.846812746178811,
+          "wins": 32
+        }
+      },
+      "name": "pure_brownian_rv15_spread4_best_high_coverage_20260502_1522",
+      "policy": {
+        "ask_max": 100.0,
+        "chooser": "brownian_p_rv_15m",
+        "gate": "spread<=4",
+        "label": "pure=brownian_p_rv_15m; brownian_p_rv_15m>=0.9; ask<=100; sec>=0; spread<=4",
+        "min_score": 0.9,
+        "min_seconds_to_close": 0.0
+      },
+      "source_lock": "logs\\edge_research\\locked_interval_pure_physics.json",
+      "target_pass": false,
+      "wilson_pass": false
+    },
+    {
+      "metrics": {
+        "all": {
+          "accuracy": 0.8555555555555555,
+          "ask_eq_100": 0,
+          "ask_ge_95": 4,
+          "base_markets": 216,
+          "coverage": 0.8333333333333334,
+          "losses": 26,
+          "markets": 180,
+          "median_ask": 85.0,
+          "median_seconds_to_close": 539.0997225,
+          "wilson95_lower": 0.7967697562121162,
+          "wins": 154
+        },
+        "holdout": {
+          "accuracy": 0.8571428571428571,
+          "ask_eq_100": 0,
+          "ask_ge_95": 0,
+          "base_markets": 44,
+          "coverage": 0.7954545454545454,
+          "losses": 5,
+          "markets": 35,
+          "median_ask": 85.0,
+          "median_seconds_to_close": 479.868481,
+          "wilson95_lower": 0.7062444591340484,
+          "wins": 30
+        },
+        "train": {
+          "accuracy": 0.8380952380952381,
+          "ask_eq_100": 0,
+          "ask_ge_95": 3,
+          "base_markets": 129,
+          "coverage": 0.813953488372093,
+          "losses": 17,
+          "markets": 105,
+          "median_ask": 85.0,
+          "median_seconds_to_close": 539.173829,
+          "wilson95_lower": 0.7559378330310744,
+          "wins": 88
+        },
+        "validation": {
+          "accuracy": 0.9,
+          "ask_eq_100": 0,
+          "ask_ge_95": 1,
+          "base_markets": 43,
+          "coverage": 0.9302325581395349,
+          "losses": 4,
+          "markets": 40,
+          "median_ask": 85.0,
+          "median_seconds_to_close": 539.0529819999999,
+          "wilson95_lower": 0.769482247724777,
+          "wins": 36
+        }
+      },
+      "name": "pure_brownian_rv30_economical_adverse15_20260502_1522",
+      "policy": {
+        "ask_max": 95.0,
+        "chooser": "brownian_p_rv_30m",
+        "gate": "adverse15<=10",
+        "label": "pure=brownian_p_rv_30m; brownian_p_rv_30m>=0.75; ask<=95; sec>=60; adverse15<=10",
+        "min_score": 0.75,
+        "min_seconds_to_close": 60.0
+      },
+      "source_lock": "logs\\edge_research\\locked_interval_pure_physics.json",
+      "target_pass": false,
+      "wilson_pass": false
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "best_by_lane": {
+    "post_feature_freeze_bridge": {
+      "avg_cents_needed_per_clean_row_for_cushion": 0.0,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 140.42857142857142,
+      "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+      "cents_needed_for_cushion3": 0.0,
+      "cents_needed_to_match_live_snapshot": 983.0,
+      "clean_rows_needed_for_coverage_and_source": 7,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 65.27777777777777,
+      "drop_risky_losses": {
+        "coverage_pct": 65.27777777777779,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 47,
+        "net_cents": 350.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.2765957446808511,
+        "source_counts": {
+          "approved_entry": 34,
+          "rejected_actionable": 13
+        }
+      },
+      "entries": 47,
+      "entries_needed_for_75pct": 7,
+      "full_loss_cushion": 3,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "coverage_too_low",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_bridge",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 13,
+      "net_cents": 350.0,
+      "original_blockers": [
+        "coverage_too_low"
+      ],
+      "reconstructed_share": 0.2765957446808511,
+      "required_entries_for_75pct": 54,
+      "settled": 41,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 13
+      },
+      "wins": 28
+    },
+    "post_feature_freeze_entry": {
+      "avg_cents_needed_per_clean_row_for_cushion": 0.8571428571428571,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 148.42857142857142,
+      "candidate": "post_feature_freeze_entry_raw05_recross60_abs085",
+      "cents_needed_for_cushion3": 6.0,
+      "cents_needed_to_match_live_snapshot": 1039.0,
+      "clean_rows_needed_for_coverage_and_source": 7,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 65.27777777777777,
+      "drop_risky_losses": {
+        "coverage_pct": 65.27777777777779,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 47,
+        "net_cents": 294.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.2765957446808511,
+        "source_counts": {
+          "approved_entry": 34,
+          "rejected_actionable": 13
+        }
+      },
+      "entries": 47,
+      "entries_needed_for_75pct": 7,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "coverage_too_low",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_entry",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 12,
+      "net_cents": 294.0,
+      "original_blockers": [
+        "coverage_too_low",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.2765957446808511,
+      "required_entries_for_75pct": 54,
+      "settled": 36,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 13
+      },
+      "wins": 24
+    }
+  },
+  "blockers": [
+    "research_only",
+    "not_promotion_evidence",
+    "fresh_v28_live_collection_unhealthy",
+    "no_feature_gate_variant_clears_joint_gates"
+  ],
+  "candidate_vs_live_generated_at_utc": "2026-05-07T16:31:45.290902+00:00",
+  "feature_gate_freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+  "feature_gate_generated_at_utc": "2026-05-07T15:00:39.637007+00:00",
+  "generated_at_utc": "2026-05-07T17:37:08.289216+00:00",
+  "interpretation": [
+    "The current feature-gate branch is not one gate away from promotion; coverage, source share, cushion, and live-baseline gaps interact.",
+    "Raw03-style broad rows buy coverage by adding risky/reconstructed rows and still lack cushion; dropping risky losses fixes source only by breaking coverage.",
+    "Raw05-style rows are cleaner, but they need clean forward rows for coverage and still trail the live snapshot by far more than a normal small-row repair.",
+    "Because v28 live collection is unhealthy, live-baseline deltas are log-snapshot context until the v28 live state is explicitly healthy again."
+  ],
+  "live_collection_blockers": [
+    "research_only",
+    "live_watchdog_restart_failed",
+    "live_lock_not_v28",
+    "no_live_ready_candidate_rows",
+    "exit_watches_still_need_suppression_density_or_cushion"
+  ],
+  "live_collection_healthy": false,
+  "live_snapshot_net_cents": 1333.0,
+  "rows": [
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 0.0,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 140.42857142857142,
+      "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+      "cents_needed_for_cushion3": 0.0,
+      "cents_needed_to_match_live_snapshot": 983.0,
+      "clean_rows_needed_for_coverage_and_source": 7,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 65.27777777777777,
+      "drop_risky_losses": {
+        "coverage_pct": 65.27777777777779,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 47,
+        "net_cents": 350.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.2765957446808511,
+        "source_counts": {
+          "approved_entry": 34,
+          "rejected_actionable": 13
+        }
+      },
+      "entries": 47,
+      "entries_needed_for_75pct": 7,
+      "full_loss_cushion": 3,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "coverage_too_low",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_bridge",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 13,
+      "net_cents": 350.0,
+      "original_blockers": [
+        "coverage_too_low"
+      ],
+      "reconstructed_share": 0.2765957446808511,
+      "required_entries_for_75pct": 54,
+      "settled": 41,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 13
+      },
+      "wins": 28
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 0.8571428571428571,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 148.42857142857142,
+      "candidate": "post_feature_freeze_entry_raw05_recross60_abs085",
+      "cents_needed_for_cushion3": 6.0,
+      "cents_needed_to_match_live_snapshot": 1039.0,
+      "clean_rows_needed_for_coverage_and_source": 7,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 65.27777777777777,
+      "drop_risky_losses": {
+        "coverage_pct": 65.27777777777779,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 47,
+        "net_cents": 294.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.2765957446808511,
+        "source_counts": {
+          "approved_entry": 34,
+          "rejected_actionable": 13
+        }
+      },
+      "entries": 47,
+      "entries_needed_for_75pct": 7,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "coverage_too_low",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_entry",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 12,
+      "net_cents": 294.0,
+      "original_blockers": [
+        "coverage_too_low",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.2765957446808511,
+      "required_entries_for_75pct": 54,
+      "settled": 36,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 13
+      },
+      "wins": 24
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 4.25,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 262.5,
+      "candidate": "post_feature_freeze_bridge_raw03_recross70_abs075",
+      "cents_needed_for_cushion3": 17.0,
+      "cents_needed_to_match_live_snapshot": 1050.0,
+      "clean_rows_needed_for_coverage_and_source": 4,
+      "clean_rows_needed_for_source_gate": 4,
+      "coverage_pct": 75.0,
+      "drop_risky_losses": {
+        "coverage_pct": 72.22222222222221,
+        "drop_count": 2,
+        "dropped_rows": [
+          {
+            "abs_d_sigma": 0.819952,
+            "ask_prob": 0.64,
+            "market": "KXBTC15M-26MAY070615-15",
+            "net_cents": -68.0,
+            "raw_edge": 0.20093099999999997,
+            "recross_hazard_score": 0.2533484847166239,
+            "side": "yes",
+            "source": "rejected_actionable"
+          },
+          {
+            "abs_d_sigma": 0.784861,
+            "ask_prob": 0.13,
+            "market": "KXBTC15M-26MAY062345-45",
+            "net_cents": -15.0,
+            "raw_edge": 0.041601,
+            "recross_hazard_score": 0.13225659322745886,
+            "side": "no",
+            "source": "rejected_actionable"
+          }
+        ],
+        "entries": 52,
+        "net_cents": 366.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.34615384615384615,
+        "source_counts": {
+          "approved_entry": 34,
+          "rejected_actionable": 18
+        }
+      },
+      "entries": 54,
+      "entries_needed_for_75pct": 0,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_bridge",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 18,
+      "net_cents": 283.0,
+      "original_blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.37037037037037035,
+      "required_entries_for_75pct": 54,
+      "settled": 48,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 20
+      },
+      "wins": 30
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 6.5,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 264.75,
+      "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+      "cents_needed_for_cushion3": 26.0,
+      "cents_needed_to_match_live_snapshot": 1059.0,
+      "clean_rows_needed_for_coverage_and_source": 4,
+      "clean_rows_needed_for_source_gate": 4,
+      "coverage_pct": 75.0,
+      "drop_risky_losses": {
+        "coverage_pct": 72.22222222222221,
+        "drop_count": 2,
+        "dropped_rows": [
+          {
+            "abs_d_sigma": 0.784861,
+            "ask_prob": 0.13,
+            "market": "KXBTC15M-26MAY062345-45",
+            "net_cents": -15.0,
+            "raw_edge": 0.041601,
+            "recross_hazard_score": 0.13225659322745886,
+            "side": "no",
+            "source": "rejected_actionable"
+          },
+          {
+            "abs_d_sigma": 0.758696,
+            "ask_prob": 0.09,
+            "market": "KXBTC15M-26MAY070200-00",
+            "net_cents": -11.0,
+            "raw_edge": 0.08693400000000001,
+            "recross_hazard_score": 0.12224159683597033,
+            "side": "yes",
+            "source": "rejected_actionable"
+          }
+        ],
+        "entries": 52,
+        "net_cents": 300.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.34615384615384615,
+        "source_counts": {
+          "approved_entry": 34,
+          "rejected_actionable": 18
+        }
+      },
+      "entries": 54,
+      "entries_needed_for_75pct": 0,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_entry",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 16,
+      "net_cents": 274.0,
+      "original_blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.37037037037037035,
+      "required_entries_for_75pct": 54,
+      "settled": 42,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 20
+      },
+      "wins": 26
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 5.928571428571429,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 79.71428571428571,
+      "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085_ask65",
+      "cents_needed_for_cushion3": 83.0,
+      "cents_needed_to_match_live_snapshot": 1116.0,
+      "clean_rows_needed_for_coverage_and_source": 14,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 55.55555555555556,
+      "drop_risky_losses": {
+        "coverage_pct": 55.55555555555556,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 40,
+        "net_cents": 217.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.05,
+        "source_counts": {
+          "approved_entry": 38,
+          "rejected_actionable": 2
+        }
+      },
+      "entries": 40,
+      "entries_needed_for_75pct": 14,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "coverage_too_low",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_bridge",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 4,
+      "net_cents": 217.0,
+      "original_blockers": [
+        "coverage_too_low",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.05,
+      "required_entries_for_75pct": 54,
+      "settled": 34,
+      "settled_needed_for_30": 0,
+      "source_counts": {
+        "approved_entry": 38,
+        "rejected_actionable": 2
+      },
+      "wins": 30
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 0.9523809523809523,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 50.142857142857146,
+      "candidate": "post_feature_freeze_bridge_raw07_recross60_abs085",
+      "cents_needed_for_cushion3": 20.0,
+      "cents_needed_to_match_live_snapshot": 1053.0,
+      "clean_rows_needed_for_coverage_and_source": 21,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 45.833333333333336,
+      "drop_risky_losses": {
+        "coverage_pct": 45.83333333333333,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 33,
+        "net_cents": 280.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.24242424242424243,
+        "source_counts": {
+          "approved_entry": 25,
+          "rejected_actionable": 8
+        }
+      },
+      "entries": 33,
+      "entries_needed_for_75pct": 21,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "settled_lt_30",
+        "coverage_too_low",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_bridge",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 9,
+      "net_cents": 280.0,
+      "original_blockers": [
+        "settled_lt_30",
+        "coverage_too_low",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.24242424242424243,
+      "required_entries_for_75pct": 54,
+      "settled": 29,
+      "settled_needed_for_30": 1,
+      "source_counts": {
+        "approved_entry": 25,
+        "rejected_actionable": 8
+      },
+      "wins": 20
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 2.9047619047619047,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 52.095238095238095,
+      "candidate": "post_feature_freeze_entry_raw07_recross60_abs085",
+      "cents_needed_for_cushion3": 61.0,
+      "cents_needed_to_match_live_snapshot": 1094.0,
+      "clean_rows_needed_for_coverage_and_source": 21,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 45.833333333333336,
+      "drop_risky_losses": {
+        "coverage_pct": 45.83333333333333,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 33,
+        "net_cents": 239.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.24242424242424243,
+        "source_counts": {
+          "approved_entry": 25,
+          "rejected_actionable": 8
+        }
+      },
+      "entries": 33,
+      "entries_needed_for_75pct": 21,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "settled_lt_30",
+        "coverage_too_low",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_entry",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 8,
+      "net_cents": 239.0,
+      "original_blockers": [
+        "settled_lt_30",
+        "coverage_too_low",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.24242424242424243,
+      "required_entries_for_75pct": 54,
+      "settled": 25,
+      "settled_needed_for_30": 5,
+      "source_counts": {
+        "approved_entry": 25,
+        "rejected_actionable": 8
+      },
+      "wins": 17
+    },
+    {
+      "avg_cents_needed_per_clean_row_for_cushion": 6.642857142857143,
+      "avg_cents_needed_per_clean_row_for_live_snapshot": 80.42857142857143,
+      "candidate": "post_feature_freeze_entry_raw05_recross60_abs085_ask65",
+      "cents_needed_for_cushion3": 93.0,
+      "cents_needed_to_match_live_snapshot": 1126.0,
+      "clean_rows_needed_for_coverage_and_source": 14,
+      "clean_rows_needed_for_source_gate": 0,
+      "coverage_pct": 55.55555555555556,
+      "drop_risky_losses": {
+        "coverage_pct": 55.55555555555556,
+        "drop_count": 0,
+        "dropped_rows": [],
+        "entries": 40,
+        "net_cents": 207.0,
+        "passes_coverage": false,
+        "passes_source": true,
+        "read": "source_passes_only_by_breaking_coverage",
+        "reconstructed_share": 0.05,
+        "source_counts": {
+          "approved_entry": 38,
+          "rejected_actionable": 2
+        }
+      },
+      "entries": 40,
+      "entries_needed_for_75pct": 14,
+      "full_loss_cushion": 2,
+      "future_denominator": 72,
+      "joint_blockers": [
+        "settled_lt_30",
+        "coverage_too_low",
+        "full_loss_cushion_lt_3",
+        "does_not_beat_live_snapshot",
+        "fresh_v28_live_collection_unhealthy"
+      ],
+      "lane": "post_feature_freeze_entry",
+      "live_snapshot_net_cents": 1333.0,
+      "losses": 3,
+      "net_cents": 207.0,
+      "original_blockers": [
+        "settled_lt_30",
+        "coverage_too_low",
+        "full_loss_cushion_lt_3"
+      ],
+      "reconstructed_share": 0.05,
+      "required_entries_for_75pct": 54,
+      "settled": 29,
+      "settled_needed_for_30": 1,
+      "source_counts": {
+        "approved_entry": 38,
+        "rejected_actionable": 2
+      },
+      "wins": 26
+    }
+  ]
+}

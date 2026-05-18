@@ -1,0 +1,782 @@
+{
+  "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+  "generated_at_utc": "2026-05-07T04:59:33.256457+00:00",
+  "interpretation": [
+    "This is a failure-mode audit, not a promotion candidate.",
+    "Selection policies below use only observable ask price; source labels are used only to audit whether cheap-tail rows explain the source-quality blocker.",
+    "post_feature_freeze_entry broad raw03_recross70_abs075 has 33 settled, coverage 73.33333333333333%, net 277.0c, reconstructed share 0.3939393939393939.",
+    "post_feature_freeze_entry cheap added rows versus strict ask-floor are 6 row(s), net 74.0c, W/L {'wins': 1, 'losses': 5, 'flats': 0}, source counts {'rejected_actionable': 6}.",
+    "post_feature_freeze_entry reconstructed rows net 53.0c; without the top reconstructed win the reconstructed slice is -43.0c.",
+    "post_feature_freeze_entry cheap_lt10_half keeps coverage 73.33333333333333% with weighted net 248.0c; cheap_lt10_skip coverage is 51.11111111111111%.",
+    "post_feature_freeze_bridge broad raw03_recross70_abs075 has 33 settled, coverage 73.33333333333333%, net 277.0c, reconstructed share 0.3939393939393939.",
+    "post_feature_freeze_bridge cheap added rows versus strict ask-floor are 6 row(s), net 74.0c, W/L {'wins': 1, 'losses': 5, 'flats': 0}, source counts {'rejected_actionable': 6}.",
+    "post_feature_freeze_bridge reconstructed rows net 53.0c; without the top reconstructed win the reconstructed slice is -43.0c.",
+    "post_feature_freeze_bridge cheap_lt10_half keeps coverage 73.33333333333333% with weighted net 248.0c; cheap_lt10_skip coverage is 51.11111111111111%."
+  ],
+  "lanes": [
+    {
+      "added_examples": [
+        {
+          "abs_d_sigma": 1.050761,
+          "ask_prob": 0.04,
+          "market": "KXBTC15M-26MAY061430-30",
+          "net_cents": -5.0,
+          "raw_edge": 0.062326,
+          "recross_hazard_score": 0.08102015626960654,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 1.069646,
+          "ask_prob": 0.02,
+          "market": "KXBTC15M-26MAY061530-30",
+          "net_cents": -3.0,
+          "raw_edge": 0.075977,
+          "recross_hazard_score": 0.03885544410446517,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.791108,
+          "ask_prob": 0.06,
+          "market": "KXBTC15M-26MAY061600-00",
+          "net_cents": -7.0,
+          "raw_edge": 0.104874,
+          "recross_hazard_score": 0.041740444036135596,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.971992,
+          "ask_prob": 0.03,
+          "market": "KXBTC15M-26MAY061630-30",
+          "net_cents": 96.0,
+          "raw_edge": 0.088722,
+          "recross_hazard_score": 0.07161829905897715,
+          "side": "no",
+          "side_won": true,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.943937,
+          "ask_prob": 0.04,
+          "market": "KXBTC15M-26MAY061730-30",
+          "net_cents": -5.0,
+          "raw_edge": 0.080622,
+          "recross_hazard_score": 0.09907383677577447,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 1.513246,
+          "ask_prob": 0.01,
+          "market": "KXBTC15M-26MAY061930-30",
+          "net_cents": -2.0,
+          "raw_edge": 0.031608,
+          "recross_hazard_score": 0.08329366424986687,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 2.37058,
+          "ask_prob": 0.95,
+          "market": "KXBTC15M-26MAY062200-00",
+          "net_cents": 4.0,
+          "raw_edge": 0.04220400000000002,
+          "recross_hazard_score": 0.026846679101237274,
+          "side": "no",
+          "side_won": true,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.784861,
+          "ask_prob": 0.13,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -15.0,
+          "raw_edge": 0.041601,
+          "recross_hazard_score": 0.13225659322745886,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        }
+      ],
+      "added_vs_strict_summary": {
+        "avg_abs_d": 1.187016375,
+        "avg_ask": 0.16,
+        "avg_raw_edge": 0.06599175,
+        "avg_recross": 0.07183813960294025,
+        "net_cents": 63.0,
+        "reconstructed_share": 1.0,
+        "rows": 8,
+        "settled": 8,
+        "source_counts": {
+          "rejected_actionable": 8
+        },
+        "wl": {
+          "flats": 0,
+          "losses": 6,
+          "wins": 2
+        }
+      },
+      "broad_reconstructed_share": 0.3939393939393939,
+      "broad_rule": "raw03_recross70_abs075",
+      "broad_source_counts": {
+        "approved_entry": 20,
+        "rejected_actionable": 13
+      },
+      "broad_summary": {
+        "avg_net_cents": 8.393939393939394,
+        "coverage_pct": 73.33333333333333,
+        "entries": 33,
+        "losses": 12,
+        "net_cents": 277.0,
+        "settled": 33,
+        "wins": 21
+      },
+      "cheap_added_vs_strict_summary": {
+        "avg_abs_d": 1.0567816666666667,
+        "avg_ask": 0.03333333333333333,
+        "avg_raw_edge": 0.0740215,
+        "avg_recross": 0.06926697408247097,
+        "net_cents": 74.0,
+        "reconstructed_share": 1.0,
+        "rows": 6,
+        "settled": 6,
+        "source_counts": {
+          "rejected_actionable": 6
+        },
+        "wl": {
+          "flats": 0,
+          "losses": 5,
+          "wins": 1
+        }
+      },
+      "cheap_tail_summary": {
+        "avg_abs_d": 1.0436143,
+        "avg_ask": 0.032,
+        "avg_raw_edge": 0.0767134,
+        "avg_recross": 0.08364948391544919,
+        "net_cents": 58.0,
+        "reconstructed_share": 1.0,
+        "rows": 10,
+        "settled": 10,
+        "source_counts": {
+          "rejected_actionable": 10
+        },
+        "wl": {
+          "flats": 0,
+          "losses": 9,
+          "wins": 1
+        }
+      },
+      "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+      "future_denominator": 45,
+      "lane": "post_feature_freeze_entry",
+      "notional_shrink_policies": [
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "no_shrink",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 33.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 277.0
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt10_half",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 28.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 248.0
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt10_quarter",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 25.5,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 233.5
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt15_half",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 27.5,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 255.5
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt15_quarter",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 24.75,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 244.75
+        },
+        {
+          "coverage_pct": 51.11111111111111,
+          "participating_markets": 23,
+          "policy": "cheap_lt10_skip",
+          "reconstructed_share": 0.13043478260869565,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 3
+          },
+          "target_coverage": false,
+          "total_notional_weight": 23.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 219.0
+        },
+        {
+          "coverage_pct": 48.888888888888886,
+          "participating_markets": 22,
+          "policy": "cheap_lt15_skip",
+          "reconstructed_share": 0.09090909090909091,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 2
+          },
+          "target_coverage": false,
+          "total_notional_weight": 22.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 234.0
+        }
+      ],
+      "reconstructed_net_without_top_win_cents": -43.0,
+      "reconstructed_rows_net_cents": 53.0,
+      "source_tail_counts": {
+        "approved_entry::mid_ask": 20,
+        "rejected_actionable::ask_05_10": 2,
+        "rejected_actionable::ask_10_15": 1,
+        "rejected_actionable::ask_gt_90": 2,
+        "rejected_actionable::ask_lt_05": 8
+      },
+      "strict_reconstructed_share": 0.04,
+      "strict_rule": "raw05_recross60_abs085_ask65",
+      "strict_source_counts": {
+        "approved_entry": 24,
+        "rejected_actionable": 1
+      },
+      "strict_summary": {
+        "avg_net_cents": 5.04,
+        "coverage_pct": 55.55555555555556,
+        "entries": 25,
+        "losses": 3,
+        "net_cents": 126.0,
+        "settled": 25,
+        "wins": 22
+      },
+      "tail_buckets": {
+        "ask_05_10": {
+          "avg_abs_d": 0.8944725,
+          "avg_ask": 0.055,
+          "avg_raw_edge": 0.082015,
+          "avg_recross": 0.10124827200405542,
+          "net_cents": -13.0,
+          "reconstructed_share": 1.0,
+          "rows": 2,
+          "settled": 2,
+          "source_counts": {
+            "rejected_actionable": 2
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 2,
+            "wins": 0
+          }
+        },
+        "ask_10_15": {
+          "avg_abs_d": 0.784861,
+          "avg_ask": 0.13,
+          "avg_raw_edge": 0.041601,
+          "avg_recross": 0.13225659322745886,
+          "net_cents": -15.0,
+          "reconstructed_share": 1.0,
+          "rows": 1,
+          "settled": 1,
+          "source_counts": {
+            "rejected_actionable": 1
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 1,
+            "wins": 0
+          }
+        },
+        "ask_gt_90": {
+          "avg_abs_d": 2.070678,
+          "avg_ask": 0.935,
+          "avg_raw_edge": 0.0484175,
+          "avg_recross": 0.030803928935118047,
+          "net_cents": 10.0,
+          "reconstructed_share": 1.0,
+          "rows": 2,
+          "settled": 2,
+          "source_counts": {
+            "rejected_actionable": 2
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 0,
+            "wins": 2
+          }
+        },
+        "ask_lt_05": {
+          "avg_abs_d": 1.08089975,
+          "avg_ask": 0.02625,
+          "avg_raw_edge": 0.075388,
+          "avg_recross": 0.07924978689329763,
+          "net_cents": 71.0,
+          "reconstructed_share": 1.0,
+          "rows": 8,
+          "settled": 8,
+          "source_counts": {
+            "rejected_actionable": 8
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 7,
+            "wins": 1
+          }
+        },
+        "mid_ask": {
+          "avg_abs_d": 1.1931926499999999,
+          "avg_ask": 0.7675,
+          "avg_raw_edge": 0.14611315,
+          "avg_recross": 0.1946069898897181,
+          "net_cents": 224.0,
+          "reconstructed_share": 0.0,
+          "rows": 20,
+          "settled": 20,
+          "source_counts": {
+            "approved_entry": 20
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 2,
+            "wins": 18
+          }
+        }
+      },
+      "top_reconstructed_win_cents": 96.0
+    },
+    {
+      "added_examples": [
+        {
+          "abs_d_sigma": 1.050761,
+          "ask_prob": 0.04,
+          "market": "KXBTC15M-26MAY061430-30",
+          "net_cents": -5.0,
+          "raw_edge": 0.062326,
+          "recross_hazard_score": 0.08102015626960654,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 1.069646,
+          "ask_prob": 0.02,
+          "market": "KXBTC15M-26MAY061530-30",
+          "net_cents": -3.0,
+          "raw_edge": 0.075977,
+          "recross_hazard_score": 0.03885544410446517,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.791108,
+          "ask_prob": 0.06,
+          "market": "KXBTC15M-26MAY061600-00",
+          "net_cents": -7.0,
+          "raw_edge": 0.104874,
+          "recross_hazard_score": 0.041740444036135596,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.971992,
+          "ask_prob": 0.03,
+          "market": "KXBTC15M-26MAY061630-30",
+          "net_cents": 96.0,
+          "raw_edge": 0.088722,
+          "recross_hazard_score": 0.07161829905897715,
+          "side": "no",
+          "side_won": true,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.943937,
+          "ask_prob": 0.04,
+          "market": "KXBTC15M-26MAY061730-30",
+          "net_cents": -5.0,
+          "raw_edge": 0.080622,
+          "recross_hazard_score": 0.09907383677577447,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 1.513246,
+          "ask_prob": 0.01,
+          "market": "KXBTC15M-26MAY061930-30",
+          "net_cents": -2.0,
+          "raw_edge": 0.031608,
+          "recross_hazard_score": 0.08329366424986687,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 2.37058,
+          "ask_prob": 0.95,
+          "market": "KXBTC15M-26MAY062200-00",
+          "net_cents": 4.0,
+          "raw_edge": 0.04220400000000002,
+          "recross_hazard_score": 0.026846679101237274,
+          "side": "no",
+          "side_won": true,
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.784861,
+          "ask_prob": 0.13,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -15.0,
+          "raw_edge": 0.041601,
+          "recross_hazard_score": 0.13225659322745886,
+          "side": "no",
+          "side_won": false,
+          "source": "rejected_actionable"
+        }
+      ],
+      "added_vs_strict_summary": {
+        "avg_abs_d": 1.187016375,
+        "avg_ask": 0.16,
+        "avg_raw_edge": 0.06599175,
+        "avg_recross": 0.07183813960294025,
+        "net_cents": 63.0,
+        "reconstructed_share": 1.0,
+        "rows": 8,
+        "settled": 8,
+        "source_counts": {
+          "rejected_actionable": 8
+        },
+        "wl": {
+          "flats": 0,
+          "losses": 6,
+          "wins": 2
+        }
+      },
+      "broad_reconstructed_share": 0.3939393939393939,
+      "broad_rule": "raw03_recross70_abs075",
+      "broad_source_counts": {
+        "approved_entry": 20,
+        "rejected_actionable": 13
+      },
+      "broad_summary": {
+        "avg_net_cents": 8.393939393939394,
+        "coverage_pct": 73.33333333333333,
+        "entries": 33,
+        "losses": 12,
+        "net_cents": 277.0,
+        "settled": 33,
+        "wins": 21
+      },
+      "cheap_added_vs_strict_summary": {
+        "avg_abs_d": 1.0567816666666667,
+        "avg_ask": 0.03333333333333333,
+        "avg_raw_edge": 0.0740215,
+        "avg_recross": 0.06926697408247097,
+        "net_cents": 74.0,
+        "reconstructed_share": 1.0,
+        "rows": 6,
+        "settled": 6,
+        "source_counts": {
+          "rejected_actionable": 6
+        },
+        "wl": {
+          "flats": 0,
+          "losses": 5,
+          "wins": 1
+        }
+      },
+      "cheap_tail_summary": {
+        "avg_abs_d": 1.0436143,
+        "avg_ask": 0.032,
+        "avg_raw_edge": 0.0767134,
+        "avg_recross": 0.08364948391544919,
+        "net_cents": 58.0,
+        "reconstructed_share": 1.0,
+        "rows": 10,
+        "settled": 10,
+        "source_counts": {
+          "rejected_actionable": 10
+        },
+        "wl": {
+          "flats": 0,
+          "losses": 9,
+          "wins": 1
+        }
+      },
+      "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+      "future_denominator": 45,
+      "lane": "post_feature_freeze_bridge",
+      "notional_shrink_policies": [
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "no_shrink",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 33.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 277.0
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt10_half",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 28.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 248.0
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt10_quarter",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 25.5,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 233.5
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt15_half",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 27.5,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 255.5
+        },
+        {
+          "coverage_pct": 73.33333333333333,
+          "participating_markets": 33,
+          "policy": "cheap_lt15_quarter",
+          "reconstructed_share": 0.3939393939393939,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 13
+          },
+          "target_coverage": false,
+          "total_notional_weight": 24.75,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 244.75
+        },
+        {
+          "coverage_pct": 51.11111111111111,
+          "participating_markets": 23,
+          "policy": "cheap_lt10_skip",
+          "reconstructed_share": 0.13043478260869565,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 3
+          },
+          "target_coverage": false,
+          "total_notional_weight": 23.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 219.0
+        },
+        {
+          "coverage_pct": 48.888888888888886,
+          "participating_markets": 22,
+          "policy": "cheap_lt15_skip",
+          "reconstructed_share": 0.09090909090909091,
+          "source_counts": {
+            "approved_entry": 20,
+            "rejected_actionable": 2
+          },
+          "target_coverage": false,
+          "total_notional_weight": 22.0,
+          "weighted_full_loss_cushion_estimate": 2,
+          "weighted_net_cents": 234.0
+        }
+      ],
+      "reconstructed_net_without_top_win_cents": -43.0,
+      "reconstructed_rows_net_cents": 53.0,
+      "source_tail_counts": {
+        "approved_entry::mid_ask": 20,
+        "rejected_actionable::ask_05_10": 2,
+        "rejected_actionable::ask_10_15": 1,
+        "rejected_actionable::ask_gt_90": 2,
+        "rejected_actionable::ask_lt_05": 8
+      },
+      "strict_reconstructed_share": 0.04,
+      "strict_rule": "raw05_recross60_abs085_ask65",
+      "strict_source_counts": {
+        "approved_entry": 24,
+        "rejected_actionable": 1
+      },
+      "strict_summary": {
+        "avg_net_cents": 5.04,
+        "coverage_pct": 55.55555555555556,
+        "entries": 25,
+        "losses": 3,
+        "net_cents": 126.0,
+        "settled": 25,
+        "wins": 22
+      },
+      "tail_buckets": {
+        "ask_05_10": {
+          "avg_abs_d": 0.8944725,
+          "avg_ask": 0.055,
+          "avg_raw_edge": 0.082015,
+          "avg_recross": 0.10124827200405542,
+          "net_cents": -13.0,
+          "reconstructed_share": 1.0,
+          "rows": 2,
+          "settled": 2,
+          "source_counts": {
+            "rejected_actionable": 2
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 2,
+            "wins": 0
+          }
+        },
+        "ask_10_15": {
+          "avg_abs_d": 0.784861,
+          "avg_ask": 0.13,
+          "avg_raw_edge": 0.041601,
+          "avg_recross": 0.13225659322745886,
+          "net_cents": -15.0,
+          "reconstructed_share": 1.0,
+          "rows": 1,
+          "settled": 1,
+          "source_counts": {
+            "rejected_actionable": 1
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 1,
+            "wins": 0
+          }
+        },
+        "ask_gt_90": {
+          "avg_abs_d": 2.070678,
+          "avg_ask": 0.935,
+          "avg_raw_edge": 0.0484175,
+          "avg_recross": 0.030803928935118047,
+          "net_cents": 10.0,
+          "reconstructed_share": 1.0,
+          "rows": 2,
+          "settled": 2,
+          "source_counts": {
+            "rejected_actionable": 2
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 0,
+            "wins": 2
+          }
+        },
+        "ask_lt_05": {
+          "avg_abs_d": 1.08089975,
+          "avg_ask": 0.02625,
+          "avg_raw_edge": 0.075388,
+          "avg_recross": 0.07924978689329763,
+          "net_cents": 71.0,
+          "reconstructed_share": 1.0,
+          "rows": 8,
+          "settled": 8,
+          "source_counts": {
+            "rejected_actionable": 8
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 7,
+            "wins": 1
+          }
+        },
+        "mid_ask": {
+          "avg_abs_d": 1.1931926499999999,
+          "avg_ask": 0.7675,
+          "avg_raw_edge": 0.14611315,
+          "avg_recross": 0.1946069898897181,
+          "net_cents": 224.0,
+          "reconstructed_share": 0.0,
+          "rows": 20,
+          "settled": 20,
+          "source_counts": {
+            "approved_entry": 20
+          },
+          "wl": {
+            "flats": 0,
+            "losses": 2,
+            "wins": 18
+          }
+        }
+      },
+      "top_reconstructed_win_cents": 96.0
+    }
+  ],
+  "max_reconstructed_share": 0.35,
+  "target_coverage": 0.75
+}

@@ -1,0 +1,1506 @@
+{
+  "best_rule": {
+    "allowed_markets": [
+      "KXBTC15M-26MAY070945-45",
+      "KXBTC15M-26MAY070915-15",
+      "KXBTC15M-26MAY071030-30",
+      "KXBTC15M-26MAY071300-00",
+      "KXBTC15M-26MAY071045-45",
+      "KXBTC15M-26MAY071230-30",
+      "KXBTC15M-26MAY071115-15",
+      "KXBTC15M-26MAY071200-00",
+      "KXBTC15M-26MAY071315-15",
+      "KXBTC15M-26MAY071215-15",
+      "KXBTC15M-26MAY071000-00"
+    ],
+    "allowed_summary": {
+      "candidate_minus_live_cents": 182.0,
+      "candidate_net_cents": 288.0,
+      "conflict_counts": {
+        "dual_lane_only": 2,
+        "same_market_same_side": 9
+      },
+      "coverage_pct": 61.111111111111114,
+      "full_loss_cushion": 2,
+      "live_net_cents": 106.0,
+      "losses": 1,
+      "rows": 11,
+      "source_counts": {
+        "approved_entry": 9,
+        "rejected_actionable": 2
+      },
+      "wins": 10
+    },
+    "blockers": [
+      "diagnostic_only_not_frozen_forward"
+    ],
+    "label": "suppress_ask_ge0.78_recross_ge0.3",
+    "rule": {
+      "ask_min": 0.78,
+      "label": "suppress_ask_ge0.78_recross_ge0.3",
+      "name": "high_cost_recross",
+      "recross_min": 0.3
+    },
+    "side_flip_suppressed": 2,
+    "side_flip_total": 2,
+    "suppressed_markets": [
+      "KXBTC15M-26MAY071100-00",
+      "KXBTC15M-26MAY071015-15",
+      "KXBTC15M-26MAY071145-45",
+      "KXBTC15M-26MAY071130-30",
+      "KXBTC15M-26MAY070930-30"
+    ],
+    "suppressed_summary": {
+      "candidate_minus_live_cents": -363.0,
+      "candidate_net_cents": -229.0,
+      "conflict_counts": {
+        "same_market_live_side_flip": 2,
+        "same_market_same_side": 3
+      },
+      "coverage_pct": 27.77777777777778,
+      "full_loss_cushion": 0,
+      "live_net_cents": 134.0,
+      "losses": 2,
+      "rows": 5,
+      "source_counts": {
+        "approved_entry": 4,
+        "rejected_actionable": 1
+      },
+      "wins": 3
+    }
+  },
+  "candidate_policy": "post_dual_union_birth_entry_cheap_penalty025_rank_only",
+  "compare_generated_at_utc": "2026-05-11T03:47:01.196227+00:00",
+  "future_denominator": 18,
+  "generated_at_utc": "2026-05-11T03:47:01.482982+00:00",
+  "promotion_use": "diagnostic_conflict_arbiter_design_only",
+  "read": [
+    "This is not promotion evidence; it is a same-window design audit.",
+    "A deployable arbiter must use only observable pre-entry features and then get its own freeze.",
+    "The desired physical mechanism is suppressing high-cost/path-unstable rows where live v28 may need side-flip state management."
+  ],
+  "rows_available": 16,
+  "rules_tested": 66,
+  "top_rules": [
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 182.0,
+        "candidate_net_cents": 288.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 9
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 2,
+        "live_net_cents": 106.0,
+        "losses": 1,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 9,
+          "rejected_actionable": 2
+        },
+        "wins": 10
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_ask_ge0.78_recross_ge0.3",
+      "rule": {
+        "ask_min": 0.78,
+        "label": "suppress_ask_ge0.78_recross_ge0.3",
+        "name": "high_cost_recross",
+        "recross_min": 0.3
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -363.0,
+        "candidate_net_cents": -229.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 3
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 134.0,
+        "losses": 2,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 4,
+          "rejected_actionable": 1
+        },
+        "wins": 3
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 160.0,
+        "candidate_net_cents": 141.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 33.333333333333336,
+        "full_loss_cushion": 1,
+        "live_net_cents": -19.0,
+        "losses": 1,
+        "rows": 6,
+        "source_counts": {
+          "approved_entry": 5,
+          "rejected_actionable": 1
+        },
+        "wins": 5
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_cost_recross_combo_ge0.04",
+      "rule": {
+        "ask_base": 0.78,
+        "combo_min": 0.04,
+        "label": "suppress_cost_recross_combo_ge0.04",
+        "name": "recross_cost_combo",
+        "recross_base": 0.3
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -341.0,
+        "candidate_net_cents": -82.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 55.55555555555556,
+        "full_loss_cushion": 0,
+        "live_net_cents": 259.0,
+        "losses": 2,
+        "rows": 10,
+        "source_counts": {
+          "approved_entry": 8,
+          "rejected_actionable": 2
+        },
+        "wins": 8
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 117.0,
+        "candidate_net_cents": 268.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 55.55555555555556,
+        "full_loss_cushion": 2,
+        "live_net_cents": 151.0,
+        "losses": 1,
+        "rows": 10,
+        "source_counts": {
+          "approved_entry": 8,
+          "rejected_actionable": 2
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_ask_ge0.78_recross_ge0.25",
+      "rule": {
+        "ask_min": 0.78,
+        "label": "suppress_ask_ge0.78_recross_ge0.25",
+        "name": "high_cost_recross",
+        "recross_min": 0.25
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -298.0,
+        "candidate_net_cents": -209.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 33.333333333333336,
+        "full_loss_cushion": 0,
+        "live_net_cents": 89.0,
+        "losses": 2,
+        "rows": 6,
+        "source_counts": {
+          "approved_entry": 5,
+          "rejected_actionable": 1
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 50.0,
+        "candidate_net_cents": 185.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 5
+        },
+        "coverage_pct": 38.888888888888886,
+        "full_loss_cushion": 1,
+        "live_net_cents": 135.0,
+        "losses": 1,
+        "rows": 7,
+        "source_counts": {
+          "approved_entry": 6,
+          "rejected_actionable": 1
+        },
+        "wins": 6
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_ask_ge0.78_raw_missing_or_le0.09",
+      "rule": {
+        "ask_min": 0.78,
+        "label": "suppress_ask_ge0.78_raw_missing_or_le0.09",
+        "name": "high_cost_low_or_missing_raw",
+        "raw_max": 0.09
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -231.0,
+        "candidate_net_cents": -126.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 7
+        },
+        "coverage_pct": 50.0,
+        "full_loss_cushion": 0,
+        "live_net_cents": 105.0,
+        "losses": 2,
+        "rows": 9,
+        "source_counts": {
+          "approved_entry": 7,
+          "rejected_actionable": 2
+        },
+        "wins": 7
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 50.0,
+        "candidate_net_cents": 185.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 5
+        },
+        "coverage_pct": 38.888888888888886,
+        "full_loss_cushion": 1,
+        "live_net_cents": 135.0,
+        "losses": 1,
+        "rows": 7,
+        "source_counts": {
+          "approved_entry": 6,
+          "rejected_actionable": 1
+        },
+        "wins": 6
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_ask_ge0.78_raw_missing_or_le0.12",
+      "rule": {
+        "ask_min": 0.78,
+        "label": "suppress_ask_ge0.78_raw_missing_or_le0.12",
+        "name": "high_cost_low_or_missing_raw",
+        "raw_max": 0.12
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -231.0,
+        "candidate_net_cents": -126.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 7
+        },
+        "coverage_pct": 50.0,
+        "full_loss_cushion": 0,
+        "live_net_cents": 105.0,
+        "losses": 2,
+        "rows": 9,
+        "source_counts": {
+          "approved_entry": 7,
+          "rejected_actionable": 2
+        },
+        "wins": 7
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 50.0,
+        "candidate_net_cents": 185.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 5
+        },
+        "coverage_pct": 38.888888888888886,
+        "full_loss_cushion": 1,
+        "live_net_cents": 135.0,
+        "losses": 1,
+        "rows": 7,
+        "source_counts": {
+          "approved_entry": 6,
+          "rejected_actionable": 1
+        },
+        "wins": 6
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_ask_ge0.78_raw_missing_or_le0.09_or_yes",
+      "rule": {
+        "ask_min": 0.78,
+        "label": "suppress_ask_ge0.78_raw_missing_or_le0.09_or_yes",
+        "name": "high_cost_low_raw_or_yes",
+        "raw_max": 0.09
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -231.0,
+        "candidate_net_cents": -126.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 7
+        },
+        "coverage_pct": 50.0,
+        "full_loss_cushion": 0,
+        "live_net_cents": 105.0,
+        "losses": 2,
+        "rows": 9,
+        "source_counts": {
+          "approved_entry": 7,
+          "rejected_actionable": 2
+        },
+        "wins": 7
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 50.0,
+        "candidate_net_cents": 185.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 5
+        },
+        "coverage_pct": 38.888888888888886,
+        "full_loss_cushion": 1,
+        "live_net_cents": 135.0,
+        "losses": 1,
+        "rows": 7,
+        "source_counts": {
+          "approved_entry": 6,
+          "rejected_actionable": 1
+        },
+        "wins": 6
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_ask_ge0.78_raw_missing_or_le0.12_or_yes",
+      "rule": {
+        "ask_min": 0.78,
+        "label": "suppress_ask_ge0.78_raw_missing_or_le0.12_or_yes",
+        "name": "high_cost_low_raw_or_yes",
+        "raw_max": 0.12
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -231.0,
+        "candidate_net_cents": -126.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 7
+        },
+        "coverage_pct": 50.0,
+        "full_loss_cushion": 0,
+        "live_net_cents": 105.0,
+        "losses": 2,
+        "rows": 9,
+        "source_counts": {
+          "approved_entry": 7,
+          "rejected_actionable": 2
+        },
+        "wins": 7
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 23.0,
+        "candidate_net_cents": 243.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 9
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 2,
+        "live_net_cents": 220.0,
+        "losses": 1,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 9,
+          "rejected_actionable": 2
+        },
+        "wins": 10
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_delayed_recheck_recross_ge0.25",
+      "rule": {
+        "label": "suppress_delayed_recheck_recross_ge0.25",
+        "name": "delayed_recheck_recross",
+        "recross_min": 0.25
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -204.0,
+        "candidate_net_cents": -184.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 3
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 20.0,
+        "losses": 2,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 4,
+          "rejected_actionable": 1
+        },
+        "wins": 3
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 23.0,
+        "candidate_net_cents": 243.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_same_side": 9
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 2,
+        "live_net_cents": 220.0,
+        "losses": 1,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 9,
+          "rejected_actionable": 2
+        },
+        "wins": 10
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward"
+      ],
+      "label": "suppress_delayed_recheck_recross_ge0.3",
+      "rule": {
+        "label": "suppress_delayed_recheck_recross_ge0.3",
+        "name": "delayed_recheck_recross",
+        "recross_min": 0.3
+      },
+      "side_flip_suppressed": 2,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -204.0,
+        "candidate_net_cents": -184.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 2,
+          "same_market_same_side": 3
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 20.0,
+        "losses": 2,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 4,
+          "rejected_actionable": 1
+        },
+        "wins": 3
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 94.0,
+        "candidate_net_cents": 166.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 10
+        },
+        "coverage_pct": 72.22222222222223,
+        "full_loss_cushion": 1,
+        "live_net_cents": 72.0,
+        "losses": 2,
+        "rows": 13,
+        "source_counts": {
+          "approved_entry": 11,
+          "rejected_actionable": 2
+        },
+        "wins": 11
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_recross_ge0.25",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_recross_ge0.25",
+        "name": "high_cost_recross",
+        "recross_min": 0.25
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071130-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -275.0,
+        "candidate_net_cents": -107.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 2
+        },
+        "coverage_pct": 16.666666666666668,
+        "full_loss_cushion": 0,
+        "live_net_cents": 168.0,
+        "losses": 1,
+        "rows": 3,
+        "source_counts": {
+          "approved_entry": 2,
+          "rejected_actionable": 1
+        },
+        "wins": 2
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 94.0,
+        "candidate_net_cents": 166.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 10
+        },
+        "coverage_pct": 72.22222222222223,
+        "full_loss_cushion": 1,
+        "live_net_cents": 72.0,
+        "losses": 2,
+        "rows": 13,
+        "source_counts": {
+          "approved_entry": 11,
+          "rejected_actionable": 2
+        },
+        "wins": 11
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_recross_ge0.3",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_recross_ge0.3",
+        "name": "high_cost_recross",
+        "recross_min": 0.3
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071130-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -275.0,
+        "candidate_net_cents": -107.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 2
+        },
+        "coverage_pct": 16.666666666666668,
+        "full_loss_cushion": 0,
+        "live_net_cents": 168.0,
+        "losses": 1,
+        "rows": 3,
+        "source_counts": {
+          "approved_entry": 2,
+          "rejected_actionable": 1
+        },
+        "wins": 2
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 79.0,
+        "candidate_net_cents": 127.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 1,
+        "live_net_cents": 48.0,
+        "losses": 2,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 1
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_raw_missing_or_le0.07",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_raw_missing_or_le0.07",
+        "name": "high_cost_low_or_missing_raw",
+        "raw_max": 0.07
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -260.0,
+        "candidate_net_cents": -68.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 192.0,
+        "losses": 1,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 2
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 79.0,
+        "candidate_net_cents": 127.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 1,
+        "live_net_cents": 48.0,
+        "losses": 2,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 1
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_raw_missing_or_le0.09",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_raw_missing_or_le0.09",
+        "name": "high_cost_low_or_missing_raw",
+        "raw_max": 0.09
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -260.0,
+        "candidate_net_cents": -68.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 192.0,
+        "losses": 1,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 2
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 79.0,
+        "candidate_net_cents": 127.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 1,
+        "live_net_cents": 48.0,
+        "losses": 2,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 1
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_raw_missing_or_le0.12",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_raw_missing_or_le0.12",
+        "name": "high_cost_low_or_missing_raw",
+        "raw_max": 0.12
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -260.0,
+        "candidate_net_cents": -68.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 192.0,
+        "losses": 1,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 2
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 79.0,
+        "candidate_net_cents": 127.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 1,
+        "live_net_cents": 48.0,
+        "losses": 2,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 1
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_raw_missing_or_le0.07_or_yes",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_raw_missing_or_le0.07_or_yes",
+        "name": "high_cost_low_raw_or_yes",
+        "raw_max": 0.07
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -260.0,
+        "candidate_net_cents": -68.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 192.0,
+        "losses": 1,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 2
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 79.0,
+        "candidate_net_cents": 127.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 1,
+        "live_net_cents": 48.0,
+        "losses": 2,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 1
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_raw_missing_or_le0.09_or_yes",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_raw_missing_or_le0.09_or_yes",
+        "name": "high_cost_low_raw_or_yes",
+        "raw_max": 0.09
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -260.0,
+        "candidate_net_cents": -68.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 192.0,
+        "losses": 1,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 2
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 79.0,
+        "candidate_net_cents": 127.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 8
+        },
+        "coverage_pct": 61.111111111111114,
+        "full_loss_cushion": 1,
+        "live_net_cents": 48.0,
+        "losses": 2,
+        "rows": 11,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 1
+        },
+        "wins": 9
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.82_raw_missing_or_le0.12_or_yes",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_ask_ge0.82_raw_missing_or_le0.12_or_yes",
+        "name": "high_cost_low_raw_or_yes",
+        "raw_max": 0.12
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -260.0,
+        "candidate_net_cents": -68.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 4
+        },
+        "coverage_pct": 27.77777777777778,
+        "full_loss_cushion": 0,
+        "live_net_cents": 192.0,
+        "losses": 1,
+        "rows": 5,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 2
+        },
+        "wins": 4
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 26.0,
+        "candidate_net_cents": 126.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 9
+        },
+        "coverage_pct": 66.66666666666667,
+        "full_loss_cushion": 1,
+        "live_net_cents": 100.0,
+        "losses": 2,
+        "rows": 12,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 2
+        },
+        "wins": 10
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.8_recross_ge0.25",
+      "rule": {
+        "ask_min": 0.8,
+        "label": "suppress_ask_ge0.8_recross_ge0.25",
+        "name": "high_cost_recross",
+        "recross_min": 0.25
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -207.0,
+        "candidate_net_cents": -67.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 3
+        },
+        "coverage_pct": 22.22222222222222,
+        "full_loss_cushion": 0,
+        "live_net_cents": 140.0,
+        "losses": 1,
+        "rows": 4,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 1
+        },
+        "wins": 3
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071115-15",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 26.0,
+        "candidate_net_cents": 126.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 9
+        },
+        "coverage_pct": 66.66666666666667,
+        "full_loss_cushion": 1,
+        "live_net_cents": 100.0,
+        "losses": 2,
+        "rows": 12,
+        "source_counts": {
+          "approved_entry": 10,
+          "rejected_actionable": 2
+        },
+        "wins": 10
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_ask_ge0.8_recross_ge0.3",
+      "rule": {
+        "ask_min": 0.8,
+        "label": "suppress_ask_ge0.8_recross_ge0.3",
+        "name": "high_cost_recross",
+        "recross_min": 0.3
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY070930-30"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -207.0,
+        "candidate_net_cents": -67.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 3
+        },
+        "coverage_pct": 22.22222222222222,
+        "full_loss_cushion": 0,
+        "live_net_cents": 140.0,
+        "losses": 1,
+        "rows": 4,
+        "source_counts": {
+          "approved_entry": 3,
+          "rejected_actionable": 1
+        },
+        "wins": 3
+      }
+    },
+    {
+      "allowed_markets": [
+        "KXBTC15M-26MAY071015-15",
+        "KXBTC15M-26MAY070945-45",
+        "KXBTC15M-26MAY070915-15",
+        "KXBTC15M-26MAY071030-30",
+        "KXBTC15M-26MAY071130-30",
+        "KXBTC15M-26MAY071300-00",
+        "KXBTC15M-26MAY071045-45",
+        "KXBTC15M-26MAY071230-30",
+        "KXBTC15M-26MAY071200-00",
+        "KXBTC15M-26MAY071315-15",
+        "KXBTC15M-26MAY071215-15",
+        "KXBTC15M-26MAY070930-30",
+        "KXBTC15M-26MAY071000-00"
+      ],
+      "allowed_summary": {
+        "candidate_minus_live_cents": 20.0,
+        "candidate_net_cents": 147.0,
+        "conflict_counts": {
+          "dual_lane_only": 2,
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 10
+        },
+        "coverage_pct": 72.22222222222223,
+        "full_loss_cushion": 1,
+        "live_net_cents": 127.0,
+        "losses": 2,
+        "rows": 13,
+        "source_counts": {
+          "approved_entry": 11,
+          "rejected_actionable": 2
+        },
+        "wins": 11
+      },
+      "blockers": [
+        "diagnostic_only_not_frozen_forward",
+        "does_not_suppress_all_current_side_flips"
+      ],
+      "label": "suppress_yes_ask_ge0.82",
+      "rule": {
+        "ask_min": 0.82,
+        "label": "suppress_yes_ask_ge0.82",
+        "name": "yes_high_cost"
+      },
+      "side_flip_suppressed": 1,
+      "side_flip_total": 2,
+      "suppressed_markets": [
+        "KXBTC15M-26MAY071100-00",
+        "KXBTC15M-26MAY071145-45",
+        "KXBTC15M-26MAY071115-15"
+      ],
+      "suppressed_summary": {
+        "candidate_minus_live_cents": -201.0,
+        "candidate_net_cents": -88.0,
+        "conflict_counts": {
+          "same_market_live_side_flip": 1,
+          "same_market_same_side": 2
+        },
+        "coverage_pct": 16.666666666666668,
+        "full_loss_cushion": 0,
+        "live_net_cents": 113.0,
+        "losses": 1,
+        "rows": 3,
+        "source_counts": {
+          "approved_entry": 2,
+          "rejected_actionable": 1
+        },
+        "wins": 2
+      }
+    }
+  ]
+}

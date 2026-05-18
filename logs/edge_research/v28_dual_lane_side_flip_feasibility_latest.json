@@ -1,0 +1,378 @@
+{
+  "all_live_side_flip_summary": {
+    "markets": 2,
+    "negative_markets": 0,
+    "net_cents": 68.0,
+    "opposite_rescue_markets": 0,
+    "positive_markets": 2,
+    "side_flip_markets": 2,
+    "trade_count": 14
+  },
+  "all_live_summary": {
+    "markets": 13,
+    "negative_markets": 7,
+    "net_cents": 314.0,
+    "opposite_rescue_markets": 0,
+    "positive_markets": 5,
+    "side_flip_markets": 2,
+    "trade_count": 48
+  },
+  "blockers": [
+    "research_only",
+    "not_frozen_forward",
+    "side_flip_trigger_not_observable_from_static_candidate_row",
+    "opposite_rescue_sample_too_sparse",
+    "candidate_side_flip_sample_too_sparse"
+  ],
+  "candidate_market_summary": {
+    "markets": 13,
+    "negative_markets": 6,
+    "net_cents": 324.0,
+    "opposite_rescue_markets": 2,
+    "positive_markets": 5,
+    "side_flip_markets": 2,
+    "trade_count": 45
+  },
+  "candidate_opposite_rescue_rows": [
+    {
+      "candidate_minus_live_cents": -190.0,
+      "candidate_net_cents": -162.0,
+      "candidate_side": "no",
+      "first_side": "no",
+      "has_side_flip": true,
+      "market": "KXBTC15M-26MAY071015-15",
+      "net_cents": 28.0,
+      "opposite_rescue": true,
+      "opposite_side_net_cents": 56.0,
+      "same_side_net_cents": -28.0,
+      "sequence": [
+        {
+          "entry_ts": "2026-05-07 10:05:16",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:05:16",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:05",
+          "net_cents": -10.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:05",
+          "net_cents": -10.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:51",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:51",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:11:14",
+          "net_cents": 56.0,
+          "outcome": "win",
+          "qty": 4.0,
+          "side": "yes"
+        }
+      ],
+      "side_changes": 1,
+      "side_counts": {
+        "no": 6,
+        "yes": 1
+      },
+      "side_net_cents": {
+        "no": -28.0,
+        "yes": 56.0
+      },
+      "sides": [
+        "no",
+        "yes"
+      ],
+      "trade_count": 7
+    },
+    {
+      "candidate_minus_live_cents": -206.0,
+      "candidate_net_cents": -166.0,
+      "candidate_side": "yes",
+      "first_side": "yes",
+      "has_side_flip": true,
+      "market": "KXBTC15M-26MAY071100-00",
+      "net_cents": 40.0,
+      "opposite_rescue": true,
+      "opposite_side_net_cents": 52.0,
+      "same_side_net_cents": -12.0,
+      "sequence": [
+        {
+          "entry_ts": "2026-05-07 10:51:11",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:51:11",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:52:16",
+          "net_cents": -2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:52:16",
+          "net_cents": -2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:53:13",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:53:13",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:58:38",
+          "net_cents": 52.0,
+          "outcome": "win",
+          "qty": 4.0,
+          "side": "no"
+        }
+      ],
+      "side_changes": 1,
+      "side_counts": {
+        "no": 1,
+        "yes": 6
+      },
+      "side_net_cents": {
+        "no": 52.0,
+        "yes": -12.0
+      },
+      "sides": [
+        "yes",
+        "no"
+      ],
+      "trade_count": 7
+    }
+  ],
+  "candidate_opposite_rescue_summary": {
+    "markets": 2,
+    "negative_markets": 0,
+    "net_cents": 68.0,
+    "opposite_rescue_markets": 2,
+    "positive_markets": 2,
+    "side_flip_markets": 2,
+    "trade_count": 14
+  },
+  "candidate_policy": "post_dual_union_birth_bridge_cheap_penalty025_rank_only",
+  "candidate_side_flip_rows": [
+    {
+      "candidate_minus_live_cents": -190.0,
+      "candidate_net_cents": -162.0,
+      "candidate_side": "no",
+      "first_side": "no",
+      "has_side_flip": true,
+      "market": "KXBTC15M-26MAY071015-15",
+      "net_cents": 28.0,
+      "opposite_rescue": true,
+      "opposite_side_net_cents": 56.0,
+      "same_side_net_cents": -28.0,
+      "sequence": [
+        {
+          "entry_ts": "2026-05-07 10:05:16",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:05:16",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:05",
+          "net_cents": -10.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:05",
+          "net_cents": -10.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:51",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:06:51",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_ts": "2026-05-07 10:11:14",
+          "net_cents": 56.0,
+          "outcome": "win",
+          "qty": 4.0,
+          "side": "yes"
+        }
+      ],
+      "side_changes": 1,
+      "side_counts": {
+        "no": 6,
+        "yes": 1
+      },
+      "side_net_cents": {
+        "no": -28.0,
+        "yes": 56.0
+      },
+      "sides": [
+        "no",
+        "yes"
+      ],
+      "trade_count": 7
+    },
+    {
+      "candidate_minus_live_cents": -206.0,
+      "candidate_net_cents": -166.0,
+      "candidate_side": "yes",
+      "first_side": "yes",
+      "has_side_flip": true,
+      "market": "KXBTC15M-26MAY071100-00",
+      "net_cents": 40.0,
+      "opposite_rescue": true,
+      "opposite_side_net_cents": 52.0,
+      "same_side_net_cents": -12.0,
+      "sequence": [
+        {
+          "entry_ts": "2026-05-07 10:51:11",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:51:11",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:52:16",
+          "net_cents": -2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:52:16",
+          "net_cents": -2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:53:13",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:53:13",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_ts": "2026-05-07 10:58:38",
+          "net_cents": 52.0,
+          "outcome": "win",
+          "qty": 4.0,
+          "side": "no"
+        }
+      ],
+      "side_changes": 1,
+      "side_counts": {
+        "no": 1,
+        "yes": 6
+      },
+      "side_net_cents": {
+        "no": 52.0,
+        "yes": -12.0
+      },
+      "sides": [
+        "yes",
+        "no"
+      ],
+      "trade_count": 7
+    }
+  ],
+  "candidate_side_flip_summary": {
+    "markets": 2,
+    "negative_markets": 0,
+    "net_cents": 68.0,
+    "opposite_rescue_markets": 2,
+    "positive_markets": 2,
+    "side_flip_markets": 2,
+    "trade_count": 14
+  },
+  "delta_autopsy_generated_at_utc": "2026-05-07T16:50:58.051172+00:00",
+  "freeze_ts_utc": "2026-05-07T13:00:17.363339+00:00",
+  "generated_at_utc": "2026-05-07T16:50:58.113770+00:00",
+  "interpretation": [
+    "Side-flip rescue is real in the current deficit rows, but it is sparse and derived from live sequence behavior.",
+    "The current candidate row is static; a deployable repair would need an explicit pre-registered state-transition trigger and its own forward rows.",
+    "Candidate-market opposite-side rescues: 2 market(s), 108c ($1.08) opposite-side net.",
+    "All post-freeze live side-flip markets: 2 of 13 markets, net 68c ($0.68)."
+  ],
+  "promotion_use": "feasibility_only_not_candidate",
+  "sequence_mechanism_generated_at_utc": "2026-05-07T16:50:58.046170+00:00"
+}

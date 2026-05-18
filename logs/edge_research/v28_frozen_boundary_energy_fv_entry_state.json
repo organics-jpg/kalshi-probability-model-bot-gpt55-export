@@ -1,0 +1,8 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "boundary_energy_fv_entry",
+  "freeze_ts_utc": "2026-05-06T11:19:55.494948+00:00",
+  "physics": "A close-to-strike BTC path with many minutes left can cross the boundary repeatedly. In that state, large apparent edge is often unstable trajectory energy, not terminal information; NO-side early boundary rows get the largest shrink because target-surface losses concentrate there.",
+  "rule": "Shrink raw fair value toward 50 when recross hazard, long clock, near-strike geometry, and weak executable edge imply unresolved path energy. Apply the unchanged target-coverage policy to the adjusted FV.",
+  "source_artifact": "v28_target_coverage_price_friction_latest"
+}

@@ -1,0 +1,66 @@
+{
+  "candidate": {
+    "brier_mean_delta": -0.014912731593232144,
+    "brier_p95_delta": 0.0006431900556874973,
+    "coverage_pct": 73.68421052631578,
+    "entries": 112,
+    "logloss_mean_delta": -0.026989299326773745,
+    "logloss_p95_delta": 0.005780956177999605,
+    "net_cents_after_entry_fee": -626.0,
+    "overlay": "book_probability",
+    "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "settled_rows": 112
+  },
+  "checks": [
+    {
+      "actual": 73.68421052631578,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_sequential_evidence_latest.json",
+      "name": "target_coverage_band",
+      "passed": false,
+      "required": "75.0-90.0"
+    },
+    {
+      "actual": 112,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_sequential_evidence_latest.json",
+      "name": "settled_forward_sample",
+      "passed": true,
+      "required": ">= 30"
+    },
+    {
+      "actual": -626.0,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_sequential_evidence_latest.json",
+      "name": "positive_forward_pnl",
+      "passed": false,
+      "required": "> 0.0"
+    },
+    {
+      "actual": 0.0006431900556874973,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_sequential_evidence_latest.json",
+      "name": "brier_interval_strictly_better_than_raw",
+      "passed": false,
+      "required": "< 0"
+    },
+    {
+      "actual": 0.005780956177999605,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_sequential_evidence_latest.json",
+      "name": "logloss_interval_strictly_better_than_raw",
+      "passed": false,
+      "required": "< 0"
+    },
+    {
+      "actual": false,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_trade_readiness_latest.json",
+      "name": "live_gate_not_accidentally_ready",
+      "passed": true,
+      "required": "False until all blockers clear intentionally"
+    }
+  ],
+  "notes": [
+    "This is only a promotion-review audit; it does not change live behavior.",
+    "The live-readiness gate should remain false until sample size and risk controls are intentionally cleared."
+  ],
+  "ready_for_promotion_review": false,
+  "remaining": {
+    "settled_rows_to_30": 0
+  }
+}

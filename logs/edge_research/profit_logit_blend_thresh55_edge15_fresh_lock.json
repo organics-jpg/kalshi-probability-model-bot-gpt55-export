@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-05-04T06:21:12.592120+00:00",
+  "diagnostic_metrics": {
+    "audit": "logit_blend_threshold_frontier_latest",
+    "combined_all_net_pnl_cents": 1606.0,
+    "current_all_accuracy": 0.7405,
+    "current_all_coverage": 0.9897,
+    "current_all_net_pnl_cents": 1053.0,
+    "current_all_net_roi_on_cost": 0.0518,
+    "min_oos_coverage": 0.9778,
+    "selection_warning": "Diagnostic row was visible only after scanning validation/holdout; this lock is forward-test only and not promotion evidence.",
+    "v21_all_accuracy": 0.7294,
+    "v21_all_coverage": 0.9864,
+    "v21_all_net_pnl_cents": 553.0,
+    "v21_all_net_roi_on_cost": 0.036
+  },
+  "edge_rule": {
+    "edge_floor_cents": -15.0,
+    "label": "fair_edge_cents>=-15 from 100*p_model-entry_cost"
+  },
+  "lock_close_dt": "2026-05-04T06:15:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "blend_logit_book_rv_hazard_mean",
+    "gate": "none",
+    "label": "choose=blend_logit_book_rv_hazard_mean; blend>=0.55; fair_edge>=-15c; ask<=95; sec>=60",
+    "min_score": 0.55,
+    "min_seconds_to_close": 60.0
+  },
+  "research_note": "Forward-registered after the 2026-05-04 06:15 UTC settlement from the logit blend threshold frontier. Physical hypothesis: cheap-price fair edge is not sufficient when physical state probability is below 0.55; a logit-pooled book/RV/hazard fair value should require minimum state confidence while preserving >=80% recurring BTC 15m coverage. This lock is research-only and requires strict live validation before any promotion.",
+  "source_audit_csv": "logs\\edge_research\\logit_blend_threshold_frontier_latest.csv"
+}

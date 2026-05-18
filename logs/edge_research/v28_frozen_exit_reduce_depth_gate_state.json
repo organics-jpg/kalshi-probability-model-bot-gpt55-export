@@ -1,0 +1,41 @@
+{
+  "candidate_family": "exit_reduce_depth_gate",
+  "freeze_ts_utc": "2026-05-06T20:19:43.176664+00:00",
+  "origin": "Derived from v28_exit_reduce_loss_control_signature; earlier rows are diagnostic only.",
+  "rules": {
+    "reduce_suppress_p_hold_ge_075_entry_depth_lte_295": {
+      "entry_depth_max": 295.0,
+      "p_hold_min": 0.75,
+      "physics": "Stricter version of the shallow-entry-depth loss-control repair."
+    },
+    "reduce_suppress_p_hold_ge_075_entry_depth_lte_384": {
+      "entry_depth_max": 384.0,
+      "p_hold_min": 0.75,
+      "physics": "Suppress reduce exits only when original entry depth was shallow enough to suggest a thin-book clip rather than a true loss-control signal."
+    },
+    "reduce_suppress_p_hold_ge_075_entry_depth_lte_384_drawdown_lte_2p5": {
+      "drawdown_max": 2.5,
+      "entry_depth_max": 384.0,
+      "p_hold_min": 0.75,
+      "physics": "Require shallow original entry depth and small fair-value drawdown at the reduce exit."
+    },
+    "reduce_suppress_p_hold_ge_079_entry_depth_lte_384": {
+      "entry_depth_max": 384.0,
+      "p_hold_min": 0.79,
+      "physics": "Require both high hold probability and shallow original entry depth."
+    }
+  },
+  "signature_best_separator": {
+    "direction": "le",
+    "feature": "entry_depth",
+    "harmful_excluded": 2,
+    "helpful_excluded": 3,
+    "omitted_delta_cents": -124.0,
+    "selected_delta_cents": 587.0,
+    "selected_harmful": 0,
+    "selected_helpful": 11,
+    "selected_rows": 11,
+    "threshold": 384.0
+  },
+  "strict_forward_note": "Only post_depth_gate_birth lanes count as forward evidence."
+}

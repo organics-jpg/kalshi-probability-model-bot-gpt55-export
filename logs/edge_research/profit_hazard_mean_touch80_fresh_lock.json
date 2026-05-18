@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-05-04T05:40:30+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.75,
+    "current_all_coverage": 0.9477,
+    "current_all_net_pnl_cents": 887.0,
+    "current_all_net_roi_on_cost": 0.0455,
+    "current_holdout_net_pnl_cents": null,
+    "current_validation_net_pnl_cents": null,
+    "max_median_ask": 69.0,
+    "min_oos_net_roi": 0.001,
+    "v21_all_accuracy": 0.75,
+    "v21_all_coverage": 0.9231,
+    "v21_all_net_pnl_cents": 804.0,
+    "v21_all_net_roi_on_cost": 0.0555,
+    "v21_holdout_net_pnl_cents": null,
+    "v21_validation_net_pnl_cents": null
+  },
+  "lock_close_dt": "2026-05-04T05:30:00+00:00",
+  "policy": {
+    "ask_max": 80.0,
+    "ask_min": 0.0,
+    "chooser": "hazard_discounted_mean_15",
+    "gate": "touch_loss15<=0.80",
+    "label": "choose=hazard_discounted_mean_15; hazard_discounted_mean_15>=0.45; 0<=ask<=80; sec>=60; gate=touch_loss15<=0.80",
+    "min_score": 0.45,
+    "min_seconds_to_close": 60.0
+  },
+  "research_note": "Forward-registered after the 2026-05-04 05:30 UTC settlement from the refreshed touch-hazard frontier. Physical hypothesis: held-to-expiry BTC 15m edge should discount book/Brownian terminal confidence by first-passage boundary-touch risk; this lock is research-only and requires strict live validation and >=75-80% recurring-market coverage before any promotion.",
+  "source_frontier_csv": "logs\\edge_research\\profit_touch_hazard_frontier_latest.csv"
+}

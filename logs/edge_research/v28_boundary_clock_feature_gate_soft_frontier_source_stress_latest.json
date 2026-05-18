@@ -1,0 +1,453 @@
+{
+  "freeze_ts_utc": "2026-05-06T20:01:04.705640+00:00",
+  "generated_at_utc": "2026-05-07T04:16:03.727349+00:00",
+  "interpretation": [
+    "Policy-specific audit only; no live logic changes and no promotion by itself.",
+    "Best stress row post_soft_frontier_birth_entry_soft_raw03_recross50_abs65_ask35 has 18 settled, coverage 75.0%, net 227.0c, reconstructed share 0.25, clean rows needed 0, cushion 2, blockers ['settled_lt_30', 'full_loss_cushion_lt_3'].",
+    "Best target-coverage row post_soft_frontier_birth_entry_soft_raw03_recross50_abs65_ask35 has net 227.0c and reconstructed share 0.25."
+  ],
+  "policies": [
+    {
+      "blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_source_gate": 0,
+      "full_loss_cushion_estimate": 2,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 0,
+          "net_after_losses_cents": 227.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 1,
+          "net_after_losses_cents": 127.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 2,
+          "net_after_losses_cents": 27.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 3,
+          "net_after_losses_cents": -73.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 4,
+          "net_after_losses_cents": -173.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 5,
+          "net_after_losses_cents": -273.0,
+          "still_positive": false
+        }
+      ],
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "lane": "post_soft_frontier_birth_entry",
+      "mechanism_tag_counts": {
+        "clean_or_unclassified": 12,
+        "mid_cheap_touch": 3,
+        "realized_loss": 2,
+        "source_quality_risk": 6,
+        "thin_or_negative_net": 9,
+        "thin_raw_edge": 1
+      },
+      "policy": "post_soft_frontier_birth_entry_soft_raw03_recross50_abs65_ask35",
+      "reconstructed_share": 0.25,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 18,
+          "rejected_actionable": 6
+        }
+      },
+      "summary": {
+        "avg_net_cents": 12.61111111111111,
+        "coverage_pct": 75.0,
+        "entries": 24,
+        "losses": 2,
+        "net_cents": 227.0,
+        "settled": 18,
+        "wins": 16
+      },
+      "variant_blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ]
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_source_gate": 0,
+      "full_loss_cushion_estimate": 2,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 0,
+          "net_after_losses_cents": 216.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 1,
+          "net_after_losses_cents": 116.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 2,
+          "net_after_losses_cents": 16.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 3,
+          "net_after_losses_cents": -84.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 4,
+          "net_after_losses_cents": -184.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 5,
+          "net_after_losses_cents": -284.0,
+          "still_positive": false
+        }
+      ],
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "lane": "post_soft_frontier_birth_bridge",
+      "mechanism_tag_counts": {
+        "clean_or_unclassified": 12,
+        "mid_cheap_touch": 3,
+        "realized_loss": 3,
+        "source_quality_risk": 6,
+        "thin_or_negative_net": 8,
+        "thin_raw_edge": 1
+      },
+      "policy": "post_soft_frontier_birth_bridge_soft_raw03_recross50_abs65_ask35",
+      "reconstructed_share": 0.25,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 18,
+          "rejected_actionable": 6
+        }
+      },
+      "summary": {
+        "avg_net_cents": 10.8,
+        "coverage_pct": 75.0,
+        "entries": 24,
+        "losses": 3,
+        "net_cents": 216.0,
+        "settled": 20,
+        "wins": 17
+      },
+      "variant_blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ]
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_source_gate": 5,
+      "full_loss_cushion_estimate": 1,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 0,
+          "net_after_losses_cents": 175.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 1,
+          "net_after_losses_cents": 75.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 2,
+          "net_after_losses_cents": -25.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 3,
+          "net_after_losses_cents": -125.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 4,
+          "net_after_losses_cents": -225.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 5,
+          "net_after_losses_cents": -325.0,
+          "still_positive": false
+        }
+      ],
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "lane": "post_soft_frontier_birth_bridge",
+      "mechanism_tag_counts": {
+        "clean_or_unclassified": 11,
+        "mid_cheap_touch": 4,
+        "near_strike_boundary_pull": 5,
+        "realized_loss": 5,
+        "source_quality_risk": 11,
+        "thin_or_negative_net": 10,
+        "thin_raw_edge": 1
+      },
+      "policy": "post_soft_frontier_birth_bridge_soft_raw03_recross50_abs50_ask35",
+      "reconstructed_share": 0.4074074074074074,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 16,
+          "rejected_actionable": 11
+        }
+      },
+      "summary": {
+        "avg_net_cents": 7.608695652173913,
+        "coverage_pct": 84.375,
+        "entries": 27,
+        "losses": 5,
+        "net_cents": 175.0,
+        "settled": 23,
+        "wins": 18
+      },
+      "variant_blockers": [
+        "settled_lt_30",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ]
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_source_gate": 5,
+      "full_loss_cushion_estimate": 1,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 0,
+          "net_after_losses_cents": 108.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 1,
+          "net_after_losses_cents": 8.0,
+          "still_positive": true
+        },
+        {
+          "added_full_losses": 2,
+          "net_after_losses_cents": -92.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 3,
+          "net_after_losses_cents": -192.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 4,
+          "net_after_losses_cents": -292.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 5,
+          "net_after_losses_cents": -392.0,
+          "still_positive": false
+        }
+      ],
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "lane": "post_soft_frontier_birth_entry",
+      "mechanism_tag_counts": {
+        "clean_or_unclassified": 11,
+        "mid_cheap_touch": 4,
+        "near_strike_boundary_pull": 5,
+        "realized_loss": 5,
+        "source_quality_risk": 11,
+        "thin_or_negative_net": 11,
+        "thin_raw_edge": 1
+      },
+      "policy": "post_soft_frontier_birth_entry_soft_raw03_recross50_abs50_ask35",
+      "reconstructed_share": 0.4074074074074074,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 16,
+          "rejected_actionable": 11
+        }
+      },
+      "summary": {
+        "avg_net_cents": 4.909090909090909,
+        "coverage_pct": 84.375,
+        "entries": 27,
+        "losses": 5,
+        "net_cents": 108.0,
+        "settled": 22,
+        "wins": 17
+      },
+      "variant_blockers": [
+        "settled_lt_30",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ]
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_source_gate": 4,
+      "full_loss_cushion_estimate": 0,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 0,
+          "net_after_losses_cents": -66.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 1,
+          "net_after_losses_cents": -166.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 2,
+          "net_after_losses_cents": -266.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 3,
+          "net_after_losses_cents": -366.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 4,
+          "net_after_losses_cents": -466.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 5,
+          "net_after_losses_cents": -566.0,
+          "still_positive": false
+        }
+      ],
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "lane": "post_soft_frontier_birth_bridge",
+      "mechanism_tag_counts": {
+        "clean_or_unclassified": 11,
+        "near_strike_boundary_pull": 5,
+        "realized_loss": 6,
+        "source_quality_risk": 10,
+        "thin_or_negative_net": 11,
+        "thin_raw_edge": 1
+      },
+      "policy": "post_soft_frontier_birth_bridge_soft_raw03_recross50_abs50_ask50",
+      "reconstructed_share": 0.4,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 15,
+          "rejected_actionable": 10
+        }
+      },
+      "summary": {
+        "avg_net_cents": -3.142857142857143,
+        "coverage_pct": 78.125,
+        "entries": 25,
+        "losses": 6,
+        "net_cents": -66.0,
+        "settled": 21,
+        "wins": 15
+      },
+      "variant_blockers": [
+        "settled_lt_30",
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ]
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_source_gate": 4,
+      "full_loss_cushion_estimate": 0,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 0,
+          "net_after_losses_cents": -77.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 1,
+          "net_after_losses_cents": -177.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 2,
+          "net_after_losses_cents": -277.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 3,
+          "net_after_losses_cents": -377.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 4,
+          "net_after_losses_cents": -477.0,
+          "still_positive": false
+        },
+        {
+          "added_full_losses": 5,
+          "net_after_losses_cents": -577.0,
+          "still_positive": false
+        }
+      ],
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "lane": "post_soft_frontier_birth_entry",
+      "mechanism_tag_counts": {
+        "clean_or_unclassified": 11,
+        "near_strike_boundary_pull": 5,
+        "realized_loss": 6,
+        "source_quality_risk": 10,
+        "thin_or_negative_net": 11,
+        "thin_raw_edge": 1
+      },
+      "policy": "post_soft_frontier_birth_entry_soft_raw03_recross50_abs50_ask50",
+      "reconstructed_share": 0.4,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 15,
+          "rejected_actionable": 10
+        }
+      },
+      "summary": {
+        "avg_net_cents": -3.6666666666666665,
+        "coverage_pct": 78.125,
+        "entries": 25,
+        "losses": 6,
+        "net_cents": -77.0,
+        "settled": 21,
+        "wins": 15
+      },
+      "variant_blockers": [
+        "settled_lt_30",
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ]
+    }
+  ],
+  "purpose": "Policy-specific source and full-loss stress for strict soft-frontier forward rows.",
+  "soft_frontier_generated_at_utc": "2026-05-07T04:15:56.543647+00:00"
+}

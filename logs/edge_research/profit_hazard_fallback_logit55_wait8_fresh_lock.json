@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-05-04T07:36:01.167593+00:00",
+  "diagnostic_metrics": {
+    "audit": "hazard_fallback_frontier_latest",
+    "combined_all_net_pnl_cents": 1928.0,
+    "current_all_accuracy": 0.7543,
+    "current_all_coverage": 0.9797,
+    "current_all_net_pnl_cents": 1016.0,
+    "current_all_net_roi_on_cost": 0.0489,
+    "min_oos_coverage": 0.9661,
+    "selection_warning": "Diagnostic row was visible only after scanning validation/holdout; this lock is forward-test only and not promotion evidence.",
+    "v21_all_accuracy": 0.757,
+    "v21_all_coverage": 0.9683,
+    "v21_all_net_pnl_cents": 912.0,
+    "v21_all_net_roi_on_cost": 0.0597
+  },
+  "fallback_policy": {
+    "ask_max": 95.0,
+    "chooser": "blend_logit_book_rv_hazard_mean",
+    "edge_floor_cents": -15.0,
+    "label": "fallback=blend_logit_book_rv_hazard_mean; blend>=0.55; fair_edge>=-15c; ask<=95; 60<=sec<=480",
+    "max_seconds_to_close": 480.0,
+    "min_score": 0.55,
+    "min_seconds_to_close": 60.0
+  },
+  "lock_close_dt": "2026-05-04T07:30:00+00:00",
+  "primary_policy": {
+    "ask_max": 80.0,
+    "ask_min": 0.0,
+    "chooser": "hazard_discounted_mean_15",
+    "gate": "touch_loss15<=0.80",
+    "label": "primary=hazard_discounted_mean_15>=0.45; 0<=ask<=80; sec>=60; touch_loss15<=0.80",
+    "min_score": 0.45,
+    "min_seconds_to_close": 60.0
+  },
+  "research_note": "Forward-registered after the 2026-05-04 07:30 UTC settlement from the delayed hazard fallback scan. Physical hypothesis: fallback should be delayed until <=8 minutes remain, giving the hazard primary a causal window to form first. This lock is research-only and requires strict live validation before any promotion.",
+  "source_audit_csv": "logs\\edge_research\\hazard_fallback_frontier_latest.csv"
+}

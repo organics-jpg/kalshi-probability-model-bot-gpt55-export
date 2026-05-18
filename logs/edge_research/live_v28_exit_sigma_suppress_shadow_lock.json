@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-05-04T16:17:30+00:00",
+  "diagnostic_metrics": {
+    "actual_exit_net_dollars": -6.76,
+    "candidate_adjusted_net_dollars": -6.22,
+    "candidate_delta_vs_actual_exit_dollars": 0.54,
+    "candidate_holdout_adjusted_net_dollars": 1.46,
+    "candidate_suppressed_exits": 37,
+    "candidate_suppressed_share": 0.2483221476510067,
+    "candidate_validation_adjusted_net_dollars": 1.28,
+    "exit_value_added_dollars": 16.53,
+    "hold_to_settlement_net_dollars": -23.29,
+    "matched_resolved_exits": 149,
+    "selection_warning": "Research-only forward shadow. Historical candidate improved after the 2026-05-04T16:15:00Z settlement refresh, so this lock's effective boundary was advanced to the next full market close before counting future evidence.",
+    "source": "live_v28_exit_value_audit_latest",
+    "strict_pass": true
+  },
+  "lock_close_dt": "2026-05-04T16:30:00+00:00",
+  "lock_name": "live_v28_exit_sigma_suppress_shadow",
+  "research_note": "Physical hypothesis: v28 exits are valuable when remaining terminal uncertainty is low, but may false-alarm when sigma_t is still high. This monitor records future high-sigma exits and scores whether holding would have beaten the live exit.",
+  "rule": {
+    "feature": "mushroom_v28_sigma_t_dollars",
+    "label": "suppress_exit_if_sigma_t_dollars>=100",
+    "op": ">=",
+    "threshold": 100.0
+  }
+}

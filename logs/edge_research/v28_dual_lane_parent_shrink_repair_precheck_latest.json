@@ -1,0 +1,98 @@
+{
+  "best_union": {
+    "blockers": [
+      "settled_lt_30",
+      "full_loss_cushion_lt_3",
+      "reconstructed_share_gt_35pct",
+      "does_not_beat_refreshed_live_baseline"
+    ],
+    "coverage_pct": 87.5,
+    "full_loss_cushion": 1,
+    "live_ready": false,
+    "losses": 0,
+    "net_cents": 185.0,
+    "policy": "post_dual_parent_shrink_entry_cheap_penalty025_rank_only",
+    "primary_policy": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter",
+    "reconstructed_share": 0.42857142857142855,
+    "settled": 7,
+    "shared_markets": 5,
+    "sidecar_add_net_cents": 20.0,
+    "source_counts": {
+      "approved_entry": 4,
+      "rejected_actionable": 3
+    },
+    "wins": 7
+  },
+  "earliest_min_sample_local_time": "2026-05-07T18:49:20.874849-04:00",
+  "force_replay": true,
+  "freeze_local_time": "2026-05-07T11:19:20.874849-04:00",
+  "freeze_ts_utc": "2026-05-07T15:19:20.874849+00:00",
+  "generated_at_utc": "2026-05-08T03:53:29.954205+00:00",
+  "live_baseline_cents": 2215.0,
+  "market_windows_remaining_to_min_sample": 0,
+  "possible_market_windows_since_freeze": 50,
+  "pre_sample_short_circuit": false,
+  "promotion_use": "not_promotion_evidence_before_min_sample",
+  "read": [
+    "Forced repair replay executed into a separate diagnostic artifact.",
+    "Rows are not promotion evidence before the repair branch reaches its own 30-settled-row gate.",
+    "Use this only to catch scorer/join/accounting failures before the real checkpoint."
+  ],
+  "repair_rule": {
+    "ask_prob_min": 0.78,
+    "component": "strict_parent_midprice_hold_fill",
+    "raw_edge_max": 0.09,
+    "weight": 0.5
+  },
+  "source_probe": "probe_v28_dual_lane_parent_shrink_watch.build_report(force_replay=1)",
+  "unions": [
+    {
+      "blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3",
+        "reconstructed_share_gt_35pct",
+        "does_not_beat_refreshed_live_baseline"
+      ],
+      "coverage_pct": 87.5,
+      "full_loss_cushion": 1,
+      "live_ready": false,
+      "losses": 0,
+      "net_cents": 185.0,
+      "policy": "post_dual_parent_shrink_entry_cheap_penalty025_rank_only",
+      "primary_policy": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter",
+      "reconstructed_share": 0.42857142857142855,
+      "settled": 7,
+      "shared_markets": 5,
+      "sidecar_add_net_cents": 20.0,
+      "source_counts": {
+        "approved_entry": 4,
+        "rejected_actionable": 3
+      },
+      "wins": 7
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3",
+        "reconstructed_share_gt_35pct",
+        "does_not_beat_refreshed_live_baseline"
+      ],
+      "coverage_pct": 87.5,
+      "full_loss_cushion": 1,
+      "live_ready": false,
+      "losses": 0,
+      "net_cents": 185.0,
+      "policy": "post_dual_parent_shrink_bridge_cheap_penalty025_rank_only",
+      "primary_policy": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter",
+      "reconstructed_share": 0.42857142857142855,
+      "settled": 7,
+      "shared_markets": 5,
+      "sidecar_add_net_cents": 20.0,
+      "source_counts": {
+        "approved_entry": 4,
+        "rejected_actionable": 3
+      },
+      "wins": 7
+    }
+  ]
+}

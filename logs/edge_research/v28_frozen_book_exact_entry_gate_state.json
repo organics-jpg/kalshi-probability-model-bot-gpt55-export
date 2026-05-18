@@ -1,0 +1,39 @@
+{
+  "candidate": "book_exact_entry_gate",
+  "freeze_ts_utc": "2026-05-06T11:33:52.584603+00:00",
+  "physics": "If the FV estimate has fully collapsed to executable book probability, the trade is not raw model alpha. It is a book/state regime bet and must show forward edge after fees without relying on rejected-row simulation.",
+  "policies": [
+    {
+      "physics": "When stale v28 geometry is fully forgotten and the effective probability equals the book, require book-favorite state to carry the trade.",
+      "policy": "first_side_raw_later_book_p58_edge0",
+      "role": "lower-threshold book-collapse gate"
+    },
+    {
+      "physics": "Same as p58, but only when the executable book favorite is at least 60%.",
+      "policy": "first_side_raw_later_book_p60_edge0",
+      "role": "primary book-collapse gate"
+    },
+    {
+      "physics": "Only accept repeated-side/RMT states after the model has fully collapsed to book probability.",
+      "policy": "rmt_repetition_forget_p58_edge0",
+      "role": "RMT repetition book-collapse gate"
+    },
+    {
+      "physics": "Same as p58 RMT repetition gate, with at least 60% book probability.",
+      "policy": "rmt_repetition_forget_p60_edge0",
+      "role": "stricter RMT repetition book-collapse gate"
+    }
+  ],
+  "promotion_floor": {
+    "max_coverage_pct": 90.0,
+    "max_simulated_share": 0.35,
+    "min_coverage_pct": 75.0,
+    "min_settled": 30,
+    "must_be_net_positive": true
+  },
+  "rule": {
+    "mode": "book_exact",
+    "one_entry_per_market": true,
+    "source": "v28_rmt_forgetting_entry_bakeoff selected rows"
+  }
+}

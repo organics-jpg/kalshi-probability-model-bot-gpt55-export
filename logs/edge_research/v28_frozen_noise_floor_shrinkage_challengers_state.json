@@ -1,0 +1,23 @@
+{
+  "freeze_ts": "2026-05-05T23:22:57.684142+00:00",
+  "policies": [
+    {
+      "physics": "Shrink raw v28 toward 50 only for near-strike/recross/stale noise, with a 1pp executable edge buffer. Discovery kept 75-80% coverage and improved Brier versus raw p50.",
+      "policy": "noise_shrink_light_p50_edge1",
+      "role": "high_coverage_calibration_challenger"
+    },
+    {
+      "physics": "Same light noise-floor shrinkage without the extra edge buffer. Tests whether calibration gains survive while keeping raw p50-style coverage.",
+      "policy": "noise_shrink_light_p50_edge0",
+      "role": "high_coverage_profit_calibration_challenger"
+    }
+  ],
+  "promotion_floor": {
+    "fv_validation_allows_shadow_rows": true,
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "base": {
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 71.85185185185185,
+    "entries": 97,
+    "losses": 44,
+    "net_cents": -769.0,
+    "settled": 97,
+    "wins": 53
+  },
+  "candidate": {
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 65.18518518518519,
+    "entries": 88,
+    "losses": 38,
+    "net_cents": -209.0,
+    "settled": 88,
+    "wins": 50
+  },
+  "delta_net_cents": 560.0,
+  "freeze": {
+    "base_entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "candidate": "skip_midp60_75_edge_lt2pp_recross_ge85",
+    "edge_ceiling": 0.02,
+    "freeze_ts_utc": "2026-05-06T03:39:03.842700+00:00",
+    "hypothesis": "Thin-edge high-recross mid-p rows are boundary noise; skip them while preserving broad coverage.",
+    "max_mid_p": 0.75,
+    "min_mid_p": 0.6,
+    "recross_floor": 0.85
+  },
+  "future_denominator": 135,
+  "interpretation": [
+    "Frozen thin-recross entry gate has 88 entries versus 97 base entries.",
+    "It has skipped 9 future rows so far; promotion requires settled forward rows, not this setup snapshot.",
+    "This is entry-policy evidence, separate from the conservative FV overlay."
+  ],
+  "pending_kept_rows": [],
+  "skipped_rows": [
+    {
+      "ask_prob": 0.59,
+      "market": "KXBTC15M-26MAY060830-30",
+      "net_cents": -122.0,
+      "p_raw": 0.60073,
+      "raw_edge_prob": 0.010730000000000017,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 0.94370017939859,
+      "side": "no",
+      "side_won": false
+    },
+    {
+      "ask_prob": 0.6,
+      "market": "KXBTC15M-26MAY060930-30",
+      "net_cents": -124.0,
+      "p_raw": 0.604377,
+      "raw_edge_prob": 0.004377000000000075,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 1.150583070145743,
+      "side": "yes",
+      "side_won": false
+    },
+    {
+      "ask_prob": 0.61,
+      "market": "KXBTC15M-26MAY061030-30",
+      "net_cents": 74.0,
+      "p_raw": 0.618153,
+      "raw_edge_prob": 0.008152999999999966,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 1.1682803908710917,
+      "side": "yes",
+      "side_won": true
+    },
+    {
+      "ask_prob": 0.65,
+      "market": "KXBTC15M-26MAY061130-30",
+      "net_cents": 66.0,
+      "p_raw": 0.653101,
+      "raw_edge_prob": 0.0031010000000000204,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 1.0562212924605836,
+      "side": "yes",
+      "side_won": true
+    },
+    {
+      "ask_prob": 0.68,
+      "market": "KXBTC15M-26MAY061230-30",
+      "net_cents": -140.0,
+      "p_raw": 0.681329,
+      "raw_edge_prob": 0.0013289999999999136,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 0.8624571365398368,
+      "side": "yes",
+      "side_won": false
+    },
+    {
+      "ask_prob": 0.67,
+      "market": "KXBTC15M-26MAY061430-30",
+      "net_cents": 62.0,
+      "p_raw": 0.678512,
+      "raw_edge_prob": 0.008511999999999964,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 0.8935551730324466,
+      "side": "yes",
+      "side_won": true
+    },
+    {
+      "ask_prob": 0.6,
+      "market": "KXBTC15M-26MAY071015-15",
+      "net_cents": -124.0,
+      "p_raw": 0.609894,
+      "raw_edge_prob": 0.00989400000000007,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 1.10286385624332,
+      "side": "no",
+      "side_won": false
+    },
+    {
+      "ask_prob": 0.62,
+      "market": "KXBTC15M-26MAY071115-15",
+      "net_cents": -128.0,
+      "p_raw": 0.635838,
+      "raw_edge_prob": 0.01583800000000002,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 0.9827713747301794,
+      "side": "no",
+      "side_won": false
+    },
+    {
+      "ask_prob": 0.6,
+      "market": "KXBTC15M-26MAY071200-00",
+      "net_cents": -124.0,
+      "p_raw": 0.606055,
+      "raw_edge_prob": 0.006055000000000033,
+      "reason": "skip_thin_midp_high_recross",
+      "recross_hazard_score": 1.0963020284423506,
+      "side": "yes",
+      "side_won": false
+    }
+  ]
+}

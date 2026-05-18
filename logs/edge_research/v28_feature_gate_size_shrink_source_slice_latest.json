@@ -1,0 +1,1171 @@
+{
+  "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+  "generated_at_utc": "2026-05-07T12:25:43.589045+00:00",
+  "interpretation": [
+    "Research-only source-slice audit; no live bot changes or orders.",
+    "Live baseline for delta math is 1049c.",
+    "post_feature_freeze_entry: current policy is 369.0c with W/L 37/8 and 75.41% coverage, but row source share stays 0.413.",
+    "post_feature_freeze_entry: approved-only rows are 387.0c with W/L 25/1 but only 44.26% coverage; repair-added rows alone are -4.0c with W/L 12/6.",
+    "post_feature_freeze_entry: even a post-hoc best-case source-gate trim leaves 67.21% coverage, so this branch needs fresh approved rows rather than more reconstructed repair rows.",
+    "post_feature_freeze_bridge: current policy is 369.0c with W/L 37/8 and 75.41% coverage, but row source share stays 0.413.",
+    "post_feature_freeze_bridge: approved-only rows are 387.0c with W/L 25/1 but only 44.26% coverage; repair-added rows alone are -4.0c with W/L 12/6.",
+    "post_feature_freeze_bridge: even a post-hoc best-case source-gate trim leaves 67.21% coverage, so this branch needs fresh approved rows rather than more reconstructed repair rows."
+  ],
+  "lanes": [
+    {
+      "anchor_rule": "raw05_recross60_abs85_asknone",
+      "approved_repair_rows": 4,
+      "best_reconstructed_rows": [
+        {
+          "abs_d_sigma": 0.576357,
+          "ask_prob": 0.57,
+          "market": "KXBTC15M-26MAY062315-15",
+          "raw_net_cents": 39.0,
+          "recross_hazard_score": 0.26404491215622455,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 39.0
+        },
+        {
+          "abs_d_sigma": 0.796902,
+          "ask_prob": 0.77,
+          "market": "KXBTC15M-26MAY061630-30",
+          "raw_net_cents": 20.0,
+          "recross_hazard_score": 0.23069953045018135,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 20.0
+        },
+        {
+          "abs_d_sigma": 0.680058,
+          "ask_prob": 0.45,
+          "market": "KXBTC15M-26MAY061945-45",
+          "raw_net_cents": 51.0,
+          "recross_hazard_score": 0.39634677763047876,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 12.75
+        },
+        {
+          "abs_d_sigma": 0.552158,
+          "ask_prob": 0.48,
+          "market": "KXBTC15M-26MAY062000-00",
+          "raw_net_cents": 48.0,
+          "recross_hazard_score": 0.4198006566449445,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 12.0
+        },
+        {
+          "abs_d_sigma": 2.281129,
+          "ask_prob": 0.91,
+          "market": "KXBTC15M-26MAY070715-15",
+          "raw_net_cents": 8.0,
+          "recross_hazard_score": 0.05134665646149286,
+          "role": "anchor_overlap",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 8.0
+        },
+        {
+          "abs_d_sigma": 0.528486,
+          "ask_prob": 0.69,
+          "market": "KXBTC15M-26MAY061600-00",
+          "raw_net_cents": 28.0,
+          "recross_hazard_score": 0.3774586970057051,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 7.0
+        },
+        {
+          "abs_d_sigma": 0.734324,
+          "ask_prob": 0.69,
+          "market": "KXBTC15M-26MAY070600-00",
+          "raw_net_cents": 28.0,
+          "recross_hazard_score": 0.20173169569410354,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 7.0
+        },
+        {
+          "abs_d_sigma": 0.527347,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY061530-30",
+          "raw_net_cents": 27.0,
+          "recross_hazard_score": 0.2185165196695336,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 6.75
+        },
+        {
+          "abs_d_sigma": 0.556916,
+          "ask_prob": 0.71,
+          "market": "KXBTC15M-26MAY070200-00",
+          "raw_net_cents": 26.0,
+          "recross_hazard_score": 0.20144802541452023,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 6.5
+        },
+        {
+          "abs_d_sigma": 1.770776,
+          "ask_prob": 0.92,
+          "market": "KXBTC15M-26MAY062145-45",
+          "raw_net_cents": 6.0,
+          "recross_hazard_score": 0.03476117876899882,
+          "role": "anchor_overlap",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 6.0
+        }
+      ],
+      "future_denominator": 61,
+      "groups": [
+        {
+          "avg_weighted_net_cents": 13.814814814814815,
+          "bucket": "anchor_overlap",
+          "entries": 28,
+          "group": "role",
+          "losses": 2,
+          "row_reconstructed_share": 0.17857142857142858,
+          "settled": 27,
+          "weight_sum": 28.0,
+          "weighted_net_cents": 373.0,
+          "wins": 25
+        },
+        {
+          "avg_weighted_net_cents": -0.2222222222222222,
+          "bucket": "repair_added",
+          "entries": 18,
+          "group": "role",
+          "losses": 6,
+          "row_reconstructed_share": 0.7777777777777778,
+          "settled": 18,
+          "weight_sum": 6.0,
+          "weighted_net_cents": -4.0,
+          "wins": 12
+        },
+        {
+          "avg_weighted_net_cents": 14.884615384615385,
+          "bucket": "approved_entry",
+          "entries": 27,
+          "group": "source",
+          "losses": 1,
+          "row_reconstructed_share": 0.0,
+          "settled": 26,
+          "weight_sum": 25.0,
+          "weighted_net_cents": 387.0,
+          "wins": 25
+        },
+        {
+          "avg_weighted_net_cents": -0.9473684210526315,
+          "bucket": "rejected_actionable",
+          "entries": 19,
+          "group": "source",
+          "losses": 7,
+          "row_reconstructed_share": 1.0,
+          "settled": 19,
+          "weight_sum": 9.0,
+          "weighted_net_cents": -18.0,
+          "wins": 12
+        },
+        {
+          "avg_weighted_net_cents": 16.59090909090909,
+          "bucket": "anchor_overlap::approved_entry",
+          "entries": 23,
+          "group": "role_x_source",
+          "losses": 1,
+          "row_reconstructed_share": 0.0,
+          "settled": 22,
+          "weight_sum": 23.0,
+          "weighted_net_cents": 365.0,
+          "wins": 21
+        },
+        {
+          "avg_weighted_net_cents": 1.6,
+          "bucket": "anchor_overlap::rejected_actionable",
+          "entries": 5,
+          "group": "role_x_source",
+          "losses": 1,
+          "row_reconstructed_share": 1.0,
+          "settled": 5,
+          "weight_sum": 5.0,
+          "weighted_net_cents": 8.0,
+          "wins": 4
+        },
+        {
+          "avg_weighted_net_cents": 5.5,
+          "bucket": "repair_added::approved_entry",
+          "entries": 4,
+          "group": "role_x_source",
+          "losses": 0,
+          "row_reconstructed_share": 0.0,
+          "settled": 4,
+          "weight_sum": 2.0,
+          "weighted_net_cents": 22.0,
+          "wins": 4
+        },
+        {
+          "avg_weighted_net_cents": -1.8571428571428572,
+          "bucket": "repair_added::rejected_actionable",
+          "entries": 14,
+          "group": "role_x_source",
+          "losses": 6,
+          "row_reconstructed_share": 1.0,
+          "settled": 14,
+          "weight_sum": 4.0,
+          "weighted_net_cents": -26.0,
+          "wins": 8
+        },
+        {
+          "avg_weighted_net_cents": 22.88235294117647,
+          "bucket": "abs_075_125",
+          "entries": 17,
+          "group": "abs_d_sigma_bucket",
+          "losses": 0,
+          "row_reconstructed_share": 0.058823529411764705,
+          "settled": 17,
+          "weight_sum": 16.5,
+          "weighted_net_cents": 389.0,
+          "wins": 17
+        },
+        {
+          "avg_weighted_net_cents": 2.6785714285714284,
+          "bucket": "abs_ge_125",
+          "entries": 15,
+          "group": "abs_d_sigma_bucket",
+          "losses": 1,
+          "row_reconstructed_share": 0.26666666666666666,
+          "settled": 14,
+          "weight_sum": 12.5,
+          "weighted_net_cents": 37.5,
+          "wins": 13
+        },
+        {
+          "avg_weighted_net_cents": -4.107142857142857,
+          "bucket": "abs_lt_075",
+          "entries": 14,
+          "group": "abs_d_sigma_bucket",
+          "losses": 7,
+          "row_reconstructed_share": 1.0,
+          "settled": 14,
+          "weight_sum": 5.0,
+          "weighted_net_cents": -57.5,
+          "wins": 7
+        },
+        {
+          "avg_weighted_net_cents": 11.31,
+          "bucket": "recross_015_035",
+          "entries": 26,
+          "group": "recross_bucket",
+          "losses": 4,
+          "row_reconstructed_share": 0.34615384615384615,
+          "settled": 25,
+          "weight_sum": 20.5,
+          "weighted_net_cents": 282.75,
+          "wins": 21
+        },
+        {
+          "avg_weighted_net_cents": 9.0,
+          "bucket": "recross_ge_035",
+          "entries": 6,
+          "group": "recross_bucket",
+          "losses": 1,
+          "row_reconstructed_share": 0.6666666666666666,
+          "settled": 6,
+          "weight_sum": 3.0,
+          "weighted_net_cents": 54.0,
+          "wins": 5
+        },
+        {
+          "avg_weighted_net_cents": 2.3035714285714284,
+          "bucket": "recross_lt_015",
+          "entries": 14,
+          "group": "recross_bucket",
+          "losses": 3,
+          "row_reconstructed_share": 0.42857142857142855,
+          "settled": 14,
+          "weight_sum": 10.5,
+          "weighted_net_cents": 32.25,
+          "wins": 11
+        }
+      ],
+      "lane": "post_feature_freeze_entry",
+      "policy": "repair_low_absd_quarter_else_half",
+      "reconstructed_repair_rows": 14,
+      "repair_rule": "raw03_recross50_abs50_ask35",
+      "repair_source_counts": {
+        "approved_entry": 4,
+        "rejected_actionable": 14
+      },
+      "reported_summary": {
+        "blockers": [
+          "row_reconstructed_share_gt_35pct"
+        ],
+        "coverage_pct": 75.40983606557377,
+        "entries": 46,
+        "exposure_reconstructed_share": 0.2647058823529412,
+        "full_loss_cushion": 3,
+        "losses": 8,
+        "row_reconstructed_share": 0.41304347826086957,
+        "settled": 45,
+        "weighted_net_cents": 369.0,
+        "wins": 37
+      },
+      "role_counts": {
+        "anchor_overlap": 28,
+        "repair_added": 18
+      },
+      "scenarios": [
+        {
+          "blockers": [
+            "row_reconstructed_share_gt_35pct",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 75.40983606557377,
+          "delta_vs_live_cents": -680.0,
+          "entries": 46,
+          "exposure_reconstructed_share": 0.2647058823529412,
+          "full_loss_cushion": 3,
+          "losses": 8,
+          "row_reconstructed_share": 0.41304347826086957,
+          "scenario": "current_weighted_policy",
+          "settled": 45,
+          "weighted_net_cents": 369.0,
+          "wins": 37
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 44.26229508196721,
+          "delta_vs_live_cents": -662.0,
+          "entries": 27,
+          "exposure_reconstructed_share": 0.0,
+          "full_loss_cushion": 3,
+          "losses": 1,
+          "row_reconstructed_share": 0.0,
+          "scenario": "approved_only_drop_reconstructed",
+          "settled": 26,
+          "weighted_net_cents": 387.0,
+          "wins": 25
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 45.90163934426229,
+          "delta_vs_live_cents": -676.0,
+          "entries": 28,
+          "exposure_reconstructed_share": 0.17857142857142858,
+          "full_loss_cushion": 3,
+          "losses": 2,
+          "row_reconstructed_share": 0.17857142857142858,
+          "scenario": "anchor_overlap_only",
+          "settled": 27,
+          "weighted_net_cents": 373.0,
+          "wins": 25
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "row_reconstructed_share_gt_35pct",
+            "full_loss_cushion_lt_3",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 29.508196721311474,
+          "delta_vs_live_cents": -1053.0,
+          "entries": 18,
+          "exposure_reconstructed_share": 0.6666666666666666,
+          "full_loss_cushion": 0,
+          "losses": 6,
+          "row_reconstructed_share": 0.7777777777777778,
+          "scenario": "repair_added_only",
+          "settled": 18,
+          "weighted_net_cents": -4.0,
+          "wins": 12
+        },
+        {
+          "blockers": [
+            "coverage_too_low",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 67.21311475409836,
+          "delta_vs_live_cents": -553.75,
+          "entries": 41,
+          "exposure_reconstructed_share": 0.21875,
+          "full_loss_cushion": 4,
+          "losses": 3,
+          "row_reconstructed_share": 0.34146341463414637,
+          "scenario": "source_gate_best_case_drop_recon",
+          "settled": 40,
+          "weighted_net_cents": 495.25,
+          "wins": 37
+        },
+        {
+          "blockers": [
+            "row_reconstructed_share_gt_35pct",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 75.40983606557377,
+          "delta_vs_live_cents": -662.0,
+          "entries": 46,
+          "exposure_reconstructed_share": 0.2647058823529412,
+          "full_loss_cushion": 3,
+          "losses": 8,
+          "row_reconstructed_share": 0.41304347826086957,
+          "scenario": "zero_recontribution_keep_rows",
+          "settled": 45,
+          "weighted_net_cents": 387.0,
+          "wins": 37
+        },
+        {
+          "blockers": [
+            "row_reconstructed_share_gt_35pct",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 75.40983606557377,
+          "delta_vs_live_cents": -666.5,
+          "entries": 46,
+          "exposure_reconstructed_share": 0.2647058823529412,
+          "full_loss_cushion": 3,
+          "losses": 8,
+          "row_reconstructed_share": 0.41304347826086957,
+          "scenario": "quarter_recontribution_keep_rows",
+          "settled": 45,
+          "weighted_net_cents": 382.5,
+          "wins": 37
+        }
+      ],
+      "source_counts": {
+        "approved_entry": 27,
+        "rejected_actionable": 19
+      },
+      "source_gate_clean_rows_needed_if_keep_current": 9,
+      "worst_rows": [
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "raw_net_cents": -72.0,
+          "recross_hazard_score": 0.07375286170271013,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "approved_entry",
+          "weight": 1.0,
+          "weighted_net_cents": -72.0
+        },
+        {
+          "abs_d_sigma": 0.623877,
+          "ask_prob": 0.61,
+          "market": "KXBTC15M-26MAY062130-30",
+          "raw_net_cents": -65.0,
+          "recross_hazard_score": 0.2673176111866901,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": -65.0
+        },
+        {
+          "abs_d_sigma": 0.60259,
+          "ask_prob": 0.64,
+          "market": "KXBTC15M-26MAY061715-15",
+          "raw_net_cents": -68.0,
+          "recross_hazard_score": 0.11475429655322977,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -17.0
+        },
+        {
+          "abs_d_sigma": 0.72697,
+          "ask_prob": 0.56,
+          "market": "KXBTC15M-26MAY062345-45",
+          "raw_net_cents": -60.0,
+          "recross_hazard_score": 0.2648024542283173,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -15.0
+        },
+        {
+          "abs_d_sigma": 0.65803,
+          "ask_prob": 0.55,
+          "market": "KXBTC15M-26MAY070630-30",
+          "raw_net_cents": -59.0,
+          "recross_hazard_score": 0.37230392875591767,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -14.75
+        },
+        {
+          "abs_d_sigma": 0.532659,
+          "ask_prob": 0.54,
+          "market": "KXBTC15M-26MAY062230-30",
+          "raw_net_cents": -58.0,
+          "recross_hazard_score": 0.24354681339147827,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -14.5
+        },
+        {
+          "abs_d_sigma": 0.63149,
+          "ask_prob": 0.43,
+          "market": "KXBTC15M-26MAY070615-15",
+          "raw_net_cents": -47.0,
+          "recross_hazard_score": 0.1432808396397172,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -11.75
+        },
+        {
+          "abs_d_sigma": 0.665443,
+          "ask_prob": 0.38,
+          "market": "KXBTC15M-26MAY061700-00",
+          "raw_net_cents": -42.0,
+          "recross_hazard_score": 0.19639134370333244,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -10.5
+        },
+        {
+          "abs_d_sigma": 2.37058,
+          "ask_prob": 0.95,
+          "market": "KXBTC15M-26MAY062200-00",
+          "raw_net_cents": 4.0,
+          "recross_hazard_score": 0.026846679101237274,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.5,
+          "weighted_net_cents": 2.0
+        },
+        {
+          "abs_d_sigma": 1.454914,
+          "ask_prob": 0.91,
+          "market": "KXBTC15M-26MAY070530-30",
+          "raw_net_cents": 7.0,
+          "recross_hazard_score": 0.08590227945297774,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.5,
+          "weighted_net_cents": 3.5
+        }
+      ]
+    },
+    {
+      "anchor_rule": "raw05_recross60_abs85_asknone",
+      "approved_repair_rows": 4,
+      "best_reconstructed_rows": [
+        {
+          "abs_d_sigma": 0.576357,
+          "ask_prob": 0.57,
+          "market": "KXBTC15M-26MAY062315-15",
+          "raw_net_cents": 39.0,
+          "recross_hazard_score": 0.26404491215622455,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 39.0
+        },
+        {
+          "abs_d_sigma": 0.796902,
+          "ask_prob": 0.77,
+          "market": "KXBTC15M-26MAY061630-30",
+          "raw_net_cents": 20.0,
+          "recross_hazard_score": 0.23069953045018135,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 20.0
+        },
+        {
+          "abs_d_sigma": 0.680058,
+          "ask_prob": 0.45,
+          "market": "KXBTC15M-26MAY061945-45",
+          "raw_net_cents": 51.0,
+          "recross_hazard_score": 0.39634677763047876,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 12.75
+        },
+        {
+          "abs_d_sigma": 0.552158,
+          "ask_prob": 0.48,
+          "market": "KXBTC15M-26MAY062000-00",
+          "raw_net_cents": 48.0,
+          "recross_hazard_score": 0.4198006566449445,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 12.0
+        },
+        {
+          "abs_d_sigma": 2.281129,
+          "ask_prob": 0.91,
+          "market": "KXBTC15M-26MAY070715-15",
+          "raw_net_cents": 8.0,
+          "recross_hazard_score": 0.05134665646149286,
+          "role": "anchor_overlap",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 8.0
+        },
+        {
+          "abs_d_sigma": 0.528486,
+          "ask_prob": 0.69,
+          "market": "KXBTC15M-26MAY061600-00",
+          "raw_net_cents": 28.0,
+          "recross_hazard_score": 0.3774586970057051,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 7.0
+        },
+        {
+          "abs_d_sigma": 0.734324,
+          "ask_prob": 0.69,
+          "market": "KXBTC15M-26MAY070600-00",
+          "raw_net_cents": 28.0,
+          "recross_hazard_score": 0.20173169569410354,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 7.0
+        },
+        {
+          "abs_d_sigma": 0.527347,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY061530-30",
+          "raw_net_cents": 27.0,
+          "recross_hazard_score": 0.2185165196695336,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 6.75
+        },
+        {
+          "abs_d_sigma": 0.556916,
+          "ask_prob": 0.71,
+          "market": "KXBTC15M-26MAY070200-00",
+          "raw_net_cents": 26.0,
+          "recross_hazard_score": 0.20144802541452023,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": 6.5
+        },
+        {
+          "abs_d_sigma": 1.770776,
+          "ask_prob": 0.92,
+          "market": "KXBTC15M-26MAY062145-45",
+          "raw_net_cents": 6.0,
+          "recross_hazard_score": 0.03476117876899882,
+          "role": "anchor_overlap",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": 6.0
+        }
+      ],
+      "future_denominator": 61,
+      "groups": [
+        {
+          "avg_weighted_net_cents": 13.814814814814815,
+          "bucket": "anchor_overlap",
+          "entries": 28,
+          "group": "role",
+          "losses": 2,
+          "row_reconstructed_share": 0.17857142857142858,
+          "settled": 27,
+          "weight_sum": 28.0,
+          "weighted_net_cents": 373.0,
+          "wins": 25
+        },
+        {
+          "avg_weighted_net_cents": -0.2222222222222222,
+          "bucket": "repair_added",
+          "entries": 18,
+          "group": "role",
+          "losses": 6,
+          "row_reconstructed_share": 0.7777777777777778,
+          "settled": 18,
+          "weight_sum": 6.0,
+          "weighted_net_cents": -4.0,
+          "wins": 12
+        },
+        {
+          "avg_weighted_net_cents": 14.884615384615385,
+          "bucket": "approved_entry",
+          "entries": 27,
+          "group": "source",
+          "losses": 1,
+          "row_reconstructed_share": 0.0,
+          "settled": 26,
+          "weight_sum": 25.0,
+          "weighted_net_cents": 387.0,
+          "wins": 25
+        },
+        {
+          "avg_weighted_net_cents": -0.9473684210526315,
+          "bucket": "rejected_actionable",
+          "entries": 19,
+          "group": "source",
+          "losses": 7,
+          "row_reconstructed_share": 1.0,
+          "settled": 19,
+          "weight_sum": 9.0,
+          "weighted_net_cents": -18.0,
+          "wins": 12
+        },
+        {
+          "avg_weighted_net_cents": 16.59090909090909,
+          "bucket": "anchor_overlap::approved_entry",
+          "entries": 23,
+          "group": "role_x_source",
+          "losses": 1,
+          "row_reconstructed_share": 0.0,
+          "settled": 22,
+          "weight_sum": 23.0,
+          "weighted_net_cents": 365.0,
+          "wins": 21
+        },
+        {
+          "avg_weighted_net_cents": 1.6,
+          "bucket": "anchor_overlap::rejected_actionable",
+          "entries": 5,
+          "group": "role_x_source",
+          "losses": 1,
+          "row_reconstructed_share": 1.0,
+          "settled": 5,
+          "weight_sum": 5.0,
+          "weighted_net_cents": 8.0,
+          "wins": 4
+        },
+        {
+          "avg_weighted_net_cents": 5.5,
+          "bucket": "repair_added::approved_entry",
+          "entries": 4,
+          "group": "role_x_source",
+          "losses": 0,
+          "row_reconstructed_share": 0.0,
+          "settled": 4,
+          "weight_sum": 2.0,
+          "weighted_net_cents": 22.0,
+          "wins": 4
+        },
+        {
+          "avg_weighted_net_cents": -1.8571428571428572,
+          "bucket": "repair_added::rejected_actionable",
+          "entries": 14,
+          "group": "role_x_source",
+          "losses": 6,
+          "row_reconstructed_share": 1.0,
+          "settled": 14,
+          "weight_sum": 4.0,
+          "weighted_net_cents": -26.0,
+          "wins": 8
+        },
+        {
+          "avg_weighted_net_cents": 22.88235294117647,
+          "bucket": "abs_075_125",
+          "entries": 17,
+          "group": "abs_d_sigma_bucket",
+          "losses": 0,
+          "row_reconstructed_share": 0.058823529411764705,
+          "settled": 17,
+          "weight_sum": 16.5,
+          "weighted_net_cents": 389.0,
+          "wins": 17
+        },
+        {
+          "avg_weighted_net_cents": 2.6785714285714284,
+          "bucket": "abs_ge_125",
+          "entries": 15,
+          "group": "abs_d_sigma_bucket",
+          "losses": 1,
+          "row_reconstructed_share": 0.26666666666666666,
+          "settled": 14,
+          "weight_sum": 12.5,
+          "weighted_net_cents": 37.5,
+          "wins": 13
+        },
+        {
+          "avg_weighted_net_cents": -4.107142857142857,
+          "bucket": "abs_lt_075",
+          "entries": 14,
+          "group": "abs_d_sigma_bucket",
+          "losses": 7,
+          "row_reconstructed_share": 1.0,
+          "settled": 14,
+          "weight_sum": 5.0,
+          "weighted_net_cents": -57.5,
+          "wins": 7
+        },
+        {
+          "avg_weighted_net_cents": 11.31,
+          "bucket": "recross_015_035",
+          "entries": 26,
+          "group": "recross_bucket",
+          "losses": 4,
+          "row_reconstructed_share": 0.34615384615384615,
+          "settled": 25,
+          "weight_sum": 20.5,
+          "weighted_net_cents": 282.75,
+          "wins": 21
+        },
+        {
+          "avg_weighted_net_cents": 9.0,
+          "bucket": "recross_ge_035",
+          "entries": 6,
+          "group": "recross_bucket",
+          "losses": 1,
+          "row_reconstructed_share": 0.6666666666666666,
+          "settled": 6,
+          "weight_sum": 3.0,
+          "weighted_net_cents": 54.0,
+          "wins": 5
+        },
+        {
+          "avg_weighted_net_cents": 2.3035714285714284,
+          "bucket": "recross_lt_015",
+          "entries": 14,
+          "group": "recross_bucket",
+          "losses": 3,
+          "row_reconstructed_share": 0.42857142857142855,
+          "settled": 14,
+          "weight_sum": 10.5,
+          "weighted_net_cents": 32.25,
+          "wins": 11
+        }
+      ],
+      "lane": "post_feature_freeze_bridge",
+      "policy": "repair_low_absd_quarter_else_half",
+      "reconstructed_repair_rows": 14,
+      "repair_rule": "raw03_recross50_abs50_ask35",
+      "repair_source_counts": {
+        "approved_entry": 4,
+        "rejected_actionable": 14
+      },
+      "reported_summary": {
+        "blockers": [
+          "row_reconstructed_share_gt_35pct"
+        ],
+        "coverage_pct": 75.40983606557377,
+        "entries": 46,
+        "exposure_reconstructed_share": 0.2647058823529412,
+        "full_loss_cushion": 3,
+        "losses": 8,
+        "row_reconstructed_share": 0.41304347826086957,
+        "settled": 45,
+        "weighted_net_cents": 369.0,
+        "wins": 37
+      },
+      "role_counts": {
+        "anchor_overlap": 28,
+        "repair_added": 18
+      },
+      "scenarios": [
+        {
+          "blockers": [
+            "row_reconstructed_share_gt_35pct",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 75.40983606557377,
+          "delta_vs_live_cents": -680.0,
+          "entries": 46,
+          "exposure_reconstructed_share": 0.2647058823529412,
+          "full_loss_cushion": 3,
+          "losses": 8,
+          "row_reconstructed_share": 0.41304347826086957,
+          "scenario": "current_weighted_policy",
+          "settled": 45,
+          "weighted_net_cents": 369.0,
+          "wins": 37
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 44.26229508196721,
+          "delta_vs_live_cents": -662.0,
+          "entries": 27,
+          "exposure_reconstructed_share": 0.0,
+          "full_loss_cushion": 3,
+          "losses": 1,
+          "row_reconstructed_share": 0.0,
+          "scenario": "approved_only_drop_reconstructed",
+          "settled": 26,
+          "weighted_net_cents": 387.0,
+          "wins": 25
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 45.90163934426229,
+          "delta_vs_live_cents": -676.0,
+          "entries": 28,
+          "exposure_reconstructed_share": 0.17857142857142858,
+          "full_loss_cushion": 3,
+          "losses": 2,
+          "row_reconstructed_share": 0.17857142857142858,
+          "scenario": "anchor_overlap_only",
+          "settled": 27,
+          "weighted_net_cents": 373.0,
+          "wins": 25
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "row_reconstructed_share_gt_35pct",
+            "full_loss_cushion_lt_3",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 29.508196721311474,
+          "delta_vs_live_cents": -1053.0,
+          "entries": 18,
+          "exposure_reconstructed_share": 0.6666666666666666,
+          "full_loss_cushion": 0,
+          "losses": 6,
+          "row_reconstructed_share": 0.7777777777777778,
+          "scenario": "repair_added_only",
+          "settled": 18,
+          "weighted_net_cents": -4.0,
+          "wins": 12
+        },
+        {
+          "blockers": [
+            "coverage_too_low",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 67.21311475409836,
+          "delta_vs_live_cents": -553.75,
+          "entries": 41,
+          "exposure_reconstructed_share": 0.21875,
+          "full_loss_cushion": 4,
+          "losses": 3,
+          "row_reconstructed_share": 0.34146341463414637,
+          "scenario": "source_gate_best_case_drop_recon",
+          "settled": 40,
+          "weighted_net_cents": 495.25,
+          "wins": 37
+        },
+        {
+          "blockers": [
+            "row_reconstructed_share_gt_35pct",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 75.40983606557377,
+          "delta_vs_live_cents": -662.0,
+          "entries": 46,
+          "exposure_reconstructed_share": 0.2647058823529412,
+          "full_loss_cushion": 3,
+          "losses": 8,
+          "row_reconstructed_share": 0.41304347826086957,
+          "scenario": "zero_recontribution_keep_rows",
+          "settled": 45,
+          "weighted_net_cents": 387.0,
+          "wins": 37
+        },
+        {
+          "blockers": [
+            "row_reconstructed_share_gt_35pct",
+            "does_not_beat_refreshed_live_baseline"
+          ],
+          "coverage_pct": 75.40983606557377,
+          "delta_vs_live_cents": -666.5,
+          "entries": 46,
+          "exposure_reconstructed_share": 0.2647058823529412,
+          "full_loss_cushion": 3,
+          "losses": 8,
+          "row_reconstructed_share": 0.41304347826086957,
+          "scenario": "quarter_recontribution_keep_rows",
+          "settled": 45,
+          "weighted_net_cents": 382.5,
+          "wins": 37
+        }
+      ],
+      "source_counts": {
+        "approved_entry": 27,
+        "rejected_actionable": 19
+      },
+      "source_gate_clean_rows_needed_if_keep_current": 9,
+      "worst_rows": [
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "raw_net_cents": -72.0,
+          "recross_hazard_score": 0.07375286170271013,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "approved_entry",
+          "weight": 1.0,
+          "weighted_net_cents": -72.0
+        },
+        {
+          "abs_d_sigma": 0.623877,
+          "ask_prob": 0.61,
+          "market": "KXBTC15M-26MAY062130-30",
+          "raw_net_cents": -65.0,
+          "recross_hazard_score": 0.2673176111866901,
+          "role": "anchor_overlap",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 1.0,
+          "weighted_net_cents": -65.0
+        },
+        {
+          "abs_d_sigma": 0.60259,
+          "ask_prob": 0.64,
+          "market": "KXBTC15M-26MAY061715-15",
+          "raw_net_cents": -68.0,
+          "recross_hazard_score": 0.11475429655322977,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -17.0
+        },
+        {
+          "abs_d_sigma": 0.72697,
+          "ask_prob": 0.56,
+          "market": "KXBTC15M-26MAY062345-45",
+          "raw_net_cents": -60.0,
+          "recross_hazard_score": 0.2648024542283173,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -15.0
+        },
+        {
+          "abs_d_sigma": 0.65803,
+          "ask_prob": 0.55,
+          "market": "KXBTC15M-26MAY070630-30",
+          "raw_net_cents": -59.0,
+          "recross_hazard_score": 0.37230392875591767,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -14.75
+        },
+        {
+          "abs_d_sigma": 0.532659,
+          "ask_prob": 0.54,
+          "market": "KXBTC15M-26MAY062230-30",
+          "raw_net_cents": -58.0,
+          "recross_hazard_score": 0.24354681339147827,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -14.5
+        },
+        {
+          "abs_d_sigma": 0.63149,
+          "ask_prob": 0.43,
+          "market": "KXBTC15M-26MAY070615-15",
+          "raw_net_cents": -47.0,
+          "recross_hazard_score": 0.1432808396397172,
+          "role": "repair_added",
+          "side": "yes",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -11.75
+        },
+        {
+          "abs_d_sigma": 0.665443,
+          "ask_prob": 0.38,
+          "market": "KXBTC15M-26MAY061700-00",
+          "raw_net_cents": -42.0,
+          "recross_hazard_score": 0.19639134370333244,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.25,
+          "weighted_net_cents": -10.5
+        },
+        {
+          "abs_d_sigma": 2.37058,
+          "ask_prob": 0.95,
+          "market": "KXBTC15M-26MAY062200-00",
+          "raw_net_cents": 4.0,
+          "recross_hazard_score": 0.026846679101237274,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.5,
+          "weighted_net_cents": 2.0
+        },
+        {
+          "abs_d_sigma": 1.454914,
+          "ask_prob": 0.91,
+          "market": "KXBTC15M-26MAY070530-30",
+          "raw_net_cents": 7.0,
+          "recross_hazard_score": 0.08590227945297774,
+          "role": "repair_added",
+          "side": "no",
+          "source": "rejected_actionable",
+          "weight": 0.5,
+          "weighted_net_cents": 3.5
+        }
+      ]
+    }
+  ],
+  "live_baseline_cents": 1049.0,
+  "live_summary_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\summary.json",
+  "source_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_feature_gate_coverage_size_shrink_latest.json"
+}

@@ -1,0 +1,46 @@
+{
+  "candidate_family": "exit_reduce_drift_guard_watch",
+  "drift_interpretation": [
+    "This audit uses only the frozen reduce-suppression research rows; it does not alter exits or live trading.",
+    "Blanket suppression remains positive at 91.0c across 12 suppressed exits, but harmful rows cost -426.0c.",
+    "Before the latest suppressed exit, the lane was 211.0c; the latest row added -120.0c and is tagged ['harmful_loss_control_cost', 'p_hold_075_079', 'large_fair_drawdown', 'post_exit_mark_full_loss', 'negative_delta'].",
+    "Worst harmful suppression is KXBTC15M-26MAY060700-00 with delta -160.0c, p_hold 0.799603, and fair drawdown 4.039746c.",
+    "Next exit research should isolate the harmful probability-reduce states before broadening suppression."
+  ],
+  "freeze_ts_utc": "2026-05-07T02:30:19.536047+00:00",
+  "origin": "Frozen after v28_exit_reduce_suppression_drift_audit showed blanket suppression loss-control harm.",
+  "rules": {
+    "diagnostic_blanket_p75_control": {
+      "p_hold_min": 0.75,
+      "physics": "Control row: the original blanket p_hold>=0.75 probability-reduce suppression."
+    },
+    "entry_band_moderate_drawdown": {
+      "entry_cents_max": 82.0,
+      "entry_cents_min": 70.0,
+      "fair_drawdown_max": 5.0,
+      "fair_drawdown_min": 0.0,
+      "p_hold_min": 0.75,
+      "physics": "Observable entry-price band plus shallow drawdown: avoids the rich-entry harmful row and late full-loss drawdown state."
+    },
+    "high_p_favorable_fv": {
+      "fair_drawdown_max": 0.0,
+      "p_hold_min": 0.79,
+      "physics": "Suppress only when held-side probability is very high and v28 FV says the current exit is not a real drawdown."
+    },
+    "mid_p_moderate_drawdown": {
+      "fair_drawdown_max": 5.0,
+      "fair_drawdown_min": 0.0,
+      "p_hold_max": 0.79,
+      "p_hold_min": 0.75,
+      "physics": "Suppress marginal high-p reduces only when drawdown is shallow enough to look like churn, not collapse."
+    },
+    "two_regime_drift_guard": {
+      "physics": "Two-regime guard: hold favorable-FV very-high-p exits, or shallow-drawdown marginal-p exits; reject large drawdown states.",
+      "union": [
+        "high_p_favorable_fv",
+        "mid_p_moderate_drawdown"
+      ]
+    }
+  },
+  "strict_forward_note": "Only post_drift_guard_birth rows count as promotion evidence."
+}

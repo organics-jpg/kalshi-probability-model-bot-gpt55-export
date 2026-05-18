@@ -1,0 +1,986 @@
+{
+  "freeze_ts_utc": "2026-05-07T02:56:19.287272+00:00",
+  "generated_at_utc": "2026-05-11T02:47:50.600665+00:00",
+  "interpretation": [
+    "Policy-specific audit only; no live logic changes and no promotion by itself.",
+    "Weighted reconstructed exposure can support the account-risk argument, but it does not replace the official row-count source gate.",
+    "Best stress row diagnostic_entry_quarter_midprice_boundary has strict_forward=False, 78 settled, coverage 78.21782178217822%, net 788.5c, row reconstructed share 0.3670886075949367, weighted reconstructed exposure share 0.3485342019543974, cushion 7, blockers ['diagnostic_only_prefreeze', 'row_reconstructed_share_gt_35pct'].",
+    "Best strict post-birth row post_midprice_shrink_birth_entry_control_no_shrink has 36 settled, net -46.0c, row reconstructed share 0.4166666666666667, weighted reconstructed exposure share 0.4166666666666667, blockers ['net_not_positive', 'row_reconstructed_share_gt_35pct', 'weighted_reconstructed_exposure_gt_35pct', 'full_loss_cushion_lt_3'].",
+    "Exposure-only near miss: diagnostic_entry_quarter_midprice_boundary has row reconstructed share 0.3670886075949367 but weighted exposure share 0.3485342019543974 at 78 settled and 788.5c."
+  ],
+  "official_gate_note": "Promotion source quality remains row-count reconstructed share <=35%; weighted exposure share is diagnostic account-risk evidence only.",
+  "policies": [
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 4,
+      "exposure_metrics": {
+        "approved_weight": 50.0,
+        "approved_weighted_net_cents": 771.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 0.75,
+        "midprice_boundary_weight": 0.75,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "reconstructed_weight": 26.75,
+        "reconstructed_weighted_net_cents": 17.5,
+        "row_counts_from_rows": {
+          "approved_entry": 50,
+          "other": 0,
+          "rejected_actionable": 29
+        },
+        "total_weight": 76.75,
+        "weighted_approved_exposure_share": 0.6514657980456026,
+        "weighted_net_cents": 788.5,
+        "weighted_reconstructed_exposure_share": 0.3485342019543974
+      },
+      "full_loss_cushion_estimate": 7,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_quarter_midprice_boundary",
+      "row_reconstructed_share": 0.3670886075949367,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 50,
+          "rejected_actionable": 29
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9715189873417721,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 788.5,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "quarter_midprice_boundary",
+      "weighted_approved_exposure_share": 0.6514657980456026,
+      "weighted_reconstructed_exposure_share": 0.3485342019543974
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 3,
+      "exposure_metrics": {
+        "approved_weight": 49.0,
+        "approved_weighted_net_cents": 753.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 0.75,
+        "midprice_boundary_weight": 0.75,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "reconstructed_weight": 25.75,
+        "reconstructed_weighted_net_cents": -14.5,
+        "row_counts_from_rows": {
+          "approved_entry": 49,
+          "other": 0,
+          "rejected_actionable": 28
+        },
+        "total_weight": 74.75,
+        "weighted_approved_exposure_share": 0.6555183946488294,
+        "weighted_net_cents": 738.5,
+        "weighted_reconstructed_exposure_share": 0.34448160535117056
+      },
+      "full_loss_cushion_estimate": 7,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary",
+      "row_reconstructed_share": 0.36363636363636365,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 49,
+          "rejected_actionable": 28
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9707792207792207,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 738.5,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "quarter_midprice_boundary",
+      "weighted_approved_exposure_share": 0.6555183946488294,
+      "weighted_reconstructed_exposure_share": 0.34448160535117056
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 4,
+      "exposure_metrics": {
+        "approved_weight": 50.0,
+        "approved_weighted_net_cents": 771.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 1.5,
+        "midprice_boundary_weight": 1.5,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "reconstructed_weight": 27.5,
+        "reconstructed_weighted_net_cents": -6.0,
+        "row_counts_from_rows": {
+          "approved_entry": 50,
+          "other": 0,
+          "rejected_actionable": 29
+        },
+        "total_weight": 77.5,
+        "weighted_approved_exposure_share": 0.6451612903225806,
+        "weighted_net_cents": 765.0,
+        "weighted_reconstructed_exposure_share": 0.3548387096774194
+      },
+      "full_loss_cushion_estimate": 7,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_half_midprice_boundary",
+      "row_reconstructed_share": 0.3670886075949367,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 50,
+          "rejected_actionable": 29
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 0.9810126582278481,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 765.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "half_midprice_boundary",
+      "weighted_approved_exposure_share": 0.6451612903225806,
+      "weighted_reconstructed_exposure_share": 0.3548387096774194
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 4,
+      "exposure_metrics": {
+        "approved_weight": 50.0,
+        "approved_weighted_net_cents": 771.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 3.0,
+        "midprice_boundary_weight": 3.0,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "reconstructed_weight": 29.0,
+        "reconstructed_weighted_net_cents": -53.0,
+        "row_counts_from_rows": {
+          "approved_entry": 50,
+          "other": 0,
+          "rejected_actionable": 29
+        },
+        "total_weight": 79.0,
+        "weighted_approved_exposure_share": 0.6329113924050633,
+        "weighted_net_cents": 718.0,
+        "weighted_reconstructed_exposure_share": 0.3670886075949367
+      },
+      "full_loss_cushion_estimate": 7,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "diagnostic_entry",
+      "policy": "diagnostic_entry_control_no_shrink",
+      "row_reconstructed_share": 0.3670886075949367,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 50,
+          "rejected_actionable": 29
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 78.21782178217822,
+        "active_entries": 79,
+        "avg_weight": 1.0,
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 79,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 718.0,
+        "raw_unweighted_net_cents": 718.0,
+        "settled": 78,
+        "wins": 68
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "control_no_shrink",
+      "weighted_approved_exposure_share": 0.6329113924050633,
+      "weighted_reconstructed_exposure_share": 0.3670886075949367
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 3,
+      "exposure_metrics": {
+        "approved_weight": 49.0,
+        "approved_weighted_net_cents": 753.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 1.5,
+        "midprice_boundary_weight": 1.5,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "reconstructed_weight": 26.5,
+        "reconstructed_weighted_net_cents": -38.0,
+        "row_counts_from_rows": {
+          "approved_entry": 49,
+          "other": 0,
+          "rejected_actionable": 28
+        },
+        "total_weight": 75.5,
+        "weighted_approved_exposure_share": 0.6490066225165563,
+        "weighted_net_cents": 715.0,
+        "weighted_reconstructed_exposure_share": 0.3509933774834437
+      },
+      "full_loss_cushion_estimate": 7,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_half_midprice_boundary",
+      "row_reconstructed_share": 0.36363636363636365,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 49,
+          "rejected_actionable": 28
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 0.9805194805194806,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 7,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 715.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "half_midprice_boundary",
+      "weighted_approved_exposure_share": 0.6490066225165563,
+      "weighted_reconstructed_exposure_share": 0.3509933774834437
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 3,
+      "exposure_metrics": {
+        "approved_weight": 49.0,
+        "approved_weighted_net_cents": 753.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 3.0,
+        "midprice_boundary_weight": 3.0,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "reconstructed_weight": 28.0,
+        "reconstructed_weighted_net_cents": -85.0,
+        "row_counts_from_rows": {
+          "approved_entry": 49,
+          "other": 0,
+          "rejected_actionable": 28
+        },
+        "total_weight": 77.0,
+        "weighted_approved_exposure_share": 0.6363636363636364,
+        "weighted_net_cents": 668.0,
+        "weighted_reconstructed_exposure_share": 0.36363636363636365
+      },
+      "full_loss_cushion_estimate": 6,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "diagnostic_bridge",
+      "policy": "diagnostic_bridge_control_no_shrink",
+      "row_reconstructed_share": 0.36363636363636365,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 49,
+          "rejected_actionable": 28
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 77.77777777777777,
+        "active_entries": 77,
+        "avg_weight": 1.0,
+        "coverage_pct": 77.77777777777777,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 77,
+        "full_loss_cushion_estimate": 6,
+        "losses": 10,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 668.0,
+        "raw_unweighted_net_cents": 668.0,
+        "settled": 76,
+        "wins": 66
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "control_no_shrink",
+      "weighted_approved_exposure_share": 0.6363636363636364,
+      "weighted_reconstructed_exposure_share": 0.36363636363636365
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 8,
+      "exposure_metrics": {
+        "approved_weight": 28.0,
+        "approved_weighted_net_cents": 418.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 0.75,
+        "midprice_boundary_weight": 0.75,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "reconstructed_weight": 16.75,
+        "reconstructed_weighted_net_cents": -36.5,
+        "row_counts_from_rows": {
+          "approved_entry": 28,
+          "other": 0,
+          "rejected_actionable": 19
+        },
+        "total_weight": 44.75,
+        "weighted_approved_exposure_share": 0.6256983240223464,
+        "weighted_net_cents": 381.5,
+        "weighted_reconstructed_exposure_share": 0.3743016759776536
+      },
+      "full_loss_cushion_estimate": 3,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary",
+      "row_reconstructed_share": 0.40425531914893614,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 28,
+          "rejected_actionable": 19
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9521276595744681,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 381.5,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "quarter_midprice_boundary",
+      "weighted_approved_exposure_share": 0.6256983240223464,
+      "weighted_reconstructed_exposure_share": 0.3743016759776536
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 8,
+      "exposure_metrics": {
+        "approved_weight": 28.0,
+        "approved_weighted_net_cents": 418.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 1.5,
+        "midprice_boundary_weight": 1.5,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "reconstructed_weight": 17.5,
+        "reconstructed_weighted_net_cents": -60.0,
+        "row_counts_from_rows": {
+          "approved_entry": 28,
+          "other": 0,
+          "rejected_actionable": 19
+        },
+        "total_weight": 45.5,
+        "weighted_approved_exposure_share": 0.6153846153846154,
+        "weighted_net_cents": 358.0,
+        "weighted_reconstructed_exposure_share": 0.38461538461538464
+      },
+      "full_loss_cushion_estimate": 3,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary",
+      "row_reconstructed_share": 0.40425531914893614,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 28,
+          "rejected_actionable": 19
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 0.9680851063829787,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 358.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "half_midprice_boundary",
+      "weighted_approved_exposure_share": 0.6153846153846154,
+      "weighted_reconstructed_exposure_share": 0.38461538461538464
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 8,
+      "exposure_metrics": {
+        "approved_weight": 28.0,
+        "approved_weighted_net_cents": 418.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 3.0,
+        "midprice_boundary_weight": 3.0,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "reconstructed_weight": 19.0,
+        "reconstructed_weighted_net_cents": -107.0,
+        "row_counts_from_rows": {
+          "approved_entry": 28,
+          "other": 0,
+          "rejected_actionable": 19
+        },
+        "total_weight": 47.0,
+        "weighted_approved_exposure_share": 0.5957446808510638,
+        "weighted_net_cents": 311.0,
+        "weighted_reconstructed_exposure_share": 0.40425531914893614
+      },
+      "full_loss_cushion_estimate": 3,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_feature_freeze_entry",
+      "policy": "post_feature_freeze_entry_control_no_shrink",
+      "row_reconstructed_share": 0.40425531914893614,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 28,
+          "rejected_actionable": 19
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 75.80645161290323,
+        "active_entries": 47,
+        "avg_weight": 1.0,
+        "coverage_pct": 75.80645161290323,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 47,
+        "full_loss_cushion_estimate": 3,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 311.0,
+        "raw_unweighted_net_cents": 311.0,
+        "settled": 46,
+        "wins": 38
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct"
+      ],
+      "weight_policy": "control_no_shrink",
+      "weighted_approved_exposure_share": 0.5957446808510638,
+      "weighted_reconstructed_exposure_share": 0.40425531914893614
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 9,
+      "exposure_metrics": {
+        "approved_weight": 23.0,
+        "approved_weighted_net_cents": 366.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 0.75,
+        "midprice_boundary_weight": 0.75,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "reconstructed_weight": 14.75,
+        "reconstructed_weighted_net_cents": -91.5,
+        "row_counts_from_rows": {
+          "approved_entry": 23,
+          "other": 0,
+          "rejected_actionable": 17
+        },
+        "total_weight": 37.75,
+        "weighted_approved_exposure_share": 0.609271523178808,
+        "weighted_net_cents": 274.5,
+        "weighted_reconstructed_exposure_share": 0.39072847682119205
+      },
+      "full_loss_cushion_estimate": 2,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary",
+      "row_reconstructed_share": 0.425,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 23,
+          "rejected_actionable": 17
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.94375,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 70.5,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -23.5,
+        "net_cents": 274.5,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "weight_policy": "quarter_midprice_boundary",
+      "weighted_approved_exposure_share": 0.609271523178808,
+      "weighted_reconstructed_exposure_share": 0.39072847682119205
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 9,
+      "exposure_metrics": {
+        "approved_weight": 23.0,
+        "approved_weighted_net_cents": 366.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 1.5,
+        "midprice_boundary_weight": 1.5,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "reconstructed_weight": 15.5,
+        "reconstructed_weighted_net_cents": -115.0,
+        "row_counts_from_rows": {
+          "approved_entry": 23,
+          "other": 0,
+          "rejected_actionable": 17
+        },
+        "total_weight": 38.5,
+        "weighted_approved_exposure_share": 0.5974025974025974,
+        "weighted_net_cents": 251.0,
+        "weighted_reconstructed_exposure_share": 0.4025974025974026
+      },
+      "full_loss_cushion_estimate": 2,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary",
+      "row_reconstructed_share": 0.425,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 23,
+          "rejected_actionable": 17
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 0.9625,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 47.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -47.0,
+        "net_cents": 251.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "weight_policy": "half_midprice_boundary",
+      "weighted_approved_exposure_share": 0.5974025974025974,
+      "weighted_reconstructed_exposure_share": 0.4025974025974026
+    },
+    {
+      "blockers": [
+        "diagnostic_only_prefreeze",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 9,
+      "exposure_metrics": {
+        "approved_weight": 23.0,
+        "approved_weighted_net_cents": 366.0,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_reconstructed_weight": 3.0,
+        "midprice_boundary_weight": 3.0,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "reconstructed_weight": 17.0,
+        "reconstructed_weighted_net_cents": -162.0,
+        "row_counts_from_rows": {
+          "approved_entry": 23,
+          "other": 0,
+          "rejected_actionable": 17
+        },
+        "total_weight": 40.0,
+        "weighted_approved_exposure_share": 0.575,
+        "weighted_net_cents": 204.0,
+        "weighted_reconstructed_exposure_share": 0.425
+      },
+      "full_loss_cushion_estimate": 2,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_soft_frontier_birth_entry",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink",
+      "row_reconstructed_share": 0.425,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 23,
+          "rejected_actionable": 17
+        }
+      },
+      "strict_forward": false,
+      "summary": {
+        "active_coverage_pct": 76.92307692307692,
+        "active_entries": 40,
+        "avg_weight": 1.0,
+        "coverage_pct": 76.92307692307692,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 40,
+        "full_loss_cushion_estimate": 2,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": -94.0,
+        "midprice_boundary_rows": 3,
+        "midprice_boundary_weighted_net_cents": -94.0,
+        "net_cents": 204.0,
+        "raw_unweighted_net_cents": 204.0,
+        "settled": 39,
+        "wins": 31
+      },
+      "variant_blockers": [
+        "diagnostic_only_prefreeze",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "weight_policy": "control_no_shrink",
+      "weighted_approved_exposure_share": 0.575,
+      "weighted_reconstructed_exposure_share": 0.425
+    },
+    {
+      "blockers": [
+        "net_not_positive",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 7,
+      "exposure_metrics": {
+        "approved_weight": 21.0,
+        "approved_weighted_net_cents": 110.0,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_reconstructed_weight": 1.0,
+        "midprice_boundary_weight": 1.0,
+        "midprice_boundary_weighted_net_cents": 39.0,
+        "reconstructed_weight": 15.0,
+        "reconstructed_weighted_net_cents": -156.0,
+        "row_counts_from_rows": {
+          "approved_entry": 21,
+          "other": 0,
+          "rejected_actionable": 15
+        },
+        "total_weight": 36.0,
+        "weighted_approved_exposure_share": 0.5833333333333334,
+        "weighted_net_cents": -46.0,
+        "weighted_reconstructed_exposure_share": 0.4166666666666667
+      },
+      "full_loss_cushion_estimate": 0,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink",
+      "row_reconstructed_share": 0.4166666666666667,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 21,
+          "rejected_actionable": 15
+        }
+      },
+      "strict_forward": true,
+      "summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 1.0,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": 0.0,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 39.0,
+        "net_cents": -46.0,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "variant_blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "weight_policy": "control_no_shrink",
+      "weighted_approved_exposure_share": 0.5833333333333334,
+      "weighted_reconstructed_exposure_share": 0.4166666666666667
+    },
+    {
+      "blockers": [
+        "net_not_positive",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 7,
+      "exposure_metrics": {
+        "approved_weight": 21.0,
+        "approved_weighted_net_cents": 110.0,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_reconstructed_weight": 0.5,
+        "midprice_boundary_weight": 0.5,
+        "midprice_boundary_weighted_net_cents": 19.5,
+        "reconstructed_weight": 14.5,
+        "reconstructed_weighted_net_cents": -175.5,
+        "row_counts_from_rows": {
+          "approved_entry": 21,
+          "other": 0,
+          "rejected_actionable": 15
+        },
+        "total_weight": 35.5,
+        "weighted_approved_exposure_share": 0.5915492957746479,
+        "weighted_net_cents": -65.5,
+        "weighted_reconstructed_exposure_share": 0.4084507042253521
+      },
+      "full_loss_cushion_estimate": 0,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary",
+      "row_reconstructed_share": 0.4166666666666667,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 21,
+          "rejected_actionable": 15
+        }
+      },
+      "strict_forward": true,
+      "summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9861111111111112,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -19.5,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 19.5,
+        "net_cents": -65.5,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "variant_blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "weight_policy": "half_midprice_boundary",
+      "weighted_approved_exposure_share": 0.5915492957746479,
+      "weighted_reconstructed_exposure_share": 0.4084507042253521
+    },
+    {
+      "blockers": [
+        "net_not_positive",
+        "row_reconstructed_share_gt_35pct",
+        "weighted_reconstructed_exposure_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "clean_approved_rows_needed_for_row_source_gate": 7,
+      "exposure_metrics": {
+        "approved_weight": 21.0,
+        "approved_weighted_net_cents": 110.0,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_reconstructed_weight": 0.25,
+        "midprice_boundary_weight": 0.25,
+        "midprice_boundary_weighted_net_cents": 9.75,
+        "reconstructed_weight": 14.25,
+        "reconstructed_weighted_net_cents": -185.25,
+        "row_counts_from_rows": {
+          "approved_entry": 21,
+          "other": 0,
+          "rejected_actionable": 15
+        },
+        "total_weight": 35.25,
+        "weighted_approved_exposure_share": 0.5957446808510638,
+        "weighted_net_cents": -75.25,
+        "weighted_reconstructed_exposure_share": 0.40425531914893614
+      },
+      "full_loss_cushion_estimate": 0,
+      "gate": "soft_frontier_midprice_boundary_shrink",
+      "lane": "post_midprice_shrink_birth_entry",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary",
+      "row_reconstructed_share": 0.4166666666666667,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "candidate": {
+          "approved_entry": 21,
+          "rejected_actionable": 15
+        }
+      },
+      "strict_forward": true,
+      "summary": {
+        "active_coverage_pct": 80.0,
+        "active_entries": 36,
+        "avg_weight": 0.9791666666666666,
+        "coverage_pct": 80.0,
+        "delta_vs_unweighted_cents": -29.25,
+        "entries": 36,
+        "full_loss_cushion_estimate": 0,
+        "losses": 8,
+        "midprice_boundary_raw_net_cents": 39.0,
+        "midprice_boundary_rows": 1,
+        "midprice_boundary_weighted_net_cents": 9.75,
+        "net_cents": -75.25,
+        "raw_unweighted_net_cents": -46.0,
+        "settled": 36,
+        "wins": 28
+      },
+      "variant_blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "weight_policy": "quarter_midprice_boundary",
+      "weighted_approved_exposure_share": 0.5957446808510638,
+      "weighted_reconstructed_exposure_share": 0.40425531914893614
+    }
+  ],
+  "purpose": "Policy-specific source and notional exposure stress for the soft-frontier mid-price boundary shrink watch.",
+  "source_generated_at_utc": "2026-05-11T02:47:50.270631+00:00"
+}

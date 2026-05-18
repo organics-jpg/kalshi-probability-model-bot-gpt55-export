@@ -1,0 +1,67 @@
+{
+  "blockers": [
+    "brier_not_better",
+    "logloss_not_better"
+  ],
+  "brier_delta_vs_raw": 0.004216384841108062,
+  "diagnostic": "frozen_weak_reversal_residual_fv_shrink",
+  "freeze": {
+    "freeze_ts_utc": "2026-05-06T10:29:42.136727+00:00",
+    "fv_adjustment": "if side=no and raw_edge_prob in [0.05,0.08), p=0.5+0.5*(p_raw-0.5)",
+    "target_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "variant": "half_to_50",
+    "weak_reversal": {
+      "abs_d_max": 0.25,
+      "max_delay": 240.0,
+      "no_replacement_mode": "abstain",
+      "p_max": 0.6,
+      "recross_floor": 0.75
+    }
+  },
+  "future_denominator": 108,
+  "interpretation": [
+    "Frozen forward denominator is 108; scored rows 81.",
+    "Raw Brier/logloss 0.23701222812462963/0.6783386257825808; variant 0.2412286129657377/0.6890751293200246.",
+    "Promotion blocked by: brier_not_better, logloss_not_better.",
+    "This validates calibration only; entry PnL is tracked by the separate residual repair validator."
+  ],
+  "logloss_delta_vs_raw": 0.01073650353744382,
+  "raw_all": {
+    "avg_p": 0.6981775925925926,
+    "brier": 0.23701222812462963,
+    "logloss": 0.6783386257825808,
+    "rows": 81,
+    "win_rate": 0.5555555555555556
+  },
+  "raw_no_side": {
+    "avg_p": 0.6968602195121951,
+    "brier": 0.21889073886095126,
+    "logloss": 0.6505710419289448,
+    "rows": 41,
+    "win_rate": 0.5853658536585366
+  },
+  "ready_for_consideration": false,
+  "variant_all": {
+    "avg_p": 0.6889317345679012,
+    "brier": 0.2412286129657377,
+    "logloss": 0.6890751293200246,
+    "rows": 81,
+    "win_rate": 0.5555555555555556
+  },
+  "variant_no_side": {
+    "avg_p": 0.6785940121951219,
+    "brier": 0.22722066988850612,
+    "logloss": 0.6717821830638948,
+    "rows": 41,
+    "win_rate": 0.5853658536585366
+  },
+  "weak_summary": {
+    "avg_net_cents": -8.901234567901234,
+    "coverage_pct": 75.0,
+    "entries": 81,
+    "losses": 36,
+    "net_cents": -721.0,
+    "settled": 81,
+    "wins": 45
+  }
+}

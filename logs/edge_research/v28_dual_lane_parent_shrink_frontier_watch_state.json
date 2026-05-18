@@ -1,0 +1,26 @@
+{
+  "base_candidate": "dual_lane_overlap_union",
+  "candidate_family": "dual_lane_parent_shrink_frontier_watch",
+  "freeze_ts_utc": "2026-05-07T15:33:12.317447+00:00",
+  "note": "Frozen frontier for continuous confidence shrink strengths. Rows before this freeze are diagnostic only for this frontier.",
+  "repair_mechanism": "parent_fill_high_cost_low_edge_confidence_shrink",
+  "shrink_rule": {
+    "ask_prob_min": 0.78,
+    "component": "strict_parent_midprice_hold_fill",
+    "raw_edge_max": 0.09
+  },
+  "weights": [
+    {
+      "label": "shrink25_weight075",
+      "weight": 0.75
+    },
+    {
+      "label": "shrink50_weight050",
+      "weight": 0.5
+    },
+    {
+      "label": "shrink75_weight025",
+      "weight": 0.25
+    }
+  ]
+}

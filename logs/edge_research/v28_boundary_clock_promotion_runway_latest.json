@@ -1,0 +1,132 @@
+{
+  "bridge_freeze_ts": "2026-05-06T07:35:02.597585+00:00",
+  "checks": [
+    {
+      "actual": 88,
+      "name": "fv_settled_rows",
+      "note": "need 0 more settled rows",
+      "passed": true,
+      "required": ">=30"
+    },
+    {
+      "actual": 38,
+      "name": "fv_adjusted_rows",
+      "note": "need 0 more adjusted hazard rows",
+      "passed": true,
+      "required": ">=8"
+    },
+    {
+      "actual": -0.007305008905659105,
+      "name": "fv_brier_better",
+      "note": "future Brier delta must be negative",
+      "passed": true,
+      "required": "<0 vs raw"
+    },
+    {
+      "actual": -0.015397418335031166,
+      "name": "fv_logloss_better",
+      "note": "future logloss delta must be negative",
+      "passed": true,
+      "required": "<0 vs raw"
+    },
+    {
+      "actual": false,
+      "name": "fv_live_readiness_gate",
+      "note": "control_risk_stop_active",
+      "passed": false,
+      "required": "true"
+    },
+    {
+      "actual": 121,
+      "name": "entry_denominator",
+      "note": "need 0 more future markets",
+      "passed": true,
+      "required": ">=30"
+    },
+    {
+      "actual": 91,
+      "name": "entry_settled_rows",
+      "note": "need 0 more settled rows",
+      "passed": true,
+      "required": ">=30"
+    },
+    {
+      "actual": 75.20661157024793,
+      "name": "entry_coverage",
+      "note": "coverage must stay near target",
+      "passed": true,
+      "required": "75.0-90.0%"
+    },
+    {
+      "actual": -151.0,
+      "name": "entry_net_positive",
+      "note": "future candidate net must be positive",
+      "passed": false,
+      "required": ">0c"
+    },
+    {
+      "actual": 119,
+      "name": "bridge_denominator",
+      "note": "need 0 more future markets",
+      "passed": true,
+      "required": ">=30"
+    },
+    {
+      "actual": 90,
+      "name": "bridge_settled_rows",
+      "note": "need 0 more settled rows",
+      "passed": true,
+      "required": ">=30"
+    },
+    {
+      "actual": 75.63025210084034,
+      "name": "bridge_coverage",
+      "note": "coverage must stay near target",
+      "passed": true,
+      "required": "75.0-90.0%"
+    },
+    {
+      "actual": 229.0,
+      "name": "bridge_net_positive",
+      "note": "future bridge candidate net must be positive",
+      "passed": true,
+      "required": ">0c"
+    },
+    {
+      "actual": false,
+      "name": "bridge_live_readiness_gate",
+      "note": "control_risk_stop_active",
+      "passed": false,
+      "required": "true"
+    },
+    {
+      "actual": 9,
+      "name": "residual_registry_settled",
+      "note": "registry only; enough rows decide whether to create a candidate",
+      "passed": true,
+      "required": ">=8"
+    },
+    {
+      "actual": -167.0,
+      "name": "residual_registry_direction",
+      "note": "negative bucket net would support future modeling work",
+      "passed": true,
+      "required": "<0c if harmful"
+    }
+  ],
+  "diagnostic_entry_robustness_pass": true,
+  "diagnostic_fv_robustness_pass": true,
+  "entry_freeze_ts": "2026-05-06T07:07:27.790042+00:00",
+  "family": "boundary_clock",
+  "fv_freeze_ts": "2026-05-06T07:18:17.705020+00:00",
+  "interpretation": [
+    "Diagnostic robustness: FV=True, entry=True.",
+    "Frozen promotion blockers remaining: 3.",
+    "The FV entry bridge is tracked as a separate promotion path because it converts the probability correction into entry economics.",
+    "Residual registry is informational only and should not block the boundary-clock FV candidate."
+  ],
+  "purpose": "Track the evidence runway for boundary-clock FV/entry candidates without promoting early.",
+  "ready_for_consideration": false,
+  "residual_freeze_ts": "2026-05-06T07:28:09.623811+00:00",
+  "residual_registry_ready": true
+}

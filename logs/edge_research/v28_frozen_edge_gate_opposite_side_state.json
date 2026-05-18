@@ -1,0 +1,11 @@
+{
+  "adjusted_edge_floor": -0.12,
+  "base_entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T06:05:34.391059+00:00",
+  "fv_variant": "edge_phase_shrink",
+  "opposite_min_adjusted_edge": -0.02,
+  "opposite_min_raw_edge": 0.0,
+  "opposite_min_raw_p": 0.5,
+  "physics": "A strongly overpriced selected side near a boundary can imply local side mispricing; opposite replacement is allowed only when later executable information agrees.",
+  "rule": "If edge-phase adjusted-FV skips the target row, replace with the first same-or-later opposite row that clears fixed raw/FV edge requirements."
+}

@@ -1,0 +1,152 @@
+dataset_id,artifact_type,status,gate,passed,severity,evidence
+seed_causal_rows,causal_rows,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/causal_rows_seed_latest.csv
+seed_causal_rows,causal_rows,blocked,artifact_has_header,True,hard,columns=46
+seed_causal_rows,causal_rows,blocked,artifact_not_empty,True,hard,rows=795
+seed_causal_rows,causal_rows,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+seed_causal_rows,causal_rows,blocked,pre_resolution_clock_valid,True,hard,checked=795 missing_or_unparseable=0 decision_after_close=0
+seed_causal_rows,causal_rows,blocked,target_label_present,True,hard,fields=['y_yes_win'] coverage=795/795
+seed_causal_rows,causal_rows,blocked,probability_fields_complete_and_bounded,True,hard,"fields=['v28_p_yes', 'v28_p_no'] coverage=795/795 violations=0"
+seed_causal_rows,causal_rows,blocked,fair_yes_no_cents_complete_and_sum_to_100,True,hard,"fields=['v28_fair_yes_cents', 'v28_fair_no_cents'] coverage=795/795 sum_checked=795 sum_violations=0"
+seed_causal_rows,causal_rows,blocked,strike_fields_complete,False,hard,fields=['strike'] coverage=0/795
+seed_causal_rows,causal_rows,blocked,boundary_geometry_complete,False,hard,"fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=0/795"
+seed_causal_rows,causal_rows,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=795/795"
+seed_causal_rows,causal_rows,blocked,recross_or_path_risk_signal_available,True,hard,"fields=['recross_hazard_score', 'h6_recross_hazard_high'] coverage=795/795"
+seed_causal_rows,causal_rows,blocked,forward_promotion_rows_present,False,hard,forward_rows=0 total_rows=795
+seed_causal_rows,causal_rows,blocked,forward_rows_pre_resolution_registered,False,hard,not_registered_forward_rows=0 forward_rows=0
+seed_causal_rows,causal_rows,blocked,forward_rows_not_after_the_fact,False,hard,recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0
+seed_causal_rows,causal_rows,blocked,broad_market_coverage_floor,True,hard,rows=795 markets=176 required_rows=200 required_markets=40
+logged_event_causal_rows,causal_rows,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/causal_rows_logged_events_latest.csv
+logged_event_causal_rows,causal_rows,blocked,artifact_has_header,True,hard,columns=61
+logged_event_causal_rows,causal_rows,blocked,artifact_not_empty,True,hard,rows=1745
+logged_event_causal_rows,causal_rows,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+logged_event_causal_rows,causal_rows,blocked,pre_resolution_clock_valid,True,hard,checked=1745 missing_or_unparseable=0 decision_after_close=0
+logged_event_causal_rows,causal_rows,blocked,target_label_present,True,hard,fields=['y_yes_win'] coverage=1745/1745
+logged_event_causal_rows,causal_rows,blocked,probability_fields_complete_and_bounded,True,hard,"fields=['v28_p_yes', 'v28_p_no'] coverage=1745/1745 violations=0"
+logged_event_causal_rows,causal_rows,blocked,fair_yes_no_cents_complete_and_sum_to_100,True,hard,"fields=['v28_fair_yes_cents', 'v28_fair_no_cents'] coverage=1745/1745 sum_checked=1745 sum_violations=0"
+logged_event_causal_rows,causal_rows,blocked,strike_fields_complete,True,hard,fields=['strike'] coverage=1745/1745
+logged_event_causal_rows,causal_rows,blocked,boundary_geometry_complete,True,hard,"fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=1745/1745"
+logged_event_causal_rows,causal_rows,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1745/1745"
+logged_event_causal_rows,causal_rows,blocked,recross_or_path_risk_signal_available,True,hard,"fields=['recross_hazard_score', 'h6_recross_hazard_high', 'prior_recross_seen'] coverage=1745/1745"
+logged_event_causal_rows,causal_rows,blocked,forward_promotion_rows_present,False,hard,forward_rows=0 total_rows=1745
+logged_event_causal_rows,causal_rows,blocked,forward_rows_pre_resolution_registered,False,hard,not_registered_forward_rows=0 forward_rows=0
+logged_event_causal_rows,causal_rows,blocked,forward_rows_not_after_the_fact,False,hard,recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0
+logged_event_causal_rows,causal_rows,blocked,broad_market_coverage_floor,True,hard,rows=1745 markets=118 required_rows=200 required_markets=40
+seed_feature_table,feature_table,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/features_latest.csv
+seed_feature_table,feature_table,blocked,artifact_has_header,True,hard,columns=47
+seed_feature_table,feature_table,blocked,artifact_not_empty,True,hard,rows=795
+seed_feature_table,feature_table,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+seed_feature_table,feature_table,blocked,pre_resolution_clock_valid,True,hard,checked=795 missing_or_unparseable=0 decision_after_close=0
+seed_feature_table,feature_table,blocked,target_label_present,True,hard,fields=['target_y_yes_win'] coverage=795/795
+seed_feature_table,feature_table,blocked,probability_fields_complete_and_bounded,True,hard,fields=['target_v28_p_yes'] coverage=795/795 violations=0
+seed_feature_table,feature_table,blocked,strike_fields_complete,False,hard,fields=['strike'] coverage=0/795
+seed_feature_table,feature_table,blocked,boundary_geometry_complete,False,hard,"fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=0/795"
+seed_feature_table,feature_table,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=795/795"
+seed_feature_table,feature_table,blocked,recross_or_path_risk_signal_available,True,hard,"fields=['recross_hazard_score', 'recross_hazard_high'] coverage=795/795"
+seed_feature_table,feature_table,blocked,forward_promotion_rows_present,False,hard,forward_rows=0 total_rows=795
+seed_feature_table,feature_table,blocked,forward_rows_pre_resolution_registered,False,hard,not_registered_forward_rows=0 forward_rows=0
+seed_feature_table,feature_table,blocked,forward_rows_not_after_the_fact,False,hard,recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0
+seed_feature_table,feature_table,blocked,feature_manifest_exists,True,hard,path=research_particle/v28_successor/feature_manifest_latest.json
+seed_feature_table,feature_table,blocked,feature_manifest_not_empty,True,hard,feature_count=29
+seed_feature_table,feature_table,blocked,feature_manifest_no_leaky_names,True,hard,leaky_feature_names=[]
+seed_feature_table,feature_table,blocked,feature_manifest_no_leaky_source_columns,True,hard,leaky_source_columns=[]
+seed_feature_table,feature_table,blocked,broad_market_coverage_floor,True,hard,rows=795 markets=176 required_rows=200 required_markets=40
+logged_event_feature_table,feature_table,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/features_logged_events_latest.csv
+logged_event_feature_table,feature_table,blocked,artifact_has_header,True,hard,columns=100
+logged_event_feature_table,feature_table,blocked,artifact_not_empty,True,hard,rows=1745
+logged_event_feature_table,feature_table,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+logged_event_feature_table,feature_table,blocked,pre_resolution_clock_valid,True,hard,checked=1745 missing_or_unparseable=0 decision_after_close=0
+logged_event_feature_table,feature_table,blocked,target_label_present,True,hard,fields=['target_y_yes_win'] coverage=1745/1745
+logged_event_feature_table,feature_table,blocked,probability_fields_complete_and_bounded,True,hard,fields=['target_v28_p_yes'] coverage=1745/1745 violations=0
+logged_event_feature_table,feature_table,blocked,strike_fields_complete,True,hard,fields=['strike'] coverage=1745/1745
+logged_event_feature_table,feature_table,blocked,boundary_geometry_complete,True,hard,"fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=1745/1745"
+logged_event_feature_table,feature_table,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1745/1745"
+logged_event_feature_table,feature_table,blocked,recross_or_path_risk_signal_available,True,hard,"fields=['recross_hazard_score', 'recross_hazard_high', 'prior_recross_seen'] coverage=1745/1745"
+logged_event_feature_table,feature_table,blocked,forward_promotion_rows_present,False,hard,forward_rows=0 total_rows=1745
+logged_event_feature_table,feature_table,blocked,forward_rows_pre_resolution_registered,False,hard,not_registered_forward_rows=0 forward_rows=0
+logged_event_feature_table,feature_table,blocked,forward_rows_not_after_the_fact,False,hard,recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0
+logged_event_feature_table,feature_table,blocked,feature_manifest_exists,True,hard,path=research_particle/v28_successor/feature_manifest_logged_events_latest.json
+logged_event_feature_table,feature_table,blocked,feature_manifest_not_empty,True,hard,feature_count=78
+logged_event_feature_table,feature_table,blocked,feature_manifest_no_leaky_names,True,hard,leaky_feature_names=[]
+logged_event_feature_table,feature_table,blocked,feature_manifest_no_leaky_source_columns,True,hard,leaky_source_columns=[]
+logged_event_feature_table,feature_table,blocked,broad_market_coverage_floor,True,hard,rows=1745 markets=118 required_rows=200 required_markets=40
+passive_forward_snapshots,passive_forward_snapshots,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/passive_forward_snapshots_latest.csv
+passive_forward_snapshots,passive_forward_snapshots,blocked,artifact_has_header,True,hard,columns=52
+passive_forward_snapshots,passive_forward_snapshots,blocked,artifact_not_empty,True,hard,rows=1750
+passive_forward_snapshots,passive_forward_snapshots,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+passive_forward_snapshots,passive_forward_snapshots,blocked,pre_resolution_clock_valid,True,hard,checked=1750 missing_or_unparseable=0 decision_after_close=0
+passive_forward_snapshots,passive_forward_snapshots,blocked,target_label_present,True,hard,fields=[] coverage=1750/1750
+passive_forward_snapshots,passive_forward_snapshots,blocked,probability_fields_complete_and_bounded,True,hard,fields=[] coverage=1750/1750 violations=0
+passive_forward_snapshots,passive_forward_snapshots,blocked,strike_fields_complete,True,hard,fields=['strike'] coverage=1750/1750
+passive_forward_snapshots,passive_forward_snapshots,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1686/1750"
+passive_forward_snapshots,passive_forward_snapshots,blocked,forward_promotion_rows_present,False,hard,forward_rows=0 total_rows=1750
+passive_forward_snapshots,passive_forward_snapshots,blocked,forward_rows_pre_resolution_registered,False,hard,not_registered_forward_rows=0 forward_rows=0
+passive_forward_snapshots,passive_forward_snapshots,blocked,forward_rows_not_after_the_fact,False,hard,recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0
+passive_forward_snapshots,passive_forward_snapshots,blocked,broad_market_coverage_floor,False,hard,rows=1750 markets=2 required_rows=200 required_markets=40
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,artifact_has_header,True,hard,columns=111
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,artifact_not_empty,True,hard,rows=1506
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,pre_resolution_clock_valid,True,hard,checked=1506 missing_or_unparseable=0 decision_after_close=0
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,target_label_present,True,hard,fields=['y_yes_win'] coverage=1506/1506
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,probability_fields_complete_and_bounded,True,hard,"fields=['v28_p_yes', 'candidate_p_yes'] coverage=1506/1506 violations=0"
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,fair_yes_no_cents_complete_and_sum_to_100,True,hard,"fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=1506/1506 sum_checked=1506 sum_violations=0"
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,strike_fields_complete,True,hard,fields=['strike'] coverage=1506/1506
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,boundary_geometry_complete,True,hard,"fields=['v28_d_sigma', 'abs_v28_d_sigma', 'strike_distance_dollars_abs'] coverage=1506/1506"
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1506/1506"
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,recross_or_path_risk_signal_available,True,hard,"fields=['recross_hazard_score', 'max_adverse_move_3m'] coverage=1506/1506"
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,forward_promotion_rows_present,False,hard,forward_rows=0 total_rows=1506
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,forward_rows_pre_resolution_registered,False,hard,not_registered_forward_rows=0 forward_rows=0
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,forward_rows_not_after_the_fact,False,hard,recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0
+shadow_forward_labeled_rows,shadow_forward_labeled_rows,blocked,broad_market_coverage_floor,False,hard,rows=1506 markets=2 required_rows=200 required_markets=40
+forward_registry,forward_registry,promotion_grade,artifact_exists,True,hard,path=research_particle/v28_successor/forward_registry_latest.csv
+forward_registry,forward_registry,promotion_grade,artifact_has_header,True,hard,columns=27
+forward_registry,forward_registry,promotion_grade,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0}"
+forward_registry,forward_registry,promotion_grade,probability_fields_complete_and_bounded,True,hard,"fields=['candidate_p_yes', 'v28_p_yes'] coverage=16896/16896 violations=0"
+forward_registry,forward_registry,promotion_grade,fair_yes_no_cents_complete_and_sum_to_100,True,hard,"fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=16896/16896 sum_checked=16896 sum_violations=0"
+forward_registry,forward_registry,promotion_grade,book_price_or_implied_price_available,True,hard,fields=['ask_cents'] coverage=16896/16896
+forward_registry,forward_registry,promotion_grade,forward_registry_not_empty,True,hard,rows=16896 registry_status=active
+forward_registry,forward_registry,promotion_grade,forward_registry_min_rows,True,hard,rows=16896 required_rows=200
+forward_registry,forward_registry,promotion_grade,forward_registry_min_markets,True,hard,markets=196 required_markets=40
+forward_registry,forward_registry,promotion_grade,forward_registry_promotion_ready,True,hard,promotion_ready=True registry_status=active
+forward_registry,forward_registry,promotion_grade,forward_registry_from_frozen_predictions,True,hard,non_frozen_source_rows=0 rows=16896
+forward_registry,forward_registry,promotion_grade,forward_registry_frozen_before_close,True,hard,missing_or_unparseable_freeze_clock=0 freeze_after_close=0 rows=16896
+forward_registry,forward_registry,promotion_grade,forward_registry_unique_frozen_predictions,True,hard,registry_ids=16896/16896 duplicates=0 frozen_prediction_ids=16896/16896 duplicates=0
+forward_registry,forward_registry,promotion_grade,broad_market_coverage_floor,True,hard,rows=16896 markets=196 required_rows=200 required_markets=40
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,artifact_exists,True,hard,path=research_particle/v28_successor/forward_labeled_predictions_latest.csv
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,artifact_has_header,True,hard,columns=55
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,artifact_not_empty,True,hard,rows=16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,pre_resolution_clock_valid,True,hard,checked=16860 missing_or_unparseable=0 decision_after_close=0
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,target_label_present,True,hard,fields=['y_yes_win'] coverage=16860/16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,probability_fields_complete_and_bounded,True,hard,"fields=['candidate_p_yes', 'v28_p_yes'] coverage=16860/16860 violations=0"
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,fair_yes_no_cents_complete_and_sum_to_100,True,hard,"fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=16860/16860 sum_checked=16860 sum_violations=0"
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,strike_fields_complete,True,hard,fields=['strike'] coverage=16860/16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,boundary_geometry_complete,True,hard,fields=['v28_d_sigma'] coverage=16860/16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=16860/16860"
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,recross_or_path_risk_signal_available,True,hard,fields=['v28_sigma_t_dollars'] coverage=16860/16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,forward_labeled_rows_present,True,hard,joined_rows=16860 total_rows=16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,forward_labeled_min_rows,True,hard,joined_rows=16860 required_rows=200
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,forward_labeled_min_markets,True,hard,joined_markets=195 required_markets=40
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,forward_labels_joined_after_resolution,True,hard,blocked_join_rows=0 joined_rows=16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,forward_labels_from_frozen_predictions,True,hard,non_frozen_source_rows=0 joined_rows=16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,forward_labels_frozen_before_close,True,hard,missing_or_unparseable_freeze_clock=0 freeze_after_close=0 joined_rows=16860
+forward_labeled_predictions,forward_labeled_predictions,promotion_grade,broad_market_coverage_floor,True,hard,rows=16860 markets=195 required_rows=200 required_markets=40
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,artifact_exists,True,hard,path=research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,artifact_has_header,True,hard,columns=55
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,artifact_not_empty,True,hard,rows=16896
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,identifier_fields_complete,True,hard,"missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}"
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,pre_resolution_clock_valid,True,hard,checked=16896 missing_or_unparseable=0 decision_after_close=0
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,target_label_present,False,hard,fields=['y_yes_win'] coverage=16860/16896
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,probability_fields_complete_and_bounded,True,hard,"fields=['candidate_p_yes', 'v28_p_yes'] coverage=16896/16896 violations=0"
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,fair_yes_no_cents_complete_and_sum_to_100,True,hard,"fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=16896/16896 sum_checked=16896 sum_violations=0"
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,strike_fields_complete,True,hard,fields=['strike'] coverage=16896/16896
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,boundary_geometry_complete,True,hard,fields=['v28_d_sigma'] coverage=16896/16896
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,book_price_or_implied_price_available,True,hard,"fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=16896/16896"
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,recross_or_path_risk_signal_available,True,hard,fields=['v28_sigma_t_dollars'] coverage=16896/16896
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,forward_labeled_rows_present,True,hard,joined_rows=16860 total_rows=16896
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,forward_labeled_min_rows,True,hard,joined_rows=16860 required_rows=200
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,forward_labeled_min_markets,True,hard,joined_markets=195 required_markets=40
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,forward_labels_joined_after_resolution,False,hard,blocked_join_rows=36 joined_rows=16860
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,forward_labels_from_frozen_predictions,True,hard,non_frozen_source_rows=0 joined_rows=16860
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,forward_labels_frozen_before_close,True,hard,missing_or_unparseable_freeze_clock=0 freeze_after_close=0 joined_rows=16860
+sidecar_batch_labeled_predictions,forward_labeled_predictions,blocked,broad_market_coverage_floor,True,hard,rows=16896 markets=196 required_rows=200 required_markets=40

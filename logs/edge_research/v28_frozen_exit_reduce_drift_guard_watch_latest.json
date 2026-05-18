@@ -1,0 +1,282 @@
+{
+  "base_freeze_ts_utc": "2026-05-06T06:33:56.987999+00:00",
+  "best_diagnostic_policy": "two_regime_drift_guard",
+  "best_post_birth_policy": "high_p_favorable_fv",
+  "best_post_birth_suppressed_rows": [
+    {
+      "current_cents": -6.0,
+      "delta_cents": 46.0,
+      "entry_cents": 80,
+      "entry_ts": "2026-05-07T17:06:27.372033+00:00",
+      "exit_cents": 77,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "exit_ts": "2026-05-07T17:10:38.168558+00:00",
+      "fair_drawdown_cents": -0.834147,
+      "hold_cents": 40.0,
+      "market": "KXBTC15M-26MAY071315-15",
+      "p_hold": 0.798341,
+      "result": "yes",
+      "side": "yes",
+      "side_won": true,
+      "worst_post_exit_hold_mark_cents": 28
+    }
+  ],
+  "diagnostic_since_base_freeze": [
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 1236.0,
+      "current_cents": 721.0,
+      "delta_vs_current_cents": 515.0,
+      "full_loss_cushion": 12,
+      "harmful_delta_cents": -146.0,
+      "helpful_delta_cents": 661.0,
+      "policy": "two_regime_drift_guard",
+      "rows": 132,
+      "settled": 132,
+      "suppressed": 13,
+      "suppressed_delta_cents": 515.0,
+      "suppressed_harmful": 1,
+      "suppressed_helpful": 12
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 1105.0,
+      "current_cents": 721.0,
+      "delta_vs_current_cents": 384.0,
+      "full_loss_cushion": 11,
+      "harmful_delta_cents": -146.0,
+      "helpful_delta_cents": 530.0,
+      "policy": "entry_band_moderate_drawdown",
+      "rows": 132,
+      "settled": 132,
+      "suppressed": 11,
+      "suppressed_delta_cents": 384.0,
+      "suppressed_harmful": 1,
+      "suppressed_helpful": 10
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 1058.0,
+      "current_cents": 721.0,
+      "delta_vs_current_cents": 337.0,
+      "full_loss_cushion": 10,
+      "harmful_delta_cents": -730.0,
+      "helpful_delta_cents": 1067.0,
+      "policy": "diagnostic_blanket_p75_control",
+      "rows": 132,
+      "settled": 132,
+      "suppressed": 25,
+      "suppressed_delta_cents": 337.0,
+      "suppressed_harmful": 5,
+      "suppressed_helpful": 20
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_cents": 998.0,
+      "current_cents": 721.0,
+      "delta_vs_current_cents": 277.0,
+      "full_loss_cushion": 9,
+      "harmful_delta_cents": 0,
+      "helpful_delta_cents": 277.0,
+      "policy": "high_p_favorable_fv",
+      "rows": 132,
+      "settled": 132,
+      "suppressed": 5,
+      "suppressed_delta_cents": 277.0,
+      "suppressed_harmful": 0,
+      "suppressed_helpful": 5
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 959.0,
+      "current_cents": 721.0,
+      "delta_vs_current_cents": 238.0,
+      "full_loss_cushion": 9,
+      "harmful_delta_cents": -146.0,
+      "helpful_delta_cents": 384.0,
+      "policy": "mid_p_moderate_drawdown",
+      "rows": 132,
+      "settled": 132,
+      "suppressed": 8,
+      "suppressed_delta_cents": 238.0,
+      "suppressed_harmful": 1,
+      "suppressed_helpful": 7
+    }
+  ],
+  "generated_at_utc": "2026-05-11T03:07:56.371776+00:00",
+  "interpretation": [
+    "This is a frozen research watch only; it does not change live exits.",
+    "Diagnostic rows reuse the old reduce-suppression freeze only to classify the mechanism.",
+    "Only post_drift_guard_birth rows after this probe's own freeze timestamp count as forward evidence.",
+    "Best diagnostic policy is two_regime_drift_guard with delta 515.0c and blockers ['suppressed_decisions_lt_30', 'suppressed_losers_present', 'suppressed_loss_control_cost_negative'].",
+    "Best post-birth policy is high_p_favorable_fv with 40 settled rows, 1 suppressions, delta 46.0c, and blockers ['suppressed_decisions_lt_30']."
+  ],
+  "post_drift_guard_birth": [
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_cents": 556.0,
+      "current_cents": 510.0,
+      "delta_vs_current_cents": 46.0,
+      "full_loss_cushion": 5,
+      "harmful_delta_cents": 0,
+      "helpful_delta_cents": 46.0,
+      "policy": "high_p_favorable_fv",
+      "rows": 40,
+      "settled": 40,
+      "suppressed": 1,
+      "suppressed_delta_cents": 46.0,
+      "suppressed_harmful": 0,
+      "suppressed_helpful": 1
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_delta_not_positive",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 510.0,
+      "current_cents": 510.0,
+      "delta_vs_current_cents": 0.0,
+      "full_loss_cushion": 5,
+      "harmful_delta_cents": -146.0,
+      "helpful_delta_cents": 146.0,
+      "policy": "two_regime_drift_guard",
+      "rows": 40,
+      "settled": 40,
+      "suppressed": 4,
+      "suppressed_delta_cents": 0.0,
+      "suppressed_harmful": 1,
+      "suppressed_helpful": 3
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_delta_not_positive",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 504.0,
+      "current_cents": 510.0,
+      "delta_vs_current_cents": -6.0,
+      "full_loss_cushion": 5,
+      "harmful_delta_cents": -304.0,
+      "helpful_delta_cents": 298.0,
+      "policy": "diagnostic_blanket_p75_control",
+      "rows": 40,
+      "settled": 40,
+      "suppressed": 8,
+      "suppressed_delta_cents": -6.0,
+      "suppressed_harmful": 2,
+      "suppressed_helpful": 6
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_delta_not_positive",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 464.0,
+      "current_cents": 510.0,
+      "delta_vs_current_cents": -46.0,
+      "full_loss_cushion": 4,
+      "harmful_delta_cents": -146.0,
+      "helpful_delta_cents": 100.0,
+      "policy": "entry_band_moderate_drawdown",
+      "rows": 40,
+      "settled": 40,
+      "suppressed": 3,
+      "suppressed_delta_cents": -46.0,
+      "suppressed_harmful": 1,
+      "suppressed_helpful": 2
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "suppressed_delta_not_positive",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "candidate_cents": 464.0,
+      "current_cents": 510.0,
+      "delta_vs_current_cents": -46.0,
+      "full_loss_cushion": 4,
+      "harmful_delta_cents": -146.0,
+      "helpful_delta_cents": 100.0,
+      "policy": "mid_p_moderate_drawdown",
+      "rows": 40,
+      "settled": 40,
+      "suppressed": 3,
+      "suppressed_delta_cents": -46.0,
+      "suppressed_harmful": 1,
+      "suppressed_helpful": 2
+    }
+  ],
+  "state": {
+    "candidate_family": "exit_reduce_drift_guard_watch",
+    "drift_interpretation": [
+      "This audit uses only the frozen reduce-suppression research rows; it does not alter exits or live trading.",
+      "Blanket suppression remains positive at 91.0c across 12 suppressed exits, but harmful rows cost -426.0c.",
+      "Before the latest suppressed exit, the lane was 211.0c; the latest row added -120.0c and is tagged ['harmful_loss_control_cost', 'p_hold_075_079', 'large_fair_drawdown', 'post_exit_mark_full_loss', 'negative_delta'].",
+      "Worst harmful suppression is KXBTC15M-26MAY060700-00 with delta -160.0c, p_hold 0.799603, and fair drawdown 4.039746c.",
+      "Next exit research should isolate the harmful probability-reduce states before broadening suppression."
+    ],
+    "freeze_ts_utc": "2026-05-07T02:30:19.536047+00:00",
+    "origin": "Frozen after v28_exit_reduce_suppression_drift_audit showed blanket suppression loss-control harm.",
+    "rules": {
+      "diagnostic_blanket_p75_control": {
+        "p_hold_min": 0.75,
+        "physics": "Control row: the original blanket p_hold>=0.75 probability-reduce suppression."
+      },
+      "entry_band_moderate_drawdown": {
+        "entry_cents_max": 82.0,
+        "entry_cents_min": 70.0,
+        "fair_drawdown_max": 5.0,
+        "fair_drawdown_min": 0.0,
+        "p_hold_min": 0.75,
+        "physics": "Observable entry-price band plus shallow drawdown: avoids the rich-entry harmful row and late full-loss drawdown state."
+      },
+      "high_p_favorable_fv": {
+        "fair_drawdown_max": 0.0,
+        "p_hold_min": 0.79,
+        "physics": "Suppress only when held-side probability is very high and v28 FV says the current exit is not a real drawdown."
+      },
+      "mid_p_moderate_drawdown": {
+        "fair_drawdown_max": 5.0,
+        "fair_drawdown_min": 0.0,
+        "p_hold_max": 0.79,
+        "p_hold_min": 0.75,
+        "physics": "Suppress marginal high-p reduces only when drawdown is shallow enough to look like churn, not collapse."
+      },
+      "two_regime_drift_guard": {
+        "physics": "Two-regime guard: hold favorable-FV very-high-p exits, or shallow-drawdown marginal-p exits; reject large drawdown states.",
+        "union": [
+          "high_p_favorable_fv",
+          "mid_p_moderate_drawdown"
+        ]
+      }
+    },
+    "strict_forward_note": "Only post_drift_guard_birth rows count as promotion evidence."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "acceptance_conditions": [
+    "at least 30 settled forward rows",
+    "coverage remains between 70% and 90%",
+    "net P&L stays positive versus raw p52 on the same future denominator",
+    "plus05 Brier and logloss deltas versus raw probability remain negative",
+    "simulated/rejected-actionable share falls to <=35% before any live promotion"
+  ],
+  "baseline": {
+    "added_reject_count": 134,
+    "approved_entry_count": 9,
+    "avg_brier": 0.2224169008928951,
+    "coverage_pct": 97.94520547945206,
+    "entries": 143,
+    "losses": 60,
+    "mode_counts": {
+      "base": 143
+    },
+    "net_cents_after_entry_fee": -947.0,
+    "settled": 143,
+    "vs_raw_p52_base": {
+      "brier_delta": 0.0,
+      "coverage_delta": 0.0,
+      "entries_delta": 0,
+      "net_cents_delta": 0.0
+    },
+    "wins": 83
+  },
+  "blockers": {
+    "execution": [
+      "simulated_share_gt_0.35",
+      "coverage_too_high",
+      "net_not_positive"
+    ],
+    "fv": [
+      "coverage_too_high",
+      "net_not_positive"
+    ]
+  },
+  "candidate": "p52_recross_escape_opp240_oppedge5_keep_plus05_probability",
+  "excluded_in_progress_count": 1,
+  "forward_denominator": 146,
+  "freeze_ts": "2026-05-06T00:57:12.867086+00:00",
+  "probability": {
+    "plus05": {
+      "avg_brier": 0.22864177700144056,
+      "avg_logloss": 0.6361693923762819,
+      "avg_p": 0.6982674825174826,
+      "ece": 0.13371767832167833,
+      "entries": 143,
+      "losses": 59,
+      "settled": 143,
+      "wins": 84
+    },
+    "plus05_brier_delta_vs_raw": 0.008598668615391603,
+    "plus05_ece_delta_vs_raw": 0.038586566433566435,
+    "plus05_logloss_delta_vs_raw": 0.01480081715498005,
+    "raw": {
+      "avg_brier": 0.22004310838604896,
+      "avg_logloss": 0.6213685752213018,
+      "avg_p": 0.6484383986013986,
+      "ece": 0.0951311118881119,
+      "entries": 143,
+      "losses": 59,
+      "settled": 143,
+      "wins": 84
+    }
+  },
+  "probability_policy": "plus05_probability",
+  "runway": {
+    "actual_entries_needed_for_sim_share_lte_35pct": 240,
+    "additional_settled_after_pending_to_30": 0,
+    "future_clean_denominator_to_30": 0,
+    "miss_budget_after_30_before_coverage_below_70pct": 58,
+    "misses_needed_to_reduce_current_coverage_to_90pct": 13,
+    "pending_rows": 0,
+    "settled_rows_to_30": 0
+  },
+  "selector": {
+    "added_reject_count": 134,
+    "approved_entry_count": 9,
+    "avg_brier": 0.22004310838604896,
+    "coverage_pct": 97.94520547945206,
+    "entries": 143,
+    "losses": 59,
+    "mode_counts": {
+      "base": 117,
+      "danger_follow_opposite": 5,
+      "danger_keep_high_edge": 2,
+      "danger_no_opposite_keep": 19
+    },
+    "net_cents_after_entry_fee": -753.0,
+    "settled": 143,
+    "vs_raw_p52_base": {
+      "brier_delta": -0.002373792506846134,
+      "coverage_delta": 0.0,
+      "entries_delta": 0,
+      "net_cents_delta": 194.0
+    },
+    "wins": 84
+  },
+  "selector_policy": "p52_recross_escape_opp240_oppedge5_keep"
+}

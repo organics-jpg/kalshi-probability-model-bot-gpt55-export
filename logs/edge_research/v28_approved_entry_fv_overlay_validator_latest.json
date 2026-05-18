@@ -1,0 +1,155 @@
+{
+  "best_overlay": "book_probability",
+  "entry_surface": "approved_v28_entries_only",
+  "interpretation": [
+    "Best approved-entry overlay by Brier is book_probability with Brier delta -0.0048166936698150475.",
+    "Raw approved-entry calibration error is -0.03995695953757228 with win rate 0.8439306358381503 and avg p 0.8838875953757226."
+  ],
+  "ranked": [
+    {
+      "avg_brier": 0.1288173410404624,
+      "avg_logloss": 0.4246016785424734,
+      "avg_p": 0.7773410404624277,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.0048166936698150475,
+      "calibration_error": 0.06658959537572262,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.04865443082318277,
+      "losses": 27,
+      "overlay": "book_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.1330875318555737,
+      "avg_logloss": 0.4484221392288138,
+      "avg_p": 0.8753320000145539,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.0005465028547037565,
+      "calibration_error": -0.0314013641764036,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": -0.024833970136842354,
+      "losses": 27,
+      "overlay": "noise_shrink_light_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.13363403471027746,
+      "avg_logloss": 0.47325610936565615,
+      "avg_p": 0.8838875953757226,
+      "blockers": [],
+      "brier_delta_vs_raw": 0.0,
+      "calibration_error": -0.03995695953757228,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.0,
+      "losses": 27,
+      "overlay": "raw_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.13657866832975724,
+      "avg_logloss": 0.5275253630201062,
+      "avg_p": 0.913558416184971,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.002944633619479775,
+      "calibration_error": -0.06962778034682071,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.05426925365445007,
+      "losses": 27,
+      "overlay": "entry_conditioned_plus03_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.13823067549850399,
+      "avg_logloss": 0.5145473282214229,
+      "avg_p": 0.9251859479005387,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.004596640788226525,
+      "calibration_error": -0.08125531206238834,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.041291218855766754,
+      "losses": 27,
+      "overlay": "entry_conditioned_logit125_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.13823067549850399,
+      "avg_logloss": 0.5145473282214229,
+      "avg_p": 0.9251859479005387,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.004596640788226525,
+      "calibration_error": -0.08125531206238834,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.041291218855766754,
+      "losses": 27,
+      "overlay": "entry_conditioned_logit125_p60_only_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.13905005768664133,
+      "avg_logloss": 0.5957826901474709,
+      "avg_p": 0.9310962155146223,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.005416022976363871,
+      "calibration_error": -0.08716557967647198,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.12252658078181472,
+      "losses": 27,
+      "overlay": "entry_conditioned_plus05_noise_attenuated_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    },
+    {
+      "avg_brier": 0.13936542540158384,
+      "avg_logloss": 0.5979349761471295,
+      "avg_p": 0.9329548092485549,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.005731390691306376,
+      "calibration_error": -0.08902417341040458,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "logloss_delta_vs_raw": 0.12467886678147339,
+      "losses": 27,
+      "overlay": "entry_conditioned_plus05_probability",
+      "settled": 173,
+      "win_rate": 0.8439306358381503,
+      "wins": 146
+    }
+  ],
+  "rows": 173,
+  "settled": 173
+}

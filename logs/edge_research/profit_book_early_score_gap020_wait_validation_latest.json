@@ -1,0 +1,166 @@
+{
+  "all_metric": {
+    "accuracy": 0.7605633802816901,
+    "accuracy_minus_break_even": 0.046654929577464754,
+    "ask_cost_cents": 19717.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 295,
+    "coverage": 0.9627118644067797,
+    "coverage_pass": true,
+    "entry_cost_cents": 20275.0,
+    "entry_fee_cents": 558.0,
+    "fee_aware_break_even_accuracy": 0.7139084507042254,
+    "gross_pnl_cents": 1883.0,
+    "gross_roi_on_ask": 0.09550134401785261,
+    "losses": 68,
+    "markets": 284,
+    "mean_ask": 69.42605633802818,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.7909999999999,
+    "net_edge_per_base_market_cents": 4.491525423728813,
+    "net_edge_per_selected_cents": 4.665492957746479,
+    "net_pnl_cents": 1325.0,
+    "net_roi_on_cost": 0.06535141800246609,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7076648955178897,
+    "wilson_minus_break_even": -0.006243555186335681,
+    "wins": 216
+  },
+  "fresh_metric": {
+    "accuracy": 0.631578947368421,
+    "accuracy_minus_break_even": -0.09421052631578941,
+    "ask_cost_cents": 1341.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 19,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 1379.0,
+    "entry_fee_cents": 38.0,
+    "fee_aware_break_even_accuracy": 0.7257894736842104,
+    "gross_pnl_cents": -141.0,
+    "gross_roi_on_ask": -0.10514541387024609,
+    "losses": 7,
+    "markets": 19,
+    "mean_ask": 70.57894736842105,
+    "median_ask": 69.0,
+    "median_seconds_to_close": 770.081,
+    "net_edge_per_base_market_cents": -9.421052631578947,
+    "net_edge_per_selected_cents": -9.421052631578947,
+    "net_pnl_cents": -179.0,
+    "net_roi_on_cost": -0.12980420594633793,
+    "p75_ask": 77.0,
+    "positive_net": false,
+    "wilson95_lower": 0.41039533164803066,
+    "wilson_minus_break_even": -0.31539414203617977,
+    "wins": 12
+  },
+  "generated_utc": "20260504_075208Z",
+  "lock": {
+    "anchor_lock": "logs\\edge_research\\profit_frontier_book_margin_early_lock.json",
+    "anchor_policy": {
+      "ask_max": 95.0,
+      "chooser": "book_p_side",
+      "gate": "margin_rv15>=0",
+      "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=480; margin_rv15>=0",
+      "min_score": 0.6,
+      "min_seconds_to_close": 480.0
+    },
+    "created_utc": "2026-05-04T01:41:50.8801761+00:00",
+    "discovery_metrics": {
+      "current_all_accuracy": 0.7739463601532567,
+      "current_all_coverage": 0.9525547445255474,
+      "current_all_net_pnl_cents": 1627.0,
+      "current_delta_vs_anchor_cents": 455.0,
+      "current_holdout_net_pnl_cents": 212.0,
+      "current_validation_net_pnl_cents": 565.0,
+      "min_oos_net_roi": 0.044386422976501305,
+      "v21_all_accuracy": 0.75,
+      "v21_all_coverage": 0.9411764705882353,
+      "v21_all_net_pnl_cents": 787.0,
+      "v21_delta_vs_anchor_cents": 68.0,
+      "v21_holdout_net_pnl_cents": 136.0,
+      "v21_train_net_pnl_cents": 222.0,
+      "v21_validation_net_pnl_cents": 429.0
+    },
+    "lock_close_dt": "2026-05-04T02:00:00+00:00",
+    "reference_lock": "logs\\edge_research\\profit_frontier_score_min60_gap020_lock.json",
+    "reference_policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120; abs_book_rv15_gap<=0.20",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "reference_veto": {
+      "feature": "abs_book_rv15_gap",
+      "op": "<=",
+      "threshold": 0.2
+    },
+    "research_note": "Forward-registered from book_to_score_wait_scan_latest.csv. Causal rule: require an early book-margin setup, then wait for the first later score_min60 row that passes the 20 percentage point book/Brownian coherence veto. Diagnostic only; promotion requires strict pre-resolution live evidence and high recurring-market coverage.",
+    "source_scan_csv": "logs\\edge_research\\book_to_score_wait_scan_latest.csv",
+    "wait_rule": {
+      "condition": {
+        "feature": "seconds_to_close",
+        "op": ">=",
+        "threshold": 480.0
+      },
+      "label": "book_margin_early_wait_for_score_min60_gap020_enter_ref_if_seconds_to_close>=480",
+      "mode": "enter_ref"
+    }
+  },
+  "name": "book_early_score_gap020_wait",
+  "registry_recompute_divergence": {
+    "compared": 19,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY032230-30",
+        "recomputed": "2026-05-04T02:17:05.641000+00:00 no 79.0c",
+        "strict": "2026-05-04T02:18:05.671000+00:00 no 66.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032330-30",
+        "recomputed": "2026-05-04T03:19:11.329000+00:00 no 69.0c",
+        "strict": "2026-05-04T03:18:11.263000+00:00 no 61.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040130-30",
+        "recomputed": "2026-05-04T05:17:06.838000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:19:06.925000+00:00 no 62.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040145-45",
+        "recomputed": "2026-05-04T05:31:08.227000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:35:08.515000+00:00 no 69.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040245-45",
+        "recomputed": "2026-05-04T06:32:13.465000+00:00 yes 75.0c",
+        "strict": "2026-05-04T06:33:13.573000+00:00 yes 71.0c"
+      }
+    ],
+    "mismatches": 5,
+    "missing_recompute": 5
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.6521739130434783,
+    "base_markets": 24,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7117391304347827,
+    "losses": 8,
+    "markets": 23,
+    "median_ask": 69.0,
+    "net_pnl_cents": -137.0,
+    "net_roi_on_cost": -0.08368967623701894,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 24,
+    "wilson95_lower": 0.44890335377263,
+    "wilson_minus_break_even": -0.26283577666215263,
+    "wins": 15
+  }
+}

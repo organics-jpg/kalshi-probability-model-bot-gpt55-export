@@ -1,0 +1,85 @@
+{
+  "commands": [
+    {
+      "args": [
+        "probe_profit_lock_pending_signal_monitor.py"
+      ],
+      "ended_utc": "2026-05-05T03:20:00.328363+00:00",
+      "name": "pending_signal_monitor",
+      "returncode": 0,
+      "started_utc": "2026-05-05T03:19:43.633015+00:00",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "Profit lock pending signal monitor complete",
+        "new_records=0 registered=3040",
+        "removed_post_close_records=0",
+        "report=logs\\edge_research\\profit_lock_pending_signal_monitor_latest.md"
+      ]
+    },
+    {
+      "args": [
+        "probe_kinetic_path_confirmation_pending_monitor.py"
+      ],
+      "ended_utc": "2026-05-05T03:20:14.569062+00:00",
+      "name": "path_pending_monitor",
+      "returncode": 0,
+      "started_utc": "2026-05-05T03:20:00.328363+00:00",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "Kinetic path-confirmation pending monitor complete",
+        "new_records=0 registered=119",
+        "removed_post_close_records=0",
+        "report=logs\\edge_research\\kinetic_path_confirmation_pending_monitor_latest.md"
+      ]
+    },
+    {
+      "args": [
+        "probe_profit_lock_market_denominator_audit.py"
+      ],
+      "ended_utc": "2026-05-05T03:20:34.487339+00:00",
+      "name": "market_denominator_audit",
+      "returncode": 0,
+      "started_utc": "2026-05-05T03:20:14.569062+00:00",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "Profit lock market-denominator audit complete",
+        "locks=34",
+        "coverage_fail=13",
+        "report=logs\\edge_research\\profit_lock_market_denominator_audit_latest.md"
+      ]
+    },
+    {
+      "args": [
+        "probe_profit_lock_registered_signal_readiness.py"
+      ],
+      "ended_utc": "2026-05-05T03:20:56.465659+00:00",
+      "name": "registered_signal_readiness",
+      "returncode": 0,
+      "started_utc": "2026-05-05T03:20:34.487339+00:00",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "Profit lock registered-signal readiness complete",
+        "ready_count=0",
+        "report=logs\\edge_research\\profit_lock_registered_signal_readiness_latest.md"
+      ]
+    },
+    {
+      "args": [
+        "probe_profit_lock_registered_signal_delta.py"
+      ],
+      "ended_utc": "2026-05-05T03:20:57.087216+00:00",
+      "name": "registered_signal_delta",
+      "returncode": 0,
+      "started_utc": "2026-05-05T03:20:56.465659+00:00",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "Profit lock registered-signal delta complete",
+        "changed=0",
+        "report=logs\\edge_research\\profit_lock_registered_signal_delta_latest.md"
+      ]
+    }
+  ],
+  "failed_steps": 0,
+  "generated_utc": "20260505_031943Z",
+  "iteration": 614
+}

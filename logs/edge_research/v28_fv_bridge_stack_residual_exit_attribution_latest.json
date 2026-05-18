@@ -1,0 +1,1025 @@
+{
+  "interpretation": [
+    "Approved-only diagnostic residual top branch is mushroom_v28_probability_collapse_full with 7 negative stack winners.",
+    "Branches with negative directionally-correct winners are candidates for further exit physics, not live patches."
+  ],
+  "purpose": "Attribution of remaining negative directionally-correct winners after FV bridge + reduce-geometry stack.",
+  "requirements": [
+    "research-only, no live bot changes, no orders",
+    "diagnostic attribution only unless rows are post-freeze",
+    "preserve approved-only/reconstructed split"
+  ],
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_fv_bridge_exit_geometry_stack_latest.json",
+  "windows": [
+    {
+      "freeze_ts_utc": "2026-05-06T09:10:09.146392+00:00",
+      "scenarios": [
+        {
+          "branch_buckets": [
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 31,
+              "examples": [],
+              "hold_net_cents": -444.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -1083.0,
+              "rows": 61,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -1083.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 9,
+              "examples": [],
+              "hold_net_cents": 34.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -8.0,
+              "rows": 12,
+              "stack_delta_cents": 116.0,
+              "stack_net_cents": 108.0
+            },
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 4,
+              "examples": [],
+              "hold_net_cents": 82.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": 146.0,
+              "rows": 5,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 146.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 12,
+              "examples": [],
+              "hold_net_cents": 237.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": 434.0,
+              "rows": 13,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 434.0
+            }
+          ],
+          "coverage_pct": 80.53097345132744,
+          "negative_stack_winners": 0,
+          "scenario": "lead_reconstructed_only",
+          "settled": 91,
+          "stack_net_cents": -395.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 6,
+              "examples": [
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                }
+              ],
+              "hold_net_cents": 203.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 177.0,
+              "rows": 6,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 177.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 15,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                }
+              ],
+              "hold_net_cents": 293.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 436.0,
+              "rows": 16,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 436.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 31,
+              "examples": [],
+              "hold_net_cents": -381.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -944.0,
+              "rows": 58,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -944.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 8,
+              "examples": [],
+              "hold_net_cents": -1.9999999999999964,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -76.0,
+              "rows": 11,
+              "stack_delta_cents": 64.0,
+              "stack_net_cents": -12.0
+            }
+          ],
+          "coverage_pct": 80.53097345132744,
+          "negative_stack_winners": 2,
+          "scenario": "lead_all_sources",
+          "settled": 91,
+          "stack_net_cents": -343.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 6,
+              "examples": [
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                }
+              ],
+              "hold_net_cents": 203.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 177.0,
+              "rows": 6,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 177.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 15,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                }
+              ],
+              "hold_net_cents": 293.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 436.0,
+              "rows": 16,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 436.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 31,
+              "examples": [],
+              "hold_net_cents": -381.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -944.0,
+              "rows": 58,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -944.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 8,
+              "examples": [],
+              "hold_net_cents": -1.9999999999999964,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -76.0,
+              "rows": 11,
+              "stack_delta_cents": 64.0,
+              "stack_net_cents": -12.0
+            }
+          ],
+          "coverage_pct": 80.53097345132744,
+          "negative_stack_winners": 2,
+          "scenario": "lead_first_market_only",
+          "settled": 91,
+          "stack_net_cents": -343.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 6,
+              "examples": [
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                }
+              ],
+              "hold_net_cents": 203.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 177.0,
+              "rows": 6,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 177.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 15,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                }
+              ],
+              "hold_net_cents": 293.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 436.0,
+              "rows": 16,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 436.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 31,
+              "examples": [],
+              "hold_net_cents": -381.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -944.0,
+              "rows": 58,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -944.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 8,
+              "examples": [],
+              "hold_net_cents": -1.9999999999999964,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -76.0,
+              "rows": 11,
+              "stack_delta_cents": 64.0,
+              "stack_net_cents": -12.0
+            }
+          ],
+          "coverage_pct": 80.53097345132744,
+          "negative_stack_winners": 2,
+          "scenario": "lead_approved_preferred",
+          "settled": 91,
+          "stack_net_cents": -343.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 8,
+              "examples": [
+                {
+                  "ask_prob": 0.75,
+                  "hold_net_cents": 25.0,
+                  "market": "KXBTC15M-26MAY060615-15",
+                  "matched_seconds": 0.023163,
+                  "realized_net_cents": -32.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -32.0
+                },
+                {
+                  "ask_prob": 0.59,
+                  "hold_net_cents": 41.0,
+                  "market": "KXBTC15M-26MAY060945-45",
+                  "matched_seconds": 0.028032,
+                  "realized_net_cents": -18.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -18.0
+                },
+                {
+                  "ask_prob": 0.83,
+                  "hold_net_cents": 17.000000000000004,
+                  "market": "KXBTC15M-26MAY061100-00",
+                  "matched_seconds": 0.024951,
+                  "realized_net_cents": -42.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -42.0
+                },
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                },
+                {
+                  "ask_prob": 0.42,
+                  "hold_net_cents": 58.00000000000001,
+                  "market": "KXBTC15M-26MAY062015-15",
+                  "matched_seconds": 0.053998,
+                  "realized_net_cents": -62.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -62.0
+                },
+                {
+                  "ask_prob": 0.73,
+                  "hold_net_cents": 27.0,
+                  "market": "KXBTC15M-26MAY071000-00",
+                  "matched_seconds": 0.135058,
+                  "realized_net_cents": -38.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -38.0
+                }
+              ],
+              "hold_net_cents": 110.0,
+              "negative_realized_winners": 7,
+              "negative_stack_winners": 7,
+              "realized_net_cents": -355.0,
+              "rows": 10,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -355.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 13,
+              "examples": [
+                {
+                  "ask_prob": 0.79,
+                  "hold_net_cents": 20.999999999999996,
+                  "market": "KXBTC15M-26MAY060800-00",
+                  "matched_seconds": 0.043336,
+                  "realized_net_cents": -20.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -20.0
+                },
+                {
+                  "ask_prob": 0.76,
+                  "hold_net_cents": 24.0,
+                  "market": "KXBTC15M-26MAY060930-30",
+                  "matched_seconds": 0.058168,
+                  "realized_net_cents": -22.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -22.0
+                },
+                {
+                  "ask_prob": 0.68,
+                  "hold_net_cents": 31.999999999999996,
+                  "market": "KXBTC15M-26MAY061015-15",
+                  "matched_seconds": 0.033626,
+                  "realized_net_cents": -8.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -8.0
+                },
+                {
+                  "ask_prob": 0.88,
+                  "hold_net_cents": 12.0,
+                  "market": "KXBTC15M-26MAY061445-45",
+                  "matched_seconds": 0.023239,
+                  "realized_net_cents": -24.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -24.0
+                },
+                {
+                  "ask_prob": 0.84,
+                  "hold_net_cents": 16.000000000000004,
+                  "market": "KXBTC15M-26MAY071215-15",
+                  "matched_seconds": 0.030581,
+                  "realized_net_cents": -17.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -17.0
+                },
+                {
+                  "ask_prob": 0.77,
+                  "hold_net_cents": 23.0,
+                  "market": "KXBTC15M-26MAY071230-30",
+                  "matched_seconds": 0.039046,
+                  "realized_net_cents": -12.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -12.0
+                }
+              ],
+              "hold_net_cents": -31.000000000000018,
+              "negative_realized_winners": 13,
+              "negative_stack_winners": 7,
+              "realized_net_cents": -238.0,
+              "rows": 17,
+              "stack_delta_cents": 176.0,
+              "stack_net_cents": -62.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 29,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                },
+                {
+                  "ask_prob": 0.83,
+                  "hold_net_cents": 17.000000000000004,
+                  "market": "KXBTC15M-26MAY062100-00",
+                  "matched_seconds": 0.061011,
+                  "realized_net_cents": -5.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -5.0
+                },
+                {
+                  "ask_prob": 0.73,
+                  "hold_net_cents": 27.0,
+                  "market": "KXBTC15M-26MAY062115-15",
+                  "matched_seconds": 0.020776,
+                  "realized_net_cents": -14.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -14.0
+                },
+                {
+                  "ask_prob": 0.82,
+                  "hold_net_cents": 18.000000000000004,
+                  "market": "KXBTC15M-26MAY070115-15",
+                  "matched_seconds": 0.026418,
+                  "realized_net_cents": -2.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -2.0
+                }
+              ],
+              "hold_net_cents": 390.0,
+              "negative_realized_winners": 4,
+              "negative_stack_winners": 4,
+              "realized_net_cents": 474.0,
+              "rows": 31,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 474.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 12,
+              "examples": [],
+              "hold_net_cents": 236.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": 440.0,
+              "rows": 12,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 440.0
+            }
+          ],
+          "coverage_pct": 61.94690265486726,
+          "negative_stack_winners": 18,
+          "scenario": "lead_approved_only",
+          "settled": 70,
+          "stack_net_cents": 497.0
+        }
+      ],
+      "window": "diagnostic_existing_false_conviction_freeze"
+    },
+    {
+      "freeze_ts_utc": "2026-05-06T14:14:08.956655+00:00",
+      "scenarios": [
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 4,
+              "examples": [
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                }
+              ],
+              "hold_net_cents": 126.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 30.0,
+              "rows": 4,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 30.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 13,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                }
+              ],
+              "hold_net_cents": 233.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 323.0,
+              "rows": 14,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 323.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 26,
+              "examples": [],
+              "hold_net_cents": -474.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -1111.0,
+              "rows": 52,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -1111.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 4,
+              "examples": [],
+              "hold_net_cents": 22.000000000000004,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -7.0,
+              "rows": 5,
+              "stack_delta_cents": -50.0,
+              "stack_net_cents": -57.0
+            }
+          ],
+          "coverage_pct": 80.64516129032258,
+          "negative_stack_winners": 2,
+          "scenario": "lead_all_sources",
+          "settled": 75,
+          "stack_net_cents": -815.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 4,
+              "examples": [
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                }
+              ],
+              "hold_net_cents": 126.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 30.0,
+              "rows": 4,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 30.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 13,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                }
+              ],
+              "hold_net_cents": 233.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 323.0,
+              "rows": 14,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 323.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 26,
+              "examples": [],
+              "hold_net_cents": -474.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -1111.0,
+              "rows": 52,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -1111.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 4,
+              "examples": [],
+              "hold_net_cents": 22.000000000000004,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -7.0,
+              "rows": 5,
+              "stack_delta_cents": -50.0,
+              "stack_net_cents": -57.0
+            }
+          ],
+          "coverage_pct": 80.64516129032258,
+          "negative_stack_winners": 2,
+          "scenario": "lead_first_market_only",
+          "settled": 75,
+          "stack_net_cents": -815.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 4,
+              "examples": [
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                }
+              ],
+              "hold_net_cents": 126.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 30.0,
+              "rows": 4,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 30.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 13,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                }
+              ],
+              "hold_net_cents": 233.0,
+              "negative_realized_winners": 1,
+              "negative_stack_winners": 1,
+              "realized_net_cents": 323.0,
+              "rows": 14,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 323.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 26,
+              "examples": [],
+              "hold_net_cents": -474.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -1111.0,
+              "rows": 52,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -1111.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 4,
+              "examples": [],
+              "hold_net_cents": 22.000000000000004,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -7.0,
+              "rows": 5,
+              "stack_delta_cents": -50.0,
+              "stack_net_cents": -57.0
+            }
+          ],
+          "coverage_pct": 80.64516129032258,
+          "negative_stack_winners": 2,
+          "scenario": "lead_approved_preferred",
+          "settled": 75,
+          "stack_net_cents": -815.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 27,
+              "examples": [],
+              "hold_net_cents": -441.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -1062.0,
+              "rows": 56,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -1062.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 4,
+              "examples": [],
+              "hold_net_cents": 22.000000000000004,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": -7.0,
+              "rows": 5,
+              "stack_delta_cents": -50.0,
+              "stack_net_cents": -57.0
+            },
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 2,
+              "examples": [],
+              "hold_net_cents": 58.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": 109.0,
+              "rows": 2,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 109.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 11,
+              "examples": [],
+              "hold_net_cents": 226.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": 415.0,
+              "rows": 12,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 415.0
+            }
+          ],
+          "coverage_pct": 80.64516129032258,
+          "negative_stack_winners": 0,
+          "scenario": "lead_reconstructed_only",
+          "settled": 75,
+          "stack_net_cents": -595.0
+        },
+        {
+          "branch_buckets": [
+            {
+              "branch": "mushroom_v28_probability_collapse_full",
+              "directional_winners": 6,
+              "examples": [
+                {
+                  "ask_prob": 0.83,
+                  "hold_net_cents": 17.000000000000004,
+                  "market": "KXBTC15M-26MAY061100-00",
+                  "matched_seconds": 0.024951,
+                  "realized_net_cents": -42.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -42.0
+                },
+                {
+                  "ask_prob": 0.67,
+                  "hold_net_cents": 32.99999999999999,
+                  "market": "KXBTC15M-26MAY061800-00",
+                  "matched_seconds": 0.054077,
+                  "realized_net_cents": -91.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -91.0
+                },
+                {
+                  "ask_prob": 0.42,
+                  "hold_net_cents": 58.00000000000001,
+                  "market": "KXBTC15M-26MAY062015-15",
+                  "matched_seconds": 0.053998,
+                  "realized_net_cents": -62.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -62.0
+                },
+                {
+                  "ask_prob": 0.73,
+                  "hold_net_cents": 27.0,
+                  "market": "KXBTC15M-26MAY071000-00",
+                  "matched_seconds": 0.135058,
+                  "realized_net_cents": -38.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -38.0
+                },
+                {
+                  "ask_prob": 0.77,
+                  "hold_net_cents": 23.0,
+                  "market": "KXBTC15M-26MAY071030-30",
+                  "matched_seconds": 0.091718,
+                  "realized_net_cents": -26.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -26.0
+                }
+              ],
+              "hold_net_cents": 113.0,
+              "negative_realized_winners": 5,
+              "negative_stack_winners": 5,
+              "realized_net_cents": -279.0,
+              "rows": 7,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": -279.0
+            },
+            {
+              "branch": "mushroom_v28_probability_reduce",
+              "directional_winners": 7,
+              "examples": [
+                {
+                  "ask_prob": 0.88,
+                  "hold_net_cents": 12.0,
+                  "market": "KXBTC15M-26MAY061445-45",
+                  "matched_seconds": 0.023239,
+                  "realized_net_cents": -24.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -24.0
+                },
+                {
+                  "ask_prob": 0.84,
+                  "hold_net_cents": 16.000000000000004,
+                  "market": "KXBTC15M-26MAY071215-15",
+                  "matched_seconds": 0.030581,
+                  "realized_net_cents": -17.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -17.0
+                },
+                {
+                  "ask_prob": 0.77,
+                  "hold_net_cents": 23.0,
+                  "market": "KXBTC15M-26MAY071230-30",
+                  "matched_seconds": 0.039046,
+                  "realized_net_cents": -12.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -12.0
+                },
+                {
+                  "ask_prob": 0.8,
+                  "hold_net_cents": 19.999999999999996,
+                  "market": "KXBTC15M-26MAY071315-15",
+                  "matched_seconds": 0.101911,
+                  "realized_net_cents": -8.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -8.0
+                }
+              ],
+              "hold_net_cents": -15.000000000000004,
+              "negative_realized_winners": 7,
+              "negative_stack_winners": 4,
+              "realized_net_cents": -133.0,
+              "rows": 9,
+              "stack_delta_cents": 10.0,
+              "stack_net_cents": -123.0
+            },
+            {
+              "branch": "mushroom_v28_exit_value_over_hold",
+              "directional_winners": 25,
+              "examples": [
+                {
+                  "ask_prob": 0.89,
+                  "hold_net_cents": 10.999999999999998,
+                  "market": "KXBTC15M-26MAY061400-00",
+                  "matched_seconds": 0.029848,
+                  "realized_net_cents": -11.0,
+                  "side": "no",
+                  "source": "approved_entry",
+                  "stack_net_cents": -11.0
+                },
+                {
+                  "ask_prob": 0.83,
+                  "hold_net_cents": 17.000000000000004,
+                  "market": "KXBTC15M-26MAY062100-00",
+                  "matched_seconds": 0.061011,
+                  "realized_net_cents": -5.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -5.0
+                },
+                {
+                  "ask_prob": 0.73,
+                  "hold_net_cents": 27.0,
+                  "market": "KXBTC15M-26MAY062115-15",
+                  "matched_seconds": 0.020776,
+                  "realized_net_cents": -14.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -14.0
+                },
+                {
+                  "ask_prob": 0.82,
+                  "hold_net_cents": 18.000000000000004,
+                  "market": "KXBTC15M-26MAY070115-15",
+                  "matched_seconds": 0.026418,
+                  "realized_net_cents": -2.0,
+                  "side": "yes",
+                  "source": "approved_entry",
+                  "stack_net_cents": -2.0
+                }
+              ],
+              "hold_net_cents": 300.0,
+              "negative_realized_winners": 4,
+              "negative_stack_winners": 4,
+              "realized_net_cents": 366.0,
+              "rows": 27,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 366.0
+            },
+            {
+              "branch": "no_matched_exit",
+              "directional_winners": 8,
+              "examples": [],
+              "hold_net_cents": 154.0,
+              "negative_realized_winners": 0,
+              "negative_stack_winners": 0,
+              "realized_net_cents": 287.0,
+              "rows": 8,
+              "stack_delta_cents": 0.0,
+              "stack_net_cents": 287.0
+            }
+          ],
+          "coverage_pct": 54.83870967741935,
+          "negative_stack_winners": 13,
+          "scenario": "lead_approved_only",
+          "settled": 51,
+          "stack_net_cents": 251.0
+        }
+      ],
+      "window": "post_freeze_candidate"
+    }
+  ]
+}

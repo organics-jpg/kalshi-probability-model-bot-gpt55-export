@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-05-04T16:27:05.769709+00:00",
+  "diagnostic_metrics": {
+    "actual_exit_net_dollars": -8.399999999999999,
+    "branch_exit_value_delta_dollars": -1.9999999999999996,
+    "branch_exits": 23,
+    "candidate_adjusted_net_dollars": 1.2799999999999998,
+    "candidate_delta_vs_branch_actual_dollars": 9.679999999999998,
+    "candidate_hurtful_helpful_suppressed": [
+      12,
+      1
+    ],
+    "candidate_rule": "suppress_collapse_exit_if_exit_fair_drawdown_cents<=15 AND exit_sigma_t_dollars>=50",
+    "candidate_suppressed_exits": 13,
+    "candidate_suppressed_share": 0.5652173913043478,
+    "hold_to_settlement_net_dollars": -6.3999999999999995,
+    "selection_warning": "Research-only forward shadow. The historical branch sample is small, and the top rule suppressed no validation-split exits.",
+    "source": "live_v28_probability_collapse_branch_audit_latest"
+  },
+  "lock_close_dt": "2026-05-04T16:30:00+00:00",
+  "lock_name": "live_v28_collapse_sigma_drawdown_suppress_shadow",
+  "research_note": "Physical hypothesis: a full probability-collapse exit is suspect when terminal sigma is still high and the model's fair drawdown is not deep. That state may be temporary path turbulence rather than terminal truth.",
+  "rule": {
+    "exit_reason": "mushroom_v28_probability_collapse_full",
+    "fair_drawdown_cents_op": "<=",
+    "fair_drawdown_cents_threshold": 15.0,
+    "label": "suppress_collapse_exit_if_exit_fair_drawdown_cents<=15_AND_exit_sigma_t_dollars>=50",
+    "sigma_t_dollars_op": ">=",
+    "sigma_t_dollars_threshold": 50.0
+  }
+}

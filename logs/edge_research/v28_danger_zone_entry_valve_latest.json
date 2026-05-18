@@ -1,0 +1,543 @@
+{
+  "best_policy": "skip_reentry_gap15_or_gap30",
+  "interpretation": [
+    "Best danger-zone policy is skip_reentry_gap15_or_gap30 with delta 322.0c and coverage 99.06542056074767%.",
+    "Control gross is 823.0c over 173 entries.",
+    "Discovery-only: this must be frozen and validated forward before promotion."
+  ],
+  "markets": 107,
+  "ranked": [
+    {
+      "delta_vs_current_cents": 322.0,
+      "entries": 161,
+      "gross_cents": 1145.0,
+      "hold_gross_cents": 2226.0,
+      "losses": 22,
+      "market_coverage_pct": 99.06542056074767,
+      "policy": "skip_reentry_gap15_or_gap30",
+      "settled": 161,
+      "skipped_entries": 12,
+      "skipped_examples": [
+        {
+          "ask_cents": 56,
+          "gross_cents": 32,
+          "hold_gross_cents": 88,
+          "market": "KXBTC15M-26MAY051615-15",
+          "market_side_entry_index": 0,
+          "p_side": 0.92219,
+          "raw_book_gap": 0.3621899999999999,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 69,
+          "gross_cents": -48,
+          "hold_gross_cents": -138,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.880552,
+          "raw_book_gap": 0.19055200000000005,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -22,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 2,
+          "p_side": 0.868759,
+          "raw_book_gap": 0.4687589999999999,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -26,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY052245-45",
+          "market_side_entry_index": 0,
+          "p_side": 0.916618,
+          "raw_book_gap": 0.516618,
+          "side": "no",
+          "won": false
+        },
+        {
+          "ask_cents": 9,
+          "gross_cents": -18,
+          "hold_gross_cents": -18,
+          "market": "KXBTC15M-26MAY060330-30",
+          "market_side_entry_index": 0,
+          "p_side": 0.999788,
+          "raw_book_gap": 0.909788,
+          "side": "no",
+          "won": false
+        },
+        {
+          "ask_cents": 66,
+          "gross_cents": -32,
+          "hold_gross_cents": 68,
+          "market": "KXBTC15M-26MAY060800-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.874265,
+          "raw_book_gap": 0.21426499999999993,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 70,
+          "gross_cents": -16,
+          "hold_gross_cents": 60,
+          "market": "KXBTC15M-26MAY060945-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.850231,
+          "raw_book_gap": 0.150231,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 71,
+          "gross_cents": -12,
+          "hold_gross_cents": 58,
+          "market": "KXBTC15M-26MAY060945-45",
+          "market_side_entry_index": 2,
+          "p_side": 0.861162,
+          "raw_book_gap": 0.15116200000000002,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 70,
+          "gross_cents": 0,
+          "hold_gross_cents": 60,
+          "market": "KXBTC15M-26MAY061015-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.85586,
+          "raw_book_gap": 0.15586,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 42,
+          "gross_cents": -60,
+          "hold_gross_cents": 116,
+          "market": "KXBTC15M-26MAY062015-15",
+          "market_side_entry_index": 0,
+          "p_side": 0.871622,
+          "raw_book_gap": 0.451622,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 67,
+          "gross_cents": -134,
+          "hold_gross_cents": -134,
+          "market": "KXBTC15M-26MAY062015-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.885657,
+          "raw_book_gap": 0.215657,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 61,
+          "gross_cents": 14,
+          "hold_gross_cents": 78,
+          "market": "KXBTC15M-26MAY062100-00",
+          "market_side_entry_index": 2,
+          "p_side": 0.852359,
+          "raw_book_gap": 0.242359,
+          "side": "yes",
+          "won": true
+        }
+      ],
+      "skipped_gross_cents": -322.0,
+      "skipped_hold_gross_cents": 78.0,
+      "wins": 139
+    },
+    {
+      "delta_vs_current_cents": 94.0,
+      "entries": 168,
+      "gross_cents": 917.0,
+      "hold_gross_cents": 2278.0,
+      "losses": 24,
+      "market_coverage_pct": 99.06542056074767,
+      "policy": "skip_raw_book_gap_gt30",
+      "settled": 168,
+      "skipped_entries": 5,
+      "skipped_examples": [
+        {
+          "ask_cents": 56,
+          "gross_cents": 32,
+          "hold_gross_cents": 88,
+          "market": "KXBTC15M-26MAY051615-15",
+          "market_side_entry_index": 0,
+          "p_side": 0.92219,
+          "raw_book_gap": 0.3621899999999999,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -22,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 2,
+          "p_side": 0.868759,
+          "raw_book_gap": 0.4687589999999999,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -26,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY052245-45",
+          "market_side_entry_index": 0,
+          "p_side": 0.916618,
+          "raw_book_gap": 0.516618,
+          "side": "no",
+          "won": false
+        },
+        {
+          "ask_cents": 9,
+          "gross_cents": -18,
+          "hold_gross_cents": -18,
+          "market": "KXBTC15M-26MAY060330-30",
+          "market_side_entry_index": 0,
+          "p_side": 0.999788,
+          "raw_book_gap": 0.909788,
+          "side": "no",
+          "won": false
+        },
+        {
+          "ask_cents": 42,
+          "gross_cents": -60,
+          "hold_gross_cents": 116,
+          "market": "KXBTC15M-26MAY062015-15",
+          "market_side_entry_index": 0,
+          "p_side": 0.871622,
+          "raw_book_gap": 0.451622,
+          "side": "no",
+          "won": true
+        }
+      ],
+      "skipped_gross_cents": -94.0,
+      "skipped_hold_gross_cents": 26.0,
+      "wins": 144
+    },
+    {
+      "delta_vs_current_cents": 0.0,
+      "entries": 173,
+      "gross_cents": 823.0,
+      "hold_gross_cents": 2304.0,
+      "losses": 27,
+      "market_coverage_pct": 100.0,
+      "policy": "current_v28_approved_all",
+      "settled": 173,
+      "skipped_entries": 0,
+      "skipped_examples": [],
+      "skipped_gross_cents": 0,
+      "skipped_hold_gross_cents": 0,
+      "wins": 146
+    },
+    {
+      "delta_vs_current_cents": -219.0,
+      "entries": 112,
+      "gross_cents": 604.0,
+      "hold_gross_cents": 1250.0,
+      "losses": 17,
+      "market_coverage_pct": 99.06542056074767,
+      "policy": "skip_reentry_or_gap30",
+      "settled": 112,
+      "skipped_entries": 61,
+      "skipped_examples": [
+        {
+          "ask_cents": 56,
+          "gross_cents": 32,
+          "hold_gross_cents": 88,
+          "market": "KXBTC15M-26MAY051615-15",
+          "market_side_entry_index": 0,
+          "p_side": 0.92219,
+          "raw_book_gap": 0.3621899999999999,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 69,
+          "gross_cents": -48,
+          "hold_gross_cents": -138,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.880552,
+          "raw_book_gap": 0.19055200000000005,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -22,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 2,
+          "p_side": 0.868759,
+          "raw_book_gap": 0.4687589999999999,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 80,
+          "gross_cents": -2,
+          "hold_gross_cents": 40,
+          "market": "KXBTC15M-26MAY051745-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.86177,
+          "raw_book_gap": 0.06176999999999999,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 80,
+          "gross_cents": 40,
+          "hold_gross_cents": 40,
+          "market": "KXBTC15M-26MAY051800-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.858155,
+          "raw_book_gap": 0.05815499999999996,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 83,
+          "gross_cents": 14,
+          "hold_gross_cents": -166,
+          "market": "KXBTC15M-26MAY052045-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.904488,
+          "raw_book_gap": 0.074488,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 90,
+          "gross_cents": 12,
+          "hold_gross_cents": 20,
+          "market": "KXBTC15M-26MAY052100-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.951629,
+          "raw_book_gap": 0.051628999999999925,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -26,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY052245-45",
+          "market_side_entry_index": 0,
+          "p_side": 0.916618,
+          "raw_book_gap": 0.516618,
+          "side": "no",
+          "won": false
+        },
+        {
+          "ask_cents": 85,
+          "gross_cents": 20,
+          "hold_gross_cents": 30,
+          "market": "KXBTC15M-26MAY060045-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.91131,
+          "raw_book_gap": 0.061309999999999976,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 81,
+          "gross_cents": 6,
+          "hold_gross_cents": 38,
+          "market": "KXBTC15M-26MAY060200-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.874865,
+          "raw_book_gap": 0.06486499999999995,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 83,
+          "gross_cents": -26,
+          "hold_gross_cents": -166,
+          "market": "KXBTC15M-26MAY060215-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.881378,
+          "raw_book_gap": 0.051378000000000035,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 77,
+          "gross_cents": -6,
+          "hold_gross_cents": 46,
+          "market": "KXBTC15M-26MAY060245-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.862971,
+          "raw_book_gap": 0.09297100000000003,
+          "side": "yes",
+          "won": true
+        }
+      ],
+      "skipped_gross_cents": 219.0,
+      "skipped_hold_gross_cents": 1054.0,
+      "wins": 95
+    },
+    {
+      "delta_vs_current_cents": -291.0,
+      "entries": 116,
+      "gross_cents": 532.0,
+      "hold_gross_cents": 1356.0,
+      "losses": 19,
+      "market_coverage_pct": 100.0,
+      "policy": "skip_same_side_reentry",
+      "settled": 116,
+      "skipped_entries": 57,
+      "skipped_examples": [
+        {
+          "ask_cents": 69,
+          "gross_cents": -48,
+          "hold_gross_cents": -138,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.880552,
+          "raw_book_gap": 0.19055200000000005,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 40,
+          "gross_cents": -22,
+          "hold_gross_cents": -80,
+          "market": "KXBTC15M-26MAY051715-15",
+          "market_side_entry_index": 2,
+          "p_side": 0.868759,
+          "raw_book_gap": 0.4687589999999999,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 80,
+          "gross_cents": -2,
+          "hold_gross_cents": 40,
+          "market": "KXBTC15M-26MAY051745-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.86177,
+          "raw_book_gap": 0.06176999999999999,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 80,
+          "gross_cents": 40,
+          "hold_gross_cents": 40,
+          "market": "KXBTC15M-26MAY051800-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.858155,
+          "raw_book_gap": 0.05815499999999996,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 83,
+          "gross_cents": 14,
+          "hold_gross_cents": -166,
+          "market": "KXBTC15M-26MAY052045-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.904488,
+          "raw_book_gap": 0.074488,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 90,
+          "gross_cents": 12,
+          "hold_gross_cents": 20,
+          "market": "KXBTC15M-26MAY052100-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.951629,
+          "raw_book_gap": 0.051628999999999925,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 85,
+          "gross_cents": 20,
+          "hold_gross_cents": 30,
+          "market": "KXBTC15M-26MAY060045-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.91131,
+          "raw_book_gap": 0.061309999999999976,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 81,
+          "gross_cents": 6,
+          "hold_gross_cents": 38,
+          "market": "KXBTC15M-26MAY060200-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.874865,
+          "raw_book_gap": 0.06486499999999995,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 83,
+          "gross_cents": -26,
+          "hold_gross_cents": -166,
+          "market": "KXBTC15M-26MAY060215-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.881378,
+          "raw_book_gap": 0.051378000000000035,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 77,
+          "gross_cents": -6,
+          "hold_gross_cents": 46,
+          "market": "KXBTC15M-26MAY060245-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.862971,
+          "raw_book_gap": 0.09297100000000003,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 76,
+          "gross_cents": 38,
+          "hold_gross_cents": 48,
+          "market": "KXBTC15M-26MAY060245-45",
+          "market_side_entry_index": 2,
+          "p_side": 0.877828,
+          "raw_book_gap": 0.11782800000000004,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 81,
+          "gross_cents": -30,
+          "hold_gross_cents": 38,
+          "market": "KXBTC15M-26MAY060300-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.86587,
+          "raw_book_gap": 0.055869999999999975,
+          "side": "yes",
+          "won": true
+        }
+      ],
+      "skipped_gross_cents": 291.0,
+      "skipped_hold_gross_cents": 948.0,
+      "wins": 97
+    }
+  ],
+  "rows": 173,
+  "surface": "actual_v28_approved_entries_only"
+}

@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-05-03T23:22:34.1319711+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.7098039215686275,
+    "current_all_coverage": 0.9622641509433962,
+    "current_all_net_pnl_cents": 886.0,
+    "current_all_net_roi_on_cost": 0.05146973393749274,
+    "current_delta_vs_book_margin_cents": 30.0,
+    "current_holdout_net_pnl_cents": 165.0,
+    "current_validation_net_pnl_cents": 28.0,
+    "min_oos_net_roi": 0.00830367734282325,
+    "v21_all_accuracy": 0.7259615384615384,
+    "v21_all_coverage": 0.9411764705882353,
+    "v21_all_net_pnl_cents": 719.0,
+    "v21_all_net_roi_on_cost": 0.04999652319032056,
+    "v21_delta_vs_book_margin_cents": 294.0,
+    "v21_holdout_net_pnl_cents": 250.0,
+    "v21_validation_net_pnl_cents": 243.0
+  },
+  "lock_close_dt": "2026-05-03T23:15:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=480; margin_rv15>=0",
+    "min_score": 0.6,
+    "min_seconds_to_close": 480.0
+  },
+  "research_note": "Forward-registered from candidate_tradeable_veto_scan_latest.csv. Interpretable timing veto: avoid late book-margin entries while preserving >90% recurring-market coverage on current and v21. Diagnostic only; promotion requires strict pre-resolution live evidence.",
+  "source_scan_csv": "logs\\edge_research\\candidate_tradeable_veto_scan_latest.csv",
+  "source_base_lock": "logs\\edge_research\\profit_frontier_book_margin_lock.json"
+}

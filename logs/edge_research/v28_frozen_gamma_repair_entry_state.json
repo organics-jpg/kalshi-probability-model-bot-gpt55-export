@@ -1,0 +1,8 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "target_plus_gamma_repair_to_75pct",
+  "coverage_floor": 75.0,
+  "freeze_ts_utc": "2026-05-06T11:43:09.046274+00:00",
+  "physics": "Near-boundary low-priced sides can be undercounted by static FV because the contract has gamma: small spot recrosses can move terminal probability and tradable exit value sharply.",
+  "repair_rule": "Fill missed markets with first cheap-convex row: 0.30 <= raw p <= 0.45, ask <= 40c, raw-book edge >= 3pp."
+}

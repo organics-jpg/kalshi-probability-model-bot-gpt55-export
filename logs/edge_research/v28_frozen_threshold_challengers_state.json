@@ -1,0 +1,22 @@
+{
+  "freeze_ts": "2026-05-05T22:19:18.149284+00:00",
+  "policies": [
+    {
+      "physics": "Same memory rule as primary p60, but lowers the probability floor to capture high-edge 58-60% raw geometry rows.",
+      "policy": "first_side_raw_later_book_p58_edge0",
+      "role": "p58_calibrated_broad_challenger"
+    },
+    {
+      "physics": "Same RMT/repetition forgetting rule as p60, but lowers the probability floor to p58.",
+      "policy": "rmt_repetition_forget_p58_edge0",
+      "role": "p58_rmt_forgetting_challenger"
+    }
+  ],
+  "promotion_floor": {
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

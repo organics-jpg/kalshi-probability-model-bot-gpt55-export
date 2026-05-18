@@ -1,0 +1,17 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "early_boundary_wait480_p50_any_side",
+  "coverage_ceiling": 90.0,
+  "coverage_floor": 75.0,
+  "danger_rule": "seconds_to_close>=780 and abs_d_sigma<=0.45 and recross_hazard_score>=0.55",
+  "freeze_ts_utc": "2026-05-06T10:48:07.385138+00:00",
+  "params": {
+    "danger_mode": "early_boundary",
+    "p_floor": 0.5,
+    "side_mode": "any_side",
+    "wait_stc": 480.0
+  },
+  "physics": "Very early near-boundary high-recross entries often express unresolved path churn, not stable fair value. Clock decay should reveal whether the thesis survives; otherwise broad coverage should be repaired from calmer geometry rather than paid for immediately.",
+  "repair_rule": "clean repair rows ranked by farthest boundary geometry",
+  "wait_rule": "first same-market any-side row with seconds_to_close<=480, p>=0.50, executable raw edge>=0, max delay 360s"
+}

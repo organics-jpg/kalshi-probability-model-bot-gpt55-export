@@ -1,0 +1,642 @@
+{
+  "discovery": [
+    {
+      "avg_brier": 0.22249237353325432,
+      "avg_logloss": 0.6293531129061882,
+      "avg_p": 0.6095826061201831,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.0015024518536817244,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": -0.0025435962254067856,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "noise_shrink_light",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22360418086778913,
+      "avg_logloss": 0.6314238071712494,
+      "avg_p": 0.6109484942103127,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.00039064451914691545,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": -0.0004729019603456619,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "phi_quarter_shrink_to50",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22382781737469906,
+      "avg_logloss": 0.6322220664761098,
+      "avg_p": 0.5996646578456281,
+      "blockers": [
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": -0.00016700801223698547,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.00032535734451477616,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "phi_half_shrink_to50",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22399482538693605,
+      "avg_logloss": 0.631896709131595,
+      "avg_p": 0.6263019593023256,
+      "blockers": [],
+      "brier_delta_vs_raw": 0.0,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.0,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "raw_probability",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22404589245876705,
+      "avg_logloss": 0.6340381428830868,
+      "avg_p": 0.6136717633720931,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 5.106707183100134e-05,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.0021414337514917836,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "const_shrink_090",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22436632666587913,
+      "avg_logloss": 0.63672133009727,
+      "avg_p": 0.5851075033666007,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.00037150127894308715,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.004824620965675042,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "noise_shrink_full",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22466350406159258,
+      "avg_logloss": 0.6370880914663422,
+      "avg_p": 0.6010415674418605,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.000668678674656531,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.005191382334747141,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "const_shrink_080",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22519346821257832,
+      "avg_logloss": 0.6381342719787806,
+      "avg_p": 0.6003784389226973,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.0011986428256422765,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.006237562847185574,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "noise_shrink_rmt_recency",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    },
+    {
+      "avg_brier": 0.22584766019541264,
+      "avg_logloss": 0.6410090883422962,
+      "avg_p": 0.5884113715116279,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.0018528348084765889,
+      "coverage_pct": 100.0,
+      "entries": 172,
+      "logloss_delta_vs_raw": 0.009112379210701183,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "overlay": "const_shrink_070",
+      "settled": 172,
+      "win_rate": 0.5872093023255814,
+      "wins": 101
+    }
+  ],
+  "discovery_bucket_summary": [
+    {
+      "avg_phi_penalty": 2.3401162790697674,
+      "briers": {
+        "noise_shrink_light": 0.22249237353325432,
+        "phi_half_shrink_to50": 0.22382781737469906,
+        "phi_quarter_shrink_to50": 0.22360418086778913,
+        "raw_probability": 0.22399482538693605
+      },
+      "bucket": "all",
+      "entries": 172,
+      "losses": 71,
+      "net_cents_after_entry_fee": -81.0,
+      "settled": 172,
+      "wins": 101
+    },
+    {
+      "avg_phi_penalty": 0.7125,
+      "briers": {
+        "noise_shrink_light": 0.19203475668121242,
+        "phi_half_shrink_to50": 0.19498585173975858,
+        "phi_quarter_shrink_to50": 0.19438089236635273,
+        "raw_probability": 0.194381173147575
+      },
+      "bucket": "away_from_strike",
+      "entries": 80,
+      "losses": 26,
+      "net_cents_after_entry_fee": -104.0,
+      "settled": 80,
+      "wins": 54
+    },
+    {
+      "avg_phi_penalty": 1.5263157894736843,
+      "briers": {
+        "noise_shrink_light": 0.21180603454494956,
+        "phi_half_shrink_to50": 0.2143541758618162,
+        "phi_quarter_shrink_to50": 0.21412415138940566,
+        "raw_probability": 0.21392688122796052
+      },
+      "bucket": "edge_ge_4pp",
+      "entries": 76,
+      "losses": 32,
+      "net_cents_after_entry_fee": 315.0,
+      "settled": 76,
+      "wins": 44
+    },
+    {
+      "avg_phi_penalty": 2.984375,
+      "briers": {
+        "noise_shrink_light": 0.23095239189899555,
+        "phi_half_shrink_to50": 0.23132778357239794,
+        "phi_quarter_shrink_to50": 0.2311092042048427,
+        "raw_probability": 0.23196528117945833
+      },
+      "bucket": "edge_lt_4pp",
+      "entries": 96,
+      "losses": 39,
+      "net_cents_after_entry_fee": -396.0,
+      "settled": 96,
+      "wins": 57
+    },
+    {
+      "avg_phi_penalty": 3.376190476190476,
+      "briers": {
+        "noise_shrink_light": 0.251780916384515,
+        "phi_half_shrink_to50": 0.2514851776801755,
+        "phi_quarter_shrink_to50": 0.2521581604892719,
+        "raw_probability": 0.2535458947830381
+      },
+      "bucket": "high_recross",
+      "entries": 105,
+      "losses": 49,
+      "net_cents_after_entry_fee": -305.0,
+      "settled": 105,
+      "wins": 56
+    },
+    {
+      "avg_phi_penalty": 0.7164179104477612,
+      "briers": {
+        "noise_shrink_light": 0.17659241831859207,
+        "phi_half_shrink_to50": 0.1804841930153703,
+        "phi_quarter_shrink_to50": 0.17885540683412207,
+        "raw_probability": 0.17768344797513433
+      },
+      "bucket": "lower_recross",
+      "entries": 67,
+      "losses": 22,
+      "net_cents_after_entry_fee": 224.0,
+      "settled": 67,
+      "wins": 45
+    },
+    {
+      "avg_phi_penalty": 3.755434782608696,
+      "briers": {
+        "noise_shrink_light": 0.2489772577524212,
+        "phi_half_shrink_to50": 0.2489077874920386,
+        "phi_quarter_shrink_to50": 0.2490157360864295,
+        "raw_probability": 0.24974582733420653
+      },
+      "bucket": "near_strike",
+      "entries": 92,
+      "losses": 45,
+      "net_cents_after_entry_fee": 23.0,
+      "settled": 92,
+      "wins": 47
+    },
+    {
+      "avg_phi_penalty": 3.8043478260869565,
+      "briers": {
+        "noise_shrink_light": 0.2473415896921079,
+        "phi_half_shrink_to50": 0.24814372292164932,
+        "phi_quarter_shrink_to50": 0.24769782434858226,
+        "raw_probability": 0.24767912927190217
+      },
+      "bucket": "phi_heavy_noise",
+      "entries": 92,
+      "losses": 44,
+      "net_cents_after_entry_fee": 229.0,
+      "settled": 92,
+      "wins": 48
+    },
+    {
+      "avg_phi_penalty": 3.8620689655172415,
+      "briers": {
+        "noise_shrink_light": 0.24616147111262676,
+        "phi_half_shrink_to50": 0.24726250854099305,
+        "phi_quarter_shrink_to50": 0.24648546252361928,
+        "raw_probability": 0.24596721604348276
+      },
+      "bucket": "raw_p_50_60",
+      "entries": 87,
+      "losses": 41,
+      "net_cents_after_entry_fee": 419.0,
+      "settled": 87,
+      "wins": 46
+    },
+    {
+      "avg_phi_penalty": 0.7823529411764706,
+      "briers": {
+        "noise_shrink_light": 0.19826635601083784,
+        "phi_half_shrink_to50": 0.19984172171037462,
+        "phi_quarter_shrink_to50": 0.20018451611417473,
+        "raw_probability": 0.2015054373031765
+      },
+      "bucket": "raw_p_60_plus",
+      "entries": 85,
+      "losses": 30,
+      "net_cents_after_entry_fee": -500.0,
+      "settled": 85,
+      "wins": 55
+    }
+  ],
+  "entry_policy": "raw_v28_p50_edge0_fixed_selection",
+  "excluded_in_progress_markets": [
+    "KXBTC15M-26MAY061115-15"
+  ],
+  "forward": [
+    {
+      "avg_brier": 0.21945163631603676,
+      "avg_logloss": 0.6221799907042338,
+      "avg_p": 0.6072187236220713,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.001853066753542798,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": -0.0031155432739347066,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "noise_shrink_light",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.221200983870361,
+      "avg_logloss": 0.6258371621544002,
+      "avg_p": 0.6096339442990094,
+      "blockers": [
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": -0.00010371919921856043,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.0005416281762317121,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "phi_quarter_shrink_to50",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.22130470306957956,
+      "avg_logloss": 0.6252955339781685,
+      "avg_p": 0.6238076931818182,
+      "blockers": [],
+      "brier_delta_vs_raw": 0.0,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.0,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "raw_probability",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.22159714569443614,
+      "avg_logloss": 0.6308936076666508,
+      "avg_p": 0.5828680785266497,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.000292442624856587,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.005598073688482308,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "noise_shrink_full",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.22165072254164492,
+      "avg_logloss": 0.6273219098604371,
+      "avg_p": 0.5991432781807222,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.000346019472065362,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.002026375882268616,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "phi_half_shrink_to50",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.2217109420999958,
+      "avg_logloss": 0.6285528732955633,
+      "avg_p": 0.6114269238636364,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.00040623903041625553,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.003257339317394803,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "const_shrink_090",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.2226324785317101,
+      "avg_logloss": 0.6326212368290443,
+      "avg_p": 0.5982147248778319,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.0013277754621305315,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.007325702850875748,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "noise_shrink_rmt_recency",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.22266457905544002,
+      "avg_logloss": 0.6325603592784863,
+      "avg_p": 0.5990461545454546,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.0013598759858604592,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.007264825300317801,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "const_shrink_080",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    },
+    {
+      "avg_brier": 0.22416561393591217,
+      "avg_logloss": 0.6373136813210657,
+      "avg_p": 0.5866653852272727,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.002860910866332611,
+      "coverage_pct": 98.87640449438202,
+      "entries": 88,
+      "logloss_delta_vs_raw": 0.01201814734289719,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "overlay": "const_shrink_070",
+      "settled": 88,
+      "win_rate": 0.5568181818181818,
+      "wins": 49
+    }
+  ],
+  "forward_bucket_summary": [
+    {
+      "avg_phi_penalty": 2.1931818181818183,
+      "briers": {
+        "noise_shrink_light": 0.21945163631603676,
+        "phi_half_shrink_to50": 0.22165072254164492,
+        "phi_quarter_shrink_to50": 0.221200983870361,
+        "raw_probability": 0.22130470306957956
+      },
+      "bucket": "all",
+      "entries": 88,
+      "losses": 39,
+      "net_cents_after_entry_fee": -247.0,
+      "settled": 88,
+      "wins": 49
+    },
+    {
+      "avg_phi_penalty": 0.6341463414634146,
+      "briers": {
+        "noise_shrink_light": 0.1846452141648786,
+        "phi_half_shrink_to50": 0.188820228138126,
+        "phi_quarter_shrink_to50": 0.18759978983955797,
+        "raw_probability": 0.1869346255099756
+      },
+      "bucket": "away_from_strike",
+      "entries": 41,
+      "losses": 13,
+      "net_cents_after_entry_fee": 146.0,
+      "settled": 41,
+      "wins": 28
+    },
+    {
+      "avg_phi_penalty": 1.5555555555555556,
+      "briers": {
+        "noise_shrink_light": 0.2180554636230897,
+        "phi_half_shrink_to50": 0.2209966105108459,
+        "phi_quarter_shrink_to50": 0.22086805062335643,
+        "raw_probability": 0.22054559954546668
+      },
+      "bucket": "edge_ge_4pp",
+      "entries": 45,
+      "losses": 20,
+      "net_cents_after_entry_fee": 235.0,
+      "settled": 45,
+      "wins": 25
+    },
+    {
+      "avg_phi_penalty": 2.86046511627907,
+      "briers": {
+        "noise_shrink_light": 0.22091274727377205,
+        "phi_half_shrink_to50": 0.2223352583878299,
+        "phi_quarter_shrink_to50": 0.2215494023846681,
+        "raw_probability": 0.22209911373434882
+      },
+      "bucket": "edge_lt_4pp",
+      "entries": 43,
+      "losses": 19,
+      "net_cents_after_entry_fee": -482.0,
+      "settled": 43,
+      "wins": 24
+    },
+    {
+      "avg_phi_penalty": 3.25,
+      "briers": {
+        "noise_shrink_light": 0.2573146765806357,
+        "phi_half_shrink_to50": 0.257844647589599,
+        "phi_quarter_shrink_to50": 0.25896433915665207,
+        "raw_probability": 0.26087767403042
+      },
+      "bucket": "high_recross",
+      "entries": 50,
+      "losses": 26,
+      "net_cents_after_entry_fee": -676.0,
+      "settled": 50,
+      "wins": 24
+    },
+    {
+      "avg_phi_penalty": 0.8026315789473685,
+      "briers": {
+        "noise_shrink_light": 0.16963184649419602,
+        "phi_half_shrink_to50": 0.1740271369522316,
+        "phi_quarter_shrink_to50": 0.17151235849366217,
+        "raw_probability": 0.16923500443689474
+      },
+      "bucket": "lower_recross",
+      "entries": 38,
+      "losses": 13,
+      "net_cents_after_entry_fee": 429.0,
+      "settled": 38,
+      "wins": 25
+    },
+    {
+      "avg_phi_penalty": 3.5531914893617023,
+      "briers": {
+        "noise_shrink_light": 0.24981468542662152,
+        "phi_half_shrink_to50": 0.2502900900000337,
+        "phi_quarter_shrink_to50": 0.25051266376957215,
+        "raw_probability": 0.2512871111534894
+      },
+      "bucket": "near_strike",
+      "entries": 47,
+      "losses": 26,
+      "net_cents_after_entry_fee": -393.0,
+      "settled": 47,
+      "wins": 21
+    },
+    {
+      "avg_phi_penalty": 3.6444444444444444,
+      "briers": {
+        "noise_shrink_light": 0.24942477891915557,
+        "phi_half_shrink_to50": 0.2499486887418693,
+        "phi_quarter_shrink_to50": 0.25005190755987494,
+        "raw_probability": 0.2506802454427778
+      },
+      "bucket": "phi_heavy_noise",
+      "entries": 45,
+      "losses": 25,
+      "net_cents_after_entry_fee": -347.0,
+      "settled": 45,
+      "wins": 20
+    },
+    {
+      "avg_phi_penalty": 3.6818181818181817,
+      "briers": {
+        "noise_shrink_light": 0.24741142356423665,
+        "phi_half_shrink_to50": 0.24834560049112414,
+        "phi_quarter_shrink_to50": 0.24798103749764258,
+        "raw_probability": 0.24800440018747727
+      },
+      "bucket": "raw_p_50_60",
+      "entries": 44,
+      "losses": 24,
+      "net_cents_after_entry_fee": -249.0,
+      "settled": 44,
+      "wins": 20
+    },
+    {
+      "avg_phi_penalty": 0.7045454545454546,
+      "briers": {
+        "noise_shrink_light": 0.19149184906783684,
+        "phi_half_shrink_to50": 0.19495584459216567,
+        "phi_quarter_shrink_to50": 0.19442093024307938,
+        "raw_probability": 0.19460500595168184
+      },
+      "bucket": "raw_p_60_plus",
+      "entries": 44,
+      "losses": 15,
+      "net_cents_after_entry_fee": 2.0,
+      "settled": 44,
+      "wins": 29
+    }
+  ],
+  "forward_denominator": 89,
+  "freeze_ts": "2026-05-06T15:10:49.288038+00:00",
+  "hypothesis": "Raw v28 direction may be useful while its probability magnitude is too hot. Compare non-fitted shrink schedules before promoting any new FV overlay."
+}

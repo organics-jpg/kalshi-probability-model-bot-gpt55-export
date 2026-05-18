@@ -1,0 +1,178 @@
+{
+  "diagnostics": {
+    "deduped_entry_orders": 127,
+    "raw_entry_fill_events": 127,
+    "skipped_bad_side": 0,
+    "skipped_zero_qty": 0
+  },
+  "evaluable_rows": 127,
+  "fresh_after_lock": {
+    "accuracy_gate": true,
+    "baseline": {
+      "baseline_resolved_contracts": 12,
+      "baseline_resolved_trades": 6,
+      "contract_accuracy": 0.8333333333333334,
+      "contract_retention": 1.0,
+      "contract_wins": 10,
+      "contracts": 12,
+      "trade_accuracy": 0.8333333333333334,
+      "trade_retention": 1.0,
+      "trade_wins": 5,
+      "trades": 6
+    },
+    "evaluable_rows": 6,
+    "min_fresh_contracts": 150,
+    "min_fresh_trades": 75,
+    "passes_gate": false,
+    "resolved_rows": 6,
+    "retention_gate": false,
+    "rows": 6,
+    "sample_ready": false,
+    "selected_contract_shortfall": 142,
+    "selected_rows": 4,
+    "selected_trade_shortfall": 71,
+    "shadow": {
+      "baseline_resolved_contracts": 12,
+      "baseline_resolved_trades": 6,
+      "contract_accuracy": 1.0,
+      "contract_retention": 0.6666666666666666,
+      "contract_wins": 8,
+      "contracts": 8,
+      "trade_accuracy": 1.0,
+      "trade_retention": 0.6666666666666666,
+      "trade_wins": 4,
+      "trades": 4
+    },
+    "unresolved_rows": 0
+  },
+  "lock": {
+    "bot_log": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\bot.log",
+    "created_utc": "2026-05-02T05:08:16.423429+00:00",
+    "execution_log": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\execution_events.ndjson",
+    "initial_max_entry_dt": "2026-05-02T04:48:07.375070+00:00",
+    "initial_max_source_line_no": 3222,
+    "lock_id": "live_v28_physics_shadow_lock_v1",
+    "purpose": "Out-of-sample boundary for fresh current-v28 physics shadow validation.",
+    "rule_id": "adverse15_gt10_v28_cushion_0p5",
+    "rule_label": "ask<=100; block 15m adverse>10 unless v28 cushion>0.5"
+  },
+  "resolved_rows": 127,
+  "rule": {
+    "adverse_feature": "adverse_move_15m",
+    "adverse_min": 10.0,
+    "ask_max": 100.0,
+    "cushion_feature": "margin_per_v28_sigma",
+    "cushion_min": 0.5,
+    "label": "ask<=100; block 15m adverse>10 unless v28 cushion>0.5",
+    "rule_id": "adverse15_gt10_v28_cushion_0p5"
+  },
+  "selected_rows": 123,
+  "splits": {
+    "all": {
+      "baseline": {
+        "baseline_resolved_contracts": 251,
+        "baseline_resolved_trades": 127,
+        "contract_accuracy": 0.8047808764940239,
+        "contract_retention": 1.0,
+        "contract_wins": 202,
+        "contracts": 251,
+        "trade_accuracy": 0.8031496062992126,
+        "trade_retention": 1.0,
+        "trade_wins": 102,
+        "trades": 127
+      },
+      "shadow": {
+        "baseline_resolved_contracts": 251,
+        "baseline_resolved_trades": 127,
+        "contract_accuracy": 0.8065843621399177,
+        "contract_retention": 0.9681274900398407,
+        "contract_wins": 196,
+        "contracts": 243,
+        "trade_accuracy": 0.8048780487804879,
+        "trade_retention": 0.968503937007874,
+        "trade_wins": 99,
+        "trades": 123
+      }
+    },
+    "holdout": {
+      "baseline": {
+        "baseline_resolved_contracts": 52,
+        "baseline_resolved_trades": 26,
+        "contract_accuracy": 0.6153846153846154,
+        "contract_retention": 1.0,
+        "contract_wins": 32,
+        "contracts": 52,
+        "trade_accuracy": 0.6153846153846154,
+        "trade_retention": 1.0,
+        "trade_wins": 16,
+        "trades": 26
+      },
+      "shadow": {
+        "baseline_resolved_contracts": 52,
+        "baseline_resolved_trades": 26,
+        "contract_accuracy": 0.6086956521739131,
+        "contract_retention": 0.8846153846153846,
+        "contract_wins": 28,
+        "contracts": 46,
+        "trade_accuracy": 0.6086956521739131,
+        "trade_retention": 0.8846153846153846,
+        "trade_wins": 14,
+        "trades": 23
+      }
+    },
+    "train": {
+      "baseline": {
+        "baseline_resolved_contracts": 149,
+        "baseline_resolved_trades": 76,
+        "contract_accuracy": 0.8590604026845637,
+        "contract_retention": 1.0,
+        "contract_wins": 128,
+        "contracts": 149,
+        "trade_accuracy": 0.8552631578947368,
+        "trade_retention": 1.0,
+        "trade_wins": 65,
+        "trades": 76
+      },
+      "shadow": {
+        "baseline_resolved_contracts": 149,
+        "baseline_resolved_trades": 76,
+        "contract_accuracy": 0.8571428571428571,
+        "contract_retention": 0.9865771812080537,
+        "contract_wins": 126,
+        "contracts": 147,
+        "trade_accuracy": 0.8533333333333334,
+        "trade_retention": 0.9868421052631579,
+        "trade_wins": 64,
+        "trades": 75
+      }
+    },
+    "validation": {
+      "baseline": {
+        "baseline_resolved_contracts": 50,
+        "baseline_resolved_trades": 25,
+        "contract_accuracy": 0.84,
+        "contract_retention": 1.0,
+        "contract_wins": 42,
+        "contracts": 50,
+        "trade_accuracy": 0.84,
+        "trade_retention": 1.0,
+        "trade_wins": 21,
+        "trades": 25
+      },
+      "shadow": {
+        "baseline_resolved_contracts": 50,
+        "baseline_resolved_trades": 25,
+        "contract_accuracy": 0.84,
+        "contract_retention": 1.0,
+        "contract_wins": 42,
+        "contracts": 50,
+        "trade_accuracy": 0.84,
+        "trade_retention": 1.0,
+        "trade_wins": 21,
+        "trades": 25
+      }
+    }
+  },
+  "total_rows": 127,
+  "unresolved_rows": 0
+}

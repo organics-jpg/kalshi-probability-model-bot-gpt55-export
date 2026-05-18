@@ -1,0 +1,47 @@
+{
+  "interpretation": [
+    "Pending sensitivity is pre-settlement only; it shows what evidence would look like under each outcome.",
+    "A robust FV candidate should not depend on one pending row resolving in the favorable direction.",
+    "Unique pending markets are grouped separately because related lanes may select the same market."
+  ],
+  "lane_summaries": [
+    {
+      "blockers": [
+        "simulated_share_gt_35pct"
+      ],
+      "entries": 104,
+      "future_denominator_markets": 118,
+      "lane": "p50_book_plus_05_edge_nonnegative",
+      "pending": 0,
+      "settled": 104
+    },
+    {
+      "blockers": [
+        "coverage_too_high",
+        "net_not_positive",
+        "simulated_share_gt_35pct"
+      ],
+      "entries": 113,
+      "future_denominator_markets": 117,
+      "lane": "book_plus_05",
+      "pending": 0,
+      "settled": 113
+    },
+    {
+      "blockers": [
+        "coverage_too_high",
+        "net_not_positive",
+        "simulated_share_gt_35pct"
+      ],
+      "entries": 111,
+      "future_denominator_markets": 116,
+      "lane": "book_plus_05_no_cheap_yes_boundary",
+      "pending": 0,
+      "settled": 111
+    }
+  ],
+  "pending_rows": 0,
+  "rows": [],
+  "unique_pending_markets": 0,
+  "unique_rows": []
+}

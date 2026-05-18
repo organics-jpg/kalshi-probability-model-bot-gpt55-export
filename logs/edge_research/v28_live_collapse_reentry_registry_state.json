@@ -1,0 +1,17 @@
+{
+  "candidate_action": "diagnostic_only_skip_or_penalize_post_collapse_reentries",
+  "freeze_ts_utc": "2026-05-06T04:56:06.196433+00:00",
+  "hypothesis": "A probability-collapse exit is a high-turbulence state transition. Same-market reentries after collapse should be separately calibrated before being trusted as ordinary high-confidence FV entries.",
+  "registry": "live_v28_probability_collapse_reentry",
+  "tag_definitions": {
+    "fast_reentry_lte_180s": "seconds since collapse exit <= 180",
+    "high_conf_p90": "p_side >= 0.90",
+    "late_reentry_gt_360s": "seconds since collapse exit > 360",
+    "mid_reentry_180_360s": "180 < seconds since collapse exit <= 360",
+    "older_book_500ms": "book_age_ms >= 500",
+    "opposite_side_reentry": "entry side differs from the collapsed exit side",
+    "same_side_reentry": "entry side equals the collapsed exit side",
+    "strong_edge_ge_8c": "edge_cents >= 8",
+    "thin_edge_lt_4c": "edge_cents < 4"
+  }
+}

@@ -1,0 +1,2035 @@
+{
+  "best_variant": "logit125_p60_calm_mid_or_p75",
+  "coverage_pct": 72.05882352941177,
+  "entries": 98,
+  "freeze": {
+    "entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "freeze_ts_utc": "2026-05-06T03:26:44.025585+00:00",
+    "rule": "logit125 sharpen p>=0.75, or p>=0.60 only when recross<=0.60 and ask<=0.70",
+    "source_artifact": "v28_target_coverage_conservative_fv_variants_latest.json",
+    "variant": "logit125_p60_calm_mid_or_p75"
+  },
+  "future_denominator": 136,
+  "interpretation": [
+    "Frozen conservative target-coverage FV has 98 entries over 136 future markets.",
+    "Best variant is logit125_p60_calm_mid_or_p75 with Brier/logloss deltas -0.0019986929824834733/-0.006824434041934604."
+  ],
+  "ranked": [
+    {
+      "blockers": [
+        "brier_interval_not_strictly_negative",
+        "logloss_interval_not_strictly_negative"
+      ],
+      "brier_bootstrap": {
+        "p05": -0.004185801066253412,
+        "p50": -0.002058602002820466,
+        "p95": 0.0005365509839900877,
+        "prob_negative": 0.908,
+        "runs": 5000
+      },
+      "brier_mean_delta": -0.0019986929824834733,
+      "logloss_bootstrap": {
+        "p05": -0.013407433292182963,
+        "p50": -0.007014844343101594,
+        "p95": 0.0009948017942546432,
+        "prob_negative": 0.9286,
+        "runs": 5000
+      },
+      "logloss_mean_delta": -0.006824434041934604,
+      "losses": 44,
+      "net_cents": -699.0,
+      "rows": 98,
+      "rows_detail": [
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY052345-45",
+          "net_cents": 70.0,
+          "p_raw": 0.636767,
+          "p_variant": 0.636767,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060030-30",
+          "net_cents": -106.0,
+          "p_raw": 0.617077,
+          "p_variant": 0.617077,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.014622832288318134,
+          "logloss_delta": -0.05769273701540048,
+          "market": "KXBTC15M-26MAY060045-45",
+          "net_cents": 39.0,
+          "p_raw": 0.826505,
+          "p_variant": 0.8755906645919131,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.08211732504976299,
+          "logloss_delta": 0.2860911449147654,
+          "market": "KXBTC15M-26MAY060100-00",
+          "net_cents": -161.0,
+          "p_raw": 0.799928,
+          "p_variant": 0.8497070849614959,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060130-30",
+          "net_cents": 78.0,
+          "p_raw": 0.616779,
+          "p_variant": 0.616779,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060200-00",
+          "net_cents": 76.0,
+          "p_raw": 0.618277,
+          "p_variant": 0.618277,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060215-15",
+          "net_cents": -110.0,
+          "p_raw": 0.583024,
+          "p_variant": 0.583024,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060245-45",
+          "net_cents": -134.0,
+          "p_raw": 0.660829,
+          "p_variant": 0.660829,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060300-00",
+          "net_cents": 68.0,
+          "p_raw": 0.661141,
+          "p_variant": 0.661141,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060330-30",
+          "net_cents": -118.0,
+          "p_raw": 0.63088,
+          "p_variant": 0.63088,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060345-45",
+          "net_cents": -80.0,
+          "p_raw": 0.515105,
+          "p_variant": 0.515105,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060415-15",
+          "net_cents": 62.0,
+          "p_raw": 0.676831,
+          "p_variant": 0.676831,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060445-45",
+          "net_cents": -94.0,
+          "p_raw": 0.636374,
+          "p_variant": 0.636374,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060500-00",
+          "net_cents": -126.0,
+          "p_raw": 0.674136,
+          "p_variant": 0.674136,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060515-15",
+          "net_cents": -86.0,
+          "p_raw": 0.532512,
+          "p_variant": 0.532512,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060530-30",
+          "net_cents": -112.0,
+          "p_raw": 0.588889,
+          "p_variant": 0.588889,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060545-45",
+          "net_cents": -92.0,
+          "p_raw": 0.626642,
+          "p_variant": 0.626642,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": -0.018185426076416825,
+          "logloss_delta": -0.0608950746157127,
+          "market": "KXBTC15M-26MAY060600-00",
+          "net_cents": 47.0,
+          "p_raw": 0.792357,
+          "p_variant": 0.8421070319090075,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060630-30",
+          "net_cents": -136.0,
+          "p_raw": 0.675344,
+          "p_variant": 0.675344,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060645-45",
+          "net_cents": 78.0,
+          "p_raw": 0.598639,
+          "p_variant": 0.598639,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060730-30",
+          "net_cents": 84.0,
+          "p_raw": 0.594884,
+          "p_variant": 0.594884,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060800-00",
+          "net_cents": 102.0,
+          "p_raw": 0.523411,
+          "p_variant": 0.523411,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060830-30",
+          "net_cents": -122.0,
+          "p_raw": 0.60073,
+          "p_variant": 0.60073,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060915-15",
+          "net_cents": 76.0,
+          "p_raw": 0.672099,
+          "p_variant": 0.672099,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060930-30",
+          "net_cents": -124.0,
+          "p_raw": 0.604377,
+          "p_variant": 0.604377,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.02081947361210304,
+          "logloss_delta": -0.06195798388182894,
+          "market": "KXBTC15M-26MAY060945-45",
+          "net_cents": 96.0,
+          "p_raw": 0.761891,
+          "p_variant": 0.8105892762568683,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061015-15",
+          "net_cents": 92.0,
+          "p_raw": 0.595554,
+          "p_variant": 0.595554,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061030-30",
+          "net_cents": 74.0,
+          "p_raw": 0.618153,
+          "p_variant": 0.618153,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061045-45",
+          "net_cents": -118.0,
+          "p_raw": 0.601767,
+          "p_variant": 0.601767,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061100-00",
+          "net_cents": -151.0,
+          "p_raw": 0.740374,
+          "p_variant": 0.740374,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061130-30",
+          "net_cents": 66.0,
+          "p_raw": 0.653101,
+          "p_variant": 0.653101,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.012128630956785659,
+          "logloss_delta": -0.054463437790149394,
+          "market": "KXBTC15M-26MAY061200-00",
+          "net_cents": 35.0,
+          "p_raw": 0.848576,
+          "p_variant": 0.8960740801377522,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061230-30",
+          "net_cents": -140.0,
+          "p_raw": 0.681329,
+          "p_variant": 0.681329,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.0005768499826738778,
+          "logloss_delta": -0.015791460053775425,
+          "market": "KXBTC15M-26MAY061400-00",
+          "net_cents": -11.0,
+          "p_raw": 0.97364,
+          "p_variant": 0.9891372371228069,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061430-30",
+          "net_cents": 62.0,
+          "p_raw": 0.678512,
+          "p_variant": 0.678512,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061445-45",
+          "net_cents": 55.0,
+          "p_raw": 0.724164,
+          "p_variant": 0.724164,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061600-00",
+          "net_cents": -124.0,
+          "p_raw": 0.610883,
+          "p_variant": 0.610883,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": -0.02012243115285131,
+          "logloss_delta": -0.06182219530126987,
+          "market": "KXBTC15M-26MAY061615-15",
+          "net_cents": 49.0,
+          "p_raw": 0.770727,
+          "p_variant": 0.8198787148165196,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.021727120541008796,
+          "logloss_delta": -0.047577956918827935,
+          "market": "KXBTC15M-26MAY061630-30",
+          "net_cents": 70.0,
+          "p_raw": 0.631665,
+          "p_variant": 0.6624447427694375,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061645-45",
+          "net_cents": 55.0,
+          "p_raw": 0.736529,
+          "p_variant": 0.736529,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061700-00",
+          "net_cents": -102.0,
+          "p_raw": 0.547299,
+          "p_variant": 0.547299,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061715-15",
+          "net_cents": -104.0,
+          "p_raw": 0.633073,
+          "p_variant": 0.633073,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.023582995638066373,
+          "logloss_delta": -0.05504916683638478,
+          "market": "KXBTC15M-26MAY061730-30",
+          "net_cents": 70.0,
+          "p_raw": 0.670106,
+          "p_variant": 0.7080290158287409,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061745-45",
+          "net_cents": -30.0,
+          "p_raw": 0.510383,
+          "p_variant": 0.510383,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": -0.023699926143153638,
+          "logloss_delta": -0.059013759319834824,
+          "market": "KXBTC15M-26MAY061800-00",
+          "net_cents": 60.0,
+          "p_raw": 0.700391,
+          "p_variant": 0.7429676542964945,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": -0.01798053523866621,
+          "logloss_delta": -0.06075889659925343,
+          "market": "KXBTC15M-26MAY061815-15",
+          "net_cents": 53.0,
+          "p_raw": 0.794472,
+          "p_variant": 0.8442398525124806,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061830-30",
+          "net_cents": -49.0,
+          "p_raw": 0.553162,
+          "p_variant": 0.553162,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061900-00",
+          "net_cents": 128.0,
+          "p_raw": 0.501794,
+          "p_variant": 0.501794,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.0040562606605335505,
+          "logloss_delta": -0.03615508028502749,
+          "market": "KXBTC15M-26MAY061915-15",
+          "net_cents": 22.0,
+          "p_raw": 0.923342,
+          "p_variant": 0.9573363350910116,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061930-30",
+          "net_cents": 102.0,
+          "p_raw": 0.551364,
+          "p_variant": 0.551364,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061945-45",
+          "net_cents": -88.0,
+          "p_raw": 0.542407,
+          "p_variant": 0.542407,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062000-00",
+          "net_cents": 96.0,
+          "p_raw": 0.582435,
+          "p_variant": 0.582435,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062015-15",
+          "net_cents": -106.0,
+          "p_raw": 0.526847,
+          "p_variant": 0.526847,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062030-30",
+          "net_cents": -68.0,
+          "p_raw": 0.544418,
+          "p_variant": 0.544418,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.020573354569486224,
+          "logloss_delta": -0.04423112486559283,
+          "market": "KXBTC15M-26MAY062045-45",
+          "net_cents": 94.0,
+          "p_raw": 0.61792,
+          "p_variant": 0.6458647548880319,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.034550547536612075,
+          "logloss_delta": 0.0740883135304462,
+          "market": "KXBTC15M-26MAY062100-00",
+          "net_cents": -47.0,
+          "p_raw": 0.615588,
+          "p_variant": 0.6430389827068124,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": 114.0,
+          "p_raw": 0.586142,
+          "p_variant": 0.586142,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062145-45",
+          "net_cents": 82.0,
+          "p_raw": 0.600378,
+          "p_variant": 0.600378,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.02056361925831321,
+          "logloss_delta": -0.04420442495165433,
+          "market": "KXBTC15M-26MAY062200-00",
+          "net_cents": 104.0,
+          "p_raw": 0.617816,
+          "p_variant": 0.6457388102011642,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062215-15",
+          "net_cents": 78.0,
+          "p_raw": 0.661831,
+          "p_variant": 0.661831,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.06637447731786927,
+          "logloss_delta": 0.1731054605514497,
+          "market": "KXBTC15M-26MAY062230-30",
+          "net_cents": -80.0,
+          "p_raw": 0.718015,
+          "p_variant": 0.762836822356439,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062245-45",
+          "net_cents": -112.0,
+          "p_raw": 0.605951,
+          "p_variant": 0.605951,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": -0.02108134382444802,
+          "logloss_delta": -0.06197297126406323,
+          "market": "KXBTC15M-26MAY062300-00",
+          "net_cents": 51.0,
+          "p_raw": 0.758354,
+          "p_variant": 0.8068382918600273,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.022000418075009687,
+          "logloss_delta": -0.061817104380338356,
+          "market": "KXBTC15M-26MAY062315-15",
+          "net_cents": 60.0,
+          "p_raw": 0.74458,
+          "p_variant": 0.7920602050472534,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062330-30",
+          "net_cents": -108.0,
+          "p_raw": 0.546903,
+          "p_variant": 0.546903,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -96.0,
+          "p_raw": 0.608623,
+          "p_variant": 0.608623,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": -0.010363600182186966,
+          "logloss_delta": -0.05165521120789689,
+          "market": "KXBTC15M-26MAY070000-00",
+          "net_cents": 0.0,
+          "p_raw": 0.863962,
+          "p_variant": 0.9097628831255506,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070030-30",
+          "net_cents": -70.0,
+          "p_raw": 0.523605,
+          "p_variant": 0.523605,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070045-45",
+          "net_cents": 100.0,
+          "p_raw": 0.582164,
+          "p_variant": 0.582164,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070100-00",
+          "net_cents": -47.0,
+          "p_raw": 0.505013,
+          "p_variant": 0.505013,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": -0.01987867115011252,
+          "logloss_delta": -0.061746206154944194,
+          "market": "KXBTC15M-26MAY070115-15",
+          "net_cents": 53.0,
+          "p_raw": 0.773654,
+          "p_variant": 0.822929842813964,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.019151127221792907,
+          "logloss_delta": -0.04051169117430792,
+          "market": "KXBTC15M-26MAY070130-30",
+          "net_cents": 78.0,
+          "p_raw": 0.60414,
+          "p_variant": 0.6291172525201434,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": -0.013329758537173619,
+          "logloss_delta": -0.05612074287416574,
+          "market": "KXBTC15M-26MAY070145-45",
+          "net_cents": 35.0,
+          "p_raw": 0.83804,
+          "p_variant": 0.8864161848552956,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070200-00",
+          "net_cents": -63.0,
+          "p_raw": 0.50571,
+          "p_variant": 0.50571,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070530-30",
+          "net_cents": 100.0,
+          "p_raw": 0.540822,
+          "p_variant": 0.540822,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070545-45",
+          "net_cents": -124.0,
+          "p_raw": 0.707647,
+          "p_variant": 0.707647,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.023047211231482435,
+          "logloss_delta": -0.06094668678826132,
+          "market": "KXBTC15M-26MAY070600-00",
+          "net_cents": 62.0,
+          "p_raw": 0.72396,
+          "p_variant": 0.7694552746894487,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070615-15",
+          "net_cents": 141.0,
+          "p_raw": 0.610872,
+          "p_variant": 0.610872,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070630-30",
+          "net_cents": -98.0,
+          "p_raw": 0.606974,
+          "p_variant": 0.606974,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.006854277406394295,
+          "logloss_delta": -0.044420439206204324,
+          "market": "KXBTC15M-26MAY070645-45",
+          "net_cents": 35.0,
+          "p_raw": 0.895399,
+          "p_variant": 0.9360696332357954,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070700-00",
+          "net_cents": -116.0,
+          "p_raw": 0.654812,
+          "p_variant": 0.654812,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070715-15",
+          "net_cents": 94.0,
+          "p_raw": 0.560435,
+          "p_variant": 0.560435,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070730-30",
+          "net_cents": -96.0,
+          "p_raw": 0.530778,
+          "p_variant": 0.530778,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": -0.005969039218579428,
+          "logloss_delta": -0.042125184597646075,
+          "market": "KXBTC15M-26MAY070745-45",
+          "net_cents": 32.0,
+          "p_raw": 0.903807,
+          "p_variant": 0.9426933334556915,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070800-00",
+          "net_cents": -94.0,
+          "p_raw": 0.536385,
+          "p_variant": 0.536385,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070815-15",
+          "net_cents": 108.0,
+          "p_raw": 0.501147,
+          "p_variant": 0.501147,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "net_cents": -86.0,
+          "p_raw": 0.514492,
+          "p_variant": 0.514492,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070845-45",
+          "net_cents": 106.0,
+          "p_raw": 0.596088,
+          "p_variant": 0.596088,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070900-00",
+          "net_cents": 86.0,
+          "p_raw": 0.597604,
+          "p_variant": 0.597604,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": -0.018599359222068013,
+          "logloss_delta": -0.06114991902371206,
+          "market": "KXBTC15M-26MAY070915-15",
+          "net_cents": 47.0,
+          "p_raw": 0.788001,
+          "p_variant": 0.8376909836794887,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070945-45",
+          "net_cents": 100.0,
+          "p_raw": 0.532085,
+          "p_variant": 0.532085,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -124.0,
+          "p_raw": 0.609894,
+          "p_variant": 0.609894,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071030-30",
+          "net_cents": 72.0,
+          "p_raw": 0.64638,
+          "p_variant": 0.64638,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071115-15",
+          "net_cents": -128.0,
+          "p_raw": 0.635838,
+          "p_variant": 0.635838,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071145-45",
+          "net_cents": 74.0,
+          "p_raw": 0.645637,
+          "p_variant": 0.645637,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071200-00",
+          "net_cents": -124.0,
+          "p_raw": 0.606055,
+          "p_variant": 0.606055,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071230-30",
+          "net_cents": -143.0,
+          "p_raw": 0.729882,
+          "p_variant": 0.729882,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071300-00",
+          "net_cents": -122.0,
+          "p_raw": 0.63604,
+          "p_variant": 0.63604,
+          "side": "yes",
+          "won": false
+        }
+      ],
+      "variant": "logit125_p60_calm_mid_or_p75",
+      "wins": 54
+    },
+    {
+      "blockers": [],
+      "brier_bootstrap": {
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "prob_negative": 0.0,
+        "runs": 5000
+      },
+      "brier_mean_delta": 0.0,
+      "logloss_bootstrap": {
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "prob_negative": 0.0,
+        "runs": 5000
+      },
+      "logloss_mean_delta": 0.0,
+      "losses": 44,
+      "net_cents": -699.0,
+      "rows": 98,
+      "rows_detail": [
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY052345-45",
+          "net_cents": 70.0,
+          "p_raw": 0.636767,
+          "p_variant": 0.636767,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060030-30",
+          "net_cents": -106.0,
+          "p_raw": 0.617077,
+          "p_variant": 0.617077,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060045-45",
+          "net_cents": 39.0,
+          "p_raw": 0.826505,
+          "p_variant": 0.826505,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060100-00",
+          "net_cents": -161.0,
+          "p_raw": 0.799928,
+          "p_variant": 0.799928,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060130-30",
+          "net_cents": 78.0,
+          "p_raw": 0.616779,
+          "p_variant": 0.616779,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060200-00",
+          "net_cents": 76.0,
+          "p_raw": 0.618277,
+          "p_variant": 0.618277,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060215-15",
+          "net_cents": -110.0,
+          "p_raw": 0.583024,
+          "p_variant": 0.583024,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060245-45",
+          "net_cents": -134.0,
+          "p_raw": 0.660829,
+          "p_variant": 0.660829,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060300-00",
+          "net_cents": 68.0,
+          "p_raw": 0.661141,
+          "p_variant": 0.661141,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060330-30",
+          "net_cents": -118.0,
+          "p_raw": 0.63088,
+          "p_variant": 0.63088,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060345-45",
+          "net_cents": -80.0,
+          "p_raw": 0.515105,
+          "p_variant": 0.515105,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060415-15",
+          "net_cents": 62.0,
+          "p_raw": 0.676831,
+          "p_variant": 0.676831,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060445-45",
+          "net_cents": -94.0,
+          "p_raw": 0.636374,
+          "p_variant": 0.636374,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060500-00",
+          "net_cents": -126.0,
+          "p_raw": 0.674136,
+          "p_variant": 0.674136,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060515-15",
+          "net_cents": -86.0,
+          "p_raw": 0.532512,
+          "p_variant": 0.532512,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060530-30",
+          "net_cents": -112.0,
+          "p_raw": 0.588889,
+          "p_variant": 0.588889,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060545-45",
+          "net_cents": -92.0,
+          "p_raw": 0.626642,
+          "p_variant": 0.626642,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060600-00",
+          "net_cents": 47.0,
+          "p_raw": 0.792357,
+          "p_variant": 0.792357,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060630-30",
+          "net_cents": -136.0,
+          "p_raw": 0.675344,
+          "p_variant": 0.675344,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060645-45",
+          "net_cents": 78.0,
+          "p_raw": 0.598639,
+          "p_variant": 0.598639,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060730-30",
+          "net_cents": 84.0,
+          "p_raw": 0.594884,
+          "p_variant": 0.594884,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060800-00",
+          "net_cents": 102.0,
+          "p_raw": 0.523411,
+          "p_variant": 0.523411,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060830-30",
+          "net_cents": -122.0,
+          "p_raw": 0.60073,
+          "p_variant": 0.60073,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060915-15",
+          "net_cents": 76.0,
+          "p_raw": 0.672099,
+          "p_variant": 0.672099,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060930-30",
+          "net_cents": -124.0,
+          "p_raw": 0.604377,
+          "p_variant": 0.604377,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY060945-45",
+          "net_cents": 96.0,
+          "p_raw": 0.761891,
+          "p_variant": 0.761891,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061015-15",
+          "net_cents": 92.0,
+          "p_raw": 0.595554,
+          "p_variant": 0.595554,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061030-30",
+          "net_cents": 74.0,
+          "p_raw": 0.618153,
+          "p_variant": 0.618153,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061045-45",
+          "net_cents": -118.0,
+          "p_raw": 0.601767,
+          "p_variant": 0.601767,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061100-00",
+          "net_cents": -151.0,
+          "p_raw": 0.740374,
+          "p_variant": 0.740374,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061130-30",
+          "net_cents": 66.0,
+          "p_raw": 0.653101,
+          "p_variant": 0.653101,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061200-00",
+          "net_cents": 35.0,
+          "p_raw": 0.848576,
+          "p_variant": 0.848576,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061230-30",
+          "net_cents": -140.0,
+          "p_raw": 0.681329,
+          "p_variant": 0.681329,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061400-00",
+          "net_cents": -11.0,
+          "p_raw": 0.97364,
+          "p_variant": 0.97364,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061430-30",
+          "net_cents": 62.0,
+          "p_raw": 0.678512,
+          "p_variant": 0.678512,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061445-45",
+          "net_cents": 55.0,
+          "p_raw": 0.724164,
+          "p_variant": 0.724164,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061600-00",
+          "net_cents": -124.0,
+          "p_raw": 0.610883,
+          "p_variant": 0.610883,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061615-15",
+          "net_cents": 49.0,
+          "p_raw": 0.770727,
+          "p_variant": 0.770727,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061630-30",
+          "net_cents": 70.0,
+          "p_raw": 0.631665,
+          "p_variant": 0.631665,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061645-45",
+          "net_cents": 55.0,
+          "p_raw": 0.736529,
+          "p_variant": 0.736529,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061700-00",
+          "net_cents": -102.0,
+          "p_raw": 0.547299,
+          "p_variant": 0.547299,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061715-15",
+          "net_cents": -104.0,
+          "p_raw": 0.633073,
+          "p_variant": 0.633073,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061730-30",
+          "net_cents": 70.0,
+          "p_raw": 0.670106,
+          "p_variant": 0.670106,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061745-45",
+          "net_cents": -30.0,
+          "p_raw": 0.510383,
+          "p_variant": 0.510383,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061800-00",
+          "net_cents": 60.0,
+          "p_raw": 0.700391,
+          "p_variant": 0.700391,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061815-15",
+          "net_cents": 53.0,
+          "p_raw": 0.794472,
+          "p_variant": 0.794472,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061830-30",
+          "net_cents": -49.0,
+          "p_raw": 0.553162,
+          "p_variant": 0.553162,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061900-00",
+          "net_cents": 128.0,
+          "p_raw": 0.501794,
+          "p_variant": 0.501794,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061915-15",
+          "net_cents": 22.0,
+          "p_raw": 0.923342,
+          "p_variant": 0.923342,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061930-30",
+          "net_cents": 102.0,
+          "p_raw": 0.551364,
+          "p_variant": 0.551364,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY061945-45",
+          "net_cents": -88.0,
+          "p_raw": 0.542407,
+          "p_variant": 0.542407,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062000-00",
+          "net_cents": 96.0,
+          "p_raw": 0.582435,
+          "p_variant": 0.582435,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062015-15",
+          "net_cents": -106.0,
+          "p_raw": 0.526847,
+          "p_variant": 0.526847,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062030-30",
+          "net_cents": -68.0,
+          "p_raw": 0.544418,
+          "p_variant": 0.544418,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062045-45",
+          "net_cents": 94.0,
+          "p_raw": 0.61792,
+          "p_variant": 0.61792,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062100-00",
+          "net_cents": -47.0,
+          "p_raw": 0.615588,
+          "p_variant": 0.615588,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": 114.0,
+          "p_raw": 0.586142,
+          "p_variant": 0.586142,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062145-45",
+          "net_cents": 82.0,
+          "p_raw": 0.600378,
+          "p_variant": 0.600378,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062200-00",
+          "net_cents": 104.0,
+          "p_raw": 0.617816,
+          "p_variant": 0.617816,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062215-15",
+          "net_cents": 78.0,
+          "p_raw": 0.661831,
+          "p_variant": 0.661831,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062230-30",
+          "net_cents": -80.0,
+          "p_raw": 0.718015,
+          "p_variant": 0.718015,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062245-45",
+          "net_cents": -112.0,
+          "p_raw": 0.605951,
+          "p_variant": 0.605951,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062300-00",
+          "net_cents": 51.0,
+          "p_raw": 0.758354,
+          "p_variant": 0.758354,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062315-15",
+          "net_cents": 60.0,
+          "p_raw": 0.74458,
+          "p_variant": 0.74458,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062330-30",
+          "net_cents": -108.0,
+          "p_raw": 0.546903,
+          "p_variant": 0.546903,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -96.0,
+          "p_raw": 0.608623,
+          "p_variant": 0.608623,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070000-00",
+          "net_cents": 0.0,
+          "p_raw": 0.863962,
+          "p_variant": 0.863962,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070030-30",
+          "net_cents": -70.0,
+          "p_raw": 0.523605,
+          "p_variant": 0.523605,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070045-45",
+          "net_cents": 100.0,
+          "p_raw": 0.582164,
+          "p_variant": 0.582164,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070100-00",
+          "net_cents": -47.0,
+          "p_raw": 0.505013,
+          "p_variant": 0.505013,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070115-15",
+          "net_cents": 53.0,
+          "p_raw": 0.773654,
+          "p_variant": 0.773654,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070130-30",
+          "net_cents": 78.0,
+          "p_raw": 0.60414,
+          "p_variant": 0.60414,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070145-45",
+          "net_cents": 35.0,
+          "p_raw": 0.83804,
+          "p_variant": 0.83804,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070200-00",
+          "net_cents": -63.0,
+          "p_raw": 0.50571,
+          "p_variant": 0.50571,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070530-30",
+          "net_cents": 100.0,
+          "p_raw": 0.540822,
+          "p_variant": 0.540822,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070545-45",
+          "net_cents": -124.0,
+          "p_raw": 0.707647,
+          "p_variant": 0.707647,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070600-00",
+          "net_cents": 62.0,
+          "p_raw": 0.72396,
+          "p_variant": 0.72396,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070615-15",
+          "net_cents": 141.0,
+          "p_raw": 0.610872,
+          "p_variant": 0.610872,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070630-30",
+          "net_cents": -98.0,
+          "p_raw": 0.606974,
+          "p_variant": 0.606974,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070645-45",
+          "net_cents": 35.0,
+          "p_raw": 0.895399,
+          "p_variant": 0.895399,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070700-00",
+          "net_cents": -116.0,
+          "p_raw": 0.654812,
+          "p_variant": 0.654812,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070715-15",
+          "net_cents": 94.0,
+          "p_raw": 0.560435,
+          "p_variant": 0.560435,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070730-30",
+          "net_cents": -96.0,
+          "p_raw": 0.530778,
+          "p_variant": 0.530778,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070745-45",
+          "net_cents": 32.0,
+          "p_raw": 0.903807,
+          "p_variant": 0.903807,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070800-00",
+          "net_cents": -94.0,
+          "p_raw": 0.536385,
+          "p_variant": 0.536385,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070815-15",
+          "net_cents": 108.0,
+          "p_raw": 0.501147,
+          "p_variant": 0.501147,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "net_cents": -86.0,
+          "p_raw": 0.514492,
+          "p_variant": 0.514492,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070845-45",
+          "net_cents": 106.0,
+          "p_raw": 0.596088,
+          "p_variant": 0.596088,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070900-00",
+          "net_cents": 86.0,
+          "p_raw": 0.597604,
+          "p_variant": 0.597604,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070915-15",
+          "net_cents": 47.0,
+          "p_raw": 0.788001,
+          "p_variant": 0.788001,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY070945-45",
+          "net_cents": 100.0,
+          "p_raw": 0.532085,
+          "p_variant": 0.532085,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -124.0,
+          "p_raw": 0.609894,
+          "p_variant": 0.609894,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071030-30",
+          "net_cents": 72.0,
+          "p_raw": 0.64638,
+          "p_variant": 0.64638,
+          "side": "no",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071115-15",
+          "net_cents": -128.0,
+          "p_raw": 0.635838,
+          "p_variant": 0.635838,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071145-45",
+          "net_cents": 74.0,
+          "p_raw": 0.645637,
+          "p_variant": 0.645637,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071200-00",
+          "net_cents": -124.0,
+          "p_raw": 0.606055,
+          "p_variant": 0.606055,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071230-30",
+          "net_cents": -143.0,
+          "p_raw": 0.729882,
+          "p_variant": 0.729882,
+          "side": "no",
+          "won": false
+        },
+        {
+          "brier_delta": 0.0,
+          "logloss_delta": 0.0,
+          "market": "KXBTC15M-26MAY071300-00",
+          "net_cents": -122.0,
+          "p_raw": 0.63604,
+          "p_variant": 0.63604,
+          "side": "yes",
+          "won": false
+        }
+      ],
+      "variant": "raw_probability",
+      "wins": 54
+    }
+  ],
+  "settled": 98
+}

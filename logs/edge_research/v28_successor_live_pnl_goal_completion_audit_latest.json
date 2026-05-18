@@ -1,0 +1,209 @@
+{
+  "checklist": [
+    {
+      "evidence": "docs/v28_successor_live_pnl_improvement_goal_plan.md",
+      "next_action": "Create docs/v28_successor_live_pnl_improvement_goal_plan.md.",
+      "requirement": "Workspace contains the full live-P&L plan/spec.",
+      "requirement_id": "plan_file",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_source_contract_latest.json",
+      "next_action": "Inspect source contract and keep all live-order integration out of this goal.",
+      "requirement": "Live trading/order logic remains untouched; no orders/secrets/state mutations.",
+      "requirement_id": "research_only_guardrails",
+      "status": "pass"
+    },
+    {
+      "evidence": "build_v28_successor_live_pnl_policy_lab.py; run_v28_successor_live_pnl_policy_cycle.py; rows=16302",
+      "next_action": "Run run_v28_successor_live_pnl_policy_cycle.py --write.",
+      "requirement": "A reproducible research-only live policy capture/scoring pipeline exists.",
+      "requirement_id": "reproducible_pipeline",
+      "status": "pass"
+    },
+    {
+      "evidence": "policy_hashes=['5bf8d66dbe2b31e01d38abe8a0238e68']",
+      "next_action": "Freeze exactly one active policy hash before collecting primary rows.",
+      "requirement": "At least one frozen inspectable policy version has a stable hash.",
+      "requirement_id": "frozen_policy_version",
+      "status": "pass"
+    },
+    {
+      "evidence": "registry_rows=16302; primary_policy_rows_after_hash=314",
+      "next_action": "Collect more public REST sidecar rows before close after the policy hash exists.",
+      "requirement": "Frozen pre-resolution policy rows exist for incoming live markets.",
+      "requirement_id": "pre_resolution_policy_rows",
+      "status": "pass"
+    },
+    {
+      "evidence": "joined_primary_rows=314; label_status_counts={'joined_post_resolution': 16302}",
+      "next_action": "Rerun after the post-hash markets settle and labels are available.",
+      "requirement": "Post-resolution labels are joined after settlement for primary rows.",
+      "requirement_id": "post_resolution_labels",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_policy_score_latest.json",
+      "next_action": "Rebuild live-P&L policy score artifacts with all paired baselines.",
+      "requirement": "Same-row fee-aware comparison exists against regular v28, successor FV-only, book-only, and always-skip.",
+      "requirement_id": "paired_pnl_comparison",
+      "status": "pass"
+    },
+    {
+      "evidence": "joined_primary_markets=12; joined_primary_rows=314",
+      "next_action": "Continue collecting until enough post-hash rows are finalized and labeled.",
+      "requirement": "Bootstrap sample floor: at least 25 finalized paired opportunities.",
+      "requirement_id": "bootstrap_sample_floor",
+      "status": "pass"
+    },
+    {
+      "evidence": "joined_primary_markets=12",
+      "next_action": "Continue collecting across more finalized BTC15M close windows.",
+      "requirement": "Profit goal coverage: at least 5 finalized live close windows.",
+      "requirement_id": "profit_goal_market_coverage",
+      "status": "pass"
+    },
+    {
+      "evidence": "joined_primary_rows=314",
+      "next_action": "Continue collecting post-hash primary opportunities.",
+      "requirement": "Profit goal row floor: at least 75 post-hash labeled primary opportunities.",
+      "requirement_id": "profit_goal_row_floor",
+      "status": "pass"
+    },
+    {
+      "evidence": "primary_net_pnl_cents=70.0",
+      "next_action": "Collect settled primary rows, then retire or replace candidates with non-positive live-forward P&L.",
+      "requirement": "Candidate must have positive fee-aware one-contract net P&L on primary rows.",
+      "requirement_id": "positive_net_pnl",
+      "status": "pass"
+    },
+    {
+      "evidence": "policy_net=70.0; v28_net=-692.3; delta=762.3",
+      "next_action": "Do not advance candidates that merely match v28.",
+      "requirement": "Candidate must beat regular v28 on the same primary rows.",
+      "requirement_id": "positive_delta_vs_v28",
+      "status": "pass"
+    },
+    {
+      "evidence": "primary_net=70.0; max_drawdown_cents=0.0",
+      "next_action": "Reject or redesign candidates whose drawdown is large while net edge is absent.",
+      "requirement": "Drawdown/loss clustering must be acceptable relative to realized edge.",
+      "requirement_id": "drawdown_control",
+      "status": "pass"
+    },
+    {
+      "evidence": "markets=12; remove_best_1_market_net=41.000000; market_lcb=0.715088",
+      "next_action": "Collect more markets and require positive market-level robustness.",
+      "requirement": "Profit must not be driven by one market or one lucky slice.",
+      "requirement_id": "not_single_market_dependent",
+      "status": "pass"
+    },
+    {
+      "evidence": "current_failed=False; marked=False; entered=3; primary_net=70.0; delta_vs_v28=762.3",
+      "next_action": "If the current policy fails, mark it replace-required and freeze a replacement only for future rows.",
+      "requirement": "A candidate that fails early live-forward P&L or negative delta is retired or marked replace-required; zero-delta candidates remain blocked from promotion until positive delta appears.",
+      "requirement_id": "failed_candidate_retirement",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_policy_cycle_latest.json; logs/edge_research/v28_successor_live_pnl_capture_health_latest.json",
+      "next_action": "Keep cycle and capture-health reports current.",
+      "requirement": "Observed/eligible/entered/skipped/missed/unscorable denominators are reported.",
+      "requirement_id": "denominator_reporting",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_source_contract_latest.json",
+      "next_action": "Rebuild live-P&L source contract.",
+      "requirement": "Source-quality verification exists for policy rows.",
+      "requirement_id": "source_quality",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_capture_health_latest.json",
+      "next_action": "Refresh the live-P&L cycle after collection.",
+      "requirement": "Capture-health evidence accounts for missed rows and current row growth.",
+      "requirement_id": "capture_health",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_fill_model_audit_latest.json",
+      "next_action": "Refresh fill-model audit and verify fees before live testing.",
+      "requirement": "Fill-model audit or explicit assumptions report exists.",
+      "requirement_id": "fill_model_audit",
+      "status": "pass"
+    },
+    {
+      "evidence": "C:\\Python312\\python.exe -m unittest test_v28_successor_live_pnl_policy_lab.py -v",
+      "next_action": "Run audit with --run-tests or run python -m unittest test_v28_successor_live_pnl_policy_lab.py -v.",
+      "requirement": "Tests cover causality, fee math, policy hash freezing, and no retroactive credit.",
+      "requirement_id": "tests",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_policy_experiment_ledger_latest.csv",
+      "next_action": "Write the policy experiment ledger.",
+      "requirement": "Experiment ledger includes active/retired policies and decisions.",
+      "requirement_id": "experiment_ledger",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_readiness_latest.json",
+      "next_action": "Refresh readiness report.",
+      "requirement": "Bootstrap report says continue, retire, or replace the first policy.",
+      "requirement_id": "bootstrap_report",
+      "status": "pass"
+    },
+    {
+      "evidence": "readiness_level_1_complete=True; level_2=False; verdict=level_1_bootstrap_complete",
+      "next_action": "Keep controlled-live-test readiness false until profitable forward evidence passes.",
+      "requirement": "The dedicated readiness artifact is fresh and does not authorize controlled live use.",
+      "requirement_id": "readiness_consistency",
+      "status": "pass"
+    },
+    {
+      "evidence": "logs/edge_research/v28_successor_live_pnl_verifier_latest.json; level_2=False",
+      "next_action": "Keep controlled-live-test authorization false until Level 2 gates pass.",
+      "requirement": "No candidate is advanced/promoted before forward evidence improves all gates.",
+      "requirement_id": "no_promotion_without_forward_evidence",
+      "status": "pass"
+    }
+  ],
+  "summary": {
+    "artifacts": {
+      "cycle": "logs/edge_research/v28_successor_live_pnl_policy_cycle_latest.json",
+      "labeled_decisions": "research_particle/v28_successor/live_pnl_labeled_decisions_latest.csv",
+      "plan": "docs/v28_successor_live_pnl_improvement_goal_plan.md",
+      "policy_registry": "research_particle/v28_successor/live_pnl_policy_registry_latest.csv",
+      "policy_score": "logs/edge_research/v28_successor_live_pnl_policy_score_latest.json",
+      "readiness": "logs/edge_research/v28_successor_live_pnl_readiness_latest.json"
+    },
+    "cycle_status": "profit_goal_candidate_forward_ready",
+    "generated_utc": "2026-05-18T18:39:05Z",
+    "joined_primary_markets": 12,
+    "joined_primary_rows": 314,
+    "legacy_level_1_bootstrap_complete": true,
+    "overall_status": "complete",
+    "primary_delta_vs_v28_cents": 762.3,
+    "primary_entered_rows": 3,
+    "primary_max_drawdown_cents": 0.0,
+    "primary_net_pnl_cents": 70.0,
+    "primary_policy_rows_after_hash": 314,
+    "primary_v28_net_pnl_cents": -692.3,
+    "profit_goal_complete": true,
+    "profit_goal_min_markets": 5,
+    "profit_goal_min_primary_rows": 75,
+    "readiness_verdict": "level_1_bootstrap_complete",
+    "registry_rows": 16302,
+    "status_counts": {
+      "pass": 24
+    },
+    "test_result": {
+      "command": "C:\\Python312\\python.exe -m unittest test_v28_successor_live_pnl_policy_lab.py -v",
+      "returncode": 0,
+      "status": "pass",
+      "stderr_tail": "test_cycle_status_keeps_positive_net_zero_delta_as_collect_more (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_cycle_status_keeps_positive_net_zero_delta_as_collect_more) ... ok\ntest_cycle_status_separates_unlabeled_primary_rows_from_no_capture (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_cycle_status_separates_unlabeled_primary_rows_from_no_capture) ... ok\ntest_fee_formula_matches_local_v28_integer_cent_taker_model (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_fee_formula_matches_local_v28_integer_cent_taker_model) ... ok\ntest_label_join_scores_policy_and_same_row_v28_baseline (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_label_join_scores_policy_and_same_row_v28_baseline) ... ok\ntest_no_side_rows_are_diagnostic_and_policy_skipped (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_no_side_rows_are_diagnostic_and_policy_skipped) ... ok\ntest_policy_allows_only_one_entry_per_market (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_policy_allows_only_one_entry_per_market) ... ok\ntest_policy_hash_is_stable_and_registry_has_no_labels (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_policy_hash_is_stable_and_registry_has_no_labels) ... ok\ntest_policy_rejects_yes_rows_inside_last_five_minutes (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_policy_rejects_yes_rows_inside_last_five_minutes) ... ok\ntest_policy_requires_five_cent_paired_no_v28_net_edge_before_entry (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_policy_requires_five_cent_paired_no_v28_net_edge_before_entry) ... ok\ntest_policy_requires_trigger_no_ask_below_fade_ceiling (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_policy_requires_trigger_no_ask_below_fade_ceiling) ... ok\ntest_policy_uses_midband_yes_ask_window (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_policy_uses_midband_yes_ask_window) ... ok\ntest_pre_policy_diagnostic_entry_does_not_consume_market_cap (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_pre_policy_diagnostic_entry_does_not_consume_market_cap) ... ok\ntest_pre_policy_rows_are_diagnostic_not_primary_credit (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_pre_policy_rows_are_diagnostic_not_primary_credit) ... ok\ntest_selected_yes_side_rows_are_primary_when_quality_passes (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_selected_yes_side_rows_are_primary_when_quality_passes) ... ok\ntest_unselected_candidate_rows_are_diagnostic_and_policy_skipped (test_v28_successor_live_pnl_policy_lab.V28SuccessorLivePnlPolicyLabTests.test_unselected_candidate_rows_are_diagnostic_and_policy_skipped) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.005s\n\nOK\n",
+      "stdout_tail": ""
+    }
+  }
+}

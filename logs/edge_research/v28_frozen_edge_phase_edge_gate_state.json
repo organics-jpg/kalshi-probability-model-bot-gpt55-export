@@ -1,0 +1,8 @@
+{
+  "adjusted_edge_floor": -0.12,
+  "base_entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T05:46:47.707629+00:00",
+  "fv_variant": "edge_phase_shrink",
+  "physics": "A wide negative adjusted-FV edge is a bad paid-price state; this is a rare safety valve, not a tight selectivity filter.",
+  "rule": "keep target-coverage row only if edge_phase_shrink_probability - ask_prob >= -0.12"
+}

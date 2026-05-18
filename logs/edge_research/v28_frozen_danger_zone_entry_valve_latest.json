@@ -1,0 +1,133 @@
+{
+  "blockers": [],
+  "candidate": {
+    "delta_vs_control_cents": 258.0,
+    "entries": 134,
+    "gross_cents": 973.0,
+    "hold_gross_cents": 2526.0,
+    "losses": 15,
+    "market_coverage_pct": 100.0,
+    "policy": "skip_reentry_gap15_or_gap30",
+    "settled": 134,
+    "skipped_entries": 8,
+    "skipped_examples": [
+      {
+        "ask_cents": 9,
+        "gross_cents": -18,
+        "hold_gross_cents": -18,
+        "market": "KXBTC15M-26MAY060330-30",
+        "market_side_entry_index": 0,
+        "p_side": 0.999788,
+        "raw_book_gap": 0.909788,
+        "side": "no",
+        "won": false
+      },
+      {
+        "ask_cents": 66,
+        "gross_cents": -32,
+        "hold_gross_cents": 68,
+        "market": "KXBTC15M-26MAY060800-00",
+        "market_side_entry_index": 1,
+        "p_side": 0.874265,
+        "raw_book_gap": 0.21426499999999993,
+        "side": "yes",
+        "won": true
+      },
+      {
+        "ask_cents": 70,
+        "gross_cents": -16,
+        "hold_gross_cents": 60,
+        "market": "KXBTC15M-26MAY060945-45",
+        "market_side_entry_index": 1,
+        "p_side": 0.850231,
+        "raw_book_gap": 0.150231,
+        "side": "no",
+        "won": true
+      },
+      {
+        "ask_cents": 71,
+        "gross_cents": -12,
+        "hold_gross_cents": 58,
+        "market": "KXBTC15M-26MAY060945-45",
+        "market_side_entry_index": 2,
+        "p_side": 0.861162,
+        "raw_book_gap": 0.15116200000000002,
+        "side": "no",
+        "won": true
+      },
+      {
+        "ask_cents": 70,
+        "gross_cents": 0,
+        "hold_gross_cents": 60,
+        "market": "KXBTC15M-26MAY061015-15",
+        "market_side_entry_index": 1,
+        "p_side": 0.85586,
+        "raw_book_gap": 0.15586,
+        "side": "no",
+        "won": true
+      },
+      {
+        "ask_cents": 42,
+        "gross_cents": -60,
+        "hold_gross_cents": 116,
+        "market": "KXBTC15M-26MAY062015-15",
+        "market_side_entry_index": 0,
+        "p_side": 0.871622,
+        "raw_book_gap": 0.451622,
+        "side": "no",
+        "won": true
+      },
+      {
+        "ask_cents": 67,
+        "gross_cents": -134,
+        "hold_gross_cents": -134,
+        "market": "KXBTC15M-26MAY062015-15",
+        "market_side_entry_index": 1,
+        "p_side": 0.885657,
+        "raw_book_gap": 0.215657,
+        "side": "yes",
+        "won": false
+      },
+      {
+        "ask_cents": 61,
+        "gross_cents": 14,
+        "hold_gross_cents": 78,
+        "market": "KXBTC15M-26MAY062100-00",
+        "market_side_entry_index": 2,
+        "p_side": 0.852359,
+        "raw_book_gap": 0.242359,
+        "side": "yes",
+        "won": true
+      }
+    ],
+    "skipped_gross_cents": -258.0,
+    "skipped_hold_gross_cents": 288.0,
+    "wins": 119
+  },
+  "control": {
+    "entries": 142,
+    "gross_cents": 715.0,
+    "hold_gross_cents": 2814.0,
+    "losses": 17,
+    "market_coverage_pct": 100.0,
+    "policy": "current_v28_approved_all",
+    "settled": 142,
+    "skipped_entries": 0,
+    "skipped_examples": [],
+    "skipped_gross_cents": 0,
+    "skipped_hold_gross_cents": 0,
+    "wins": 125
+  },
+  "freeze": {
+    "freeze_ts_utc": "2026-05-06T03:09:58.042066+00:00",
+    "policy": "skip_reentry_gap15_or_gap30",
+    "rule": "keep row unless raw-book gap > 0.30, or same-market same-side reentry has raw-book gap > 0.15",
+    "source_artifact": "v28_danger_zone_entry_valve_latest.json"
+  },
+  "future_markets": 84,
+  "future_rows": 142,
+  "interpretation": [
+    "Frozen danger-zone policy skip_reentry_gap15_or_gap30 has 134 future settled approved rows and delta 258.0c vs current approved entries.",
+    "This is actual-v28-approved-only forward validation; it does not score rejected simulated entries."
+  ]
+}

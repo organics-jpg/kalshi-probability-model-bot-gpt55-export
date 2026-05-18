@@ -1,0 +1,1422 @@
+{
+  "achieved": false,
+  "checklist": [
+    {
+      "actual": {
+        "candidate_rows": 995,
+        "controlled_gate_decision": "no_live_test",
+        "immediate_queue_decision": "no_immediate_live_launch_all_ranked_candidates_deferred",
+        "positive_rows": 788,
+        "positive_target_rows": 582,
+        "top_ranked_candidate": {
+          "blockers": [
+            "diagnostic_prefreeze",
+            "source_gate_zero_row_margin"
+          ],
+          "candidate_vs_live_live_ready": false,
+          "coverage_pct": 75.24752475247524,
+          "defer_reasons": [
+            "diagnostic_prefreeze",
+            "full_policy_live_test_not_allowed",
+            "live_ready_false",
+            "not_strict_forward",
+            "source_gate_zero_row_margin"
+          ],
+          "delta_vs_live_cents": 872.0,
+          "full_policy_available": true,
+          "full_policy_evidence": {
+            "coverage_pct": 75.24752475247524,
+            "delta_vs_current_cents": null,
+            "delta_vs_live_cents": 872.0,
+            "entries": 76,
+            "full_loss_cushion": 22,
+            "loss_control_cost_cents": null,
+            "losses": null,
+            "net_cents": 2233.0,
+            "reconstructed_share": 0.34210526315789475,
+            "settled": 76,
+            "suppressed_exits": null,
+            "wins": null,
+            "wins_losses": "67/9"
+          },
+          "full_policy_live_test_allowed": false,
+          "full_policy_missing_gates": [
+            "live_ready_false",
+            "not_strict_forward",
+            "diagnostic_prefreeze",
+            "source_gate_zero_row_margin"
+          ],
+          "full_policy_type": "entry_or_stack",
+          "gate": "top_component_parent_fill_repair_child",
+          "launchable_now": false,
+          "losses": 9,
+          "net_cents": 2233.0,
+          "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+          "settled": 76,
+          "source_share": 0.34210526315789475,
+          "win_rate": 0.881578947368421,
+          "wins": 67
+        }
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+        "logs\\edge_research\\v28_controlled_live_test_gate_latest.json",
+        "logs\\edge_research\\v28_immediate_live_test_queue_latest.json"
+      ],
+      "note": "The current path uses existing artifacts and now ranks candidates by PnL/win rate first; the top ranked rows are formally deferred by live-test gates.",
+      "passed": true,
+      "requirement": "Audit existing v28 candidates before inventing new broad strategy families.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "candidate_vs_live_generated_at_utc": "2026-05-08T02:40:46.426418+00:00",
+        "completed_round_trips": 334,
+        "entries_total": 470,
+        "net_cents": 2215.0,
+        "open_positions": 0,
+        "score_mode": "live_only",
+        "strategy_tag": "live_mushroom_v28_size2"
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_controlled_live_test_gate_latest.json",
+        "logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json"
+      ],
+      "note": "The baseline is local live-only scoring; exchange-side reconciliation is still only required once a candidate trial starts.",
+      "passed": true,
+      "requirement": "Refresh and compare against the live-only v28 baseline after fees.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "active_live_policy_contract": {
+          "accounting_pnl_rule": "score_bot_log.py in live_only mode with exchange fill/fee override and fractional fee cents preserved; Kalshi reconciliation checks balance, positions, resting orders, recent fills, fees, and candidate fills",
+          "entry_rule": "v28 common-clock mushroom fair-value entry with feature gate disabled, Coinbase REST BTC freshness fallback, min net edge >=2c, ask <=90c, seconds_to_close >=70, entry book age <=1000ms, and BTC/account/risk checks",
+          "exit_state_rule": "current v28 common-clock exit guard with value-over-hold IOC exits, visible-depth check, 30-second post-fill exit delay, and one position per market",
+          "family": "active_sourcefix_broad_btcrest_size1",
+          "iteration_rule": "after every entry, exit, fill, settlement, no-entry cluster, or kill-watch movement, rerun score/status/near-miss/zero-entry/audit checks and version any threshold, exit, or sizing tweak separately",
+          "launcher": "scripts/run_v28_common_clock_exit_guard_sourcefix_broad_btcrest_live_size1.ps1",
+          "live_test_rule": "real Kalshi trades only under the broad BTC-REST strategy/log tags; separate bot log, execution events, guard ledger, exchange reconciliation ledger, stats, and monitor log",
+          "log_source_tag": "live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1",
+          "rationale": "selected as the current tradeable v28-derived live lane after stricter sourcefix/hybrid variants produced no-fill or negative evidence; broad thresholds preserve coverage while kill rules control source quality",
+          "risk_kill_rule": "monitor kills or downgrades on loss_cluster>=3, drawdown>=200c, zero-fill count>=8, source-stale reject share>=70% after >=100 rejects, process/lock failure, exchange/accounting mismatch, or unresolved exposure/orders",
+          "sizing_rule": "controlled live size 1, multi-entry disabled, max same-market risk 100c",
+          "strategy_tag": "mushroom_v28_common_clock_exit_guard_v1_sourcefix_broad_btcrest_size1_live"
+        },
+        "candidate_cards": 49,
+        "closest_policy": {
+          "candidate_type": "exit_policy",
+          "coverage_pct": null,
+          "delta_vs_current_cents": 214.0,
+          "delta_vs_live_cents": null,
+          "full_loss_cushion": 6,
+          "gate": "common_clock_strict_forward_v3",
+          "live_test_allowed": false,
+          "loss_control_cost_cents": 0.0,
+          "missing_gates": [
+            "live_ready_false",
+            "suppressed_decisions_lt_30"
+          ],
+          "net_cents": 692.0,
+          "policy": "loss_guard_value_p85_reduce_p79_gap0",
+          "reconstructed_share": null,
+          "settled": 46,
+          "source": "exit_policy_watch_dashboard",
+          "suppressed_exits": 13
+        },
+        "contract_keys": [
+          "accounting_pnl_rule",
+          "entry_rule",
+          "exit_state_rule",
+          "iteration_rule",
+          "live_test_rule",
+          "risk_kill_rule",
+          "sizing_rule"
+        ],
+        "displayed_closest_policy_cards": 12,
+        "full_policy_decision": "no_live_test",
+        "live_test_allowed_count": 0
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json"
+      ],
+      "note": "The active live contract has explicit entry, exit/state, sizing, risk, live-test, accounting, and iteration rules.",
+      "passed": true,
+      "requirement": "Represent credible candidates as full policies, not isolated components.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "best_window": {
+          "blockers_from_source": [
+            "suppressed_decisions_lt_30"
+          ],
+          "candidate_cents": 692.0,
+          "candidate_wl": "33/13",
+          "current_cents": 478.0,
+          "current_wl": "31/15",
+          "delta_vs_current_cents": 214.0,
+          "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+          "full_loss_cushion": 6,
+          "harmful_suppressed_rows": 0,
+          "helpful_suppressed_rows": 13,
+          "loss_control_cost_cents": 0.0,
+          "missing_gates": [
+            "live_ready_false",
+            "suppressed_needed_17"
+          ],
+          "review_ready_except_global_live": false,
+          "settled": 46,
+          "suppressed_exits": 13,
+          "window": "new_exit_mix_common_forward_v3"
+        },
+        "nearest_candidate": {
+          "candidate_type": "exit_policy",
+          "coverage_pct": null,
+          "delta_vs_current_cents": 214.0,
+          "delta_vs_live_cents": null,
+          "full_loss_cushion": 6,
+          "gate": "common_clock_strict_forward_v3",
+          "live_test_allowed": false,
+          "loss_control_cost_cents": 0.0,
+          "missing_gates": [
+            "live_ready_false",
+            "suppressed_decisions_lt_30"
+          ],
+          "net_cents": 692.0,
+          "policy": "loss_guard_value_p85_reduce_p79_gap0",
+          "reconstructed_share": null,
+          "settled": 46,
+          "source": "exit_policy_watch_dashboard",
+          "suppressed_exits": 13
+        },
+        "net_leader": {
+          "candidate_cents": 692.0,
+          "candidate_wl": "33/13",
+          "current_cents": 478.0,
+          "current_wl": "31/15",
+          "delta_vs_current_cents": 214.0,
+          "full_loss_cushion": 6,
+          "harmful_suppressed_rows": 0,
+          "helpful_suppressed_rows": 13,
+          "loss_control_cost_cents": 0.0,
+          "missing_gates": [
+            "live_ready_false",
+            "suppressed_needed_17"
+          ],
+          "settled": 46,
+          "suppressed_exits": 13,
+          "suppressed_needed": 17,
+          "window": "new_exit_mix_common_forward_v3"
+        },
+        "readiness_frontier": {
+          "candidate_cents": 668.0,
+          "candidate_wl": "41/17",
+          "current_cents": 426.0,
+          "current_wl": "39/19",
+          "delta_vs_current_cents": 242.0,
+          "full_loss_cushion": 6,
+          "harmful_suppressed_rows": 0,
+          "helpful_suppressed_rows": 17,
+          "loss_control_cost_cents": 0.0,
+          "missing_gates": [
+            "live_ready_false",
+            "suppressed_needed_13"
+          ],
+          "settled": 58,
+          "suppressed_exits": 17,
+          "suppressed_needed": 13,
+          "window": "new_exit_mix_common_forward_v2"
+        },
+        "runway_decision": "wait_for_forward_density"
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_runway_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_frontier_latest.json"
+      ],
+      "note": "The nearest clean core is exit-first: current v28 entries plus common-clock loss-guard exit suppression; v2 is the readiness frontier while v3 remains the net leader.",
+      "passed": true,
+      "requirement": "Identify the nearest coherent v28-derived clean core.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "harmful_suppressed_rows": 0,
+        "loss_control_cost_cents": 0.0,
+        "missing_gates": [
+          "live_ready_false",
+          "suppressed_needed_13"
+        ],
+        "readiness_frontier_window": "new_exit_mix_common_forward_v2",
+        "runway_decision": "wait_for_forward_density",
+        "suppressed_exits": 17,
+        "suppressed_needed": 13
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_common_clock_exit_guard_runway_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_frontier_latest.json"
+      ],
+      "note": "The readiness frontier is positive and clean so far, but it needs more strict suppressions before live review.",
+      "passed": false,
+      "requirement": "Require meaningful strict/forward evidence before any live candidate trading.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "broad_eligible": 0,
+        "controlled_gate_decision": "no_live_test",
+        "full_policy_decision": "no_live_test",
+        "live_test_allowed_count": 0,
+        "live_trial_status": "running_scored_round_trips",
+        "sidecar_eligible": 0
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_controlled_live_test_gate_latest.json",
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_trial_status_latest.json"
+      ],
+      "note": "Older controlled-gate artifacts still say no_live_test; the amended goal required moving the nearest coherent controlled policy into a size-1 trial, so this is now tracked as an operator override to be judged by live evidence.",
+      "passed": null,
+      "requirement": "Only live-test candidates that clear controlled gates.",
+      "status": "unverified"
+    },
+    {
+      "actual": {
+        "candidate": {
+          "accounting_pnl_rule": "Separate BOT_STORAGE_TAG, logs, stats, execution_events, exchange fills/orders/fees reconciliation, and live-only score comparison.",
+          "entry_rule": "Current v28 approved-entry stream.",
+          "exit_state_rule": "Suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+          "iteration_rule": "No threshold tweaks during a live trial; version a new candidate after post-trial scoring names the blocker.",
+          "live_test_rule": "Only one DRY_RUN=false process may own real exits. Until a production switch exists, run paper/virtual ledger only.",
+          "risk_kill_rule": "Stop candidate on any harmful suppressed hold, any net loss cluster >=3, drawdown >=200c, accounting mismatch, stale account state, or exchange reconciliation failure.",
+          "sizing_rule": "Start at size=1, max same-market position=1 for any future live trial."
+        },
+        "implementation_gap_decision": "implementation_ready_for_paper_shadow_review",
+        "paper_shadow_safety_decision": "pass_paper_shadow_source_safety",
+        "paper_shadow_safety_summary": {
+          "checks_failed": 0,
+          "checks_passed": 9,
+          "checks_total": 9
+        },
+        "proposed_artifacts": {
+          "exchange_reconciliation": "logs/live_mushroom_v28_common_clock_exit_guard_size1/exchange_reconciliation.ndjson",
+          "execution_events": "logs/live_mushroom_v28_common_clock_exit_guard_size1/execution_events.ndjson",
+          "logs": "logs/live_mushroom_v28_common_clock_exit_guard_size1/",
+          "score_mode": "live_only",
+          "state": "state/live_mushroom_v28_common_clock_exit_guard_size1/",
+          "stats": "stats/live_mushroom_v28_common_clock_exit_guard_size1/"
+        },
+        "proposed_live_env": {
+          "BOT_STORAGE_TAG": "live_mushroom_v28_common_clock_exit_guard_size1",
+          "DRY_RUN": "false only after all go/no-go gates pass",
+          "LIVE_APPROVED_STRATEGY_TAG": "mushroom_v28_common_clock_exit_guard_v1_size1",
+          "MULTI_ENTRY_MAX_POSITION_CONTRACTS": "1",
+          "MULTI_ENTRY_SAME_MARKET_ENABLED": "false",
+          "POSITION_SIZE": "1",
+          "STRATEGY_TAG": "mushroom_v28_common_clock_exit_guard_v1_size1"
+        },
+        "spec_decision": "blocked_do_not_live_test"
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_common_clock_exit_guard_live_test_spec_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_implementation_gap_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_safety_verifier_latest.json"
+      ],
+      "note": "The spec defines the size-1 trial; source scaffolding and dormant paper-shadow safety pass, and the live status artifact now tracks the launched process.",
+      "passed": true,
+      "requirement": "Controlled live-test contract exists before any real candidate trial.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "execution_counts": {
+          "approved_signals": 2,
+          "events": 469,
+          "filled_events": 8,
+          "order_submit_start": 4,
+          "order_submit_success": 4,
+          "zero_fill_attempts": 0,
+          "zero_fill_events": 0
+        },
+        "execution_diagnostics_decision": "filled_entry_seen_continue_scoring",
+        "go_no_go": [
+          {
+            "current": "blocked",
+            "evidence": "new_exit_mix_common_forward_v2 has 17 suppressions; missing ['live_ready_false', 'suppressed_needed_13']",
+            "gate": "strict_forward_density",
+            "required": ">=30 strict suppressions in the selected common-clock window"
+          },
+          {
+            "current": "pass",
+            "evidence": "harmful=0 loss_cost=0.0c",
+            "gate": "loss_control",
+            "required": "0 harmful suppressions and non-negative loss-control cost"
+          },
+          {
+            "current": "blocked",
+            "evidence": "no_live_test",
+            "gate": "full_policy_live_gate",
+            "required": "full-policy scorecard allows live test"
+          },
+          {
+            "current": "pass",
+            "evidence": "Source has live-lock, v28 exit path, guard mode, evaluator, and paper shadow ledger.",
+            "gate": "single_process_exit_owner",
+            "required": "candidate exit rule owns exits in the same live process or runs only as paper shadow"
+          },
+          {
+            "current": "pass",
+            "evidence": "Candidate kill-state source hooks present.",
+            "gate": "candidate_kill_state",
+            "required": "candidate stops on harmful suppressed hold, loss cluster, drawdown, stale account, or accounting mismatch"
+          },
+          {
+            "current": "pass",
+            "evidence": "Live trial reconciliation is active: Kalshi balance, positions, resting orders, recent fills, and submitted order records were checked.",
+            "gate": "exchange_reconciliation_plan",
+            "required": "pre/post Kalshi balance, positions, fills, realized PnL, fees, exposure, and orders reconciled"
+          }
+        ],
+        "immediate_queue_decision": "no_immediate_live_launch_all_ranked_candidates_deferred",
+        "latest_execution_attempt": {
+          "actual_fee_cents": null,
+          "actual_fill_price_cents": null,
+          "book_age_ms": 0.0,
+          "book_summary": "[69:1121.06, 68:1280.66, 67:455, 66:55, 65:55]",
+          "client_order_id": "btc15m-exit-5162d7da-b89d-43ee-877d-41ddb9425751",
+          "decision_reason": "mushroom_v28_exit_value_over_hold_single_shot_visible_depth",
+          "event_type": "order_submit_success",
+          "exchange_status": "executed",
+          "feed_age_ms": 327.653,
+          "fill_count": 1,
+          "local_reaction_ms": 219.00000001187436,
+          "market": "KXBTC15M-26MAY072330-30",
+          "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+          "remaining_count": 0,
+          "result": "executed",
+          "side": "yes",
+          "time_in_force": "immediate_or_cancel",
+          "top_of_book_limit_cents": 69,
+          "trigger_price_cents": 69,
+          "ts_wall": "2026-05-08T03:15:48.035164+00:00"
+        },
+        "live_log_source_tag": "live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1",
+        "live_test_allowed_count": 0,
+        "live_trial_running": true,
+        "live_trial_score": {
+          "completed_round_trips": 2,
+          "diagnosis": "ok",
+          "entries_total": 2,
+          "net_pnl_total_dollars": 0.05,
+          "open_positions": 0,
+          "score_mode": "live_only"
+        },
+        "live_trial_status": "running_scored_round_trips",
+        "readiness_any_live_ready": false,
+        "spec_decision": "blocked_do_not_live_test",
+        "top_deferred_candidate": {
+          "blockers": [
+            "diagnostic_prefreeze",
+            "source_gate_zero_row_margin"
+          ],
+          "candidate_vs_live_live_ready": false,
+          "coverage_pct": 75.24752475247524,
+          "defer_reasons": [
+            "diagnostic_prefreeze",
+            "full_policy_live_test_not_allowed",
+            "live_ready_false",
+            "not_strict_forward",
+            "source_gate_zero_row_margin"
+          ],
+          "delta_vs_live_cents": 872.0,
+          "full_policy_available": true,
+          "full_policy_evidence": {
+            "coverage_pct": 75.24752475247524,
+            "delta_vs_current_cents": null,
+            "delta_vs_live_cents": 872.0,
+            "entries": 76,
+            "full_loss_cushion": 22,
+            "loss_control_cost_cents": null,
+            "losses": null,
+            "net_cents": 2233.0,
+            "reconstructed_share": 0.34210526315789475,
+            "settled": 76,
+            "suppressed_exits": null,
+            "wins": null,
+            "wins_losses": "67/9"
+          },
+          "full_policy_live_test_allowed": false,
+          "full_policy_missing_gates": [
+            "live_ready_false",
+            "not_strict_forward",
+            "diagnostic_prefreeze",
+            "source_gate_zero_row_margin"
+          ],
+          "full_policy_type": "entry_or_stack",
+          "gate": "top_component_parent_fill_repair_child",
+          "launchable_now": false,
+          "losses": 9,
+          "net_cents": 2233.0,
+          "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+          "settled": 76,
+          "source_share": 0.34210526315789475,
+          "win_rate": 0.881578947368421,
+          "wins": 67
+        }
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_common_clock_exit_guard_live_test_spec_latest.json",
+        "logs\\edge_research\\v28_live_trade_readiness_latest.json",
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+        "logs\\edge_research\\v28_immediate_live_test_queue_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_trial_status_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_execution_diagnostics_latest.json"
+      ],
+      "note": "The size-1 live trial has 2 scored round trip and is positive after fees at $0.05, but still needs a meaningful stable sample.",
+      "passed": true,
+      "requirement": "Live candidate trial with real trades is complete and profitable after fees.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "candidate_recent_fills_since_run_count": 4,
+        "exchange_reconciliation_gate": {
+          "current": "pass",
+          "evidence": "Live trial reconciliation is active: Kalshi balance, positions, resting orders, recent fills, and submitted order records were checked.",
+          "gate": "exchange_reconciliation_plan",
+          "required": "pre/post Kalshi balance, positions, fills, realized PnL, fees, exposure, and orders reconciled"
+        },
+        "execution_reconciliation_available": true,
+        "live_trial_exchange": {
+          "available": true,
+          "balance": {
+            "balance": 2344,
+            "portfolio_value": 0,
+            "updated_ts": 1778212722
+          },
+          "positions": [],
+          "recent_fills_count": 10,
+          "resting_orders": []
+        },
+        "orders_checked": 4,
+        "planned_artifacts": {
+          "exchange_reconciliation": "logs/live_mushroom_v28_common_clock_exit_guard_size1/exchange_reconciliation.ndjson",
+          "execution_events": "logs/live_mushroom_v28_common_clock_exit_guard_size1/execution_events.ndjson",
+          "logs": "logs/live_mushroom_v28_common_clock_exit_guard_size1/",
+          "score_mode": "live_only",
+          "state": "state/live_mushroom_v28_common_clock_exit_guard_size1/",
+          "stats": "stats/live_mushroom_v28_common_clock_exit_guard_size1/"
+        },
+        "reconciliation_ledger_exists": true,
+        "reconciliation_snapshot_appended": true
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_common_clock_exit_guard_live_test_spec_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_trial_status_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_execution_diagnostics_latest.json"
+      ],
+      "note": "Exchange reconciliation is active: balance, positions, resting orders, recent fills, and submitted order records were checked through Kalshi.",
+      "passed": true,
+      "requirement": "Use Kalshi/exchange reconciliation when exchange-side evidence is available.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "closest_missing_gates": [
+          "live_ready_false",
+          "suppressed_decisions_lt_30"
+        ],
+        "execution_diagnostics_decision": "filled_entry_seen_continue_scoring",
+        "go_no_go_blocked": [
+          {
+            "current": "blocked",
+            "evidence": "new_exit_mix_common_forward_v2 has 17 suppressions; missing ['live_ready_false', 'suppressed_needed_13']",
+            "gate": "strict_forward_density",
+            "required": ">=30 strict suppressions in the selected common-clock window"
+          },
+          {
+            "current": "blocked",
+            "evidence": "no_live_test",
+            "gate": "full_policy_live_gate",
+            "required": "full-policy scorecard allows live test"
+          }
+        ],
+        "goal_completion_achieved": false,
+        "implementation_blockers": [],
+        "implementation_gap_decision": "implementation_ready_for_paper_shadow_review",
+        "live_collection_blockers": [
+          "research_only",
+          "exit_watches_still_need_suppression_density_or_cushion",
+          "feature_gate_sidecar_evidence_separate_from_size2_baseline",
+          "feature_gate_sidecar_no_order_like_events_seen"
+        ],
+        "live_trial_status": "running_scored_round_trips",
+        "objective_gap_achieved": false,
+        "paper_shadow_safety_decision": "pass_paper_shadow_source_safety"
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_live_test_spec_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_implementation_gap_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_safety_verifier_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_trial_status_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_execution_diagnostics_latest.json",
+        "logs\\edge_research\\v28_forward_collection_blocker_audit_latest.json",
+        "logs\\edge_research\\v28_objective_gap_checklist_latest.json",
+        "logs\\edge_research\\v28_goal_completion_audit_latest.json"
+      ],
+      "note": "The nearest exit policy still lacks older suppression-density/live-readiness gates, but the live trial is now running under size-1 controls and must be judged by its own exchange-reconciled evidence.",
+      "passed": false,
+      "requirement": "No unresolved operational/source-quality/exit blockers remain.",
+      "status": "blocked"
+    },
+    {
+      "actual": {
+        "coverage_pct": null,
+        "current_focus": "prove clean profitable core first",
+        "decision": "wait_for_forward_density",
+        "nearest_candidate_type": "exit_policy"
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_runway_latest.json"
+      ],
+      "note": "The active next step is forward-density and false-hold safety, not widening entries to force coverage.",
+      "passed": true,
+      "requirement": "Coverage stays secondary to durable profitability.",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "achieved": false,
+        "execution_diagnostics_decision": "filled_entry_seen_continue_scoring",
+        "live_log_source_tag": "live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1",
+        "live_trial_status": "running_scored_round_trips",
+        "nearest_policy": {
+          "candidate_type": "exit_policy",
+          "coverage_pct": null,
+          "delta_vs_current_cents": 214.0,
+          "delta_vs_live_cents": null,
+          "full_loss_cushion": 6,
+          "gate": "common_clock_strict_forward_v3",
+          "live_test_allowed": false,
+          "loss_control_cost_cents": 0.0,
+          "missing_gates": [
+            "live_ready_false",
+            "suppressed_decisions_lt_30"
+          ],
+          "net_cents": 692.0,
+          "policy": "loss_guard_value_p85_reduce_p79_gap0",
+          "reconstructed_share": null,
+          "settled": 46,
+          "source": "exit_policy_watch_dashboard",
+          "suppressed_exits": 13
+        },
+        "remaining_hard_blockers": [
+          "live sample is not meaningfully profitable yet (2/30 completed round trips)",
+          "older strict-forward and live-readiness artifacts still need to be superseded by live evidence"
+        ]
+      },
+      "evidence": [
+        "logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_runway_latest.json",
+        "logs\\edge_research\\v28_common_clock_exit_guard_live_test_spec_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_trial_status_latest.json",
+        "logs\\edge_research\\v28_common_clock_live_execution_diagnostics_latest.json"
+      ],
+      "note": "A coherent policy is running, but the definition of done requires profitable live round trips and stable accounting.",
+      "passed": false,
+      "requirement": "Definition of done is satisfied by one coherent tradeable strategy.",
+      "status": "blocked"
+    }
+  ],
+  "completion_status": "not_complete_live_trial_needs_meaningful_profitable_sample",
+  "decision": "live_trial_running_collect_evidence",
+  "generated_at_utc": "2026-05-08T03:59:36.694575+00:00",
+  "nearest_coherent_policy": {
+    "active_live_policy_contract": {
+      "accounting_pnl_rule": "score_bot_log.py in live_only mode with exchange fill/fee override and fractional fee cents preserved; Kalshi reconciliation checks balance, positions, resting orders, recent fills, fees, and candidate fills",
+      "entry_rule": "v28 common-clock mushroom fair-value entry with feature gate disabled, Coinbase REST BTC freshness fallback, min net edge >=2c, ask <=90c, seconds_to_close >=70, entry book age <=1000ms, and BTC/account/risk checks",
+      "exit_state_rule": "current v28 common-clock exit guard with value-over-hold IOC exits, visible-depth check, 30-second post-fill exit delay, and one position per market",
+      "family": "active_sourcefix_broad_btcrest_size1",
+      "iteration_rule": "after every entry, exit, fill, settlement, no-entry cluster, or kill-watch movement, rerun score/status/near-miss/zero-entry/audit checks and version any threshold, exit, or sizing tweak separately",
+      "launcher": "scripts/run_v28_common_clock_exit_guard_sourcefix_broad_btcrest_live_size1.ps1",
+      "live_test_rule": "real Kalshi trades only under the broad BTC-REST strategy/log tags; separate bot log, execution events, guard ledger, exchange reconciliation ledger, stats, and monitor log",
+      "log_source_tag": "live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1",
+      "rationale": "selected as the current tradeable v28-derived live lane after stricter sourcefix/hybrid variants produced no-fill or negative evidence; broad thresholds preserve coverage while kill rules control source quality",
+      "risk_kill_rule": "monitor kills or downgrades on loss_cluster>=3, drawdown>=200c, zero-fill count>=8, source-stale reject share>=70% after >=100 rejects, process/lock failure, exchange/accounting mismatch, or unresolved exposure/orders",
+      "sizing_rule": "controlled live size 1, multi-entry disabled, max same-market risk 100c",
+      "strategy_tag": "mushroom_v28_common_clock_exit_guard_v1_sourcefix_broad_btcrest_size1_live"
+    },
+    "candidate": {
+      "candidate_type": "exit_policy",
+      "coverage_pct": null,
+      "delta_vs_current_cents": 214.0,
+      "delta_vs_live_cents": null,
+      "full_loss_cushion": 6,
+      "gate": "common_clock_strict_forward_v3",
+      "live_test_allowed": false,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "net_cents": 692.0,
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "reconstructed_share": null,
+      "settled": 46,
+      "source": "exit_policy_watch_dashboard",
+      "suppressed_exits": 13
+    },
+    "conditional_live_test_contract": {
+      "accounting_pnl_rule": "Separate BOT_STORAGE_TAG, logs, stats, execution_events, exchange fills/orders/fees reconciliation, and live-only score comparison.",
+      "entry_rule": "Current v28 approved-entry stream.",
+      "exit_state_rule": "Suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+      "iteration_rule": "No threshold tweaks during a live trial; version a new candidate after post-trial scoring names the blocker.",
+      "live_test_rule": "Only one DRY_RUN=false process may own real exits. Until a production switch exists, run paper/virtual ledger only.",
+      "risk_kill_rule": "Stop candidate on any harmful suppressed hold, any net loss cluster >=3, drawdown >=200c, accounting mismatch, stale account state, or exchange reconciliation failure.",
+      "sizing_rule": "Start at size=1, max same-market position=1 for any future live trial."
+    },
+    "contract": {
+      "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+      "entry_rule": "Current live v28 approved entry stream.",
+      "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+      "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+      "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+      "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+      "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+    },
+    "execution_diagnostics": {
+      "artifacts": {
+        "execution_events": "logs\\live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1\\execution_events.ndjson"
+      },
+      "counts": {
+        "approved_signals": 2,
+        "events": 469,
+        "filled_events": 8,
+        "order_submit_start": 4,
+        "order_submit_success": 4,
+        "zero_fill_attempts": 0,
+        "zero_fill_events": 0
+      },
+      "decision": "filled_entry_seen_continue_scoring",
+      "generated_at_utc": "2026-05-08T03:58:44.356664+00:00",
+      "latest_attempt": {
+        "actual_fee_cents": null,
+        "actual_fill_price_cents": null,
+        "book_age_ms": 0.0,
+        "book_summary": "[69:1121.06, 68:1280.66, 67:455, 66:55, 65:55]",
+        "client_order_id": "btc15m-exit-5162d7da-b89d-43ee-877d-41ddb9425751",
+        "decision_reason": "mushroom_v28_exit_value_over_hold_single_shot_visible_depth",
+        "event_type": "order_submit_success",
+        "exchange_status": "executed",
+        "feed_age_ms": 327.653,
+        "fill_count": 1,
+        "local_reaction_ms": 219.00000001187436,
+        "market": "KXBTC15M-26MAY072330-30",
+        "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+        "remaining_count": 0,
+        "result": "executed",
+        "side": "yes",
+        "time_in_force": "immediate_or_cancel",
+        "top_of_book_limit_cents": 69,
+        "trigger_price_cents": 69,
+        "ts_wall": "2026-05-08T03:15:48.035164+00:00"
+      },
+      "recent_fills": [
+        {
+          "actual_fee_cents": null,
+          "actual_fill_price_cents": null,
+          "book_age_ms": 16.00000000325963,
+          "book_summary": "[8:80, 7:534.19, 6:2369.62, 5:500, 4:1125]",
+          "client_order_id": "btc15m-exit-a258956c-da70-4d3b-bc78-ce9d5681dc4b",
+          "decision_reason": "mushroom_v28_exit_value_over_hold_single_shot_visible_depth",
+          "event_type": "fill_full",
+          "exchange_status": "executed",
+          "feed_age_ms": 568.564,
+          "fill_count": 1,
+          "local_reaction_ms": 280.99999998812564,
+          "market": "KXBTC15M-26MAY072315-15",
+          "order_id": "37d5850b-338f-454b-b67e-aa2a78099153",
+          "remaining_count": 0,
+          "result": "executed",
+          "side": "yes",
+          "time_in_force": "immediate_or_cancel",
+          "top_of_book_limit_cents": 8,
+          "trigger_price_cents": 8,
+          "ts_wall": "2026-05-08T03:08:55.207362+00:00"
+        },
+        {
+          "actual_fee_cents": null,
+          "actual_fill_price_cents": null,
+          "book_age_ms": 0.0,
+          "book_summary": "[60:114.81, 61:456, 62:2656, 63:233.16, 64:345]",
+          "client_order_id": "btc15m-entry-30b6cddc-4efd-4e88-a2dd-113c3bd797ab",
+          "decision_reason": "single_shot_abundant_depth",
+          "event_type": "order_submit_success",
+          "exchange_status": "executed",
+          "feed_age_ms": null,
+          "fill_count": 1,
+          "local_reaction_ms": null,
+          "market": "KXBTC15M-26MAY072330-30",
+          "order_id": "a7006c84-7425-4a4b-be35-731bd43230b4",
+          "remaining_count": 0,
+          "result": "executed",
+          "side": "yes",
+          "time_in_force": "immediate_or_cancel",
+          "top_of_book_limit_cents": 60,
+          "trigger_price_cents": 60,
+          "ts_wall": "2026-05-08T03:15:16.826884+00:00"
+        },
+        {
+          "actual_fee_cents": null,
+          "actual_fill_price_cents": null,
+          "book_age_ms": 0.0,
+          "book_summary": "[60:114.81, 61:456, 62:2656, 63:233.16, 64:345]",
+          "client_order_id": "btc15m-entry-30b6cddc-4efd-4e88-a2dd-113c3bd797ab",
+          "decision_reason": "single_shot_abundant_depth",
+          "event_type": "fill_full",
+          "exchange_status": "executed",
+          "feed_age_ms": null,
+          "fill_count": 1,
+          "local_reaction_ms": null,
+          "market": "KXBTC15M-26MAY072330-30",
+          "mushroom_v28_edge_cents": 26.130758,
+          "mushroom_v28_eligible_depth": "114.81",
+          "mushroom_v28_p_side": 0.901308,
+          "order_id": "a7006c84-7425-4a4b-be35-731bd43230b4",
+          "remaining_count": 0,
+          "result": "executed",
+          "side": "yes",
+          "time_in_force": "immediate_or_cancel",
+          "top_of_book_limit_cents": 60,
+          "trigger_price_cents": 60,
+          "ts_wall": "2026-05-08T03:15:16.829959+00:00"
+        },
+        {
+          "actual_fee_cents": null,
+          "actual_fill_price_cents": null,
+          "book_age_ms": 0.0,
+          "book_summary": "[69:1121.06, 68:1280.66, 67:455, 66:55, 65:55]",
+          "client_order_id": "btc15m-exit-5162d7da-b89d-43ee-877d-41ddb9425751",
+          "decision_reason": "mushroom_v28_exit_value_over_hold_single_shot_visible_depth",
+          "event_type": "order_submit_success",
+          "exchange_status": "executed",
+          "feed_age_ms": 327.653,
+          "fill_count": 1,
+          "local_reaction_ms": 219.00000001187436,
+          "market": "KXBTC15M-26MAY072330-30",
+          "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+          "remaining_count": 0,
+          "result": "executed",
+          "side": "yes",
+          "time_in_force": "immediate_or_cancel",
+          "top_of_book_limit_cents": 69,
+          "trigger_price_cents": 69,
+          "ts_wall": "2026-05-08T03:15:48.035164+00:00"
+        },
+        {
+          "actual_fee_cents": null,
+          "actual_fill_price_cents": null,
+          "book_age_ms": 0.0,
+          "book_summary": "[69:1121.06, 68:1280.66, 67:455, 66:55, 65:55]",
+          "client_order_id": "btc15m-exit-5162d7da-b89d-43ee-877d-41ddb9425751",
+          "decision_reason": "mushroom_v28_exit_value_over_hold_single_shot_visible_depth",
+          "event_type": "fill_full",
+          "exchange_status": "executed",
+          "feed_age_ms": 380.34000000000003,
+          "fill_count": 1,
+          "local_reaction_ms": 265.00000001396984,
+          "market": "KXBTC15M-26MAY072330-30",
+          "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+          "remaining_count": 0,
+          "result": "executed",
+          "side": "yes",
+          "time_in_force": "immediate_or_cancel",
+          "top_of_book_limit_cents": 69,
+          "trigger_price_cents": 69,
+          "ts_wall": "2026-05-08T03:15:48.035164+00:00"
+        }
+      ],
+      "recent_zero_fills": [],
+      "reconciliation": {
+        "available": true,
+        "fills_by_market": {
+          "KXBTC15M-26MAY072315-15": [
+            {
+              "action": "sell",
+              "count_fp": "1.00",
+              "created_time": "2026-05-08T03:08:55.205622Z",
+              "fee_cost": "0.014000",
+              "fill_id": "0eff939c-4964-5884-6f83-709db65f855d",
+              "is_taker": true,
+              "market_ticker": "KXBTC15M-26MAY072315-15",
+              "no_price_dollars": "0.9060",
+              "order_id": "37d5850b-338f-454b-b67e-aa2a78099153",
+              "side": "no",
+              "subaccount_number": 0,
+              "ticker": "KXBTC15M-26MAY072315-15",
+              "trade_id": "0eff939c-4964-5884-6f83-709db65f855d",
+              "ts": 1778209735,
+              "yes_price_dollars": "0.0940"
+            },
+            {
+              "action": "buy",
+              "count_fp": "1.00",
+              "created_time": "2026-05-08T03:08:20.892258Z",
+              "fee_cost": "0.010000",
+              "fill_id": "5f43ec08-5f01-59e0-5c1e-a82e1822635e",
+              "is_taker": true,
+              "market_ticker": "KXBTC15M-26MAY072315-15",
+              "no_price_dollars": "0.9300",
+              "order_id": "249e16ba-46b7-45eb-bb60-8c21cc186984",
+              "side": "yes",
+              "subaccount_number": 0,
+              "ticker": "KXBTC15M-26MAY072315-15",
+              "trade_id": "5f43ec08-5f01-59e0-5c1e-a82e1822635e",
+              "ts": 1778209700,
+              "yes_price_dollars": "0.0700"
+            }
+          ],
+          "KXBTC15M-26MAY072330-30": [
+            {
+              "action": "sell",
+              "count_fp": "1.00",
+              "created_time": "2026-05-08T03:15:48.027968Z",
+              "fee_cost": "0.020000",
+              "fill_id": "cc90495a-37df-72f5-3026-f06626d52652",
+              "is_taker": true,
+              "market_ticker": "KXBTC15M-26MAY072330-30",
+              "no_price_dollars": "0.3100",
+              "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+              "side": "no",
+              "subaccount_number": 0,
+              "ticker": "KXBTC15M-26MAY072330-30",
+              "trade_id": "cc90495a-37df-72f5-3026-f06626d52652",
+              "ts": 1778210148,
+              "yes_price_dollars": "0.6900"
+            },
+            {
+              "action": "buy",
+              "count_fp": "1.00",
+              "created_time": "2026-05-08T03:15:16.827041Z",
+              "fee_cost": "0.020000",
+              "fill_id": "e9660e9b-925e-6983-6407-f0bb5fa6f258",
+              "is_taker": true,
+              "market_ticker": "KXBTC15M-26MAY072330-30",
+              "no_price_dollars": "0.4000",
+              "order_id": "a7006c84-7425-4a4b-be35-731bd43230b4",
+              "side": "yes",
+              "subaccount_number": 0,
+              "ticker": "KXBTC15M-26MAY072330-30",
+              "trade_id": "e9660e9b-925e-6983-6407-f0bb5fa6f258",
+              "ts": 1778210116,
+              "yes_price_dollars": "0.6000"
+            }
+          ]
+        },
+        "orders": {
+          "249e16ba-46b7-45eb-bb60-8c21cc186984": {
+            "action": "buy",
+            "client_order_id": "btc15m-entry-ec63bbd1-e8bd-4dee-aa19-8e672bdcc60e",
+            "created_time": "2026-05-08T03:08:20.892258Z",
+            "fill_count_fp": "1.00",
+            "initial_count_fp": "1.00",
+            "last_update_time": "2026-05-08T03:08:20.892258Z",
+            "maker_fees_dollars": "0.000000",
+            "maker_fill_cost_dollars": "0.000000",
+            "no_price_dollars": "0.9300",
+            "order_id": "249e16ba-46b7-45eb-bb60-8c21cc186984",
+            "remaining_count_fp": "0.00",
+            "self_trade_prevention_type": "taker_at_cross",
+            "side": "yes",
+            "status": "executed",
+            "subaccount_number": 0,
+            "taker_fees_dollars": "0.010000",
+            "taker_fill_cost_dollars": "0.070000",
+            "ticker": "KXBTC15M-26MAY072315-15",
+            "type": "limit",
+            "user_id": "673a0a28-13b8-42e7-9665-d0047caf0d02",
+            "yes_price_dollars": "0.0700"
+          },
+          "33d0f3cf-1794-4d08-a5e7-ff2624315556": {
+            "action": "sell",
+            "client_order_id": "btc15m-exit-5162d7da-b89d-43ee-877d-41ddb9425751",
+            "created_time": "2026-05-08T03:15:48.027968Z",
+            "fill_count_fp": "1.00",
+            "initial_count_fp": "1.00",
+            "last_update_time": "2026-05-08T03:15:48.027968Z",
+            "maker_fees_dollars": "0.000000",
+            "maker_fill_cost_dollars": "0.000000",
+            "no_price_dollars": "0.3100",
+            "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+            "remaining_count_fp": "0.00",
+            "self_trade_prevention_type": "taker_at_cross",
+            "side": "yes",
+            "status": "executed",
+            "subaccount_number": 0,
+            "taker_fees_dollars": "0.020000",
+            "taker_fill_cost_dollars": "0.310000",
+            "ticker": "KXBTC15M-26MAY072330-30",
+            "type": "limit",
+            "user_id": "673a0a28-13b8-42e7-9665-d0047caf0d02",
+            "yes_price_dollars": "0.6900"
+          },
+          "37d5850b-338f-454b-b67e-aa2a78099153": {
+            "action": "sell",
+            "client_order_id": "btc15m-exit-a258956c-da70-4d3b-bc78-ce9d5681dc4b",
+            "created_time": "2026-05-08T03:08:55.205622Z",
+            "fill_count_fp": "1.00",
+            "initial_count_fp": "1.00",
+            "last_update_time": "2026-05-08T03:08:55.205622Z",
+            "maker_fees_dollars": "0.000000",
+            "maker_fill_cost_dollars": "0.000000",
+            "no_price_dollars": "0.9200",
+            "order_id": "37d5850b-338f-454b-b67e-aa2a78099153",
+            "remaining_count_fp": "0.00",
+            "self_trade_prevention_type": "taker_at_cross",
+            "side": "yes",
+            "status": "executed",
+            "subaccount_number": 0,
+            "taker_fees_dollars": "0.014000",
+            "taker_fill_cost_dollars": "0.906000",
+            "ticker": "KXBTC15M-26MAY072315-15",
+            "type": "limit",
+            "user_id": "673a0a28-13b8-42e7-9665-d0047caf0d02",
+            "yes_price_dollars": "0.0800"
+          },
+          "a7006c84-7425-4a4b-be35-731bd43230b4": {
+            "action": "buy",
+            "client_order_id": "btc15m-entry-30b6cddc-4efd-4e88-a2dd-113c3bd797ab",
+            "created_time": "2026-05-08T03:15:16.827041Z",
+            "fill_count_fp": "1.00",
+            "initial_count_fp": "1.00",
+            "last_update_time": "2026-05-08T03:15:16.827041Z",
+            "maker_fees_dollars": "0.000000",
+            "maker_fill_cost_dollars": "0.000000",
+            "no_price_dollars": "0.4000",
+            "order_id": "a7006c84-7425-4a4b-be35-731bd43230b4",
+            "remaining_count_fp": "0.00",
+            "self_trade_prevention_type": "taker_at_cross",
+            "side": "yes",
+            "status": "executed",
+            "subaccount_number": 0,
+            "taker_fees_dollars": "0.020000",
+            "taker_fill_cost_dollars": "0.600000",
+            "ticker": "KXBTC15M-26MAY072330-30",
+            "type": "limit",
+            "user_id": "673a0a28-13b8-42e7-9665-d0047caf0d02",
+            "yes_price_dollars": "0.6000"
+          }
+        }
+      }
+    },
+    "live_trial": {
+      "artifact_exists": {
+        "bot_log": true,
+        "execution_events": true,
+        "guard_ledger": true,
+        "reconciliation_ledger": true,
+        "score_summary": true
+      },
+      "artifacts": {
+        "bot_log": "logs\\live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1\\bot.log",
+        "execution_events": "logs\\live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1\\execution_events.ndjson",
+        "guard_ledger": "logs\\live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1\\mushroom_v28_exit_guard_shadow.ndjson",
+        "reconciliation_ledger": "logs\\live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1\\exchange_reconciliation.ndjson",
+        "score_summary": "stats\\mushroom_v28_common_clock_exit_guard_v1_sourcefix_broad_btcrest_size1_live\\summary.json"
+      },
+      "candidate_recent_fills_since_run": [
+        {
+          "action": "sell",
+          "count_fp": "1.00",
+          "created_time": "2026-05-08T03:15:48.027968Z",
+          "fee_cost": "0.020000",
+          "fill_id": "cc90495a-37df-72f5-3026-f06626d52652",
+          "is_taker": true,
+          "market_ticker": "KXBTC15M-26MAY072330-30",
+          "no_price_dollars": "0.3100",
+          "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+          "side": "no",
+          "subaccount_number": 0,
+          "ticker": "KXBTC15M-26MAY072330-30",
+          "trade_id": "cc90495a-37df-72f5-3026-f06626d52652",
+          "ts": 1778210148,
+          "yes_price_dollars": "0.6900"
+        },
+        {
+          "action": "buy",
+          "count_fp": "1.00",
+          "created_time": "2026-05-08T03:15:16.827041Z",
+          "fee_cost": "0.020000",
+          "fill_id": "e9660e9b-925e-6983-6407-f0bb5fa6f258",
+          "is_taker": true,
+          "market_ticker": "KXBTC15M-26MAY072330-30",
+          "no_price_dollars": "0.4000",
+          "order_id": "a7006c84-7425-4a4b-be35-731bd43230b4",
+          "side": "yes",
+          "subaccount_number": 0,
+          "ticker": "KXBTC15M-26MAY072330-30",
+          "trade_id": "e9660e9b-925e-6983-6407-f0bb5fa6f258",
+          "ts": 1778210116,
+          "yes_price_dollars": "0.6000"
+        },
+        {
+          "action": "sell",
+          "count_fp": "1.00",
+          "created_time": "2026-05-08T03:08:55.205622Z",
+          "fee_cost": "0.014000",
+          "fill_id": "0eff939c-4964-5884-6f83-709db65f855d",
+          "is_taker": true,
+          "market_ticker": "KXBTC15M-26MAY072315-15",
+          "no_price_dollars": "0.9060",
+          "order_id": "37d5850b-338f-454b-b67e-aa2a78099153",
+          "side": "no",
+          "subaccount_number": 0,
+          "ticker": "KXBTC15M-26MAY072315-15",
+          "trade_id": "0eff939c-4964-5884-6f83-709db65f855d",
+          "ts": 1778209735,
+          "yes_price_dollars": "0.0940"
+        },
+        {
+          "action": "buy",
+          "count_fp": "1.00",
+          "created_time": "2026-05-08T03:08:20.892258Z",
+          "fee_cost": "0.010000",
+          "fill_id": "5f43ec08-5f01-59e0-5c1e-a82e1822635e",
+          "is_taker": true,
+          "market_ticker": "KXBTC15M-26MAY072315-15",
+          "no_price_dollars": "0.9300",
+          "order_id": "249e16ba-46b7-45eb-bb60-8c21cc186984",
+          "side": "yes",
+          "subaccount_number": 0,
+          "ticker": "KXBTC15M-26MAY072315-15",
+          "trade_id": "5f43ec08-5f01-59e0-5c1e-a82e1822635e",
+          "ts": 1778209700,
+          "yes_price_dollars": "0.0700"
+        }
+      ],
+      "candidate_recent_fills_since_run_count": 4,
+      "exchange": {
+        "available": true,
+        "balance": {
+          "balance": 2344,
+          "portfolio_value": 0,
+          "updated_ts": 1778212722
+        },
+        "positions": [],
+        "recent_fills": [
+          {
+            "action": "sell",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T03:15:48.027968Z",
+            "fee_cost": "0.020000",
+            "fill_id": "cc90495a-37df-72f5-3026-f06626d52652",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072330-30",
+            "no_price_dollars": "0.3100",
+            "order_id": "33d0f3cf-1794-4d08-a5e7-ff2624315556",
+            "side": "no",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072330-30",
+            "trade_id": "cc90495a-37df-72f5-3026-f06626d52652",
+            "ts": 1778210148,
+            "yes_price_dollars": "0.6900"
+          },
+          {
+            "action": "buy",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T03:15:16.827041Z",
+            "fee_cost": "0.020000",
+            "fill_id": "e9660e9b-925e-6983-6407-f0bb5fa6f258",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072330-30",
+            "no_price_dollars": "0.4000",
+            "order_id": "a7006c84-7425-4a4b-be35-731bd43230b4",
+            "side": "yes",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072330-30",
+            "trade_id": "e9660e9b-925e-6983-6407-f0bb5fa6f258",
+            "ts": 1778210116,
+            "yes_price_dollars": "0.6000"
+          },
+          {
+            "action": "sell",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T03:08:55.205622Z",
+            "fee_cost": "0.014000",
+            "fill_id": "0eff939c-4964-5884-6f83-709db65f855d",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072315-15",
+            "no_price_dollars": "0.9060",
+            "order_id": "37d5850b-338f-454b-b67e-aa2a78099153",
+            "side": "no",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072315-15",
+            "trade_id": "0eff939c-4964-5884-6f83-709db65f855d",
+            "ts": 1778209735,
+            "yes_price_dollars": "0.0940"
+          },
+          {
+            "action": "buy",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T03:08:20.892258Z",
+            "fee_cost": "0.010000",
+            "fill_id": "5f43ec08-5f01-59e0-5c1e-a82e1822635e",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072315-15",
+            "no_price_dollars": "0.9300",
+            "order_id": "249e16ba-46b7-45eb-bb60-8c21cc186984",
+            "side": "yes",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072315-15",
+            "trade_id": "5f43ec08-5f01-59e0-5c1e-a82e1822635e",
+            "ts": 1778209700,
+            "yes_price_dollars": "0.0700"
+          },
+          {
+            "action": "sell",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T02:54:46.409142Z",
+            "fee_cost": "0.020000",
+            "fill_id": "886b7600-e35e-65b1-415a-185736f6a164",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072300-00",
+            "no_price_dollars": "0.7000",
+            "order_id": "b158f4a0-8942-487e-b915-f443e0bb1e6e",
+            "side": "no",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072300-00",
+            "trade_id": "886b7600-e35e-65b1-415a-185736f6a164",
+            "ts": 1778208886,
+            "yes_price_dollars": "0.3000"
+          },
+          {
+            "action": "buy",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T02:53:13.711244Z",
+            "fee_cost": "0.020000",
+            "fill_id": "076eecca-52f6-5fac-ba0e-02111456613b",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072300-00",
+            "no_price_dollars": "0.4800",
+            "order_id": "2ac2f8d1-d5ab-449f-8a6d-c8539929601c",
+            "side": "yes",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072300-00",
+            "trade_id": "076eecca-52f6-5fac-ba0e-02111456613b",
+            "ts": 1778208793,
+            "yes_price_dollars": "0.5200"
+          },
+          {
+            "action": "sell",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T02:31:06.062094Z",
+            "fee_cost": "0.020000",
+            "fill_id": "a08429a1-1939-53e3-a1ce-a3d8aec722de",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072245-45",
+            "no_price_dollars": "0.5800",
+            "order_id": "8941689d-5617-44eb-8ab1-9e9fd8ab7655",
+            "side": "no",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072245-45",
+            "trade_id": "a08429a1-1939-53e3-a1ce-a3d8aec722de",
+            "ts": 1778207466,
+            "yes_price_dollars": "0.4200"
+          },
+          {
+            "action": "buy",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T02:30:32.462252Z",
+            "fee_cost": "0.020000",
+            "fill_id": "9c8a68ac-7ec5-5ca0-f4ad-c78c498d1eee",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072245-45",
+            "no_price_dollars": "0.4800",
+            "order_id": "b853b15b-a4f7-471f-91f2-9efd1ee7ba46",
+            "side": "yes",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072245-45",
+            "trade_id": "9c8a68ac-7ec5-5ca0-f4ad-c78c498d1eee",
+            "ts": 1778207432,
+            "yes_price_dollars": "0.5200"
+          },
+          {
+            "action": "buy",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T01:38:04.739692Z",
+            "fee_cost": "0.020000",
+            "fill_id": "9c838fea-c87b-779f-237c-52dfd91cb599",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072145-45",
+            "no_price_dollars": "0.5200",
+            "order_id": "a5cb4e1b-3f70-4f3a-aae8-cda30cbaace4",
+            "side": "no",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072145-45",
+            "trade_id": "9c838fea-c87b-779f-237c-52dfd91cb599",
+            "ts": 1778204284,
+            "yes_price_dollars": "0.4800"
+          },
+          {
+            "action": "buy",
+            "count_fp": "1.00",
+            "created_time": "2026-05-08T01:25:38.509215Z",
+            "fee_cost": "0.020000",
+            "fill_id": "18003483-522a-7efa-2576-f92459892d40",
+            "is_taker": true,
+            "market_ticker": "KXBTC15M-26MAY072130-30",
+            "no_price_dollars": "0.6400",
+            "order_id": "3efad013-40e8-4ca5-a081-99d262cddd15",
+            "side": "no",
+            "subaccount_number": 0,
+            "ticker": "KXBTC15M-26MAY072130-30",
+            "trade_id": "18003483-522a-7efa-2576-f92459892d40",
+            "ts": 1778203538,
+            "yes_price_dollars": "0.3600"
+          }
+        ],
+        "recent_fills_count": 10,
+        "resting_orders": []
+      },
+      "exchange_active_positions": [],
+      "exchange_active_positions_count": 0,
+      "exchange_resting_orders_count": 0,
+      "execution_events": {
+        "approved_seen": 0,
+        "event_types": {
+          "mushroom_v28_rejected": 200
+        },
+        "events_scanned": 200,
+        "latest_balance_ok": true,
+        "latest_btc_ok": true,
+        "latest_decision_reason": "ask_too_high",
+        "latest_event_type": "mushroom_v28_rejected",
+        "latest_market": "KXBTC15M-26MAY080000-00",
+        "latest_position_size": 0,
+        "latest_wall_ts": "2026-05-08T03:58:35.375144+00:00",
+        "order_like_seen": 0,
+        "reject_reasons": {
+          "ask_too_high": 13,
+          "book_stale": 48,
+          "btc_stale": 76,
+          "p_below_floor": 63
+        }
+      },
+      "generated_at_utc": "2026-05-08T03:58:42.360826+00:00",
+      "lock": {
+        "acquired_at": "2026-05-08T03:08:07.626046+00:00",
+        "pid": 23156,
+        "run_id": "7437f39b-1eb3-49f7-8cd4-ad295ef23ee6",
+        "strategy_tag": "mushroom_v28_common_clock_exit_guard_v1_sourcefix_broad_btcrest_size1_live"
+      },
+      "lock_matches": true,
+      "log_source_tag": "live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1",
+      "process_running": true,
+      "reconciliation_snapshot_appended": true,
+      "score": {
+        "completed_round_trips": 2,
+        "diagnosis": "ok",
+        "entries_total": 2,
+        "net_pnl_total_dollars": 0.05,
+        "open_positions": 0,
+        "score_mode": "live_only"
+      },
+      "status": "running_scored_round_trips",
+      "strategy_tag": "mushroom_v28_common_clock_exit_guard_v1_sourcefix_broad_btcrest_size1_live"
+    },
+    "net_leader": {
+      "candidate_cents": 692.0,
+      "candidate_wl": "33/13",
+      "current_cents": 478.0,
+      "current_wl": "31/15",
+      "delta_vs_current_cents": 214.0,
+      "full_loss_cushion": 6,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 13,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_needed_17"
+      ],
+      "settled": 46,
+      "suppressed_exits": 13,
+      "suppressed_needed": 17,
+      "window": "new_exit_mix_common_forward_v3"
+    },
+    "readiness_frontier": {
+      "candidate_cents": 668.0,
+      "candidate_wl": "41/17",
+      "current_cents": 426.0,
+      "current_wl": "39/19",
+      "delta_vs_current_cents": 242.0,
+      "full_loss_cushion": 6,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 17,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_needed_13"
+      ],
+      "settled": 58,
+      "suppressed_exits": 17,
+      "suppressed_needed": 13,
+      "window": "new_exit_mix_common_forward_v2"
+    },
+    "runway_best_window": {
+      "blockers_from_source": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_cents": 692.0,
+      "candidate_wl": "33/13",
+      "current_cents": 478.0,
+      "current_wl": "31/15",
+      "delta_vs_current_cents": 214.0,
+      "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+      "full_loss_cushion": 6,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 13,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_needed_17"
+      ],
+      "review_ready_except_global_live": false,
+      "settled": 46,
+      "suppressed_exits": 13,
+      "window": "new_exit_mix_common_forward_v3"
+    }
+  },
+  "next_required_work": [
+    "Keep the versioned size-1 common-clock trial running while lock/process/log/exchange status remain healthy.",
+    "Rescore after every entry, exit, fill, and settlement using LOG_SOURCE_TAG=live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1 and SCORE_MODE=live_only.",
+    "Reconcile Kalshi balance, positions, resting orders, fills, fees, and local execution events whenever a trade appears.",
+    "Stop or revise the candidate if loss cluster, drawdown, accounting mismatch, stale source, or execution blockers fire.",
+    "Use the live trial evidence to supersede or reject the older no_live_test/suppression-density blockers.",
+    "If the zero-fill monitor reaches its cluster threshold before any fill, stop the flat trial and version an execution-quality tweak instead of widening strategy thresholds."
+  ],
+  "purpose": "Strict completion audit for the active /goal: complete end-to-end v28-derived BTC 15m Kalshi strategy profitable after fees over time.",
+  "summary": {
+    "active_live_policy_family": "active_sourcefix_broad_btcrest_size1",
+    "candidate_rows": 995,
+    "checks_blocked": 3,
+    "checks_passed": 8,
+    "checks_total": 12,
+    "checks_unverified": 1,
+    "closest_policy_missing_gates": [
+      "live_ready_false",
+      "suppressed_decisions_lt_30"
+    ],
+    "execution_diagnostics_decision": "filled_entry_seen_continue_scoring",
+    "filled_events": 8,
+    "full_policy_cards": 49,
+    "live_baseline_cents": 2215.0,
+    "live_log_source_tag": "live_mushroom_v28_common_clock_exit_guard_sourcefix_broad_btcrest_size1",
+    "live_test_allowed_count": 0,
+    "live_trial_running": true,
+    "live_trial_status": "running_scored_round_trips",
+    "zero_fill_attempts": 0
+  }
+}

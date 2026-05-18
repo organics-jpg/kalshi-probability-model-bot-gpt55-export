@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-05-03T22:17:12.0720043+00:00",
+  "discovery_metrics": {
+    "combined_all_net_pnl_cents": 1835.0,
+    "current_all_accuracy": 0.7626459143968871,
+    "current_all_coverage": 0.9884615384615385,
+    "current_all_net_pnl_cents": 1301.0,
+    "current_all_net_roi_on_cost": 0.07109678124487677,
+    "current_holdout_net_pnl_cents": 47.0,
+    "max_median_ask": 68.0,
+    "min_oos_net_roi": 0.012523314681588063,
+    "v21_all_accuracy": 0.7385321100917431,
+    "v21_all_coverage": 0.9864253393665159,
+    "v21_all_net_pnl_cents": 534.0,
+    "v21_all_net_roi_on_cost": 0.03430553771039445,
+    "v21_train_net_pnl_cents": -19.0
+  },
+  "lock_close_dt": "2026-05-03T22:15:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "score_min_book_rv15",
+    "gate": "none",
+    "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "research_note": "Forward-registered after refreshed 20260503_221153Z cross-dataset profit frontier. Diagnostic only: current holdout edge was small and v21 train split was negative, so this is not promotion evidence.",
+  "source_frontier_csv": "logs\\edge_research\\cross_dataset_profit_frontier_latest.csv"
+}

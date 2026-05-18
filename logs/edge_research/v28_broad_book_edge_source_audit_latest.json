@@ -1,0 +1,110 @@
+{
+  "blockers": [
+    "simulated_share_gt_35pct"
+  ],
+  "diagnostic_supported": false,
+  "frozen_summary": {
+    "approved_entry_count": 17,
+    "avg_gross_cents": -1.5495495495495495,
+    "coverage_pct": 95.6896551724138,
+    "entries": 111,
+    "gross_cents": -172.0,
+    "losses": 53,
+    "settled": 111,
+    "simulated_or_rejected_count": 94,
+    "simulated_share": 0.8468468468468469,
+    "wins": 58
+  },
+  "interpretation": [
+    "book_plus_05_no_cheap_yes_boundary is the current best broad discovery lane, but promotion depends on future rows and source balance.",
+    "Actual-approved rows are 31 settled for 132.0c; rejected-actionable rows are 133 settled for 514.0c.",
+    "Simulated/rejected share is 0.8109756097560976; blocker threshold is 0.35.",
+    "Frozen future settled rows are 111; discovery evidence is not enough."
+  ],
+  "physics_rows": [
+    {
+      "avg_gross_cents": 9.582089552238806,
+      "bucket": "high_conf_p65_plus",
+      "entries": 67,
+      "gross_cents": 642.0,
+      "losses": 14,
+      "settled": 67,
+      "wins": 53
+    },
+    {
+      "avg_gross_cents": 0.3170731707317073,
+      "bucket": "mid_conf_45_65",
+      "entries": 82,
+      "gross_cents": 26.0,
+      "losses": 47,
+      "settled": 82,
+      "wins": 35
+    },
+    {
+      "avg_gross_cents": 1.5348837209302326,
+      "bucket": "yes_side",
+      "entries": 86,
+      "gross_cents": 132.0,
+      "losses": 38,
+      "settled": 86,
+      "wins": 48
+    },
+    {
+      "avg_gross_cents": 6.589743589743589,
+      "bucket": "no_side",
+      "entries": 78,
+      "gross_cents": 514.0,
+      "losses": 34,
+      "settled": 78,
+      "wins": 44
+    },
+    {
+      "avg_gross_cents": 16.70769230769231,
+      "bucket": "high_recross_075_plus",
+      "entries": 65,
+      "gross_cents": 1086.0,
+      "losses": 31,
+      "settled": 65,
+      "wins": 34
+    },
+    {
+      "avg_gross_cents": 7.971014492753623,
+      "bucket": "near_strike_sigma_lt025",
+      "entries": 69,
+      "gross_cents": 550.0,
+      "losses": 39,
+      "settled": 69,
+      "wins": 30
+    }
+  ],
+  "policy": "book_plus_05_no_cheap_yes_boundary",
+  "simulated_share": 0.8109756097560976,
+  "source_rows": [
+    {
+      "avg_gross_cents": 4.258064516129032,
+      "entries": 31,
+      "gross_cents": 132.0,
+      "losses": 5,
+      "settled": 31,
+      "source": "approved_entry",
+      "wins": 26
+    },
+    {
+      "avg_gross_cents": 3.8646616541353382,
+      "entries": 133,
+      "gross_cents": 514.0,
+      "losses": 67,
+      "settled": 133,
+      "source": "rejected_actionable",
+      "wins": 66
+    }
+  ],
+  "summary": {
+    "avg_gross_cents": 3.9390243902439024,
+    "entries": 164,
+    "gross_cents": 646.0,
+    "losses": 72,
+    "settled": 164,
+    "wins": 92
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "freeze_ts_utc": "2026-05-06T10:29:42.136727+00:00",
+  "fv_adjustment": "if side=no and raw_edge_prob in [0.05,0.08), p=0.5+0.5*(p_raw-0.5)",
+  "target_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "variant": "half_to_50",
+  "weak_reversal": {
+    "abs_d_max": 0.25,
+    "max_delay": 240.0,
+    "no_replacement_mode": "abstain",
+    "p_max": 0.6,
+    "recross_floor": 0.75
+  }
+}

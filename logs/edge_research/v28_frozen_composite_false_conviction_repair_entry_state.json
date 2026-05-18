@@ -1,0 +1,9 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "skip_composite_false_conviction_repair_highest_raw_p",
+  "coverage_floor": 75.0,
+  "danger_rule": "composite false-conviction zone",
+  "freeze_ts_utc": "2026-05-06T09:49:36.645793+00:00",
+  "physics": "Early boundary/recross states can produce false raw-model conviction. If the market still needs coverage, replace those rows with high-conviction clean rows.",
+  "repair_rule": "clean repairs ranked by highest raw p_side"
+}

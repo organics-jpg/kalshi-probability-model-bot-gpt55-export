@@ -1,0 +1,285 @@
+{
+  "freeze": {
+    "candidate": "suppress_reduce_p_hold_ge_075",
+    "freeze_ts_utc": "2026-05-06T06:33:56.987999+00:00",
+    "p_hold_floor": 0.75,
+    "physics": "Do not let transient probability_reduce turbulence close a still-strong held-side thesis.",
+    "rule": "If exit reason is mushroom_v28_probability_reduce and p_hold >= 0.75, score as held to settlement; otherwise keep current v28 exit."
+  },
+  "interpretation": [
+    "If YES-only keeps most of the positive delta while NO-only is negative, the physical mechanism is side-asymmetric.",
+    "A side-asymmetric read means the full two-sided exit patch should not be promoted from blended PnL."
+  ],
+  "policies": [
+    {
+      "candidate_gross_cents": 1058.0,
+      "current_gross_cents": 721.0,
+      "delta_vs_current_cents": 337.0,
+      "loss_control_cost_cents": -730.0,
+      "policy": "suppress_all_reduce_p_hold_ge_075",
+      "settled": 132,
+      "suppressed": 25,
+      "suppressed_losers": 5,
+      "suppressed_no": 13,
+      "suppressed_winners": 20,
+      "suppressed_yes": 12,
+      "winner_recovery_cents": 1067.0
+    },
+    {
+      "candidate_gross_cents": 1157.0,
+      "current_gross_cents": 721.0,
+      "delta_vs_current_cents": 436.0,
+      "loss_control_cost_cents": -146.0,
+      "policy": "suppress_yes_reduce_p_hold_ge_075",
+      "settled": 132,
+      "suppressed": 12,
+      "suppressed_losers": 1,
+      "suppressed_no": 0,
+      "suppressed_winners": 11,
+      "suppressed_yes": 12,
+      "winner_recovery_cents": 582.0
+    },
+    {
+      "candidate_gross_cents": 622.0,
+      "current_gross_cents": 721.0,
+      "delta_vs_current_cents": -99.0,
+      "loss_control_cost_cents": -584.0,
+      "policy": "suppress_no_reduce_p_hold_ge_075",
+      "settled": 132,
+      "suppressed": 13,
+      "suppressed_losers": 4,
+      "suppressed_no": 13,
+      "suppressed_winners": 9,
+      "suppressed_yes": 0,
+      "winner_recovery_cents": 485.0
+    }
+  ],
+  "rows": 132,
+  "suppressed_rows": [
+    {
+      "current_cents": -8.0,
+      "delta_cents": 48.0,
+      "hold_cents": 40.0,
+      "market": "KXBTC15M-26MAY060245-45",
+      "p_hold": 0.793334,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -14.0,
+      "delta_cents": 52.0,
+      "hold_cents": 38.0,
+      "market": "KXBTC15M-26MAY060300-00",
+      "p_hold": 0.780402,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -22.0,
+      "delta_cents": 62.0,
+      "hold_cents": 40.0,
+      "market": "KXBTC15M-26MAY060300-00",
+      "p_hold": 0.753164,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -12.0,
+      "delta_cents": 54.0,
+      "hold_cents": 42.0,
+      "market": "KXBTC15M-26MAY060630-30",
+      "p_hold": 0.777774,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -16.0,
+      "delta_cents": 52.0,
+      "hold_cents": 36.0,
+      "market": "KXBTC15M-26MAY060645-45",
+      "p_hold": 0.799349,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -12.0,
+      "delta_cents": 56.0,
+      "hold_cents": 44.0,
+      "market": "KXBTC15M-26MAY060645-45",
+      "p_hold": 0.779789,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -8.0,
+      "delta_cents": -160.0,
+      "hold_cents": -168.0,
+      "market": "KXBTC15M-26MAY060700-00",
+      "p_hold": 0.799603,
+      "result": "yes",
+      "side": "no"
+    },
+    {
+      "current_cents": -10.0,
+      "delta_cents": -146.0,
+      "hold_cents": -156.0,
+      "market": "KXBTC15M-26MAY060900-00",
+      "p_hold": 0.78999,
+      "result": "no",
+      "side": "yes"
+    },
+    {
+      "current_cents": 0.0,
+      "delta_cents": 60.0,
+      "hold_cents": 60.0,
+      "market": "KXBTC15M-26MAY060915-15",
+      "p_hold": 0.793762,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -14.0,
+      "delta_cents": 62.0,
+      "hold_cents": 48.0,
+      "market": "KXBTC15M-26MAY060930-30",
+      "p_hold": 0.787606,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -3.0,
+      "delta_cents": 57.0,
+      "hold_cents": 54.0,
+      "market": "KXBTC15M-26MAY060930-30",
+      "p_hold": 0.79918,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": 0.0,
+      "delta_cents": 60.0,
+      "hold_cents": 60.0,
+      "market": "KXBTC15M-26MAY061015-15",
+      "p_hold": 0.799979,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -16.0,
+      "delta_cents": 60.0,
+      "hold_cents": 44.0,
+      "market": "KXBTC15M-26MAY061030-30",
+      "p_hold": 0.752739,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -10.0,
+      "delta_cents": 54.0,
+      "hold_cents": 44.0,
+      "market": "KXBTC15M-26MAY061030-30",
+      "p_hold": 0.796458,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -6.0,
+      "delta_cents": 46.0,
+      "hold_cents": 40.0,
+      "market": "KXBTC15M-26MAY061045-45",
+      "p_hold": 0.796949,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -22.0,
+      "delta_cents": 46.0,
+      "hold_cents": 24.0,
+      "market": "KXBTC15M-26MAY061445-45",
+      "p_hold": 0.79783,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -32.0,
+      "delta_cents": -120.0,
+      "hold_cents": -152.0,
+      "market": "KXBTC15M-26MAY062130-30",
+      "p_hold": 0.768407,
+      "result": "yes",
+      "side": "no"
+    },
+    {
+      "current_cents": 16.0,
+      "delta_cents": 42.0,
+      "hold_cents": 58.0,
+      "market": "KXBTC15M-26MAY071000-00",
+      "p_hold": 0.781361,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": 2.0,
+      "delta_cents": -158.0,
+      "hold_cents": -156.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "p_hold": 0.78913,
+      "result": "yes",
+      "side": "no"
+    },
+    {
+      "current_cents": -16.0,
+      "delta_cents": -146.0,
+      "hold_cents": -162.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "p_hold": 0.76398,
+      "result": "yes",
+      "side": "no"
+    },
+    {
+      "current_cents": -10.0,
+      "delta_cents": 62.0,
+      "hold_cents": 52.0,
+      "market": "KXBTC15M-26MAY071045-45",
+      "p_hold": 0.760529,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -16.0,
+      "delta_cents": 48.0,
+      "hold_cents": 32.0,
+      "market": "KXBTC15M-26MAY071215-15",
+      "p_hold": 0.797661,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -8.0,
+      "delta_cents": 48.0,
+      "hold_cents": 40.0,
+      "market": "KXBTC15M-26MAY071215-15",
+      "p_hold": 0.765822,
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "current_cents": -6.0,
+      "delta_cents": 46.0,
+      "hold_cents": 40.0,
+      "market": "KXBTC15M-26MAY071315-15",
+      "p_hold": 0.798341,
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "current_cents": -14.0,
+      "delta_cents": 52.0,
+      "hold_cents": 38.0,
+      "market": "KXBTC15M-26MAY071315-15",
+      "p_hold": 0.784166,
+      "result": "yes",
+      "side": "yes"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "candidate": "p50_book_plus_05_edge_nonnegative_quarter_no_side",
+  "entry_rule": "ask 1-90c, p_side >= 0.50, v28_minus_ask_prob >= 0.05, edge_cents >= 0",
+  "freeze_ts_utc": "2026-05-07T07:00:48.327218+00:00",
+  "parent": "p50_book_plus_05_edge_nonnegative",
+  "physics": "Parent p50 book-edge was broad and positive, but NO-side rows were net negative. Quarter-sizing NO tests whether side-aware risk shrink preserves coverage while improving drawdown cushion.",
+  "size_rule": "YES rows weight 1.0; NO rows weight 0.25",
+  "source": "probe_v28_p50_book_edge_source_failure_drilldown.py"
+}

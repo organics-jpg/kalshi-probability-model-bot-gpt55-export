@@ -1,0 +1,89 @@
+{
+  "candidate": {
+    "approved_settled": 180,
+    "avg_brier": 0.15947649122807017,
+    "avg_logloss": 0.4928997420782826,
+    "brier_delta_vs_raw": -0.008784259450245635,
+    "calibration_error": 0.03985964912280693,
+    "dominant_market_brier_delta_share": 7.3361704999403585,
+    "entry_surface": "approved_entries_plus_target_coverage_forward_rows",
+    "leave_one_market_failures": 12,
+    "logloss_delta_vs_raw": -0.04014041423512027,
+    "overlay": "book_probability",
+    "robustness_blockers": [
+      "leave_one_market_failure",
+      "single_market_contribution_gt_50pct"
+    ],
+    "settled": 285,
+    "simulated_settled": 105,
+    "simulated_share": 0.3684210526315789
+  },
+  "checks": [
+    {
+      "actual": "book_probability",
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_overlay_validator_latest.json",
+      "name": "expected_overlay_is_best",
+      "passed": false,
+      "required": "source_aware_approved_book_target_logit125_p60_only"
+    },
+    {
+      "actual": 285,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_overlay_validator_latest.json",
+      "name": "settled_rows_gte_30",
+      "passed": true,
+      "required": ">= 30"
+    },
+    {
+      "actual": 180,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_overlay_validator_latest.json",
+      "name": "approved_rows_gte_10",
+      "passed": true,
+      "required": ">= 10"
+    },
+    {
+      "actual": 0.3684210526315789,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_overlay_validator_latest.json",
+      "name": "simulated_share_lte_35pct",
+      "passed": false,
+      "required": "<= 0.35"
+    },
+    {
+      "actual": -0.008784259450245635,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_overlay_validator_latest.json",
+      "name": "brier_better_than_raw",
+      "passed": true,
+      "required": "< 0"
+    },
+    {
+      "actual": -0.04014041423512027,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_overlay_validator_latest.json",
+      "name": "logloss_better_than_raw",
+      "passed": true,
+      "required": "< 0"
+    },
+    {
+      "actual": 0,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_anti_overfit_freeze_audit_latest.json",
+      "name": "freeze_audit_no_failures",
+      "passed": true,
+      "required": "0"
+    },
+    {
+      "actual": [
+        "leave_one_market_failure",
+        "single_market_contribution_gt_50pct"
+      ],
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_source_aware_fv_robustness_audit_latest.json",
+      "name": "robustness_audit_no_blockers",
+      "passed": false,
+      "required": "none"
+    }
+  ],
+  "notes": [
+    "This is not live bot approval; it says whether the FV candidate has enough evidence quality to deserve planning/continued monitoring.",
+    "The candidate is source-aware: approved rows use book anchoring; target-coverage rejected rows use strong-row logit sharpening.",
+    "Robustness blockers mean the candidate remains a watch candidate, not an implementation candidate.",
+    "A true live deployment would still need an implementation plan, tests, and a no-trade dry validation against current live telemetry."
+  ],
+  "ready_for_implementation_planning": false
+}

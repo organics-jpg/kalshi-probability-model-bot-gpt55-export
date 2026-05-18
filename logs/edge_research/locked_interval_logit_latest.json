@@ -1,0 +1,108 @@
+{
+  "generated_utc": "20260502_184705Z",
+  "lock": {
+    "candidate": {
+      "ask_cap": 100.0,
+      "c_value": 0.05,
+      "feature_set": "book_physics",
+      "label": "book_physics; C=0.05; p>=0.95; ask<=100; sec>=0",
+      "min_seconds": 0.0,
+      "name": "locked_logit_book_physics_c005_p095_20260502_1512",
+      "prob_threshold": 0.95
+    },
+    "created_utc": "2026-05-02T15:20:56.923539+00:00",
+    "features": [
+      "book_p_side",
+      "brownian_p_rv_15m",
+      "brownian_p_rv_30m",
+      "drift_p_5m_rv_15m",
+      "drift_p_15m_rv_15m",
+      "margin_per_rv_sigma_15m",
+      "margin_per_rv_sigma_30m",
+      "abs_book_rv15_gap",
+      "abs_book_rv30_gap",
+      "adverse_move_3m",
+      "adverse_move_5m",
+      "adverse_move_15m",
+      "spread_cents",
+      "seconds_to_close"
+    ],
+    "lock_close_dt": "2026-05-02T15:00:00+00:00",
+    "lock_id": "locked_interval_logit_v1",
+    "model_path": "logs\\edge_research\\locked_interval_logit_model.pkl",
+    "training": {
+      "train_end": "2026-05-02T00:14:57.398000+00:00",
+      "train_markets": 88,
+      "train_side_rows": 10240,
+      "train_start": "2026-05-01T02:16:28.787000+00:00"
+    }
+  },
+  "metrics": {
+    "all": {
+      "accuracy": 1.0,
+      "ask_eq_100": 17,
+      "ask_ge_95": 137,
+      "base_markets": 159,
+      "coverage": 0.9119496855345912,
+      "losses": 0,
+      "markets": 145,
+      "median_ask": 98.0,
+      "median_seconds_to_close": 172.722,
+      "wilson95_lower": 0.9741909354347176,
+      "wins": 145
+    },
+    "fresh": {
+      "accuracy": 1.0,
+      "ask_eq_100": 0,
+      "ask_ge_95": 9,
+      "base_markets": 12,
+      "coverage": 0.8333333333333334,
+      "losses": 0,
+      "markets": 10,
+      "median_ask": 97.0,
+      "median_seconds_to_close": 166.0145,
+      "wilson95_lower": 0.7224672001371106,
+      "wins": 10
+    },
+    "holdout": {
+      "accuracy": 1.0,
+      "ask_eq_100": 2,
+      "ask_ge_95": 26,
+      "base_markets": 32,
+      "coverage": 0.875,
+      "losses": 0,
+      "markets": 28,
+      "median_ask": 98.0,
+      "median_seconds_to_close": 166.0145,
+      "wilson95_lower": 0.8793566952341543,
+      "wins": 28
+    },
+    "train": {
+      "accuracy": 1.0,
+      "ask_eq_100": 12,
+      "ask_ge_95": 83,
+      "base_markets": 95,
+      "coverage": 0.9157894736842105,
+      "losses": 0,
+      "markets": 87,
+      "median_ask": 98.0,
+      "median_seconds_to_close": 190.314,
+      "wilson95_lower": 0.9577124930558795,
+      "wins": 87
+    },
+    "validation": {
+      "accuracy": 1.0,
+      "ask_eq_100": 3,
+      "ask_ge_95": 28,
+      "base_markets": 32,
+      "coverage": 0.9375,
+      "losses": 0,
+      "markets": 30,
+      "median_ask": 98.0,
+      "median_seconds_to_close": 152.142,
+      "wilson95_lower": 0.8864866068260312,
+      "wins": 30
+    }
+  },
+  "selected_markets": 145
+}

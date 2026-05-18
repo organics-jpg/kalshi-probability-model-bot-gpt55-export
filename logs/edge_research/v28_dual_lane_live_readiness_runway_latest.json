@@ -1,0 +1,108 @@
+{
+  "collection": {
+    "pending_post_exit_clock_rows": 0,
+    "post_freeze_distinct_markets": 15,
+    "post_freeze_entry_rows": 26,
+    "post_freeze_events": 2842,
+    "settled_post_exit_clock_rows": 26
+  },
+  "decision": "no_live_test",
+  "freeze_local_time": "2026-05-07T09:00:17.363339-04:00",
+  "freeze_ts_utc": "2026-05-07T13:00:17.363339+00:00",
+  "generated_at_utc": "2026-05-11T03:47:38.120642+00:00",
+  "interpretation": [
+    "This is a runway report, not a live-test approval.",
+    "The dedicated dual-lane watch loop is keeping the inputs fresh while the strict own-freeze scorer waits for the sample clock.",
+    "The sidecar preview is the constructive signal right now; the primary sizing-pocket proxy is a caution flag, not the actual parent-fill selection.",
+    "A live-test review cannot start until the own-freeze promotion score has at least 30 settled strict-forward rows and clears every gate."
+  ],
+  "live_baseline_cents": -255.98999999999998,
+  "own_freeze_current": {
+    "coverage_pct": 77.77777777777777,
+    "delta_vs_live_cents": 304.99,
+    "full_loss_cushion": 0,
+    "live_ready": false,
+    "losses": 2,
+    "missing_gates": [
+      "settled_lt_30",
+      "full_loss_cushion_lt_3"
+    ],
+    "net_cents": 49.0,
+    "policy": "post_dual_union_birth_entry_cheap_penalty025_rank_only",
+    "reconstructed_share": 0.14285714285714285,
+    "settled": 14,
+    "shared_markets": 0,
+    "sidecar_add_entries": 0,
+    "sidecar_add_net_cents": 0,
+    "strict_forward": true,
+    "wins": 12
+  },
+  "preview_lane_reads": [
+    {
+      "avg_net_cents": 25.333333333333332,
+      "coverage_pct": 66.66666666666667,
+      "entries": 12,
+      "full_loss_cushion": 3,
+      "losses": 1,
+      "name": "post-freeze sidecar feature preview",
+      "negative_raw_edge_rows": 0,
+      "net_cents": 304.0,
+      "read": "clean_approved_positive_preview",
+      "reconstructed_share": 0.0,
+      "settled": 12,
+      "sidecar_ineligible_rows": 0,
+      "source_counts": {
+        "approved_entry": 12
+      },
+      "wins": 11
+    },
+    {
+      "avg_net_cents": -2.5,
+      "coverage_pct": 88.88888888888889,
+      "entries": 16,
+      "full_loss_cushion": 0,
+      "losses": 12,
+      "name": "post-freeze primary sizing-pocket risk proxy",
+      "negative_raw_edge_rows": 11,
+      "net_cents": -40.0,
+      "read": "source_quality_risk_preview",
+      "reconstructed_share": 1.0,
+      "settled": 16,
+      "sidecar_ineligible_rows": 16,
+      "source_counts": {
+        "rejected_actionable": 16
+      },
+      "wins": 4
+    }
+  ],
+  "requirements": {
+    "coverage_max_pct": 90.0,
+    "coverage_min_pct": 75.0,
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30,
+    "must_beat_live_baseline_cents": -255.98999999999998
+  },
+  "runway": {
+    "current_missing_gates": [
+      "settled_lt_30",
+      "full_loss_cushion_lt_3"
+    ],
+    "hard_blockers": [
+      "own_freeze_settled_lt_30",
+      "own_freeze_full_loss_cushion_lt_3"
+    ],
+    "min_sample_max_reconstructed_rows": 10,
+    "net_cents_needed_for_min_cushion": 251.0,
+    "net_cents_needed_to_beat_live": 0.0,
+    "own_freeze_entries_needed_to_min_settled": 16,
+    "windows_remaining_to_min_sample": 0
+  },
+  "sample_clock": {
+    "earliest_min_sample_local_time": "2026-05-07T16:30:17.363339-04:00",
+    "earliest_min_sample_utc": "2026-05-07T20:30:17.363339+00:00",
+    "possible_market_windows_since_freeze": 347,
+    "windows_remaining_to_min_sample": 0
+  },
+  "strict_replay_status": "due_now_or_running"
+}

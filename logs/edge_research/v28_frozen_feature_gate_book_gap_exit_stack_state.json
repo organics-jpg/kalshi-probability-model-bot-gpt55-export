@@ -1,0 +1,33 @@
+{
+  "candidate_family": "feature_gate_book_gap_exit_stack",
+  "entry_rules": {
+    "raw03_recross70_abs075": {
+      "abs_d_min": 0.75,
+      "ask_min": null,
+      "raw_edge_min": 0.03,
+      "recross_max": 0.7
+    },
+    "raw05_recross60_abs085": {
+      "abs_d_min": 0.85,
+      "ask_min": null,
+      "raw_edge_min": 0.05,
+      "recross_max": 0.6
+    },
+    "raw05_recross60_abs085_ask65": {
+      "abs_d_min": 0.85,
+      "ask_min": 0.65,
+      "raw_edge_min": 0.05,
+      "recross_max": 0.6
+    },
+    "raw07_recross60_abs085": {
+      "abs_d_min": 0.85,
+      "ask_min": null,
+      "raw_edge_min": 0.07,
+      "recross_max": 0.6
+    }
+  },
+  "exit_rule": "Use frozen book-gap/loss-guard exit candidates only for unambiguous matched live v28 exit rows.",
+  "freeze_ts_utc": "2026-05-06T21:20:30.347830+00:00",
+  "physics": "Entry gate avoids weak boundary/recross rows; guarded exits avoid selling into spread/turbulence when the hold thesis remains alive while rejecting holds with bad book/fair-drawdown structure.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only."
+}

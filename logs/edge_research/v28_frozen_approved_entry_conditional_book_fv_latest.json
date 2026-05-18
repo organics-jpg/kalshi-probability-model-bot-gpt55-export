@@ -1,0 +1,157 @@
+{
+  "candidate_live_ready": false,
+  "freeze": {
+    "candidate": "conditional_book_no_late_discount",
+    "entry_surface": "actual_v28_approved_entries_only",
+    "freeze_ts_utc": "2026-05-06T12:51:13.278724+00:00",
+    "min_settled": 30,
+    "physics": "Book anchoring should act as humility under late/NO/market-discounted overconfidence while preserving raw conviction on expensive high-confidence YES rows.",
+    "rule": "Use book_probability if side=no OR seconds_to_close<240 OR raw_probability-book_probability>=0.10; otherwise use raw_probability.",
+    "source_attribution": "v28_approved_entry_book_fv_regime_attribution_latest"
+  },
+  "future": {
+    "candidate": {
+      "avg_brier": 0.11140901506047313,
+      "avg_logloss": 0.38129583379585924,
+      "avg_p": 0.7967077419354838,
+      "blockers": [
+        "brier_not_better_than_raw",
+        "logloss_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.013951868950215066,
+      "entries": 93,
+      "gross_cents": 623.0,
+      "logloss_delta_vs_raw": 0.030691846082473884,
+      "losses": 10,
+      "overlay": "conditional_book_no_late_discount",
+      "settled": 93,
+      "win_rate": 0.8924731182795699,
+      "wins": 83
+    },
+    "entries": 93,
+    "ranked": [
+      {
+        "avg_brier": 0.09745714611025806,
+        "avg_logloss": 0.35060398771338536,
+        "avg_p": 0.884965376344086,
+        "blockers": [],
+        "brier_delta_vs_raw": 0.0,
+        "entries": 93,
+        "gross_cents": 623.0,
+        "logloss_delta_vs_raw": 0.0,
+        "losses": 10,
+        "overlay": "raw_probability",
+        "settled": 93,
+        "win_rate": 0.8924731182795699,
+        "wins": 83
+      },
+      {
+        "avg_brier": 0.11140901506047313,
+        "avg_logloss": 0.38129583379585924,
+        "avg_p": 0.7967077419354838,
+        "blockers": [
+          "brier_not_better_than_raw",
+          "logloss_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": 0.013951868950215066,
+        "entries": 93,
+        "gross_cents": 623.0,
+        "logloss_delta_vs_raw": 0.030691846082473884,
+        "losses": 10,
+        "overlay": "conditional_book_no_late_discount",
+        "settled": 93,
+        "win_rate": 0.8924731182795699,
+        "wins": 83
+      },
+      {
+        "avg_brier": 0.11271720430107526,
+        "avg_logloss": 0.3879095905830394,
+        "avg_p": 0.7786021505376344,
+        "blockers": [],
+        "brier_delta_vs_raw": 0.015260058190817202,
+        "entries": 93,
+        "gross_cents": 623.0,
+        "logloss_delta_vs_raw": 0.037305602869654064,
+        "losses": 10,
+        "overlay": "book_probability",
+        "settled": 93,
+        "win_rate": 0.8924731182795699,
+        "wins": 83
+      }
+    ],
+    "settled": 93
+  },
+  "interpretation": [
+    "Frozen candidate `conditional_book_no_late_discount` has future entries/settled 93/93.",
+    "Future Brier/logloss deltas versus raw are 0.013951868950215066/0.030691846082473884.",
+    "Pre-freeze context deltas were -0.025583191549724993/-0.1425133634906126 over 80 settled rows.",
+    "Promotion blockers: brier_not_better_than_raw, logloss_not_better_than_raw.",
+    "Pre-freeze context is only motivation; future rows are the validation evidence."
+  ],
+  "prefreeze_context": {
+    "candidate": {
+      "avg_brier": 0.150106476158075,
+      "avg_logloss": 0.47332583729580835,
+      "avg_p": 0.806597325,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.025583191549724993,
+      "entries": 80,
+      "gross_cents": 200.0,
+      "logloss_delta_vs_raw": -0.1425133634906126,
+      "losses": 17,
+      "overlay": "conditional_book_no_late_discount",
+      "settled": 80,
+      "win_rate": 0.7875,
+      "wins": 63
+    },
+    "entries": 80,
+    "ranked": [
+      {
+        "avg_brier": 0.14753375,
+        "avg_logloss": 0.46725623079531536,
+        "avg_p": 0.775875,
+        "blockers": [],
+        "brier_delta_vs_raw": -0.028155917707799988,
+        "entries": 80,
+        "gross_cents": 200.0,
+        "logloss_delta_vs_raw": -0.1485829699911056,
+        "losses": 17,
+        "overlay": "book_probability",
+        "settled": 80,
+        "win_rate": 0.7875,
+        "wins": 63
+      },
+      {
+        "avg_brier": 0.150106476158075,
+        "avg_logloss": 0.47332583729580835,
+        "avg_p": 0.806597325,
+        "blockers": [],
+        "brier_delta_vs_raw": -0.025583191549724993,
+        "entries": 80,
+        "gross_cents": 200.0,
+        "logloss_delta_vs_raw": -0.1425133634906126,
+        "losses": 17,
+        "overlay": "conditional_book_no_late_discount",
+        "settled": 80,
+        "win_rate": 0.7875,
+        "wins": 63
+      },
+      {
+        "avg_brier": 0.17568966770779998,
+        "avg_logloss": 0.615839200786421,
+        "avg_p": 0.882634675,
+        "blockers": [],
+        "brier_delta_vs_raw": 0.0,
+        "entries": 80,
+        "gross_cents": 200.0,
+        "logloss_delta_vs_raw": 0.0,
+        "losses": 17,
+        "overlay": "raw_probability",
+        "settled": 80,
+        "win_rate": 0.7875,
+        "wins": 63
+      }
+    ],
+    "settled": 80
+  }
+}

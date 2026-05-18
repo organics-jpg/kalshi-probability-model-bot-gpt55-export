@@ -1,0 +1,10 @@
+{
+  "candidate": "skip_discount15_book_edge_lt_5pp",
+  "coverage_floor": 75.0,
+  "entry_surface": "actual_v28_approved_entries_only",
+  "freeze_ts_utc": "2026-05-06T13:10:59.879402+00:00",
+  "min_settled": 30,
+  "physics": "A large raw-minus-book gap with weak executable edge means the private FV is claiming conviction that the touch is not confirming; this is likely overconfidence rather than free edge.",
+  "rule": "Skip when raw_probability - book_probability >= 0.15 and book_probability - ask_probability < 0.05.",
+  "source_discovery": "v28_approved_entry_book_edge_actionability_latest"
+}

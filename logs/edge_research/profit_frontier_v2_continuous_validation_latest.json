@@ -1,0 +1,138 @@
+{
+  "all_metric": {
+    "accuracy": 0.6279863481228669,
+    "accuracy_minus_break_even": 0.0006825938566552558,
+    "ask_cost_cents": 17797.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 295,
+    "coverage": 0.9932203389830508,
+    "coverage_pass": true,
+    "entry_cost_cents": 18380.0,
+    "entry_fee_cents": 583.0,
+    "fee_aware_break_even_accuracy": 0.6273037542662117,
+    "gross_pnl_cents": 603.0,
+    "gross_roi_on_ask": 0.03388211496319604,
+    "losses": 109,
+    "markets": 293,
+    "mean_ask": 60.74061433447099,
+    "median_ask": 61.0,
+    "median_seconds_to_close": 834.833,
+    "net_edge_per_base_market_cents": 0.06779661016949153,
+    "net_edge_per_selected_cents": 0.06825938566552901,
+    "net_pnl_cents": 20.0,
+    "net_roi_on_cost": 0.001088139281828074,
+    "p75_ask": 66.0,
+    "positive_net": true,
+    "wilson95_lower": 0.5713206128846628,
+    "wilson_minus_break_even": -0.05598314138154881,
+    "wins": 184
+  },
+  "fresh_metric": {
+    "accuracy": 0.5882352941176471,
+    "accuracy_minus_break_even": -0.0826470588235294,
+    "ask_cost_cents": 2214.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 34,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 2281.0,
+    "entry_fee_cents": 67.0,
+    "fee_aware_break_even_accuracy": 0.6708823529411765,
+    "gross_pnl_cents": -214.0,
+    "gross_roi_on_ask": -0.0966576332429991,
+    "losses": 14,
+    "markets": 34,
+    "mean_ask": 65.11764705882354,
+    "median_ask": 66.5,
+    "median_seconds_to_close": 833.31,
+    "net_edge_per_base_market_cents": -8.264705882352942,
+    "net_edge_per_selected_cents": -8.264705882352942,
+    "net_pnl_cents": -281.0,
+    "net_roi_on_cost": -0.12319158263919333,
+    "p75_ask": 69.0,
+    "positive_net": false,
+    "wilson95_lower": 0.4222159387881251,
+    "wilson_minus_break_even": -0.2486664141530514,
+    "wins": 20
+  },
+  "generated_utc": "20260504_075204Z",
+  "lock": {
+    "created_utc": "2026-05-03T22:13:51.924662+00:00",
+    "discovery_metrics": {
+      "current_all_accuracy": 0.6444444444444445,
+      "current_all_coverage": 0.9911894273127754,
+      "current_all_net_pnl_cents": 535.0,
+      "current_all_net_roi_on_cost": 0.0383100608664518,
+      "max_median_ask": 60.0,
+      "min_oos_net_roi": 0.0339734121122599,
+      "v21_all_accuracy": 0.680365296803653,
+      "v21_all_coverage": 0.990950226244344,
+      "v21_all_net_pnl_cents": 1283.0,
+      "v21_all_net_roi_on_cost": 0.0942204597194683
+    },
+    "lock_close_dt": "2026-05-03T22:00:00+00:00",
+    "policy": {
+      "ask_max": 95.0,
+      "chooser": "brownian_p_rv_15m",
+      "gate": "none",
+      "label": "choose=brownian_p_rv_15m; brownian_p_rv_15m>=0.55; ask<=95; sec_to_close>=120",
+      "min_score": 0.55,
+      "min_seconds_to_close": 120.0
+    },
+    "relock_reason": "Same pre-existing frontier_v2 policy, re-registered after fixing the strict collector coverage denominator and starting continuous collection. This is not a retuned model and is not promotion evidence.",
+    "source_lock": "logs\\edge_research\\profit_frontier_v2_fresh_lock.json"
+  },
+  "name": "frontier_v2_continuous",
+  "registry_recompute_divergence": {
+    "compared": 34,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY031945-45",
+        "recomputed": "2026-05-03T23:31:05.159000+00:00 yes 60.0c",
+        "strict": "2026-05-03T23:32:05.265000+00:00 yes 66.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032115-15",
+        "recomputed": "2026-05-04T01:01:13.732000+00:00 no 69.0c",
+        "strict": "2026-05-04T01:01:13.732000+00:00 yes 32.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032130-30",
+        "recomputed": "2026-05-04T01:16:00.076000+00:00 yes 62.0c",
+        "strict": "2026-05-04T01:15:30.056000+00:00 no 39.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032200-00",
+        "recomputed": "2026-05-04T01:47:02.728000+00:00 yes 63.0c",
+        "strict": "2026-05-04T01:48:02.822000+00:00 yes 68.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032300-00",
+        "recomputed": "2026-05-04T02:47:08.343000+00:00 no 72.0c",
+        "strict": "2026-05-04T02:45:38.283000+00:00 yes 39.0c"
+      }
+    ],
+    "mismatches": 7,
+    "missing_recompute": 5
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.5789473684210527,
+    "base_markets": 39,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.6444736842105263,
+    "losses": 16,
+    "markets": 38,
+    "median_ask": 66.0,
+    "net_pnl_cents": -249.0,
+    "net_roi_on_cost": -0.10167415271539404,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 39,
+    "wilson95_lower": 0.4219234534367055,
+    "wilson_minus_break_even": -0.2225502307738208,
+    "wins": 22
+  }
+}

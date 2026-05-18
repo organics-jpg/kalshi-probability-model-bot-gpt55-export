@@ -1,0 +1,107 @@
+{
+  "generated_at_utc": "2026-05-11T00:48:30.421404+00:00",
+  "interpretation": [
+    "This is the formal source-stress audit for the combined stack; it is not promotion evidence by itself.",
+    "diagnostic_existing_target_window: all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair has 114 settled, coverage 75.0%, net 803.0c, reconstructed share 0.5; needs 49 clean rows for source, 0 rows for sample, and 0.0c for cushion; blockers ['reconstructed_share_gt_35pct'].",
+    "post_stack_freeze_window: hybrid_veto_plus_boundary_clock_approved_only_hybrid_edge_repair has 41 settled, coverage 47.12643678160919%, net 312.0c, reconstructed share 0.7073170731707317; needs 42 clean rows for source, 0 rows for sample, and 0.0c for cushion; blockers ['reconstructed_share_gt_35pct']."
+  ],
+  "lanes": [
+    {
+      "approved_rows": 57,
+      "candidate": "all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair",
+      "clean_rows_needed_for_source_gate": 49,
+      "max_full_losses_positive": 8,
+      "max_full_losses_with_cushion3": 5,
+      "net_cents_needed_for_cushion3": 0.0,
+      "reconstructed_rows": 57,
+      "reconstructed_share": 0.5,
+      "rows_needed_for_cushion3_at_current_avg": 0,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "approved_entry": 57,
+        "rejected_actionable": 57
+      },
+      "source_summary": {
+        "approved_entry": {
+          "avg_net_cents": 9.421052631578947,
+          "losses": 8,
+          "net_cents": 537.0,
+          "rows": 57,
+          "wins": 49
+        },
+        "rejected_actionable": {
+          "avg_net_cents": 4.666666666666667,
+          "losses": 23,
+          "net_cents": 266.0,
+          "rows": 57,
+          "wins": 34
+        }
+      },
+      "stress_blockers": [
+        "reconstructed_share_gt_35pct"
+      ],
+      "summary": {
+        "avg_net_cents": 7.043859649122807,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 31,
+        "net_cents": 803.0,
+        "settled": 114,
+        "wins": 83
+      },
+      "window": "diagnostic_existing_target_window"
+    },
+    {
+      "approved_rows": 12,
+      "candidate": "hybrid_veto_plus_boundary_clock_approved_only_hybrid_edge_repair",
+      "clean_rows_needed_for_source_gate": 42,
+      "max_full_losses_positive": 3,
+      "max_full_losses_with_cushion3": 0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "reconstructed_rows": 29,
+      "reconstructed_share": 0.7073170731707317,
+      "rows_needed_for_cushion3_at_current_avg": 0,
+      "settled_rows_needed_for_sample_gate": 0,
+      "source_counts": {
+        "approved_entry": 12,
+        "rejected_actionable": 29
+      },
+      "source_summary": {
+        "approved_entry": {
+          "avg_net_cents": 4.583333333333333,
+          "losses": 2,
+          "net_cents": 55.0,
+          "rows": 12,
+          "wins": 10
+        },
+        "rejected_actionable": {
+          "avg_net_cents": 8.862068965517242,
+          "losses": 12,
+          "net_cents": 257.0,
+          "rows": 29,
+          "wins": 17
+        }
+      },
+      "stress_blockers": [
+        "reconstructed_share_gt_35pct"
+      ],
+      "summary": {
+        "avg_net_cents": 7.609756097560975,
+        "coverage_pct": 47.12643678160919,
+        "entries": 41,
+        "losses": 14,
+        "net_cents": 312.0,
+        "settled": 41,
+        "wins": 27
+      },
+      "window": "post_stack_freeze_window"
+    }
+  ],
+  "requirements": {
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion_cents": 300.0,
+    "min_settled": 30
+  },
+  "stack_freeze_ts_utc": "2026-05-06T15:37:04.750154+00:00",
+  "stack_generated_at_utc": "2026-05-10T02:42:45.995846+00:00"
+}

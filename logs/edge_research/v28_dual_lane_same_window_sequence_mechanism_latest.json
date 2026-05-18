@@ -1,0 +1,417 @@
+{
+  "candidate_minus_live_same_markets_cents": -335.0,
+  "candidate_policy": "post_dual_union_birth_entry_cheap_penalty025_rank_only",
+  "deficit_rows": 5,
+  "delta_autopsy_generated_at_utc": "2026-05-07T16:31:45.447560+00:00",
+  "freeze_ts_utc": "2026-05-07T13:00:17.363339+00:00",
+  "generated_at_utc": "2026-05-07T16:50:58.046170+00:00",
+  "interpretation": [
+    "This is a mechanism audit for same-window deficits only; it is not a promotion gate.",
+    "Deficit markets should be used to repair exposure/exit sequencing, not to hand-pick exclusions.",
+    "Largest mechanism bucket is live_larger_terminal_exposure_same_side with 2 row(s) and -347c ($-3.47) candidate-minus-live.",
+    "Candidate-loss rows include live side-flip escapes, so a one-shot hold-fill parent row is missing state transition behavior."
+  ],
+  "mechanism_summary": [
+    {
+      "candidate_minus_live_cents": -347.0,
+      "candidate_net_cents": 41.0,
+      "live_net_cents": 388.0,
+      "live_qty": 20.0,
+      "live_trade_count": 2,
+      "mechanism": "live_larger_terminal_exposure_same_side",
+      "rows": 2
+    },
+    {
+      "candidate_minus_live_cents": -232.0,
+      "candidate_net_cents": -164.0,
+      "live_net_cents": 68.0,
+      "live_qty": 32.0,
+      "live_trade_count": 14,
+      "mechanism": "live_side_flip_escaped_candidate_loss",
+      "rows": 2
+    },
+    {
+      "candidate_minus_live_cents": -208.0,
+      "candidate_net_cents": 20.0,
+      "live_net_cents": 228.0,
+      "live_qty": 12.0,
+      "live_trade_count": 2,
+      "mechanism": "live_same_side_exit_capture_scaled_better",
+      "rows": 1
+    }
+  ],
+  "promotion_use": "same_window_research_only",
+  "rows": [
+    {
+      "abs_d_sigma": 0.882733,
+      "ask_prob": 0.69,
+      "candidate_component": "strict_parent_midprice_hold_fill",
+      "candidate_minus_live_cents": -272.0,
+      "candidate_net_cents": 28.0,
+      "candidate_side": "no",
+      "candidate_side_won": true,
+      "candidate_source": "approved_entry",
+      "classification": "candidate_positive_live_captured_more",
+      "comparison_bucket": "candidate_right_but_live_captured_more",
+      "live_avg_entry_fill_cents": 75.0,
+      "live_avg_exit_fill_cents": 0.0,
+      "live_dominant_side": "no",
+      "live_net_cents": 300.0,
+      "live_opposite_side_net_cents": 0,
+      "live_outcome_counts": {
+        "win": 1
+      },
+      "live_qty": 12.0,
+      "live_same_side_net_cents": 300.0,
+      "live_sequence": [
+        {
+          "entry_fill_cents": 75.0,
+          "entry_ts": "2026-05-07 09:31:35",
+          "exit_fill_cents": 0.0,
+          "exit_ts": "",
+          "net_cents": 300.0,
+          "outcome": "win",
+          "qty": 12.0,
+          "side": "no"
+        }
+      ],
+      "live_side_counts": {
+        "no": 1
+      },
+      "live_side_net_cents": {
+        "no": 300.0
+      },
+      "live_sides": "no",
+      "live_trade_bucket": "single_live_trade",
+      "live_trade_count": 1,
+      "market": "KXBTC15M-26MAY070945-45",
+      "mechanism": "live_larger_terminal_exposure_same_side",
+      "raw_edge": 0.16369900000000004,
+      "recross_hazard_score": 0.43642658262493145
+    },
+    {
+      "abs_d_sigma": 0.878426,
+      "ask_prob": 0.77,
+      "candidate_component": "continuous_penalty:cheap_penalty025_rank_only",
+      "candidate_minus_live_cents": -208.0,
+      "candidate_net_cents": 20.0,
+      "candidate_side": "yes",
+      "candidate_side_won": true,
+      "candidate_source": "approved_entry",
+      "classification": "candidate_positive_live_captured_more",
+      "comparison_bucket": "candidate_right_but_live_captured_more",
+      "live_avg_entry_fill_cents": 81.0,
+      "live_avg_exit_fill_cents": 100.0,
+      "live_dominant_side": "yes",
+      "live_net_cents": 228.0,
+      "live_opposite_side_net_cents": 0,
+      "live_outcome_counts": {
+        "exited_before_settlement": 2
+      },
+      "live_qty": 12.0,
+      "live_same_side_net_cents": 228.0,
+      "live_sequence": [
+        {
+          "entry_fill_cents": 81.0,
+          "entry_ts": "2026-05-07 11:31:43",
+          "exit_fill_cents": 100.0,
+          "exit_ts": "2026-05-07 11:45:38",
+          "net_cents": 114.0,
+          "outcome": "exited_before_settlement",
+          "qty": 6.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 81.0,
+          "entry_ts": "2026-05-07 11:31:43",
+          "exit_fill_cents": 100.0,
+          "exit_ts": "2026-05-07 11:45:38",
+          "net_cents": 114.0,
+          "outcome": "exited_before_settlement",
+          "qty": 6.0,
+          "side": "yes"
+        }
+      ],
+      "live_side_counts": {
+        "yes": 2
+      },
+      "live_side_net_cents": {
+        "yes": 228.0
+      },
+      "live_sides": "yes",
+      "live_trade_bucket": "multi_live_trade",
+      "live_trade_count": 2,
+      "market": "KXBTC15M-26MAY071145-45",
+      "mechanism": "live_same_side_exit_capture_scaled_better",
+      "raw_edge": null,
+      "recross_hazard_score": 0.5850484031165768
+    },
+    {
+      "abs_d_sigma": 1.010241,
+      "ask_prob": 0.83,
+      "candidate_component": "strict_parent_midprice_hold_fill",
+      "candidate_minus_live_cents": -124.0,
+      "candidate_net_cents": -84.0,
+      "candidate_side": "yes",
+      "candidate_side_won": false,
+      "candidate_source": "approved_entry",
+      "classification": "candidate_loss_live_escape",
+      "comparison_bucket": "candidate_wrong_or_exit_bad_live_won",
+      "live_avg_entry_fill_cents": 83.0,
+      "live_avg_exit_fill_cents": 69.71428571428571,
+      "live_dominant_side": "yes",
+      "live_net_cents": 40.0,
+      "live_opposite_side_net_cents": 52.0,
+      "live_outcome_counts": {
+        "exited_before_settlement": 6,
+        "win": 1
+      },
+      "live_qty": 16.0,
+      "live_same_side_net_cents": -12.0,
+      "live_sequence": [
+        {
+          "entry_fill_cents": 80.0,
+          "entry_ts": "2026-05-07 10:51:11",
+          "exit_fill_cents": 77.0,
+          "exit_ts": "2026-05-07 10:52:08",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 80.0,
+          "entry_ts": "2026-05-07 10:51:11",
+          "exit_fill_cents": 77.0,
+          "exit_ts": "2026-05-07 10:52:08",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 82.0,
+          "entry_ts": "2026-05-07 10:52:16",
+          "exit_fill_cents": 81.0,
+          "exit_ts": "2026-05-07 10:52:58",
+          "net_cents": -2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 82.0,
+          "entry_ts": "2026-05-07 10:52:16",
+          "exit_fill_cents": 81.0,
+          "exit_ts": "2026-05-07 10:52:58",
+          "net_cents": -2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 85.0,
+          "entry_ts": "2026-05-07 10:53:13",
+          "exit_fill_cents": 86.0,
+          "exit_ts": "2026-05-07 10:56:43",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 85.0,
+          "entry_ts": "2026-05-07 10:53:13",
+          "exit_fill_cents": 86.0,
+          "exit_ts": "2026-05-07 10:56:43",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "yes"
+        },
+        {
+          "entry_fill_cents": 87.0,
+          "entry_ts": "2026-05-07 10:58:38",
+          "exit_fill_cents": 0.0,
+          "exit_ts": "",
+          "net_cents": 52.0,
+          "outcome": "win",
+          "qty": 4.0,
+          "side": "no"
+        }
+      ],
+      "live_side_counts": {
+        "no": 1,
+        "yes": 6
+      },
+      "live_side_net_cents": {
+        "no": 52.0,
+        "yes": -12.0
+      },
+      "live_sides": "no,yes",
+      "live_trade_bucket": "multi_live_trade",
+      "live_trade_count": 7,
+      "market": "KXBTC15M-26MAY071100-00",
+      "mechanism": "live_side_flip_escaped_candidate_loss",
+      "raw_edge": 0.054041000000000006,
+      "recross_hazard_score": 0.30500573389101787
+    },
+    {
+      "abs_d_sigma": 0.936079,
+      "ask_prob": 0.78,
+      "candidate_component": "strict_parent_midprice_hold_fill",
+      "candidate_minus_live_cents": -108.0,
+      "candidate_net_cents": -80.0,
+      "candidate_side": "no",
+      "candidate_side_won": false,
+      "candidate_source": "approved_entry",
+      "classification": "candidate_loss_live_escape",
+      "comparison_bucket": "candidate_wrong_or_exit_bad_live_won",
+      "live_avg_entry_fill_cents": 80.0,
+      "live_avg_exit_fill_cents": 65.71428571428571,
+      "live_dominant_side": "no",
+      "live_net_cents": 28.0,
+      "live_opposite_side_net_cents": 56.0,
+      "live_outcome_counts": {
+        "exited_before_settlement": 6,
+        "win": 1
+      },
+      "live_qty": 16.0,
+      "live_same_side_net_cents": -28.0,
+      "live_sequence": [
+        {
+          "entry_fill_cents": 78.0,
+          "entry_ts": "2026-05-07 10:05:16",
+          "exit_fill_cents": 79.0,
+          "exit_ts": "2026-05-07 10:06:02",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_fill_cents": 78.0,
+          "entry_ts": "2026-05-07 10:05:16",
+          "exit_fill_cents": 79.0,
+          "exit_ts": "2026-05-07 10:06:02",
+          "net_cents": 2.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_fill_cents": 79.0,
+          "entry_ts": "2026-05-07 10:06:05",
+          "exit_fill_cents": 74.0,
+          "exit_ts": "2026-05-07 10:06:35",
+          "net_cents": -10.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_fill_cents": 79.0,
+          "entry_ts": "2026-05-07 10:06:05",
+          "exit_fill_cents": 74.0,
+          "exit_ts": "2026-05-07 10:06:35",
+          "net_cents": -10.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_fill_cents": 80.0,
+          "entry_ts": "2026-05-07 10:06:51",
+          "exit_fill_cents": 77.0,
+          "exit_ts": "2026-05-07 10:07:54",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_fill_cents": 80.0,
+          "entry_ts": "2026-05-07 10:06:51",
+          "exit_fill_cents": 77.0,
+          "exit_ts": "2026-05-07 10:07:54",
+          "net_cents": -6.0,
+          "outcome": "exited_before_settlement",
+          "qty": 2.0,
+          "side": "no"
+        },
+        {
+          "entry_fill_cents": 86.0,
+          "entry_ts": "2026-05-07 10:11:14",
+          "exit_fill_cents": 0.0,
+          "exit_ts": "",
+          "net_cents": 56.0,
+          "outcome": "win",
+          "qty": 4.0,
+          "side": "yes"
+        }
+      ],
+      "live_side_counts": {
+        "no": 6,
+        "yes": 1
+      },
+      "live_side_net_cents": {
+        "no": -28.0,
+        "yes": 56.0
+      },
+      "live_sides": "no,yes",
+      "live_trade_bucket": "multi_live_trade",
+      "live_trade_count": 7,
+      "market": "KXBTC15M-26MAY071015-15",
+      "mechanism": "live_side_flip_escaped_candidate_loss",
+      "raw_edge": 0.08109199999999994,
+      "recross_hazard_score": 0.41762272221317515
+    },
+    {
+      "abs_d_sigma": 1.183451,
+      "ask_prob": 0.85,
+      "candidate_component": "strict_parent_midprice_hold_fill",
+      "candidate_minus_live_cents": -75.0,
+      "candidate_net_cents": 13.0,
+      "candidate_side": "no",
+      "candidate_side_won": true,
+      "candidate_source": "approved_entry",
+      "classification": "candidate_positive_live_captured_more",
+      "comparison_bucket": "candidate_right_but_live_captured_more",
+      "live_avg_entry_fill_cents": 89.0,
+      "live_avg_exit_fill_cents": 0.0,
+      "live_dominant_side": "no",
+      "live_net_cents": 88.0,
+      "live_opposite_side_net_cents": 0,
+      "live_outcome_counts": {
+        "win": 1
+      },
+      "live_qty": 8.0,
+      "live_same_side_net_cents": 88.0,
+      "live_sequence": [
+        {
+          "entry_fill_cents": 89.0,
+          "entry_ts": "2026-05-07 11:18:38",
+          "exit_fill_cents": 0.0,
+          "exit_ts": "",
+          "net_cents": 88.0,
+          "outcome": "win",
+          "qty": 8.0,
+          "side": "no"
+        }
+      ],
+      "live_side_counts": {
+        "no": 1
+      },
+      "live_side_net_cents": {
+        "no": 88.0
+      },
+      "live_sides": "no",
+      "live_trade_bucket": "single_live_trade",
+      "live_trade_count": 1,
+      "market": "KXBTC15M-26MAY071130-30",
+      "mechanism": "live_larger_terminal_exposure_same_side",
+      "raw_edge": 0.06660100000000002,
+      "recross_hazard_score": 0.33188369997953837
+    }
+  ]
+}

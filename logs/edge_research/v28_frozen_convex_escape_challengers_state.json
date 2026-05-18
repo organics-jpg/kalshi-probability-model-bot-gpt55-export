@@ -1,0 +1,22 @@
+{
+  "freeze_ts": "2026-05-05T22:33:33.421286+00:00",
+  "policies": [
+    {
+      "physics": "Use raw p50 only when raw edge is at least 20pp; otherwise use first-side p60 forgetting.",
+      "policy": "raw_edge20_else_first_side_raw_later_book_p60_edge0",
+      "role": "convex_raw_escape_first_side_wait"
+    },
+    {
+      "physics": "Use raw p50 only when raw edge is at least 20pp; otherwise use RMT repetition p60 forgetting.",
+      "policy": "raw_edge20_else_rmt_repetition_forget_p60_edge0",
+      "role": "convex_raw_escape_rmt_wait"
+    }
+  ],
+  "promotion_floor": {
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

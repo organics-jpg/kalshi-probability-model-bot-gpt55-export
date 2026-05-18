@@ -1,0 +1,187 @@
+{
+  "bucket_summaries": {
+    "candidate_improves_live_loss": {
+      "avg_abs_d_sigma": 0.9077998333333334,
+      "avg_ask_prob": 0.7799999999999999,
+      "avg_raw_edge": 0.08058020000000002,
+      "avg_recross_hazard": 0.29510011737339625,
+      "candidate_minus_live_cents": 403.0,
+      "candidate_net_cents": 215.0,
+      "components": {
+        "continuous_penalty:cheap_penalty025_rank_only": 1,
+        "strict_delayed_recheck_rescue:drop15_bid60": 4,
+        "strict_parent_midprice_hold_fill": 1
+      },
+      "live_net_cents": -188.0,
+      "rows": 6,
+      "sides": {
+        "no": 2,
+        "yes": 4
+      },
+      "sources": {
+        "approved_entry": 6
+      }
+    },
+    "candidate_not_better_than_live": {
+      "avg_abs_d_sigma": 0.936079,
+      "avg_ask_prob": 0.78,
+      "avg_raw_edge": 0.08109199999999994,
+      "avg_recross_hazard": 0.41762272221317515,
+      "candidate_minus_live_cents": -156.0,
+      "candidate_net_cents": -162.0,
+      "components": {
+        "strict_delayed_recheck_rescue:drop15_bid60": 1
+      },
+      "live_net_cents": -6.0,
+      "rows": 1,
+      "sides": {
+        "no": 1
+      },
+      "sources": {
+        "approved_entry": 1
+      }
+    },
+    "candidate_right_but_live_captured_more": {
+      "avg_abs_d_sigma": 1.1299441666666665,
+      "avg_ask_prob": 0.8066666666666666,
+      "avg_raw_edge": 0.09267616666666668,
+      "avg_recross_hazard": 0.3356138089994451,
+      "candidate_minus_live_cents": -278.0,
+      "candidate_net_cents": 136.0,
+      "components": {
+        "strict_delayed_recheck_rescue:drop15_bid60": 1,
+        "strict_parent_midprice_hold_fill": 5
+      },
+      "live_net_cents": 414.0,
+      "rows": 6,
+      "sides": {
+        "no": 5,
+        "yes": 1
+      },
+      "sources": {
+        "approved_entry": 4,
+        "rejected_actionable": 2
+      }
+    },
+    "candidate_vs_no_live_pnl": {
+      "avg_abs_d_sigma": 0.9255869999999999,
+      "avg_ask_prob": 0.425,
+      "avg_raw_edge": 0.08914100000000003,
+      "avg_recross_hazard": 0.08669515130935801,
+      "candidate_minus_live_cents": 36.0,
+      "candidate_net_cents": 36.0,
+      "components": {
+        "continuous_penalty:cheap_penalty025_rank_only": 1,
+        "strict_delayed_recheck_rescue:drop15_bid60": 1
+      },
+      "live_net_cents": 0.0,
+      "rows": 2,
+      "sides": {
+        "no": 1,
+        "yes": 1
+      },
+      "sources": {
+        "approved_entry": 1,
+        "rejected_actionable": 1
+      }
+    },
+    "candidate_wrong_or_exit_bad_live_won": {
+      "avg_abs_d_sigma": 1.010241,
+      "avg_ask_prob": 0.83,
+      "avg_raw_edge": 0.054041000000000006,
+      "avg_recross_hazard": 0.30500573389101787,
+      "candidate_minus_live_cents": -186.0,
+      "candidate_net_cents": -166.0,
+      "components": {
+        "strict_delayed_recheck_rescue:drop15_bid60": 1
+      },
+      "live_net_cents": 20.0,
+      "rows": 1,
+      "sides": {
+        "yes": 1
+      },
+      "sources": {
+        "approved_entry": 1
+      }
+    }
+  },
+  "candidate_policy": "post_dual_union_birth_entry_cheap_penalty025_rank_only",
+  "candidate_read": [
+    "Dual-lane is not currently a live-v28 replacement.",
+    "Its useful shape is as a possible risk-control overlay on markets where live v28 churns or loses.",
+    "The blocker is winner capture: live v28 made large same-side gains on several markets that dual-lane clipped to small wins.",
+    "A live-ready repair must preserve live v28's winner capture while using dual-lane only where it has forward evidence of reducing live loss clusters."
+  ],
+  "compare_generated_at_utc": "2026-05-11T03:47:37.865013+00:00",
+  "failure_modes": {
+    "entry_timing_error": {
+      "evidence": "Two candidate loss rows were live-positive after live v28 flipped or managed the market better.",
+      "status": "active"
+    },
+    "execution_friction_error": {
+      "evidence": "Candidate rows are single-row simulated/weighted fills while live v28 can scale or re-enter.",
+      "status": "possible"
+    },
+    "exit_policy_error": {
+      "evidence": "Three same-side winning markets show live v28 captured far more than dual-lane; dual-lane's current exit/weighting caps winners too aggressively.",
+      "status": "active"
+    },
+    "fragility_error": {
+      "evidence": "Candidate net remains below one full-loss cushion and same-window delta is negative.",
+      "status": "active"
+    },
+    "source_quality_error": {
+      "evidence": "Most harmful candidate-minus-live rows are approved-entry rows, not rejected-actionable rows.",
+      "status": "not_main_same_window_driver"
+    }
+  },
+  "generated_at_utc": "2026-05-11T03:47:37.989322+00:00",
+  "harmful_overlay_summary": {
+    "avg_abs_d_sigma": 1.1128437142857144,
+    "avg_ask_prob": 0.8099999999999999,
+    "avg_raw_edge": 0.08715685714285716,
+    "avg_recross_hazard": 0.3312412268410983,
+    "candidate_minus_live_cents": -464.0,
+    "candidate_net_cents": -30.0,
+    "components": {
+      "strict_delayed_recheck_rescue:drop15_bid60": 2,
+      "strict_parent_midprice_hold_fill": 5
+    },
+    "live_net_cents": 434.0,
+    "rows": 7,
+    "sides": {
+      "no": 5,
+      "yes": 2
+    },
+    "sources": {
+      "approved_entry": 5,
+      "rejected_actionable": 2
+    }
+  },
+  "helpful_overlay_summary": {
+    "avg_abs_d_sigma": 0.912246625,
+    "avg_ask_prob": 0.69125,
+    "avg_raw_edge": 0.08200700000000001,
+    "avg_recross_hazard": 0.2429988758573867,
+    "candidate_minus_live_cents": 439.0,
+    "candidate_net_cents": 251.0,
+    "components": {
+      "continuous_penalty:cheap_penalty025_rank_only": 2,
+      "strict_delayed_recheck_rescue:drop15_bid60": 5,
+      "strict_parent_midprice_hold_fill": 1
+    },
+    "live_net_cents": -188.0,
+    "rows": 8,
+    "sides": {
+      "no": 3,
+      "yes": 5
+    },
+    "sources": {
+      "approved_entry": 7,
+      "rejected_actionable": 1
+    }
+  },
+  "net_overlay_opportunity_cents": -25.0,
+  "promotion_use": "diagnostic_only_overlay_design",
+  "same_window_delta_cents": -181.0
+}

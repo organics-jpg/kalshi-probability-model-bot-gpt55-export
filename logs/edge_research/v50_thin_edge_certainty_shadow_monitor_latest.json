@@ -1,0 +1,54 @@
+{
+  "denominator": {
+    "observed_candidate_markets": 23,
+    "pending_candidate_markets": 0,
+    "resolved_candidate_markets": 23
+  },
+  "generated_utc": "2026-05-05T12:32:08.934618+00:00",
+  "latent_hole_markets_in_log": 4,
+  "lock": {
+    "base_model": "v38_long60_antipersist",
+    "created_utc": "2026-05-05T06:45:56.595204+00:00",
+    "entry": {
+      "ask_cap_cents": 100.0,
+      "ask_floor_cents": 1.0,
+      "edge_floor_cents": 0.0,
+      "max_seconds_to_close": 600.0,
+      "min_seconds_to_close": 0.0,
+      "p_side_floor": 0.65
+    },
+    "exit": {
+      "probability_floor": 0.54
+    },
+    "latent_state": {
+      "book_weight": 0.9,
+      "edge_floor_cents": -2.0,
+      "edge_hole_high": 20.0,
+      "edge_hole_low": 8.0,
+      "max_seconds_to_close": 600.0,
+      "min_seconds_to_close": 60.0,
+      "p_side_floor": 0.65,
+      "posterior": "book_blend"
+    },
+    "lock_id": "v50_thin_edge_certainty_shadow_v1",
+    "model_defined_utc": "2026-05-05T06:45:56.595204+00:00",
+    "policy": "v50_thinedge_ask90_edge1_stc450_cap75_edge0_p65_stc0_600_prob54",
+    "purpose": "Strict-forward shadow validation of v50 thin-edge certainty FV candidate.",
+    "recross_hazard": {
+      "seconds_to_close_max": 600.0,
+      "seconds_to_close_min": 0.0,
+      "selected_p_side_cap": 0.68,
+      "side_margin_sigma15_max": 1.0,
+      "side_velocity_3m_min_dps": 0.5
+    },
+    "thin_edge_certainty": {
+      "seconds_to_close_max": 600.0,
+      "seconds_to_close_min": 450.0,
+      "selected_ask_min_cents": 90.0,
+      "selected_edge_max_cents": 1.0,
+      "selected_p_side_cap": 0.75
+    }
+  },
+  "new_rows": 10,
+  "registered": 23
+}

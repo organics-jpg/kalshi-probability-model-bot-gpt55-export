@@ -1,0 +1,99 @@
+{
+  "book_trajectory_fv": {
+    "all_observations": {
+      "avg_brier": 0.14858601074042785,
+      "avg_logloss": 0.43170994356930464,
+      "avg_p": 0.5399324455317329,
+      "brier_delta_vs_raw": -0.0022175152031330414,
+      "calibration_error": 0.006521650125221434,
+      "logloss_delta_vs_raw": -0.006440429569180506,
+      "losses": 7425,
+      "rows": 16371,
+      "variant": "gap15_or_drawdown10",
+      "win_rate": 0.5464540956569544,
+      "wins": 8946
+    },
+    "approved_only": {
+      "avg_brier": 0.09110525012536455,
+      "avg_logloss": 0.31931015769497434,
+      "avg_p": 0.8763025394594594,
+      "brier_delta_vs_raw": -0.006465489121030052,
+      "calibration_error": 0.015589352432432535,
+      "logloss_delta_vs_raw": -0.058536085976903574,
+      "losses": 20,
+      "rows": 185,
+      "variant": "gap15_or_drawdown10",
+      "win_rate": 0.8918918918918919,
+      "wins": 165
+    },
+    "first_per_market_side": {
+      "avg_brier": 0.2443025902313676,
+      "avg_logloss": 0.6933409381453078,
+      "avg_p": 0.49342900935251804,
+      "brier_delta_vs_raw": -0.005829965412330246,
+      "calibration_error": 0.006570990647481956,
+      "logloss_delta_vs_raw": -0.025293489455758156,
+      "losses": 139,
+      "rows": 278,
+      "variant": "gap15_or_drawdown10",
+      "win_rate": 0.5,
+      "wins": 139
+    },
+    "freeze_ts": "2026-05-06T02:47:06.099693+00:00",
+    "future_markets": 139,
+    "future_rows": 16371
+  },
+  "control": {
+    "exit_value_cents": -1481.0,
+    "gross_cents": 823.0,
+    "hold_gross_cents": 2304.0,
+    "resolved": 173,
+    "trades": 173
+  },
+  "danger_zone_valve": {
+    "blockers": [],
+    "coverage_pct": 100.0,
+    "delta_vs_control_cents": 258.0,
+    "entries": 134,
+    "freeze_ts": "2026-05-06T03:09:58.042066+00:00",
+    "gross_cents": 973.0,
+    "losses": 15,
+    "settled": 134,
+    "wins": 119
+  },
+  "exit_control": {
+    "avg_gross_cents": 4.757225433526012,
+    "delta_vs_current_cents": 0.0,
+    "gross_cents": 823.0,
+    "losses": 75,
+    "policy": "current_v28_exit",
+    "suppressed_collapse_exits": 0,
+    "suppressed_exits": 0,
+    "trades": 173,
+    "winner_clip_cents": -4659.0,
+    "wins": 98,
+    "worst_intratrade_mark_cents": -134.0
+  },
+  "interpretation": [
+    "State valve has 138 settled post-freeze rows with delta 180.0c.",
+    "Danger-zone valve has 134 settled post-freeze rows with delta 258.0c.",
+    "Book-trajectory all-observation FV delta is -0.0022175152031330414/-0.006440429569180506.",
+    "Current v28 exits are 823.0c over 173 trades; simple exit book-gap suppressors are not better."
+  ],
+  "pending": {
+    "book_trajectory_count": 0,
+    "state_rows": [],
+    "state_valve_count": 0
+  },
+  "state_valve": {
+    "blockers": [],
+    "coverage_pct": 100.0,
+    "delta_vs_control_cents": 180.0,
+    "entries": 138,
+    "freeze_ts": "2026-05-06T02:42:53.253731+00:00",
+    "gross_cents": 885.0,
+    "losses": 16,
+    "settled": 138,
+    "wins": 122
+  }
+}

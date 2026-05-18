@@ -1,0 +1,212 @@
+{
+  "denominator_context": {
+    "reduce_depth_gate": {
+      "age_minutes": 724.8963553833333,
+      "base_exit_rows_after_freeze": 27,
+      "blockers": [
+        "settled_lt_30",
+        "no_suppressed_exits_yet",
+        "delta_not_positive",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate_net_cents": -62.0,
+      "delta_vs_current_cents": 0.0,
+      "denominator_read": "denominator_collecting_rule_not_firing",
+      "freeze_ts_utc": "2026-05-06T20:19:43.176664+00:00",
+      "lane": "reduce_depth_gate",
+      "opportunity": {
+        "fail_reason_counts": {
+          "not_probability_reduce": 26
+        },
+        "post_birth_rows": 27,
+        "probability_reduce_rows": 1,
+        "runway": {
+          "blockers": [
+            "settled_lt_30",
+            "no_suppressed_exits_yet",
+            "delta_not_positive",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+          "delta_vs_current_cents": 0.0,
+          "full_loss_cushion": 0,
+          "full_losses_absorbable": 0,
+          "future_settled_rows_needed": 3,
+          "future_suppressed_exits_needed": 5,
+          "has_harmful_suppressed_exit": false,
+          "net_cents_needed_for_cushion3": 300.0,
+          "ready_for_consideration": false,
+          "settled": 27,
+          "suppressed_exits": 0,
+          "suppressed_losers": 0
+        },
+        "would_suppress_rows": 1
+      },
+      "status": "blocked_net_not_positive",
+      "watch_settled": 27,
+      "watch_suppressed": 0
+    },
+    "reduce_loss_control_refinement": {
+      "age_minutes": 735.8695370333334,
+      "base_exit_rows_after_freeze": 27,
+      "blockers": [
+        "settled_lt_30",
+        "delta_not_positive",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate_net_cents": -62.0,
+      "delta_vs_current_cents": 0.0,
+      "denominator_read": "denominator_collecting_rule_not_firing",
+      "freeze_ts_utc": "2026-05-06T20:08:44.785765+00:00",
+      "lane": "reduce_loss_control_refinement",
+      "opportunity": {},
+      "status": "blocked_net_not_positive",
+      "watch_settled": 27,
+      "watch_suppressed": 0
+    },
+    "reduce_side_geometry": {
+      "age_minutes": 1054.7159302333334,
+      "base_exit_rows_after_freeze": 37,
+      "blockers": [
+        "delta_not_positive"
+      ],
+      "candidate_net_cents": 42.0,
+      "delta_vs_current_cents": 0.0,
+      "denominator_read": "denominator_collecting_rule_not_firing",
+      "freeze_ts_utc": "2026-05-06T14:49:54.002173+00:00",
+      "lane": "reduce_side_geometry",
+      "opportunity": {},
+      "status": "waiting_no_suppressed_exits",
+      "watch_settled": 37,
+      "watch_suppressed": 0
+    }
+  },
+  "depth_gate": {
+    "freeze_ts_utc": "2026-05-06T20:19:43.176664+00:00",
+    "loose_candidate": "reduce_suppress_p_hold_ge_075_entry_depth_lte_384",
+    "loose_would_suppress_delta_cents": -120.0,
+    "loose_would_suppress_examples": [
+      {
+        "current_cents": -32.0,
+        "delta_if_suppressed_cents": -120.0,
+        "entry_cents": 76,
+        "entry_depth": 24.0,
+        "entry_ts": "2026-05-07T01:19:31.944898+00:00",
+        "exit_cents": 60,
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-07T01:23:37.628590+00:00",
+        "fail_reasons": [],
+        "hold_cents": -152.0,
+        "market": "KXBTC15M-26MAY062130-30",
+        "p_hold": 0.768407,
+        "result": "yes",
+        "side": "no",
+        "would_suppress": true
+      }
+    ],
+    "loose_would_suppress_rows": 1,
+    "post_birth_rows": 27,
+    "probability_reduce_rows": 1,
+    "read": "Strict p_hold>=0.79 avoids the only observed post-birth reduce candidate; looser p_hold>=0.75 would fire once but that row is harmful.",
+    "strict_candidate": "reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+    "strict_fail_reasons": {
+      "not_probability_reduce": 26,
+      "p_hold_below_floor": 1
+    },
+    "strict_would_suppress_rows": 0
+  },
+  "generated_at_utc": "2026-05-07T08:24:37.057987+00:00",
+  "geometry": {
+    "base_p_hold_candidates": 2,
+    "base_reduce_rejected_examples": [],
+    "freeze_ts_utc": "2026-05-06T14:49:54.002173+00:00",
+    "geometry_rejected_base_candidates": 2,
+    "geometry_rejected_base_delta_cents": -74.0,
+    "geometry_rows": [],
+    "geometry_would_suppress_rows": 0,
+    "post_freeze_rows": 37,
+    "probability_reduce_rows": 2,
+    "read": "Geometry is loss-conservative but density-starved: it rejected one helpful and one harmful base p-hold reduce candidate, net -74c for the broad base opportunity.",
+    "reason_counts": {
+      "fair_drawdown_missing": 6,
+      "no_positive_drawdown_reject": 10,
+      "not_probability_reduce": 35,
+      "p_hold_below_floor": 16,
+      "p_hold_missing": 6,
+      "yes_negative_drawdown_reject": 5
+    },
+    "rejected_by_geometry_summary": {
+      "losers": 1,
+      "negative_delta_rows": 1,
+      "net_delta_if_suppressed_cents": -74.0,
+      "positive_delta_rows": 1,
+      "rows": 2,
+      "winners": 1
+    }
+  },
+  "interpretation": [
+    "Research-only no-fire audit; no live bot changes or orders.",
+    "The reduce branch is not currently a leading repair because post-freeze probability-reduce opportunities are too sparse.",
+    "Depth gate saw 1 probability-reduce row in 27 post-birth rows; strict p_hold>=0.79 fires 0 times.",
+    "A looser depth rule would fire 1 time for -120.0c, so widening would currently add loss-control harm.",
+    "Geometry saw 2 probability-reduce rows and 2 base p-hold candidates, but 0 geometry suppressions; the rejected base opportunity was -74.0c.",
+    "Every post-refinement variant has zero suppressions, so refinement cannot be judged until new probability-reduce opportunities arrive.",
+    "Actionable read: keep reduce watches running, but prioritize exit watches with active denominator and clean suppression evidence over widening reduce rules."
+  ],
+  "refinement": {
+    "freeze_ts_utc": "2026-05-06T20:08:44.785765+00:00",
+    "read": "Every post-refinement variant has zero suppressions, so refinement cannot be judged until new probability-reduce opportunities arrive.",
+    "variants": [
+      {
+        "blockers": [
+          "settled_lt_30",
+          "delta_not_positive",
+          "full_loss_cushion_lt_3"
+        ],
+        "candidate": "post_refinement_birth_reduce_suppress_p_hold_ge_079",
+        "delta_vs_current_cents": 0.0,
+        "settled": 27,
+        "suppressed_exits": 0
+      },
+      {
+        "blockers": [
+          "settled_lt_30",
+          "delta_not_positive",
+          "full_loss_cushion_lt_3"
+        ],
+        "candidate": "post_refinement_birth_reduce_suppress_p_hold_ge_075_drawdown_lte_2p5",
+        "delta_vs_current_cents": 0.0,
+        "settled": 27,
+        "suppressed_exits": 0
+      },
+      {
+        "blockers": [
+          "settled_lt_30",
+          "delta_not_positive",
+          "full_loss_cushion_lt_3"
+        ],
+        "candidate": "post_refinement_birth_reduce_suppress_p_hold_ge_079_or_drawdown_lte_2p5",
+        "delta_vs_current_cents": 0.0,
+        "settled": 27,
+        "suppressed_exits": 0
+      },
+      {
+        "blockers": [
+          "settled_lt_30",
+          "delta_not_positive",
+          "full_loss_cushion_lt_3"
+        ],
+        "candidate": "post_refinement_birth_reduce_suppress_p_hold_ge_075_fair_drawdown_lte_0",
+        "delta_vs_current_cents": 0.0,
+        "settled": 27,
+        "suppressed_exits": 0
+      }
+    ]
+  },
+  "sources": {
+    "denominator_audit": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_watch_denominator_audit_latest.json",
+    "depth_opportunity": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_reduce_depth_gate_opportunity_latest.json",
+    "geometry_opportunity": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_reduce_geometry_opportunity_latest.json",
+    "refinement": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_loss_control_refinement_latest.json"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "candidate": {
+    "avg_brier": 0.10797142857142858,
+    "avg_logloss": 0.37623733229866485,
+    "avg_p": 0.7790977443609023,
+    "blockers": [
+      "brier_not_better_than_raw"
+    ],
+    "brier_delta_vs_raw": 0.006168655138428583,
+    "calibration_error": 0.10812030075187962,
+    "entries": 133,
+    "gross_cents": 701.0,
+    "logloss_delta_vs_raw": -0.025019035845109228,
+    "losses": 15,
+    "overlay": "book_probability",
+    "settled": 133,
+    "win_rate": 0.8872180451127819,
+    "wins": 118
+  },
+  "candidate_live_ready": false,
+  "freeze": {
+    "candidate": "book_probability",
+    "entry_surface": "actual_v28_approved_entries_only",
+    "freeze_ts_utc": "2026-05-06T06:20:06.824407+00:00",
+    "overlays": [
+      "raw_probability",
+      "book_probability",
+      "noise_shrink_light_probability"
+    ],
+    "physics": "Raw v28 may select direction, while the executable book is a stronger calibration anchor after selection and fees.",
+    "rule": "Compare book_probability against raw_probability only on future actual v28-approved entries."
+  },
+  "future_entries": 133,
+  "future_settled": 133,
+  "interpretation": [
+    "Frozen approved-entry FV candidate book_probability has 133 future settled rows.",
+    "Brier/logloss deltas versus raw are 0.006168655138428583/-0.025019035845109228.",
+    "This is actual approved-entry calibration evidence only; it does not use rejected-actionable rows."
+  ],
+  "ranked": [
+    {
+      "avg_brier": 0.101802773433,
+      "avg_logloss": 0.4012563681437741,
+      "avg_p": 0.8848383533834586,
+      "blockers": [],
+      "brier_delta_vs_raw": 0.0,
+      "calibration_error": 0.0023796917293232855,
+      "entries": 133,
+      "gross_cents": 701.0,
+      "logloss_delta_vs_raw": 0.0,
+      "losses": 15,
+      "overlay": "raw_probability",
+      "settled": 133,
+      "win_rate": 0.8872180451127819,
+      "wins": 118
+    },
+    {
+      "avg_brier": 0.10234937761312328,
+      "avg_logloss": 0.37432972476834264,
+      "avg_p": 0.8762671251481885,
+      "blockers": [],
+      "brier_delta_vs_raw": 0.0005466041801232835,
+      "calibration_error": 0.010950919964593409,
+      "entries": 133,
+      "gross_cents": 701.0,
+      "logloss_delta_vs_raw": -0.026926643375431436,
+      "losses": 15,
+      "overlay": "noise_shrink_light_probability",
+      "settled": 133,
+      "win_rate": 0.8872180451127819,
+      "wins": 118
+    },
+    {
+      "avg_brier": 0.10797142857142858,
+      "avg_logloss": 0.37623733229866485,
+      "avg_p": 0.7790977443609023,
+      "blockers": [
+        "brier_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.006168655138428583,
+      "calibration_error": 0.10812030075187962,
+      "entries": 133,
+      "gross_cents": 701.0,
+      "logloss_delta_vs_raw": -0.025019035845109228,
+      "losses": 15,
+      "overlay": "book_probability",
+      "settled": 133,
+      "win_rate": 0.8872180451127819,
+      "wins": 118
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "skip_mid_edge_boundary_deception_repair_stable_geometry",
+  "coverage_floor": 75.0,
+  "danger_rule": "4-8pp raw edge while early, close to strike, and high recross",
+  "freeze_ts_utc": "2026-05-06T09:23:03.299714+00:00",
+  "physics": "A medium model edge near the boundary can be a mirage: the model is confident enough to enter, but the spot path has not escaped the strike's recross basin.",
+  "repair_rule": "clean repairs ranked by farthest abs_d, lowest recross, then 2-4pp edge preference"
+}

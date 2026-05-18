@@ -1,0 +1,39 @@
+{
+  "candidate_family": "feature_gate_cheap_tail_quarantine",
+  "core_rules": {
+    "core_raw03_recross50_abs65_ask35": {
+      "abs_d": 0.65,
+      "ask_min": 0.35,
+      "raw": 0.03,
+      "recross": 0.5
+    },
+    "core_raw03_recross50_abs65_ask50": {
+      "abs_d": 0.65,
+      "ask_min": 0.5,
+      "raw": 0.03,
+      "recross": 0.5
+    },
+    "core_raw05_recross60_abs085_ask65": {
+      "abs_d": 0.85,
+      "ask_min": 0.65,
+      "raw": 0.05,
+      "recross": 0.6
+    }
+  },
+  "freeze_ts_utc": "2026-05-06T22:43:55.071320+00:00",
+  "physics": "Very cheap boundary-tail rows are asymmetric lottery exposures. They can produce large wins, but they should not count as broad-entry coverage repair until they independently clear sample, source-quality, and fragility gates.",
+  "tail_rules": {
+    "tail_raw03_recross50_abs75_asklt35": {
+      "abs_d": 0.75,
+      "ask_max": 0.35,
+      "raw": 0.03,
+      "recross": 0.5
+    },
+    "tail_raw05_recross50_abs85_asklt35": {
+      "abs_d": 0.85,
+      "ask_max": 0.35,
+      "raw": 0.05,
+      "recross": 0.5
+    }
+  }
+}

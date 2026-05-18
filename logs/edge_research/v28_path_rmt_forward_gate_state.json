@@ -1,0 +1,41 @@
+{
+  "freeze_ts": "2026-05-06T00:38:39.999269+00:00",
+  "policies": [
+    {
+      "mode": "weakraw_rmt_memory_margin02_or_opp",
+      "physics": "When raw v28 is below 60%, require at least 2pp RMT/book edge after 240s or follow a later opposite v28 approval.",
+      "policy": "weakraw_rmt_memory_margin02_wait240_or_opp",
+      "wait_seconds": 240
+    },
+    {
+      "mode": "weakraw_rmt_repetition_margin02_or_opp",
+      "physics": "Same weak-raw uncertainty gate, using repetition-forgetting probability as the RMT edge check.",
+      "policy": "weakraw_rmt_repetition_margin02_wait240_or_opp",
+      "wait_seconds": 240
+    },
+    {
+      "mode": "baseline",
+      "physics": "Fresh same-window baseline: first raw-v28 p>=0.50 nonnegative-edge side per clean market.",
+      "policy": "v28_raw_p50_edge0_base",
+      "wait_seconds": 0
+    },
+    {
+      "mode": "rmt_memory_gap_confirm_edge02_or_opp",
+      "physics": "For fragile early raw-v28 rows, either require same-side RMT/book edge after 240s or follow a later opposite v28 approval.",
+      "policy": "selective_rmt_memory_gap_wait240_rmtedge02_or_opp",
+      "wait_seconds": 240
+    },
+    {
+      "mode": "rmt_repetition_gap_confirm_edge02_or_opp",
+      "physics": "Same path rule, using repetition-forgetting probability as the RMT edge check.",
+      "policy": "selective_rmt_repetition_gap_wait240_rmtedge02_or_opp",
+      "wait_seconds": 240
+    }
+  ],
+  "promotion_floor": {
+    "coverage_max": 90.0,
+    "coverage_min": 70.0,
+    "max_simulated_share": 0.35,
+    "min_settled": 30
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "candidate": "dual_exit_book_gap_else_reduce",
+  "freeze_ts_utc": "2026-05-06T21:15:42.381999+00:00",
+  "physics": "Soft exit marks can be spread/turbulence artifacts; book-gap context is preferred when observable, while reduce-suppression is retained only as a fallback for rows outside the book-gap ledger.",
+  "rule": "For each post-freeze settled live v28 exit row, use suppress_soft_gap15_or_p_hold75 when that ledger has the row; otherwise use suppress_reduce_p_hold_ge_075.",
+  "source_artifacts": [
+    "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_suppression_latest.json",
+    "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_suppression_latest.json"
+  ],
+  "strict_forward_note": "Rows before this timestamp are diagnostic only."
+}

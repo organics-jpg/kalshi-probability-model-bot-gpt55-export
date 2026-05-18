@@ -1,0 +1,54 @@
+{
+  "candidate_policy": {
+    "ask_max": 95.0,
+    "chooser": "score_min_book_rv15",
+    "gate": "none",
+    "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "combined_label": "take frontier_v2 unless first v2 seconds_to_close>=600, then wait for score_min60",
+  "created_utc": "2026-05-03T22:36:27.501634+00:00",
+  "discovery_metrics": {
+    "both_coverage_pass": true,
+    "both_oos_positive": true,
+    "combined_delta_vs_v2_cents": 304.0,
+    "current_all_accuracy": 0.7626459143968871,
+    "current_all_coverage": 0.9884615384615384,
+    "current_all_net_pnl_cents": 1320.0,
+    "current_all_net_roi_on_cost": 0.0722100656455142,
+    "current_delta_vs_v2_cents": 1029.0,
+    "current_holdout_accuracy": 0.7307692307692307,
+    "current_holdout_coverage": 1.0,
+    "current_holdout_net_pnl_cents": 47.0,
+    "min_oos_roi": 0.012523314681588,
+    "v21_all_accuracy": 0.7385321100917431,
+    "v21_all_coverage": 0.986425339366516,
+    "v21_all_net_pnl_cents": 558.0,
+    "v21_all_net_roi_on_cost": 0.0359027152232659,
+    "v21_delta_vs_v2_cents": -725.0,
+    "v21_holdout_accuracy": 0.7727272727272727,
+    "v21_holdout_coverage": 0.9777777777777776,
+    "v21_holdout_net_pnl_cents": 179.0
+  },
+  "lock_close_dt": "2026-05-03T22:00:00+00:00",
+  "research_note": "Forward-registered conditional wait candidate from the V2 conditional scan. Diagnostic only: the scan improved the current ledger but gave back v21 edge, so promotion requires strict pre-resolution live evidence and >=80% recurring-market coverage.",
+  "source_candidate_lock": "logs\\edge_research\\profit_frontier_score_min60_lock.json",
+  "source_scan_csv": "logs\\edge_research\\v2_conditional_wait_scan_latest.csv",
+  "source_v2_lock": "logs\\edge_research\\profit_frontier_v2_fresh_lock.json",
+  "v2_policy": {
+    "ask_max": 95.0,
+    "chooser": "brownian_p_rv_15m",
+    "gate": "none",
+    "label": "choose=brownian_p_rv_15m; brownian_p_rv_15m>=0.55; ask<=95; sec_to_close>=120",
+    "min_score": 0.55,
+    "min_seconds_to_close": 120.0
+  },
+  "wait_rule": {
+    "candidate": "score_min60",
+    "feature": "seconds_to_close",
+    "label": "wait_for_score_min60_if_v2_seconds_to_close>=600",
+    "op": ">=",
+    "threshold": 600.0
+  }
+}

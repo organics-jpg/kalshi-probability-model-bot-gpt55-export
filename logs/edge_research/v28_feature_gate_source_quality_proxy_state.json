@@ -1,0 +1,11 @@
+{
+  "candidate_family": "feature_gate_source_quality_proxy",
+  "freeze_ts_utc": "2026-05-07T05:43:23.438198+00:00",
+  "parent": "v28_feature_gate_coverage_size_shrink",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only; watch rows must prove themselves post-freeze.",
+  "watch_variants": {
+    "p_side_gte_75": "Require stronger model-side probability; source quality improves but coverage and cushion need forward proof.",
+    "raw_edge_gte_4": "Require at least four raw edge points; improves source share but under-covers diagnostically.",
+    "stc_gte_240": "Require at least four minutes to close; diagnostic rows suggest later observations reduce source fragility while preserving full-loss cushion."
+  }
+}

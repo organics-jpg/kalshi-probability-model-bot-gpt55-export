@@ -1,0 +1,249 @@
+{
+  "contract_status": "pass_scaffold_primary_blocked_until_future_rows",
+  "label_summary": {
+    "joined_rows": 16302,
+    "label_status_counts": {
+      "joined_post_resolution": 16302
+    },
+    "missing_label_rows": 0,
+    "pending_or_unjoined_label_rows": 0,
+    "rows": 16302
+  },
+  "registry_summary": {
+    "diagnostic_rows": 15988,
+    "markets": 189,
+    "policy_created_utc": "2026-05-13T18:04:43.040Z",
+    "policy_hash": "5bf8d66dbe2b31e01d38abe8a0238e68",
+    "policy_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+    "policy_spec": {
+      "diagnostic_origin": {
+        "implemented_reason": "the smallest inspectable replacement keeps the same cross-side fade trigger and one-entry cap, lowers only the YES ask floor from 75c to 65c, and keeps the 80c ceiling. Diagnostic one-entry-per-market replay over joined rows favored the 65c-80c, 5c-signal band over broader 80s/90s expansions: +79c across 14 diagnostic entries and +66c across the two newly labeled v018 primary markets, while 65c-85c/90c variants were roughly flat to negative diagnostically. This is not promotion evidence; it is only the reason to freeze v019 before collecting new primary rows.",
+        "previous_policy_hash": "375dd20718510cebc1c5c96e268750db",
+        "previous_policy_id": "v28s_live_pnl_expensive_confirmed_no_fade_yes_v018",
+        "problem": "v018 converted v17's too-cheap YES fade into a narrow 75c-80c expensive-confirmed band, but it still produced no entries over two finalized live-forward markets. Fresh labels showed the earliest tradable fade rows at 65c-74c also won, while later 80s/90s rows remained too expensive or too close to close.",
+        "research_source_urls": [
+          "https://arxiv.org/abs/2603.24704",
+          "https://arxiv.org/abs/2208.12084",
+          "https://arxiv.org/abs/2604.11577",
+          "https://arxiv.org/abs/1603.06183",
+          "https://arxiv.org/abs/0708.3562",
+          "https://arxiv.org/abs/0811.2629",
+          "https://aclanthology.org/2021.acl-long.84/"
+        ],
+        "retired_policies": [
+          {
+            "decision": "retire_and_replace",
+            "policy_hash": "72c5a3308492baad1240df244176259c",
+            "policy_id": "v28s_live_pnl_v28_boundary_abstention_v002",
+            "reason": "v002 matched regular v28 on the first primary forward market and lost money; scoring also revealed repeated per-candidate rows could overstate opportunity count",
+            "status": "retired_diagnostic_underperformed_v28"
+          },
+          {
+            "decision": "retire_or_replace_before_next_forward_credit",
+            "policy_hash": "a73acc599c08a24aa947d2e92105d1f9",
+            "policy_id": "v28s_live_pnl_yes_residual_tilt_v003",
+            "reason": "v003 produced positive delta versus regular v28 on its first settled live-forward market, but absolute primary net P&L was -6 cents",
+            "status": "replace_required_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "retire_or_replace_before_next_forward_credit",
+            "policy_hash": "8e8c05685b02648ac0085d46cbb68e9e",
+            "policy_id": "v28s_live_pnl_preclose_yes_residual_tilt_v004",
+            "reason": "v004 produced positive delta versus regular v28 but lost -41 cents absolute net P&L on two pre-five-minute cheap YES entries",
+            "status": "replace_required_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "replace_for_more_active_existing_candidate",
+            "policy_hash": "05e6d861831d551c1f7a30cc79a2645b",
+            "policy_id": "v28s_live_pnl_mature_yes_residual_tilt_v005",
+            "reason": "v005 avoided v28 losses but produced zero entries and zero absolute P&L across its first settled live-forward rows",
+            "status": "retired_no_entry_standdown_not_pnl_proof"
+          },
+          {
+            "decision": "replace_with_existing_light_boundary_no_surface",
+            "policy_hash": "e7101b160ec3584ae935c2e67dd1611c",
+            "policy_id": "v28s_live_pnl_no_monotonic_tabular_v006",
+            "reason": "v006 produced zero entries and 0c absolute P&L across its first 10 joined primary rows, but underperformed regular v28 by -16.9c by skipping two v28 NO winners",
+            "status": "retired_no_entry_negative_delta"
+          },
+          {
+            "decision": "replace_with_opposing_yes_physics_veto",
+            "policy_hash": "3353691227124e31f31a99d85a1fbe08",
+            "policy_id": "v28s_live_pnl_boundary_light_no_v007",
+            "reason": "v007 entered three post-hash NO rows in the 12:15Z market and lost all three, producing -197c net P&L with no delta versus regular v28",
+            "status": "retired_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "replace_with_lower_book_confirmation_veto",
+            "policy_hash": "fcd2522f32fb964be1c73d05065bbddc",
+            "policy_id": "v28s_live_pnl_boundary_light_no_yes_veto_v008",
+            "reason": "v008 produced zero entries across its first four joined primary rows and underperformed regular v28 by -28c because its 90c veto skipped two 12:45Z NO winners",
+            "status": "retired_no_entry_negative_delta"
+          },
+          {
+            "decision": "retire_or_replace_before_next_forward_credit",
+            "policy_hash": "52348ef71e1632c84df63d85e131e391",
+            "policy_id": "v28s_live_pnl_boundary_light_no_yes_veto_v009",
+            "reason": "v009 entered one post-hash NO row at 29c with only 2.38c net edge and lost, leaving primary net P&L -31c and delta versus regular v28 -17.2c across five labeled primary rows",
+            "status": "replace_required_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "replace_with_book_confirmed_late_high_ask_repair",
+            "policy_hash": "4f104f77a3241febdaa2abb3dbff7ffc",
+            "policy_id": "v28s_live_pnl_boundary_light_no_strict_selective_v010",
+            "reason": "v010 was positive absolute P&L at +15.6c but underperformed regular v28 by -7.3c after skipping a late 91.7c NO winner that v28 entered",
+            "status": "replace_required_failed_primary_forward_delta"
+          },
+          {
+            "decision": "replace_no_loss_filter_with_yes_boundary_physics_entry",
+            "policy_hash": "eff64a606862ecb60a47d5003b8c4284",
+            "policy_id": "v28s_live_pnl_boundary_light_book_confirmed_v011",
+            "reason": "v011 produced strong positive delta versus regular v28 by skipping a cluster of v28 NO losses, but its two actual post-hash primary NO entries both lost in the 15:00Z market, leaving absolute primary net P&L -73c despite +1076.6c delta versus v28",
+            "status": "replace_required_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "add_one_entry_per_market_loss_cluster_cap",
+            "policy_hash": "54444ab3221556f12d9155ab3c6ac81b",
+            "policy_id": "v28s_live_pnl_yes_boundary_physics_reversal_v012",
+            "reason": "v012 entered six post-hash YES rows in its first market and lost all six, producing -124c net P&L and -124c delta versus regular v28; the failure was primarily repeated exposure to one false market-level signal, not six independent errors",
+            "status": "replace_required_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "fix_market_cap_to_ignore_pre_hash_rows",
+            "policy_hash": "85c66e12bc23d6fbe6ea08cd34229636",
+            "policy_id": "v28s_live_pnl_yes_boundary_physics_one_entry_v013",
+            "reason": "v013 correctly added a one-entry-per-market cap, but the first capture showed a code-level evidence bug: pre-hash diagnostic rows in the same market consumed the cap and caused all post-hash primary rows to be skipped as market_entry_cap_reached",
+            "status": "replace_required_cap_counted_pre_hash_diagnostic_rows"
+          },
+          {
+            "decision": "replace_yes_physics_with_existing_book_reliability_no_surface",
+            "policy_hash": "da15088eaae5a2a480104fb794825135",
+            "policy_id": "v28s_live_pnl_yes_boundary_physics_one_entry_v014",
+            "reason": "v014 correctly limited exposure to one YES boundary-physics entry, but its first post-hash market still lost -20c net and -20c versus regular v28, confirming that the issue was not only repeated exposure but a false-positive surface in the fresh regime",
+            "status": "replace_required_failed_primary_forward_pnl"
+          },
+          {
+            "decision": "replace_with_capped_high_ask_v28_feature_policy",
+            "policy_hash": "480e4638220b4ad8665bd71202705023",
+            "policy_id": "v28s_live_pnl_no_book_reliability_one_entry_v015",
+            "reason": "v015 produced two finalized post-hash markets with 36 labeled primary rows, zero entries, zero absolute P&L, and -53c delta versus regular v28 after skipping profitable v28 NO entries",
+            "status": "replace_required_no_entry_negative_delta"
+          },
+          {
+            "decision": "replace_loss_filter_with_complementary_yes_fade",
+            "policy_hash": "b5a6dc41cd93755fcc0d1a87287dc511",
+            "policy_id": "v28s_live_pnl_v28_high_ask_no_one_entry_v016",
+            "reason": "v016 produced three finalized post-hash markets with 53 labeled primary rows, zero entries, zero absolute P&L, and +831c delta versus regular v28 by avoiding cheap-NO loss clusters; useful filter behavior, but still no profit engine",
+            "status": "retired_no_entry_standdown_not_pnl_proof"
+          },
+          {
+            "decision": "replace_with_expensive_confirmed_yes_fade_band",
+            "policy_hash": "897d5b3679d55d62e330ed95bf079ca1",
+            "policy_id": "v28s_live_pnl_low_ask_v28_no_fade_yes_v017",
+            "reason": "v017 produced three finalized post-hash markets with 24 labeled primary rows, zero entries, zero absolute P&L, and +49c delta versus regular v28; it avoided one 62c YES loser but missed later 80c-ish YES winners, showing the 60c cap was too quiet for current live conditions",
+            "status": "retired_no_entry_standdown_not_pnl_proof"
+          },
+          {
+            "decision": "replace_with_midband_yes_fade_band",
+            "policy_hash": "375dd20718510cebc1c5c96e268750db",
+            "policy_id": "v28s_live_pnl_expensive_confirmed_no_fade_yes_v018",
+            "reason": "v018 produced two finalized post-hash markets with 36 labeled primary rows, zero entries, zero absolute P&L, and zero delta versus regular v28. Both markets settled YES while v018 rejected every row, first because 65c-74c YES asks were below its 75c floor and later because 82c-99.9c asks were above its 80c ceiling or too close to close. The live tape argues for testing an earlier 65c-80c mid-band entry while preserving the 80c diagnostic ceiling.",
+            "status": "retired_no_entry_standdown_not_pnl_proof"
+          }
+        ],
+        "solution_families_considered": [
+          "one-entry-per-market hard exposure cap",
+          "risk-constrained or fractional Kelly sizing",
+          "conformal risk-controlled abstention",
+          "book/FV disagreement confirmation before entry",
+          "Brownian-bridge or first-passage recross filters",
+          "late-window cheap-tail hazard filters"
+        ]
+      },
+      "fill_model": {
+        "contract_count": 1,
+        "entry_price": "visible side ask cents",
+        "exit_policy": "hold_to_settlement",
+        "fee_model": "conservative local v28 taker fee: ceil(0.07*C*P*(1-P)) to whole cents",
+        "fee_source_urls": [
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://kalshi.com/fee-schedule",
+          "https://docs.kalshi.com/getting_started/fee_rounding"
+        ],
+        "fill_model_id": "one_contract_visible_taker_ask_hold_to_settlement_v001",
+        "maker_credit": "not assumed",
+        "position_sizing": "unit normalized; exactly one shadow contract"
+      },
+      "parameters": {
+        "allowed_policy_sides": [
+          "yes"
+        ],
+        "base_min_policy_net_edge_after_fees_cents": 5.0,
+        "base_min_successor_net_edge_after_fees_cents": 0.0,
+        "book_confirmed_no_min_ask_cents": 90.0,
+        "book_confirmed_no_min_edge_after_fees_cents": 3.0,
+        "book_confirmed_no_min_seconds_to_close": 240.0,
+        "book_only_min_net_edge_after_fees_cents": 2.0,
+        "candidate_id_filter": [
+          "v28s_boundary_monotonic_light_v001"
+        ],
+        "fade_trigger_no_max_ask_cents": 45.0,
+        "fade_trigger_no_v28_min_net_edge_cents": 5.0,
+        "late_extra_edge_cents": 0.0,
+        "late_seconds_to_close": 120.0,
+        "max_abs_v28_d_sigma": 3.5,
+        "max_ask_cents": 80.0,
+        "max_book_width_cents": 30.0,
+        "max_btc_tick_age_ms": 180000.0,
+        "max_policy_entries_per_market": 1,
+        "max_seconds_to_close": 900.0,
+        "min_ask_cents": 65.0,
+        "min_book_source_event_count": 1,
+        "min_seconds_to_close": 300.0,
+        "near_boundary_abs_d_sigma": 0.35,
+        "near_boundary_extra_edge_cents": 0.0,
+        "opposing_veto_applies_to_sides": [],
+        "opposing_veto_book_confirm_min_ask_cents": 80.0,
+        "opposing_veto_candidate_id": "",
+        "opposing_veto_min_net_edge_cents": 35.0,
+        "opposing_veto_side": "yes",
+        "primary_entry_edge_source": "v28_low_ask_no_fade_yes_signal",
+        "reference_v28_min_net_edge_after_fees_cents": 2.0,
+        "slippage_buffer_cents": 0.25,
+        "stale_btc_age_ms": 60000.0,
+        "stale_btc_extra_edge_cents": 0.0,
+        "successor_fv_only_min_net_edge_after_fees_cents": 0.0
+      },
+      "plain_english_rule": "Use v28's failed cheap-NO clusters as an inspectable fade signal. Enter one shadow YES contract only on the selected v28s_boundary_monotonic_light_v001 YES row when the same-timestamp NO row has v28 fee-adjusted NO edge of at least 5c, that NO ask is below 45c, the visible YES ask is between 65c and 80c, the row is frozen between five and fifteen minutes before close, and basic book/spot freshness and fillability gates pass. Skip all NO-side rows, all other candidate-model rows, YES asks outside the 65c-80c band, and books wider than 30c. Allow at most one post-hash policy entry per market. v019 replaces v018 because v018 was correctly causal and lossless but still produced no entries, while fresh live-forward labels showed two YES-settled markets where the paired cheap-NO fade trigger appeared in the 65c-74c region before later high-ask confirmation. The new band keeps the diagnostic 80c ceiling, avoids the known 80s/90s expansion damage, and tests whether the live tape is asking for earlier mid-band YES entry rather than a narrower expensive-only confirmation. Only post-v019-hash rows may count as primary proof.",
+      "policy_family": "inspectable_rule_surface",
+      "policy_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+      "policy_version": 19
+    },
+    "primary_evidence_rows": 314,
+    "rows": 16302,
+    "source_quality_blocker_counts": {
+      "ask_outside_tradeable_range": 600,
+      "candidate_model_not_selected_for_policy": 14610,
+      "decision_before_policy_hash_created": 10326,
+      "side_not_allowed_for_policy": 8151
+    },
+    "source_quality_counts": {
+      "blocked": 600,
+      "pass": 15702
+    }
+  },
+  "required_source_rules": {
+    "decision_before_close": true,
+    "freeze_before_close": true,
+    "labels_joined_after_close": true,
+    "no_retroactive_credit": true,
+    "policy_hash_created_before_primary_credit": true
+  },
+  "research_only_guardrails": {
+    "account_endpoint_called": false,
+    "live_bot_process_touched": false,
+    "live_order_logic_touched": false,
+    "orders_placed": false,
+    "secrets_read": false
+  }
+}

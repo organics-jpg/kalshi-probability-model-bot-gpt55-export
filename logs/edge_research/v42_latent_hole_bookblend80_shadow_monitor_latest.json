@@ -1,0 +1,40 @@
+{
+  "denominator": {
+    "observed_candidate_markets": 11,
+    "pending_candidate_markets": 0,
+    "resolved_candidate_markets": 11
+  },
+  "generated_utc": "2026-05-05T07:20:03.776455+00:00",
+  "latent_hole_markets_in_log": 1,
+  "lock": {
+    "base_model": "v38_long60_antipersist",
+    "created_utc": "2026-05-05T04:37:58.395568+00:00",
+    "entry": {
+      "ask_cap_cents": 100.0,
+      "ask_floor_cents": 1.0,
+      "edge_floor_cents": 0.0,
+      "max_seconds_to_close": 600.0,
+      "min_seconds_to_close": 0.0,
+      "p_side_floor": 0.65
+    },
+    "exit": {
+      "probability_floor": 0.54
+    },
+    "latent_state": {
+      "book_weight": 0.8,
+      "edge_floor_cents": -2.0,
+      "edge_hole_high": 20.0,
+      "edge_hole_low": 8.0,
+      "max_seconds_to_close": 600.0,
+      "min_seconds_to_close": 60.0,
+      "p_side_floor": 0.65,
+      "posterior": "book_blend"
+    },
+    "lock_id": "v42_latent_hole_book_shadow_v1",
+    "model_defined_utc": "2026-05-05T04:37:58.395568+00:00",
+    "policy": "v42_latent_hole_bookblend80_edge0_p65_stc0_600_prob54",
+    "purpose": "Strict-forward shadow validation of v42 latent edge-hole FV candidate."
+  },
+  "new_rows": 11,
+  "registered": 11
+}

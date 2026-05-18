@@ -1,0 +1,12 @@
+{
+  "candidate_family": "soft_frontier_size_shrink_portfolio",
+  "entry_rule": {
+    "abs_d_min": 0.5,
+    "ask_min": 0.35,
+    "raw_edge_min": 0.03,
+    "recross_max": 0.5
+  },
+  "freeze_ts_utc": "2026-05-07T01:52:52.999002+00:00",
+  "physics": "Broad soft-frontier rows have useful directional signal but weak near-boundary/mid-cheap rows behave like over-sized confidence. The repair keeps participation and shrinks notional continuously instead of adding another hard source-like cutoff.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only; only post_shrink_birth rows count for promotion."
+}

@@ -1,0 +1,38 @@
+{
+  "candidate": "feature_gate_exit_bid_min_ge_60_suppress",
+  "diagnostic_best_separator": {
+    "direction": "ge",
+    "feature": "exit_bid_min",
+    "harmful_excluded": 3,
+    "helpful_excluded": 0,
+    "omitted_suppression_delta_cents": -1530.0,
+    "selected_harmful": 0,
+    "selected_helpful": 14,
+    "selected_markets": [
+      "KXBTC15M-26MAY062215-15",
+      "KXBTC15M-26MAY070030-30",
+      "KXBTC15M-26MAY062315-15",
+      "KXBTC15M-26MAY062045-45",
+      "KXBTC15M-26MAY062100-00",
+      "KXBTC15M-26MAY061815-15",
+      "KXBTC15M-26MAY061800-00",
+      "KXBTC15M-26MAY070115-15",
+      "KXBTC15M-26MAY062115-15",
+      "KXBTC15M-26MAY062030-30",
+      "KXBTC15M-26MAY062015-15",
+      "KXBTC15M-26MAY061400-00",
+      "KXBTC15M-26MAY061615-15",
+      "KXBTC15M-26MAY062200-00"
+    ],
+    "selected_rows": 14,
+    "selected_suppression_delta_cents": 2676.0,
+    "threshold": 60.0
+  },
+  "exit_bid_min_cents": 60.0,
+  "freeze_ts_utc": "2026-05-07T07:32:00.852069+00:00",
+  "origin": "Frozen from v28_feature_gate_exit_suppression_separator_latest observable separator.",
+  "physics": "A selected-side exit while the bid remains at least 60c can be a transient clip of a still-valuable thesis; low exit bids are more likely true loss-control exits.",
+  "research_only": true,
+  "strict_forward_note": "Only post_exit_bid_birth rows count as forward evidence.",
+  "target_candidate": "post_feature_freeze_entry_raw03_recross70_abs075"
+}

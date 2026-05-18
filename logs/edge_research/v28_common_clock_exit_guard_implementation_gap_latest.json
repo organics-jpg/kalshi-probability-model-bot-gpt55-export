@@ -1,0 +1,143 @@
+{
+  "blockers": [],
+  "candidate_rule": {
+    "collapse_or_full_drawdown": "keep current live exit behavior",
+    "probability_reduce": "suppress only when p_hold >= 0.79 and hold_book_gap >= 0.00",
+    "source": "probe_v28_frozen_exit_book_gap_loss_guard.py",
+    "value_over_hold": "suppress when p_hold >= 0.85 or hold_book_gap >= 0.00"
+  },
+  "decision": "implementation_ready_for_paper_shadow_review",
+  "existing_controls": [
+    {
+      "evidence": "live_trading.lock + Live trading lock already held",
+      "name": "single_live_lock",
+      "note": "The bot already prevents a second independent live process.",
+      "present": true,
+      "required": "One DRY_RUN=false owner for the account.",
+      "status": "present"
+    },
+    {
+      "evidence": "DRY_RUN=false is only allowed for strategy tag",
+      "name": "dry_run_strategy_approval",
+      "note": "The existing approval tag gate can protect a future candidate launch.",
+      "present": true,
+      "required": "Production trading requires an explicit approved strategy tag.",
+      "status": "present"
+    },
+    {
+      "evidence": "BOT_STORAGE_TAG + resolve_strategy_paths",
+      "name": "separate_storage_tags",
+      "note": "The bot can already isolate state and logs by storage tag.",
+      "present": true,
+      "required": "Separate state/log/stats paths per candidate.",
+      "status": "present"
+    },
+    {
+      "evidence": "MUSHROOM_V28_LIVE_EXIT_ENABLED + detect_mushroom_v28_exit_signal",
+      "name": "v28_live_exit_owner_path",
+      "note": "There is a single-process v28 exit path to extend later.",
+      "present": true,
+      "required": "Candidate rule must run inside the existing v28 exit path.",
+      "status": "present"
+    },
+    {
+      "evidence": "execution_events.ndjson + telemetry.emit",
+      "name": "execution_telemetry",
+      "note": "Base telemetry exists, but candidate-specific guard decisions still need their own event.",
+      "present": true,
+      "required": "Decision, fill, and error telemetry must be available for scoring.",
+      "status": "present"
+    },
+    {
+      "evidence": "maybe_refresh_live_account_state/LIVE_ACCOUNT_STATE",
+      "name": "account_state_refresh",
+      "note": "Account-state controls exist for the broader bot.",
+      "present": true,
+      "required": "Live trial must stop on stale account state.",
+      "status": "present"
+    }
+  ],
+  "generated_at_utc": "2026-05-07T21:42:32.640842+00:00",
+  "live_test_spec_decision": "blocked_do_not_live_test",
+  "missing_items": [
+    {
+      "evidence": "MUSHROOM_V28_EXIT_GUARD_MODE or COMMON_CLOCK_EXIT_GUARD",
+      "name": "common_clock_guard_mode_env",
+      "note": "A disabled/paper/enforce source-level switch is present.",
+      "present": true,
+      "required": "A disabled/paper/enforce switch for the exact loss_guard_value_p85_reduce_p79_gap0 rule.",
+      "status": "present"
+    },
+    {
+      "evidence": "loss_guard_value_p85_reduce_p79_gap0 or should_loss_guard_suppress",
+      "name": "side_effect_free_guard_evaluator",
+      "note": "A real-time evaluator is present in source.",
+      "present": true,
+      "required": "A real-time evaluator using only current exit features, not settled outcomes.",
+      "status": "present"
+    },
+    {
+      "evidence": "exit_guard_shadow or MUSHROOM_V28_EXIT_GUARD_LEDGER_PATH",
+      "name": "paper_shadow_ledger",
+      "note": "A dedicated candidate guard shadow ledger path/event is present.",
+      "present": true,
+      "required": "Every would-suppress/keep decision must be logged before enforcement.",
+      "status": "present"
+    },
+    {
+      "evidence": "guard check before execute_exit_signal(... mushroom_v28_ev ...)",
+      "name": "guard_applied_before_execute_exit_signal",
+      "note": "The v28 exit path has a guard decision point before real exit submission.",
+      "present": true,
+      "required": "The candidate must decide keep/suppress before real exit submission.",
+      "status": "present"
+    },
+    {
+      "evidence": "EXIT_GUARD_* kill state or harmful_suppressed tracking",
+      "name": "candidate_kill_state",
+      "note": "Candidate-specific kill-state hooks are present.",
+      "present": true,
+      "required": "Stop on harmful suppressed hold, loss cluster, drawdown, stale account, or accounting mismatch.",
+      "status": "present"
+    },
+    {
+      "evidence": "exchange_reconciliation.ndjson or fills/realized-pnl writer",
+      "name": "exchange_reconciliation_writer",
+      "note": "An exchange reconciliation writer is present.",
+      "present": true,
+      "required": "Pre/post balances, positions, fills, fees, exposure, and orders must be reconciled for live trial.",
+      "status": "present"
+    }
+  ],
+  "next_build_steps": [
+    "Exercise MUSHROOM_V28_EXIT_GUARD_MODE=paper in a dry-run or supervised shadow process before any enforce review.",
+    "Add candidate kill-state and exchange reconciliation artifacts before DRY_RUN=false candidate approval.",
+    "Only after density/live/kill/reconciliation gates pass, allow enforce mode to suppress qualifying soft exits before execute_exit_signal."
+  ],
+  "purpose": "Source-backed implementation gap for the common-clock exit guard live-test blocker.",
+  "readiness_frontier": {
+    "candidate_cents": 668.0,
+    "candidate_wl": "41/17",
+    "current_cents": 426.0,
+    "current_wl": "39/19",
+    "delta_vs_current_cents": 242.0,
+    "full_loss_cushion": 6,
+    "harmful_suppressed_rows": 0,
+    "helpful_suppressed_rows": 17,
+    "loss_control_cost_cents": 0.0,
+    "missing_gates": [
+      "live_ready_false",
+      "suppressed_needed_13"
+    ],
+    "settled": 58,
+    "suppressed_exits": 17,
+    "suppressed_needed": 13,
+    "window": "new_exit_mix_common_forward_v2"
+  },
+  "sources": {
+    "frontier": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_common_clock_exit_guard_frontier_latest.json",
+    "live_bot": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\kalshi_btc15m_bot_ws.py",
+    "live_test_spec": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_common_clock_exit_guard_live_test_spec_latest.json"
+  },
+  "target_policy": "loss_guard_value_p85_reduce_p79_gap0"
+}

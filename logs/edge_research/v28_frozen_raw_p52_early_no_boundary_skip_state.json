@@ -1,0 +1,8 @@
+{
+  "base_policy": "v28_raw_p52_edge0",
+  "candidate": "raw_p52_skip_early_no_boundary_decay",
+  "freeze_ts_utc": "2026-05-06T12:18:20.259368+00:00",
+  "physics": "Early NO near-boundary trades are exposed to BTC path churn; apparent NO edge may decay before close.",
+  "rule": "Start from v28_raw_p52_edge0 and skip NO rows with stc>=720, p<0.70, abs_d<=0.45, recross>=0.55.",
+  "source_artifact": "v28_raw_p52_early_no_boundary_skip_latest.json"
+}

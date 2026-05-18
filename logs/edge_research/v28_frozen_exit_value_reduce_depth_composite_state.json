@@ -1,0 +1,30 @@
+{
+  "candidate": "value_v2_reduce_depth384",
+  "candidate_family": "exit_value_reduce_depth_composite",
+  "freeze_ts_utc": "2026-05-06T23:34:20.352483+00:00",
+  "physics": "Value exits and reduce exits are different physical events. Value exits can be rich-book winner clipping, but high-p_hold alone is unsafe when the executable bid is generous. Reduce exits are suppressible only in shallow original depth, where the exit is more plausibly thin-book turbulence than true thesis failure.",
+  "rule": "Suppress value-over-hold exits using the v2 book/fair-drawdown guard; suppress probability_reduce exits only when p_hold >= 0.75 and entry_depth <= 384.",
+  "rules": {
+    "value_only_p75_reduce_depth384": {
+      "reduce_entry_depth_max": 384.0,
+      "reduce_p_hold_min": 0.75,
+      "value_mode": "value_only_p75"
+    },
+    "value_v2_reduce_depth295": {
+      "reduce_entry_depth_max": 295.0,
+      "reduce_p_hold_min": 0.75,
+      "value_mode": "v2"
+    },
+    "value_v2_reduce_depth384": {
+      "reduce_entry_depth_max": 384.0,
+      "reduce_p_hold_min": 0.75,
+      "value_mode": "v2"
+    },
+    "value_v2_reduce_depth384_p79": {
+      "reduce_entry_depth_max": 384.0,
+      "reduce_p_hold_min": 0.79,
+      "value_mode": "v2"
+    }
+  },
+  "strict_forward_note": "Only post_composite_birth rows count as forward evidence."
+}

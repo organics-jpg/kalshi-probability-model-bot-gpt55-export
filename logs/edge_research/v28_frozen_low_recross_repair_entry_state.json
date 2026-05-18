@@ -1,0 +1,9 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "skip_paid_or_weak_boundary_repair_lowest_recross",
+  "coverage_floor": 75.0,
+  "danger_rule": "paid_price_fragile OR weak_boundary_turbulence",
+  "freeze_ts_utc": "2026-05-06T06:55:26.848310+00:00",
+  "physics": "Toxic rows are boundary/paid-price instability; repairs should come from calmer low-recross states rather than same-market churn.",
+  "repair_rule": "clean repair rows ranked by lowest recross hazard, missed markets first"
+}

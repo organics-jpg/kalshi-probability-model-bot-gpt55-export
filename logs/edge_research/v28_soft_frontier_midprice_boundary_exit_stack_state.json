@@ -1,0 +1,8 @@
+{
+  "candidate_family": "soft_frontier_midprice_boundary_exit_stack",
+  "entry_parent": "v28_soft_frontier_midprice_boundary_shrink",
+  "exit_parent": "frozen book-gap/loss-guard exit watches",
+  "freeze_ts_utc": "2026-05-07T03:25:40.348957+00:00",
+  "physics": "Entry shrink handles near-boundary mid-price rows by reducing notional instead of cutting coverage. Guarded exits test whether remaining losses are exit-clipping errors rather than entry-selection errors.",
+  "strict_forward_note": "This stack is frozen from its own timestamp. Current rows are overlap diagnostics unless they occur after this freeze with enough matched exit observations."
+}

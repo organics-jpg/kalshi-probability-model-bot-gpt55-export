@@ -1,0 +1,14 @@
+{
+  "arbiter_rule": {
+    "name": "dual_lane_conflict_arbiter_suppress_ask_ge078_recross_ge030",
+    "suppress_when": {
+      "ask_prob_min": 0.78,
+      "recross_hazard_score_min": 0.3
+    },
+    "use": "single_process_live_coordinator_conflict_arbiter_candidate"
+  },
+  "base_candidate": "dual_lane_overlap_union",
+  "candidate_family": "dual_lane_conflict_arbiter_watch",
+  "freeze_ts_utc": "2026-05-08T04:28:41.954114+00:00",
+  "physical_hypothesis": "High ask cost plus elevated recross hazard marks path-unstable rows where a simple dual-lane entry is likely to need v28-style side-flip or exit-state management. The arbiter suppresses those rows and keeps the lower-conflict dual-lane opportunities."
+}

@@ -1,0 +1,4183 @@
+{
+  "all_clear": true,
+  "fail_count": 0,
+  "interpretation": [
+    "Pass means the artifact has a frozen state/report relationship suitable for continued forward monitoring.",
+    "Watch means the artifact is diagnostic or dynamic-ranked and should not be treated as promotion evidence by itself.",
+    "Fail means a report/state mismatch or missing freeze metadata needs attention before relying on the artifact."
+  ],
+  "purpose": "Catch candidate-selection drift and dynamic-best leakage before interpreting forward evidence.",
+  "rows": [
+    {
+      "artifact": "v28_target_coverage_fv_overlay_validator",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_overlay_validator_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_overlay_validator_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T02:08:01.321286+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "policy",
+            "entry_surface",
+            "source_coverage_freeze_ts",
+            "overlay_names"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "policy",
+            "entry_surface",
+            "forward_denominator",
+            "forward"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T02:08:01.321286+00:00",
+            "state_freeze_ts": "2026-05-06T02:08:01.321286+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+            "state": "raw_p50_turbulence_valve_edge4_p60_recross75_near25"
+          },
+          "name": "report_matches_state_policy",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "frozen_target_coverage_raw_entry_valve",
+            "state": "frozen_target_coverage_raw_entry_valve"
+          },
+          "name": "report_matches_state_entry_surface",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "2026-05-05T23:30:17.615882+00:00",
+            "state": "2026-05-05T23:30:17.615882+00:00"
+          },
+          "name": "report_matches_state_source_coverage_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "target_coverage_fv",
+      "freeze_ts": "2026-05-06T02:08:01.321286+00:00",
+      "hard_failures": [],
+      "note": "Current best target-coverage FV candidate; should remain fixed while forward rows accumulate.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_overlay_validator_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_target_coverage_fv_overlay_validator_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_raw_entry_calibrated_probability",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_entry_calibrated_probability_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_entry_calibrated_probability_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-05T23:30:17.615882+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy",
+            "overlays",
+            "promotion_floor"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+            "state_freeze_ts": "2026-05-05T23:30:17.615882+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "raw_v28_p50_edge0_fixed_selection",
+            "state": "raw_v28_p50_edge0_fixed_selection"
+          },
+          "name": "report_matches_state_entry_policy",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "raw_entry_calibrated_fv",
+      "freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+      "hard_failures": [],
+      "note": "Frozen FV overlays on the broad raw-v28 p50 entry surface.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_entry_calibrated_probability_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_entry_calibrated_probability_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_boundary_memory_fv_candidates",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_memory_fv_candidates_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_memory_fv_candidates_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T01:40:40.929142+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy",
+            "hypothesis",
+            "promotion_floor"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy",
+            "forward_denominator",
+            "forward"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T01:40:40.929142+00:00",
+            "state_freeze_ts": "2026-05-06T01:40:40.929142+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "raw_v28_p50_edge0_fixed_selection",
+            "state": "raw_v28_p50_edge0_fixed_selection"
+          },
+          "name": "report_matches_state_entry_policy",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "boundary_memory_fv",
+      "freeze_ts": "2026-05-06T01:40:40.929142+00:00",
+      "hard_failures": [],
+      "note": "Catastrophic-forgetting boundary-memory candidate; valid only as post-freeze evidence.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_memory_fv_candidates_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_memory_fv_candidates_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_reward_memory_fv_candidates",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_reward_memory_fv_candidates_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_reward_memory_fv_candidates_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T01:46:48.111889+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy",
+            "controllers",
+            "promotion_floor"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy",
+            "forward_denominator",
+            "forward"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T01:46:48.111889+00:00",
+            "state_freeze_ts": "2026-05-06T01:46:48.111889+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "raw_v28_p50_edge0_fixed_selection",
+            "state": "raw_v28_p50_edge0_fixed_selection"
+          },
+          "name": "report_matches_state_entry_policy",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "reward_memory_fv",
+      "freeze_ts": "2026-05-06T01:46:48.111889+00:00",
+      "hard_failures": [],
+      "note": "Constrained reward-memory controller; controller weights must be frozen before forward scoring.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_reward_memory_fv_candidates_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_reward_memory_fv_candidates_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_book_exact_entry_gate",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_exact_entry_gate_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_exact_entry_gate_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:33:52.584603+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "policies",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "forward_denominator_markets",
+            "summaries"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:33:52.584603+00:00",
+            "state_freeze_ts": "2026-05-06T11:33:52.584603+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "book_exact_entry_gate",
+      "freeze_ts": "2026-05-06T11:33:52.584603+00:00",
+      "hard_failures": [],
+      "note": "Frozen book-exact entry gate; validates whether full FV collapse to book probability has forward edge rather than historical book-favorite luck.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_exact_entry_gate_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_exact_entry_gate_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_approved_entry_state_valve",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_state_valve_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_state_valve_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T02:42:53.253731+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "policy",
+            "rule"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.policy",
+            "candidate",
+            "control"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T02:42:53.253731+00:00",
+            "state_freeze_ts": "2026-05-06T02:42:53.253731+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "approved_entry_state_valve",
+      "freeze_ts": "2026-05-06T02:42:53.253731+00:00",
+      "hard_failures": [],
+      "note": "Frozen actual-approved same-side reentry valve; validates state/entry physics without rejected-row simulation.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_state_valve_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_state_valve_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_approved_entry_book_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_book_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_book_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T06:20:06.824407+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_surface",
+            "candidate",
+            "overlays",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_entries",
+            "future_settled",
+            "ranked",
+            "candidate"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T06:20:06.824407+00:00",
+            "state_freeze_ts": "2026-05-06T06:20:06.824407+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "approved_entry_book_fv",
+      "freeze_ts": "2026-05-06T06:20:06.824407+00:00",
+      "hard_failures": [],
+      "note": "Frozen actual-approved FV calibration challenger; tests whether book probability remains better calibrated than raw v28 on future approved entries.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_book_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_approved_entry_book_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_danger_zone_entry_valve",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_entry_valve_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_entry_valve_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T03:09:58.042066+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "policy",
+            "rule",
+            "source_artifact"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.policy",
+            "candidate",
+            "control"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T03:09:58.042066+00:00",
+            "state_freeze_ts": "2026-05-06T03:09:58.042066+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "danger_zone_entry_valve",
+      "freeze_ts": "2026-05-06T03:09:58.042066+00:00",
+      "hard_failures": [],
+      "note": "Frozen actual-approved danger-zone valve; validates raw/book overconfidence and same-side reentry risk on post-freeze v28 entries.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_entry_valve_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_entry_valve_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_danger_zone_fv_calibration",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_fv_calibration_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_fv_calibration_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T03:14:35.467881+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_surface",
+            "overlays",
+            "danger_rule"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.entry_surface",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T03:14:35.467881+00:00",
+            "state_freeze_ts": "2026-05-06T03:14:35.467881+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "danger_zone_fv_calibration",
+      "freeze_ts": "2026-05-06T03:14:35.467881+00:00",
+      "hard_failures": [],
+      "note": "Frozen actual-approved probability overlays for the danger-zone raw/book disagreement signal.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_fv_calibration_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_fv_calibration_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_danger_zone_robustness",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_robustness_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_fv_calibration_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T03:14:35.467881+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_surface",
+            "overlays",
+            "danger_rule"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "fv_freeze.freeze_ts_utc",
+            "future_rows",
+            "full_entry",
+            "full_fv",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T03:14:35.467881+00:00",
+            "state_freeze_ts": "2026-05-06T03:14:35.467881+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "danger_zone_robustness",
+      "freeze_ts": "2026-05-06T03:14:35.467881+00:00",
+      "hard_failures": [],
+      "note": "Frozen-only robustness check for danger-zone FV/entry lift; detects single-row future dependence.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_robustness_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_danger_zone_fv_calibration_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_target_coverage_conservative_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_conservative_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_conservative_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T03:26:44.025585+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "source_artifact"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.entry_policy",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T03:26:44.025585+00:00",
+            "state_freeze_ts": "2026-05-06T03:26:44.025585+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "target_coverage_conservative_fv",
+      "freeze_ts": "2026-05-06T03:26:44.025585+00:00",
+      "hard_failures": [],
+      "note": "Frozen conservative target-coverage FV challenger; validates calm-mid-or-high-conviction sharpening on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_conservative_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_conservative_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_target_coverage_p70_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T03:45:32.798460+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "source_artifact"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.entry_policy",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T03:45:32.798460+00:00",
+            "state_freeze_ts": "2026-05-06T03:45:32.798460+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "target_coverage_p70_fv",
+      "freeze_ts": "2026-05-06T03:45:32.798460+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-coverage p70 FV challenger; validates high-confidence-only sharpening on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_target_coverage_p70_empirical_bayes",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_empirical_bayes_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_empirical_bayes_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T04:22:07.414318+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "prior_count",
+            "full_scale",
+            "rule",
+            "source_artifact"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.entry_policy",
+            "ranked",
+            "scale"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T04:22:07.414318+00:00",
+            "state_freeze_ts": "2026-05-06T04:22:07.414318+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "target_coverage_p70_empirical_bayes",
+      "freeze_ts": "2026-05-06T04:22:07.414318+00:00",
+      "hard_failures": [],
+      "note": "Frozen empirical-Bayes p70 FV challenger; validates evidence-weighted high-confidence sharpening on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_empirical_bayes_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_empirical_bayes_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_boundary_temperature_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_temperature_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_temperature_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:12:06.081553+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "entries",
+            "settled",
+            "candidate",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:12:06.081553+00:00",
+            "state_freeze_ts": "2026-05-06T11:12:06.081553+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "boundary_temperature_fv",
+      "freeze_ts": "2026-05-06T11:12:06.081553+00:00",
+      "hard_failures": [],
+      "note": "Frozen continuous boundary-temperature FV challenger; validates recross-heat deconfidence on future target-coverage rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_temperature_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_temperature_fv_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_boundary_energy_fv_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_energy_fv_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_energy_fv_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:19:55.494948+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "future_candidate_summary",
+            "diagnostic_candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:19:55.494948+00:00",
+            "state_freeze_ts": "2026-05-06T11:19:55.494948+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "boundary_energy_fv_entry",
+      "freeze_ts": "2026-05-06T11:19:55.494948+00:00",
+      "hard_failures": [],
+      "note": "Frozen boundary-energy FV entry bridge; validates path-energy deconfidence under the unchanged target policy on future rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_energy_fv_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_energy_fv_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_early_no_boundary_fv_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_fv_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_fv_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:24:55.409912+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "future_candidate_summary",
+            "diagnostic_candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:24:55.409912+00:00",
+            "state_freeze_ts": "2026-05-06T11:24:55.409912+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "early_no_boundary_fv_entry",
+      "freeze_ts": "2026-05-06T11:24:55.409912+00:00",
+      "hard_failures": [],
+      "note": "Frozen early-NO boundary FV entry bridge; validates side-asymmetric path-decay deconfidence on future rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_fv_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_fv_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_path_state_p70_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_path_state_p70_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_path_state_p70_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T05:07:19.935392+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics",
+            "parameters"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "future_entries",
+            "ranked",
+            "path_state_action_rollups"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T05:07:19.935392+00:00",
+            "state_freeze_ts": "2026-05-06T05:07:19.935392+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "path_state_p70_fv",
+      "freeze_ts": "2026-05-06T05:07:19.935392+00:00",
+      "hard_failures": [],
+      "note": "Frozen path/state p70 FV challenger; sharpens only high-confidence rows with strong confirmation energy.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_path_state_p70_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_path_state_p70_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_boundary_recross_shrink_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_recross_shrink_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_recross_shrink_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T05:29:47.434585+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "entries",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T05:29:47.434585+00:00",
+            "state_freeze_ts": "2026-05-06T05:29:47.434585+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "boundary_recross_shrink_fv",
+      "freeze_ts": "2026-05-06T05:29:47.434585+00:00",
+      "hard_failures": [],
+      "note": "Frozen boundary/recross FV shrink; validates shallow high-recross confidence decay on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_recross_shrink_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_recross_shrink_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_mid_edge_false_conviction_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_false_conviction_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_false_conviction_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T09:29:25.082774+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "entries",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T09:29:25.082774+00:00",
+            "state_freeze_ts": "2026-05-06T09:29:25.082774+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "mid_edge_false_conviction_fv",
+      "freeze_ts": "2026-05-06T09:29:25.082774+00:00",
+      "hard_failures": [],
+      "note": "Frozen FV shrink; validates early high-recross 4-8pp edge false-conviction confidence decay on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_false_conviction_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_false_conviction_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_boundary_clock_fv_overlay",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_overlay_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_overlay_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:18:17.705020+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics",
+            "source_artifact"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "candidate",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:18:17.705020+00:00",
+            "state_freeze_ts": "2026-05-06T07:18:17.705020+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "boundary_clock_fv_overlay",
+      "freeze_ts": "2026-05-06T07:18:17.705020+00:00",
+      "hard_failures": [],
+      "note": "Frozen boundary-clock FV overlay; validates p=50 collapse for unresolved boundary-clock hazard rows on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_overlay_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_overlay_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_boundary_clock_residual_registry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_residual_registry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_residual_registry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:28:09.623811+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "registry",
+            "rule",
+            "hypothesis",
+            "promotion_note"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "bucket_summary",
+            "rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:28:09.623811+00:00",
+            "state_freeze_ts": "2026-05-06T07:28:09.623811+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "boundary_clock_residual_registry",
+      "freeze_ts": "2026-05-06T07:28:09.623811+00:00",
+      "hard_failures": [],
+      "note": "Frozen residual registry after boundary-clock correction; watches mid-confidence NO-side boundary hesitation before any new FV knob is considered.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_residual_registry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_residual_registry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_side_asymmetry_registry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_registry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_registry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:47:04.735626+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "registry",
+            "rule",
+            "hypothesis",
+            "promotion_note"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "bucket_summary",
+            "non_clock_bucket_summary",
+            "rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:47:04.735626+00:00",
+            "state_freeze_ts": "2026-05-06T07:47:04.735626+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "side_asymmetry_registry",
+      "freeze_ts": "2026-05-06T07:47:04.735626+00:00",
+      "hard_failures": [],
+      "note": "Frozen side-asymmetry registry; watches NO p60-70 mid-boundary mid-recross rows before any asymmetric FV penalty is considered.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_registry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_registry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_side_asymmetry_fv_overlay",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_fv_overlay_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_fv_overlay_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:52:22.405861+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics",
+            "source_artifact"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "candidate",
+            "adjusted_rows",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:52:22.405861+00:00",
+            "state_freeze_ts": "2026-05-06T07:52:22.405861+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "side_asymmetry_fv_overlay",
+      "freeze_ts": "2026-05-06T07:52:22.405861+00:00",
+      "hard_failures": [],
+      "note": "Frozen combined boundary-clock plus side-asymmetry FV overlay; validates coin-flip collapse on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_fv_overlay_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_side_asymmetry_fv_overlay_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_edge_phase_shrink_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_shrink_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_shrink_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T05:40:31.466696+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "entries",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T05:40:31.466696+00:00",
+            "state_freeze_ts": "2026-05-06T05:40:31.466696+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "edge_phase_shrink_fv",
+      "freeze_ts": "2026-05-06T05:40:31.466696+00:00",
+      "hard_failures": [],
+      "note": "Frozen edge-phase FV shrink; validates phase-aware boundary confidence decay on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_shrink_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_shrink_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_edge_phase_edge_gate",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_edge_gate_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_edge_gate_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T05:46:47.707629+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_entry_policy",
+            "fv_variant",
+            "adjusted_edge_floor",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate",
+            "skipped_rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T05:46:47.707629+00:00",
+            "state_freeze_ts": "2026-05-06T05:46:47.707629+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "edge_phase_edge_gate",
+      "freeze_ts": "2026-05-06T05:46:47.707629+00:00",
+      "hard_failures": [],
+      "note": "Frozen adjusted-FV paid-price safety valve; validates rare extreme negative edge-phase disagreement on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_edge_gate_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_phase_edge_gate_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_edge_gate_opposite_side",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_gate_opposite_side_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_gate_opposite_side_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T06:05:34.391059+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_entry_policy",
+            "fv_variant",
+            "adjusted_edge_floor",
+            "opposite_min_raw_p",
+            "opposite_min_raw_edge",
+            "opposite_min_adjusted_edge",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate",
+            "cases"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T06:05:34.391059+00:00",
+            "state_freeze_ts": "2026-05-06T06:05:34.391059+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "edge_gate_opposite_side",
+      "freeze_ts": "2026-05-06T06:05:34.391059+00:00",
+      "hard_failures": [],
+      "note": "Frozen opposite-side replacement for edge-gate skips; validates whether bad paid-price rows can preserve coverage via coherent same-or-later opposite entries.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_gate_opposite_side_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_edge_gate_opposite_side_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_exit_reduce_suppression",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_suppression_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_suppression_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T06:33:56.987999+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "p_hold_floor",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "summary",
+            "rows",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T06:33:56.987999+00:00",
+            "state_freeze_ts": "2026-05-06T06:33:56.987999+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "exit_reduce_suppression",
+      "freeze_ts": "2026-05-06T06:33:56.987999+00:00",
+      "hard_failures": [],
+      "note": "Frozen exit-policy challenger; validates suppressing probability_reduce only when held-side probability remains >=75%.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_suppression_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_suppression_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_exit_reduce_yes_suppression",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_yes_suppression_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_yes_suppression_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:04:54.847536+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "side",
+            "p_hold_floor",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "summary",
+            "rows",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:04:54.847536+00:00",
+            "state_freeze_ts": "2026-05-06T11:04:54.847536+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "exit_reduce_yes_suppression",
+      "freeze_ts": "2026-05-06T11:04:54.847536+00:00",
+      "hard_failures": [],
+      "note": "Frozen exit-policy challenger; validates the side-asymmetric YES-only interpretation of probability_reduce suppression on future rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_yes_suppression_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_yes_suppression_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_exit_book_gap_suppression",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_suppression_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_suppression_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:46:39.207330+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "gap_floor",
+            "p_hold_floor",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "summary",
+            "rows",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:46:39.207330+00:00",
+            "state_freeze_ts": "2026-05-06T08:46:39.207330+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "exit_book_gap_suppression",
+      "freeze_ts": "2026-05-06T08:46:39.207330+00:00",
+      "hard_failures": [],
+      "note": "Frozen soft-exit book-gap challenger; validates suppressing spread/turbulence exits while keeping collapse exits intact.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_suppression_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_suppression_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_target_coverage_p70_quality_registry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_quality_registry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_quality_registry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T04:32:03.738730+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "registry",
+            "rule",
+            "tag_definitions"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "tag_rollups",
+            "rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T04:32:03.738730+00:00",
+            "state_freeze_ts": "2026-05-06T04:32:03.738730+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "target_coverage_p70_quality_registry",
+      "freeze_ts": "2026-05-06T04:32:03.738730+00:00",
+      "hard_failures": [],
+      "note": "Frozen p70 quality-tag registry; validates physical high-confidence tags on future rows before any tag-conditioned model is considered.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_quality_registry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_coverage_p70_quality_registry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_live_p70_quality_registry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_p70_quality_registry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_p70_quality_registry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T04:49:26.047798+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "registry",
+            "rule",
+            "tag_definitions"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "row_count",
+            "settled_count",
+            "tag_rollups",
+            "rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T04:49:26.047798+00:00",
+            "state_freeze_ts": "2026-05-06T04:49:26.047798+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "live_p70_quality_registry",
+      "freeze_ts": "2026-05-06T04:49:26.047798+00:00",
+      "hard_failures": [],
+      "note": "Future-only live v28 p70 quality registry; validates physical live high-confidence tags before any live candidate gets promoted.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_p70_quality_registry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_p70_quality_registry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_live_collapse_reentry_registry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_collapse_reentry_registry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_collapse_reentry_registry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T04:56:06.196433+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "registry",
+            "hypothesis",
+            "candidate_action",
+            "tag_definitions"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_summary",
+            "future_tag_rollups",
+            "future_rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T04:56:06.196433+00:00",
+            "state_freeze_ts": "2026-05-06T04:56:06.196433+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "live_collapse_reentry_registry",
+      "freeze_ts": "2026-05-06T04:56:06.196433+00:00",
+      "hard_failures": [],
+      "note": "Future-only live registry for same-market reentries after probability-collapse exits; tests whether collapse should penalize FV confidence.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_collapse_reentry_registry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_collapse_reentry_registry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_thin_recross_midp_entry_gate",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_thin_recross_midp_entry_gate_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_thin_recross_midp_entry_gate_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T03:39:03.842700+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_entry_policy",
+            "candidate",
+            "edge_ceiling",
+            "recross_floor"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "freeze.candidate",
+            "base",
+            "candidate",
+            "skipped_rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T03:39:03.842700+00:00",
+            "state_freeze_ts": "2026-05-06T03:39:03.842700+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "thin_recross_midp_entry_gate",
+      "freeze_ts": "2026-05-06T03:39:03.842700+00:00",
+      "hard_failures": [],
+      "note": "Frozen entry gate for thin-edge high-recross mid-p rows; validates a narrow turbulence skip on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_thin_recross_midp_entry_gate_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_thin_recross_midp_entry_gate_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_boundary_turbulence_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_boundary_turbulence_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_boundary_turbulence_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:50:27.891448+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate",
+            "skipped_rows"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:50:27.891448+00:00",
+            "state_freeze_ts": "2026-05-06T08:50:27.891448+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_boundary_turbulence_skip",
+      "freeze_ts": "2026-05-06T08:50:27.891448+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 boundary-turbulence skip; validates weak raw near-strike high-recross rows on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_boundary_turbulence_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_boundary_turbulence_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_target_loss_tag_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_loss_tag_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_loss_tag_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:59:17.610337+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "danger_rule",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:59:17.610337+00:00",
+            "state_freeze_ts": "2026-05-06T08:59:17.610337+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "target_loss_tag_repair_entry",
+      "freeze_ts": "2026-05-06T08:59:17.610337+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-loss tag repair candidate; skips weak-boundary and paid-thin-edge rows, then repairs coverage from low-recross clean rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_loss_tag_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_loss_tag_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_low_recross_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_low_recross_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_low_recross_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T06:55:26.848310+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "coverage_floor",
+            "danger_rule",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T06:55:26.848310+00:00",
+            "state_freeze_ts": "2026-05-06T06:55:26.848310+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "low_recross_repair_entry",
+      "freeze_ts": "2026-05-06T06:55:26.848310+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-coverage repair candidate; skips paid/weak-boundary danger rows and repairs coverage with lowest-recross clean rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_low_recross_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_low_recross_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_early_no_boundary_decay_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_decay_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_decay_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T09:10:09.146392+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "coverage_floor",
+            "danger_rule",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T09:10:09.146392+00:00",
+            "state_freeze_ts": "2026-05-06T09:10:09.146392+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "early_no_boundary_decay_repair_entry",
+      "freeze_ts": "2026-05-06T09:10:09.146392+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-coverage repair candidate; skips early NO boundary-decay and cheap boundary-turbulence rows, then repairs coverage with calmer geometry.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_decay_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_no_boundary_decay_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_mid_edge_boundary_deception_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_boundary_deception_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_boundary_deception_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T09:23:03.299714+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "coverage_floor",
+            "danger_rule",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T09:23:03.299714+00:00",
+            "state_freeze_ts": "2026-05-06T09:23:03.299714+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "mid_edge_boundary_deception_repair_entry",
+      "freeze_ts": "2026-05-06T09:23:03.299714+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-coverage repair candidate; skips early high-recross 4-8pp edge rows that look like boundary false-conviction.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_boundary_deception_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_boundary_deception_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_high_raw_p_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_high_raw_p_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_high_raw_p_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:59:24.730118+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "coverage_floor",
+            "danger_rule",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:59:24.730118+00:00",
+            "state_freeze_ts": "2026-05-06T07:59:24.730118+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "high_raw_p_repair_entry",
+      "freeze_ts": "2026-05-06T07:59:24.730118+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-coverage repair candidate; skips paid/weak-boundary danger rows and repairs coverage with highest raw-p clean rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_high_raw_p_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_high_raw_p_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_p50_book_edge_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_p50_book_edge_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_p50_book_edge_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:09:01.165913+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "rule",
+            "physics",
+            "source"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator_markets",
+            "summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:09:01.165913+00:00",
+            "state_freeze_ts": "2026-05-06T08:09:01.165913+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "p50_book_edge_entry",
+      "freeze_ts": "2026-05-06T08:09:01.165913+00:00",
+      "hard_failures": [],
+      "note": "Frozen closest broad book-edge entry lane; validates p50, book-plus-5pp, nonnegative-edge rule on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_p50_book_edge_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_p50_book_edge_entry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_book_plus05_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:12:48.716932+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "rule",
+            "physics",
+            "source"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator_markets",
+            "summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:12:48.716932+00:00",
+            "state_freeze_ts": "2026-05-06T08:12:48.716932+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "book_plus05_entry",
+      "freeze_ts": "2026-05-06T08:12:48.716932+00:00",
+      "hard_failures": [],
+      "note": "Frozen broad book-plus-5pp entry lane; validates book-disagreement edge on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_entry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_book_plus05_no_cheap_yes_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_no_cheap_yes_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_no_cheap_yes_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:24:46.840351+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "rule",
+            "physics",
+            "source"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator_markets",
+            "summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:24:46.840351+00:00",
+            "state_freeze_ts": "2026-05-06T08:24:46.840351+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "book_plus05_no_cheap_yes_entry",
+      "freeze_ts": "2026-05-06T08:24:46.840351+00:00",
+      "hard_failures": [],
+      "note": "Frozen broad book-plus-5pp entry lane with cheap-YES boundary-pull rows removed; validates whether the boundary-pull filter preserves broad coverage and improves PnL on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_no_cheap_yes_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_no_cheap_yes_entry_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_book_edge_fv_calibration",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_edge_fv_calibration_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:12:48.716932+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "rule",
+            "physics",
+            "source"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "lanes",
+            "any_fv_ready",
+            "min_settled"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "book_edge_fv_calibration",
+      "freeze_ts": "2026-05-06T08:12:48.716932+00:00",
+      "hard_failures": [],
+      "note": "Companion FV calibration report for frozen book-edge entry lanes; compares raw, book, and predeclared blends on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_edge_fv_calibration_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_plus05_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_recross_book_shrink_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_recross_book_shrink_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_recross_book_shrink_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T08:42:25.757266+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "entry_policy",
+            "variant",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator_markets",
+            "summary",
+            "score",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T08:42:25.757266+00:00",
+            "state_freeze_ts": "2026-05-06T08:42:25.757266+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "recross_book_shrink_fv",
+      "freeze_ts": "2026-05-06T08:42:25.757266+00:00",
+      "hard_failures": [],
+      "note": "Frozen recross/book-disagreement FV shrinkage challenger; validates future-only book anchoring in unstable path geometry.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_recross_book_shrink_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_recross_book_shrink_fv_state.json",
+      "status": "pass"
+    },
+    {
+      "artifact": "v28_frozen_boundary_clock_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:07:27.790042+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "coverage_floor",
+            "danger_rule",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:07:27.790042+00:00",
+            "state_freeze_ts": "2026-05-06T07:07:27.790042+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "boundary_clock_repair_entry",
+      "freeze_ts": "2026-05-06T07:07:27.790042+00:00",
+      "hard_failures": [],
+      "note": "Frozen target-coverage repair candidate; skips boundary-clock hazard rows and repairs coverage with lowest-recross clean rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_boundary_clock_fv_entry_bridge",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_entry_bridge_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_entry_bridge_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T07:35:02.597585+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "adjusted_edge_floor",
+            "coverage_floor",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T07:35:02.597585+00:00",
+            "state_freeze_ts": "2026-05-06T07:35:02.597585+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "boundary_clock_fv_entry_bridge",
+      "freeze_ts": "2026-05-06T07:35:02.597585+00:00",
+      "hard_failures": [],
+      "note": "Frozen entry bridge from boundary-clock adjusted FV; validates adjusted-edge skip plus low-recross repair on future rows only.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_entry_bridge_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_boundary_clock_fv_entry_bridge_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_book_trajectory_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_trajectory_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_trajectory_fv_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T02:47:06.099693+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "rule"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "candidate",
+            "views"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T02:47:06.099693+00:00",
+            "state_freeze_ts": "2026-05-06T02:47:06.099693+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report": "gap15_or_drawdown10",
+            "state": "gap15_or_drawdown10"
+          },
+          "name": "report_matches_state_candidate",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "book_trajectory_fv",
+      "freeze_ts": "2026-05-06T02:47:06.099693+00:00",
+      "hard_failures": [],
+      "note": "Frozen book-trajectory FV shrinkage candidate; validates fixed physics thresholds on post-freeze observations.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_trajectory_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_book_trajectory_fv_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_weak_reversal_residual_repair",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_repair_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_repair_freeze.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T10:25:15.561162+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "policy",
+            "base_target_policy",
+            "weak_reversal",
+            "residual_skip"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "policy",
+            "future_denominator",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T10:25:15.561162+00:00",
+            "state_freeze_ts": "2026-05-06T10:25:15.561162+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "weak_reversal_residual_repair",
+      "freeze_ts": "2026-05-06T10:25:15.561162+00:00",
+      "hard_failures": [],
+      "note": "Frozen entry repair candidate for weak-boundary reversal plus NO-side 5-8pp residual rows.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_repair_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_repair_freeze.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_weak_reversal_residual_fv_shrink",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_fv_shrink_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_fv_shrink_freeze.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T10:29:42.136727+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "variant",
+            "target_policy",
+            "weak_reversal",
+            "fv_adjustment"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "raw_all",
+            "variant_all",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T10:29:42.136727+00:00",
+            "state_freeze_ts": "2026-05-06T10:29:42.136727+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "weak_reversal_residual_fv_shrink",
+      "freeze_ts": "2026-05-06T10:29:42.136727+00:00",
+      "hard_failures": [],
+      "note": "Frozen calibration validator for half-to-50 residual shrink after weak-boundary reversal.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_fv_shrink_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_weak_reversal_residual_fv_shrink_freeze.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_no_mid_edge_fv",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_no_mid_edge_fv_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_no_mid_edge_fv_freeze.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T10:33:21.044716+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "variant",
+            "target_policy",
+            "fv_adjustment"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "raw",
+            "variant",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T10:33:21.044716+00:00",
+            "state_freeze_ts": "2026-05-06T10:33:21.044716+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "no_mid_edge_fv",
+      "freeze_ts": "2026-05-06T10:33:21.044716+00:00",
+      "hard_failures": [],
+      "note": "Frozen broader NO 5-8pp book-anchor FV shrink; validates whether mid-edge NO conviction is overconfident out of sample.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_no_mid_edge_fv_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_no_mid_edge_fv_freeze.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_early_boundary_wait_repair",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_wait_repair_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_wait_repair_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T10:48:07.385138+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "danger_rule",
+            "wait_rule",
+            "repair_rule",
+            "params"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T10:48:07.385138+00:00",
+            "state_freeze_ts": "2026-05-06T10:48:07.385138+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "early_boundary_wait_repair",
+      "freeze_ts": "2026-05-06T10:48:07.385138+00:00",
+      "hard_failures": [],
+      "note": "Frozen early-boundary wait/repair candidate; validates whether very early high-recross boundary states should be aged before entry.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_wait_repair_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_wait_repair_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_early_boundary_opposite_wait_repair",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_opposite_wait_repair_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_opposite_wait_repair_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T10:53:40.348250+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "danger_rule",
+            "wait_rule",
+            "repair_rule",
+            "params"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T10:53:40.348250+00:00",
+            "state_freeze_ts": "2026-05-06T10:53:40.348250+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "early_boundary_opposite_wait_repair",
+      "freeze_ts": "2026-05-06T10:53:40.348250+00:00",
+      "hard_failures": [],
+      "note": "Frozen early-boundary opposite-side wait/repair candidate; validates whether the first boundary thesis should be reversed after clock decay.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_opposite_wait_repair_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_early_boundary_opposite_wait_repair_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_gamma_repair_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_gamma_repair_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_gamma_repair_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:43:09.046274+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "base_policy",
+            "candidate",
+            "repair_rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "target_summary",
+            "candidate_summary",
+            "repair_summary",
+            "blockers"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:43:09.046274+00:00",
+            "state_freeze_ts": "2026-05-06T11:43:09.046274+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "gamma_repair_entry",
+      "freeze_ts": "2026-05-06T11:43:09.046274+00:00",
+      "hard_failures": [],
+      "note": "Frozen gamma/recross repair bridge; tests whether cheap near-boundary optionality can repair target coverage without broad exposure.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_gamma_repair_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_gamma_repair_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_raw_entry_coverage_valve",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_raw_entry_coverage_valve_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_entry_calibrated_probability_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-05T23:30:17.615882+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "entry_policy"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts",
+            "best_policy",
+            "ranked"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+            "state_freeze_ts": "2026-05-05T23:30:17.615882+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": true,
+      "failures": [],
+      "family": "raw_entry_coverage_valve",
+      "freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+      "hard_failures": [],
+      "note": "Coverage-valve artifact can rank rows, but downstream target FV must freeze the chosen policy before promotion evidence.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_raw_entry_coverage_valve_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_entry_calibrated_probability_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_favorite_valley_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_favorite_valley_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_favorite_valley_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:52:57.665782+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary",
+            "skipped_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:52:57.665782+00:00",
+            "state_freeze_ts": "2026-05-06T11:52:57.665782+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_favorite_valley_skip",
+      "freeze_ts": "2026-05-06T11:52:57.665782+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 payoff-geometry challenger; validates whether skipping the 65-75c middle-favorite valley preserves target coverage while improving EV.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_favorite_valley_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_favorite_valley_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_mid_edge_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_mid_edge_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_mid_edge_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:57:26.075880+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary",
+            "skipped_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:57:26.075880+00:00",
+            "state_freeze_ts": "2026-05-06T11:57:26.075880+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_mid_edge_skip",
+      "freeze_ts": "2026-05-06T11:57:26.075880+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 false-conviction challenger; validates whether skipping the whole 5-10pp edge band improves EV without unacceptable coverage loss.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_mid_edge_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_mid_edge_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_shadow_mid_edge_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_shadow_mid_edge_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_shadow_mid_edge_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T11:58:59.805901+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary",
+            "skipped_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T11:58:59.805901+00:00",
+            "state_freeze_ts": "2026-05-06T11:58:59.805901+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_shadow_mid_edge_skip",
+      "freeze_ts": "2026-05-06T11:58:59.805901+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 expansion-surface challenger; preserves approved-entry rows and validates whether rejected-actionable 5-10pp edge rows are false-conviction traps.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_shadow_mid_edge_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_shadow_mid_edge_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_book_disagreement_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_disagreement_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_disagreement_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T12:06:41.849306+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary",
+            "skipped_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T12:06:41.849306+00:00",
+            "state_freeze_ts": "2026-05-06T12:06:41.849306+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_book_disagreement_skip",
+      "freeze_ts": "2026-05-06T12:06:41.849306+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 crowd-prior challenger; validates whether large selected-side FV disagreement above executable book marks overconfidence.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_disagreement_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_disagreement_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_book_shrink_entry",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_shrink_entry_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_shrink_entry_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T12:12:25.258308+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T12:12:25.258308+00:00",
+            "state_freeze_ts": "2026-05-06T12:12:25.258308+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_book_shrink_entry",
+      "freeze_ts": "2026-05-06T12:12:25.258308+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 probabilistic crowd-prior shrink challenger for large selected-side FV disagreement above executable book.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_shrink_entry_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_book_shrink_entry_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_early_no_boundary_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T12:18:20.259368+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary",
+            "skipped_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T12:18:20.259368+00:00",
+            "state_freeze_ts": "2026-05-06T12:18:20.259368+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_early_no_boundary_skip",
+      "freeze_ts": "2026-05-06T12:18:20.259368+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 early NO boundary-decay skip; broad physics check that is likely too selective.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_frozen_raw_p52_early_no_boundary_band_skip",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_band_skip_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_band_skip_state.json",
+          "name": "state_exists",
+          "passed": true
+        },
+        {
+          "detail": "2026-05-06T12:20:19.153557+00:00",
+          "name": "state_has_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze_ts_utc",
+            "candidate",
+            "base_policy",
+            "rule",
+            "physics"
+          ],
+          "name": "state_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": [
+            "freeze.freeze_ts_utc",
+            "future_denominator",
+            "base",
+            "candidate_summary",
+            "skipped_summary"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": {
+            "report_freeze_ts": "2026-05-06T12:20:19.153557+00:00",
+            "state_freeze_ts": "2026-05-06T12:20:19.153557+00:00"
+          },
+          "name": "report_matches_state_freeze_ts",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": false
+        }
+      ],
+      "family": "raw_p52_early_no_boundary_band_skip",
+      "freeze_ts": "2026-05-06T12:20:19.153557+00:00",
+      "hard_failures": [],
+      "note": "Frozen raw-p52 middle-confidence early NO boundary skip; preserves target coverage in discovery while testing recross/path fragility.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_band_skip_latest.json",
+      "state_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_band_skip_state.json",
+      "status": "watch"
+    },
+    {
+      "artifact": "v28_live_trade_readiness",
+      "checks": [
+        {
+          "detail": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_trade_readiness_latest.json",
+          "name": "report_exists",
+          "passed": true
+        },
+        {
+          "detail": [
+            "any_live_ready",
+            "candidates"
+          ],
+          "name": "report_required_fields_present",
+          "passed": true
+        },
+        {
+          "detail": "forward/ranked/candidates rows",
+          "name": "report_has_scored_rows",
+          "passed": true
+        }
+      ],
+      "dynamic_best_risk": false,
+      "failures": [],
+      "family": "live_readiness",
+      "freeze_ts": "2026-05-05T22:07:37.064896+00:00",
+      "hard_failures": [],
+      "note": "Gate artifact; does not itself create candidates, but must not promote anything while evidence blockers remain.",
+      "report_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_trade_readiness_latest.json",
+      "state_path": null,
+      "status": "pass"
+    }
+  ],
+  "watch_count": 35
+}

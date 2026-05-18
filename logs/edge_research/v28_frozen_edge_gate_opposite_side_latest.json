@@ -1,0 +1,77 @@
+{
+  "base": {
+    "avg_net_cents": -6.428571428571429,
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 72.8,
+    "entries": 91,
+    "losses": 41,
+    "net_cents": -585.0,
+    "settled": 91,
+    "wins": 50
+  },
+  "candidate": {
+    "avg_net_cents": -6.428571428571429,
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 72.8,
+    "entries": 91,
+    "losses": 41,
+    "net_cents": -585.0,
+    "settled": 91,
+    "wins": 50
+  },
+  "cases": [],
+  "delta_net_cents": 0.0,
+  "freeze": {
+    "adjusted_edge_floor": -0.12,
+    "base_entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "freeze_ts_utc": "2026-05-06T06:05:34.391059+00:00",
+    "fv_variant": "edge_phase_shrink",
+    "opposite_min_adjusted_edge": -0.02,
+    "opposite_min_raw_edge": 0.0,
+    "opposite_min_raw_p": 0.5,
+    "physics": "A strongly overpriced selected side near a boundary can imply local side mispricing; opposite replacement is allowed only when later executable information agrees.",
+    "rule": "If edge-phase adjusted-FV skips the target row, replace with the first same-or-later opposite row that clears fixed raw/FV edge requirements."
+  },
+  "future_denominator": 125,
+  "interpretation": [
+    "Frozen edge-gate opposite replacement has 91 entries versus 91 base entries.",
+    "It has replaced 0 of 0 future edge-gate skips so far.",
+    "Net delta versus base is 0.0c; promotion still requires >=30 settled rows and coverage inside the target band."
+  ],
+  "kept_after_edge_gate": {
+    "avg_net_cents": -6.428571428571429,
+    "blockers": [
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 72.8,
+    "entries": 91,
+    "losses": 41,
+    "net_cents": -585.0,
+    "settled": 91,
+    "wins": 50
+  },
+  "pending_rows": [],
+  "replacement_only": {
+    "avg_net_cents": null,
+    "blockers": [
+      "settled_lt_30",
+      "coverage_too_low",
+      "net_not_positive"
+    ],
+    "coverage_pct": 0.0,
+    "entries": 0,
+    "losses": 0,
+    "net_cents": 0,
+    "settled": 0,
+    "wins": 0
+  },
+  "skips_with_opposite": 0,
+  "target_skipped": 0
+}

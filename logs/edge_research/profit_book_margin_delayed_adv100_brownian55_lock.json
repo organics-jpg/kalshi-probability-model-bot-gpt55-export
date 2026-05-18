@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-05-04T04:14:00+00:00",
+  "delay_conditions": [
+    {
+      "feature": "adverse_move_15m",
+      "op": "<=",
+      "threshold": 100.0
+    },
+    {
+      "feature": "brownian_p_rv_15m",
+      "op": ">=",
+      "threshold": 0.55
+    }
+  ],
+  "delay_rule": {
+    "label": "book_margin_wait_until_adverse15<=100_and_brownian15>=0.55",
+    "mode": "first_later_row_satisfying_base_and_conditions"
+  },
+  "discovery_metrics": {
+    "current_all_accuracy": 0.74822695035461,
+    "current_all_coverage": 0.9929577464788732,
+    "current_all_net_pnl_cents": 1588.0,
+    "current_delta_vs_book_margin_cents": 460.0,
+    "current_holdout_net_pnl_cents": 362.0,
+    "current_validation_net_pnl_cents": 330.0,
+    "current_block_positive_coverage_pass_rate": 0.7142857142857143,
+    "current_worst_block_net_pnl_cents": -200.0,
+    "min_oos_net_roi": 0.08527131782945736,
+    "v21_all_accuracy": 0.730593607305936,
+    "v21_all_coverage": 0.9909502262443439,
+    "v21_all_net_pnl_cents": 689.0,
+    "v21_delta_vs_book_margin_cents": 264.0,
+    "v21_train_net_pnl_cents": -151.0,
+    "v21_validation_net_pnl_cents": 465.0,
+    "v21_holdout_net_pnl_cents": 375.0,
+    "v21_block_positive_coverage_pass_rate": 0.6363636363636364,
+    "v21_worst_block_net_pnl_cents": -295.0
+  },
+  "lock_close_dt": "2026-05-04T04:15:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; delayed until adverse_move_15m<=100 and brownian_p_rv_15m>=0.55",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "research_note": "Forward-registered from candidate_tradeable_delayed_path_veto_scan_latest.csv. This is not promotion evidence: the rule improved combined offline P&L at high coverage but failed the chronological block-stability diagnostic and had negative v21 train P&L. Use only for strict pre-resolution live evidence accumulation.",
+  "source_base_lock": "logs\\edge_research\\profit_frontier_book_margin_lock.json",
+  "source_scan_csv": "logs\\edge_research\\candidate_tradeable_delayed_path_veto_scan_latest.csv"
+}

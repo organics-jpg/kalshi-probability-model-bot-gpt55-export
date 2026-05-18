@@ -1,0 +1,375 @@
+{
+  "candidate": "block_market_first_edge_8_20",
+  "gates": {
+    "leave_one_day_out": {
+      "checks": {
+        "primary_all_positive": true,
+        "selected_all_positive": true
+      },
+      "pass": true,
+      "records": [
+        {
+          "holdout_day": "2026-05-01",
+          "primary_holdout_1c": 38.0,
+          "selected_candidate": "block_market_first_edge_8_20",
+          "selected_holdout_1c": 38.0,
+          "selected_train_min_day_1c": 172.0,
+          "selected_train_positive_days": 3,
+          "selected_train_total_1c": 612.0
+        },
+        {
+          "holdout_day": "2026-05-02",
+          "primary_holdout_1c": 204.0,
+          "selected_candidate": "block_market_first_edge_8_20",
+          "selected_holdout_1c": 204.0,
+          "selected_train_min_day_1c": 38.0,
+          "selected_train_positive_days": 3,
+          "selected_train_total_1c": 446.0
+        },
+        {
+          "holdout_day": "2026-05-03",
+          "primary_holdout_1c": 172.0,
+          "selected_candidate": "block_market_first_edge_8_20",
+          "selected_holdout_1c": 172.0,
+          "selected_train_min_day_1c": 38.0,
+          "selected_train_positive_days": 3,
+          "selected_train_total_1c": 478.0
+        },
+        {
+          "holdout_day": "2026-05-04",
+          "primary_holdout_1c": 236.0,
+          "selected_candidate": "block_market_first_edge_8_20",
+          "selected_holdout_1c": 236.0,
+          "selected_train_min_day_1c": 38.0,
+          "selected_train_positive_days": 3,
+          "selected_train_total_1c": 414.0
+        }
+      ]
+    },
+    "retrospective": {
+      "checks": {
+        "block10": true,
+        "coverage": true,
+        "fee_1c_entry": true,
+        "fee_net": true
+      },
+      "pass": true,
+      "record": {
+        "all_avg_entry_ask": 80.3632958801498,
+        "all_avg_entry_edge": 3.7122867884095787,
+        "all_avg_entry_p_side": 0.8407558266855939,
+        "all_avg_entry_seconds_to_close": 463.42493632958804,
+        "all_cost_dollars": 429.14,
+        "all_coverage": 0.8090909090909091,
+        "all_exit_count": 68,
+        "all_fee_dollars": 8.98,
+        "all_losses": 45,
+        "all_markets": 330,
+        "all_net_after_fees_1c_entry_dollars": 6.5,
+        "all_net_after_fees_1c_roundtrip_dollars": 5.14,
+        "all_net_after_fees_dollars": 11.84,
+        "all_net_roi_after_fees": 0.02759006384862749,
+        "all_pnl_dollars": 20.82,
+        "all_roi": 0.04851563592300881,
+        "all_settled_count": 199,
+        "all_splits_1c_entry_positive": true,
+        "all_splits_fee_positive": true,
+        "all_trades": 267,
+        "all_wins": 222,
+        "block10": {
+          "blocks": 10,
+          "mean": 1.184,
+          "positive_blocks": 8,
+          "values": [
+            0.72,
+            -1.76,
+            0.13,
+            3.17,
+            2.76,
+            1.03,
+            1.97,
+            0.42,
+            6.24,
+            -2.84
+          ],
+          "worst": -2.84
+        },
+        "block20": {
+          "blocks": 20,
+          "mean": 0.592,
+          "positive_blocks": 12,
+          "values": [
+            0.78,
+            -0.03,
+            -2.32,
+            0.8,
+            -1.38,
+            2.31,
+            1.2,
+            2.26,
+            -0.21,
+            0.25,
+            0.63,
+            1.81,
+            3.44,
+            -1.52,
+            0.62,
+            -0.2,
+            2.9,
+            3.34,
+            -0.61,
+            -2.23
+          ],
+          "worst": -2.32
+        },
+        "candidate": "block_market_first_edge_8_20",
+        "entry_policy": "edge0_ask100_p0.65_stc0-600",
+        "exit_policy": "prob52",
+        "holdout_avg_entry_ask": 79.42857142857143,
+        "holdout_avg_entry_edge": 3.579779342020157,
+        "holdout_avg_entry_p_side": 0.8300835077059159,
+        "holdout_avg_entry_seconds_to_close": 473.99000000000007,
+        "holdout_cost_dollars": 88.96,
+        "holdout_coverage": 0.8484848484848485,
+        "holdout_exit_count": 15,
+        "holdout_fee_dollars": 2.01,
+        "holdout_losses": 10,
+        "holdout_markets": 66,
+        "holdout_net_after_fees_1c_entry_dollars": 1.5700000000000003,
+        "holdout_net_after_fees_1c_roundtrip_dollars": 1.2700000000000002,
+        "holdout_net_after_fees_dollars": 2.6900000000000004,
+        "holdout_net_roi_after_fees": 0.030238309352517992,
+        "holdout_pnl_dollars": 4.7,
+        "holdout_roi": 0.052832733812949645,
+        "holdout_settled_count": 41,
+        "holdout_trades": 56,
+        "holdout_wins": 46,
+        "min_split_coverage": 0.7878787878787878,
+        "min_split_net_after_fees_1c_entry_dollars": 1.5700000000000003,
+        "min_split_net_after_fees_dollars": 2.6900000000000004,
+        "model": "v38_long60_antipersist",
+        "train_avg_entry_ask": 80.28301886792453,
+        "train_avg_entry_edge": 3.878099596745323,
+        "train_avg_entry_p_side": 0.8416111846466986,
+        "train_avg_entry_seconds_to_close": 443.78648427672954,
+        "train_cost_dollars": 255.3,
+        "train_coverage": 0.803030303030303,
+        "train_exit_count": 41,
+        "train_fee_dollars": 5.31,
+        "train_losses": 26,
+        "train_markets": 198,
+        "train_net_after_fees_1c_entry_dollars": 2.5900000000000003,
+        "train_net_after_fees_1c_roundtrip_dollars": 1.7700000000000005,
+        "train_net_after_fees_dollars": 5.7700000000000005,
+        "train_net_roi_after_fees": 0.022600861731296516,
+        "train_pnl_dollars": 11.08,
+        "train_roi": 0.04339992166079122,
+        "train_settled_count": 118,
+        "train_trades": 159,
+        "train_wins": 133,
+        "validation_avg_entry_ask": 81.61538461538461,
+        "validation_avg_entry_edge": 3.3479825667254266,
+        "validation_avg_entry_p_side": 0.8496336718211006,
+        "validation_avg_entry_seconds_to_close": 512.0955192307691,
+        "validation_cost_dollars": 84.88,
+        "validation_coverage": 0.7878787878787878,
+        "validation_exit_count": 12,
+        "validation_fee_dollars": 1.66,
+        "validation_losses": 9,
+        "validation_markets": 66,
+        "validation_net_after_fees_1c_entry_dollars": 2.34,
+        "validation_net_after_fees_1c_roundtrip_dollars": 2.0999999999999996,
+        "validation_net_after_fees_dollars": 3.38,
+        "validation_net_roi_after_fees": 0.03982092365692743,
+        "validation_pnl_dollars": 5.04,
+        "validation_roi": 0.05937794533459001,
+        "validation_settled_count": 40,
+        "validation_trades": 52,
+        "validation_wins": 43,
+        "veto_high": 20.0,
+        "veto_low": 8.0,
+        "veto_mode": "block_first"
+      }
+    },
+    "strict_forward": {
+      "checks": {
+        "coverage": true,
+        "fee_1c_positive": false,
+        "fee_net_positive": false,
+        "min_days": false,
+        "min_finalized": false,
+        "min_registered_markets": false
+      },
+      "cost_cents": 1486.0,
+      "coverage": 0.7692307692307693,
+      "days": 1,
+      "denominator_source": "forward_denominator",
+      "fee_1c_entry_cents": -47.0,
+      "fee_net_cents": -29.0,
+      "fee_net_roi": -0.019515477792732168,
+      "finalized": 9,
+      "markets": 10,
+      "pass": false,
+      "post_lock_markets": 13,
+      "registered": 10
+    },
+    "temporal": {
+      "checks": {
+        "all_days_positive": true,
+        "worst_day_positive": true
+      },
+      "pass": true,
+      "record": {
+        "by_day": [
+          {
+            "bucket": "2026-05-01",
+            "cost_cents": 10310.0,
+            "exits": 20,
+            "fee_net_1c_entry_cents": 38.0,
+            "fee_net_cents": 168.0,
+            "fee_net_roi": 0.016294859359844812,
+            "gross_cents": 408.0,
+            "trades": 65
+          },
+          {
+            "bucket": "2026-05-02",
+            "cost_cents": 12832.0,
+            "exits": 19,
+            "fee_net_1c_entry_cents": 204.0,
+            "fee_net_cents": 364.0,
+            "fee_net_roi": 0.02836658354114713,
+            "gross_cents": 622.0,
+            "trades": 80
+          },
+          {
+            "bucket": "2026-05-03",
+            "cost_cents": 11496.0,
+            "exits": 16,
+            "fee_net_1c_entry_cents": 172.0,
+            "fee_net_cents": 312.0,
+            "fee_net_roi": 0.027139874739039668,
+            "gross_cents": 530.0,
+            "trades": 70
+          },
+          {
+            "bucket": "2026-05-04",
+            "cost_cents": 8276.0,
+            "exits": 13,
+            "fee_net_1c_entry_cents": 236.0,
+            "fee_net_cents": 340.0,
+            "fee_net_roi": 0.041082648622522956,
+            "gross_cents": 522.0,
+            "trades": 52
+          }
+        ],
+        "by_exit_type": [
+          {
+            "bucket": "probability_reduce",
+            "cost_cents": 9414.0,
+            "exits": 68,
+            "fee_net_1c_entry_cents": -4611.0,
+            "fee_net_cents": -4475.0,
+            "fee_net_roi": -0.47535585298491606,
+            "gross_cents": -4018.0,
+            "trades": 68
+          },
+          {
+            "bucket": "settlement_loss",
+            "cost_cents": 166.0,
+            "exits": 0,
+            "fee_net_1c_entry_cents": -170.0,
+            "fee_net_cents": -168.0,
+            "fee_net_roi": -1.0120481927710843,
+            "gross_cents": -166.0,
+            "trades": 1
+          },
+          {
+            "bucket": "settlement_win",
+            "cost_cents": 33334.0,
+            "exits": 0,
+            "fee_net_1c_entry_cents": 5431.0,
+            "fee_net_cents": 5827.0,
+            "fee_net_roi": 0.1748065038699226,
+            "gross_cents": 6266.0,
+            "trades": 198
+          }
+        ],
+        "by_side": [
+          {
+            "bucket": "no",
+            "cost_cents": 20704.0,
+            "exits": 38,
+            "fee_net_1c_entry_cents": 126.0,
+            "fee_net_cents": 388.0,
+            "fee_net_roi": 0.018740340030911903,
+            "gross_cents": 868.0,
+            "trades": 131
+          },
+          {
+            "bucket": "yes",
+            "cost_cents": 22210.0,
+            "exits": 30,
+            "fee_net_1c_entry_cents": 524.0,
+            "fee_net_cents": 796.0,
+            "fee_net_roi": 0.035839711841512835,
+            "gross_cents": 1214.0,
+            "trades": 136
+          }
+        ],
+        "by_split": [
+          {
+            "bucket": "holdout",
+            "cost_cents": 8896.0,
+            "exits": 15,
+            "fee_net_1c_entry_cents": 157.0,
+            "fee_net_cents": 269.0,
+            "fee_net_roi": 0.030238309352517985,
+            "gross_cents": 470.0,
+            "trades": 56
+          },
+          {
+            "bucket": "train",
+            "cost_cents": 25530.0,
+            "exits": 41,
+            "fee_net_1c_entry_cents": 259.0,
+            "fee_net_cents": 577.0,
+            "fee_net_roi": 0.022600861731296513,
+            "gross_cents": 1108.0,
+            "trades": 159
+          },
+          {
+            "bucket": "validation",
+            "cost_cents": 8488.0,
+            "exits": 12,
+            "fee_net_1c_entry_cents": 234.0,
+            "fee_net_cents": 338.0,
+            "fee_net_roi": 0.03982092365692743,
+            "gross_cents": 504.0,
+            "trades": 52
+          }
+        ],
+        "overall": {
+          "cost_cents": 42914.0,
+          "exits": 68,
+          "fee_net_1c_entry_cents": 650.0,
+          "fee_net_cents": 1184.0,
+          "fee_net_roi": 0.02759006384862749,
+          "gross_cents": 2082.0,
+          "trades": 267
+        },
+        "positive_1c_days": 4,
+        "total_days": 4,
+        "worst_1c_day_cents": 38.0
+      }
+    }
+  },
+  "generated_utc": "2026-05-05T03:57:24.389339+00:00",
+  "pass": false,
+  "thresholds": {
+    "min_forward_coverage": 0.75,
+    "min_forward_days": 2,
+    "min_forward_finalized": 50,
+    "min_forward_markets": 50,
+    "min_retro_coverage": 0.75
+  }
+}

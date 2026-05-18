@@ -1,0 +1,33 @@
+{
+  "base_kinetic_lock": "logs\\edge_research\\profit_kinetic_touch_fresh_lock.json",
+  "created_utc": "2026-05-03T02:59:54.559721+00:00",
+  "discovery_metrics": {
+    "combined_delta_vs_base_cents": 567.0,
+    "current_all_accuracy": 0.6900584795321637,
+    "current_all_coverage": 0.9293478260869564,
+    "current_all_net_pnl_cents": 804.0,
+    "current_all_net_roi_on_cost": 0.0731174972717351,
+    "current_delta_vs_base_cents": 227.0,
+    "min_oos_roi": 0.0346378767431399,
+    "v21_all_accuracy": 0.700507614213198,
+    "v21_all_coverage": 0.8914027149321267,
+    "v21_all_net_pnl_cents": 1200.0,
+    "v21_all_net_roi_on_cost": 0.0952380952380952,
+    "v21_delta_vs_base_cents": 340.0
+  },
+  "lock_close_dt": "2026-05-03T03:00:00+00:00",
+  "overlay": {
+    "clauses": "adverse15<=100 AND ask<=70",
+    "label": "adverse15<=100 AND ask<=70"
+  },
+  "policy": {
+    "ask_max": 95.0,
+    "ask_min": 50.0,
+    "chooser": "kinetic_touch_score_15",
+    "gate": "touch_loss15<=0.90",
+    "label": "choose=kinetic_touch_score_15; kinetic_touch_score_15>=0.55; 50<=ask<=95; sec>=120; gate=touch_loss15<=0.90",
+    "min_score": 0.55,
+    "min_seconds_to_close": 120.0
+  },
+  "source_sanity_csv": "logs\\edge_research\\kinetic_guard_physics_sanity_latest.csv"
+}

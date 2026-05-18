@@ -1,0 +1,12 @@
+{
+  "candidate": "book_gap_loss_guard_v2_value_gap0_or_p85_shallowdd_reduce_p79_gap0",
+  "freeze_ts_utc": "2026-05-06T22:01:04.415577+00:00",
+  "physics": "A high held probability alone is not enough to ignore a rich exit when the book already marks the held side below the executable bid. Negative-gap value exits are suppressed only when the fair-value drawdown is shallow, preserving temporary-mark recovery while avoiding deep adverse moves with generous exit liquidity.",
+  "reduce_gap_floor": 0.0,
+  "reduce_p_hold_floor": 0.79,
+  "rule": "Suppress value-over-hold exits when p_hold - exit_bid >= 0.00, or when p_hold >= 0.85 and fair_drawdown_cents >= -5.0. Suppress probability_reduce exits only when p_hold >= 0.79 and p_hold - exit_bid >= 0.00. Keep collapse exits unchanged.",
+  "source_artifact": "v28_frozen_exit_book_gap_loss_guard_latest.json",
+  "value_fair_drawdown_floor_cents": -5.0,
+  "value_gap_floor": 0.0,
+  "value_p_hold_floor": 0.85
+}

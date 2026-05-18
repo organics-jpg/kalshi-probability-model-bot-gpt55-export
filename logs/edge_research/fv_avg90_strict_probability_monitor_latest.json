@@ -1,0 +1,181 @@
+{
+  "generated_utc": "2026-05-04T23:53:07.917206+00:00",
+  "lock": {
+    "baseline": "v28_live_surface",
+    "bot_log": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\bot.log",
+    "candidate": "v28_avg90",
+    "created_utc": "2026-05-04T17:23:26.783133+00:00",
+    "initial_max_entry_dt": "2026-05-04T17:23:11.900000+00:00",
+    "initial_max_source_line_no": 53941,
+    "lock_id": "fv_avg90_strict_probability_lock_v1",
+    "mode": "two_side_minute_bucket",
+    "purpose": "Strict forward validation of avg90 FV probability calibration."
+  },
+  "metrics": [
+    {
+      "brier": 0.2214192085620189,
+      "logloss": 0.6252493205964004,
+      "mean_p_yes": 0.48384210882088463,
+      "model": "v28_live_surface",
+      "resolved": 125,
+      "side_accuracy": 0.632,
+      "yes_rate": 0.576
+    },
+    {
+      "brier": 0.2214258143680374,
+      "logloss": 0.6244114260359678,
+      "mean_p_yes": 0.48440767126021683,
+      "model": "v28_avg90",
+      "resolved": 125,
+      "side_accuracy": 0.632,
+      "yes_rate": 0.576
+    },
+    {
+      "brier": 0.22828802688165417,
+      "logloss": 0.6395806059572678,
+      "mean_p_yes": 0.47232343581862174,
+      "model": "v30_avg90_exact_var",
+      "resolved": 120,
+      "side_accuracy": 0.6166666666666667,
+      "yes_rate": 0.5583333333333333
+    },
+    {
+      "brier": 0.23196841963556994,
+      "logloss": 0.6466003000697422,
+      "mean_p_yes": 0.47635096946979666,
+      "model": "v31_avg90_final60_exact",
+      "resolved": 114,
+      "side_accuracy": 0.5964912280701754,
+      "yes_rate": 0.5877192982456141
+    },
+    {
+      "brier": 0.2218851807612908,
+      "logloss": 0.6285825774342966,
+      "mean_p_yes": 0.44163649339876754,
+      "model": "v32_avg110_final60_exact",
+      "resolved": 81,
+      "side_accuracy": 0.7530864197530864,
+      "yes_rate": 0.654320987654321
+    },
+    {
+      "brier": 0.23246926465872395,
+      "logloss": 0.6478321261639074,
+      "mean_p_yes": 0.4155420080828365,
+      "model": "v33_antipersist3",
+      "resolved": 62,
+      "side_accuracy": 0.7096774193548387,
+      "yes_rate": 0.6935483870967742
+    },
+    {
+      "brier": 0.17134422363930912,
+      "logloss": 0.5109012837317641,
+      "mean_p_yes": 0.4440616573458226,
+      "model": "v34_material_antipersist3",
+      "resolved": 51,
+      "side_accuracy": 0.8627450980392157,
+      "yes_rate": 0.6274509803921569
+    },
+    {
+      "brier": 0.17163216655282745,
+      "logloss": 0.5115304800885173,
+      "mean_p_yes": 0.44402325552724353,
+      "model": "v35_h150_t102_antipersist3",
+      "resolved": 51,
+      "side_accuracy": 0.8627450980392157,
+      "yes_rate": 0.6274509803921569
+    },
+    {
+      "brier": 0.16731613068195744,
+      "logloss": 0.4965632287419644,
+      "mean_p_yes": 0.4100355714859852,
+      "model": "v36_piecewise_h150_t102_antipersist3",
+      "resolved": 40,
+      "side_accuracy": 0.825,
+      "yes_rate": 0.525
+    },
+    {
+      "brier": 0.15674466035550236,
+      "logloss": 0.46873916458748266,
+      "mean_p_yes": 0.3835779760391455,
+      "model": "v37_piecewise_dynamic_temp_antipersist3",
+      "resolved": 33,
+      "side_accuracy": 0.7878787878787878,
+      "yes_rate": 0.42424242424242425
+    },
+    {
+      "brier": 0.1273392579236433,
+      "logloss": 0.39694714030010925,
+      "mean_p_yes": 0.32609381321795505,
+      "model": "v38_long60_antipersist",
+      "resolved": 24,
+      "side_accuracy": 0.875,
+      "yes_rate": 0.4583333333333333
+    },
+    {
+      "brier": null,
+      "logloss": null,
+      "mean_p_yes": null,
+      "model": "v39_midband_v28_fallback",
+      "resolved": 0,
+      "side_accuracy": null,
+      "yes_rate": null
+    },
+    {
+      "brier": 0.20066123880733946,
+      "logloss": 0.5776773100712819,
+      "mean_p_yes": 0.45518349541284403,
+      "model": "book_mid_probability",
+      "resolved": 109,
+      "side_accuracy": 0.7064220183486238,
+      "yes_rate": 0.6055045871559633
+    },
+    {
+      "brier": 0.212809388214588,
+      "logloss": 0.6100674424038538,
+      "mean_p_yes": 0.4225751830827746,
+      "model": "book_platt",
+      "resolved": 103,
+      "side_accuracy": 0.6990291262135923,
+      "yes_rate": 0.5825242718446602
+    },
+    {
+      "brier": 0.2135877457918055,
+      "logloss": 0.6139009390706495,
+      "mean_p_yes": 0.41880978808350255,
+      "model": "book_v31_platt",
+      "resolved": 103,
+      "side_accuracy": 0.6990291262135923,
+      "yes_rate": 0.5825242718446602
+    },
+    {
+      "brier": 0.2525923687362675,
+      "logloss": 0.7125920773040951,
+      "mean_p_yes": 0.39570972615237116,
+      "model": "book_v32_platt",
+      "resolved": 81,
+      "side_accuracy": 0.6296296296296297,
+      "yes_rate": 0.654320987654321
+    },
+    {
+      "brier": 0.28420994379132636,
+      "logloss": 0.7848867911700971,
+      "mean_p_yes": 0.3616204001309,
+      "model": "book_v33_platt",
+      "resolved": 62,
+      "side_accuracy": 0.5483870967741935,
+      "yes_rate": 0.6935483870967742
+    },
+    {
+      "brier": 0.2441811692076009,
+      "logloss": 0.6914049071069086,
+      "mean_p_yes": 0.3974827810152185,
+      "model": "book_v31_time_platt",
+      "resolved": 88,
+      "side_accuracy": 0.6590909090909091,
+      "yes_rate": 0.6022727272727273
+    }
+  ],
+  "new_rows": 6,
+  "registered": 131,
+  "registry_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\fv_avg90_strict_probability_registry_latest.csv"
+}

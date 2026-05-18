@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-05-04T02:52:00+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.7178217821782178,
+    "current_all_coverage": 0.926605504587156,
+    "current_all_net_pnl_cents": 901.0,
+    "current_all_net_roi_on_cost": 0.06625487168174131,
+    "current_delta_vs_book_margin_cents": 230.0,
+    "current_holdout_net_pnl_cents": 40.0,
+    "current_train_net_pnl_cents": 454.0,
+    "current_validation_net_pnl_cents": 407.0,
+    "min_oos_net_roi": 0.013986013986013986,
+    "v21_all_accuracy": 0.7246376811594203,
+    "v21_all_coverage": 0.9366515837104072,
+    "v21_all_net_pnl_cents": 617.0,
+    "v21_all_net_roi_on_cost": 0.04289786553570187,
+    "v21_delta_vs_book_margin_cents": 192.0,
+    "v21_holdout_net_pnl_cents": 262.0,
+    "v21_train_net_pnl_cents": -55.0,
+    "v21_validation_net_pnl_cents": 410.0
+  },
+  "lock_close_dt": "2026-05-04T03:00:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; adverse_move_15m<=100",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "research_note": "Forward-registered from candidate_tradeable_veto_scan_latest.csv after the 22:45 EDT settlement and before the 23:00 EDT settlement. Interpretable path-physics veto: keep the high-coverage book-margin side only when the adverse 15m path displacement is no more than 100 cents. Diagnostic only; v21 train remains slightly negative and promotion requires strict pre-resolution live evidence, sample size, and recurring-market coverage.",
+  "source_base_lock": "logs\\edge_research\\profit_frontier_book_margin_lock.json",
+  "source_scan_csv": "logs\\edge_research\\candidate_tradeable_veto_scan_latest.csv",
+  "veto": {
+    "feature": "adverse_move_15m",
+    "op": "<=",
+    "threshold": 100.0
+  }
+}

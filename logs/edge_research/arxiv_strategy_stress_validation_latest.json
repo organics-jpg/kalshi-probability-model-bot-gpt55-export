@@ -1,0 +1,5478 @@
+{
+  "diagnostics": {
+    "feature_event_type_counts": {
+      "plan_built": 632
+    },
+    "feature_index_keys": 1368,
+    "matched_trade_count": 632,
+    "raw_trade_count": 632
+  },
+  "generated_at_utc": "2026-05-07T23:09:57.514181+00:00",
+  "live_baseline": {
+    "avg_cents_per_entry": 2.153481012658228,
+    "cost_basis_dollars": 1272.71,
+    "coverage_of_live_entries": 1.0,
+    "entries": 632,
+    "flats": 11,
+    "losses": 336,
+    "net_cents": 1361.0,
+    "net_dollars": 13.61,
+    "roi_on_entry_notional": 0.010693716557581853,
+    "win_rate_ex_flats": 0.45893719806763283,
+    "wins": 285
+  },
+  "overfit_reads": [
+    {
+      "risk": "medium_replay_overfit_risk",
+      "strategy_name": "conformal_consensus_winrate_gate",
+      "strengths": [
+        "bootstrap_net_positive",
+        "beats_same_coverage_placebo",
+        "positive_in_most_chrono_slices",
+        "positive_parameter_neighborhood",
+        "some_split_positive_neighbor_cells"
+      ],
+      "warnings": [
+        "does_not_reliably_beat_same_sample_live_bootstrap",
+        "limited_split_positive_neighbor_cells",
+        "purged_walk_forward_failed"
+      ]
+    },
+    {
+      "risk": "medium_replay_overfit_risk",
+      "strategy_name": "depth_decay_fillability_gate",
+      "strengths": [
+        "bootstrap_net_positive",
+        "often_beats_same_sample_live_bootstrap",
+        "beats_same_coverage_placebo",
+        "positive_in_most_chrono_slices",
+        "positive_parameter_neighborhood",
+        "some_split_positive_neighbor_cells",
+        "many_split_positive_neighbor_cells",
+        "purged_walk_forward_positive"
+      ],
+      "warnings": [
+        "current_params_near_grid_peak",
+        "thin_purged_walk_forward_margin"
+      ]
+    },
+    {
+      "risk": "medium_replay_overfit_risk",
+      "strategy_name": "brownian_fpt_sanity_gate",
+      "strengths": [
+        "bootstrap_net_positive",
+        "often_beats_same_sample_live_bootstrap",
+        "beats_same_coverage_placebo",
+        "positive_in_most_chrono_slices",
+        "positive_parameter_neighborhood",
+        "some_split_positive_neighbor_cells",
+        "many_split_positive_neighbor_cells"
+      ],
+      "warnings": [
+        "current_params_near_grid_peak",
+        "purged_walk_forward_failed"
+      ]
+    },
+    {
+      "risk": "medium_replay_overfit_risk",
+      "strategy_name": "hybrid_fpt_depth_gate",
+      "strengths": [
+        "bootstrap_net_positive",
+        "beats_same_coverage_placebo",
+        "positive_in_most_chrono_slices",
+        "positive_parameter_neighborhood",
+        "some_split_positive_neighbor_cells",
+        "many_split_positive_neighbor_cells",
+        "purged_walk_forward_positive"
+      ],
+      "warnings": [
+        "does_not_reliably_beat_same_sample_live_bootstrap"
+      ]
+    }
+  ],
+  "parameter_stability": {
+    "brownian_fpt_sanity_gate": {
+      "current_cell": {
+        "all": {
+          "avg_cents_per_entry": 8.42153846153846,
+          "cost_basis_dollars": 675.94,
+          "coverage_of_live_entries": 0.5142405063291139,
+          "entries": 325,
+          "flats": 7,
+          "losses": 172,
+          "net_cents": 2737.0,
+          "net_dollars": 27.37,
+          "roi_on_entry_notional": 0.04049175962363523,
+          "win_rate_ex_flats": 0.4591194968553459,
+          "wins": 146
+        },
+        "param_tuple": [
+          3.0,
+          120.0,
+          0.7,
+          1.1
+        ],
+        "params": {
+          "max_abs_d_sigma": 1.1,
+          "min_abs_d_sigma": 0.7,
+          "min_edge_cents": 3.0,
+          "min_seconds_to_close": 120.0
+        },
+        "split_positive": true,
+        "splits": {
+          "holdout_last_20pct": {
+            "avg_cents_per_entry": 5.774647887323943,
+            "cost_basis_dollars": 183.76,
+            "coverage_of_live_entries": 0.5590551181102362,
+            "entries": 71,
+            "flats": 2,
+            "losses": 42,
+            "net_cents": 409.99999999999994,
+            "net_dollars": 4.1,
+            "roi_on_entry_notional": 0.022311710927296474,
+            "win_rate_ex_flats": 0.391304347826087,
+            "wins": 27
+          },
+          "train_first_60pct": {
+            "avg_cents_per_entry": 8.406593406593407,
+            "cost_basis_dollars": 364.75,
+            "coverage_of_live_entries": 0.48021108179419525,
+            "entries": 182,
+            "flats": 0,
+            "losses": 97,
+            "net_cents": 1530.0,
+            "net_dollars": 15.3,
+            "roi_on_entry_notional": 0.04194653872515422,
+            "win_rate_ex_flats": 0.46703296703296704,
+            "wins": 85
+          },
+          "validation_next_20pct": {
+            "avg_cents_per_entry": 11.069444444444445,
+            "cost_basis_dollars": 127.42999999999999,
+            "coverage_of_live_entries": 0.5714285714285714,
+            "entries": 72,
+            "flats": 5,
+            "losses": 33,
+            "net_cents": 797.0,
+            "net_dollars": 7.97,
+            "roi_on_entry_notional": 0.06254414188181746,
+            "win_rate_ex_flats": 0.5074626865671642,
+            "wins": 34
+          }
+        }
+      },
+      "current_net_percentile": 1.0,
+      "eligible_cells_min_entries": 400,
+      "family": "brownian_fpt_sanity",
+      "grid_cells": 400,
+      "min_all_entries": 30,
+      "net_cents_p10": 22.999999999999957,
+      "net_cents_p50": 958.0,
+      "net_cents_p90": 1978.9999999999998,
+      "positive_cell_share": 0.905,
+      "split_positive_cell_share": 0.5,
+      "strategy_name": "brownian_fpt_sanity_gate",
+      "top_cells": [
+        {
+          "all": {
+            "avg_cents_per_entry": 8.42153846153846,
+            "cost_basis_dollars": 675.94,
+            "coverage_of_live_entries": 0.5142405063291139,
+            "entries": 325,
+            "flats": 7,
+            "losses": 172,
+            "net_cents": 2737.0,
+            "net_dollars": 27.37,
+            "roi_on_entry_notional": 0.04049175962363523,
+            "win_rate_ex_flats": 0.4591194968553459,
+            "wins": 146
+          },
+          "param_tuple": [
+            3.0,
+            120.0,
+            0.55,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 5.774647887323943,
+              "cost_basis_dollars": 183.76,
+              "coverage_of_live_entries": 0.5590551181102362,
+              "entries": 71,
+              "flats": 2,
+              "losses": 42,
+              "net_cents": 409.99999999999994,
+              "net_dollars": 4.1,
+              "roi_on_entry_notional": 0.022311710927296474,
+              "win_rate_ex_flats": 0.391304347826087,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.406593406593407,
+              "cost_basis_dollars": 364.75,
+              "coverage_of_live_entries": 0.48021108179419525,
+              "entries": 182,
+              "flats": 0,
+              "losses": 97,
+              "net_cents": 1530.0,
+              "net_dollars": 15.3,
+              "roi_on_entry_notional": 0.04194653872515422,
+              "win_rate_ex_flats": 0.46703296703296704,
+              "wins": 85
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.42153846153846,
+            "cost_basis_dollars": 675.94,
+            "coverage_of_live_entries": 0.5142405063291139,
+            "entries": 325,
+            "flats": 7,
+            "losses": 172,
+            "net_cents": 2737.0,
+            "net_dollars": 27.37,
+            "roi_on_entry_notional": 0.04049175962363523,
+            "win_rate_ex_flats": 0.4591194968553459,
+            "wins": 146
+          },
+          "param_tuple": [
+            3.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 5.774647887323943,
+              "cost_basis_dollars": 183.76,
+              "coverage_of_live_entries": 0.5590551181102362,
+              "entries": 71,
+              "flats": 2,
+              "losses": 42,
+              "net_cents": 409.99999999999994,
+              "net_dollars": 4.1,
+              "roi_on_entry_notional": 0.022311710927296474,
+              "win_rate_ex_flats": 0.391304347826087,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.406593406593407,
+              "cost_basis_dollars": 364.75,
+              "coverage_of_live_entries": 0.48021108179419525,
+              "entries": 182,
+              "flats": 0,
+              "losses": 97,
+              "net_cents": 1530.0,
+              "net_dollars": 15.3,
+              "roi_on_entry_notional": 0.04194653872515422,
+              "win_rate_ex_flats": 0.46703296703296704,
+              "wins": 85
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 7.477653631284916,
+            "cost_basis_dollars": 737.9,
+            "coverage_of_live_entries": 0.5664556962025317,
+            "entries": 358,
+            "flats": 9,
+            "losses": 189,
+            "net_cents": 2677.0,
+            "net_dollars": 26.77,
+            "roi_on_entry_notional": 0.036278628540452634,
+            "win_rate_ex_flats": 0.4584527220630373,
+            "wins": 160
+          },
+          "param_tuple": [
+            3.0,
+            120.0,
+            0.55,
+            1.25
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 4.933333333333333,
+              "cost_basis_dollars": 189.52,
+              "coverage_of_live_entries": 0.5905511811023622,
+              "entries": 75,
+              "flats": 4,
+              "losses": 44,
+              "net_cents": 369.99999999999994,
+              "net_dollars": 3.6999999999999993,
+              "roi_on_entry_notional": 0.019523005487547485,
+              "win_rate_ex_flats": 0.38028169014084506,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 7.835748792270532,
+              "cost_basis_dollars": 411.61,
+              "coverage_of_live_entries": 0.5461741424802111,
+              "entries": 207,
+              "flats": 0,
+              "losses": 110,
+              "net_cents": 1622.0,
+              "net_dollars": 16.22,
+              "roi_on_entry_notional": 0.0394062340565098,
+              "win_rate_ex_flats": 0.46859903381642515,
+              "wins": 97
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 9.013157894736842,
+              "cost_basis_dollars": 136.77,
+              "coverage_of_live_entries": 0.6031746031746031,
+              "entries": 76,
+              "flats": 5,
+              "losses": 35,
+              "net_cents": 685.0,
+              "net_dollars": 6.85,
+              "roi_on_entry_notional": 0.0500840827666886,
+              "win_rate_ex_flats": 0.5070422535211268,
+              "wins": 36
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 7.477653631284916,
+            "cost_basis_dollars": 737.9,
+            "coverage_of_live_entries": 0.5664556962025317,
+            "entries": 358,
+            "flats": 9,
+            "losses": 189,
+            "net_cents": 2677.0,
+            "net_dollars": 26.77,
+            "roi_on_entry_notional": 0.036278628540452634,
+            "win_rate_ex_flats": 0.4584527220630373,
+            "wins": 160
+          },
+          "param_tuple": [
+            3.0,
+            120.0,
+            0.7,
+            1.25
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 4.933333333333333,
+              "cost_basis_dollars": 189.52,
+              "coverage_of_live_entries": 0.5905511811023622,
+              "entries": 75,
+              "flats": 4,
+              "losses": 44,
+              "net_cents": 369.99999999999994,
+              "net_dollars": 3.6999999999999993,
+              "roi_on_entry_notional": 0.019523005487547485,
+              "win_rate_ex_flats": 0.38028169014084506,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 7.835748792270532,
+              "cost_basis_dollars": 411.61,
+              "coverage_of_live_entries": 0.5461741424802111,
+              "entries": 207,
+              "flats": 0,
+              "losses": 110,
+              "net_cents": 1622.0,
+              "net_dollars": 16.22,
+              "roi_on_entry_notional": 0.0394062340565098,
+              "win_rate_ex_flats": 0.46859903381642515,
+              "wins": 97
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 9.013157894736842,
+              "cost_basis_dollars": 136.77,
+              "coverage_of_live_entries": 0.6031746031746031,
+              "entries": 76,
+              "flats": 5,
+              "losses": 35,
+              "net_cents": 685.0,
+              "net_dollars": 6.85,
+              "roi_on_entry_notional": 0.0500840827666886,
+              "win_rate_ex_flats": 0.5070422535211268,
+              "wins": 36
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.009036144578314,
+            "cost_basis_dollars": 685.08,
+            "coverage_of_live_entries": 0.5253164556962026,
+            "entries": 332,
+            "flats": 7,
+            "losses": 175,
+            "net_cents": 2659.0,
+            "net_dollars": 26.59,
+            "roi_on_entry_notional": 0.03881298534477725,
+            "win_rate_ex_flats": 0.46153846153846156,
+            "wins": 150
+          },
+          "param_tuple": [
+            3.0,
+            60.0,
+            0.55,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 3.6986301369863006,
+              "cost_basis_dollars": 186.4,
+              "coverage_of_live_entries": 0.5748031496062992,
+              "entries": 73,
+              "flats": 2,
+              "losses": 44,
+              "net_cents": 269.99999999999994,
+              "net_dollars": 2.6999999999999993,
+              "roi_on_entry_notional": 0.014484978540772528,
+              "win_rate_ex_flats": 0.38028169014084506,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.51336898395722,
+              "cost_basis_dollars": 371.25,
+              "coverage_of_live_entries": 0.49340369393139843,
+              "entries": 187,
+              "flats": 0,
+              "losses": 98,
+              "net_cents": 1592.0,
+              "net_dollars": 15.92,
+              "roi_on_entry_notional": 0.04288215488215488,
+              "win_rate_ex_flats": 0.47593582887700536,
+              "wins": 89
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.009036144578314,
+            "cost_basis_dollars": 685.08,
+            "coverage_of_live_entries": 0.5253164556962026,
+            "entries": 332,
+            "flats": 7,
+            "losses": 175,
+            "net_cents": 2659.0,
+            "net_dollars": 26.59,
+            "roi_on_entry_notional": 0.03881298534477725,
+            "win_rate_ex_flats": 0.46153846153846156,
+            "wins": 150
+          },
+          "param_tuple": [
+            3.0,
+            60.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 3.6986301369863006,
+              "cost_basis_dollars": 186.4,
+              "coverage_of_live_entries": 0.5748031496062992,
+              "entries": 73,
+              "flats": 2,
+              "losses": 44,
+              "net_cents": 269.99999999999994,
+              "net_dollars": 2.6999999999999993,
+              "roi_on_entry_notional": 0.014484978540772528,
+              "win_rate_ex_flats": 0.38028169014084506,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.51336898395722,
+              "cost_basis_dollars": 371.25,
+              "coverage_of_live_entries": 0.49340369393139843,
+              "entries": 187,
+              "flats": 0,
+              "losses": 98,
+              "net_cents": 1592.0,
+              "net_dollars": 15.92,
+              "roi_on_entry_notional": 0.04288215488215488,
+              "win_rate_ex_flats": 0.47593582887700536,
+              "wins": 89
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 7.1775956284153,
+            "cost_basis_dollars": 748.72,
+            "coverage_of_live_entries": 0.5791139240506329,
+            "entries": 366,
+            "flats": 9,
+            "losses": 192,
+            "net_cents": 2627.0,
+            "net_dollars": 26.27,
+            "roi_on_entry_notional": 0.03508654770808847,
+            "win_rate_ex_flats": 0.46218487394957986,
+            "wins": 165
+          },
+          "param_tuple": [
+            3.0,
+            60.0,
+            0.55,
+            1.25
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 2.9870129870129865,
+              "cost_basis_dollars": 192.16,
+              "coverage_of_live_entries": 0.6062992125984252,
+              "entries": 77,
+              "flats": 4,
+              "losses": 46,
+              "net_cents": 229.99999999999994,
+              "net_dollars": 2.2999999999999994,
+              "roi_on_entry_notional": 0.011969192339716899,
+              "win_rate_ex_flats": 0.3698630136986301,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.03755868544601,
+              "cost_basis_dollars": 419.79,
+              "coverage_of_live_entries": 0.5620052770448549,
+              "entries": 213,
+              "flats": 0,
+              "losses": 111,
+              "net_cents": 1712.0,
+              "net_dollars": 17.12,
+              "roi_on_entry_notional": 0.04078229590985969,
+              "win_rate_ex_flats": 0.4788732394366197,
+              "wins": 102
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 9.013157894736842,
+              "cost_basis_dollars": 136.77,
+              "coverage_of_live_entries": 0.6031746031746031,
+              "entries": 76,
+              "flats": 5,
+              "losses": 35,
+              "net_cents": 685.0,
+              "net_dollars": 6.85,
+              "roi_on_entry_notional": 0.0500840827666886,
+              "win_rate_ex_flats": 0.5070422535211268,
+              "wins": 36
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 7.1775956284153,
+            "cost_basis_dollars": 748.72,
+            "coverage_of_live_entries": 0.5791139240506329,
+            "entries": 366,
+            "flats": 9,
+            "losses": 192,
+            "net_cents": 2627.0,
+            "net_dollars": 26.27,
+            "roi_on_entry_notional": 0.03508654770808847,
+            "win_rate_ex_flats": 0.46218487394957986,
+            "wins": 165
+          },
+          "param_tuple": [
+            3.0,
+            60.0,
+            0.7,
+            1.25
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 2.9870129870129865,
+              "cost_basis_dollars": 192.16,
+              "coverage_of_live_entries": 0.6062992125984252,
+              "entries": 77,
+              "flats": 4,
+              "losses": 46,
+              "net_cents": 229.99999999999994,
+              "net_dollars": 2.2999999999999994,
+              "roi_on_entry_notional": 0.011969192339716899,
+              "win_rate_ex_flats": 0.3698630136986301,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.03755868544601,
+              "cost_basis_dollars": 419.79,
+              "coverage_of_live_entries": 0.5620052770448549,
+              "entries": 213,
+              "flats": 0,
+              "losses": 111,
+              "net_cents": 1712.0,
+              "net_dollars": 17.12,
+              "roi_on_entry_notional": 0.04078229590985969,
+              "win_rate_ex_flats": 0.4788732394366197,
+              "wins": 102
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 9.013157894736842,
+              "cost_basis_dollars": 136.77,
+              "coverage_of_live_entries": 0.6031746031746031,
+              "entries": 76,
+              "flats": 5,
+              "losses": 35,
+              "net_cents": 685.0,
+              "net_dollars": 6.85,
+              "roi_on_entry_notional": 0.0500840827666886,
+              "win_rate_ex_flats": 0.5070422535211268,
+              "wins": 36
+            }
+          }
+        }
+      ]
+    },
+    "conformal_consensus_winrate_gate": {
+      "current_cell": {
+        "all": {
+          "avg_cents_per_entry": 11.876404494382022,
+          "cost_basis_dollars": 175.82,
+          "coverage_of_live_entries": 0.14082278481012658,
+          "entries": 89,
+          "flats": 2,
+          "losses": 38,
+          "net_cents": 1057.0,
+          "net_dollars": 10.57,
+          "roi_on_entry_notional": 0.060118302809691736,
+          "win_rate_ex_flats": 0.5632183908045977,
+          "wins": 49
+        },
+        "param_tuple": [
+          0.12,
+          4.0
+        ],
+        "params": {
+          "max_probability_gap": 0.12,
+          "min_edge_cents": 4.0
+        },
+        "split_positive": true,
+        "splits": {
+          "holdout_last_20pct": {
+            "avg_cents_per_entry": 7.615384615384614,
+            "cost_basis_dollars": 62.34,
+            "coverage_of_live_entries": 0.2047244094488189,
+            "entries": 26,
+            "flats": 2,
+            "losses": 13,
+            "net_cents": 197.99999999999997,
+            "net_dollars": 1.9799999999999998,
+            "roi_on_entry_notional": 0.031761308950914335,
+            "win_rate_ex_flats": 0.4583333333333333,
+            "wins": 11
+          },
+          "train_first_60pct": {
+            "avg_cents_per_entry": 15.657894736842104,
+            "cost_basis_dollars": 72.09,
+            "coverage_of_live_entries": 0.10026385224274406,
+            "entries": 38,
+            "flats": 0,
+            "losses": 13,
+            "net_cents": 595.0,
+            "net_dollars": 5.95,
+            "roi_on_entry_notional": 0.08253571923983909,
+            "win_rate_ex_flats": 0.6578947368421053,
+            "wins": 25
+          },
+          "validation_next_20pct": {
+            "avg_cents_per_entry": 10.56,
+            "cost_basis_dollars": 41.39,
+            "coverage_of_live_entries": 0.1984126984126984,
+            "entries": 25,
+            "flats": 0,
+            "losses": 12,
+            "net_cents": 264.0,
+            "net_dollars": 2.64,
+            "roi_on_entry_notional": 0.06378352258999759,
+            "win_rate_ex_flats": 0.52,
+            "wins": 13
+          }
+        }
+      },
+      "current_net_percentile": 0.7931034482758621,
+      "eligible_cells_min_entries": 29,
+      "family": "consensus_probability_gap",
+      "grid_cells": 35,
+      "min_all_entries": 30,
+      "net_cents_p10": -56.00000000000006,
+      "net_cents_p50": 428.99999999999994,
+      "net_cents_p90": 1158.9999999999998,
+      "positive_cell_share": 0.8275862068965517,
+      "split_positive_cell_share": 0.3448275862068966,
+      "strategy_name": "conformal_consensus_winrate_gate",
+      "top_cells": [
+        {
+          "all": {
+            "avg_cents_per_entry": 7.0855614973262036,
+            "cost_basis_dollars": 390.98,
+            "coverage_of_live_entries": 0.2958860759493671,
+            "entries": 187,
+            "flats": 6,
+            "losses": 92,
+            "net_cents": 1325.0,
+            "net_dollars": 13.25,
+            "roi_on_entry_notional": 0.03388920149368254,
+            "win_rate_ex_flats": 0.49171270718232046,
+            "wins": 89
+          },
+          "param_tuple": [
+            0.2,
+            3.0
+          ],
+          "params": {
+            "max_probability_gap": 0.2,
+            "min_edge_cents": 3.0
+          },
+          "split_positive": false,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": -0.7037037037037045,
+              "cost_basis_dollars": 141.4,
+              "coverage_of_live_entries": 0.4251968503937008,
+              "entries": 54,
+              "flats": 4,
+              "losses": 32,
+              "net_cents": -38.00000000000004,
+              "net_dollars": -0.38000000000000045,
+              "roi_on_entry_notional": -0.0026874115983026906,
+              "win_rate_ex_flats": 0.36,
+              "wins": 18
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 12.065934065934066,
+              "cost_basis_dollars": 184.35,
+              "coverage_of_live_entries": 0.24010554089709762,
+              "entries": 91,
+              "flats": 0,
+              "losses": 38,
+              "net_cents": 1098.0,
+              "net_dollars": 10.98,
+              "roi_on_entry_notional": 0.059560618388934096,
+              "win_rate_ex_flats": 0.5824175824175825,
+              "wins": 53
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 6.309523809523809,
+              "cost_basis_dollars": 65.23,
+              "coverage_of_live_entries": 0.3333333333333333,
+              "entries": 42,
+              "flats": 2,
+              "losses": 22,
+              "net_cents": 265.0,
+              "net_dollars": 2.65,
+              "roi_on_entry_notional": 0.04062547907404568,
+              "win_rate_ex_flats": 0.45,
+              "wins": 18
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 10.75,
+            "cost_basis_dollars": 238.66,
+            "coverage_of_live_entries": 0.189873417721519,
+            "entries": 120,
+            "flats": 4,
+            "losses": 53,
+            "net_cents": 1290.0,
+            "net_dollars": 12.9,
+            "roi_on_entry_notional": 0.05405178915612168,
+            "win_rate_ex_flats": 0.5431034482758621,
+            "wins": 63
+          },
+          "param_tuple": [
+            0.12,
+            3.0
+          ],
+          "params": {
+            "max_probability_gap": 0.12,
+            "min_edge_cents": 3.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 0.9473684210526306,
+              "cost_basis_dollars": 91.6,
+              "coverage_of_live_entries": 0.2992125984251969,
+              "entries": 38,
+              "flats": 4,
+              "losses": 22,
+              "net_cents": 35.999999999999964,
+              "net_dollars": 0.35999999999999965,
+              "roi_on_entry_notional": 0.003930131004366809,
+              "win_rate_ex_flats": 0.35294117647058826,
+              "wins": 12
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 18.596153846153847,
+              "cost_basis_dollars": 100.05,
+              "coverage_of_live_entries": 0.13720316622691292,
+              "entries": 52,
+              "flats": 0,
+              "losses": 16,
+              "net_cents": 967.0,
+              "net_dollars": 9.67,
+              "roi_on_entry_notional": 0.09665167416291855,
+              "win_rate_ex_flats": 0.6923076923076923,
+              "wins": 36
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 9.566666666666666,
+              "cost_basis_dollars": 47.01,
+              "coverage_of_live_entries": 0.23809523809523808,
+              "entries": 30,
+              "flats": 0,
+              "losses": 15,
+              "net_cents": 287.0,
+              "net_dollars": 2.87,
+              "roi_on_entry_notional": 0.061050840246756014,
+              "win_rate_ex_flats": 0.5,
+              "wins": 15
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 11.617647058823529,
+            "cost_basis_dollars": 204.76,
+            "coverage_of_live_entries": 0.16139240506329114,
+            "entries": 102,
+            "flats": 4,
+            "losses": 47,
+            "net_cents": 1185.0,
+            "net_dollars": 11.85,
+            "roi_on_entry_notional": 0.0578726313733151,
+            "win_rate_ex_flats": 0.5204081632653061,
+            "wins": 51
+          },
+          "param_tuple": [
+            0.1,
+            3.0
+          ],
+          "params": {
+            "max_probability_gap": 0.1,
+            "min_edge_cents": 3.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 2.777777777777777,
+              "cost_basis_dollars": 85.0,
+              "coverage_of_live_entries": 0.28346456692913385,
+              "entries": 36,
+              "flats": 4,
+              "losses": 20,
+              "net_cents": 99.99999999999997,
+              "net_dollars": 0.9999999999999997,
+              "roi_on_entry_notional": 0.011764705882352938,
+              "win_rate_ex_flats": 0.375,
+              "wins": 12
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 19.634146341463413,
+              "cost_basis_dollars": 77.59,
+              "coverage_of_live_entries": 0.10817941952506596,
+              "entries": 41,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 805.0,
+              "net_dollars": 8.05,
+              "roi_on_entry_notional": 0.10375048330970486,
+              "win_rate_ex_flats": 0.6829268292682927,
+              "wins": 28
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.2,
+              "cost_basis_dollars": 42.17,
+              "coverage_of_live_entries": 0.1984126984126984,
+              "entries": 25,
+              "flats": 0,
+              "losses": 14,
+              "net_cents": 280.0,
+              "net_dollars": 2.8,
+              "roi_on_entry_notional": 0.06639791320844202,
+              "win_rate_ex_flats": 0.44,
+              "wins": 11
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 3.96917808219178,
+            "cost_basis_dollars": 614.6,
+            "coverage_of_live_entries": 0.4620253164556962,
+            "entries": 292,
+            "flats": 7,
+            "losses": 149,
+            "net_cents": 1158.9999999999998,
+            "net_dollars": 11.589999999999998,
+            "roi_on_entry_notional": 0.01885779368695086,
+            "win_rate_ex_flats": 0.47719298245614034,
+            "wins": 136
+          },
+          "param_tuple": [
+            0.3,
+            3.0
+          ],
+          "params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 3.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 0.8656716417910442,
+              "cost_basis_dollars": 176.0,
+              "coverage_of_live_entries": 0.5275590551181102,
+              "entries": 67,
+              "flats": 4,
+              "losses": 40,
+              "net_cents": 57.99999999999996,
+              "net_dollars": 0.5799999999999996,
+              "roi_on_entry_notional": 0.0032954545454545433,
+              "win_rate_ex_flats": 0.36507936507936506,
+              "wins": 23
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 5.4625,
+              "cost_basis_dollars": 319.39,
+              "coverage_of_live_entries": 0.42216358839050133,
+              "entries": 160,
+              "flats": 0,
+              "losses": 76,
+              "net_cents": 874.0,
+              "net_dollars": 8.74,
+              "roi_on_entry_notional": 0.027364663890541346,
+              "win_rate_ex_flats": 0.525,
+              "wins": 84
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 3.492307692307692,
+              "cost_basis_dollars": 119.21,
+              "coverage_of_live_entries": 0.5158730158730159,
+              "entries": 65,
+              "flats": 3,
+              "losses": 33,
+              "net_cents": 226.99999999999997,
+              "net_dollars": 2.2699999999999996,
+              "roi_on_entry_notional": 0.01904202667561446,
+              "win_rate_ex_flats": 0.46774193548387094,
+              "wins": 29
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.287769784172662,
+            "cost_basis_dollars": 279.54,
+            "coverage_of_live_entries": 0.2199367088607595,
+            "entries": 139,
+            "flats": 4,
+            "losses": 65,
+            "net_cents": 1152.0,
+            "net_dollars": 11.52,
+            "roi_on_entry_notional": 0.04121056020605279,
+            "win_rate_ex_flats": 0.5185185185185185,
+            "wins": 70
+          },
+          "param_tuple": [
+            0.15,
+            3.0
+          ],
+          "params": {
+            "max_probability_gap": 0.15,
+            "min_edge_cents": 3.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 0.9999999999999991,
+              "cost_basis_dollars": 102.54,
+              "coverage_of_live_entries": 0.33070866141732286,
+              "entries": 42,
+              "flats": 4,
+              "losses": 23,
+              "net_cents": 41.999999999999964,
+              "net_dollars": 0.41999999999999965,
+              "roi_on_entry_notional": 0.004095962551199529,
+              "win_rate_ex_flats": 0.39473684210526316,
+              "wins": 15
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 13.634920634920634,
+              "cost_basis_dollars": 120.51,
+              "coverage_of_live_entries": 0.1662269129287599,
+              "entries": 63,
+              "flats": 0,
+              "losses": 25,
+              "net_cents": 859.0,
+              "net_dollars": 8.59,
+              "roi_on_entry_notional": 0.07128039166874119,
+              "win_rate_ex_flats": 0.6031746031746031,
+              "wins": 38
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 7.382352941176471,
+              "cost_basis_dollars": 56.49,
+              "coverage_of_live_entries": 0.2698412698412698,
+              "entries": 34,
+              "flats": 0,
+              "losses": 17,
+              "net_cents": 251.0,
+              "net_dollars": 2.51,
+              "roi_on_entry_notional": 0.04443264294565409,
+              "win_rate_ex_flats": 0.5,
+              "wins": 17
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 7.623287671232877,
+            "cost_basis_dollars": 299.26,
+            "coverage_of_live_entries": 0.2310126582278481,
+            "entries": 146,
+            "flats": 4,
+            "losses": 72,
+            "net_cents": 1113.0,
+            "net_dollars": 11.13,
+            "roi_on_entry_notional": 0.037191739624406875,
+            "win_rate_ex_flats": 0.49295774647887325,
+            "wins": 70
+          },
+          "param_tuple": [
+            0.2,
+            4.0
+          ],
+          "params": {
+            "max_probability_gap": 0.2,
+            "min_edge_cents": 4.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.899999999999999,
+              "cost_basis_dollars": 105.54,
+              "coverage_of_live_entries": 0.31496062992125984,
+              "entries": 40,
+              "flats": 2,
+              "losses": 21,
+              "net_cents": 275.99999999999994,
+              "net_dollars": 2.7599999999999993,
+              "roi_on_entry_notional": 0.02615122228538942,
+              "win_rate_ex_flats": 0.4473684210526316,
+              "wins": 17
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 10.070422535211268,
+              "cost_basis_dollars": 140.75,
+              "coverage_of_live_entries": 0.18733509234828497,
+              "entries": 71,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 715.0,
+              "net_dollars": 7.15,
+              "roi_on_entry_notional": 0.05079928952042629,
+              "win_rate_ex_flats": 0.5492957746478874,
+              "wins": 39
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 3.4857142857142858,
+              "cost_basis_dollars": 52.97,
+              "coverage_of_live_entries": 0.2777777777777778,
+              "entries": 35,
+              "flats": 2,
+              "losses": 19,
+              "net_cents": 122.0,
+              "net_dollars": 1.22,
+              "roi_on_entry_notional": 0.02303190485180291,
+              "win_rate_ex_flats": 0.42424242424242425,
+              "wins": 14
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 11.876404494382022,
+            "cost_basis_dollars": 175.82,
+            "coverage_of_live_entries": 0.14082278481012658,
+            "entries": 89,
+            "flats": 2,
+            "losses": 38,
+            "net_cents": 1057.0,
+            "net_dollars": 10.57,
+            "roi_on_entry_notional": 0.060118302809691736,
+            "win_rate_ex_flats": 0.5632183908045977,
+            "wins": 49
+          },
+          "param_tuple": [
+            0.12,
+            4.0
+          ],
+          "params": {
+            "max_probability_gap": 0.12,
+            "min_edge_cents": 4.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 7.615384615384614,
+              "cost_basis_dollars": 62.34,
+              "coverage_of_live_entries": 0.2047244094488189,
+              "entries": 26,
+              "flats": 2,
+              "losses": 13,
+              "net_cents": 197.99999999999997,
+              "net_dollars": 1.9799999999999998,
+              "roi_on_entry_notional": 0.031761308950914335,
+              "win_rate_ex_flats": 0.4583333333333333,
+              "wins": 11
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 15.657894736842104,
+              "cost_basis_dollars": 72.09,
+              "coverage_of_live_entries": 0.10026385224274406,
+              "entries": 38,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 595.0,
+              "net_dollars": 5.95,
+              "roi_on_entry_notional": 0.08253571923983909,
+              "win_rate_ex_flats": 0.6578947368421053,
+              "wins": 25
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 10.56,
+              "cost_basis_dollars": 41.39,
+              "coverage_of_live_entries": 0.1984126984126984,
+              "entries": 25,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 264.0,
+              "net_dollars": 2.64,
+              "roi_on_entry_notional": 0.06378352258999759,
+              "win_rate_ex_flats": 0.52,
+              "wins": 13
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 12.355263157894736,
+            "cost_basis_dollars": 152.42,
+            "coverage_of_live_entries": 0.12025316455696203,
+            "entries": 76,
+            "flats": 2,
+            "losses": 35,
+            "net_cents": 939.0,
+            "net_dollars": 9.39,
+            "roi_on_entry_notional": 0.0616060884398373,
+            "win_rate_ex_flats": 0.527027027027027,
+            "wins": 39
+          },
+          "param_tuple": [
+            0.1,
+            4.0
+          ],
+          "params": {
+            "max_probability_gap": 0.1,
+            "min_edge_cents": 4.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 7.615384615384614,
+              "cost_basis_dollars": 62.34,
+              "coverage_of_live_entries": 0.2047244094488189,
+              "entries": 26,
+              "flats": 2,
+              "losses": 13,
+              "net_cents": 197.99999999999997,
+              "net_dollars": 1.9799999999999998,
+              "roi_on_entry_notional": 0.031761308950914335,
+              "win_rate_ex_flats": 0.4583333333333333,
+              "wins": 11
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 17.0,
+              "cost_basis_dollars": 52.75,
+              "coverage_of_live_entries": 0.07651715039577836,
+              "entries": 29,
+              "flats": 0,
+              "losses": 10,
+              "net_cents": 493.0,
+              "net_dollars": 4.93,
+              "roi_on_entry_notional": 0.09345971563981043,
+              "win_rate_ex_flats": 0.6551724137931034,
+              "wins": 19
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.80952380952381,
+              "cost_basis_dollars": 37.33,
+              "coverage_of_live_entries": 0.16666666666666666,
+              "entries": 21,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 248.0,
+              "net_dollars": 2.48,
+              "roi_on_entry_notional": 0.0664345030806322,
+              "win_rate_ex_flats": 0.42857142857142855,
+              "wins": 9
+            }
+          }
+        }
+      ]
+    },
+    "depth_decay_fillability_gate": {
+      "current_cell": {
+        "all": {
+          "avg_cents_per_entry": 15.75,
+          "cost_basis_dollars": 314.8,
+          "coverage_of_live_entries": 0.21518987341772153,
+          "entries": 136,
+          "flats": 0,
+          "losses": 79,
+          "net_cents": 2142.0,
+          "net_dollars": 21.42,
+          "roi_on_entry_notional": 0.06804320203303685,
+          "win_rate_ex_flats": 0.41911764705882354,
+          "wins": 57
+        },
+        "param_tuple": [
+          3.0,
+          750.0,
+          80.0,
+          600.0
+        ],
+        "params": {
+          "max_ask_cents": 80.0,
+          "max_book_age_ms": 750.0,
+          "min_depth_ratio": 3.0,
+          "min_seconds_to_close": 600.0
+        },
+        "split_positive": true,
+        "splits": {
+          "holdout_last_20pct": {
+            "avg_cents_per_entry": 17.166666666666668,
+            "cost_basis_dollars": 116.2,
+            "coverage_of_live_entries": 0.28346456692913385,
+            "entries": 36,
+            "flats": 0,
+            "losses": 22,
+            "net_cents": 618.0,
+            "net_dollars": 6.18,
+            "roi_on_entry_notional": 0.053184165232358,
+            "win_rate_ex_flats": 0.3888888888888889,
+            "wins": 14
+          },
+          "train_first_60pct": {
+            "avg_cents_per_entry": 14.077922077922079,
+            "cost_basis_dollars": 157.96,
+            "coverage_of_live_entries": 0.20316622691292877,
+            "entries": 77,
+            "flats": 0,
+            "losses": 44,
+            "net_cents": 1084.0,
+            "net_dollars": 10.84,
+            "roi_on_entry_notional": 0.0686249683464168,
+            "win_rate_ex_flats": 0.42857142857142855,
+            "wins": 33
+          },
+          "validation_next_20pct": {
+            "avg_cents_per_entry": 19.130434782608695,
+            "cost_basis_dollars": 40.64,
+            "coverage_of_live_entries": 0.18253968253968253,
+            "entries": 23,
+            "flats": 0,
+            "losses": 13,
+            "net_cents": 440.0,
+            "net_dollars": 4.4,
+            "roi_on_entry_notional": 0.10826771653543307,
+            "win_rate_ex_flats": 0.43478260869565216,
+            "wins": 10
+          }
+        }
+      },
+      "current_net_percentile": 0.9883333333333333,
+      "eligible_cells_min_entries": 600,
+      "family": "depth_decay_fillability",
+      "grid_cells": 600,
+      "min_all_entries": 30,
+      "net_cents_p10": 926.9999999999999,
+      "net_cents_p50": 1416.0,
+      "net_cents_p90": 1843.0,
+      "positive_cell_share": 1.0,
+      "split_positive_cell_share": 0.7966666666666666,
+      "strategy_name": "depth_decay_fillability_gate",
+      "top_cells": [
+        {
+          "all": {
+            "avg_cents_per_entry": 9.96,
+            "cost_basis_dollars": 521.93,
+            "coverage_of_live_entries": 0.3560126582278481,
+            "entries": 225,
+            "flats": 2,
+            "losses": 117,
+            "net_cents": 2241.0,
+            "net_dollars": 22.41,
+            "roi_on_entry_notional": 0.042936792290153854,
+            "win_rate_ex_flats": 0.47533632286995514,
+            "wins": 106
+          },
+          "param_tuple": [
+            8.0,
+            1000.0,
+            90.0,
+            600.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 8.0,
+            "min_seconds_to_close": 600.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 17.55,
+              "cost_basis_dollars": 130.6,
+              "coverage_of_live_entries": 0.31496062992125984,
+              "entries": 40,
+              "flats": 0,
+              "losses": 22,
+              "net_cents": 702.0,
+              "net_dollars": 7.02,
+              "roi_on_entry_notional": 0.053751914241960186,
+              "win_rate_ex_flats": 0.45,
+              "wins": 18
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 7.129496402877698,
+              "cost_basis_dollars": 299.37,
+              "coverage_of_live_entries": 0.36675461741424803,
+              "entries": 139,
+              "flats": 0,
+              "losses": 75,
+              "net_cents": 991.0,
+              "net_dollars": 9.91,
+              "roi_on_entry_notional": 0.03310284931689882,
+              "win_rate_ex_flats": 0.460431654676259,
+              "wins": 64
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.91304347826087,
+              "cost_basis_dollars": 91.96,
+              "coverage_of_live_entries": 0.36507936507936506,
+              "entries": 46,
+              "flats": 2,
+              "losses": 20,
+              "net_cents": 548.0,
+              "net_dollars": 5.48,
+              "roi_on_entry_notional": 0.05959112657677252,
+              "win_rate_ex_flats": 0.5454545454545454,
+              "wins": 24
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.71031746031746,
+            "cost_basis_dollars": 588.51,
+            "coverage_of_live_entries": 0.3987341772151899,
+            "entries": 252,
+            "flats": 2,
+            "losses": 136,
+            "net_cents": 2195.0,
+            "net_dollars": 21.95,
+            "roi_on_entry_notional": 0.03729758202919237,
+            "win_rate_ex_flats": 0.456,
+            "wins": 114
+          },
+          "param_tuple": [
+            3.0,
+            1000.0,
+            90.0,
+            600.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 11.36,
+              "cost_basis_dollars": 150.82,
+              "coverage_of_live_entries": 0.3937007874015748,
+              "entries": 50,
+              "flats": 0,
+              "losses": 31,
+              "net_cents": 568.0,
+              "net_dollars": 5.68,
+              "roi_on_entry_notional": 0.037660787693939796,
+              "win_rate_ex_flats": 0.38,
+              "wins": 19
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 6.916666666666667,
+              "cost_basis_dollars": 345.73,
+              "coverage_of_live_entries": 0.41160949868073876,
+              "entries": 156,
+              "flats": 0,
+              "losses": 85,
+              "net_cents": 1079.0,
+              "net_dollars": 10.79,
+              "roi_on_entry_notional": 0.031209325195962163,
+              "win_rate_ex_flats": 0.4551282051282051,
+              "wins": 71
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.91304347826087,
+              "cost_basis_dollars": 91.96,
+              "coverage_of_live_entries": 0.36507936507936506,
+              "entries": 46,
+              "flats": 2,
+              "losses": 20,
+              "net_cents": 548.0,
+              "net_dollars": 5.48,
+              "roi_on_entry_notional": 0.05959112657677252,
+              "win_rate_ex_flats": 0.5454545454545454,
+              "wins": 24
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 9.363247863247864,
+            "cost_basis_dollars": 539.97,
+            "coverage_of_live_entries": 0.370253164556962,
+            "entries": 234,
+            "flats": 2,
+            "losses": 125,
+            "net_cents": 2191.0,
+            "net_dollars": 21.91,
+            "roi_on_entry_notional": 0.04057632831453599,
+            "win_rate_ex_flats": 0.46120689655172414,
+            "wins": 107
+          },
+          "param_tuple": [
+            5.0,
+            1000.0,
+            90.0,
+            600.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 5.0,
+            "min_seconds_to_close": 600.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 16.142857142857142,
+              "cost_basis_dollars": 134.04,
+              "coverage_of_live_entries": 0.33070866141732286,
+              "entries": 42,
+              "flats": 0,
+              "losses": 24,
+              "net_cents": 678.0,
+              "net_dollars": 6.78,
+              "roi_on_entry_notional": 0.050581915846016116,
+              "win_rate_ex_flats": 0.42857142857142855,
+              "wins": 18
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 6.609589041095891,
+              "cost_basis_dollars": 313.97,
+              "coverage_of_live_entries": 0.38522427440633245,
+              "entries": 146,
+              "flats": 0,
+              "losses": 81,
+              "net_cents": 965.0,
+              "net_dollars": 9.65,
+              "roi_on_entry_notional": 0.030735420581584225,
+              "win_rate_ex_flats": 0.4452054794520548,
+              "wins": 65
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.91304347826087,
+              "cost_basis_dollars": 91.96,
+              "coverage_of_live_entries": 0.36507936507936506,
+              "entries": 46,
+              "flats": 2,
+              "losses": 20,
+              "net_cents": 548.0,
+              "net_dollars": 5.48,
+              "roi_on_entry_notional": 0.05959112657677252,
+              "win_rate_ex_flats": 0.5454545454545454,
+              "wins": 24
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 4.914027149321267,
+            "cost_basis_dollars": 896.31,
+            "coverage_of_live_entries": 0.6993670886075949,
+            "entries": 442,
+            "flats": 7,
+            "losses": 232,
+            "net_cents": 2172.0,
+            "net_dollars": 21.72,
+            "roi_on_entry_notional": 0.02423268735147438,
+            "win_rate_ex_flats": 0.4666666666666667,
+            "wins": 203
+          },
+          "param_tuple": [
+            3.0,
+            750.0,
+            90.0,
+            120.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 4.680412371134021,
+              "cost_basis_dollars": 241.12,
+              "coverage_of_live_entries": 0.7637795275590551,
+              "entries": 97,
+              "flats": 4,
+              "losses": 62,
+              "net_cents": 454.0,
+              "net_dollars": 4.54,
+              "roi_on_entry_notional": 0.01882879893828799,
+              "win_rate_ex_flats": 0.3333333333333333,
+              "wins": 31
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 5.053231939163498,
+              "cost_basis_dollars": 512.34,
+              "coverage_of_live_entries": 0.6939313984168866,
+              "entries": 263,
+              "flats": 0,
+              "losses": 126,
+              "net_cents": 1329.0,
+              "net_dollars": 13.29,
+              "roi_on_entry_notional": 0.025939805597845176,
+              "win_rate_ex_flats": 0.5209125475285171,
+              "wins": 137
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 4.7439024390243905,
+              "cost_basis_dollars": 142.85,
+              "coverage_of_live_entries": 0.6507936507936508,
+              "entries": 82,
+              "flats": 3,
+              "losses": 44,
+              "net_cents": 389.0,
+              "net_dollars": 3.89,
+              "roi_on_entry_notional": 0.027231361568078406,
+              "win_rate_ex_flats": 0.4430379746835443,
+              "wins": 35
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.547244094488189,
+            "cost_basis_dollars": 593.17,
+            "coverage_of_live_entries": 0.40189873417721517,
+            "entries": 254,
+            "flats": 2,
+            "losses": 138,
+            "net_cents": 2171.0,
+            "net_dollars": 21.71,
+            "roi_on_entry_notional": 0.03659996291113846,
+            "win_rate_ex_flats": 0.4523809523809524,
+            "wins": 114
+          },
+          "param_tuple": [
+            2.0,
+            1000.0,
+            90.0,
+            600.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 2.0,
+            "min_seconds_to_close": 600.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 11.36,
+              "cost_basis_dollars": 150.82,
+              "coverage_of_live_entries": 0.3937007874015748,
+              "entries": 50,
+              "flats": 0,
+              "losses": 31,
+              "net_cents": 568.0,
+              "net_dollars": 5.68,
+              "roi_on_entry_notional": 0.037660787693939796,
+              "win_rate_ex_flats": 0.38,
+              "wins": 19
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 6.677215189873418,
+              "cost_basis_dollars": 350.39,
+              "coverage_of_live_entries": 0.41688654353562005,
+              "entries": 158,
+              "flats": 0,
+              "losses": 87,
+              "net_cents": 1055.0,
+              "net_dollars": 10.55,
+              "roi_on_entry_notional": 0.030109306772453555,
+              "win_rate_ex_flats": 0.44936708860759494,
+              "wins": 71
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.91304347826087,
+              "cost_basis_dollars": 91.96,
+              "coverage_of_live_entries": 0.36507936507936506,
+              "entries": 46,
+              "flats": 2,
+              "losses": 20,
+              "net_cents": 548.0,
+              "net_dollars": 5.48,
+              "roi_on_entry_notional": 0.05959112657677252,
+              "win_rate_ex_flats": 0.5454545454545454,
+              "wins": 24
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 4.166344294003869,
+            "cost_basis_dollars": 1051.11,
+            "coverage_of_live_entries": 0.8180379746835443,
+            "entries": 517,
+            "flats": 9,
+            "losses": 264,
+            "net_cents": 2154.0,
+            "net_dollars": 21.54,
+            "roi_on_entry_notional": 0.020492622085224194,
+            "win_rate_ex_flats": 0.48031496062992124,
+            "wins": 244
+          },
+          "param_tuple": [
+            8.0,
+            1000.0,
+            90.0,
+            120.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 8.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.4646464646464645,
+              "cost_basis_dollars": 254.88,
+              "coverage_of_live_entries": 0.7795275590551181,
+              "entries": 99,
+              "flats": 4,
+              "losses": 56,
+              "net_cents": 640.0,
+              "net_dollars": 6.4,
+              "roi_on_entry_notional": 0.025109855618330196,
+              "win_rate_ex_flats": 0.4105263157894737,
+              "wins": 39
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 4.226229508196721,
+              "cost_basis_dollars": 595.17,
+              "coverage_of_live_entries": 0.8047493403693932,
+              "entries": 305,
+              "flats": 0,
+              "losses": 151,
+              "net_cents": 1289.0,
+              "net_dollars": 12.89,
+              "roi_on_entry_notional": 0.021657677638321826,
+              "win_rate_ex_flats": 0.5049180327868853,
+              "wins": 154
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 1.9911504424778759,
+              "cost_basis_dollars": 201.06,
+              "coverage_of_live_entries": 0.8968253968253969,
+              "entries": 113,
+              "flats": 5,
+              "losses": 57,
+              "net_cents": 224.99999999999997,
+              "net_dollars": 2.2499999999999996,
+              "roi_on_entry_notional": 0.01119068934646374,
+              "win_rate_ex_flats": 0.4722222222222222,
+              "wins": 51
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 11.446808510638299,
+            "cost_basis_dollars": 440.98,
+            "coverage_of_live_entries": 0.2974683544303797,
+            "entries": 188,
+            "flats": 0,
+            "losses": 105,
+            "net_cents": 2152.0,
+            "net_dollars": 21.52,
+            "roi_on_entry_notional": 0.04880039911107079,
+            "win_rate_ex_flats": 0.44148936170212766,
+            "wins": 83
+          },
+          "param_tuple": [
+            3.0,
+            750.0,
+            90.0,
+            600.0
+          ],
+          "params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 14.878048780487806,
+              "cost_basis_dollars": 126.52,
+              "coverage_of_live_entries": 0.3228346456692913,
+              "entries": 41,
+              "flats": 0,
+              "losses": 26,
+              "net_cents": 610.0,
+              "net_dollars": 6.1,
+              "roi_on_entry_notional": 0.048213721150806195,
+              "win_rate_ex_flats": 0.36585365853658536,
+              "wins": 15
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 7.965811965811966,
+              "cost_basis_dollars": 256.78,
+              "coverage_of_live_entries": 0.3087071240105541,
+              "entries": 117,
+              "flats": 0,
+              "losses": 64,
+              "net_cents": 932.0,
+              "net_dollars": 9.32,
+              "roi_on_entry_notional": 0.03629566165589221,
+              "win_rate_ex_flats": 0.452991452991453,
+              "wins": 53
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 20.333333333333332,
+              "cost_basis_dollars": 57.68,
+              "coverage_of_live_entries": 0.23809523809523808,
+              "entries": 30,
+              "flats": 0,
+              "losses": 15,
+              "net_cents": 610.0,
+              "net_dollars": 6.1,
+              "roi_on_entry_notional": 0.10575589459084604,
+              "win_rate_ex_flats": 0.5,
+              "wins": 15
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 15.75,
+            "cost_basis_dollars": 314.8,
+            "coverage_of_live_entries": 0.21518987341772153,
+            "entries": 136,
+            "flats": 0,
+            "losses": 79,
+            "net_cents": 2142.0,
+            "net_dollars": 21.42,
+            "roi_on_entry_notional": 0.06804320203303685,
+            "win_rate_ex_flats": 0.41911764705882354,
+            "wins": 57
+          },
+          "param_tuple": [
+            3.0,
+            750.0,
+            80.0,
+            600.0
+          ],
+          "params": {
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 17.166666666666668,
+              "cost_basis_dollars": 116.2,
+              "coverage_of_live_entries": 0.28346456692913385,
+              "entries": 36,
+              "flats": 0,
+              "losses": 22,
+              "net_cents": 618.0,
+              "net_dollars": 6.18,
+              "roi_on_entry_notional": 0.053184165232358,
+              "win_rate_ex_flats": 0.3888888888888889,
+              "wins": 14
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 14.077922077922079,
+              "cost_basis_dollars": 157.96,
+              "coverage_of_live_entries": 0.20316622691292877,
+              "entries": 77,
+              "flats": 0,
+              "losses": 44,
+              "net_cents": 1084.0,
+              "net_dollars": 10.84,
+              "roi_on_entry_notional": 0.0686249683464168,
+              "win_rate_ex_flats": 0.42857142857142855,
+              "wins": 33
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 19.130434782608695,
+              "cost_basis_dollars": 40.64,
+              "coverage_of_live_entries": 0.18253968253968253,
+              "entries": 23,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 440.0,
+              "net_dollars": 4.4,
+              "roi_on_entry_notional": 0.10826771653543307,
+              "win_rate_ex_flats": 0.43478260869565216,
+              "wins": 10
+            }
+          }
+        }
+      ]
+    },
+    "hybrid_fpt_depth_gate": {
+      "current_cell": {
+        "all": {
+          "avg_cents_per_entry": 9.723926380368098,
+          "cost_basis_dollars": 334.05,
+          "coverage_of_live_entries": 0.2579113924050633,
+          "entries": 163,
+          "flats": 1,
+          "losses": 85,
+          "net_cents": 1585.0,
+          "net_dollars": 15.85,
+          "roi_on_entry_notional": 0.04744798682831911,
+          "win_rate_ex_flats": 0.47530864197530864,
+          "wins": 77
+        },
+        "param_tuple": [
+          3.0,
+          8.0,
+          750.0,
+          83.0,
+          120.0,
+          0.85,
+          1.1
+        ],
+        "params": {
+          "max_abs_d_sigma": 1.1,
+          "max_ask_cents": 83.0,
+          "max_book_age_ms": 750.0,
+          "min_abs_d_sigma": 0.85,
+          "min_depth_ratio": 8.0,
+          "min_edge_cents": 3.0,
+          "min_seconds_to_close": 120.0
+        },
+        "split_positive": true,
+        "splits": {
+          "holdout_last_20pct": {
+            "avg_cents_per_entry": 4.478260869565216,
+            "cost_basis_dollars": 127.67999999999999,
+            "coverage_of_live_entries": 0.36220472440944884,
+            "entries": 46,
+            "flats": 0,
+            "losses": 28,
+            "net_cents": 205.99999999999994,
+            "net_dollars": 2.0599999999999996,
+            "roi_on_entry_notional": 0.01613408521303258,
+            "win_rate_ex_flats": 0.391304347826087,
+            "wins": 18
+          },
+          "train_first_60pct": {
+            "avg_cents_per_entry": 7.230769230769231,
+            "cost_basis_dollars": 140.52,
+            "coverage_of_live_entries": 0.20580474934036938,
+            "entries": 78,
+            "flats": 0,
+            "losses": 38,
+            "net_cents": 564.0,
+            "net_dollars": 5.64,
+            "roi_on_entry_notional": 0.040136635354397945,
+            "win_rate_ex_flats": 0.5128205128205128,
+            "wins": 40
+          },
+          "validation_next_20pct": {
+            "avg_cents_per_entry": 20.897435897435898,
+            "cost_basis_dollars": 65.85,
+            "coverage_of_live_entries": 0.30952380952380953,
+            "entries": 39,
+            "flats": 1,
+            "losses": 19,
+            "net_cents": 815.0,
+            "net_dollars": 8.15,
+            "roi_on_entry_notional": 0.1237661351556568,
+            "win_rate_ex_flats": 0.5,
+            "wins": 19
+          }
+        }
+      },
+      "current_net_percentile": 0.7819444444444444,
+      "eligible_cells_min_entries": 6480,
+      "family": "hybrid_fpt_depth",
+      "grid_cells": 6480,
+      "min_all_entries": 30,
+      "net_cents_p10": 272.99999999999994,
+      "net_cents_p50": 1091.0,
+      "net_cents_p90": 1855.0,
+      "positive_cell_share": 0.9648148148148148,
+      "split_positive_cell_share": 0.7182098765432099,
+      "strategy_name": "hybrid_fpt_depth_gate",
+      "top_cells": [
+        {
+          "all": {
+            "avg_cents_per_entry": 8.943217665615142,
+            "cost_basis_dollars": 661.62,
+            "coverage_of_live_entries": 0.5015822784810127,
+            "entries": 317,
+            "flats": 7,
+            "losses": 166,
+            "net_cents": 2835.0,
+            "net_dollars": 28.35,
+            "roi_on_entry_notional": 0.04284936972884738,
+            "win_rate_ex_flats": 0.4645161290322581,
+            "wins": 144
+          },
+          "param_tuple": [
+            3.0,
+            3.0,
+            1000.0,
+            85.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.115942028985506,
+              "cost_basis_dollars": 180.56,
+              "coverage_of_live_entries": 0.5433070866141733,
+              "entries": 69,
+              "flats": 2,
+              "losses": 40,
+              "net_cents": 421.99999999999994,
+              "net_dollars": 4.22,
+              "roi_on_entry_notional": 0.02337173238812583,
+              "win_rate_ex_flats": 0.40298507462686567,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 9.181818181818182,
+              "cost_basis_dollars": 353.63,
+              "coverage_of_live_entries": 0.46437994722955145,
+              "entries": 176,
+              "flats": 0,
+              "losses": 93,
+              "net_cents": 1616.0,
+              "net_dollars": 16.16,
+              "roi_on_entry_notional": 0.0456974804173854,
+              "win_rate_ex_flats": 0.4715909090909091,
+              "wins": 83
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 10.576779026217228,
+            "cost_basis_dollars": 547.8100000000001,
+            "coverage_of_live_entries": 0.4224683544303797,
+            "entries": 267,
+            "flats": 5,
+            "losses": 142,
+            "net_cents": 2824.0,
+            "net_dollars": 28.24,
+            "roi_on_entry_notional": 0.051550720140194586,
+            "win_rate_ex_flats": 0.4580152671755725,
+            "wins": 120
+          },
+          "param_tuple": [
+            2.0,
+            3.0,
+            750.0,
+            80.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.86153846153846,
+              "cost_basis_dollars": 174.56,
+              "coverage_of_live_entries": 0.5118110236220472,
+              "entries": 65,
+              "flats": 2,
+              "losses": 40,
+              "net_cents": 445.99999999999994,
+              "net_dollars": 4.459999999999999,
+              "roi_on_entry_notional": 0.02554995417048579,
+              "win_rate_ex_flats": 0.36507936507936506,
+              "wins": 23
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 13.429577464788732,
+              "cost_basis_dollars": 275.0,
+              "coverage_of_live_entries": 0.37467018469656993,
+              "entries": 142,
+              "flats": 0,
+              "losses": 68,
+              "net_cents": 1907.0,
+              "net_dollars": 19.07,
+              "roi_on_entry_notional": 0.06934545454545454,
+              "win_rate_ex_flats": 0.5211267605633803,
+              "wins": 74
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 7.85,
+              "cost_basis_dollars": 98.25,
+              "coverage_of_live_entries": 0.47619047619047616,
+              "entries": 60,
+              "flats": 3,
+              "losses": 34,
+              "net_cents": 471.0,
+              "net_dollars": 4.71,
+              "roi_on_entry_notional": 0.04793893129770992,
+              "win_rate_ex_flats": 0.40350877192982454,
+              "wins": 23
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 11.235772357723578,
+            "cost_basis_dollars": 514.63,
+            "coverage_of_live_entries": 0.38924050632911394,
+            "entries": 246,
+            "flats": 5,
+            "losses": 129,
+            "net_cents": 2764.0,
+            "net_dollars": 27.64,
+            "roi_on_entry_notional": 0.053708489594465926,
+            "win_rate_ex_flats": 0.46473029045643155,
+            "wins": 112
+          },
+          "param_tuple": [
+            3.0,
+            3.0,
+            750.0,
+            85.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 7.508196721311474,
+              "cost_basis_dollars": 168.76,
+              "coverage_of_live_entries": 0.48031496062992124,
+              "entries": 61,
+              "flats": 2,
+              "losses": 36,
+              "net_cents": 457.99999999999994,
+              "net_dollars": 4.579999999999999,
+              "roi_on_entry_notional": 0.027139132495852095,
+              "win_rate_ex_flats": 0.3898305084745763,
+              "wins": 23
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 11.174242424242424,
+              "cost_basis_dollars": 256.74,
+              "coverage_of_live_entries": 0.3482849604221636,
+              "entries": 132,
+              "flats": 0,
+              "losses": 67,
+              "net_cents": 1475.0,
+              "net_dollars": 14.75,
+              "roi_on_entry_notional": 0.057451117862428916,
+              "win_rate_ex_flats": 0.49242424242424243,
+              "wins": 65
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 15.679245283018869,
+              "cost_basis_dollars": 89.13,
+              "coverage_of_live_entries": 0.42063492063492064,
+              "entries": 53,
+              "flats": 3,
+              "losses": 26,
+              "net_cents": 831.0,
+              "net_dollars": 8.31,
+              "roi_on_entry_notional": 0.09323460114439584,
+              "win_rate_ex_flats": 0.48,
+              "wins": 24
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 11.204918032786885,
+            "cost_basis_dollars": 509.59,
+            "coverage_of_live_entries": 0.3860759493670886,
+            "entries": 244,
+            "flats": 5,
+            "losses": 128,
+            "net_cents": 2734.0,
+            "net_dollars": 27.34,
+            "roi_on_entry_notional": 0.053650974312682745,
+            "win_rate_ex_flats": 0.46443514644351463,
+            "wins": 111
+          },
+          "param_tuple": [
+            3.0,
+            3.0,
+            750.0,
+            83.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 83.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.5666666666666655,
+              "cost_basis_dollars": 165.4,
+              "coverage_of_live_entries": 0.47244094488188976,
+              "entries": 60,
+              "flats": 2,
+              "losses": 36,
+              "net_cents": 393.99999999999994,
+              "net_dollars": 3.9399999999999995,
+              "roi_on_entry_notional": 0.02382103990326481,
+              "win_rate_ex_flats": 0.3793103448275862,
+              "wins": 22
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 11.51908396946565,
+              "cost_basis_dollars": 255.06,
+              "coverage_of_live_entries": 0.34564643799472294,
+              "entries": 131,
+              "flats": 0,
+              "losses": 66,
+              "net_cents": 1509.0,
+              "net_dollars": 15.09,
+              "roi_on_entry_notional": 0.05916254998823806,
+              "win_rate_ex_flats": 0.4961832061068702,
+              "wins": 65
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 15.679245283018869,
+              "cost_basis_dollars": 89.13,
+              "coverage_of_live_entries": 0.42063492063492064,
+              "entries": 53,
+              "flats": 3,
+              "losses": 26,
+              "net_cents": 831.0,
+              "net_dollars": 8.31,
+              "roi_on_entry_notional": 0.09323460114439584,
+              "win_rate_ex_flats": 0.48,
+              "wins": 24
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 9.552447552447552,
+            "cost_basis_dollars": 594.52,
+            "coverage_of_live_entries": 0.4525316455696203,
+            "entries": 286,
+            "flats": 5,
+            "losses": 146,
+            "net_cents": 2732.0,
+            "net_dollars": 27.32,
+            "roi_on_entry_notional": 0.04595303774473525,
+            "win_rate_ex_flats": 0.4804270462633452,
+            "wins": 135
+          },
+          "param_tuple": [
+            3.0,
+            8.0,
+            1000.0,
+            85.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 8.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 9.344827586206897,
+              "cost_basis_dollars": 159.08,
+              "coverage_of_live_entries": 0.4566929133858268,
+              "entries": 58,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 542.0,
+              "net_dollars": 5.42,
+              "roi_on_entry_notional": 0.03407090771938647,
+              "win_rate_ex_flats": 0.4482758620689655,
+              "wins": 26
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 7.932098765432099,
+              "cost_basis_dollars": 318.81,
+              "coverage_of_live_entries": 0.42744063324538256,
+              "entries": 162,
+              "flats": 0,
+              "losses": 86,
+              "net_cents": 1285.0,
+              "net_dollars": 12.85,
+              "roi_on_entry_notional": 0.04030613845236975,
+              "win_rate_ex_flats": 0.4691358024691358,
+              "wins": 76
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 13.712121212121213,
+              "cost_basis_dollars": 116.63,
+              "coverage_of_live_entries": 0.5238095238095238,
+              "entries": 66,
+              "flats": 5,
+              "losses": 28,
+              "net_cents": 905.0,
+              "net_dollars": 9.05,
+              "roi_on_entry_notional": 0.07759581582783161,
+              "win_rate_ex_flats": 0.5409836065573771,
+              "wins": 33
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.843648208469055,
+            "cost_basis_dollars": 647.74,
+            "coverage_of_live_entries": 0.48575949367088606,
+            "entries": 307,
+            "flats": 7,
+            "losses": 161,
+            "net_cents": 2715.0,
+            "net_dollars": 27.15,
+            "roi_on_entry_notional": 0.041914965881372154,
+            "win_rate_ex_flats": 0.4633333333333333,
+            "wins": 139
+          },
+          "param_tuple": [
+            3.0,
+            3.0,
+            1000.0,
+            85.0,
+            120.0,
+            0.8,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.8,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.115942028985506,
+              "cost_basis_dollars": 180.56,
+              "coverage_of_live_entries": 0.5433070866141733,
+              "entries": 69,
+              "flats": 2,
+              "losses": 40,
+              "net_cents": 421.99999999999994,
+              "net_dollars": 4.22,
+              "roi_on_entry_notional": 0.02337173238812583,
+              "win_rate_ex_flats": 0.40298507462686567,
+              "wins": 27
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 9.012048192771084,
+              "cost_basis_dollars": 339.75,
+              "coverage_of_live_entries": 0.43799472295514513,
+              "entries": 166,
+              "flats": 0,
+              "losses": 88,
+              "net_cents": 1496.0,
+              "net_dollars": 14.96,
+              "roi_on_entry_notional": 0.044032376747608536,
+              "win_rate_ex_flats": 0.46987951807228917,
+              "wins": 78
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 8.601910828025478,
+            "cost_basis_dollars": 649.62,
+            "coverage_of_live_entries": 0.49683544303797467,
+            "entries": 314,
+            "flats": 7,
+            "losses": 165,
+            "net_cents": 2701.0,
+            "net_dollars": 27.01,
+            "roi_on_entry_notional": 0.04157815338197716,
+            "win_rate_ex_flats": 0.46254071661237783,
+            "wins": 142
+          },
+          "param_tuple": [
+            3.0,
+            3.0,
+            1000.0,
+            83.0,
+            120.0,
+            0.7,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 83.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 5.26470588235294,
+              "cost_basis_dollars": 177.2,
+              "coverage_of_live_entries": 0.5354330708661418,
+              "entries": 68,
+              "flats": 2,
+              "losses": 40,
+              "net_cents": 357.99999999999994,
+              "net_dollars": 3.5799999999999996,
+              "roi_on_entry_notional": 0.02020316027088036,
+              "win_rate_ex_flats": 0.3939393939393939,
+              "wins": 26
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 8.885057471264368,
+              "cost_basis_dollars": 344.99,
+              "coverage_of_live_entries": 0.45910290237467016,
+              "entries": 174,
+              "flats": 0,
+              "losses": 92,
+              "net_cents": 1546.0,
+              "net_dollars": 15.46,
+              "roi_on_entry_notional": 0.04481289312733702,
+              "win_rate_ex_flats": 0.47126436781609193,
+              "wins": 82
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          }
+        },
+        {
+          "all": {
+            "avg_cents_per_entry": 10.459143968871595,
+            "cost_basis_dollars": 532.05,
+            "coverage_of_live_entries": 0.40664556962025317,
+            "entries": 257,
+            "flats": 5,
+            "losses": 138,
+            "net_cents": 2688.0,
+            "net_dollars": 26.88,
+            "roi_on_entry_notional": 0.050521567521849456,
+            "win_rate_ex_flats": 0.4523809523809524,
+            "wins": 114
+          },
+          "param_tuple": [
+            2.0,
+            3.0,
+            750.0,
+            80.0,
+            120.0,
+            0.8,
+            1.1
+          ],
+          "params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.8,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "split_positive": true,
+          "splits": {
+            "holdout_last_20pct": {
+              "avg_cents_per_entry": 6.86153846153846,
+              "cost_basis_dollars": 174.56,
+              "coverage_of_live_entries": 0.5118110236220472,
+              "entries": 65,
+              "flats": 2,
+              "losses": 40,
+              "net_cents": 445.99999999999994,
+              "net_dollars": 4.459999999999999,
+              "roi_on_entry_notional": 0.02554995417048579,
+              "win_rate_ex_flats": 0.36507936507936506,
+              "wins": 23
+            },
+            "train_first_60pct": {
+              "avg_cents_per_entry": 13.416666666666666,
+              "cost_basis_dollars": 259.24,
+              "coverage_of_live_entries": 0.3482849604221636,
+              "entries": 132,
+              "flats": 0,
+              "losses": 64,
+              "net_cents": 1771.0,
+              "net_dollars": 17.71,
+              "roi_on_entry_notional": 0.06831507483413053,
+              "win_rate_ex_flats": 0.5151515151515151,
+              "wins": 68
+            },
+            "validation_next_20pct": {
+              "avg_cents_per_entry": 7.85,
+              "cost_basis_dollars": 98.25,
+              "coverage_of_live_entries": 0.47619047619047616,
+              "entries": 60,
+              "flats": 3,
+              "losses": 34,
+              "net_cents": 471.0,
+              "net_dollars": 4.71,
+              "roi_on_entry_notional": 0.04793893129770992,
+              "win_rate_ex_flats": 0.40350877192982454,
+              "wins": 23
+            }
+          }
+        }
+      ]
+    }
+  },
+  "purpose": "Research-only overfit stress validation for arXiv-inspired v28 replay gates.",
+  "random_seed": 20260507,
+  "strategy_validations": {
+    "brownian_fpt_sanity_gate": {
+      "all": {
+        "avg_cents_per_entry": 8.42153846153846,
+        "cost_basis_dollars": 675.94,
+        "coverage_of_live_entries": 0.5142405063291139,
+        "entries": 325,
+        "flats": 7,
+        "losses": 172,
+        "net_cents": 2737.0,
+        "net_dollars": 27.37,
+        "roi_on_entry_notional": 0.04049175962363523,
+        "win_rate_ex_flats": 0.4591194968553459,
+        "wins": 146
+      },
+      "bootstrap": {
+        "actual_entries": 325,
+        "actual_net_cents": 2737.0,
+        "avg_selected_entries": 324.735,
+        "delta_vs_live_cents_p05": -260.0,
+        "delta_vs_live_cents_p50": 1330.0000000000002,
+        "delta_vs_live_cents_p95": 3062.0,
+        "iterations": 2000,
+        "net_cents_p05": 972.9999999999999,
+        "net_cents_p50": 2709.0,
+        "net_cents_p95": 4508.0,
+        "prob_beats_same_sample_live": 0.9125,
+        "prob_net_positive": 0.9955
+      },
+      "placebo": {
+        "actual_net_cents": 2737.0,
+        "entries": 325,
+        "iterations": 5000,
+        "p_value_placebo_ge_actual": 0.0005998800239952009,
+        "placebo_mean_net_cents": 685.6328,
+        "placebo_net_cents_p05": -376.0000000000001,
+        "placebo_net_cents_p50": 693.9999999999999,
+        "placebo_net_cents_p95": 1756.0
+      },
+      "split_consistency": {
+        "all_market_count": 292,
+        "best_selected_markets": [
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070945-45",
+            "net_cents": 300.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY071145-45",
+            "net_cents": 227.99999999999997
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070645-45",
+            "net_cents": 216.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY052115-15",
+            "net_cents": 192.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070815-15",
+            "net_cents": 192.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY061715-15",
+            "net_cents": 152.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY010845-45",
+            "net_cents": 144.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY052200-00",
+            "net_cents": 144.0
+          }
+        ],
+        "chronological_5_slices": [
+          {
+            "delta_vs_slice_live_cents": -586.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 11.53968253968254,
+              "cost_basis_dollars": 234.03,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 55,
+              "net_cents": 1454.0,
+              "net_dollars": 14.54,
+              "roi_on_entry_notional": 0.06212878690766141,
+              "win_rate_ex_flats": 0.5634920634920635,
+              "wins": 71
+            },
+            "live_entries": 126,
+            "slice": 1,
+            "strategy": {
+              "avg_cents_per_entry": 11.89041095890411,
+              "cost_basis_dollars": 137.81,
+              "coverage_of_live_entries": 0.5793650793650794,
+              "entries": 73,
+              "flats": 0,
+              "losses": 41,
+              "net_cents": 868.0,
+              "net_dollars": 8.68,
+              "roi_on_entry_notional": 0.06298526957405123,
+              "win_rate_ex_flats": 0.4383561643835616,
+              "wins": 32
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": -36.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 3.2222222222222223,
+              "cost_basis_dollars": 229.2,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 65,
+              "net_cents": 406.0,
+              "net_dollars": 4.06,
+              "roi_on_entry_notional": 0.017713787085514833,
+              "win_rate_ex_flats": 0.48412698412698413,
+              "wins": 61
+            },
+            "live_entries": 126,
+            "slice": 2,
+            "strategy": {
+              "avg_cents_per_entry": 5.606060606060606,
+              "cost_basis_dollars": 122.26,
+              "coverage_of_live_entries": 0.5238095238095238,
+              "entries": 66,
+              "flats": 0,
+              "losses": 36,
+              "net_cents": 370.0,
+              "net_dollars": 3.7,
+              "roi_on_entry_notional": 0.030263373139211517,
+              "win_rate_ex_flats": 0.45454545454545453,
+              "wins": 30
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 1104.0,
+            "live_baseline": {
+              "avg_cents_per_entry": -6.393700787401575,
+              "cost_basis_dollars": 276.88,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 0,
+              "losses": 72,
+              "net_cents": -812.0,
+              "net_dollars": -8.12,
+              "roi_on_entry_notional": -0.029326784166425885,
+              "win_rate_ex_flats": 0.4330708661417323,
+              "wins": 55
+            },
+            "live_entries": 127,
+            "slice": 3,
+            "strategy": {
+              "avg_cents_per_entry": 6.790697674418604,
+              "cost_basis_dollars": 104.67999999999999,
+              "coverage_of_live_entries": 0.33858267716535434,
+              "entries": 43,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 292.0,
+              "net_dollars": 2.92,
+              "roi_on_entry_notional": 0.02789453572793275,
+              "win_rate_ex_flats": 0.5348837209302325,
+              "wins": 23
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 794.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 0.023809523809523628,
+              "cost_basis_dollars": 226.6,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 5,
+              "losses": 67,
+              "net_cents": 2.999999999999977,
+              "net_dollars": 0.02999999999999977,
+              "roi_on_entry_notional": 0.0001323918799646945,
+              "win_rate_ex_flats": 0.4462809917355372,
+              "wins": 54
+            },
+            "live_entries": 126,
+            "slice": 4,
+            "strategy": {
+              "avg_cents_per_entry": 11.069444444444445,
+              "cost_basis_dollars": 127.42999999999999,
+              "coverage_of_live_entries": 0.5714285714285714,
+              "entries": 72,
+              "flats": 5,
+              "losses": 33,
+              "net_cents": 797.0,
+              "net_dollars": 7.97,
+              "roi_on_entry_notional": 0.06254414188181746,
+              "win_rate_ex_flats": 0.5074626865671642,
+              "wins": 34
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 100.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 2.4409448818897634,
+              "cost_basis_dollars": 306.0,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 6,
+              "losses": 77,
+              "net_cents": 309.99999999999994,
+              "net_dollars": 3.0999999999999996,
+              "roi_on_entry_notional": 0.010130718954248365,
+              "win_rate_ex_flats": 0.36363636363636365,
+              "wins": 44
+            },
+            "live_entries": 127,
+            "slice": 5,
+            "strategy": {
+              "avg_cents_per_entry": 5.774647887323943,
+              "cost_basis_dollars": 183.76,
+              "coverage_of_live_entries": 0.5590551181102362,
+              "entries": 71,
+              "flats": 2,
+              "losses": 42,
+              "net_cents": 409.99999999999994,
+              "net_dollars": 4.1,
+              "roi_on_entry_notional": 0.022311710927296474,
+              "win_rate_ex_flats": 0.391304347826087,
+              "wins": 27
+            }
+          }
+        ],
+        "days_min20": [
+          {
+            "day": "2026-05-01",
+            "live_baseline": {
+              "avg_cents_per_entry": 8.043010752688172,
+              "cost_basis_dollars": 173.67,
+              "coverage_of_live_entries": 1.0,
+              "entries": 93,
+              "flats": 0,
+              "losses": 46,
+              "net_cents": 748.0,
+              "net_dollars": 7.48,
+              "roi_on_entry_notional": 0.04307019059135142,
+              "win_rate_ex_flats": 0.5053763440860215,
+              "wins": 47
+            },
+            "live_entries": 93,
+            "strategy": {
+              "avg_cents_per_entry": 9.448275862068966,
+              "cost_basis_dollars": 113.71,
+              "coverage_of_live_entries": 0.6236559139784946,
+              "entries": 58,
+              "flats": 0,
+              "losses": 34,
+              "net_cents": 548.0,
+              "net_dollars": 5.48,
+              "roi_on_entry_notional": 0.04819277108433736,
+              "win_rate_ex_flats": 0.41379310344827586,
+              "wins": 24
+            }
+          },
+          {
+            "day": "2026-05-02",
+            "live_baseline": {
+              "avg_cents_per_entry": 25.3,
+              "cost_basis_dollars": 38.7,
+              "coverage_of_live_entries": 1.0,
+              "entries": 20,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 506.0,
+              "net_dollars": 5.06,
+              "roi_on_entry_notional": 0.13074935400516793,
+              "win_rate_ex_flats": 0.75,
+              "wins": 15
+            },
+            "live_entries": 20,
+            "strategy": {
+              "avg_cents_per_entry": 16.2,
+              "cost_basis_dollars": 15.34,
+              "coverage_of_live_entries": 0.5,
+              "entries": 10,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 162.0,
+              "net_dollars": 1.62,
+              "roi_on_entry_notional": 0.10560625814863103,
+              "win_rate_ex_flats": 0.5,
+              "wins": 5
+            }
+          },
+          {
+            "day": "2026-05-03",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.999999999999999,
+              "cost_basis_dollars": 80.02,
+              "coverage_of_live_entries": 1.0,
+              "entries": 46,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 229.99999999999997,
+              "net_dollars": 2.3,
+              "roi_on_entry_notional": 0.028742814296425893,
+              "win_rate_ex_flats": 0.5434782608695652,
+              "wins": 25
+            },
+            "live_entries": 46,
+            "strategy": {
+              "avg_cents_per_entry": 15.037037037037036,
+              "cost_basis_dollars": 48.96,
+              "coverage_of_live_entries": 0.5869565217391305,
+              "entries": 27,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 406.0,
+              "net_dollars": 4.06,
+              "roi_on_entry_notional": 0.08292483660130719,
+              "win_rate_ex_flats": 0.5185185185185185,
+              "wins": 14
+            }
+          },
+          {
+            "day": "2026-05-04",
+            "live_baseline": {
+              "avg_cents_per_entry": 7.7368421052631575,
+              "cost_basis_dollars": 136.84,
+              "coverage_of_live_entries": 1.0,
+              "entries": 76,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 588.0,
+              "net_dollars": 5.88,
+              "roi_on_entry_notional": 0.04296989184448991,
+              "win_rate_ex_flats": 0.4868421052631579,
+              "wins": 37
+            },
+            "live_entries": 76,
+            "strategy": {
+              "avg_cents_per_entry": 12.514285714285714,
+              "cost_basis_dollars": 62.54,
+              "coverage_of_live_entries": 0.4605263157894737,
+              "entries": 35,
+              "flats": 0,
+              "losses": 18,
+              "net_cents": 438.0,
+              "net_dollars": 4.38,
+              "roi_on_entry_notional": 0.0700351774864087,
+              "win_rate_ex_flats": 0.4857142857142857,
+              "wins": 17
+            }
+          },
+          {
+            "day": "2026-05-05",
+            "live_baseline": {
+              "avg_cents_per_entry": 1.6615384615384616,
+              "cost_basis_dollars": 150.54,
+              "coverage_of_live_entries": 1.0,
+              "entries": 65,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 108.0,
+              "net_dollars": 1.08,
+              "roi_on_entry_notional": 0.007174172977281786,
+              "win_rate_ex_flats": 0.5076923076923077,
+              "wins": 33
+            },
+            "live_entries": 65,
+            "strategy": {
+              "avg_cents_per_entry": 0.583333333333333,
+              "cost_basis_dollars": 56.54,
+              "coverage_of_live_entries": 0.36923076923076925,
+              "entries": 24,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 13.999999999999993,
+              "net_dollars": 0.13999999999999993,
+              "roi_on_entry_notional": 0.002476123098691191,
+              "win_rate_ex_flats": 0.5,
+              "wins": 12
+            }
+          },
+          {
+            "day": "2026-05-06",
+            "live_baseline": {
+              "avg_cents_per_entry": -5.886877828054299,
+              "cost_basis_dollars": 417.34,
+              "coverage_of_live_entries": 1.0,
+              "entries": 221,
+              "flats": 5,
+              "losses": 127,
+              "net_cents": -1301.0,
+              "net_dollars": -13.01,
+              "roi_on_entry_notional": -0.031173623424545934,
+              "win_rate_ex_flats": 0.41203703703703703,
+              "wins": 89
+            },
+            "live_entries": 221,
+            "strategy": {
+              "avg_cents_per_entry": 6.1875,
+              "cost_basis_dollars": 216.99,
+              "coverage_of_live_entries": 0.5067873303167421,
+              "entries": 112,
+              "flats": 5,
+              "losses": 54,
+              "net_cents": 693.0,
+              "net_dollars": 6.93,
+              "roi_on_entry_notional": 0.031936955620074654,
+              "win_rate_ex_flats": 0.4953271028037383,
+              "wins": 53
+            }
+          },
+          {
+            "day": "2026-05-07",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.228571428571428,
+              "cost_basis_dollars": 266.06,
+              "coverage_of_live_entries": 1.0,
+              "entries": 105,
+              "flats": 6,
+              "losses": 64,
+              "net_cents": 443.99999999999994,
+              "net_dollars": 4.4399999999999995,
+              "roi_on_entry_notional": 0.016687965120649476,
+              "win_rate_ex_flats": 0.35353535353535354,
+              "wins": 35
+            },
+            "live_entries": 105,
+            "strategy": {
+              "avg_cents_per_entry": 8.596491228070175,
+              "cost_basis_dollars": 158.92,
+              "coverage_of_live_entries": 0.5428571428571428,
+              "entries": 57,
+              "flats": 2,
+              "losses": 34,
+              "net_cents": 489.99999999999994,
+              "net_dollars": 4.8999999999999995,
+              "roi_on_entry_notional": 0.030833123584193305,
+              "win_rate_ex_flats": 0.38181818181818183,
+              "wins": 21
+            }
+          }
+        ],
+        "negative_selected_markets": 79,
+        "positive_chrono_slices": 5,
+        "positive_days_min20": 7,
+        "positive_selected_markets": 97,
+        "selected_markets": 177,
+        "worst_selected_markets": [
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY060515-15",
+            "net_cents": -372.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050115-15",
+            "net_cents": -244.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY012215-15",
+            "net_cents": -168.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY062130-30",
+            "net_cents": -160.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY070030-30",
+            "net_cents": -152.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY041800-00",
+            "net_cents": -118.0
+          },
+          {
+            "entries": 3,
+            "market": "KXBTC15M-26MAY010815-15",
+            "net_cents": -112.0
+          },
+          {
+            "entries": 3,
+            "market": "KXBTC15M-26MAY031830-30",
+            "net_cents": -106.0
+          }
+        ]
+      }
+    },
+    "conformal_consensus_winrate_gate": {
+      "all": {
+        "avg_cents_per_entry": 11.876404494382022,
+        "cost_basis_dollars": 175.82,
+        "coverage_of_live_entries": 0.14082278481012658,
+        "entries": 89,
+        "flats": 2,
+        "losses": 38,
+        "net_cents": 1057.0,
+        "net_dollars": 10.57,
+        "roi_on_entry_notional": 0.060118302809691736,
+        "win_rate_ex_flats": 0.5632183908045977,
+        "wins": 49
+      },
+      "bootstrap": {
+        "actual_entries": 89,
+        "actual_net_cents": 1057.0,
+        "avg_selected_entries": 89.15,
+        "delta_vs_live_cents_p05": -2548.0,
+        "delta_vs_live_cents_p50": -385.9999999999998,
+        "delta_vs_live_cents_p95": 2096.0,
+        "iterations": 2000,
+        "net_cents_p05": 303.0,
+        "net_cents_p50": 1044.0,
+        "net_cents_p95": 1829.0,
+        "prob_beats_same_sample_live": 0.397,
+        "prob_net_positive": 0.9865
+      },
+      "placebo": {
+        "actual_net_cents": 1057.0,
+        "entries": 89,
+        "iterations": 5000,
+        "p_value_placebo_ge_actual": 0.02419516096780644,
+        "placebo_mean_net_cents": 192.055,
+        "placebo_net_cents_p05": -528.0000000000001,
+        "placebo_net_cents_p50": 195.00000000000003,
+        "placebo_net_cents_p95": 907.0
+      },
+      "split_consistency": {
+        "all_market_count": 292,
+        "best_selected_markets": [
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY071145-45",
+            "net_cents": 227.99999999999997
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY052200-00",
+            "net_cents": 144.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY031815-15",
+            "net_cents": 113.99999999999999
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY060345-45",
+            "net_cents": 104.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY060700-00",
+            "net_cents": 96.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY060830-30",
+            "net_cents": 84.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY061130-30",
+            "net_cents": 80.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY071315-15",
+            "net_cents": 68.0
+          }
+        ],
+        "chronological_5_slices": [
+          {
+            "delta_vs_slice_live_cents": -1197.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 11.53968253968254,
+              "cost_basis_dollars": 234.03,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 55,
+              "net_cents": 1454.0,
+              "net_dollars": 14.54,
+              "roi_on_entry_notional": 0.06212878690766141,
+              "win_rate_ex_flats": 0.5634920634920635,
+              "wins": 71
+            },
+            "live_entries": 126,
+            "slice": 1,
+            "strategy": {
+              "avg_cents_per_entry": 14.277777777777779,
+              "cost_basis_dollars": 26.69,
+              "coverage_of_live_entries": 0.14285714285714285,
+              "entries": 18,
+              "flats": 0,
+              "losses": 6,
+              "net_cents": 257.0,
+              "net_dollars": 2.57,
+              "roi_on_entry_notional": 0.09629074559760209,
+              "win_rate_ex_flats": 0.6666666666666666,
+              "wins": 12
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": -388.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 3.2222222222222223,
+              "cost_basis_dollars": 229.2,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 65,
+              "net_cents": 406.0,
+              "net_dollars": 4.06,
+              "roi_on_entry_notional": 0.017713787085514833,
+              "win_rate_ex_flats": 0.48412698412698413,
+              "wins": 61
+            },
+            "live_entries": 126,
+            "slice": 2,
+            "strategy": {
+              "avg_cents_per_entry": 1.499999999999999,
+              "cost_basis_dollars": 27.98,
+              "coverage_of_live_entries": 0.09523809523809523,
+              "entries": 12,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 17.999999999999986,
+              "net_dollars": 0.17999999999999985,
+              "roi_on_entry_notional": 0.006433166547533948,
+              "win_rate_ex_flats": 0.5833333333333334,
+              "wins": 7
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 1132.0,
+            "live_baseline": {
+              "avg_cents_per_entry": -6.393700787401575,
+              "cost_basis_dollars": 276.88,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 0,
+              "losses": 72,
+              "net_cents": -812.0,
+              "net_dollars": -8.12,
+              "roi_on_entry_notional": -0.029326784166425885,
+              "win_rate_ex_flats": 0.4330708661417323,
+              "wins": 55
+            },
+            "live_entries": 127,
+            "slice": 3,
+            "strategy": {
+              "avg_cents_per_entry": 40.0,
+              "cost_basis_dollars": 17.419999999999998,
+              "coverage_of_live_entries": 0.06299212598425197,
+              "entries": 8,
+              "flats": 0,
+              "losses": 2,
+              "net_cents": 320.0,
+              "net_dollars": 3.2,
+              "roi_on_entry_notional": 0.1836969001148106,
+              "win_rate_ex_flats": 0.75,
+              "wins": 6
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 261.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 0.023809523809523628,
+              "cost_basis_dollars": 226.6,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 5,
+              "losses": 67,
+              "net_cents": 2.999999999999977,
+              "net_dollars": 0.02999999999999977,
+              "roi_on_entry_notional": 0.0001323918799646945,
+              "win_rate_ex_flats": 0.4462809917355372,
+              "wins": 54
+            },
+            "live_entries": 126,
+            "slice": 4,
+            "strategy": {
+              "avg_cents_per_entry": 10.56,
+              "cost_basis_dollars": 41.39,
+              "coverage_of_live_entries": 0.1984126984126984,
+              "entries": 25,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 264.0,
+              "net_dollars": 2.64,
+              "roi_on_entry_notional": 0.06378352258999759,
+              "win_rate_ex_flats": 0.52,
+              "wins": 13
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": -111.99999999999997,
+            "live_baseline": {
+              "avg_cents_per_entry": 2.4409448818897634,
+              "cost_basis_dollars": 306.0,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 6,
+              "losses": 77,
+              "net_cents": 309.99999999999994,
+              "net_dollars": 3.0999999999999996,
+              "roi_on_entry_notional": 0.010130718954248365,
+              "win_rate_ex_flats": 0.36363636363636365,
+              "wins": 44
+            },
+            "live_entries": 127,
+            "slice": 5,
+            "strategy": {
+              "avg_cents_per_entry": 7.615384615384614,
+              "cost_basis_dollars": 62.34,
+              "coverage_of_live_entries": 0.2047244094488189,
+              "entries": 26,
+              "flats": 2,
+              "losses": 13,
+              "net_cents": 197.99999999999997,
+              "net_dollars": 1.9799999999999998,
+              "roi_on_entry_notional": 0.031761308950914335,
+              "win_rate_ex_flats": 0.4583333333333333,
+              "wins": 11
+            }
+          }
+        ],
+        "days_min20": [
+          {
+            "day": "2026-05-01",
+            "live_baseline": {
+              "avg_cents_per_entry": 8.043010752688172,
+              "cost_basis_dollars": 173.67,
+              "coverage_of_live_entries": 1.0,
+              "entries": 93,
+              "flats": 0,
+              "losses": 46,
+              "net_cents": 748.0,
+              "net_dollars": 7.48,
+              "roi_on_entry_notional": 0.04307019059135142,
+              "win_rate_ex_flats": 0.5053763440860215,
+              "wins": 47
+            },
+            "live_entries": 93,
+            "strategy": {
+              "avg_cents_per_entry": 17.0,
+              "cost_basis_dollars": 18.75,
+              "coverage_of_live_entries": 0.13978494623655913,
+              "entries": 13,
+              "flats": 0,
+              "losses": 3,
+              "net_cents": 221.0,
+              "net_dollars": 2.21,
+              "roi_on_entry_notional": 0.11786666666666666,
+              "win_rate_ex_flats": 0.7692307692307693,
+              "wins": 10
+            }
+          },
+          {
+            "day": "2026-05-02",
+            "live_baseline": {
+              "avg_cents_per_entry": 25.3,
+              "cost_basis_dollars": 38.7,
+              "coverage_of_live_entries": 1.0,
+              "entries": 20,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 506.0,
+              "net_dollars": 5.06,
+              "roi_on_entry_notional": 0.13074935400516793,
+              "win_rate_ex_flats": 0.75,
+              "wins": 15
+            },
+            "live_entries": 20,
+            "strategy": {
+              "avg_cents_per_entry": 13.0,
+              "cost_basis_dollars": 3.24,
+              "coverage_of_live_entries": 0.1,
+              "entries": 2,
+              "flats": 0,
+              "losses": 1,
+              "net_cents": 26.0,
+              "net_dollars": 0.26,
+              "roi_on_entry_notional": 0.08024691358024691,
+              "win_rate_ex_flats": 0.5,
+              "wins": 1
+            }
+          },
+          {
+            "day": "2026-05-03",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.999999999999999,
+              "cost_basis_dollars": 80.02,
+              "coverage_of_live_entries": 1.0,
+              "entries": 46,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 229.99999999999997,
+              "net_dollars": 2.3,
+              "roi_on_entry_notional": 0.028742814296425893,
+              "win_rate_ex_flats": 0.5434782608695652,
+              "wins": 25
+            },
+            "live_entries": 46,
+            "strategy": {
+              "avg_cents_per_entry": 42.4,
+              "cost_basis_dollars": 12.68,
+              "coverage_of_live_entries": 0.10869565217391304,
+              "entries": 5,
+              "flats": 0,
+              "losses": 1,
+              "net_cents": 212.0,
+              "net_dollars": 2.12,
+              "roi_on_entry_notional": 0.16719242902208203,
+              "win_rate_ex_flats": 0.8,
+              "wins": 4
+            }
+          },
+          {
+            "day": "2026-05-04",
+            "live_baseline": {
+              "avg_cents_per_entry": 7.7368421052631575,
+              "cost_basis_dollars": 136.84,
+              "coverage_of_live_entries": 1.0,
+              "entries": 76,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 588.0,
+              "net_dollars": 5.88,
+              "roi_on_entry_notional": 0.04296989184448991,
+              "win_rate_ex_flats": 0.4868421052631579,
+              "wins": 37
+            },
+            "live_entries": 76,
+            "strategy": {
+              "avg_cents_per_entry": 29.6,
+              "cost_basis_dollars": 7.88,
+              "coverage_of_live_entries": 0.06578947368421052,
+              "entries": 5,
+              "flats": 0,
+              "losses": 1,
+              "net_cents": 148.0,
+              "net_dollars": 1.48,
+              "roi_on_entry_notional": 0.18781725888324874,
+              "win_rate_ex_flats": 0.8,
+              "wins": 4
+            }
+          },
+          {
+            "day": "2026-05-05",
+            "live_baseline": {
+              "avg_cents_per_entry": 1.6615384615384616,
+              "cost_basis_dollars": 150.54,
+              "coverage_of_live_entries": 1.0,
+              "entries": 65,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 108.0,
+              "net_dollars": 1.08,
+              "roi_on_entry_notional": 0.007174172977281786,
+              "win_rate_ex_flats": 0.5076923076923077,
+              "wins": 33
+            },
+            "live_entries": 65,
+            "strategy": {
+              "avg_cents_per_entry": -14.285714285714286,
+              "cost_basis_dollars": 18.96,
+              "coverage_of_live_entries": 0.1076923076923077,
+              "entries": 7,
+              "flats": 0,
+              "losses": 3,
+              "net_cents": -100.0,
+              "net_dollars": -1.0,
+              "roi_on_entry_notional": -0.05274261603375527,
+              "win_rate_ex_flats": 0.5714285714285714,
+              "wins": 4
+            }
+          },
+          {
+            "day": "2026-05-06",
+            "live_baseline": {
+              "avg_cents_per_entry": -5.886877828054299,
+              "cost_basis_dollars": 417.34,
+              "coverage_of_live_entries": 1.0,
+              "entries": 221,
+              "flats": 5,
+              "losses": 127,
+              "net_cents": -1301.0,
+              "net_dollars": -13.01,
+              "roi_on_entry_notional": -0.031173623424545934,
+              "win_rate_ex_flats": 0.41203703703703703,
+              "wins": 89
+            },
+            "live_entries": 221,
+            "strategy": {
+              "avg_cents_per_entry": 10.727272727272727,
+              "cost_basis_dollars": 55.35,
+              "coverage_of_live_entries": 0.1493212669683258,
+              "entries": 33,
+              "flats": 0,
+              "losses": 16,
+              "net_cents": 354.0,
+              "net_dollars": 3.54,
+              "roi_on_entry_notional": 0.06395663956639566,
+              "win_rate_ex_flats": 0.5151515151515151,
+              "wins": 17
+            }
+          },
+          {
+            "day": "2026-05-07",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.228571428571428,
+              "cost_basis_dollars": 266.06,
+              "coverage_of_live_entries": 1.0,
+              "entries": 105,
+              "flats": 6,
+              "losses": 64,
+              "net_cents": 443.99999999999994,
+              "net_dollars": 4.4399999999999995,
+              "roi_on_entry_notional": 0.016687965120649476,
+              "win_rate_ex_flats": 0.35353535353535354,
+              "wins": 35
+            },
+            "live_entries": 105,
+            "strategy": {
+              "avg_cents_per_entry": 9.545454545454545,
+              "cost_basis_dollars": 56.02,
+              "coverage_of_live_entries": 0.20952380952380953,
+              "entries": 22,
+              "flats": 2,
+              "losses": 11,
+              "net_cents": 209.99999999999997,
+              "net_dollars": 2.0999999999999996,
+              "roi_on_entry_notional": 0.03748661192431274,
+              "win_rate_ex_flats": 0.45,
+              "wins": 9
+            }
+          }
+        ],
+        "negative_selected_markets": 23,
+        "positive_chrono_slices": 5,
+        "positive_days_min20": 6,
+        "positive_selected_markets": 36,
+        "selected_markets": 60,
+        "worst_selected_markets": [
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050115-15",
+            "net_cents": -244.0
+          },
+          {
+            "entries": 4,
+            "market": "KXBTC15M-26MAY071000-00",
+            "net_cents": -56.00000000000001
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050200-00",
+            "net_cents": -42.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY070545-45",
+            "net_cents": -40.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050015-15",
+            "net_cents": -32.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY010945-45",
+            "net_cents": -30.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY010330-30",
+            "net_cents": -24.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY062245-45",
+            "net_cents": -24.0
+          }
+        ]
+      }
+    },
+    "depth_decay_fillability_gate": {
+      "all": {
+        "avg_cents_per_entry": 15.75,
+        "cost_basis_dollars": 314.8,
+        "coverage_of_live_entries": 0.21518987341772153,
+        "entries": 136,
+        "flats": 0,
+        "losses": 79,
+        "net_cents": 2142.0,
+        "net_dollars": 21.42,
+        "roi_on_entry_notional": 0.06804320203303685,
+        "win_rate_ex_flats": 0.41911764705882354,
+        "wins": 57
+      },
+      "bootstrap": {
+        "actual_entries": 136,
+        "actual_net_cents": 2142.0,
+        "avg_selected_entries": 136.336,
+        "delta_vs_live_cents_p05": -1115.0,
+        "delta_vs_live_cents_p50": 775.9999999999999,
+        "delta_vs_live_cents_p95": 2882.0,
+        "iterations": 2000,
+        "net_cents_p05": 969.9999999999999,
+        "net_cents_p50": 2148.0,
+        "net_cents_p95": 3400.0,
+        "prob_beats_same_sample_live": 0.732,
+        "prob_net_positive": 0.9985
+      },
+      "placebo": {
+        "actual_net_cents": 2142.0,
+        "entries": 136,
+        "iterations": 5000,
+        "p_value_placebo_ge_actual": 0.0001999600079984003,
+        "placebo_mean_net_cents": 300.0926,
+        "placebo_net_cents_p05": -562.0,
+        "placebo_net_cents_p50": 297.0,
+        "placebo_net_cents_p95": 1172.0
+      },
+      "split_consistency": {
+        "all_market_count": 292,
+        "best_selected_markets": [
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070945-45",
+            "net_cents": 300.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY071145-45",
+            "net_cents": 227.99999999999997
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070645-45",
+            "net_cents": 216.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY052115-15",
+            "net_cents": 192.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070815-15",
+            "net_cents": 192.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY010845-45",
+            "net_cents": 144.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY052200-00",
+            "net_cents": 144.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY061915-15",
+            "net_cents": 144.0
+          }
+        ],
+        "chronological_5_slices": [
+          {
+            "delta_vs_slice_live_cents": -960.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 11.53968253968254,
+              "cost_basis_dollars": 234.03,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 55,
+              "net_cents": 1454.0,
+              "net_dollars": 14.54,
+              "roi_on_entry_notional": 0.06212878690766141,
+              "win_rate_ex_flats": 0.5634920634920635,
+              "wins": 71
+            },
+            "live_entries": 126,
+            "slice": 1,
+            "strategy": {
+              "avg_cents_per_entry": 14.114285714285714,
+              "cost_basis_dollars": 71.68,
+              "coverage_of_live_entries": 0.2777777777777778,
+              "entries": 35,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 494.0,
+              "net_dollars": 4.94,
+              "roi_on_entry_notional": 0.06891741071428571,
+              "win_rate_ex_flats": 0.42857142857142855,
+              "wins": 15
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": -198.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 3.2222222222222223,
+              "cost_basis_dollars": 229.2,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 65,
+              "net_cents": 406.0,
+              "net_dollars": 4.06,
+              "roi_on_entry_notional": 0.017713787085514833,
+              "win_rate_ex_flats": 0.48412698412698413,
+              "wins": 61
+            },
+            "live_entries": 126,
+            "slice": 2,
+            "strategy": {
+              "avg_cents_per_entry": 7.428571428571429,
+              "cost_basis_dollars": 50.16,
+              "coverage_of_live_entries": 0.2222222222222222,
+              "entries": 28,
+              "flats": 0,
+              "losses": 17,
+              "net_cents": 208.0,
+              "net_dollars": 2.08,
+              "roi_on_entry_notional": 0.04146730462519937,
+              "win_rate_ex_flats": 0.39285714285714285,
+              "wins": 11
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 1194.0,
+            "live_baseline": {
+              "avg_cents_per_entry": -6.393700787401575,
+              "cost_basis_dollars": 276.88,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 0,
+              "losses": 72,
+              "net_cents": -812.0,
+              "net_dollars": -8.12,
+              "roi_on_entry_notional": -0.029326784166425885,
+              "win_rate_ex_flats": 0.4330708661417323,
+              "wins": 55
+            },
+            "live_entries": 127,
+            "slice": 3,
+            "strategy": {
+              "avg_cents_per_entry": 27.285714285714285,
+              "cost_basis_dollars": 36.12,
+              "coverage_of_live_entries": 0.11023622047244094,
+              "entries": 14,
+              "flats": 0,
+              "losses": 7,
+              "net_cents": 382.0,
+              "net_dollars": 3.82,
+              "roi_on_entry_notional": 0.10575858250276855,
+              "win_rate_ex_flats": 0.5,
+              "wins": 7
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 437.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 0.023809523809523628,
+              "cost_basis_dollars": 226.6,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 5,
+              "losses": 67,
+              "net_cents": 2.999999999999977,
+              "net_dollars": 0.02999999999999977,
+              "roi_on_entry_notional": 0.0001323918799646945,
+              "win_rate_ex_flats": 0.4462809917355372,
+              "wins": 54
+            },
+            "live_entries": 126,
+            "slice": 4,
+            "strategy": {
+              "avg_cents_per_entry": 19.130434782608695,
+              "cost_basis_dollars": 40.64,
+              "coverage_of_live_entries": 0.18253968253968253,
+              "entries": 23,
+              "flats": 0,
+              "losses": 13,
+              "net_cents": 440.0,
+              "net_dollars": 4.4,
+              "roi_on_entry_notional": 0.10826771653543307,
+              "win_rate_ex_flats": 0.43478260869565216,
+              "wins": 10
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 308.00000000000006,
+            "live_baseline": {
+              "avg_cents_per_entry": 2.4409448818897634,
+              "cost_basis_dollars": 306.0,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 6,
+              "losses": 77,
+              "net_cents": 309.99999999999994,
+              "net_dollars": 3.0999999999999996,
+              "roi_on_entry_notional": 0.010130718954248365,
+              "win_rate_ex_flats": 0.36363636363636365,
+              "wins": 44
+            },
+            "live_entries": 127,
+            "slice": 5,
+            "strategy": {
+              "avg_cents_per_entry": 17.166666666666668,
+              "cost_basis_dollars": 116.2,
+              "coverage_of_live_entries": 0.28346456692913385,
+              "entries": 36,
+              "flats": 0,
+              "losses": 22,
+              "net_cents": 618.0,
+              "net_dollars": 6.18,
+              "roi_on_entry_notional": 0.053184165232358,
+              "win_rate_ex_flats": 0.3888888888888889,
+              "wins": 14
+            }
+          }
+        ],
+        "days_min20": [
+          {
+            "day": "2026-05-01",
+            "live_baseline": {
+              "avg_cents_per_entry": 8.043010752688172,
+              "cost_basis_dollars": 173.67,
+              "coverage_of_live_entries": 1.0,
+              "entries": 93,
+              "flats": 0,
+              "losses": 46,
+              "net_cents": 748.0,
+              "net_dollars": 7.48,
+              "roi_on_entry_notional": 0.04307019059135142,
+              "win_rate_ex_flats": 0.5053763440860215,
+              "wins": 47
+            },
+            "live_entries": 93,
+            "strategy": {
+              "avg_cents_per_entry": 11.851851851851851,
+              "cost_basis_dollars": 56.28,
+              "coverage_of_live_entries": 0.2903225806451613,
+              "entries": 27,
+              "flats": 0,
+              "losses": 18,
+              "net_cents": 320.0,
+              "net_dollars": 3.2,
+              "roi_on_entry_notional": 0.05685856432125089,
+              "win_rate_ex_flats": 0.3333333333333333,
+              "wins": 9
+            }
+          },
+          {
+            "day": "2026-05-02",
+            "live_baseline": {
+              "avg_cents_per_entry": 25.3,
+              "cost_basis_dollars": 38.7,
+              "coverage_of_live_entries": 1.0,
+              "entries": 20,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 506.0,
+              "net_dollars": 5.06,
+              "roi_on_entry_notional": 0.13074935400516793,
+              "win_rate_ex_flats": 0.75,
+              "wins": 15
+            },
+            "live_entries": 20,
+            "strategy": {
+              "avg_cents_per_entry": 30.0,
+              "cost_basis_dollars": 4.84,
+              "coverage_of_live_entries": 0.1,
+              "entries": 2,
+              "flats": 0,
+              "losses": 0,
+              "net_cents": 60.0,
+              "net_dollars": 0.6,
+              "roi_on_entry_notional": 0.12396694214876033,
+              "win_rate_ex_flats": 1.0,
+              "wins": 2
+            }
+          },
+          {
+            "day": "2026-05-03",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.999999999999999,
+              "cost_basis_dollars": 80.02,
+              "coverage_of_live_entries": 1.0,
+              "entries": 46,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 229.99999999999997,
+              "net_dollars": 2.3,
+              "roi_on_entry_notional": 0.028742814296425893,
+              "win_rate_ex_flats": 0.5434782608695652,
+              "wins": 25
+            },
+            "live_entries": 46,
+            "strategy": {
+              "avg_cents_per_entry": 25.77777777777778,
+              "cost_basis_dollars": 16.54,
+              "coverage_of_live_entries": 0.1956521739130435,
+              "entries": 9,
+              "flats": 0,
+              "losses": 4,
+              "net_cents": 232.0,
+              "net_dollars": 2.32,
+              "roi_on_entry_notional": 0.14026602176541716,
+              "win_rate_ex_flats": 0.5555555555555556,
+              "wins": 5
+            }
+          },
+          {
+            "day": "2026-05-04",
+            "live_baseline": {
+              "avg_cents_per_entry": 7.7368421052631575,
+              "cost_basis_dollars": 136.84,
+              "coverage_of_live_entries": 1.0,
+              "entries": 76,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 588.0,
+              "net_dollars": 5.88,
+              "roi_on_entry_notional": 0.04296989184448991,
+              "win_rate_ex_flats": 0.4868421052631579,
+              "wins": 37
+            },
+            "live_entries": 76,
+            "strategy": {
+              "avg_cents_per_entry": 12.11111111111111,
+              "cost_basis_dollars": 30.88,
+              "coverage_of_live_entries": 0.23684210526315788,
+              "entries": 18,
+              "flats": 0,
+              "losses": 10,
+              "net_cents": 218.0,
+              "net_dollars": 2.18,
+              "roi_on_entry_notional": 0.0705958549222798,
+              "win_rate_ex_flats": 0.4444444444444444,
+              "wins": 8
+            }
+          },
+          {
+            "day": "2026-05-05",
+            "live_baseline": {
+              "avg_cents_per_entry": 1.6615384615384616,
+              "cost_basis_dollars": 150.54,
+              "coverage_of_live_entries": 1.0,
+              "entries": 65,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 108.0,
+              "net_dollars": 1.08,
+              "roi_on_entry_notional": 0.007174172977281786,
+              "win_rate_ex_flats": 0.5076923076923077,
+              "wins": 33
+            },
+            "live_entries": 65,
+            "strategy": {
+              "avg_cents_per_entry": 22.2,
+              "cost_basis_dollars": 29.68,
+              "coverage_of_live_entries": 0.15384615384615385,
+              "entries": 10,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 222.0,
+              "net_dollars": 2.22,
+              "roi_on_entry_notional": 0.07479784366576821,
+              "win_rate_ex_flats": 0.5,
+              "wins": 5
+            }
+          },
+          {
+            "day": "2026-05-06",
+            "live_baseline": {
+              "avg_cents_per_entry": -5.886877828054299,
+              "cost_basis_dollars": 417.34,
+              "coverage_of_live_entries": 1.0,
+              "entries": 221,
+              "flats": 5,
+              "losses": 127,
+              "net_cents": -1301.0,
+              "net_dollars": -13.01,
+              "roi_on_entry_notional": -0.031173623424545934,
+              "win_rate_ex_flats": 0.41203703703703703,
+              "wins": 89
+            },
+            "live_entries": 221,
+            "strategy": {
+              "avg_cents_per_entry": 13.055555555555555,
+              "cost_basis_dollars": 63.4,
+              "coverage_of_live_entries": 0.16289592760180996,
+              "entries": 36,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 470.0,
+              "net_dollars": 4.7,
+              "roi_on_entry_notional": 0.07413249211356468,
+              "win_rate_ex_flats": 0.4444444444444444,
+              "wins": 16
+            }
+          },
+          {
+            "day": "2026-05-07",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.228571428571428,
+              "cost_basis_dollars": 266.06,
+              "coverage_of_live_entries": 1.0,
+              "entries": 105,
+              "flats": 6,
+              "losses": 64,
+              "net_cents": 443.99999999999994,
+              "net_dollars": 4.4399999999999995,
+              "roi_on_entry_notional": 0.016687965120649476,
+              "win_rate_ex_flats": 0.35353535353535354,
+              "wins": 35
+            },
+            "live_entries": 105,
+            "strategy": {
+              "avg_cents_per_entry": 20.6,
+              "cost_basis_dollars": 107.03999999999999,
+              "coverage_of_live_entries": 0.2857142857142857,
+              "entries": 30,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 618.0,
+              "net_dollars": 6.18,
+              "roi_on_entry_notional": 0.05773542600896861,
+              "win_rate_ex_flats": 0.3333333333333333,
+              "wins": 10
+            }
+          }
+        ],
+        "negative_selected_markets": 46,
+        "positive_chrono_slices": 5,
+        "positive_days_min20": 7,
+        "positive_selected_markets": 46,
+        "selected_markets": 93,
+        "worst_selected_markets": [
+          {
+            "entries": 4,
+            "market": "KXBTC15M-26MAY071000-00",
+            "net_cents": -148.0
+          },
+          {
+            "entries": 3,
+            "market": "KXBTC15M-26MAY060100-00",
+            "net_cents": -146.0
+          },
+          {
+            "entries": 4,
+            "market": "KXBTC15M-26MAY070730-30",
+            "net_cents": -92.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY010815-15",
+            "net_cents": -84.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050630-30",
+            "net_cents": -76.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY010945-45",
+            "net_cents": -60.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY070930-30",
+            "net_cents": -56.00000000000001
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY051015-15",
+            "net_cents": -52.0
+          }
+        ]
+      }
+    },
+    "hybrid_fpt_depth_gate": {
+      "all": {
+        "avg_cents_per_entry": 9.723926380368098,
+        "cost_basis_dollars": 334.05,
+        "coverage_of_live_entries": 0.2579113924050633,
+        "entries": 163,
+        "flats": 1,
+        "losses": 85,
+        "net_cents": 1585.0,
+        "net_dollars": 15.85,
+        "roi_on_entry_notional": 0.04744798682831911,
+        "win_rate_ex_flats": 0.47530864197530864,
+        "wins": 77
+      },
+      "bootstrap": {
+        "actual_entries": 163,
+        "actual_net_cents": 1585.0,
+        "avg_selected_entries": 162.9205,
+        "delta_vs_live_cents_p05": -1795.0,
+        "delta_vs_live_cents_p50": 259.0000000000002,
+        "delta_vs_live_cents_p95": 2451.0,
+        "iterations": 2000,
+        "net_cents_p05": 399.9999999999999,
+        "net_cents_p50": 1586.0,
+        "net_cents_p95": 2838.0,
+        "prob_beats_same_sample_live": 0.5755,
+        "prob_net_positive": 0.9885
+      },
+      "placebo": {
+        "actual_net_cents": 1585.0,
+        "entries": 163,
+        "iterations": 5000,
+        "p_value_placebo_ge_actual": 0.01279744051189762,
+        "placebo_mean_net_cents": 354.2268,
+        "placebo_net_cents_p05": -594.0,
+        "placebo_net_cents_p50": 359.99999999999994,
+        "placebo_net_cents_p95": 1262.0
+      },
+      "split_consistency": {
+        "all_market_count": 292,
+        "best_selected_markets": [
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070945-45",
+            "net_cents": 300.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY071145-45",
+            "net_cents": 227.99999999999997
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY070815-15",
+            "net_cents": 192.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY061715-15",
+            "net_cents": 152.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY052200-00",
+            "net_cents": 144.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY061915-15",
+            "net_cents": 144.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY060345-45",
+            "net_cents": 104.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY062115-15",
+            "net_cents": 104.0
+          }
+        ],
+        "chronological_5_slices": [
+          {
+            "delta_vs_slice_live_cents": -1212.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 11.53968253968254,
+              "cost_basis_dollars": 234.03,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 55,
+              "net_cents": 1454.0,
+              "net_dollars": 14.54,
+              "roi_on_entry_notional": 0.06212878690766141,
+              "win_rate_ex_flats": 0.5634920634920635,
+              "wins": 71
+            },
+            "live_entries": 126,
+            "slice": 1,
+            "strategy": {
+              "avg_cents_per_entry": 10.083333333333334,
+              "cost_basis_dollars": 38.3,
+              "coverage_of_live_entries": 0.19047619047619047,
+              "entries": 24,
+              "flats": 0,
+              "losses": 12,
+              "net_cents": 242.0,
+              "net_dollars": 2.42,
+              "roi_on_entry_notional": 0.06318537859007833,
+              "win_rate_ex_flats": 0.5,
+              "wins": 12
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": -512.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 3.2222222222222223,
+              "cost_basis_dollars": 229.2,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 0,
+              "losses": 65,
+              "net_cents": 406.0,
+              "net_dollars": 4.06,
+              "roi_on_entry_notional": 0.017713787085514833,
+              "win_rate_ex_flats": 0.48412698412698413,
+              "wins": 61
+            },
+            "live_entries": 126,
+            "slice": 2,
+            "strategy": {
+              "avg_cents_per_entry": -3.533333333333333,
+              "cost_basis_dollars": 52.06,
+              "coverage_of_live_entries": 0.23809523809523808,
+              "entries": 30,
+              "flats": 0,
+              "losses": 17,
+              "net_cents": -106.0,
+              "net_dollars": -1.06,
+              "roi_on_entry_notional": -0.020361121782558587,
+              "win_rate_ex_flats": 0.43333333333333335,
+              "wins": 13
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 1240.0,
+            "live_baseline": {
+              "avg_cents_per_entry": -6.393700787401575,
+              "cost_basis_dollars": 276.88,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 0,
+              "losses": 72,
+              "net_cents": -812.0,
+              "net_dollars": -8.12,
+              "roi_on_entry_notional": -0.029326784166425885,
+              "win_rate_ex_flats": 0.4330708661417323,
+              "wins": 55
+            },
+            "live_entries": 127,
+            "slice": 3,
+            "strategy": {
+              "avg_cents_per_entry": 17.833333333333332,
+              "cost_basis_dollars": 50.160000000000004,
+              "coverage_of_live_entries": 0.1889763779527559,
+              "entries": 24,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": 428.0,
+              "net_dollars": 4.28,
+              "roi_on_entry_notional": 0.08532695374800638,
+              "win_rate_ex_flats": 0.625,
+              "wins": 15
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": 812.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 0.023809523809523628,
+              "cost_basis_dollars": 226.6,
+              "coverage_of_live_entries": 1.0,
+              "entries": 126,
+              "flats": 5,
+              "losses": 67,
+              "net_cents": 2.999999999999977,
+              "net_dollars": 0.02999999999999977,
+              "roi_on_entry_notional": 0.0001323918799646945,
+              "win_rate_ex_flats": 0.4462809917355372,
+              "wins": 54
+            },
+            "live_entries": 126,
+            "slice": 4,
+            "strategy": {
+              "avg_cents_per_entry": 20.897435897435898,
+              "cost_basis_dollars": 65.85,
+              "coverage_of_live_entries": 0.30952380952380953,
+              "entries": 39,
+              "flats": 1,
+              "losses": 19,
+              "net_cents": 815.0,
+              "net_dollars": 8.15,
+              "roi_on_entry_notional": 0.1237661351556568,
+              "win_rate_ex_flats": 0.5,
+              "wins": 19
+            }
+          },
+          {
+            "delta_vs_slice_live_cents": -104.0,
+            "live_baseline": {
+              "avg_cents_per_entry": 2.4409448818897634,
+              "cost_basis_dollars": 306.0,
+              "coverage_of_live_entries": 1.0,
+              "entries": 127,
+              "flats": 6,
+              "losses": 77,
+              "net_cents": 309.99999999999994,
+              "net_dollars": 3.0999999999999996,
+              "roi_on_entry_notional": 0.010130718954248365,
+              "win_rate_ex_flats": 0.36363636363636365,
+              "wins": 44
+            },
+            "live_entries": 127,
+            "slice": 5,
+            "strategy": {
+              "avg_cents_per_entry": 4.478260869565216,
+              "cost_basis_dollars": 127.67999999999999,
+              "coverage_of_live_entries": 0.36220472440944884,
+              "entries": 46,
+              "flats": 0,
+              "losses": 28,
+              "net_cents": 205.99999999999994,
+              "net_dollars": 2.0599999999999996,
+              "roi_on_entry_notional": 0.01613408521303258,
+              "win_rate_ex_flats": 0.391304347826087,
+              "wins": 18
+            }
+          }
+        ],
+        "days_min20": [
+          {
+            "day": "2026-05-01",
+            "live_baseline": {
+              "avg_cents_per_entry": 8.043010752688172,
+              "cost_basis_dollars": 173.67,
+              "coverage_of_live_entries": 1.0,
+              "entries": 93,
+              "flats": 0,
+              "losses": 46,
+              "net_cents": 748.0,
+              "net_dollars": 7.48,
+              "roi_on_entry_notional": 0.04307019059135142,
+              "win_rate_ex_flats": 0.5053763440860215,
+              "wins": 47
+            },
+            "live_entries": 93,
+            "strategy": {
+              "avg_cents_per_entry": 2.9411764705882355,
+              "cost_basis_dollars": 27.36,
+              "coverage_of_live_entries": 0.1827956989247312,
+              "entries": 17,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": 50.0,
+              "net_dollars": 0.5,
+              "roi_on_entry_notional": 0.01827485380116959,
+              "win_rate_ex_flats": 0.47058823529411764,
+              "wins": 8
+            }
+          },
+          {
+            "day": "2026-05-02",
+            "live_baseline": {
+              "avg_cents_per_entry": 25.3,
+              "cost_basis_dollars": 38.7,
+              "coverage_of_live_entries": 1.0,
+              "entries": 20,
+              "flats": 0,
+              "losses": 5,
+              "net_cents": 506.0,
+              "net_dollars": 5.06,
+              "roi_on_entry_notional": 0.13074935400516793,
+              "win_rate_ex_flats": 0.75,
+              "wins": 15
+            },
+            "live_entries": 20,
+            "strategy": {
+              "avg_cents_per_entry": 23.6,
+              "cost_basis_dollars": 6.24,
+              "coverage_of_live_entries": 0.25,
+              "entries": 5,
+              "flats": 0,
+              "losses": 2,
+              "net_cents": 118.0,
+              "net_dollars": 1.18,
+              "roi_on_entry_notional": 0.1891025641025641,
+              "win_rate_ex_flats": 0.6,
+              "wins": 3
+            }
+          },
+          {
+            "day": "2026-05-03",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.999999999999999,
+              "cost_basis_dollars": 80.02,
+              "coverage_of_live_entries": 1.0,
+              "entries": 46,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 229.99999999999997,
+              "net_dollars": 2.3,
+              "roi_on_entry_notional": 0.028742814296425893,
+              "win_rate_ex_flats": 0.5434782608695652,
+              "wins": 25
+            },
+            "live_entries": 46,
+            "strategy": {
+              "avg_cents_per_entry": 15.6,
+              "cost_basis_dollars": 17.9,
+              "coverage_of_live_entries": 0.21739130434782608,
+              "entries": 10,
+              "flats": 0,
+              "losses": 6,
+              "net_cents": 156.0,
+              "net_dollars": 1.56,
+              "roi_on_entry_notional": 0.08715083798882682,
+              "win_rate_ex_flats": 0.4,
+              "wins": 4
+            }
+          },
+          {
+            "day": "2026-05-04",
+            "live_baseline": {
+              "avg_cents_per_entry": 7.7368421052631575,
+              "cost_basis_dollars": 136.84,
+              "coverage_of_live_entries": 1.0,
+              "entries": 76,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 588.0,
+              "net_dollars": 5.88,
+              "roi_on_entry_notional": 0.04296989184448991,
+              "win_rate_ex_flats": 0.4868421052631579,
+              "wins": 37
+            },
+            "live_entries": 76,
+            "strategy": {
+              "avg_cents_per_entry": 7.052631578947368,
+              "cost_basis_dollars": 33.26,
+              "coverage_of_live_entries": 0.25,
+              "entries": 19,
+              "flats": 0,
+              "losses": 9,
+              "net_cents": 134.0,
+              "net_dollars": 1.34,
+              "roi_on_entry_notional": 0.04028863499699339,
+              "win_rate_ex_flats": 0.5263157894736842,
+              "wins": 10
+            }
+          },
+          {
+            "day": "2026-05-05",
+            "live_baseline": {
+              "avg_cents_per_entry": 1.6615384615384616,
+              "cost_basis_dollars": 150.54,
+              "coverage_of_live_entries": 1.0,
+              "entries": 65,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 108.0,
+              "net_dollars": 1.08,
+              "roi_on_entry_notional": 0.007174172977281786,
+              "win_rate_ex_flats": 0.5076923076923077,
+              "wins": 33
+            },
+            "live_entries": 65,
+            "strategy": {
+              "avg_cents_per_entry": -12.363636363636363,
+              "cost_basis_dollars": 22.96,
+              "coverage_of_live_entries": 0.16923076923076924,
+              "entries": 11,
+              "flats": 0,
+              "losses": 6,
+              "net_cents": -136.0,
+              "net_dollars": -1.36,
+              "roi_on_entry_notional": -0.059233449477351915,
+              "win_rate_ex_flats": 0.45454545454545453,
+              "wins": 5
+            }
+          },
+          {
+            "day": "2026-05-06",
+            "live_baseline": {
+              "avg_cents_per_entry": -5.886877828054299,
+              "cost_basis_dollars": 417.34,
+              "coverage_of_live_entries": 1.0,
+              "entries": 221,
+              "flats": 5,
+              "losses": 127,
+              "net_cents": -1301.0,
+              "net_dollars": -13.01,
+              "roi_on_entry_notional": -0.031173623424545934,
+              "win_rate_ex_flats": 0.41203703703703703,
+              "wins": 89
+            },
+            "live_entries": 221,
+            "strategy": {
+              "avg_cents_per_entry": 15.43939393939394,
+              "cost_basis_dollars": 118.85,
+              "coverage_of_live_entries": 0.2986425339366516,
+              "entries": 66,
+              "flats": 1,
+              "losses": 30,
+              "net_cents": 1019.0,
+              "net_dollars": 10.19,
+              "roi_on_entry_notional": 0.08573832562053008,
+              "win_rate_ex_flats": 0.5384615384615384,
+              "wins": 35
+            }
+          },
+          {
+            "day": "2026-05-07",
+            "live_baseline": {
+              "avg_cents_per_entry": 4.228571428571428,
+              "cost_basis_dollars": 266.06,
+              "coverage_of_live_entries": 1.0,
+              "entries": 105,
+              "flats": 6,
+              "losses": 64,
+              "net_cents": 443.99999999999994,
+              "net_dollars": 4.4399999999999995,
+              "roi_on_entry_notional": 0.016687965120649476,
+              "win_rate_ex_flats": 0.35353535353535354,
+              "wins": 35
+            },
+            "live_entries": 105,
+            "strategy": {
+              "avg_cents_per_entry": 7.235294117647057,
+              "cost_basis_dollars": 105.92,
+              "coverage_of_live_entries": 0.3238095238095238,
+              "entries": 34,
+              "flats": 0,
+              "losses": 22,
+              "net_cents": 245.99999999999994,
+              "net_dollars": 2.4599999999999995,
+              "roi_on_entry_notional": 0.0232250755287009,
+              "win_rate_ex_flats": 0.35294117647058826,
+              "wins": 12
+            }
+          }
+        ],
+        "negative_selected_markets": 50,
+        "positive_chrono_slices": 4,
+        "positive_days_min20": 6,
+        "positive_selected_markets": 49,
+        "selected_markets": 99,
+        "worst_selected_markets": [
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050115-15",
+            "net_cents": -244.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY070030-30",
+            "net_cents": -152.0
+          },
+          {
+            "entries": 4,
+            "market": "KXBTC15M-26MAY070730-30",
+            "net_cents": -92.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY041800-00",
+            "net_cents": -88.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY010945-45",
+            "net_cents": -86.0
+          },
+          {
+            "entries": 1,
+            "market": "KXBTC15M-26MAY050630-30",
+            "net_cents": -76.0
+          },
+          {
+            "entries": 2,
+            "market": "KXBTC15M-26MAY062315-15",
+            "net_cents": -64.0
+          },
+          {
+            "entries": 4,
+            "market": "KXBTC15M-26MAY062345-45",
+            "net_cents": -64.0
+          }
+        ]
+      }
+    }
+  },
+  "walk_forward_lockout": {
+    "brownian_fpt_sanity_gate": {
+      "combined_eval": {
+        "avg_cents_per_entry": -0.38263665594855334,
+        "cost_basis_dollars": 663.22,
+        "coverage_of_live_entries": 0.8184210526315789,
+        "entries": 311,
+        "flats": 9,
+        "losses": 174,
+        "net_cents": -119.00000000000009,
+        "net_dollars": -1.1900000000000008,
+        "roi_on_entry_notional": -0.0017942764090347106,
+        "win_rate_ex_flats": 0.423841059602649,
+        "wins": 128
+      },
+      "combined_live_eval": {
+        "avg_cents_per_entry": -1.3131578947368423,
+        "cost_basis_dollars": 809.48,
+        "coverage_of_live_entries": 1.0,
+        "entries": 380,
+        "flats": 11,
+        "losses": 216,
+        "net_cents": -499.00000000000006,
+        "net_dollars": -4.99,
+        "roi_on_entry_notional": -0.006164451252656026,
+        "win_rate_ex_flats": 0.4146341463414634,
+        "wins": 153
+      },
+      "family": "brownian_fpt_sanity",
+      "folds": [
+        {
+          "eval": {
+            "avg_cents_per_entry": -4.1,
+            "cost_basis_dollars": 264.98,
+            "coverage_of_live_entries": 0.9448818897637795,
+            "entries": 120,
+            "flats": 0,
+            "losses": 67,
+            "net_cents": -492.0,
+            "net_dollars": -4.92,
+            "roi_on_entry_notional": -0.018567439052003924,
+            "win_rate_ex_flats": 0.44166666666666665,
+            "wins": 53
+          },
+          "eval_entries": 127,
+          "fold": 1,
+          "live_eval": {
+            "avg_cents_per_entry": -6.393700787401575,
+            "cost_basis_dollars": 276.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 0,
+            "losses": 72,
+            "net_cents": -812.0,
+            "net_dollars": -8.12,
+            "roi_on_entry_notional": -0.029326784166425885,
+            "win_rate_ex_flats": 0.4330708661417323,
+            "wins": 55
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY050200-00",
+            "KXBTC15M-26MAY050345-45",
+            "KXBTC15M-26MAY050400-00",
+            "KXBTC15M-26MAY050530-30",
+            "KXBTC15M-26MAY050630-30"
+          ],
+          "selected_params": {
+            "max_abs_d_sigma": 1.5,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 60.0
+          },
+          "train": {
+            "avg_cents_per_entry": 7.975,
+            "cost_basis_dollars": 435.91,
+            "coverage_of_live_entries": 0.97165991902834,
+            "entries": 240,
+            "flats": 0,
+            "losses": 115,
+            "net_cents": 1914.0,
+            "net_dollars": 19.14,
+            "roi_on_entry_notional": 0.043908146176963134,
+            "win_rate_ex_flats": 0.5208333333333334,
+            "wins": 125
+          },
+          "train_entries": 247
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": 1.2543859649122804,
+            "cost_basis_dollars": 206.08,
+            "coverage_of_live_entries": 0.9047619047619048,
+            "entries": 114,
+            "flats": 5,
+            "losses": 61,
+            "net_cents": 142.99999999999997,
+            "net_dollars": 1.4299999999999997,
+            "roi_on_entry_notional": 0.006939052795031054,
+            "win_rate_ex_flats": 0.44036697247706424,
+            "wins": 48
+          },
+          "eval_entries": 126,
+          "fold": 2,
+          "live_eval": {
+            "avg_cents_per_entry": 0.023809523809523628,
+            "cost_basis_dollars": 226.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 126,
+            "flats": 5,
+            "losses": 67,
+            "net_cents": 2.999999999999977,
+            "net_dollars": 0.02999999999999977,
+            "roi_on_entry_notional": 0.0001323918799646945,
+            "win_rate_ex_flats": 0.4462809917355372,
+            "wins": 54
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY060515-15",
+            "KXBTC15M-26MAY060545-45",
+            "KXBTC15M-26MAY060600-00",
+            "KXBTC15M-26MAY060630-30",
+            "KXBTC15M-26MAY060645-45"
+          ],
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 60.0
+          },
+          "train": {
+            "avg_cents_per_entry": 6.627692307692308,
+            "cost_basis_dollars": 627.45,
+            "coverage_of_live_entries": 0.8953168044077136,
+            "entries": 325,
+            "flats": 0,
+            "losses": 163,
+            "net_cents": 2154.0,
+            "net_dollars": 21.54,
+            "roi_on_entry_notional": 0.03432942863973225,
+            "win_rate_ex_flats": 0.49846153846153846,
+            "wins": 162
+          },
+          "train_entries": 363
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": 2.9870129870129865,
+            "cost_basis_dollars": 192.16,
+            "coverage_of_live_entries": 0.6062992125984252,
+            "entries": 77,
+            "flats": 4,
+            "losses": 46,
+            "net_cents": 229.99999999999994,
+            "net_dollars": 2.2999999999999994,
+            "roi_on_entry_notional": 0.011969192339716899,
+            "win_rate_ex_flats": 0.3698630136986301,
+            "wins": 27
+          },
+          "eval_entries": 127,
+          "fold": 3,
+          "live_eval": {
+            "avg_cents_per_entry": 2.4409448818897634,
+            "cost_basis_dollars": 306.0,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 6,
+            "losses": 77,
+            "net_cents": 309.99999999999994,
+            "net_dollars": 3.0999999999999996,
+            "roi_on_entry_notional": 0.010130718954248365,
+            "win_rate_ex_flats": 0.36363636363636365,
+            "wins": 44
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY062115-15",
+            "KXBTC15M-26MAY062130-30",
+            "KXBTC15M-26MAY062200-00",
+            "KXBTC15M-26MAY062215-15",
+            "KXBTC15M-26MAY062230-30"
+          ],
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.55,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "train": {
+            "avg_cents_per_entry": 9.073260073260073,
+            "cost_basis_dollars": 517.5,
+            "coverage_of_live_entries": 0.5605749486652978,
+            "entries": 273,
+            "flats": 5,
+            "losses": 137,
+            "net_cents": 2477.0,
+            "net_dollars": 24.77,
+            "roi_on_entry_notional": 0.04786473429951691,
+            "win_rate_ex_flats": 0.48880597014925375,
+            "wins": 131
+          },
+          "train_entries": 487
+        }
+      ],
+      "strategy_name": "brownian_fpt_sanity_gate"
+    },
+    "conformal_consensus_winrate_gate": {
+      "combined_eval": {
+        "avg_cents_per_entry": -1.2274509803921574,
+        "cost_basis_dollars": 557.4,
+        "coverage_of_live_entries": 0.6710526315789473,
+        "entries": 255,
+        "flats": 7,
+        "losses": 137,
+        "net_cents": -313.0000000000001,
+        "net_dollars": -3.1300000000000012,
+        "roi_on_entry_notional": -0.005615357014711162,
+        "win_rate_ex_flats": 0.4475806451612903,
+        "wins": 111
+      },
+      "combined_live_eval": {
+        "avg_cents_per_entry": -1.3131578947368423,
+        "cost_basis_dollars": 809.48,
+        "coverage_of_live_entries": 1.0,
+        "entries": 380,
+        "flats": 11,
+        "losses": 216,
+        "net_cents": -499.00000000000006,
+        "net_dollars": -4.99,
+        "roi_on_entry_notional": -0.006164451252656026,
+        "win_rate_ex_flats": 0.4146341463414634,
+        "wins": 153
+      },
+      "family": "consensus_probability_gap",
+      "folds": [
+        {
+          "eval": {
+            "avg_cents_per_entry": -3.9183673469387754,
+            "cost_basis_dollars": 226.44,
+            "coverage_of_live_entries": 0.7716535433070866,
+            "entries": 98,
+            "flats": 0,
+            "losses": 52,
+            "net_cents": -384.0,
+            "net_dollars": -3.84,
+            "roi_on_entry_notional": -0.01695813460519343,
+            "win_rate_ex_flats": 0.46938775510204084,
+            "wins": 46
+          },
+          "eval_entries": 127,
+          "fold": 1,
+          "live_eval": {
+            "avg_cents_per_entry": -6.393700787401575,
+            "cost_basis_dollars": 276.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 0,
+            "losses": 72,
+            "net_cents": -812.0,
+            "net_dollars": -8.12,
+            "roi_on_entry_notional": -0.029326784166425885,
+            "win_rate_ex_flats": 0.4330708661417323,
+            "wins": 55
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY050200-00",
+            "KXBTC15M-26MAY050345-45",
+            "KXBTC15M-26MAY050400-00",
+            "KXBTC15M-26MAY050530-30",
+            "KXBTC15M-26MAY050630-30"
+          ],
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 2.0
+          },
+          "train": {
+            "avg_cents_per_entry": 7.218390804597701,
+            "cost_basis_dollars": 310.37,
+            "coverage_of_live_entries": 0.7044534412955465,
+            "entries": 174,
+            "flats": 0,
+            "losses": 75,
+            "net_cents": 1256.0,
+            "net_dollars": 12.56,
+            "roi_on_entry_notional": 0.04046782872055933,
+            "win_rate_ex_flats": 0.5689655172413793,
+            "wins": 99
+          },
+          "train_entries": 247
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": 1.0582524271844655,
+            "cost_basis_dollars": 189.56,
+            "coverage_of_live_entries": 0.8174603174603174,
+            "entries": 103,
+            "flats": 3,
+            "losses": 53,
+            "net_cents": 108.99999999999996,
+            "net_dollars": 1.0899999999999996,
+            "roi_on_entry_notional": 0.005750158261236545,
+            "win_rate_ex_flats": 0.47,
+            "wins": 47
+          },
+          "eval_entries": 126,
+          "fold": 2,
+          "live_eval": {
+            "avg_cents_per_entry": 0.023809523809523628,
+            "cost_basis_dollars": 226.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 126,
+            "flats": 5,
+            "losses": 67,
+            "net_cents": 2.999999999999977,
+            "net_dollars": 0.02999999999999977,
+            "roi_on_entry_notional": 0.0001323918799646945,
+            "win_rate_ex_flats": 0.4462809917355372,
+            "wins": 54
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY060515-15",
+            "KXBTC15M-26MAY060545-45",
+            "KXBTC15M-26MAY060600-00",
+            "KXBTC15M-26MAY060630-30",
+            "KXBTC15M-26MAY060645-45"
+          ],
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 2.0
+          },
+          "train": {
+            "avg_cents_per_entry": 6.106463878326996,
+            "cost_basis_dollars": 515.87,
+            "coverage_of_live_entries": 0.7245179063360881,
+            "entries": 263,
+            "flats": 0,
+            "losses": 118,
+            "net_cents": 1606.0,
+            "net_dollars": 16.06,
+            "roi_on_entry_notional": 0.031131874309419036,
+            "win_rate_ex_flats": 0.5513307984790875,
+            "wins": 145
+          },
+          "train_entries": 363
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": -0.7037037037037045,
+            "cost_basis_dollars": 141.4,
+            "coverage_of_live_entries": 0.4251968503937008,
+            "entries": 54,
+            "flats": 4,
+            "losses": 32,
+            "net_cents": -38.00000000000004,
+            "net_dollars": -0.38000000000000045,
+            "roi_on_entry_notional": -0.0026874115983026906,
+            "win_rate_ex_flats": 0.36,
+            "wins": 18
+          },
+          "eval_entries": 127,
+          "fold": 3,
+          "live_eval": {
+            "avg_cents_per_entry": 2.4409448818897634,
+            "cost_basis_dollars": 306.0,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 6,
+            "losses": 77,
+            "net_cents": 309.99999999999994,
+            "net_dollars": 3.0999999999999996,
+            "roi_on_entry_notional": 0.010130718954248365,
+            "win_rate_ex_flats": 0.36363636363636365,
+            "wins": 44
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY062115-15",
+            "KXBTC15M-26MAY062130-30",
+            "KXBTC15M-26MAY062200-00",
+            "KXBTC15M-26MAY062215-15",
+            "KXBTC15M-26MAY062230-30"
+          ],
+          "selected_params": {
+            "max_probability_gap": 0.2,
+            "min_edge_cents": 3.0
+          },
+          "train": {
+            "avg_cents_per_entry": 9.960629921259843,
+            "cost_basis_dollars": 237.22,
+            "coverage_of_live_entries": 0.26078028747433263,
+            "entries": 127,
+            "flats": 2,
+            "losses": 58,
+            "net_cents": 1265.0,
+            "net_dollars": 12.65,
+            "roi_on_entry_notional": 0.05332602647331591,
+            "win_rate_ex_flats": 0.536,
+            "wins": 67
+          },
+          "train_entries": 487
+        }
+      ],
+      "strategy_name": "conformal_consensus_winrate_gate"
+    },
+    "depth_decay_fillability_gate": {
+      "combined_eval": {
+        "avg_cents_per_entry": 0.07421874999999964,
+        "cost_basis_dollars": 557.12,
+        "coverage_of_live_entries": 0.6736842105263158,
+        "entries": 256,
+        "flats": 5,
+        "losses": 144,
+        "net_cents": 18.999999999999908,
+        "net_dollars": 0.1899999999999991,
+        "roi_on_entry_notional": 0.00034103963239517357,
+        "win_rate_ex_flats": 0.4262948207171315,
+        "wins": 107
+      },
+      "combined_live_eval": {
+        "avg_cents_per_entry": -1.3131578947368423,
+        "cost_basis_dollars": 809.48,
+        "coverage_of_live_entries": 1.0,
+        "entries": 380,
+        "flats": 11,
+        "losses": 216,
+        "net_cents": -499.00000000000006,
+        "net_dollars": -4.99,
+        "roi_on_entry_notional": -0.006164451252656026,
+        "win_rate_ex_flats": 0.4146341463414634,
+        "wins": 153
+      },
+      "family": "depth_decay_fillability",
+      "folds": [
+        {
+          "eval": {
+            "avg_cents_per_entry": -3.6440677966101696,
+            "cost_basis_dollars": 259.02,
+            "coverage_of_live_entries": 0.9291338582677166,
+            "entries": 118,
+            "flats": 0,
+            "losses": 64,
+            "net_cents": -430.0,
+            "net_dollars": -4.3,
+            "roi_on_entry_notional": -0.01660103466913752,
+            "win_rate_ex_flats": 0.4576271186440678,
+            "wins": 54
+          },
+          "eval_entries": 127,
+          "fold": 1,
+          "live_eval": {
+            "avg_cents_per_entry": -6.393700787401575,
+            "cost_basis_dollars": 276.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 0,
+            "losses": 72,
+            "net_cents": -812.0,
+            "net_dollars": -8.12,
+            "roi_on_entry_notional": -0.029326784166425885,
+            "win_rate_ex_flats": 0.4330708661417323,
+            "wins": 55
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY050200-00",
+            "KXBTC15M-26MAY050345-45",
+            "KXBTC15M-26MAY050400-00",
+            "KXBTC15M-26MAY050530-30",
+            "KXBTC15M-26MAY050630-30"
+          ],
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "train": {
+            "avg_cents_per_entry": 7.982062780269058,
+            "cost_basis_dollars": 410.21,
+            "coverage_of_live_entries": 0.902834008097166,
+            "entries": 223,
+            "flats": 0,
+            "losses": 106,
+            "net_cents": 1780.0,
+            "net_dollars": 17.8,
+            "roi_on_entry_notional": 0.04339240876624168,
+            "win_rate_ex_flats": 0.5246636771300448,
+            "wins": 117
+          },
+          "train_entries": 247
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": -1.3522727272727275,
+            "cost_basis_dollars": 147.28,
+            "coverage_of_live_entries": 0.6984126984126984,
+            "entries": 88,
+            "flats": 5,
+            "losses": 49,
+            "net_cents": -119.00000000000003,
+            "net_dollars": -1.1900000000000004,
+            "roi_on_entry_notional": -0.00807984790874525,
+            "win_rate_ex_flats": 0.40963855421686746,
+            "wins": 34
+          },
+          "eval_entries": 126,
+          "fold": 2,
+          "live_eval": {
+            "avg_cents_per_entry": 0.023809523809523628,
+            "cost_basis_dollars": 226.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 126,
+            "flats": 5,
+            "losses": 67,
+            "net_cents": 2.999999999999977,
+            "net_dollars": 0.02999999999999977,
+            "roi_on_entry_notional": 0.0001323918799646945,
+            "win_rate_ex_flats": 0.4462809917355372,
+            "wins": 54
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY060515-15",
+            "KXBTC15M-26MAY060545-45",
+            "KXBTC15M-26MAY060600-00",
+            "KXBTC15M-26MAY060630-30",
+            "KXBTC15M-26MAY060645-45"
+          ],
+          "selected_params": {
+            "max_ask_cents": 81.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "train": {
+            "avg_cents_per_entry": 9.068493150684931,
+            "cost_basis_dollars": 410.51,
+            "coverage_of_live_entries": 0.6033057851239669,
+            "entries": 219,
+            "flats": 0,
+            "losses": 108,
+            "net_cents": 1986.0,
+            "net_dollars": 19.86,
+            "roi_on_entry_notional": 0.048378845825923854,
+            "win_rate_ex_flats": 0.5068493150684932,
+            "wins": 111
+          },
+          "train_entries": 363
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": 11.36,
+            "cost_basis_dollars": 150.82,
+            "coverage_of_live_entries": 0.3937007874015748,
+            "entries": 50,
+            "flats": 0,
+            "losses": 31,
+            "net_cents": 568.0,
+            "net_dollars": 5.68,
+            "roi_on_entry_notional": 0.037660787693939796,
+            "win_rate_ex_flats": 0.38,
+            "wins": 19
+          },
+          "eval_entries": 127,
+          "fold": 3,
+          "live_eval": {
+            "avg_cents_per_entry": 2.4409448818897634,
+            "cost_basis_dollars": 306.0,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 6,
+            "losses": 77,
+            "net_cents": 309.99999999999994,
+            "net_dollars": 3.0999999999999996,
+            "roi_on_entry_notional": 0.010130718954248365,
+            "win_rate_ex_flats": 0.36363636363636365,
+            "wins": 44
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY062115-15",
+            "KXBTC15M-26MAY062130-30",
+            "KXBTC15M-26MAY062200-00",
+            "KXBTC15M-26MAY062215-15",
+            "KXBTC15M-26MAY062230-30"
+          ],
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "train": {
+            "avg_cents_per_entry": 9.518134715025907,
+            "cost_basis_dollars": 416.69,
+            "coverage_of_live_entries": 0.39630390143737165,
+            "entries": 193,
+            "flats": 2,
+            "losses": 99,
+            "net_cents": 1837.0,
+            "net_dollars": 18.37,
+            "roi_on_entry_notional": 0.04408553121025223,
+            "win_rate_ex_flats": 0.4816753926701571,
+            "wins": 92
+          },
+          "train_entries": 487
+        }
+      ],
+      "strategy_name": "depth_decay_fillability_gate"
+    },
+    "hybrid_fpt_depth_gate": {
+      "combined_eval": {
+        "avg_cents_per_entry": 2.913533834586466,
+        "cost_basis_dollars": 569.04,
+        "coverage_of_live_entries": 0.7,
+        "entries": 266,
+        "flats": 7,
+        "losses": 141,
+        "net_cents": 774.9999999999999,
+        "net_dollars": 7.749999999999999,
+        "roi_on_entry_notional": 0.013619429214115,
+        "win_rate_ex_flats": 0.4555984555984556,
+        "wins": 118
+      },
+      "combined_live_eval": {
+        "avg_cents_per_entry": -1.3131578947368423,
+        "cost_basis_dollars": 809.48,
+        "coverage_of_live_entries": 1.0,
+        "entries": 380,
+        "flats": 11,
+        "losses": 216,
+        "net_cents": -499.00000000000006,
+        "net_dollars": -4.99,
+        "roi_on_entry_notional": -0.006164451252656026,
+        "win_rate_ex_flats": 0.4146341463414634,
+        "wins": 153
+      },
+      "family": "hybrid_fpt_depth",
+      "folds": [
+        {
+          "eval": {
+            "avg_cents_per_entry": 1.3118279569892473,
+            "cost_basis_dollars": 205.82,
+            "coverage_of_live_entries": 0.7322834645669292,
+            "entries": 93,
+            "flats": 0,
+            "losses": 47,
+            "net_cents": 122.0,
+            "net_dollars": 1.22,
+            "roi_on_entry_notional": 0.00592750947429793,
+            "win_rate_ex_flats": 0.4946236559139785,
+            "wins": 46
+          },
+          "eval_entries": 127,
+          "fold": 1,
+          "live_eval": {
+            "avg_cents_per_entry": -6.393700787401575,
+            "cost_basis_dollars": 276.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 0,
+            "losses": 72,
+            "net_cents": -812.0,
+            "net_dollars": -8.12,
+            "roi_on_entry_notional": -0.029326784166425885,
+            "win_rate_ex_flats": 0.4330708661417323,
+            "wins": 55
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY050200-00",
+            "KXBTC15M-26MAY050345-45",
+            "KXBTC15M-26MAY050400-00",
+            "KXBTC15M-26MAY050530-30",
+            "KXBTC15M-26MAY050630-30"
+          ],
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "train": {
+            "avg_cents_per_entry": 8.414507772020725,
+            "cost_basis_dollars": 352.41,
+            "coverage_of_live_entries": 0.7813765182186235,
+            "entries": 193,
+            "flats": 0,
+            "losses": 94,
+            "net_cents": 1624.0,
+            "net_dollars": 16.24,
+            "roi_on_entry_notional": 0.04608268777843988,
+            "win_rate_ex_flats": 0.5129533678756477,
+            "wins": 99
+          },
+          "train_entries": 247
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": 2.221153846153846,
+            "cost_basis_dollars": 182.66,
+            "coverage_of_live_entries": 0.8253968253968254,
+            "entries": 104,
+            "flats": 5,
+            "losses": 54,
+            "net_cents": 230.99999999999997,
+            "net_dollars": 2.3099999999999996,
+            "roi_on_entry_notional": 0.012646446950618635,
+            "win_rate_ex_flats": 0.45454545454545453,
+            "wins": 45
+          },
+          "eval_entries": 126,
+          "fold": 2,
+          "live_eval": {
+            "avg_cents_per_entry": 0.023809523809523628,
+            "cost_basis_dollars": 226.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 126,
+            "flats": 5,
+            "losses": 67,
+            "net_cents": 2.999999999999977,
+            "net_dollars": 0.02999999999999977,
+            "roi_on_entry_notional": 0.0001323918799646945,
+            "win_rate_ex_flats": 0.4462809917355372,
+            "wins": 54
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY060515-15",
+            "KXBTC15M-26MAY060545-45",
+            "KXBTC15M-26MAY060600-00",
+            "KXBTC15M-26MAY060630-30",
+            "KXBTC15M-26MAY060645-45"
+          ],
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "train": {
+            "avg_cents_per_entry": 8.128571428571428,
+            "cost_basis_dollars": 543.91,
+            "coverage_of_live_entries": 0.7713498622589532,
+            "entries": 280,
+            "flats": 0,
+            "losses": 136,
+            "net_cents": 2276.0,
+            "net_dollars": 22.76,
+            "roi_on_entry_notional": 0.041845158206320905,
+            "win_rate_ex_flats": 0.5142857142857142,
+            "wins": 144
+          },
+          "train_entries": 363
+        },
+        {
+          "eval": {
+            "avg_cents_per_entry": 6.115942028985506,
+            "cost_basis_dollars": 180.56,
+            "coverage_of_live_entries": 0.5433070866141733,
+            "entries": 69,
+            "flats": 2,
+            "losses": 40,
+            "net_cents": 421.99999999999994,
+            "net_dollars": 4.22,
+            "roi_on_entry_notional": 0.02337173238812583,
+            "win_rate_ex_flats": 0.40298507462686567,
+            "wins": 27
+          },
+          "eval_entries": 127,
+          "fold": 3,
+          "live_eval": {
+            "avg_cents_per_entry": 2.4409448818897634,
+            "cost_basis_dollars": 306.0,
+            "coverage_of_live_entries": 1.0,
+            "entries": 127,
+            "flats": 6,
+            "losses": 77,
+            "net_cents": 309.99999999999994,
+            "net_dollars": 3.0999999999999996,
+            "roi_on_entry_notional": 0.010130718954248365,
+            "win_rate_ex_flats": 0.36363636363636365,
+            "wins": 44
+          },
+          "purged_markets": [
+            "KXBTC15M-26MAY062115-15",
+            "KXBTC15M-26MAY062130-30",
+            "KXBTC15M-26MAY062200-00",
+            "KXBTC15M-26MAY062215-15",
+            "KXBTC15M-26MAY062230-30"
+          ],
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "train": {
+            "avg_cents_per_entry": 10.745689655172415,
+            "cost_basis_dollars": 442.0,
+            "coverage_of_live_entries": 0.47638603696098564,
+            "entries": 232,
+            "flats": 5,
+            "losses": 117,
+            "net_cents": 2493.0,
+            "net_dollars": 24.93,
+            "roi_on_entry_notional": 0.056402714932126695,
+            "win_rate_ex_flats": 0.4845814977973568,
+            "wins": 110
+          },
+          "train_entries": 487
+        }
+      ],
+      "strategy_name": "hybrid_fpt_depth_gate"
+    }
+  }
+}

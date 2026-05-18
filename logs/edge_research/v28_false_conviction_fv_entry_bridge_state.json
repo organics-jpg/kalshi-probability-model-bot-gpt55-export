@@ -1,0 +1,7 @@
+{
+  "candidate": "false_conviction_fv_entry_bridge",
+  "entry_surface": "first adjusted-p50 edge0 row, then target turbulence valve on adjusted FV",
+  "freeze_ts_utc": "2026-05-06T14:14:08.956655+00:00",
+  "physics": "Early unresolved boundary states should reduce conviction before entry selection. The FV should forget stale/local certainty when recross geometry says the path has not escaped.",
+  "target_policy": "p>=0.50 edge>=0; keep if p>=0.60 or edge>=0.04; skip weak near recross 0.75/0.25"
+}

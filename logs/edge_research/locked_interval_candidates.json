@@ -1,0 +1,67 @@
+{
+  "candidates": [
+    {
+      "kind": "simple",
+      "name": "raw_regime_blend_high_price_20260502_1510",
+      "policy": {
+        "ask_max": 100.0,
+        "chooser": "score_regime_blend",
+        "gate": "none",
+        "label": "choose=score_regime_blend; score_regime_blend>=0.95; ask<=100; sec_to_close>=0",
+        "min_score": 0.95,
+        "min_seconds_to_close": 0.0
+      }
+    },
+    {
+      "kind": "simple",
+      "name": "raw_score_min_book_rv15_existing_lock",
+      "policy": {
+        "ask_max": 100.0,
+        "chooser": "score_min_book_rv15",
+        "gate": "none",
+        "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=100; sec_to_close>=0",
+        "min_score": 0.9,
+        "min_seconds_to_close": 0.0
+      }
+    },
+    {
+      "kind": "simple",
+      "name": "economical_score_min_book_rv15_20260502_1511",
+      "policy": {
+        "ask_max": 95.0,
+        "chooser": "score_min_book_rv15",
+        "gate": "none",
+        "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.8; ask<=95; sec_to_close>=60",
+        "min_score": 0.8,
+        "min_seconds_to_close": 60.0
+      }
+    },
+    {
+      "fallback": {
+        "ask_max": 100.0,
+        "chooser": "score_min_book_rv15",
+        "gate": "none",
+        "label": "fallback; choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=100; sec>=0; sec<=300",
+        "max_seconds_to_close": 300.0,
+        "min_score": 0.9,
+        "min_seconds_to_close": 0.0,
+        "name": "fallback"
+      },
+      "kind": "staged",
+      "name": "staged_score_min_fallback_20260502_1511",
+      "stage1": {
+        "ask_max": 90.0,
+        "chooser": "score_min_book_rv15",
+        "gate": "none",
+        "label": "economical; choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=90; sec>=60",
+        "max_seconds_to_close": null,
+        "min_score": 0.9,
+        "min_seconds_to_close": 60.0,
+        "name": "economical"
+      }
+    }
+  ],
+  "created_utc": "2026-05-02T15:16:29.409376+00:00",
+  "lock_close_dt": "2026-05-02T15:00:00+00:00",
+  "lock_id": "locked_interval_candidates_v1"
+}

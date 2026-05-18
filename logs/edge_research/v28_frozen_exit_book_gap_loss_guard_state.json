@@ -1,0 +1,11 @@
+{
+  "candidate": "book_gap_loss_guard_value_p85_reduce_p79_gap0",
+  "freeze_ts_utc": "2026-05-06T21:29:32.710906+00:00",
+  "physics": "Soft exits should only be ignored when the held side is either high-confidence or still clears the executable exit bid; this keeps winner-recovery upside while shrinking suppressed full-loss risk.",
+  "reduce_gap_floor": 0.0,
+  "reduce_p_hold_floor": 0.79,
+  "rule": "Suppress value-over-hold soft exits when p_hold >= 0.85 or p_hold - exit_bid >= 0.00. Suppress probability_reduce exits only when p_hold >= 0.79 and p_hold - exit_bid >= 0.00. Keep collapse exits unchanged.",
+  "source_artifact": "v28_frozen_exit_book_gap_suppression_latest.json",
+  "value_gap_floor": 0.0,
+  "value_p_hold_floor": 0.85
+}

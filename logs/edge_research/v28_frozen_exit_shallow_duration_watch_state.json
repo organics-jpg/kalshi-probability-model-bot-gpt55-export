@@ -1,0 +1,20 @@
+{
+  "candidate": "shallow_drawdown_duration_lte52_reduce_or_collapse",
+  "diagnostic_harmful": 0,
+  "diagnostic_helpful": 16,
+  "diagnostic_rule": "duration_sec le 52",
+  "diagnostic_selected": 16,
+  "diagnostic_selected_delta_cents": 1031.0,
+  "duration_sec_max": 52.0,
+  "exit_reasons": [
+    "mushroom_v28_probability_reduce",
+    "mushroom_v28_probability_collapse_full"
+  ],
+  "fair_drawdown_cents_max": 5.0,
+  "freeze_ts_utc": "2026-05-07T05:55:14.530870+00:00",
+  "origin": "Frozen from v28_exit_shallow_drawdown_harm_audit best clean child rule.",
+  "physics": "A shallow FV drawdown within roughly one minute of entry is more likely mark/path churn clipping a still-live thesis than true settlement-odds failure.",
+  "research_only": true,
+  "rule": "For reduce/collapse exits, suppress if fair_drawdown_cents <= 5 and entry-to-exit duration <= 52 seconds.",
+  "strict_forward_note": "Only rows after this freeze count as strict forward evidence."
+}

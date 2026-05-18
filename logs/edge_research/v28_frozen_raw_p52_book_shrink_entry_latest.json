@@ -1,0 +1,43 @@
+{
+  "base": {
+    "actual_count": 7,
+    "avg_brier": 0.2185168244838182,
+    "coverage_pct": 98.01980198019803,
+    "entries": 99,
+    "losses": 42,
+    "net_cents": -540.0,
+    "settled": 99,
+    "shrunk_count": 0,
+    "sim_count": 92,
+    "wins": 57
+  },
+  "blockers": [
+    "coverage_too_high",
+    "net_not_positive",
+    "simulated_share_gt_35pct"
+  ],
+  "candidate_live_ready": false,
+  "candidate_summary": {
+    "actual_count": 11,
+    "avg_brier": 0.2152651655376389,
+    "coverage_pct": 98.01980198019803,
+    "entries": 99,
+    "losses": 40,
+    "net_cents": -645.0,
+    "settled": 99,
+    "shrunk_count": 7,
+    "sim_count": 88,
+    "wins": 59
+  },
+  "delta_net_cents": -105.0,
+  "excluded_in_progress_markets": [],
+  "freeze": {
+    "base_policy": "v28_raw_p52_edge0",
+    "candidate": "gap15_book50_p52_edge0",
+    "freeze_ts_utc": "2026-05-06T12:12:25.258308+00:00",
+    "physics": "Large model-book disagreement is treated as path-risk overconfidence, but the response is probabilistic shrinkage rather than a hard skip.",
+    "rule": "If raw p - executable ask > 15pp, blend 50% toward executable ask; then require p>=0.52 and edge>=0.",
+    "source_artifact": "v28_raw_p52_book_shrink_entry_latest.json"
+  },
+  "future_denominator": 101
+}

@@ -1,0 +1,9 @@
+{
+  "adjusted_edge_floor": 0.02,
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "boundary_clock_adjusted_edge_floor_0p02_repair_lowest_recross",
+  "coverage_floor": 75.0,
+  "freeze_ts_utc": "2026-05-06T07:35:02.597585+00:00",
+  "physics": "FV collapse should drive entries: unresolved boundary-clock states should not be bought unless adjusted edge still clears friction.",
+  "rule": "skip target rows where boundary-clock adjusted_p minus ask is below 0.02; repair with clean lowest-recross rows"
+}

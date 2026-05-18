@@ -1,0 +1,94 @@
+{
+  "adjusted_edge_floor": -0.12,
+  "blockers": [
+    "coverage_too_low",
+    "net_not_positive"
+  ],
+  "cases": [
+    {
+      "chosen_opposite": {
+        "abs_d_sigma": 0.683935,
+        "adjusted_edge": 0.012334999999999985,
+        "ask_prob": 0.78,
+        "market": "KXBTC15M-26MAY060100-00",
+        "net_cents": 41.0,
+        "p_adjusted": 0.792335,
+        "p_raw": 0.792335,
+        "raw_edge_prob": 0.012334999999999985,
+        "recross_hazard_score": 0.2875697041369216,
+        "side": "no",
+        "side_won": true,
+        "source": "rejected_actionable",
+        "ts_wall": "2026-05-06T04:51:56.038522+00:00"
+      },
+      "opposite_count": 7,
+      "skipped": {
+        "abs_d_sigma": 0.694496,
+        "adjusted_edge": -0.14003600000000005,
+        "ask_prob": 0.79,
+        "market": "KXBTC15M-26MAY060100-00",
+        "net_cents": -161.0,
+        "p_adjusted": 0.649964,
+        "p_raw": 0.799928,
+        "raw_edge_prob": 0.009927999999999937,
+        "recross_hazard_score": 0.40756093134438426,
+        "side": "yes",
+        "side_won": false,
+        "source": "rejected_actionable",
+        "ts_wall": "2026-05-06T04:48:35.924287+00:00"
+      }
+    }
+  ],
+  "diagnostic": "edge_gate_opposite_side_availability",
+  "forward_denominator": 152,
+  "interpretation": [
+    "1 of 1 edge-gate skips had a same-or-later opposite-side replacement under the fixed physics requirements.",
+    "Replacement-only net is 41.0c over 1 settled rows.",
+    "Kept-plus-replacement coverage is 73.6842105263158 with net -424.0c.",
+    "Still not promotable: coverage_too_low, net_not_positive."
+  ],
+  "kept_summary": {
+    "avg_net_cents": -4.1891891891891895,
+    "coverage_pct": 73.02631578947368,
+    "entries": 111,
+    "losses": 47,
+    "net_cents": -465.0,
+    "settled": 111,
+    "wins": 64
+  },
+  "opposite_requirements": {
+    "min_adjusted_edge": -0.02,
+    "min_raw_edge": 0.0,
+    "min_raw_p": 0.5,
+    "same_or_later_than_skipped_row": true
+  },
+  "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "replaced_strategy_summary": {
+    "avg_net_cents": -3.7857142857142856,
+    "coverage_pct": 73.6842105263158,
+    "entries": 112,
+    "losses": 47,
+    "net_cents": -424.0,
+    "settled": 112,
+    "wins": 65
+  },
+  "replacement_summary": {
+    "avg_net_cents": 41.0,
+    "coverage_pct": 0.6578947368421053,
+    "entries": 1,
+    "losses": 0,
+    "net_cents": 41.0,
+    "settled": 1,
+    "wins": 1
+  },
+  "requirements": [
+    "diagnostic only; not promotion evidence",
+    "opposite-side row must be same-or-later than skipped row",
+    "opposite side must have executable ask, raw p >= 0.50, nonnegative raw edge, and adjusted edge >= -0.02",
+    "needs at least 30 settled forward rows before any promotion discussion"
+  ],
+  "skips_with_opposite": 1,
+  "target_entries": 112,
+  "target_skipped": 1,
+  "variant": "edge_phase_shrink"
+}

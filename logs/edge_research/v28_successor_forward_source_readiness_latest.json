@@ -1,0 +1,672 @@
+{
+  "caches": {
+    "btc_cache": {
+      "exists": true,
+      "path": "logs/edge_research/coinbase_btc_usd_1m_cache.parquet",
+      "sha256": "f9b549ca45b56d5ab1b600f02cdd21b8b3bfec64d34a47aa19bdd6fb3262a161",
+      "size_bytes": 11373270
+    },
+    "market_metadata_cache": {
+      "exists": true,
+      "json_keys": 814,
+      "path": "logs/edge_research/kalshi_market_metadata_cache.json",
+      "sha256": "d16385cdacd366ed6859bbbe6ae47a7903aa98d66fd13d0ce4f2ce36b9e6fe18",
+      "size_bytes": 348520
+    },
+    "market_result_cache": {
+      "exists": true,
+      "json_keys": 177,
+      "path": "logs/edge_research/kalshi_market_result_cache.json",
+      "sha256": "fbb21ebcf694a32940c66b5b26e16ca4ad3c3e2d046db241b2f05bffd6c364b3",
+      "size_bytes": 25047
+    }
+  },
+  "forward_packet_candidate_predictions": {
+    "allowed_for_forward_collection_rows": 13554,
+    "allowed_for_forward_registry_rows": 0,
+    "blocker_counts_top": {
+      "incomplete_input_packet:btc_and_feed": 13554,
+      "packet_not_registered_before_close": 5994,
+      "temporal_blockers:is_recomputed_after_resolution_true": 5994,
+      "v28_baseline": 13554
+    },
+    "candidate_count": 9,
+    "columns": 24,
+    "eligible_for_forward_freeze_rows": 0,
+    "exists": true,
+    "markets": 2,
+    "packet_input_status_counts": {
+      "incomplete": 13554
+    },
+    "path": "research_particle/v28_successor/forward_packet_candidate_predictions_latest.csv",
+    "prediction_status_counts": {
+      "diagnostic_scored_not_freeze_ready": 13554
+    },
+    "promotion_allowed_rows": 0,
+    "rows": 13554,
+    "sha256": "544a1c81868863fd515dc5c3f88e9a9c83bdb3d180afdc6c728ec659f18e7aba"
+  },
+  "latest_artifacts": {
+    "forward_collection_spec_json": "logs/edge_research/v28_successor_forward_collection_spec_latest.json",
+    "forward_collection_status": "ready_for_future_collection_not_promotion",
+    "forward_labeled_csv": "research_particle/v28_successor/forward_labeled_predictions_latest.csv",
+    "forward_registry_csv": "research_particle/v28_successor/forward_registry_latest.csv",
+    "frozen_forward_csv": "research_particle/v28_successor/frozen_forward_predictions_latest.csv",
+    "sidecar_batch_evidence_json": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.json",
+    "sidecar_batch_evidence_status": "scored_sidecar_batch_evidence",
+    "sidecar_batch_labeled_csv": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv",
+    "sidecar_packet_collector_json": "logs/edge_research/v28_successor_sidecar_packet_collector_latest.json",
+    "sidecar_packet_collector_status": "contract_demo_ready_not_evidence",
+    "source_contract_json": "logs/edge_research/v28_successor_source_contract_latest.json",
+    "source_contract_promotion_ready": true
+  },
+  "live_v28_events": {
+    "approved_rows": 4233,
+    "event_type_counts_top": {
+      "execution_deferred": 509,
+      "exit_capacity_estimated": 942,
+      "exit_execution_deferred": 897,
+      "exit_plan_built": 942,
+      "exit_reconciled": 495,
+      "exit_signal_seen": 942,
+      "exit_snapshot_built": 942,
+      "exit_submit_full": 490,
+      "exit_submit_partial": 5,
+      "exit_submit_start": 942,
+      "exit_submit_success": 497,
+      "exit_submit_zero_fill": 374,
+      "fill_full": 1054,
+      "fill_partial": 10,
+      "mushroom_v28_approved": 1078,
+      "order_submit_reject": 71,
+      "order_submit_start": 1941,
+      "order_submit_success": 1870,
+      "plan_built": 999,
+      "signal_seen": 1078
+    },
+    "exists": true,
+    "legacy_component_fields_seen": [
+      "mushroom_p_anchor",
+      "mushroom_p_recent_transport",
+      "mushroom_p_long_transport",
+      "mushroom_transport_recent_n",
+      "mushroom_transport_long_n"
+    ],
+    "markets": 314,
+    "path": "logs/live_mushroom_v28_size2/execution_events.ndjson",
+    "required_native_component_fields": [
+      "mushroom_v28_p_anchor",
+      "mushroom_v28_p_static_boundary_field",
+      "mushroom_v28_p_recent_transport",
+      "mushroom_v28_p_long_transport",
+      "mushroom_v28_transport_recent_n",
+      "mushroom_v28_transport_long_n"
+    ],
+    "rows": 16078,
+    "rows_with_legacy_mushroom_component_fields": 3155,
+    "rows_with_v28_base_fields": 4233,
+    "rows_with_v28_native_component_fields": 0,
+    "sha256": null
+  },
+  "passive_snapshots": {
+    "columns": 52,
+    "eligible_for_candidate_prediction_rows": 1622,
+    "exists": true,
+    "markets": 2,
+    "missing_counts": {
+      "btc_state": 1750,
+      "candidate_prediction": 1750,
+      "settlement_label": 1750,
+      "top_book": 128,
+      "v28_baseline": 1750
+    },
+    "path": "research_particle/v28_successor/passive_forward_snapshots_latest.csv",
+    "pre_resolution_rows": 1750,
+    "registered_pre_resolution_rows": 0,
+    "rows": 1750,
+    "sha256": "a90a3fbff9653676c89ecadf63d9c048f0629667ca3408083b090142b19eb0de"
+  },
+  "research_datasets": {
+    "dataset_count": 16,
+    "datasets": [
+      {
+        "book_checkpoint_files": 6,
+        "book_checkpoint_rows": 3543,
+        "dataset_tag": "particle_dynamic600_oos_20260511TLOCKEDNEXT2",
+        "ended_at_utc": "2026-05-11T10:34:45.483825+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110530-30",
+          "KXBTC15M-26MAY110545-45",
+          "KXBTC15M-26MAY110600-00",
+          "KXBTC15M-26MAY110615-15",
+          "KXBTC15M-26MAY110630-30",
+          "KXBTC15M-26MAY110645-45"
+        ],
+        "markets": 6,
+        "path": "research_data/particle_dynamic600_oos_20260511TLOCKEDNEXT2",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 2,
+          "orderbook_snapshot": 2,
+          "ticker": 2,
+          "watch_market": 2,
+          "ws_connected": 2,
+          "ws_subscribed": 2
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T09:29:45.323642+00:00"
+      },
+      {
+        "book_checkpoint_files": 5,
+        "book_checkpoint_rows": 3587,
+        "dataset_tag": "particle_dynamic_oos_20260511TLOCKEDNEXT",
+        "ended_at_utc": "2026-05-11T09:10:51.387498+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110415-15",
+          "KXBTC15M-26MAY110430-30",
+          "KXBTC15M-26MAY110445-45",
+          "KXBTC15M-26MAY110500-00",
+          "KXBTC15M-26MAY110515-15"
+        ],
+        "markets": 5,
+        "path": "research_data/particle_dynamic_oos_20260511TLOCKEDNEXT",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 2,
+          "orderbook_snapshot": 2,
+          "ticker": 2,
+          "watch_market": 2,
+          "ws_connected": 2,
+          "ws_subscribed": 2
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T08:05:51.106333+00:00"
+      },
+      {
+        "book_checkpoint_files": 6,
+        "book_checkpoint_rows": 3537,
+        "dataset_tag": "particle_fixed_terminal_oos_GAUSS45LOCK001",
+        "ended_at_utc": "2026-05-11T18:35:11.641153+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY111330-30",
+          "KXBTC15M-26MAY111345-45",
+          "KXBTC15M-26MAY111400-00",
+          "KXBTC15M-26MAY111415-15",
+          "KXBTC15M-26MAY111430-30",
+          "KXBTC15M-26MAY111445-45"
+        ],
+        "markets": 6,
+        "path": "research_data/particle_fixed_terminal_oos_GAUSS45LOCK001",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 2,
+          "orderbook_snapshot": 2,
+          "ticker": 2,
+          "watch_market": 2,
+          "ws_connected": 2,
+          "ws_subscribed": 2
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T17:30:11.540288+00:00"
+      },
+      {
+        "book_checkpoint_files": 7,
+        "book_checkpoint_rows": 5068,
+        "dataset_tag": "particle_fixed_terminal_oos_GAUSS45LOCK002",
+        "ended_at_utc": "2026-05-11T20:21:17.157278+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY111500-00",
+          "KXBTC15M-26MAY111515-15",
+          "KXBTC15M-26MAY111530-30",
+          "KXBTC15M-26MAY111545-45",
+          "KXBTC15M-26MAY111600-00",
+          "KXBTC15M-26MAY111615-15",
+          "KXBTC15M-26MAY111630-30"
+        ],
+        "markets": 7,
+        "path": "research_data/particle_fixed_terminal_oos_GAUSS45LOCK002",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 3,
+          "orderbook_snapshot": 3,
+          "ticker": 3,
+          "watch_market": 3,
+          "ws_connected": 3,
+          "ws_subscribed": 3
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T18:51:17.047161+00:00"
+      },
+      {
+        "book_checkpoint_files": 7,
+        "book_checkpoint_rows": 4990,
+        "dataset_tag": "particle_fixed_terminal_oos_GAUSS45LOCK003",
+        "ended_at_utc": "2026-05-11T22:49:49.578610+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY111730-30",
+          "KXBTC15M-26MAY111745-45",
+          "KXBTC15M-26MAY111800-00",
+          "KXBTC15M-26MAY111815-15",
+          "KXBTC15M-26MAY111830-30",
+          "KXBTC15M-26MAY111845-45",
+          "KXBTC15M-26MAY111900-00"
+        ],
+        "markets": 7,
+        "path": "research_data/particle_fixed_terminal_oos_GAUSS45LOCK003",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 2,
+          "orderbook_snapshot": 2,
+          "ticker": 2,
+          "watch_market": 2,
+          "ws_connected": 2,
+          "ws_subscribed": 2
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T21:19:49.437288+00:00"
+      },
+      {
+        "book_checkpoint_files": 5,
+        "book_checkpoint_rows": 3633,
+        "dataset_tag": "particle_residual_blend_oos_RESIDLOCK001",
+        "ended_at_utc": "2026-05-11T16:06:24.889218+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY111115-15",
+          "KXBTC15M-26MAY111130-30",
+          "KXBTC15M-26MAY111145-45",
+          "KXBTC15M-26MAY111200-00",
+          "KXBTC15M-26MAY111215-15"
+        ],
+        "markets": 5,
+        "path": "research_data/particle_residual_blend_oos_RESIDLOCK001",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 2,
+          "orderbook_snapshot": 2,
+          "ticker": 2,
+          "watch_market": 2,
+          "ws_connected": 2,
+          "ws_subscribed": 2
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T15:01:24.804127+00:00"
+      },
+      {
+        "book_checkpoint_files": 1,
+        "book_checkpoint_rows": 29,
+        "dataset_tag": "particle_shadow_forward_20260511T053112Z-47457a12",
+        "ended_at_utc": "2026-05-11T05:31:43.216135+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110145-45"
+        ],
+        "markets": 1,
+        "path": "research_data/particle_shadow_forward_20260511T053112Z-47457a12",
+        "raw_event_file_types": {
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T05:31:13.115325+00:00"
+      },
+      {
+        "book_checkpoint_files": 1,
+        "book_checkpoint_rows": 29,
+        "dataset_tag": "particle_shadow_forward_20260511T053340Z-0dc86f34",
+        "ended_at_utc": "2026-05-11T05:34:11.292787+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110145-45"
+        ],
+        "markets": 1,
+        "path": "research_data/particle_shadow_forward_20260511T053340Z-0dc86f34",
+        "raw_event_file_types": {
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T05:33:41.197788+00:00"
+      },
+      {
+        "book_checkpoint_files": 2,
+        "book_checkpoint_rows": 818,
+        "dataset_tag": "particle_shadow_forward_20260511T053741Z-long900",
+        "ended_at_utc": "2026-05-11T05:52:42.962917+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110145-45",
+          "KXBTC15M-26MAY110200-00"
+        ],
+        "markets": 2,
+        "path": "research_data/particle_shadow_forward_20260511T053741Z-long900",
+        "raw_event_file_types": {
+          "market_rotated": 1,
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T05:37:42.899658+00:00"
+      },
+      {
+        "book_checkpoint_files": 1,
+        "book_checkpoint_rows": 72,
+        "dataset_tag": "particle_shadow_readonly",
+        "ended_at_utc": "2026-05-11T05:04:09.059478+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110115-15"
+        ],
+        "markets": 1,
+        "path": "research_data/particle_shadow_readonly",
+        "raw_event_file_types": {
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T05:02:58.186961+00:00"
+      },
+      {
+        "book_checkpoint_files": 1,
+        "book_checkpoint_rows": 175,
+        "dataset_tag": "particle_shadow_readonly_fresh_20260511T113926Z",
+        "ended_at_utc": "2026-05-11T11:42:27.941104+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110745-45"
+        ],
+        "markets": 1,
+        "path": "research_data/particle_shadow_readonly_fresh_20260511T113926Z",
+        "raw_event_file_types": {
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T11:39:27.889427+00:00"
+      },
+      {
+        "book_checkpoint_files": 2,
+        "book_checkpoint_rows": 772,
+        "dataset_tag": "particle_shadow_spotmerge_oos_20260511T121730Z",
+        "ended_at_utc": "2026-05-11T12:32:31.626748+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110830-30",
+          "KXBTC15M-26MAY110845-45"
+        ],
+        "markets": 2,
+        "path": "research_data/particle_shadow_spotmerge_oos_20260511T121730Z",
+        "raw_event_file_types": {
+          "market_rotated": 1,
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T12:17:31.577170+00:00"
+      },
+      {
+        "book_checkpoint_files": 1,
+        "book_checkpoint_rows": 29,
+        "dataset_tag": "particle_shadow_spotmerge_smoke_20260511T120911Z",
+        "ended_at_utc": "2026-05-11T12:09:42.151581+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110815-15"
+        ],
+        "markets": 1,
+        "path": "research_data/particle_shadow_spotmerge_smoke_20260511T120911Z",
+        "raw_event_file_types": {
+          "orderbook_delta": 1,
+          "orderbook_snapshot": 1,
+          "ticker": 1,
+          "watch_market": 1,
+          "ws_connected": 1,
+          "ws_subscribed": 1
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T12:09:12.033549+00:00"
+      },
+      {
+        "book_checkpoint_files": 6,
+        "book_checkpoint_rows": 3520,
+        "dataset_tag": "particle_side_consensus_oos_CONSENSUSLOCK001",
+        "ended_at_utc": "2026-05-11T14:03:24.556567+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110900-00",
+          "KXBTC15M-26MAY110915-15",
+          "KXBTC15M-26MAY110930-30",
+          "KXBTC15M-26MAY110945-45",
+          "KXBTC15M-26MAY111000-00",
+          "KXBTC15M-26MAY111015-15"
+        ],
+        "markets": 6,
+        "path": "research_data/particle_side_consensus_oos_CONSENSUSLOCK001",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 3,
+          "orderbook_snapshot": 3,
+          "ticker": 3,
+          "watch_market": 3,
+          "ws_connected": 3,
+          "ws_subscribed": 3
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T12:58:24.378119+00:00"
+      },
+      {
+        "book_checkpoint_files": 5,
+        "book_checkpoint_rows": 3559,
+        "dataset_tag": "particle_side_safety_oos_20260511TLOCKED",
+        "ended_at_utc": "2026-05-11T07:36:52.296011+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY110245-45",
+          "KXBTC15M-26MAY110300-00",
+          "KXBTC15M-26MAY110315-15",
+          "KXBTC15M-26MAY110330-30",
+          "KXBTC15M-26MAY110345-45"
+        ],
+        "markets": 5,
+        "path": "research_data/particle_side_safety_oos_20260511TLOCKED",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 2,
+          "orderbook_snapshot": 2,
+          "ticker": 2,
+          "watch_market": 2,
+          "ws_connected": 2,
+          "ws_subscribed": 2
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T06:31:52.219011+00:00"
+      },
+      {
+        "book_checkpoint_files": 8,
+        "book_checkpoint_rows": 4884,
+        "dataset_tag": "particle_spot_rv_terminal_oos_RVTERMLOCK001",
+        "ended_at_utc": "2026-05-12T01:22:04.748964+00:00",
+        "market_tickers": [
+          "KXBTC15M-26MAY112000-00",
+          "KXBTC15M-26MAY112015-15",
+          "KXBTC15M-26MAY112030-30",
+          "KXBTC15M-26MAY112045-45",
+          "KXBTC15M-26MAY112100-00",
+          "KXBTC15M-26MAY112115-15",
+          "KXBTC15M-26MAY112130-30"
+        ],
+        "markets": 7,
+        "path": "research_data/particle_spot_rv_terminal_oos_RVTERMLOCK001",
+        "raw_event_file_types": {
+          "market_rotated": 2,
+          "orderbook_delta": 3,
+          "orderbook_snapshot": 3,
+          "ticker": 3,
+          "watch_market": 3,
+          "ws_connected": 3,
+          "ws_subscribed": 3
+        },
+        "records_book_checkpoints": true,
+        "records_raw_market_feed": true,
+        "records_settlement_labels": false,
+        "records_strategy_decisions": false,
+        "started_at_utc": "2026-05-11T23:52:04.649377+00:00"
+      }
+    ],
+    "total_book_checkpoint_rows": 38245,
+    "total_markets_manifest": 61
+  },
+  "shadow_packets": {
+    "columns": 104,
+    "exists": true,
+    "markets": 2,
+    "path": "research_particle/v28_successor/shadow_forward_packets_latest.csv",
+    "rows": 1506,
+    "rows_with_btc_v28_candidate_core": 1506,
+    "rows_with_native_v28_component_triplet": 0,
+    "sha256": "1cbe041db8a559d16d62f24ad18b11a9eef5c610cbeeb7359d2e3fcad35ddad5"
+  },
+  "sidecar_batch_evidence": {
+    "candidate_count": 9,
+    "clean_forward_markets": 195,
+    "clean_forward_rows": 16860,
+    "columns": 55,
+    "evidence_exists": true,
+    "evidence_json": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.json",
+    "evidence_status": "scored_sidecar_batch_evidence",
+    "exists": true,
+    "joined_markets": 195,
+    "joined_rows": 16860,
+    "path": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv",
+    "promotable_candidate_count": 1,
+    "promotion_allowed": false,
+    "rows": 16896,
+    "sha256": "a407c1f4dede6baf7c6f7994b9c393f30017a7e7aa47b51d7811581d03db6277"
+  },
+  "sidecar_packet_collector": {
+    "audit_exists": true,
+    "audit_json": "logs/edge_research/v28_successor_sidecar_packet_collector_latest.json",
+    "collector_status": "contract_demo_ready_not_evidence",
+    "columns": 88,
+    "demo_packet_ready_rows": 18,
+    "diagnostic_rows": 18,
+    "exists": true,
+    "markets": 1,
+    "packet_ready_like_rows": 18,
+    "path": "research_particle/v28_successor/forward_sidecar_packet_collection_demo_latest.csv",
+    "promotion_allowed": false,
+    "rows": 18,
+    "sha256": "0a0d87abb02dc0c35cd59971a19174c577fa81ad99a4619fb38e089468e9bef0",
+    "simulated_rows": 18
+  },
+  "summary": {
+    "blockers": [
+      "live_v28_events_missing_native_component_fields",
+      "no_freeze_eligible_forward_packet_candidate_predictions",
+      "packet_predictions_not_allowed_for_forward_registry",
+      "passive_market_coverage_below_forward_floor",
+      "passive_rows_missing_btc_state",
+      "passive_rows_missing_candidate_prediction",
+      "passive_rows_missing_settlement_label",
+      "passive_rows_missing_top_book",
+      "passive_rows_missing_v28_baseline",
+      "recorded_research_datasets_do_not_include_settlement_labels",
+      "recorded_research_datasets_do_not_include_strategy_decisions",
+      "sidecar_packet_collector_rows_are_demo_not_forward_evidence"
+    ],
+    "builder_script": "audit_v28_successor_forward_source_readiness.py",
+    "forward_labeled_rows": 16860,
+    "forward_packet_prediction_rows": 13554,
+    "forward_registry_rows": 16896,
+    "freeze_eligible_packet_prediction_rows": 0,
+    "frozen_forward_rows": 16896,
+    "generated_utc": "2026-05-18T20:51:50Z",
+    "live_v28_base_field_rows": 4233,
+    "live_v28_event_rows": 16078,
+    "live_v28_native_component_rows": 0,
+    "minimum_forward_markets": 40,
+    "minimum_forward_rows": 200,
+    "outputs": {
+      "json": "logs/edge_research/v28_successor_forward_source_readiness_latest.json",
+      "markdown": "logs/edge_research/v28_successor_forward_source_readiness_latest.md"
+    },
+    "overall_status": "blocked_missing_freeze_ready_sources",
+    "passive_markets": 2,
+    "passive_rows": 1750,
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "source readiness is an evidence audit only; promotion remains delegated to source contract, forward evidence scorer, and promotion verifier"
+    },
+    "research_dataset_count": 16,
+    "research_dataset_markets": 61,
+    "sidecar_batch_evidence_promotable_candidate_count": 1,
+    "sidecar_batch_evidence_promotion_allowed": false,
+    "sidecar_batch_evidence_status": "scored_sidecar_batch_evidence",
+    "sidecar_batch_joined_markets": 195,
+    "sidecar_batch_joined_rows": 16860,
+    "sidecar_collector_demo_packet_ready_rows": 18,
+    "sidecar_collector_promotion_allowed": false,
+    "sidecar_collector_status": "contract_demo_ready_not_evidence",
+    "source_contract_promotion_ready": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate_family": "target_coverage_cluster_penalty_watch",
+  "coverage_floor": 75.0,
+  "freeze_ts_utc": "2026-05-06T21:38:42.476858+00:00",
+  "physics": "Penalize early NO near-boundary decay, high-recross near-boundary instability, and high-confidence thin-edge rows continuously instead of using hard exclusions.",
+  "variants": {
+    "cluster_penalty_heavy": {
+      "early_no_lambda": 0.15,
+      "recross_lambda": 0.12,
+      "thin_edge_lambda": 0.12
+    },
+    "cluster_penalty_light": {
+      "early_no_lambda": 0.06,
+      "recross_lambda": 0.05,
+      "thin_edge_lambda": 0.05
+    },
+    "cluster_penalty_medium": {
+      "early_no_lambda": 0.1,
+      "recross_lambda": 0.08,
+      "thin_edge_lambda": 0.08
+    }
+  }
+}

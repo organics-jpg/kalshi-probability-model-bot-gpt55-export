@@ -1,0 +1,9 @@
+{
+  "candidate": "conditional_book_no_late_discount",
+  "entry_surface": "actual_v28_approved_entries_only",
+  "freeze_ts_utc": "2026-05-06T12:51:13.278724+00:00",
+  "min_settled": 30,
+  "physics": "Book anchoring should act as humility under late/NO/market-discounted overconfidence while preserving raw conviction on expensive high-confidence YES rows.",
+  "rule": "Use book_probability if side=no OR seconds_to_close<240 OR raw_probability-book_probability>=0.10; otherwise use raw_probability.",
+  "source_attribution": "v28_approved_entry_book_fv_regime_attribution_latest"
+}

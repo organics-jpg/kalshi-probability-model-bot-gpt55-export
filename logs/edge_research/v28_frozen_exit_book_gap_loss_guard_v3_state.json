@@ -1,0 +1,14 @@
+{
+  "candidate": "book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0",
+  "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+  "physics": "A rich negative-gap exit should usually be accepted, unless the held-side probability is extreme enough that the exit is likely clipping a near-certain winner. This keeps the v2 loss guard while testing whether v1-only high-p recoveries are durable.",
+  "reduce_gap_floor": 0.0,
+  "reduce_p_hold_floor": 0.79,
+  "rule": "Suppress value-over-hold exits when p_hold - exit_bid >= 0.00; or when p_hold >= 0.85 and fair_drawdown_cents >= -5.0; or when p_hold >= 0.95 even if book gap is slightly negative. Suppress probability_reduce exits only when p_hold >= 0.79 and p_hold - exit_bid >= 0.00. Keep collapse exits unchanged.",
+  "source_artifact": "v28_exit_loss_guard_v1_v2_runway_latest.json",
+  "strict_forward_note": "Only post-v3-freeze rows count for promotion.",
+  "value_extreme_p_hold_floor": 0.95,
+  "value_fair_drawdown_floor_cents": -5.0,
+  "value_gap_floor": 0.0,
+  "value_p_hold_floor": 0.85
+}

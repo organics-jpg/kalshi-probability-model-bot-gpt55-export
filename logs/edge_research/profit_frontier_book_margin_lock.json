@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-05-03T22:17:12.0720043+00:00",
+  "discovery_metrics": {
+    "combined_all_net_pnl_cents": 1341.0,
+    "current_all_accuracy": 0.7093023255813954,
+    "current_all_coverage": 0.9923076923076923,
+    "current_all_net_pnl_cents": 916.0,
+    "current_all_net_roi_on_cost": 0.052692130694891856,
+    "current_holdout_net_pnl_cents": 153.0,
+    "max_median_ask": 66.0,
+    "min_oos_net_roi": 0.04313504369890048,
+    "v21_all_accuracy": 0.7123287671232876,
+    "v21_all_coverage": 0.9909502262443439,
+    "v21_all_net_pnl_cents": 425.0,
+    "v21_all_net_roi_on_cost": 0.02800658978583196,
+    "v21_train_net_pnl_cents": -80.0
+  },
+  "lock_close_dt": "2026-05-03T22:15:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "research_note": "Forward-registered after refreshed 20260503_221153Z cross-dataset profit frontier. Diagnostic only: v21 train split was negative, so this is not promotion evidence.",
+  "source_frontier_csv": "logs\\edge_research\\cross_dataset_profit_frontier_latest.csv"
+}

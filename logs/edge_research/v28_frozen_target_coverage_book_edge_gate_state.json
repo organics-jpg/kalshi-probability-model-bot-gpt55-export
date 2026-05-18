@@ -1,0 +1,11 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "target_coverage_skip_raw_edge_ge_15pp",
+  "coverage_floor": 75.0,
+  "entry_surface": "frozen_target_coverage_raw_entry_valve",
+  "freeze_ts_utc": "2026-05-06T13:14:17.059642+00:00",
+  "min_settled": 30,
+  "physics": "If raw v28 claims a very large edge but the executable ask is far lower, this can be a false-conviction state where the model is treating noisy boundary/path geometry as certainty.",
+  "rule": "Start from the target-coverage policy and skip rows where raw_probability - ask_probability >= 0.15.",
+  "source_discovery": "v28_approved_entry_book_edge_actionability_latest"
+}

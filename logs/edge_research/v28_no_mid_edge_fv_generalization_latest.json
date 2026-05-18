@@ -1,0 +1,217 @@
+{
+  "best": {
+    "all": {
+      "avg_net_cents": -5.589285714285714,
+      "avg_p": 0.6455065624999999,
+      "brier": 0.22090726288899107,
+      "brier_delta_vs_raw": -0.0008393972756696455,
+      "logloss": 0.6242675074617121,
+      "logloss_delta_vs_raw": -0.0011176499406210239,
+      "losses": 48,
+      "net_cents": -626.0,
+      "rows": 112,
+      "win_rate": 0.5714285714285714,
+      "wins": 64
+    },
+    "any_mid": {
+      "avg_net_cents": 0.125,
+      "avg_p": 0.6146314583333333,
+      "brier": 0.20088400951754168,
+      "logloss": 0.5783233223129566,
+      "losses": 9,
+      "net_cents": 3.0,
+      "rows": 24,
+      "win_rate": 0.625,
+      "wins": 15
+    },
+    "no_mid": {
+      "avg_net_cents": -6.928571428571429,
+      "avg_p": 0.5864285714285714,
+      "brier": 0.22076428571428572,
+      "logloss": 0.6261798839290705,
+      "losses": 6,
+      "net_cents": -97.0,
+      "rows": 14,
+      "win_rate": 0.5714285714285714,
+      "wins": 8
+    },
+    "variant": "no_mid_to_book",
+    "yes_mid": {
+      "avg_net_cents": 10.0,
+      "avg_p": 0.6541155,
+      "brier": 0.17305162284210002,
+      "logloss": 0.5113241360503973,
+      "losses": 3,
+      "net_cents": 100.0,
+      "rows": 10,
+      "win_rate": 0.7,
+      "wins": 7
+    }
+  },
+  "diagnostic": "no_mid_edge_fv_generalization",
+  "forward_denominator": 152,
+  "interpretation": [
+    "Raw NO mid-edge rows: 14; W/L 8/6; net -97.0c; avg p 0.6524786428571429 vs win rate 0.5714285714285714.",
+    "Best broader FV variant is no_mid_to_book with all-row Brier/logloss deltas -0.0008393972756696455/-0.0011176499406210239.",
+    "If this broader check disagrees with weak-reversal repair, treat the repair as candidate-specific until forward rows mature."
+  ],
+  "ranked": [
+    {
+      "all": {
+        "avg_net_cents": -5.589285714285714,
+        "avg_p": 0.6455065624999999,
+        "brier": 0.22090726288899107,
+        "brier_delta_vs_raw": -0.0008393972756696455,
+        "logloss": 0.6242675074617121,
+        "logloss_delta_vs_raw": -0.0011176499406210239,
+        "losses": 48,
+        "net_cents": -626.0,
+        "rows": 112,
+        "win_rate": 0.5714285714285714,
+        "wins": 64
+      },
+      "any_mid": {
+        "avg_net_cents": 0.125,
+        "avg_p": 0.6146314583333333,
+        "brier": 0.20088400951754168,
+        "logloss": 0.5783233223129566,
+        "losses": 9,
+        "net_cents": 3.0,
+        "rows": 24,
+        "win_rate": 0.625,
+        "wins": 15
+      },
+      "no_mid": {
+        "avg_net_cents": -6.928571428571429,
+        "avg_p": 0.5864285714285714,
+        "brier": 0.22076428571428572,
+        "logloss": 0.6261798839290705,
+        "losses": 6,
+        "net_cents": -97.0,
+        "rows": 14,
+        "win_rate": 0.5714285714285714,
+        "wins": 8
+      },
+      "variant": "no_mid_to_book",
+      "yes_mid": {
+        "avg_net_cents": 10.0,
+        "avg_p": 0.6541155,
+        "brier": 0.17305162284210002,
+        "logloss": 0.5113241360503973,
+        "losses": 3,
+        "net_cents": 100.0,
+        "rows": 10,
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    {
+      "all": {
+        "avg_net_cents": -5.589285714285714,
+        "avg_p": 0.6537628214285715,
+        "brier": 0.2217466601646607,
+        "brier_delta_vs_raw": 0.0,
+        "logloss": 0.6253851574023331,
+        "logloss_delta_vs_raw": 0.0,
+        "losses": 48,
+        "net_cents": -626.0,
+        "rows": 112,
+        "win_rate": 0.5714285714285714,
+        "wins": 64
+      },
+      "any_mid": {
+        "avg_net_cents": 0.125,
+        "avg_p": 0.6531606666666666,
+        "brier": 0.204801196804,
+        "logloss": 0.5835390220358543,
+        "losses": 9,
+        "net_cents": 3.0,
+        "rows": 24,
+        "win_rate": 0.625,
+        "wins": 15
+      },
+      "no_mid": {
+        "avg_net_cents": -6.928571428571429,
+        "avg_p": 0.6524786428571429,
+        "brier": 0.22747946391964285,
+        "logloss": 0.6351210834540378,
+        "losses": 6,
+        "net_cents": -97.0,
+        "rows": 14,
+        "win_rate": 0.5714285714285714,
+        "wins": 8
+      },
+      "variant": "raw",
+      "yes_mid": {
+        "avg_net_cents": 10.0,
+        "avg_p": 0.6541155,
+        "brier": 0.17305162284210002,
+        "logloss": 0.5113241360503973,
+        "losses": 3,
+        "net_cents": 100.0,
+        "rows": 10,
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    {
+      "all": {
+        "avg_net_cents": -5.589285714285714,
+        "avg_p": 0.64423290625,
+        "brier": 0.22208369926147992,
+        "brier_delta_vs_raw": 0.00033703909681920274,
+        "logloss": 0.6274241863754945,
+        "logloss_delta_vs_raw": 0.0020390289731613276,
+        "losses": 48,
+        "net_cents": -626.0,
+        "rows": 112,
+        "win_rate": 0.5714285714285714,
+        "wins": 64
+      },
+      "any_mid": {
+        "avg_net_cents": 0.125,
+        "avg_p": 0.6086877291666667,
+        "brier": 0.20637404592248962,
+        "logloss": 0.5930544905772744,
+        "losses": 9,
+        "net_cents": 3.0,
+        "rows": 24,
+        "win_rate": 0.625,
+        "wins": 15
+      },
+      "no_mid": {
+        "avg_net_cents": -6.928571428571429,
+        "avg_p": 0.5762393214285714,
+        "brier": 0.23017577669419645,
+        "logloss": 0.6514333152393297,
+        "losses": 6,
+        "net_cents": -97.0,
+        "rows": 14,
+        "win_rate": 0.5714285714285714,
+        "wins": 8
+      },
+      "variant": "no_mid_half_to_50",
+      "yes_mid": {
+        "avg_net_cents": 10.0,
+        "avg_p": 0.6541155,
+        "brier": 0.17305162284210002,
+        "logloss": 0.5113241360503973,
+        "losses": 3,
+        "net_cents": 100.0,
+        "rows": 10,
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    }
+  ],
+  "target_summary": {
+    "avg_net_cents": -5.410714285714286,
+    "coverage_pct": 73.6842105263158,
+    "entries": 112,
+    "losses": 48,
+    "net_cents": -606.0,
+    "settled": 112,
+    "wins": 64
+  },
+  "zone_definition": "raw target-coverage rows with side=no and raw_edge_prob in [0.05,0.08)"
+}

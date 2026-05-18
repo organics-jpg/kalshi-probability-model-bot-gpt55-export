@@ -1,0 +1,596 @@
+{
+  "any_ready": false,
+  "best_forward_overlay": "book_probability",
+  "candidates": [
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_bucket_failure",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.21744593023255815,
+        "avg_logloss": 0.62142053873985,
+        "avg_p": 0.5633139534883721,
+        "brier_delta_vs_raw": -0.006548895154377898,
+        "count": 172,
+        "ece_10bucket": 0.02982558139534884,
+        "ece_delta_vs_raw": -0.03441020348837208,
+        "logloss_delta_vs_raw": -0.010476170391744977,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "book_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.21780866666666668,
+        "avg_logloss": 0.6224639089356373,
+        "avg_p": 0.5607333333333333,
+        "blockers": [
+          "coverage_too_high",
+          "bucket_brier_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": -0.012290468851073322,
+        "bucket_stability_failures": [
+          {
+            "brier_delta_vs_raw": 0.02991947492171427,
+            "bucket": "approved_entries",
+            "settled": 7
+          },
+          {
+            "brier_delta_vs_raw": 0.027735236007571416,
+            "bucket": "lower_recross",
+            "settled": 7
+          },
+          {
+            "brier_delta_vs_raw": 0.010450257592244439,
+            "bucket": "ask_gt_60",
+            "settled": 45
+          }
+        ],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.04419999999999998,
+        "entries": 150,
+        "logloss_delta_vs_raw": -0.022480708936355454,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "book_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "book_probability",
+      "physics": "Kalshi book-implied probability used as an external calibration anchor.",
+      "ready": false
+    },
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_bucket_failure",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.22249237353325432,
+        "avg_logloss": 0.6293531129061882,
+        "avg_p": 0.6095826061201831,
+        "brier_delta_vs_raw": -0.0015024518536817244,
+        "count": 172,
+        "ece_10bucket": 0.050837996076099,
+        "ece_delta_vs_raw": -0.013397788807621921,
+        "logloss_delta_vs_raw": -0.0025435962254067856,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "noise_shrink_light_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.22741693678941857,
+        "avg_logloss": 0.6398327070440056,
+        "avg_p": 0.6082592018899682,
+        "blockers": [
+          "coverage_too_high",
+          "bucket_brier_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": -0.0026821987283214277,
+        "bucket_stability_failures": [
+          {
+            "brier_delta_vs_raw": 0.0019693183969413802,
+            "bucket": "approved_entries",
+            "settled": 7
+          },
+          {
+            "brier_delta_vs_raw": 0.0019012750252205314,
+            "bucket": "lower_recross",
+            "settled": 7
+          },
+          {
+            "brier_delta_vs_raw": 0.0012327791884856332,
+            "bucket": "ask_gt_60",
+            "settled": 45
+          }
+        ],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.08283940736103206,
+        "entries": 150,
+        "logloss_delta_vs_raw": -0.005111910827987121,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "noise_shrink_light_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "noise_shrink_light_probability",
+      "physics": "Noise-floor shrinkage toward 50 in RMT/recross/stale states.",
+      "ready": false
+    },
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.22399482538693605,
+        "avg_logloss": 0.631896709131595,
+        "avg_p": 0.6263019593023256,
+        "brier_delta_vs_raw": 0.0,
+        "count": 172,
+        "ece_10bucket": 0.06423578488372092,
+        "ece_delta_vs_raw": 0.0,
+        "logloss_delta_vs_raw": 0.0,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "raw_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.23009913551774,
+        "avg_logloss": 0.6449446178719928,
+        "avg_p": 0.6254077533333333,
+        "blockers": [
+          "coverage_too_high"
+        ],
+        "brier_delta_vs_raw": 0.0,
+        "bucket_stability_failures": [],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.09374479333333331,
+        "entries": 150,
+        "logloss_delta_vs_raw": 0.0,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "raw_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "raw_probability",
+      "physics": "Control. Raw v28 FV on the fixed broad p50 entry surface.",
+      "ready": false
+    },
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_brier_not_better_than_raw",
+        "forward_logloss_not_better_than_raw",
+        "discovery_brier_not_better_than_raw",
+        "discovery_logloss_not_better_than_raw",
+        "forward_bucket_failure",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.22633546028342788,
+        "avg_logloss": 0.6348417036631929,
+        "avg_p": 0.6448157038043068,
+        "brier_delta_vs_raw": 0.0023406348964918333,
+        "count": 172,
+        "ece_10bucket": 0.07306903886124692,
+        "ece_delta_vs_raw": 0.008833253977526004,
+        "logloss_delta_vs_raw": 0.002944994531597911,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "entry_conditioned_logit125_p60_only_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.23308019377657863,
+        "avg_logloss": 0.6494599229997498,
+        "avg_p": 0.6440217742856064,
+        "blockers": [
+          "coverage_too_high",
+          "brier_not_better_than_raw",
+          "bucket_brier_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": 0.002981058258838626,
+        "bucket_stability_failures": [
+          {
+            "brier_delta_vs_raw": 0.002981058258838626,
+            "bucket": "all",
+            "settled": 150
+          },
+          {
+            "brier_delta_vs_raw": 0.0039051610771009826,
+            "bucket": "early_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.002056955440576269,
+            "bucket": "late_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.0034086053159220753,
+            "bucket": "shadow_rejected_actionable",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.0005709364375864334,
+            "bucket": "near_strike_abs_d_lte_025",
+            "settled": 79
+          },
+          {
+            "brier_delta_vs_raw": 0.005662743102203743,
+            "bucket": "away_from_strike_abs_d_gt_025",
+            "settled": 71
+          },
+          {
+            "brier_delta_vs_raw": 0.0034538884007526693,
+            "bucket": "high_recross",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.003001065361246974,
+            "bucket": "spectral_dominant_factor",
+            "settled": 149
+          },
+          {
+            "brier_delta_vs_raw": 0.005883667616128879,
+            "bucket": "raw_p_60_plus",
+            "settled": 76
+          },
+          {
+            "brier_delta_vs_raw": 0.00520517141085719,
+            "bucket": "ask_lte_60",
+            "settled": 105
+          }
+        ],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.11001006365782584,
+        "entries": 150,
+        "logloss_delta_vs_raw": 0.004515305127756997,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "entry_conditioned_logit125_p60_only_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "entry_conditioned_logit125_p60_only_probability",
+      "physics": "Conditional conviction sharpening: keep weak 50-60% rows raw, sharpen only p>=60% rows.",
+      "ready": false
+    },
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_brier_not_better_than_raw",
+        "forward_logloss_not_better_than_raw",
+        "discovery_brier_not_better_than_raw",
+        "discovery_logloss_not_better_than_raw",
+        "forward_bucket_failure",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.22627037424370602,
+        "avg_logloss": 0.634658227534248,
+        "avg_p": 0.650161591575997,
+        "brier_delta_vs_raw": 0.0022755488567699766,
+        "count": 172,
+        "ece_10bucket": 0.07841492663293712,
+        "ece_delta_vs_raw": 0.014179141749216195,
+        "logloss_delta_vs_raw": 0.0027615184026530404,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "entry_conditioned_logit125_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.23344281970077232,
+        "avg_logloss": 0.650139845105224,
+        "avg_p": 0.6495662210057602,
+        "blockers": [
+          "coverage_too_high",
+          "brier_not_better_than_raw",
+          "bucket_brier_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": 0.003343684183032325,
+        "bucket_stability_failures": [
+          {
+            "brier_delta_vs_raw": 0.003343684183032325,
+            "bucket": "all",
+            "settled": 150
+          },
+          {
+            "brier_delta_vs_raw": 0.004714942455718962,
+            "bucket": "early_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.001972425910345743,
+            "bucket": "late_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.003788982159481924,
+            "bucket": "shadow_rejected_actionable",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.001951675335352343,
+            "bucket": "near_strike_abs_d_lte_025",
+            "settled": 79
+          },
+          {
+            "brier_delta_vs_raw": 0.004892539098056564,
+            "bucket": "away_from_strike_abs_d_gt_025",
+            "settled": 71
+          },
+          {
+            "brier_delta_vs_raw": 0.0038342652443124903,
+            "bucket": "high_recross",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.0033184886302261296,
+            "bucket": "spectral_dominant_factor",
+            "settled": 149
+          },
+          {
+            "brier_delta_vs_raw": 0.0007350525490412707,
+            "bucket": "raw_p_50_60",
+            "settled": 74
+          },
+          {
+            "brier_delta_vs_raw": 0.005883667616128879,
+            "bucket": "raw_p_60_plus",
+            "settled": 76
+          },
+          {
+            "brier_delta_vs_raw": 0.005723208445419625,
+            "bucket": "ask_lte_60",
+            "settled": 105
+          }
+        ],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.11555451037797974,
+        "entries": 150,
+        "logloss_delta_vs_raw": 0.005195227233231292,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "entry_conditioned_logit125_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "entry_conditioned_logit125_probability",
+      "physics": "Conviction sharpening: lift high-confidence rows more than weak rows without changing side.",
+      "ready": false
+    },
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_brier_not_better_than_raw",
+        "forward_logloss_not_better_than_raw",
+        "discovery_brier_not_better_than_raw",
+        "discovery_logloss_not_better_than_raw",
+        "forward_bucket_failure",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.2272403077729884,
+        "avg_logloss": 0.6371276060922101,
+        "avg_p": 0.6562807906976744,
+        "brier_delta_vs_raw": 0.0032454823860523507,
+        "count": 172,
+        "ece_10bucket": 0.08229777906976747,
+        "ece_delta_vs_raw": 0.01806199418604655,
+        "logloss_delta_vs_raw": 0.005230896960615072,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "entry_conditioned_plus03_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.23532351238708,
+        "avg_logloss": 0.6544005391016005,
+        "avg_p": 0.65538348,
+        "blockers": [
+          "coverage_too_high",
+          "brier_not_better_than_raw",
+          "bucket_brier_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": 0.005224376869339992,
+        "bucket_stability_failures": [
+          {
+            "brier_delta_vs_raw": 0.005224376869339992,
+            "bucket": "all",
+            "settled": 150
+          },
+          {
+            "brier_delta_vs_raw": 0.004262352938679992,
+            "bucket": "early_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.006186400799999964,
+            "bucket": "late_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.005702956783216834,
+            "bucket": "shadow_rejected_actionable",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.005818736202531649,
+            "bucket": "near_strike_abs_d_lte_025",
+            "settled": 79
+          },
+          {
+            "brier_delta_vs_raw": 0.004563047470436621,
+            "bucket": "away_from_strike_abs_d_gt_025",
+            "settled": 71
+          },
+          {
+            "brier_delta_vs_raw": 0.005727023496503503,
+            "bucket": "high_recross",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.005041246378530234,
+            "bucket": "spectral_dominant_factor",
+            "settled": 149
+          },
+          {
+            "brier_delta_vs_raw": 0.004456944324324336,
+            "bucket": "raw_p_50_60",
+            "settled": 74
+          },
+          {
+            "brier_delta_vs_raw": 0.005971613821065785,
+            "bucket": "raw_p_60_plus",
+            "settled": 76
+          },
+          {
+            "brier_delta_vs_raw": 0.008304591999999944,
+            "bucket": "ask_lte_60",
+            "settled": 105
+          }
+        ],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.11991388000000003,
+        "entries": 150,
+        "logloss_delta_vs_raw": 0.0094559212296077,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "entry_conditioned_plus03_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "entry_conditioned_plus03_probability",
+      "physics": "Small posterior lift after executable raw edge clears.",
+      "ready": false
+    },
+    {
+      "blockers": [
+        "forward_coverage_too_high",
+        "forward_brier_not_better_than_raw",
+        "forward_logloss_not_better_than_raw",
+        "discovery_brier_not_better_than_raw",
+        "discovery_logloss_not_better_than_raw",
+        "forward_bucket_failure",
+        "forward_path_contradiction_loss"
+      ],
+      "discovery": {
+        "avg_brier": 0.2304008419590349,
+        "avg_logloss": 0.643019051628933,
+        "avg_p": 0.676164511627907,
+        "brier_delta_vs_raw": 0.006406016572098855,
+        "count": 172,
+        "ece_10bucket": 0.10314161627906984,
+        "ece_delta_vs_raw": 0.03890583139534892,
+        "logloss_delta_vs_raw": 0.011122342497338011,
+        "net_cents_after_entry_fee": -81.0,
+        "overlay": "entry_conditioned_plus05_probability",
+        "win_rate": 0.5872093023255814
+      },
+      "forward": {
+        "avg_brier": 0.2398028518537467,
+        "avg_logloss": 0.6631762176242089,
+        "avg_p": 0.6752501466666667,
+        "blockers": [
+          "coverage_too_high",
+          "brier_not_better_than_raw",
+          "bucket_brier_not_better_than_raw"
+        ],
+        "brier_delta_vs_raw": 0.009703716336006696,
+        "bucket_stability_failures": [
+          {
+            "brier_delta_vs_raw": 0.009703716336006696,
+            "bucket": "all",
+            "settled": 150
+          },
+          {
+            "brier_delta_vs_raw": 0.008096764672013396,
+            "bucket": "early_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.011310667999999996,
+            "bucket": "late_markets",
+            "settled": 75
+          },
+          {
+            "brier_delta_vs_raw": 0.010504927972028011,
+            "bucket": "shadow_rejected_actionable",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.010697893670886083,
+            "bucket": "near_strike_abs_d_lte_025",
+            "settled": 79
+          },
+          {
+            "brier_delta_vs_raw": 0.00859751901973238,
+            "bucket": "away_from_strike_abs_d_gt_025",
+            "settled": 71
+          },
+          {
+            "brier_delta_vs_raw": 0.010545039160839181,
+            "bucket": "high_recross",
+            "settled": 143
+          },
+          {
+            "brier_delta_vs_raw": 0.009398474834906079,
+            "bucket": "spectral_dominant_factor",
+            "settled": 149
+          },
+          {
+            "brier_delta_vs_raw": 0.00842824054054056,
+            "bucket": "raw_p_50_60",
+            "settled": 74
+          },
+          {
+            "brier_delta_vs_raw": 0.010945626978960538,
+            "bucket": "raw_p_60_plus",
+            "settled": 76
+          },
+          {
+            "brier_delta_vs_raw": 0.014840986666666611,
+            "bucket": "ask_lte_60",
+            "settled": 105
+          }
+        ],
+        "count": 150,
+        "coverage_pct": 98.68421052631578,
+        "ece_10bucket": 0.14004394666666672,
+        "entries": 150,
+        "logloss_delta_vs_raw": 0.01823159975221611,
+        "net_cents_after_entry_fee": -1009.0,
+        "overlay": "entry_conditioned_plus05_probability",
+        "settled": 150,
+        "win_rate": 0.5533333333333333
+      },
+      "overlay": "entry_conditioned_plus05_probability",
+      "physics": "Original posterior lift candidate; fresh rows suggest it over-lifts weak states.",
+      "ready": false
+    }
+  ],
+  "data_quality_pass": true,
+  "entry_surface": "v28_raw_p50_edge0_fixed_selection",
+  "forward_market_denominator": 152,
+  "freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+  "future_entry_rows": 150,
+  "path_contradiction": {
+    "blockers": [],
+    "later_opposite_approval_rows": 44,
+    "settled_later_opposite_selected_losses": 35
+  },
+  "requirements": [
+    "same fixed raw-v28 p50 entry surface",
+    "at least 30 settled forward rows",
+    "70-90% forward market coverage",
+    "forward Brier and logloss better than raw",
+    "discovery Brier and logloss better than raw",
+    "no eligible forward physics bucket failure",
+    "data-quality pass",
+    "no unresolved/losing later-opposite path contradiction"
+  ]
+}

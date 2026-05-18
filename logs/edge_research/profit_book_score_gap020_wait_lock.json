@@ -1,0 +1,55 @@
+{
+  "anchor_lock": "logs\\edge_research\\profit_frontier_book_margin_lock.json",
+  "anchor_policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "created_utc": "2026-05-04T02:40:00+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.7720588235294118,
+    "current_all_coverage": 0.9819494584837545,
+    "current_all_net_pnl_cents": 1654.0,
+    "current_delta_vs_anchor_cents": 442.0,
+    "current_holdout_net_pnl_cents": 210.0,
+    "current_train_net_pnl_cents": 802.0,
+    "current_validation_net_pnl_cents": 642.0,
+    "min_oos_net_roi": 0.05134474327628362,
+    "v21_all_accuracy": 0.7351598173515982,
+    "v21_all_coverage": 0.9909502262443439,
+    "v21_all_net_pnl_cents": 493.0,
+    "v21_delta_vs_anchor_cents": 68.0,
+    "v21_holdout_net_pnl_cents": 179.0,
+    "v21_train_net_pnl_cents": -84.0,
+    "v21_validation_net_pnl_cents": 398.0
+  },
+  "lock_close_dt": "2026-05-04T02:45:00+00:00",
+  "reference_lock": "logs\\edge_research\\profit_frontier_score_min60_gap020_lock.json",
+  "reference_policy": {
+    "ask_max": 95.0,
+    "chooser": "score_min_book_rv15",
+    "gate": "none",
+    "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120; abs_book_rv15_gap<=0.20",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "reference_veto": {
+    "feature": "abs_book_rv15_gap",
+    "op": "<=",
+    "threshold": 0.2
+  },
+  "research_note": "Forward-registered from book_to_score_wait_scan_latest.csv after the 22:30 EDT settlement. Causal rule: start from the high-coverage book_margin anchor, but when the anchor appears with at least 480 seconds to close, wait for the first later score_min60 row that passes the 20 percentage point book/Brownian coherence veto. Diagnostic only; the v21 train split remains negative, so promotion requires strict pre-resolution live evidence and sample size.",
+  "source_scan_csv": "logs\\edge_research\\book_to_score_wait_scan_latest.csv",
+  "wait_rule": {
+    "condition": {
+      "feature": "seconds_to_close",
+      "op": ">=",
+      "threshold": 480.0
+    },
+    "label": "book_margin_wait_for_score_min60_gap020_enter_ref_if_seconds_to_close>=480",
+    "mode": "enter_ref"
+  }
+}

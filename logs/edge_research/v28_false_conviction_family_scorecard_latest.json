@@ -1,0 +1,594 @@
+{
+  "current_direction": [
+    "Lead with early boundary/high-recross false-conviction filtering, not broad FV sharpening.",
+    "Best forward target-coverage evidence is false_conviction_fv_entry_bridge with settled 70, net 762.0c, coverage 75.26881720430107.",
+    "Goldilocks edge is promising only as a diagnostic: 63.0c net at 75.40983606557377% coverage, but frozen future rows are 48.",
+    "FV-entry bridge approved-only diagnostic support is 321.0c net on 70 settled rows; this is weaker than the all-source/reconstructed read and remains non-promotable.",
+    "No false-conviction family candidate currently clears integrity gates."
+  ],
+  "integrity_pass_count": 0,
+  "purpose": "Family-level scorecard for the selected false-conviction direction.",
+  "ranked": [
+    {
+      "avg_net_cents": 10.885714285714286,
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.26881720430107,
+      "delta_vs_target_cents": 1172.0,
+      "diagnostic": {
+        "brier_delta_vs_raw": -0.04173807020140999,
+        "coverage_pct": 75.22123893805309,
+        "delta_vs_target_cents": 782.0,
+        "entries": 85,
+        "label": "first_eligible_top75_escape_energy+escape_edge8_or_p70_or_far_edge4+false_zone_to_book",
+        "logloss_delta_vs_raw": -0.09319156732466172,
+        "losses": 25,
+        "net_cents": 304.0,
+        "reconstructed_share": 0.8588235294117647,
+        "settled": 85,
+        "source_quality": {
+          "diagnostic_all_sources": {
+            "approved_entries": 8,
+            "blockers": [
+              "net_not_positive",
+              "reconstructed_share_gt_35pct"
+            ],
+            "coverage_pct": 80.53097345132744,
+            "entries": 91,
+            "losses": 31,
+            "net_cents": -407.0,
+            "reconstructed_entries": 83,
+            "reconstructed_share": 0.9120879120879121,
+            "settled": 91,
+            "wins": 60
+          },
+          "diagnostic_approved_only": {
+            "approved_entries": 70,
+            "blockers": [
+              "coverage_too_low"
+            ],
+            "coverage_pct": 61.94690265486726,
+            "entries": 70,
+            "losses": 8,
+            "net_cents": 321.0,
+            "reconstructed_entries": 0,
+            "reconstructed_share": 0.0,
+            "settled": 70,
+            "wins": 62
+          },
+          "post_freeze_all_sources": {
+            "approved_entries": 8,
+            "blockers": [
+              "net_not_positive",
+              "reconstructed_share_gt_35pct"
+            ],
+            "coverage_pct": 80.64516129032258,
+            "entries": 75,
+            "losses": 28,
+            "net_cents": -765.0,
+            "reconstructed_entries": 67,
+            "reconstructed_share": 0.8933333333333333,
+            "settled": 75,
+            "wins": 47
+          },
+          "post_freeze_approved_only": {
+            "approved_entries": 51,
+            "blockers": [
+              "coverage_too_low"
+            ],
+            "coverage_pct": 54.83870967741935,
+            "entries": 51,
+            "losses": 5,
+            "net_cents": 241.0,
+            "reconstructed_entries": 0,
+            "reconstructed_share": 0.0,
+            "settled": 51,
+            "wins": 46
+          }
+        },
+        "warnings": [
+          "Bridge diagnostic is direction-only; post-freeze window must mature before promotion.",
+          "Best diagnostic bridge row: first_eligible_top75_escape_energy+escape_edge8_or_p70_or_far_edge4+false_zone_to_book"
+        ],
+        "wins": 60
+      },
+      "entries": 70,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 22,
+      "mode": "fv_bridge_diagnostic_plus_frozen",
+      "name": "false_conviction_fv_entry_bridge",
+      "net_cents": 762.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_false_conviction_fv_entry_bridge_latest.json",
+      "physics": "Move false-conviction and phi/recross forgetting into FV before entry selection, then thin to the 75-80% coverage band by escape energy.",
+      "reconstructed_share": 0.9142857142857143,
+      "settled": 70,
+      "warnings": [
+        "diagnostic_existing_false_conviction_freeze: best raw_probability entries/settled/coverage/net 91/91/80.53097345132744/383.0c; blockers [].",
+        "post_freeze_candidate: best false_zone_half_to_50 entries/settled/coverage/net 70/70/75.26881720430107/762.0c; blockers [].",
+        "Use the diagnostic window only for direction; promotion depends on the post-freeze window."
+      ],
+      "wins": 48
+    },
+    {
+      "avg_net_cents": 0.3176470588235294,
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 75.22123893805309,
+      "delta_vs_target_cents": 84.0,
+      "diagnostic": null,
+      "entries": 85,
+      "full_loss_cushion": 0,
+      "integrity_pass": false,
+      "losses": 29,
+      "mode": "frozen_forward_stress",
+      "name": "early_no_boundary_decay_repair",
+      "net_cents": 27.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_early_no_boundary_decay_repair_stress_latest.json",
+      "physics": "Early NO near-boundary/high-recross entries decay because the path can recross before close.",
+      "reconstructed_share": 0.6941176470588235,
+      "settled": 85,
+      "warnings": [
+        "All avoided danger rows are reconstructed rejected-actionable rows so far; this is useful physics evidence, but not enough live-approved proof.",
+        "11 repair rows are reconstructed; check approved-only repair performance before promotion."
+      ],
+      "wins": 56
+    },
+    {
+      "avg_net_cents": -1.0120481927710843,
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 75.45454545454545,
+      "delta_vs_target_cents": -184.0,
+      "diagnostic": null,
+      "entries": 83,
+      "full_loss_cushion": 0,
+      "integrity_pass": false,
+      "losses": 28,
+      "mode": "frozen_forward_stress",
+      "name": "composite_false_conviction_repair",
+      "net_cents": -84.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_composite_false_conviction_repair_stress_latest.json",
+      "physics": "Broader false-conviction zone removes early boundary, cheap turbulence, and mid-edge traps.",
+      "reconstructed_share": 0.6626506024096386,
+      "settled": 83,
+      "warnings": [
+        "All avoided danger rows are reconstructed rejected-actionable rows so far; this is not enough live-approved proof.",
+        "13 repair rows are reconstructed; approved-only repair behavior must stay acceptable.",
+        "Three ordinary full losses would erase current positive net."
+      ],
+      "wins": 55
+    },
+    {
+      "avg_net_cents": -1.875,
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 75.38461538461539,
+      "delta_vs_target_cents": -310.0,
+      "diagnostic": {
+        "coverage_pct": 75.40983606557377,
+        "delta_vs_target_cents": 495.0,
+        "entries": 92,
+        "losses": 31,
+        "net_cents": 63.0,
+        "reconstructed_share": 0.9347826086956522,
+        "settled": 92,
+        "warnings": [
+          "All avoided danger rows are reconstructed rejected-actionable rows so far.",
+          "39 repair rows are reconstructed.",
+          "Two ordinary full losses would erase current positive net."
+        ],
+        "wins": 61
+      },
+      "entries": 49,
+      "full_loss_cushion": 0,
+      "integrity_pass": false,
+      "losses": 18,
+      "mode": "diagnostic_plus_frozen",
+      "name": "goldilocks_edge_repair",
+      "net_cents": -90.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_goldilocks_edge_repair_stress_latest.json",
+      "physics": "Raw edge is non-monotonic near high-recross boundaries; modest book/model agreement can beat large apparent edge.",
+      "reconstructed_share": 0.9387755102040817,
+      "settled": 48,
+      "warnings": [
+        "All avoided danger rows are reconstructed rejected-actionable rows so far.",
+        "16 repair rows are reconstructed.",
+        "Two ordinary full losses would erase current positive net."
+      ],
+      "wins": 30
+    },
+    {
+      "avg_net_cents": -3.2285714285714286,
+      "blockers": [
+        "net_not_positive",
+        "source_mix_unknown",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.26881720430107,
+      "delta_vs_target_cents": null,
+      "diagnostic": null,
+      "entries": 70,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 25,
+      "mode": "frozen_forward_source_quality",
+      "name": "false_conviction_approved_repair",
+      "net_cents": -226.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_false_conviction_approved_repair_latest.json",
+      "physics": "Approved-entry-heavy repair tests whether false-conviction filtering survives without depending on rejected-actionable reconstruction.",
+      "reconstructed_share": null,
+      "settled": 70,
+      "warnings": [
+        "Frozen approved-heavy candidate denominator 93, entries 70, settled 70, coverage 75.26881720430107, net -226.0c.",
+        "Reconstructed share is 0.6857142857142857.",
+        "Blockers: net_not_positive, reconstructed_share_gt_35pct."
+      ],
+      "wins": 45
+    },
+    {
+      "avg_net_cents": -5.130952380952381,
+      "blockers": [
+        "net_not_positive",
+        "source_mix_unknown",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_target_cents": -486.0,
+      "diagnostic": null,
+      "entries": 84,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 34,
+      "mode": "frozen_forward",
+      "name": "mid_edge_boundary_deception_repair",
+      "net_cents": -431.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_boundary_deception_repair_entry_latest.json",
+      "physics": "Early high-recross 4-8pp edge rows can be overconfident boundary deception.",
+      "reconstructed_share": null,
+      "settled": 84,
+      "warnings": [
+        "Future candidate has 84 entries and 84 settled rows.",
+        "Candidate net is -431.0c versus target 55.0c.",
+        "Mid-edge boundary-deception rows removed: 13; repair rows added: 15.",
+        "Promotion blockers: net_not_positive."
+      ],
+      "wins": 50
+    },
+    {
+      "avg_net_cents": -8.5,
+      "blockers": [
+        "net_not_positive",
+        "source_mix_unknown",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.43859649122807,
+      "delta_vs_target_cents": -588.0,
+      "diagnostic": null,
+      "entries": 86,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 36,
+      "mode": "frozen_forward",
+      "name": "target_loss_tag_repair",
+      "net_cents": -731.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_loss_tag_repair_entry_latest.json",
+      "physics": "Skip weak boundary turbulence and paid high-price thin-edge rows, then repair with cleaner rows.",
+      "reconstructed_share": null,
+      "settled": 86,
+      "warnings": [
+        "Future candidate has 86 entries and 86 settled rows.",
+        "Candidate net is -731.0c versus target -143.0c.",
+        "Target-loss rows removed: 28; repair rows added: 30.",
+        "Promotion blockers: net_not_positive."
+      ],
+      "wins": 50
+    }
+  ],
+  "requirements": {
+    "coverage_band": [
+      75.0,
+      90.0
+    ],
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30
+  },
+  "rows": [
+    {
+      "avg_net_cents": 0.3176470588235294,
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 75.22123893805309,
+      "delta_vs_target_cents": 84.0,
+      "diagnostic": null,
+      "entries": 85,
+      "full_loss_cushion": 0,
+      "integrity_pass": false,
+      "losses": 29,
+      "mode": "frozen_forward_stress",
+      "name": "early_no_boundary_decay_repair",
+      "net_cents": 27.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_early_no_boundary_decay_repair_stress_latest.json",
+      "physics": "Early NO near-boundary/high-recross entries decay because the path can recross before close.",
+      "reconstructed_share": 0.6941176470588235,
+      "settled": 85,
+      "warnings": [
+        "All avoided danger rows are reconstructed rejected-actionable rows so far; this is useful physics evidence, but not enough live-approved proof.",
+        "11 repair rows are reconstructed; check approved-only repair performance before promotion."
+      ],
+      "wins": 56
+    },
+    {
+      "avg_net_cents": -1.0120481927710843,
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 75.45454545454545,
+      "delta_vs_target_cents": -184.0,
+      "diagnostic": null,
+      "entries": 83,
+      "full_loss_cushion": 0,
+      "integrity_pass": false,
+      "losses": 28,
+      "mode": "frozen_forward_stress",
+      "name": "composite_false_conviction_repair",
+      "net_cents": -84.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_composite_false_conviction_repair_stress_latest.json",
+      "physics": "Broader false-conviction zone removes early boundary, cheap turbulence, and mid-edge traps.",
+      "reconstructed_share": 0.6626506024096386,
+      "settled": 83,
+      "warnings": [
+        "All avoided danger rows are reconstructed rejected-actionable rows so far; this is not enough live-approved proof.",
+        "13 repair rows are reconstructed; approved-only repair behavior must stay acceptable.",
+        "Three ordinary full losses would erase current positive net."
+      ],
+      "wins": 55
+    },
+    {
+      "avg_net_cents": -1.875,
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 75.38461538461539,
+      "delta_vs_target_cents": -310.0,
+      "diagnostic": {
+        "coverage_pct": 75.40983606557377,
+        "delta_vs_target_cents": 495.0,
+        "entries": 92,
+        "losses": 31,
+        "net_cents": 63.0,
+        "reconstructed_share": 0.9347826086956522,
+        "settled": 92,
+        "warnings": [
+          "All avoided danger rows are reconstructed rejected-actionable rows so far.",
+          "39 repair rows are reconstructed.",
+          "Two ordinary full losses would erase current positive net."
+        ],
+        "wins": 61
+      },
+      "entries": 49,
+      "full_loss_cushion": 0,
+      "integrity_pass": false,
+      "losses": 18,
+      "mode": "diagnostic_plus_frozen",
+      "name": "goldilocks_edge_repair",
+      "net_cents": -90.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_goldilocks_edge_repair_stress_latest.json",
+      "physics": "Raw edge is non-monotonic near high-recross boundaries; modest book/model agreement can beat large apparent edge.",
+      "reconstructed_share": 0.9387755102040817,
+      "settled": 48,
+      "warnings": [
+        "All avoided danger rows are reconstructed rejected-actionable rows so far.",
+        "16 repair rows are reconstructed.",
+        "Two ordinary full losses would erase current positive net."
+      ],
+      "wins": 30
+    },
+    {
+      "avg_net_cents": -3.2285714285714286,
+      "blockers": [
+        "net_not_positive",
+        "source_mix_unknown",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.26881720430107,
+      "delta_vs_target_cents": null,
+      "diagnostic": null,
+      "entries": 70,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 25,
+      "mode": "frozen_forward_source_quality",
+      "name": "false_conviction_approved_repair",
+      "net_cents": -226.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_false_conviction_approved_repair_latest.json",
+      "physics": "Approved-entry-heavy repair tests whether false-conviction filtering survives without depending on rejected-actionable reconstruction.",
+      "reconstructed_share": null,
+      "settled": 70,
+      "warnings": [
+        "Frozen approved-heavy candidate denominator 93, entries 70, settled 70, coverage 75.26881720430107, net -226.0c.",
+        "Reconstructed share is 0.6857142857142857.",
+        "Blockers: net_not_positive, reconstructed_share_gt_35pct."
+      ],
+      "wins": 45
+    },
+    {
+      "avg_net_cents": 10.885714285714286,
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.26881720430107,
+      "delta_vs_target_cents": 1172.0,
+      "diagnostic": {
+        "brier_delta_vs_raw": -0.04173807020140999,
+        "coverage_pct": 75.22123893805309,
+        "delta_vs_target_cents": 782.0,
+        "entries": 85,
+        "label": "first_eligible_top75_escape_energy+escape_edge8_or_p70_or_far_edge4+false_zone_to_book",
+        "logloss_delta_vs_raw": -0.09319156732466172,
+        "losses": 25,
+        "net_cents": 304.0,
+        "reconstructed_share": 0.8588235294117647,
+        "settled": 85,
+        "source_quality": {
+          "diagnostic_all_sources": {
+            "approved_entries": 8,
+            "blockers": [
+              "net_not_positive",
+              "reconstructed_share_gt_35pct"
+            ],
+            "coverage_pct": 80.53097345132744,
+            "entries": 91,
+            "losses": 31,
+            "net_cents": -407.0,
+            "reconstructed_entries": 83,
+            "reconstructed_share": 0.9120879120879121,
+            "settled": 91,
+            "wins": 60
+          },
+          "diagnostic_approved_only": {
+            "approved_entries": 70,
+            "blockers": [
+              "coverage_too_low"
+            ],
+            "coverage_pct": 61.94690265486726,
+            "entries": 70,
+            "losses": 8,
+            "net_cents": 321.0,
+            "reconstructed_entries": 0,
+            "reconstructed_share": 0.0,
+            "settled": 70,
+            "wins": 62
+          },
+          "post_freeze_all_sources": {
+            "approved_entries": 8,
+            "blockers": [
+              "net_not_positive",
+              "reconstructed_share_gt_35pct"
+            ],
+            "coverage_pct": 80.64516129032258,
+            "entries": 75,
+            "losses": 28,
+            "net_cents": -765.0,
+            "reconstructed_entries": 67,
+            "reconstructed_share": 0.8933333333333333,
+            "settled": 75,
+            "wins": 47
+          },
+          "post_freeze_approved_only": {
+            "approved_entries": 51,
+            "blockers": [
+              "coverage_too_low"
+            ],
+            "coverage_pct": 54.83870967741935,
+            "entries": 51,
+            "losses": 5,
+            "net_cents": 241.0,
+            "reconstructed_entries": 0,
+            "reconstructed_share": 0.0,
+            "settled": 51,
+            "wins": 46
+          }
+        },
+        "warnings": [
+          "Bridge diagnostic is direction-only; post-freeze window must mature before promotion.",
+          "Best diagnostic bridge row: first_eligible_top75_escape_energy+escape_edge8_or_p70_or_far_edge4+false_zone_to_book"
+        ],
+        "wins": 60
+      },
+      "entries": 70,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 22,
+      "mode": "fv_bridge_diagnostic_plus_frozen",
+      "name": "false_conviction_fv_entry_bridge",
+      "net_cents": 762.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_false_conviction_fv_entry_bridge_latest.json",
+      "physics": "Move false-conviction and phi/recross forgetting into FV before entry selection, then thin to the 75-80% coverage band by escape energy.",
+      "reconstructed_share": 0.9142857142857143,
+      "settled": 70,
+      "warnings": [
+        "diagnostic_existing_false_conviction_freeze: best raw_probability entries/settled/coverage/net 91/91/80.53097345132744/383.0c; blockers [].",
+        "post_freeze_candidate: best false_zone_half_to_50 entries/settled/coverage/net 70/70/75.26881720430107/762.0c; blockers [].",
+        "Use the diagnostic window only for direction; promotion depends on the post-freeze window."
+      ],
+      "wins": 48
+    },
+    {
+      "avg_net_cents": -8.5,
+      "blockers": [
+        "net_not_positive",
+        "source_mix_unknown",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.43859649122807,
+      "delta_vs_target_cents": -588.0,
+      "diagnostic": null,
+      "entries": 86,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 36,
+      "mode": "frozen_forward",
+      "name": "target_loss_tag_repair",
+      "net_cents": -731.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_target_loss_tag_repair_entry_latest.json",
+      "physics": "Skip weak boundary turbulence and paid high-price thin-edge rows, then repair with cleaner rows.",
+      "reconstructed_share": null,
+      "settled": 86,
+      "warnings": [
+        "Future candidate has 86 entries and 86 settled rows.",
+        "Candidate net is -731.0c versus target -143.0c.",
+        "Target-loss rows removed: 28; repair rows added: 30.",
+        "Promotion blockers: net_not_positive."
+      ],
+      "wins": 50
+    },
+    {
+      "avg_net_cents": -5.130952380952381,
+      "blockers": [
+        "net_not_positive",
+        "source_mix_unknown",
+        "full_loss_cushion_unknown"
+      ],
+      "coverage_pct": 75.0,
+      "delta_vs_target_cents": -486.0,
+      "diagnostic": null,
+      "entries": 84,
+      "full_loss_cushion": null,
+      "integrity_pass": false,
+      "losses": 34,
+      "mode": "frozen_forward",
+      "name": "mid_edge_boundary_deception_repair",
+      "net_cents": -431.0,
+      "path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_mid_edge_boundary_deception_repair_entry_latest.json",
+      "physics": "Early high-recross 4-8pp edge rows can be overconfident boundary deception.",
+      "reconstructed_share": null,
+      "settled": 84,
+      "warnings": [
+        "Future candidate has 84 entries and 84 settled rows.",
+        "Candidate net is -431.0c versus target 55.0c.",
+        "Mid-edge boundary-deception rows removed: 13; repair rows added: 15.",
+        "Promotion blockers: net_not_positive."
+      ],
+      "wins": 50
+    }
+  ]
+}

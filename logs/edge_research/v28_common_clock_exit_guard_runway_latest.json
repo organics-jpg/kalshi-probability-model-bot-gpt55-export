@@ -1,0 +1,117 @@
+{
+  "best_window": {
+    "blockers_from_source": [
+      "suppressed_decisions_lt_30"
+    ],
+    "candidate_cents": 692.0,
+    "candidate_wl": "33/13",
+    "current_cents": 478.0,
+    "current_wl": "31/15",
+    "delta_vs_current_cents": 214.0,
+    "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+    "full_loss_cushion": 6,
+    "harmful_suppressed_rows": 0,
+    "helpful_suppressed_rows": 13,
+    "loss_control_cost_cents": 0.0,
+    "missing_gates": [
+      "live_ready_false",
+      "suppressed_needed_17"
+    ],
+    "review_ready_except_global_live": false,
+    "settled": 46,
+    "suppressed_exits": 13,
+    "window": "new_exit_mix_common_forward_v3"
+  },
+  "decision": "wait_for_forward_density",
+  "generated_at_utc": "2026-05-07T21:28:21.651048+00:00",
+  "interpretation": [
+    "Best strict window is new_exit_mix_common_forward_v3 with 13 suppressions, 214.0c delta, 0 harmful suppressions, and missing gates ['live_ready_false', 'suppressed_needed_17'].",
+    "Next concrete requirement: collect 17 more strict suppressions without adding harmful holds."
+  ],
+  "live_baseline_cents": 1361.0,
+  "purpose": "Strict-forward runway for the nearest full-policy exit candidate. Research-only; no orders.",
+  "requirements": {
+    "min_full_loss_cushion": 3,
+    "min_settled": 30,
+    "min_suppressed_decisions": 30,
+    "non_negative_loss_control_cost": true,
+    "zero_harmful_suppressed_rows": true
+  },
+  "sources": {
+    "common_clock": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_policy_common_clock_watch_latest.json",
+    "full_policy": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_full_policy_candidate_scorecard_latest.json",
+    "live_summary": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\summary.json"
+  },
+  "strict_windows": [
+    {
+      "blockers_from_source": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_cents": 692.0,
+      "candidate_wl": "33/13",
+      "current_cents": 478.0,
+      "current_wl": "31/15",
+      "delta_vs_current_cents": 214.0,
+      "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+      "full_loss_cushion": 6,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 13,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_needed_17"
+      ],
+      "review_ready_except_global_live": false,
+      "settled": 46,
+      "suppressed_exits": 13,
+      "window": "new_exit_mix_common_forward_v3"
+    },
+    {
+      "blockers_from_source": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_cents": 668.0,
+      "candidate_wl": "41/17",
+      "current_cents": 426.0,
+      "current_wl": "39/19",
+      "delta_vs_current_cents": 242.0,
+      "freeze_ts_utc": "2026-05-06T22:01:04.415577+00:00",
+      "full_loss_cushion": 6,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 17,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_needed_13"
+      ],
+      "review_ready_except_global_live": false,
+      "settled": 58,
+      "suppressed_exits": 17,
+      "window": "new_exit_mix_common_forward_v2"
+    },
+    {
+      "blockers_from_source": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_cents": 582.0,
+      "candidate_wl": "41/18",
+      "current_cents": 340.0,
+      "current_wl": "39/20",
+      "delta_vs_current_cents": 242.0,
+      "freeze_ts_utc": "2026-05-06T21:29:32.710906+00:00",
+      "full_loss_cushion": 5,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 17,
+      "loss_control_cost_cents": 0.0,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_needed_13"
+      ],
+      "review_ready_except_global_live": false,
+      "settled": 59,
+      "suppressed_exits": 17,
+      "window": "new_exit_mix_common_forward_v1"
+    }
+  ],
+  "target_policy": "loss_guard_value_p85_reduce_p79_gap0"
+}

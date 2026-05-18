@@ -1,0 +1,342 @@
+{
+  "generated_at_utc": "2026-05-11T03:42:25.356178+00:00",
+  "interpretation": [
+    "This audit is explanatory only; it does not clear live-readiness or weaken the risk stop.",
+    "Risk stop is True by loss-count=True and drawdown=False.",
+    "Control window is net positive 823.0c with max drawdown -196.0c (15.360501567398119%).",
+    "Losses are 75 of 173 scored trades; full-loss events are 1 and 50-99c near-full losses are 6.",
+    "The active blocker is churn/loss-count, not current drawdown-account-survival failure. Candidate exits still need to reduce loss clusters before any sidecar trial."
+  ],
+  "largest_losing_trades": [
+    {
+      "entry_ts": "2026-05-07T00:13:29.676269+00:00",
+      "exit_value_cents": 0,
+      "failure_class": "fv_or_entry_timing_error",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -134,
+      "hold_gross_cents": -134,
+      "market": "KXBTC15M-26MAY062015-15",
+      "result": "no",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-05T22:23:23.870507+00:00",
+      "exit_value_cents": 68,
+      "failure_class": "fv_or_entry_timing_error",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -92,
+      "hold_gross_cents": -160,
+      "market": "KXBTC15M-26MAY051830-30",
+      "result": "yes",
+      "side": "no"
+    },
+    {
+      "entry_ts": "2026-05-06T21:48:44.171608+00:00",
+      "exit_value_cents": -152,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh",
+        "h6_recross_hazard_high"
+      ],
+      "gross_cents": -86,
+      "hold_gross_cents": 66,
+      "market": "KXBTC15M-26MAY061800-00",
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "entry_ts": "2026-05-06T12:52:10.686314+00:00",
+      "exit_value_cents": 80,
+      "failure_class": "fv_or_entry_timing_error",
+      "flags": [
+        "h1_feed_fresh",
+        "h6_recross_hazard_high"
+      ],
+      "gross_cents": -76,
+      "hold_gross_cents": -156,
+      "market": "KXBTC15M-26MAY060900-00",
+      "result": "no",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-06T11:40:26.802021+00:00",
+      "exit_value_cents": 86,
+      "failure_class": "fv_or_entry_timing_error",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -70,
+      "hold_gross_cents": -156,
+      "market": "KXBTC15M-26MAY060745-45",
+      "result": "no",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-07T00:10:50.463746+00:00",
+      "exit_value_cents": -176,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -60,
+      "hold_gross_cents": 116,
+      "market": "KXBTC15M-26MAY062015-15",
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "entry_ts": "2026-05-06T07:23:07.902567+00:00",
+      "exit_value_cents": -94,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh",
+        "h2_crowded_depth"
+      ],
+      "gross_cents": -52,
+      "hold_gross_cents": 42,
+      "market": "KXBTC15M-26MAY060330-30",
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-05T21:12:23.873470+00:00",
+      "exit_value_cents": 90,
+      "failure_class": "fv_or_entry_timing_error",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -48,
+      "hold_gross_cents": -138,
+      "market": "KXBTC15M-26MAY051715-15",
+      "result": "no",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-06T14:49:02.524922+00:00",
+      "exit_value_cents": -74,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh",
+        "h6_recross_hazard_high"
+      ],
+      "gross_cents": -40,
+      "hold_gross_cents": 34,
+      "market": "KXBTC15M-26MAY061100-00",
+      "result": "no",
+      "side": "no"
+    },
+    {
+      "entry_ts": "2026-05-06T03:07:10.446683+00:00",
+      "exit_value_cents": -76,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -38,
+      "hold_gross_cents": 38,
+      "market": "KXBTC15M-26MAY052315-15",
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-07T16:23:59.930534+00:00",
+      "exit_value_cents": -70,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh"
+      ],
+      "gross_cents": -38,
+      "hold_gross_cents": 32,
+      "market": "KXBTC15M-26MAY071230-30",
+      "result": "yes",
+      "side": "yes"
+    },
+    {
+      "entry_ts": "2026-05-07T13:45:58.883423+00:00",
+      "exit_value_cents": -90,
+      "failure_class": "exit_policy_cost",
+      "flags": [
+        "h1_feed_fresh",
+        "h2_thin_touch_depth",
+        "h6_recross_hazard_high"
+      ],
+      "gross_cents": -36,
+      "hold_gross_cents": 54,
+      "market": "KXBTC15M-26MAY071000-00",
+      "result": "no",
+      "side": "no"
+    }
+  ],
+  "losing_failure_classes": {
+    "exit_policy_cost": {
+      "net_cents": -1029.0,
+      "rows": 53
+    },
+    "fv_or_entry_timing_error": {
+      "net_cents": -784.0,
+      "rows": 22
+    }
+  },
+  "losing_physics_flags": {
+    "h1_feed_fresh": {
+      "net_cents": -1775.0,
+      "rows": 73
+    },
+    "h2_crowded_depth": {
+      "net_cents": -156.0,
+      "rows": 9
+    },
+    "h2_thin_touch_depth": {
+      "net_cents": -202.0,
+      "rows": 10
+    },
+    "h6_recross_hazard_high": {
+      "net_cents": -851.0,
+      "rows": 42
+    }
+  },
+  "loss_buckets": {
+    "full_loss_ge_100c": {
+      "net_cents": -134.0,
+      "rows": 1
+    },
+    "large_50_99c": {
+      "net_cents": -436.0,
+      "rows": 6
+    },
+    "medium_25_49c": {
+      "net_cents": -554.0,
+      "rows": 17
+    },
+    "micro_lt_10c": {
+      "net_cents": -63.0,
+      "rows": 12
+    },
+    "small_10_24c": {
+      "net_cents": -626.0,
+      "rows": 39
+    }
+  },
+  "scorecard_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_continuous_scorecard_latest.json",
+  "summary": {
+    "avg_losing_trade_cents": -24.173333333333332,
+    "avg_winning_trade_cents": 28.04255319148936,
+    "drawdown_full_loss_equivalent": 1.96,
+    "drawdown_stop_pct": 40.0,
+    "flat_trades": 4,
+    "full_loss_events": 1,
+    "gross_cents": 823.0,
+    "gross_full_loss_cushion": 8,
+    "losing_trades": 75,
+    "loss_stop_count": 5,
+    "loss_trade_share_pct": 43.35260115606936,
+    "max_drawdown_cents": -196.0,
+    "max_drawdown_pct": 15.360501567398119,
+    "near_full_loss_events_50_99c": 6,
+    "profit_factor_trade_gross": 1.4539437396580255,
+    "risk_stop": true,
+    "risk_stop_by_drawdown": false,
+    "risk_stop_by_loss_count": true,
+    "risk_stop_reason": "loss_count",
+    "scored_trades": 173,
+    "winning_trades": 94
+  },
+  "top_loss_streaks": [
+    {
+      "failure_classes": {
+        "exit_policy_cost": 3,
+        "fv_or_entry_timing_error": 3
+      },
+      "first_market": "KXBTC15M-26MAY051715-15",
+      "first_ts": "2026-05-05T21:03:37.881802+00:00",
+      "last_market": "KXBTC15M-26MAY051800-00",
+      "last_ts": "2026-05-05T21:48:07.452299+00:00",
+      "net_cents": -134.0,
+      "rows": 6
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 2,
+        "fv_or_entry_timing_error": 2
+      },
+      "first_market": "KXBTC15M-26MAY060745-45",
+      "first_ts": "2026-05-06T11:36:48.678566+00:00",
+      "last_market": "KXBTC15M-26MAY060800-00",
+      "last_ts": "2026-05-06T11:56:05.957819+00:00",
+      "net_cents": -144.0,
+      "rows": 4
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 1,
+        "fv_or_entry_timing_error": 2
+      },
+      "first_market": "KXBTC15M-26MAY060900-00",
+      "first_ts": "2026-05-06T12:47:36.190511+00:00",
+      "last_market": "KXBTC15M-26MAY060900-00",
+      "last_ts": "2026-05-06T12:55:45.395274+00:00",
+      "net_cents": -102.0,
+      "rows": 3
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 3
+      },
+      "first_market": "KXBTC15M-26MAY060300-00",
+      "first_ts": "2026-05-06T06:48:57.418644+00:00",
+      "last_market": "KXBTC15M-26MAY060300-00",
+      "last_ts": "2026-05-06T06:55:28.494070+00:00",
+      "net_cents": -66.0,
+      "rows": 3
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 2,
+        "fv_or_entry_timing_error": 1
+      },
+      "first_market": "KXBTC15M-26MAY060700-00",
+      "first_ts": "2026-05-06T10:49:34.845804+00:00",
+      "last_market": "KXBTC15M-26MAY060700-00",
+      "last_ts": "2026-05-06T10:55:24.473144+00:00",
+      "net_cents": -60.0,
+      "rows": 3
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 3
+      },
+      "first_market": "KXBTC15M-26MAY071215-15",
+      "first_ts": "2026-05-07T16:08:58.526685+00:00",
+      "last_market": "KXBTC15M-26MAY071230-30",
+      "last_ts": "2026-05-07T16:23:59.930534+00:00",
+      "net_cents": -56.0,
+      "rows": 3
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 3
+      },
+      "first_market": "KXBTC15M-26MAY060945-45",
+      "first_ts": "2026-05-06T13:30:42.918976+00:00",
+      "last_market": "KXBTC15M-26MAY060945-45",
+      "last_ts": "2026-05-06T13:39:39.360539+00:00",
+      "net_cents": -44.0,
+      "rows": 3
+    },
+    {
+      "failure_classes": {
+        "exit_policy_cost": 3
+      },
+      "first_market": "KXBTC15M-26MAY060930-30",
+      "first_ts": "2026-05-06T13:20:00.426065+00:00",
+      "last_market": "KXBTC15M-26MAY060930-30",
+      "last_ts": "2026-05-06T13:22:09.814364+00:00",
+      "net_cents": -37.0,
+      "rows": 3
+    }
+  ]
+}

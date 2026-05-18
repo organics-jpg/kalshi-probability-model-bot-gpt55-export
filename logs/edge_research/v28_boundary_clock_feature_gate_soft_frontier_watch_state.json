@@ -1,0 +1,29 @@
+{
+  "candidate_family": "boundary_clock_feature_gate_soft_frontier_watch",
+  "freeze_ts_utc": "2026-05-06T20:01:04.705640+00:00",
+  "origin": "Derived from coverage/source frontier and frontier-mechanism audits; prior rows are diagnostic only.",
+  "rules": {
+    "soft_raw03_recross50_abs50_ask35": {
+      "abs_d_min": 0.5,
+      "ask_min": 0.35,
+      "mechanism": "Admit mid-priced boundary rows while excluding cheap-tail very-near-strike failures.",
+      "raw_edge_min": 0.03,
+      "recross_max": 0.5
+    },
+    "soft_raw03_recross50_abs50_ask50": {
+      "abs_d_min": 0.5,
+      "ask_min": 0.5,
+      "mechanism": "Stricter price floor version of the soft boundary rule.",
+      "raw_edge_min": 0.03,
+      "recross_max": 0.5
+    },
+    "soft_raw03_recross50_abs65_ask35": {
+      "abs_d_min": 0.65,
+      "ask_min": 0.35,
+      "mechanism": "Stricter distance version of the soft boundary rule.",
+      "raw_edge_min": 0.03,
+      "recross_max": 0.5
+    }
+  },
+  "strict_forward_note": "Only post_soft_frontier_birth lanes can count as forward evidence."
+}

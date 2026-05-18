@@ -1,0 +1,237 @@
+{
+  "by_reason": [
+    {
+      "actual_exit_net_dollars": 23.5,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "exit_value_delta_dollars": 23.559999999999995,
+      "exits_helped": 26,
+      "exits_hurt": 107,
+      "hold_to_settlement_net_dollars": -0.0599999999999995,
+      "n": 133
+    },
+    {
+      "actual_exit_net_dollars": 12.64,
+      "exit_reason": "unmatched_exit_signal",
+      "exit_value_delta_dollars": -1.28,
+      "exits_helped": 0,
+      "exits_hurt": 14,
+      "hold_to_settlement_net_dollars": 13.92,
+      "n": 32
+    },
+    {
+      "actual_exit_net_dollars": -37.1,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "exit_value_delta_dollars": -6.760000000000002,
+      "exits_helped": 31,
+      "exits_hurt": 30,
+      "hold_to_settlement_net_dollars": -30.340000000000007,
+      "n": 61
+    },
+    {
+      "actual_exit_net_dollars": -34.02000000000001,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "exit_value_delta_dollars": -23.90000000000001,
+      "exits_helped": 42,
+      "exits_hurt": 139,
+      "hold_to_settlement_net_dollars": -10.120000000000001,
+      "n": 181
+    }
+  ],
+  "generated_utc": "20260507_022907Z",
+  "matched_feature_summary": {
+    "actual_exit_net_dollars": -47.620000000000005,
+    "exit_value_delta_dollars": -7.1000000000000085,
+    "exits_helped": 99,
+    "exits_hurt": 276,
+    "hold_to_settlement_net_dollars": -40.52,
+    "n": 375
+  },
+  "strict_pass_count": 0,
+  "summary": {
+    "actual_exit_net_dollars": -34.980000000000004,
+    "exit_value_delta_dollars": -8.380000000000003,
+    "exits_helped": 99,
+    "exits_hurt": 290,
+    "hold_to_settlement_net_dollars": -26.60000000000001,
+    "n": 407
+  },
+  "top_candidates": [
+    {
+      "adjusted_net_dollars": -32.17999999999999,
+      "delta_vs_actual_exit_dollars": 15.440000000000012,
+      "helpful_exits_suppressed": 23,
+      "holdout_adjusted_net": -0.23999999999999955,
+      "hurtful_exits_suppressed": 81,
+      "rule": "suppress_exit_if_btc_age_ms>=500",
+      "strict_pass": false,
+      "suppressed_exits": 104,
+      "suppressed_share": 0.2773333333333333,
+      "train_adjusted_net": -21.86,
+      "validation_adjusted_net": -10.080000000000002
+    },
+    {
+      "adjusted_net_dollars": -34.970000000000006,
+      "delta_vs_actual_exit_dollars": 12.649999999999999,
+      "helpful_exits_suppressed": 40,
+      "holdout_adjusted_net": -11.120000000000001,
+      "hurtful_exits_suppressed": 44,
+      "rule": "suppress_exit_if_exit_bid_cents<=65",
+      "strict_pass": false,
+      "suppressed_exits": 84,
+      "suppressed_share": 0.224,
+      "train_adjusted_net": -16.870000000000005,
+      "validation_adjusted_net": -6.980000000000001
+    },
+    {
+      "adjusted_net_dollars": -44.16,
+      "delta_vs_actual_exit_dollars": 3.460000000000008,
+      "helpful_exits_suppressed": 41,
+      "holdout_adjusted_net": -12.740000000000006,
+      "hurtful_exits_suppressed": 47,
+      "rule": "suppress_exit_if_p_hold<=0.72",
+      "strict_pass": false,
+      "suppressed_exits": 88,
+      "suppressed_share": 0.23466666666666666,
+      "train_adjusted_net": -22.56,
+      "validation_adjusted_net": -8.860000000000001
+    },
+    {
+      "adjusted_net_dollars": -45.239999999999995,
+      "delta_vs_actual_exit_dollars": 2.3800000000000097,
+      "helpful_exits_suppressed": 10,
+      "holdout_adjusted_net": -7.119999999999999,
+      "hurtful_exits_suppressed": 26,
+      "rule": "suppress_exit_if_btc_age_ms>=800",
+      "strict_pass": false,
+      "suppressed_exits": 36,
+      "suppressed_share": 0.096,
+      "train_adjusted_net": -23.919999999999998,
+      "validation_adjusted_net": -14.2
+    },
+    {
+      "adjusted_net_dollars": -47.66,
+      "delta_vs_actual_exit_dollars": -0.03999999999999204,
+      "helpful_exits_suppressed": 4,
+      "holdout_adjusted_net": -11.819999999999999,
+      "hurtful_exits_suppressed": 10,
+      "rule": "suppress_exit_if_sigma_t_dollars>=150",
+      "strict_pass": false,
+      "suppressed_exits": 14,
+      "suppressed_share": 0.037333333333333336,
+      "train_adjusted_net": -18.64,
+      "validation_adjusted_net": -17.200000000000006
+    },
+    {
+      "adjusted_net_dollars": -48.510000000000005,
+      "delta_vs_actual_exit_dollars": -0.8900000000000006,
+      "helpful_exits_suppressed": 21,
+      "holdout_adjusted_net": -10.089999999999998,
+      "hurtful_exits_suppressed": 53,
+      "rule": "suppress_exit_if_sigma_t_dollars>=100",
+      "strict_pass": false,
+      "suppressed_exits": 74,
+      "suppressed_share": 0.19733333333333333,
+      "train_adjusted_net": -20.42,
+      "validation_adjusted_net": -18.000000000000007
+    },
+    {
+      "adjusted_net_dollars": -49.39,
+      "delta_vs_actual_exit_dollars": -1.769999999999996,
+      "helpful_exits_suppressed": 41,
+      "holdout_adjusted_net": -9.94,
+      "hurtful_exits_suppressed": 49,
+      "rule": "suppress_exit_if_fair_drawdown_cents>=8",
+      "strict_pass": false,
+      "suppressed_exits": 90,
+      "suppressed_share": 0.24,
+      "train_adjusted_net": -33.629999999999995,
+      "validation_adjusted_net": -5.82
+    },
+    {
+      "adjusted_net_dollars": -56.26,
+      "delta_vs_actual_exit_dollars": -8.639999999999993,
+      "helpful_exits_suppressed": 37,
+      "holdout_adjusted_net": -9.360000000000001,
+      "hurtful_exits_suppressed": 90,
+      "rule": "suppress_exit_if_btc_age_ms<=100",
+      "strict_pass": false,
+      "suppressed_exits": 127,
+      "suppressed_share": 0.33866666666666667,
+      "train_adjusted_net": -28.16,
+      "validation_adjusted_net": -18.740000000000002
+    },
+    {
+      "adjusted_net_dollars": -60.019999999999996,
+      "delta_vs_actual_exit_dollars": -12.399999999999991,
+      "helpful_exits_suppressed": 21,
+      "holdout_adjusted_net": -14.559999999999999,
+      "hurtful_exits_suppressed": 107,
+      "rule": "suppress_exit_if_fair_drawdown_cents<=-2",
+      "strict_pass": false,
+      "suppressed_exits": 128,
+      "suppressed_share": 0.3413333333333333,
+      "train_adjusted_net": -21.38,
+      "validation_adjusted_net": -24.080000000000002
+    },
+    {
+      "adjusted_net_dollars": -64.16,
+      "delta_vs_actual_exit_dollars": -16.539999999999992,
+      "helpful_exits_suppressed": 12,
+      "holdout_adjusted_net": -15.1,
+      "hurtful_exits_suppressed": 86,
+      "rule": "suppress_exit_if_exit_bid_cents>=85",
+      "strict_pass": false,
+      "suppressed_exits": 98,
+      "suppressed_share": 0.2613333333333333,
+      "train_adjusted_net": -24.540000000000003,
+      "validation_adjusted_net": -24.52
+    },
+    {
+      "adjusted_net_dollars": -64.6,
+      "delta_vs_actual_exit_dollars": -16.97999999999999,
+      "helpful_exits_suppressed": 11,
+      "holdout_adjusted_net": -15.1,
+      "hurtful_exits_suppressed": 77,
+      "rule": "suppress_exit_if_p_hold>=0.8",
+      "strict_pass": false,
+      "suppressed_exits": 88,
+      "suppressed_share": 0.23466666666666666,
+      "train_adjusted_net": -24.46,
+      "validation_adjusted_net": -25.04
+    },
+    {
+      "adjusted_net_dollars": -64.92,
+      "delta_vs_actual_exit_dollars": -17.299999999999997,
+      "helpful_exits_suppressed": 16,
+      "holdout_adjusted_net": -14.46,
+      "hurtful_exits_suppressed": 99,
+      "rule": "suppress_exit_if_exit_bid_cents>=80",
+      "strict_pass": false,
+      "suppressed_exits": 115,
+      "suppressed_share": 0.30666666666666664,
+      "train_adjusted_net": -25.940000000000005,
+      "validation_adjusted_net": -24.52
+    },
+    {
+      "adjusted_net_dollars": -66.18,
+      "delta_vs_actual_exit_dollars": -18.560000000000002,
+      "helpful_exits_suppressed": 10,
+      "holdout_adjusted_net": -15.660000000000002,
+      "hurtful_exits_suppressed": 66,
+      "rule": "suppress_exit_if_p_hold>=0.85",
+      "strict_pass": false,
+      "suppressed_exits": 76,
+      "suppressed_share": 0.20266666666666666,
+      "train_adjusted_net": -24.96,
+      "validation_adjusted_net": -25.56
+    }
+  ],
+  "unmatched_exit_summary": {
+    "actual_exit_net_dollars": 12.64,
+    "exit_value_delta_dollars": -1.28,
+    "exits_helped": 0,
+    "exits_hurt": 14,
+    "hold_to_settlement_net_dollars": 13.92,
+    "n": 32
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "skip_false_edge_phase_repair_goldilocks",
+  "coverage_floor": 75.0,
+  "danger_rule": "early/boundary false-conviction edge phases: edge<2pp OR edge 4-8pp OR edge>=14pp when recross geometry is high-risk",
+  "freeze_ts_utc": "2026-05-06T13:41:43.611538+00:00",
+  "physics": "When BTC is near strike with high recross hazard, apparent FV edge can measure model disagreement more than true edge; book/model agreement around a modest 2-4pp paid edge may be the more stable signal.",
+  "repair_rule": "clean repair rows ranked by Goldilocks edge distance, low recross, and far boundary"
+}

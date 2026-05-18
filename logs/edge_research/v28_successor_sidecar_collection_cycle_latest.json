@@ -1,0 +1,745 @@
+{
+  "steps": [
+    {
+      "status": "batch_bundles_ready_for_freeze",
+      "step_id": "public_rest_sidecar_batch",
+      "summary": {
+        "batch_status": "batch_bundles_ready_for_freeze",
+        "blocker_counts": {},
+        "builder_script": "build_v28_successor_public_rest_sidecar_batch.py",
+        "bundle_ready_files": 1,
+        "diagnostic_only": false,
+        "generated_utc": "2026-05-18T20:50:17.000Z",
+        "markets_selected": 1,
+        "mode": "public_rest",
+        "outputs": {
+          "audit_json": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+          "audit_md": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.md",
+          "demo_batch_json": "research_particle/v28_successor/public_rest_sidecar_batch_demo_latest.json"
+        },
+        "packet_markets": 1,
+        "packet_rows": 18,
+        "promotion_allowed": false,
+        "promotion_status": {
+          "allowed": false,
+          "reason": "public REST sidecar batch bundles are collector inputs only; promotion requires pre-close freeze, post-resolution labels, source contract, coverage, evidence scoring, and verifier approval"
+        },
+        "simulated": false,
+        "status_counts": {
+          "input_bundle_ready_for_collection": 1
+        }
+      }
+    },
+    {
+      "status": "frozen_batch_handoff_ready_for_settlement_labels",
+      "step_id": "sidecar_bundle_batch_handoff",
+      "summary": {
+        "batch_handoff_status": "frozen_batch_handoff_ready_for_settlement_labels",
+        "blocked_bundle_files": 1,
+        "blockers": [
+          "bundle_blocker:market_not_btc15m_boundary"
+        ],
+        "builder_script": "run_v28_successor_sidecar_bundle_batch_handoff.py",
+        "bundle_blocker_counts": {
+          "market_not_btc15m_boundary": 1
+        },
+        "bundle_dir": "research_particle/v28_successor/sidecar_input_bundles",
+        "bundle_status_counts": {
+          "blocked": 1,
+          "input_bundle_ready_for_collection": 1054
+        },
+        "freeze_handoff": {
+          "current_attempt_blockers": [
+            "frozen_registry_below_market_floor",
+            "frozen_registry_below_row_floor"
+          ],
+          "current_attempt_frozen_prediction_rows": 36,
+          "current_attempt_registry_markets": 1,
+          "current_attempt_registry_rows": 36,
+          "freeze_ready_rows": 36,
+          "frozen_prediction_rows": 16896,
+          "handoff_status": "frozen_handoff_below_coverage_floor",
+          "newly_frozen_prediction_rows": 36,
+          "packet_ready_rows": 16896,
+          "registry_markets": 196,
+          "registry_rows": 16896
+        },
+        "generated_utc": "2026-05-18T20:50:16Z",
+        "input_bundle_files": 1055,
+        "minimum_forward_markets": 40,
+        "minimum_forward_rows": 200,
+        "outputs": {
+          "frozen_csv": "research_particle/v28_successor/sidecar_bundle_batch_frozen_latest.csv",
+          "handoff_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_handoff_latest.json",
+          "handoff_md": "logs/edge_research/v28_successor_sidecar_bundle_batch_handoff_latest.md",
+          "packets_csv": "research_particle/v28_successor/sidecar_bundle_batch_packets_latest.csv",
+          "packets_json": "research_particle/v28_successor/sidecar_bundle_batch_packets_latest.json",
+          "registry_csv": "research_particle/v28_successor/sidecar_bundle_batch_registry_latest.csv"
+        },
+        "packet_rows": {
+          "csv": "research_particle/v28_successor/sidecar_bundle_batch_packets_latest.csv",
+          "diagnostic_rows": 0,
+          "markets": 196,
+          "rows": 16896,
+          "simulated_rows": 0
+        },
+        "preservation": {
+          "component_enriched_fields": 0,
+          "component_enriched_rows": 0,
+          "deduped_or_invalid_new_rows": 18,
+          "duplicate_existing_rows": 0,
+          "enabled": true,
+          "existing_frozen_csv": "research_particle/v28_successor/sidecar_bundle_batch_frozen_latest.csv",
+          "existing_frozen_rows": 16878,
+          "invalid_existing_frozen_rows": 0,
+          "merged_frozen_rows": 16896,
+          "newly_frozen_rows": 36,
+          "valid_existing_frozen_rows": 16878
+        },
+        "promotion_allowed": false,
+        "promotion_status": {
+          "allowed": false,
+          "reason": "sidecar bundle batch handoff is not promotion; labels, source contract, forward evidence scoring, coverage, and promotion verifier are still required"
+        },
+        "ready_bundle_files": 1054
+      }
+    },
+    {
+      "status": "settlement_labels_available",
+      "step_id": "sidecar_bundle_batch_settlement_labels",
+      "summary": {
+        "blocker_counts": {
+          "market_not_closed": 1
+        },
+        "builder_script": "fetch_v28_successor_sidecar_batch_settlement_labels.py",
+        "fetched_label_rows": 195,
+        "frozen_markets": 196,
+        "frozen_rows": 16896,
+        "generated_utc": "2026-05-18T20:50:16.000Z",
+        "inputs": {
+          "frozen_csv": "research_particle/v28_successor/sidecar_bundle_batch_frozen_latest.csv",
+          "frozen_hash": "28035bd197cbc766dd65a1321c5469addd9c61c3ff4d0cfb34737c73386b0270",
+          "kalshi_base_url": "https://api.elections.kalshi.com/trade-api/v2",
+          "max_fetch_attempts": 2,
+          "request_sleep_seconds": 0.25,
+          "retry_429_sleep_seconds": 3.0
+        },
+        "label_fetch_status": "settlement_labels_available",
+        "label_markets": 195,
+        "label_rows": 195,
+        "outputs": {
+          "audit_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_settlement_labels_latest.json",
+          "audit_md": "logs/edge_research/v28_successor_sidecar_bundle_batch_settlement_labels_latest.md",
+          "labels_csv": "research_particle/v28_successor/sidecar_bundle_batch_settlement_labels_latest.csv",
+          "labels_json": "research_particle/v28_successor/sidecar_bundle_batch_settlement_labels_latest.json"
+        },
+        "preservation": {
+          "deduped_or_invalid_fetched_label_rows": 195,
+          "duplicate_existing_label_rows": 0,
+          "enabled": true,
+          "existing_label_rows": 195,
+          "existing_labels_csv": "research_particle/v28_successor/sidecar_bundle_batch_settlement_labels_latest.csv",
+          "fetched_label_rows": 195,
+          "invalid_existing_label_rows": 0,
+          "merged_label_rows": 195,
+          "valid_existing_label_rows": 195
+        },
+        "preserved_existing_label_rows": 195,
+        "promotion_allowed": false,
+        "promotion_status": {
+          "allowed": false,
+          "reason": "settlement labels are necessary but not sufficient; joined forward evidence, source contract, coverage, and promotion verifier must still pass"
+        }
+      }
+    },
+    {
+      "status": "joined_batch_labels_available",
+      "step_id": "sidecar_bundle_batch_label_join",
+      "summary": {
+        "batch_label_join_status": "joined_batch_labels_available",
+        "blocker_counts": {
+          "missing_settlement_label": 36
+        },
+        "blockers": [
+          "missing_settlement_label"
+        ],
+        "builder_script": "run_v28_successor_sidecar_batch_label_join_handoff.py",
+        "candidate_metrics": {
+          "v28s_boundary_monotonic_blend_v001": {
+            "candidate_brier_yes": 0.13217591463563594,
+            "candidate_logloss_yes": 0.40808588594161416,
+            "markets": 154,
+            "rows": 1760,
+            "v28_brier_yes": 0.12977074979238515,
+            "v28_logloss_yes": 0.40136129117597774
+          },
+          "v28s_boundary_monotonic_light_v001": {
+            "candidate_brier_yes": 0.1304247216897502,
+            "candidate_logloss_yes": 0.4029640363207417,
+            "markets": 152,
+            "rows": 1754,
+            "v28_brier_yes": 0.12983777073713676,
+            "v28_logloss_yes": 0.4013560536636949
+          },
+          "v28s_boundary_monotonic_micro_time_safe_v001": {
+            "candidate_brier_yes": 0.12538712637386915,
+            "candidate_logloss_yes": 0.39110122139825104,
+            "markets": 117,
+            "rows": 1620,
+            "v28_brier_yes": 0.12536515381828348,
+            "v28_logloss_yes": 0.3911281170460535
+          },
+          "v28s_boundary_monotonic_time_safe_v001": {
+            "candidate_brier_yes": 0.12985667632405812,
+            "candidate_logloss_yes": 0.40115376554357357,
+            "markets": 151,
+            "rows": 1752,
+            "v28_brier_yes": 0.12978757052176818,
+            "v28_logloss_yes": 0.4011984554276946
+          },
+          "v28s_late_dsigma_residual_tilt_v001": {
+            "candidate_brier_yes": 0.12316849545273491,
+            "candidate_logloss_yes": 0.38327062365667647,
+            "markets": 111,
+            "rows": 1558,
+            "v28_brier_yes": 0.12413020974622542,
+            "v28_logloss_yes": 0.3870736913065511
+          },
+          "v28s_logistic_book_reliability_diag_v001": {
+            "candidate_brier_yes": 0.37193199531550825,
+            "candidate_logloss_yes": 1.1892914818371179,
+            "markets": 195,
+            "rows": 2104,
+            "v28_brier_yes": 0.13346673942126036,
+            "v28_logloss_yes": 0.40742561881928196
+          },
+          "v28s_logistic_boundary_physics_v001": {
+            "candidate_brier_yes": 0.4758989785456129,
+            "candidate_logloss_yes": 2.3142608193551437,
+            "markets": 195,
+            "rows": 2104,
+            "v28_brier_yes": 0.13346673942126036,
+            "v28_logloss_yes": 0.40742561881928196
+          },
+          "v28s_logistic_calibration_v001": {
+            "candidate_brier_yes": 0.16999005428909847,
+            "candidate_logloss_yes": 0.5128939712887757,
+            "markets": 195,
+            "rows": 2104,
+            "v28_brier_yes": 0.13346673942126036,
+            "v28_logloss_yes": 0.40742561881928196
+          },
+          "v28s_monotonic_tabular_v001": {
+            "candidate_brier_yes": 0.139123022391263,
+            "candidate_logloss_yes": 0.435175249649154,
+            "markets": 195,
+            "rows": 2104,
+            "v28_brier_yes": 0.13346673942126036,
+            "v28_logloss_yes": 0.40742561881928196
+          }
+        },
+        "frozen_rows": 16896,
+        "generated_utc": "2026-05-18T20:51:34Z",
+        "inputs": {
+          "frozen_csv": "research_particle/v28_successor/sidecar_bundle_batch_frozen_latest.csv",
+          "frozen_hash": "28035bd197cbc766dd65a1321c5469addd9c61c3ff4d0cfb34737c73386b0270",
+          "label_csvs": [
+            "research_particle/v28_successor/sidecar_bundle_batch_settlement_labels_latest.csv",
+            "research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv"
+          ],
+          "label_hashes": {
+            "research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv": "48da41c6d221a523ae42c15efc257381be5dd63aaac1d344892f8a0c31d0b6a7",
+            "research_particle/v28_successor/sidecar_bundle_batch_settlement_labels_latest.csv": "7f6e6358dce1aad744fdc0e027097799b75046e81326686283cc6fdf9bf3ea66"
+          }
+        },
+        "joined_markets": 195,
+        "joined_rows": 16860,
+        "label_source_rows": 197,
+        "labeled_rows": 16896,
+        "outputs": {
+          "audit_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_label_join_latest.json",
+          "audit_md": "logs/edge_research/v28_successor_sidecar_bundle_batch_label_join_latest.md",
+          "labeled_csv": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv",
+          "labeled_json": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.json"
+        },
+        "promotion_allowed": false,
+        "promotion_status": {
+          "allowed": false,
+          "reason": "sidecar batch label join is necessary but not sufficient; source contract, coverage floors, forward evidence scoring, and promotion verifier must still pass"
+        },
+        "status_counts": {
+          "blocked": 36,
+          "joined_post_resolution": 16860
+        }
+      }
+    },
+    {
+      "status": "scored_sidecar_batch_evidence",
+      "step_id": "sidecar_batch_evidence_score",
+      "summary": {
+        "bin_rows": 180,
+        "builder_script": "score_v28_successor_sidecar_batch_evidence.py",
+        "candidate_count": 9,
+        "candidate_gates": [
+          {
+            "candidate_id": "v28s_boundary_monotonic_blend_v001",
+            "delta_brier_candidate_minus_v28": 0.0024051648427151073,
+            "delta_logloss_candidate_minus_v28": 0.0067245947683555185,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "forward_logloss_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 154,
+            "near_boundary_delta_brier_candidate_minus_v28": 0.0018924878873253503,
+            "near_boundary_rows": 1156,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 1760,
+            "rows_per_market": 11.428571428571429,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_boundary_monotonic_light_v001",
+            "delta_brier_candidate_minus_v28": 0.0005869509521295724,
+            "delta_logloss_candidate_minus_v28": 0.0016079826612204196,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "forward_logloss_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 152,
+            "near_boundary_delta_brier_candidate_minus_v28": 0.00047868816614579646,
+            "near_boundary_rows": 1150,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 1754,
+            "rows_per_market": 11.539473684210526,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+            "delta_brier_candidate_minus_v28": 2.1972555713956066e-05,
+            "delta_logloss_candidate_minus_v28": -2.6895646578595223e-05,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 117,
+            "near_boundary_delta_brier_candidate_minus_v28": 3.438242945441594e-05,
+            "near_boundary_rows": 1046,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 1620,
+            "rows_per_market": 13.846153846153847,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+            "delta_brier_candidate_minus_v28": 6.910580132671318e-05,
+            "delta_logloss_candidate_minus_v28": -4.468988451650224e-05,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 151,
+            "near_boundary_delta_brier_candidate_minus_v28": 9.814580373065929e-05,
+            "near_boundary_rows": 1148,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 1752,
+            "rows_per_market": 11.602649006622517,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+            "delta_brier_candidate_minus_v28": -0.0009617142950745367,
+            "delta_logloss_candidate_minus_v28": -0.0038030676445250378,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [],
+            "forward_evidence_promotable": true,
+            "market_shortfall": 0,
+            "markets": 111,
+            "near_boundary_delta_brier_candidate_minus_v28": -0.001071788171632393,
+            "near_boundary_rows": 984,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 1558,
+            "rows_per_market": 14.036036036036036,
+            "status": "pass"
+          },
+          {
+            "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+            "delta_brier_candidate_minus_v28": 0.23846525589376374,
+            "delta_logloss_candidate_minus_v28": 0.7818658630244664,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "forward_logloss_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 195,
+            "near_boundary_delta_brier_candidate_minus_v28": 0.143062724447518,
+            "near_boundary_rows": 1364,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 2104,
+            "rows_per_market": 10.78974358974359,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_logistic_boundary_physics_v001",
+            "delta_brier_candidate_minus_v28": 0.3424322391231054,
+            "delta_logloss_candidate_minus_v28": 1.90683520054116,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "forward_logloss_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 195,
+            "near_boundary_delta_brier_candidate_minus_v28": 0.26328615430888,
+            "near_boundary_rows": 1364,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 2104,
+            "rows_per_market": 10.78974358974359,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_logistic_calibration_v001",
+            "delta_brier_candidate_minus_v28": 0.036523314868374346,
+            "delta_logloss_candidate_minus_v28": 0.10546835247237224,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "forward_logloss_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 195,
+            "near_boundary_delta_brier_candidate_minus_v28": 0.027230451817453677,
+            "near_boundary_rows": 1364,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 2104,
+            "rows_per_market": 10.78974358974359,
+            "status": "fail"
+          },
+          {
+            "candidate_id": "v28s_monotonic_tabular_v001",
+            "delta_brier_candidate_minus_v28": 0.005656282970433163,
+            "delta_logloss_candidate_minus_v28": 0.027749630831097438,
+            "estimated_additional_markets_needed": 0,
+            "estimated_markets_to_row_floor": 0,
+            "fail_reasons": [
+              "forward_brier_not_better_than_v28",
+              "forward_logloss_not_better_than_v28",
+              "near_boundary_brier_degraded"
+            ],
+            "forward_evidence_promotable": false,
+            "market_shortfall": 0,
+            "markets": 195,
+            "near_boundary_delta_brier_candidate_minus_v28": 0.001167911101211061,
+            "near_boundary_rows": 1364,
+            "required_markets": 40,
+            "required_rows": 200,
+            "row_shortfall": 0,
+            "rows": 2104,
+            "rows_per_market": 10.78974358974359,
+            "status": "fail"
+          }
+        ],
+        "candidate_ids": [
+          "v28s_boundary_monotonic_blend_v001",
+          "v28s_boundary_monotonic_light_v001",
+          "v28s_boundary_monotonic_micro_time_safe_v001",
+          "v28s_boundary_monotonic_time_safe_v001",
+          "v28s_late_dsigma_residual_tilt_v001",
+          "v28s_logistic_book_reliability_diag_v001",
+          "v28s_logistic_boundary_physics_v001",
+          "v28s_logistic_calibration_v001",
+          "v28s_monotonic_tabular_v001"
+        ],
+        "canonical_promotion_ledger": false,
+        "clean_forward_markets": 195,
+        "clean_forward_rows": 16860,
+        "evidence_family": "sidecar_batch",
+        "evidence_status": "scored_sidecar_batch_evidence",
+        "generated_utc": "2026-05-18T20:51:37Z",
+        "inputs": {
+          "labeled_csv": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv",
+          "labeled_hash": "a407c1f4dede6baf7c6f7994b9c393f30017a7e7aa47b51d7811581d03db6277"
+        },
+        "metrics_rows": 54,
+        "outputs": {
+          "audit_json": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.json",
+          "audit_md": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.md",
+          "bins_csv": "logs/edge_research/v28_successor_sidecar_batch_evidence_bins_latest.csv",
+          "metrics_csv": "logs/edge_research/v28_successor_sidecar_batch_evidence_metrics_latest.csv"
+        },
+        "promotable_candidate_count": 1,
+        "promotion_status": {
+          "allowed": false,
+          "reason": "sidecar batch evidence is non-canonical and below/subject to source-contract, coverage, forward-evidence, and promotion-verifier gates"
+        },
+        "raw_rows": 16896,
+        "source_counts": {
+          "frozen_pre_resolution_prediction": 16896
+        },
+        "status_counts": {
+          "blocked": 36,
+          "joined_post_resolution": 16860
+        }
+      }
+    },
+    {
+      "status": "promotion_grade",
+      "step_id": "source_contract",
+      "summary": {
+        "auxiliary_hard_blockers": [
+          "boundary_geometry_complete",
+          "broad_market_coverage_floor",
+          "forward_labels_joined_after_resolution",
+          "forward_promotion_rows_present",
+          "forward_rows_not_after_the_fact",
+          "forward_rows_pre_resolution_registered",
+          "strike_fields_complete",
+          "target_label_present"
+        ],
+        "blocked_datasets": [
+          "seed_causal_rows",
+          "logged_event_causal_rows",
+          "seed_feature_table",
+          "logged_event_feature_table",
+          "passive_forward_snapshots",
+          "shadow_forward_labeled_rows",
+          "sidecar_batch_labeled_predictions"
+        ],
+        "builder_script": "validate_v28_successor_source_contract.py",
+        "contract_version": "v28_successor_source_contract_v1",
+        "dataset_count": 9,
+        "generated_utc": "2026-05-18T20:51:39Z",
+        "hard_blockers": [
+          "boundary_geometry_complete",
+          "broad_market_coverage_floor",
+          "forward_labels_joined_after_resolution",
+          "forward_promotion_rows_present",
+          "forward_rows_not_after_the_fact",
+          "forward_rows_pre_resolution_registered",
+          "strike_fields_complete",
+          "target_label_present"
+        ],
+        "inputs": {
+          "forward_labeled_predictions": "research_particle/v28_successor/forward_labeled_predictions_latest.csv",
+          "forward_registry": "research_particle/v28_successor/forward_registry_latest.csv",
+          "logged_event_causal_rows": "research_particle/v28_successor/causal_rows_logged_events_latest.csv",
+          "logged_event_feature_table": "research_particle/v28_successor/features_logged_events_latest.csv",
+          "passive_forward_snapshots": "research_particle/v28_successor/passive_forward_snapshots_latest.csv",
+          "seed_causal_rows": "research_particle/v28_successor/causal_rows_seed_latest.csv",
+          "seed_feature_table": "research_particle/v28_successor/features_latest.csv",
+          "shadow_forward_labeled_rows": "research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv",
+          "sidecar_batch_labeled_predictions": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv"
+        },
+        "minimum_forward_markets": 40,
+        "minimum_forward_rows": 200,
+        "missing_required_forward_datasets": [],
+        "non_promotion_ready_required_forward_datasets": [],
+        "outputs": {
+          "csv": "logs/edge_research/v28_successor_source_contract_latest.csv",
+          "json": "logs/edge_research/v28_successor_source_contract_latest.json",
+          "markdown": "logs/edge_research/v28_successor_source_contract_latest.md"
+        },
+        "overall_verdict": "promotion_grade",
+        "promotion_contract_ready": true,
+        "promotion_grade_datasets": [
+          "forward_registry",
+          "forward_labeled_predictions"
+        ],
+        "required_forward_dataset_status": {
+          "forward_labeled_predictions": "promotion_grade",
+          "forward_registry": "promotion_grade"
+        },
+        "required_forward_datasets": [
+          "forward_registry",
+          "forward_labeled_predictions"
+        ],
+        "required_forward_hard_blockers": []
+      }
+    },
+    {
+      "status": "blocked_missing_freeze_ready_sources",
+      "step_id": "forward_source_readiness",
+      "summary": {
+        "blockers": [
+          "live_v28_events_missing_native_component_fields",
+          "no_freeze_eligible_forward_packet_candidate_predictions",
+          "packet_predictions_not_allowed_for_forward_registry",
+          "passive_market_coverage_below_forward_floor",
+          "passive_rows_missing_btc_state",
+          "passive_rows_missing_candidate_prediction",
+          "passive_rows_missing_settlement_label",
+          "passive_rows_missing_top_book",
+          "passive_rows_missing_v28_baseline",
+          "recorded_research_datasets_do_not_include_settlement_labels",
+          "recorded_research_datasets_do_not_include_strategy_decisions",
+          "sidecar_packet_collector_rows_are_demo_not_forward_evidence"
+        ],
+        "builder_script": "audit_v28_successor_forward_source_readiness.py",
+        "forward_labeled_rows": 16860,
+        "forward_packet_prediction_rows": 13554,
+        "forward_registry_rows": 16878,
+        "freeze_eligible_packet_prediction_rows": 0,
+        "frozen_forward_rows": 16878,
+        "generated_utc": "2026-05-18T20:51:41Z",
+        "live_v28_base_field_rows": 4233,
+        "live_v28_event_rows": 16078,
+        "live_v28_native_component_rows": 0,
+        "minimum_forward_markets": 40,
+        "minimum_forward_rows": 200,
+        "outputs": {
+          "json": "logs/edge_research/v28_successor_forward_source_readiness_latest.json",
+          "markdown": "logs/edge_research/v28_successor_forward_source_readiness_latest.md"
+        },
+        "overall_status": "blocked_missing_freeze_ready_sources",
+        "passive_markets": 2,
+        "passive_rows": 1750,
+        "promotion_allowed": false,
+        "promotion_status": {
+          "allowed": false,
+          "reason": "source readiness is an evidence audit only; promotion remains delegated to source contract, forward evidence scorer, and promotion verifier"
+        },
+        "research_dataset_count": 16,
+        "research_dataset_markets": 61,
+        "sidecar_batch_evidence_promotable_candidate_count": 1,
+        "sidecar_batch_evidence_promotion_allowed": false,
+        "sidecar_batch_evidence_status": "scored_sidecar_batch_evidence",
+        "sidecar_batch_joined_markets": 195,
+        "sidecar_batch_joined_rows": 16860,
+        "sidecar_collector_demo_packet_ready_rows": 18,
+        "sidecar_collector_promotion_allowed": false,
+        "sidecar_collector_status": "contract_demo_ready_not_evidence",
+        "source_contract_promotion_ready": true
+      }
+    },
+    {
+      "status": "complete",
+      "step_id": "goal_completion_audit",
+      "summary": {
+        "blocking_requirements": [],
+        "checks": 41,
+        "generated_utc": "2026-05-18T20:51:41Z",
+        "overall_status": "complete",
+        "partial_requirements": [],
+        "source_artifacts": {
+          "baseline_replay": "logs/edge_research/v28_successor_baseline_replay_latest.json",
+          "calibration": "logs/edge_research/v28_successor_calibration_latest.json",
+          "dataset_audit": "logs/edge_research/v28_successor_dataset_audit_latest.json",
+          "feature_audit": "logs/edge_research/v28_successor_feature_audit_latest.json",
+          "forward_collection_spec": "logs/edge_research/v28_successor_forward_collection_spec_latest.json",
+          "forward_evidence_score": "logs/edge_research/v28_successor_forward_evidence_score_latest.json",
+          "forward_freeze_preflight": "logs/edge_research/v28_successor_forward_freeze_preflight_latest.json",
+          "forward_label_join": "logs/edge_research/v28_successor_forward_label_join_latest.json",
+          "forward_packet_adapter": "logs/edge_research/v28_successor_forward_packet_adapter_latest.json",
+          "forward_packet_candidate_scoring": "logs/edge_research/v28_successor_forward_packet_candidate_scoring_latest.json",
+          "forward_packet_contract": "logs/edge_research/v28_successor_forward_packet_contract_latest.json",
+          "forward_packet_freeze_handoff": "logs/edge_research/v28_successor_forward_packet_freeze_handoff_latest.json",
+          "forward_registry": "logs/edge_research/v28_successor_forward_registry_latest.json",
+          "forward_source_readiness": "logs/edge_research/v28_successor_forward_source_readiness_latest.json",
+          "frozen_forward_predictions": "logs/edge_research/v28_successor_frozen_forward_predictions_latest.json",
+          "logged_event_api_replay": "logs/edge_research/v28_successor_logged_event_api_replay_latest.json",
+          "logged_event_calibration": "logs/edge_research/v28_successor_logged_event_calibration_latest.json",
+          "logged_event_dataset": "logs/edge_research/v28_successor_logged_event_dataset_audit_latest.json",
+          "logged_event_feature_audit": "logs/edge_research/v28_successor_logged_event_feature_audit_latest.json",
+          "passive_forward_snapshots": "logs/edge_research/v28_successor_passive_forward_snapshots_latest.json",
+          "promotion_verifier": "logs/edge_research/v28_successor_promotion_verifier_latest.json",
+          "public_rest_sidecar_batch": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+          "public_rest_sidecar_bundle": "logs/edge_research/v28_successor_public_rest_sidecar_bundle_latest.json",
+          "shadow_forward_packets": "logs/edge_research/v28_successor_shadow_forward_packets_latest.json",
+          "sidecar_batch_evidence_score": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.json",
+          "sidecar_bundle_batch_handoff": "logs/edge_research/v28_successor_sidecar_bundle_batch_handoff_latest.json",
+          "sidecar_bundle_batch_label_join": "logs/edge_research/v28_successor_sidecar_bundle_batch_label_join_latest.json",
+          "sidecar_bundle_batch_settlement_labels": "logs/edge_research/v28_successor_sidecar_bundle_batch_settlement_labels_latest.json",
+          "sidecar_bundle_freeze_handoff": "logs/edge_research/v28_successor_sidecar_bundle_freeze_handoff_latest.json",
+          "sidecar_bundle_replay": "logs/edge_research/v28_successor_sidecar_bundle_replay_latest.json",
+          "sidecar_collection_cycle": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json",
+          "sidecar_input_bundle_contract": "logs/edge_research/v28_successor_sidecar_input_bundle_contract_latest.json",
+          "sidecar_packet_collector": "logs/edge_research/v28_successor_sidecar_packet_collector_latest.json",
+          "source_contract": "logs/edge_research/v28_successor_source_contract_latest.json",
+          "spec": "docs/v28_successor_fv_engine_spec.md"
+        },
+        "status_counts": {
+          "pass": 41
+        }
+      }
+    }
+  ],
+  "summary": {
+    "blockers": [],
+    "builder_script": "run_v28_successor_sidecar_collection_cycle.py",
+    "collect_mode": "public_rest",
+    "cycle_status": "sidecar_cycle_ready_for_external_promotion_verifier",
+    "generated_utc": "2026-05-18T20:50:16Z",
+    "minimum_forward_markets": 40,
+    "minimum_forward_rows": 200,
+    "next_actions": [],
+    "outputs": {
+      "cycle_json": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json",
+      "cycle_md": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.md"
+    },
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "collection cycles can create forward evidence, but promotion still requires source contract, coverage, evidence, verifier, and frozen forward gates"
+    },
+    "research_only_guardrails": [
+      "does not start or stop live bot processes",
+      "does not read or write secrets",
+      "does not place orders",
+      "does not mutate live thresholds or order logic",
+      "does not write canonical promotion ledgers directly",
+      "promotion_allowed is always false for this cycle report"
+    ],
+    "sidecar_clean_forward_markets": 195,
+    "sidecar_clean_forward_rows": 16860,
+    "sidecar_frozen_markets": 196,
+    "sidecar_frozen_rows": 16896,
+    "sidecar_joined_markets": 195,
+    "sidecar_joined_rows": 16860,
+    "sidecar_promotable_candidate_count": 1,
+    "steps_run": 8
+  }
+}

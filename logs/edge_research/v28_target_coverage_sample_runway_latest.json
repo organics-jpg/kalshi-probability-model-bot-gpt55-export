@@ -1,0 +1,34 @@
+{
+  "coverage_band": [
+    75.0,
+    90.0
+  ],
+  "coverage_pct": 73.68421052631578,
+  "coverage_runway": {
+    "coverage_after_one_more_entry": 90.02493765586036,
+    "coverage_after_one_more_miss": 73.20261437908496,
+    "coverage_after_that_many_entries": 90.0,
+    "coverage_after_that_many_misses": 73.68421052631578,
+    "max_consecutive_future_entries_before_above_90": 248,
+    "max_consecutive_future_misses_before_below_75": 0
+  },
+  "entries": 112,
+  "forward_denominator": 152,
+  "freeze_ts": "2026-05-06T02:08:01.321286+00:00",
+  "interpretation": [
+    "The target-coverage candidate is currently inside the 75-90% band but sample size is still the hard blocker.",
+    "Because the denominator is small, one or two new missed markets can materially change coverage.",
+    "Coverage movement should be monitored, but probability promotion remains blocked until settled rows reach 30."
+  ],
+  "overlay": "book_probability",
+  "pending": 0,
+  "pending_rows": [],
+  "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "promotion_ready": false,
+  "promotion_remaining": {
+    "settled_rows_to_30": 0
+  },
+  "settled": 112,
+  "settled_rows_to_30": 0,
+  "source_coverage_freeze_ts": "2026-05-05T23:30:17.615882+00:00"
+}

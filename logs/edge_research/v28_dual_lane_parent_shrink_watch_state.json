@@ -1,0 +1,13 @@
+{
+  "base_candidate": "dual_lane_overlap_union",
+  "candidate_family": "dual_lane_parent_shrink_watch",
+  "freeze_ts_utc": "2026-05-07T15:19:20.874849+00:00",
+  "note": "Born after the dual-lane loss bottleneck audit found expensive low-edge parent-fill losses. Rows before this freeze are not promotion evidence for the repair.",
+  "repair_name": "dual_lane_parent_fill_high_cost_low_edge_shrink50",
+  "shrink_rule": {
+    "ask_prob_min": 0.78,
+    "component": "strict_parent_midprice_hold_fill",
+    "raw_edge_max": 0.09,
+    "weight": 0.5
+  }
+}

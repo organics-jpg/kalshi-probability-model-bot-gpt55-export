@@ -1,0 +1,9 @@
+{
+  "entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T04:22:07.414318+00:00",
+  "full_scale": 1.25,
+  "prior_count": 6,
+  "rule": "raw p < 0.70 stays raw; raw p >= 0.70 uses scale 1 + (full_scale - 1) * adjusted_count / (adjusted_count + prior_count)",
+  "source_artifact": "v28_target_coverage_p70_empirical_bayes_latest.json",
+  "variant": "p70_empirical_bayes_prior6"
+}

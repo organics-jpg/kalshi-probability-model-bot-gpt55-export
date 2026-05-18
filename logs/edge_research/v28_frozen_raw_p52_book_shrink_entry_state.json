@@ -1,0 +1,8 @@
+{
+  "base_policy": "v28_raw_p52_edge0",
+  "candidate": "gap15_book50_p52_edge0",
+  "freeze_ts_utc": "2026-05-06T12:12:25.258308+00:00",
+  "physics": "Large model-book disagreement is treated as path-risk overconfidence, but the response is probabilistic shrinkage rather than a hard skip.",
+  "rule": "If raw p - executable ask > 15pp, blend 50% toward executable ask; then require p>=0.52 and edge>=0.",
+  "source_artifact": "v28_raw_p52_book_shrink_entry_latest.json"
+}

@@ -1,0 +1,119 @@
+{
+  "frontier_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_feature_gate_exit_state_repair_frontier_latest.json",
+  "generated_at_utc": "2026-05-11T01:55:00.464715+00:00",
+  "interpretation": [
+    "Research-only frozen watch; no live orders or live bot changes.",
+    "Primary post-birth best is suppress_value_or_reduce_p_hold80 with 14 rows, 327.6c, W/L 10/4.",
+    "This is not live-ready because it is selected-side overlap only and assumes suppressed exits hold to settlement."
+  ],
+  "lanes": [
+    {
+      "label": "diagnostic_prefreeze_context",
+      "strict_forward": false,
+      "variants": [
+        {
+          "baseline_live_net_cents": 71.0,
+          "blockers": [
+            "selected_side_live_overlap_only",
+            "hold_to_settlement_assumption",
+            "not_live_bot_logic"
+          ],
+          "candidate_net_cents": 636.0,
+          "delta_vs_live_cents": 565.0,
+          "full_loss_cushion_estimate": 6,
+          "hold_all_net_cents": 506.15999999999997,
+          "live_ready": false,
+          "losses": 8,
+          "settled": 26,
+          "strict_forward": false,
+          "suppressed": 10,
+          "suppressed_losers": 0,
+          "suppressed_winners": 10,
+          "variant": "suppress_value_over_hold",
+          "wins": 18
+        },
+        {
+          "baseline_live_net_cents": 71.0,
+          "blockers": [
+            "selected_side_live_overlap_only",
+            "hold_to_settlement_assumption",
+            "not_live_bot_logic"
+          ],
+          "candidate_net_cents": 604.0,
+          "delta_vs_live_cents": 533.0,
+          "full_loss_cushion_estimate": 6,
+          "hold_all_net_cents": 506.15999999999997,
+          "live_ready": false,
+          "losses": 9,
+          "settled": 26,
+          "strict_forward": false,
+          "suppressed": 9,
+          "suppressed_losers": 0,
+          "suppressed_winners": 9,
+          "variant": "suppress_value_or_reduce_p_hold80",
+          "wins": 17
+        }
+      ]
+    },
+    {
+      "label": "post_value_exit_birth",
+      "strict_forward": true,
+      "variants": [
+        {
+          "baseline_live_net_cents": 240.0,
+          "blockers": [
+            "settled_lt_30",
+            "selected_side_live_overlap_only",
+            "hold_to_settlement_assumption",
+            "not_live_bot_logic"
+          ],
+          "candidate_net_cents": 327.6,
+          "delta_vs_live_cents": 87.60000000000002,
+          "full_loss_cushion_estimate": 3,
+          "hold_all_net_cents": 298.60040000000004,
+          "live_ready": false,
+          "losses": 4,
+          "settled": 14,
+          "strict_forward": true,
+          "suppressed": 5,
+          "suppressed_losers": 1,
+          "suppressed_winners": 4,
+          "variant": "suppress_value_or_reduce_p_hold80",
+          "wins": 10
+        },
+        {
+          "baseline_live_net_cents": 240.0,
+          "blockers": [
+            "settled_lt_30",
+            "net_not_positive",
+            "full_loss_cushion_lt_3",
+            "selected_side_live_overlap_only",
+            "hold_to_settlement_assumption",
+            "not_live_bot_logic"
+          ],
+          "candidate_net_cents": -134.4,
+          "delta_vs_live_cents": -374.4,
+          "full_loss_cushion_estimate": 0,
+          "hold_all_net_cents": 298.60040000000004,
+          "live_ready": false,
+          "losses": 4,
+          "settled": 14,
+          "strict_forward": true,
+          "suppressed": 6,
+          "suppressed_losers": 2,
+          "suppressed_winners": 4,
+          "variant": "suppress_value_over_hold",
+          "wins": 10
+        }
+      ]
+    }
+  ],
+  "state": {
+    "candidate_family": "frozen_feature_gate_value_exit_watch",
+    "freeze_ts_utc": "2026-05-07T07:36:17.925386+00:00",
+    "physics": "Feature-gate selected rows show live exits clipped many settlement winners, while reduce/collapse exits still saved several losers. The narrow value-over-hold class is the cleanest observed clip mode.",
+    "primary_candidate": "suppress_value_over_hold",
+    "rule": "Within post_feature_freeze_entry_raw03_recross70_abs075 selected-side live overlap, suppress value_over_hold exits only; keep probability_reduce and probability_collapse exits active.",
+    "strict_forward_note": "Rows before this timestamp are diagnostic only."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "candidate": "value_only_gap15_or_p75_feature_gate_same_side",
+  "candidate_family": "value_exit_feature_side_guard",
+  "feature_candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+  "feature_gate_parent": "post_feature_freeze_entry_raw03_recross70_abs075",
+  "freeze_ts_utc": "2026-05-07T07:42:49.442068+00:00",
+  "physics": "Value-over-hold exits look like winner clips when the entry geometry still agrees with the held side. When feature-gate geometry selects the opposite side, suppressing the exit can override a valid loss-control signal.",
+  "primary_candidate": "value_exit_feature_side_guard",
+  "research_only": true,
+  "rule": "Apply the value_only_gap15_or_p75 exit suppression only when the feature-gate selected side for the same market equals the live position side.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic context only.",
+  "value_exit_parent": "value_only_gap15_or_p75",
+  "value_variant": "value_only_gap15_or_p75"
+}

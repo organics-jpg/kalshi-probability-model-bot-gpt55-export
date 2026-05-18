@@ -1,0 +1,2240 @@
+{
+  "all_policy_cards": [
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 214.0,
+        "delta_vs_live_cents": null,
+        "entries": 46,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 692.0,
+        "reconstructed_share": null,
+        "settled": 46,
+        "suppressed_exits": 13,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "common_clock_strict_forward_v3",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 242.0,
+        "delta_vs_live_cents": null,
+        "entries": 58,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 668.0,
+        "reconstructed_share": null,
+        "settled": 58,
+        "suppressed_exits": 17,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "common_clock_strict_forward_v2",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 166.0,
+        "delta_vs_live_cents": null,
+        "entries": 46,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 644.0,
+        "reconstructed_share": null,
+        "settled": 46,
+        "suppressed_exits": 9,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "book_gap_loss_guard_v3",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 242.0,
+        "delta_vs_live_cents": null,
+        "entries": 59,
+        "full_loss_cushion": 5,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 582.0,
+        "reconstructed_share": null,
+        "settled": 59,
+        "suppressed_exits": 17,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "common_clock_strict_forward_v1",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 46.0,
+        "delta_vs_live_cents": null,
+        "entries": 40,
+        "full_loss_cushion": 5,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 556.0,
+        "reconstructed_share": null,
+        "settled": 40,
+        "suppressed_exits": 1,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using high_p_favorable_fv.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "exit_reduce_drift_guard",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "high_p_favorable_fv",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 741.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2102.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_approved_union_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 741.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2102.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_union_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 647.5,
+        "entries": 76,
+        "full_loss_cushion": 20,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2008.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "66/10"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_low_exit_collapse_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 565.5,
+        "entries": 76,
+        "full_loss_cushion": 19,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1926.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "66/10"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_mid_recheck_value_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty025_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty050_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty100_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty025_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty050_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty100_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_bridge_cheap_penalty025_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_bridge_cheap_penalty050_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_bridge_cheap_penalty100_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_entry_cheap_penalty025_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_entry_cheap_penalty050_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_entry_cheap_penalty100_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.0,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 466.5,
+        "entries": 66,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1827.5,
+        "reconstructed_share": 0.24242424242424243,
+        "settled": 66,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "61/4"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_observable_quarantine_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_or_prefreeze_context"
+      ],
+      "policy": "observable_quarantine_control",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.0,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 466.5,
+        "entries": 66,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1827.5,
+        "reconstructed_share": 0.24242424242424243,
+        "settled": 66,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "61/4"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_observable_quarantine_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_or_prefreeze_context"
+      ],
+      "policy": "very_weak_touch_zero",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.0,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 466.5,
+        "entries": 66,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1827.5,
+        "reconstructed_share": 0.24242424242424243,
+        "settled": 66,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "61/4"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Half-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_observable_quarantine_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_or_prefreeze_context"
+      ],
+      "policy": "weak_touch_half",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_fv",
+      "evidence": {
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 240.5,
+        "entries": 59,
+        "full_loss_cushion": 16,
+        "loss_control_cost_cents": null,
+        "losses": 7,
+        "net_cents": 1601.5,
+        "reconstructed_share": 0.15254237288135594,
+        "settled": 59,
+        "suppressed_exits": null,
+        "wins": 52,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing soft-frontier or midprice-boundary v28-derived entry stack.",
+        "exit_state_rule": "Use the frozen delayed/rechecked exit rule named in the policy; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "soft_frontier_midprice_delayed_recheck_rescue",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_prefreeze_context_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte11",
+      "source": "candidate_readiness_distance"
+    },
+    {
+      "candidate_type": "entry_or_fv",
+      "evidence": {
+        "coverage_pct": 78.21782178217822,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 140.5,
+        "entries": 59,
+        "full_loss_cushion": 15,
+        "loss_control_cost_cents": null,
+        "losses": 8,
+        "net_cents": 1501.5,
+        "reconstructed_share": 0.15254237288135594,
+        "settled": 59,
+        "suppressed_exits": null,
+        "wins": 51,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing soft-frontier or midprice-boundary v28-derived entry stack.",
+        "exit_state_rule": "Use the frozen delayed/rechecked exit rule named in the policy; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "soft_frontier_midprice_delayed_recheck_exit",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_prefreeze_context_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte10",
+      "source": "candidate_readiness_distance"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 56.0,
+        "delta_vs_live_cents": null,
+        "entries": 42,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 590.0,
+        "reconstructed_share": null,
+        "settled": 42,
+        "suppressed_exits": 1,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using midband_p60_75_exit50_75_asklt80.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "midband_reduce_rescue",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "midband_p60_75_exit50_75_asklt80",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 242.0,
+        "delta_vs_live_cents": null,
+        "entries": 59,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 582.0,
+        "reconstructed_share": null,
+        "settled": 59,
+        "suppressed_exits": 17,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using book_gap_loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "book_gap_loss_guard",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "book_gap_loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 152.0,
+        "delta_vs_live_cents": null,
+        "entries": 58,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 578.0,
+        "reconstructed_share": null,
+        "settled": 58,
+        "suppressed_exits": 5,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using book_gap_loss_guard_v2_value_gap0_or_p85_shallowdd_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "book_gap_loss_guard_v2",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "book_gap_loss_guard_v2_value_gap0_or_p85_shallowdd_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 94.0,
+        "delta_vs_live_cents": null,
+        "entries": 60,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 482.0,
+        "reconstructed_share": null,
+        "settled": 60,
+        "suppressed_exits": 2,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "reduce_depth_gate",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 94.0,
+        "delta_vs_live_cents": null,
+        "entries": 60,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 482.0,
+        "reconstructed_share": null,
+        "settled": 60,
+        "suppressed_exits": 2,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using post_refinement_birth_reduce_suppress_p_hold_ge_079.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "reduce_loss_control_refinement",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "post_refinement_birth_reduce_suppress_p_hold_ge_079",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 872.0,
+        "entries": 76,
+        "full_loss_cushion": 22,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2233.0,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 828.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2189.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Half-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_half",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 783.7125317272726,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2144.7125317272726,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_parent_fill_wide_mid_absd_ask_notch",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 780.7780395312502,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2141.77803953125,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_parent_fill_mid_absd_ask_notch",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 741.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2102.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_exit_child_only_control",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 235.0,
+        "delta_vs_live_cents": null,
+        "entries": 120,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": -1080.0,
+        "losses": null,
+        "net_cents": 962.0,
+        "reconstructed_share": null,
+        "settled": 120,
+        "suppressed_exits": 59,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using suppress_soft_gap15_or_p_hold75.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; full-loss cushion below 3; loss-control cost present.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "book_gap_suppression",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "loss_control_cost_negative",
+        "full_loss_cushion_lt_3",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "policy": "suppress_soft_gap15_or_p_hold75",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": -999.0,
+        "entries": 55,
+        "full_loss_cushion": 3,
+        "loss_control_cost_cents": null,
+        "losses": 8,
+        "net_cents": 362.0,
+        "reconstructed_share": null,
+        "settled": 55,
+        "suppressed_exits": null,
+        "wins": 47,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing approved-entry v28 stream with the named FV overlay.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Keep versioned as its own policy; only tweak thresholds after an independent scorecard names the blocker.",
+        "live_test_rule": "Manual review required before a separate size-controlled live sidecar with its own logs and scorer.",
+        "risk_kill_rule": "Kill or block live testing while insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "approved_entry_book_raw_blend_fv",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "not_strict_forward",
+        "coverage_unknown",
+        "source_share_unknown",
+        "does_not_beat_refreshed_live_baseline"
+      ],
+      "policy": "book_raw_blend_alpha_0p50",
+      "source": "candidate_tracker"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 6.0,
+        "delta_vs_live_cents": null,
+        "entries": 5,
+        "full_loss_cushion": 1,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 120.0,
+        "reconstructed_share": null,
+        "settled": 5,
+        "suppressed_exits": 0,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using guarded_matched_unchanged_loss_hold_watch.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; sample below 30 settled; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "matched_unchanged_loss_guard_watch",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "guarded_matched_unchanged_loss_hold_watch",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 18.0,
+        "delta_vs_live_cents": null,
+        "entries": 0,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 36.0,
+        "reconstructed_share": null,
+        "settled": 1,
+        "suppressed_exits": 1,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using shallow_drawdown_any_exit_lte5.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; sample below 30 settled; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "exit_shallow_drawdown",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "policy": "shallow_drawdown_any_exit_lte5",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 872.0,
+        "entries": 76,
+        "full_loss_cushion": 22,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2233.0,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_mid_confidence_parent_fill_quarter",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 828.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2189.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Half-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_mid_confidence_parent_fill_half",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 766.043909253247,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2127.043909253247,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_smooth_parent_fill_source_risk",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 734.0,
+        "entries": 76,
+        "full_loss_cushion": 20,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2095.0,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Half-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_parent_fill_all_rejected_half",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 730.25,
+        "entries": 76,
+        "full_loss_cushion": 20,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2091.25,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "top_component_parent_fill_repair_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze",
+        "source_label_diagnostic",
+        "source_gate_zero_row_margin"
+      ],
+      "policy": "diagnostic_parent_fill_all_rejected_quarter",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 66.0,
+        "delta_vs_live_cents": null,
+        "entries": 3,
+        "full_loss_cushion": 1,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 120.0,
+        "reconstructed_share": null,
+        "settled": 3,
+        "suppressed_exits": 3,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte10.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; sample below 30 settled; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "soft_frontier_midprice_delayed_recheck_exit",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3",
+        "joined_rows_lt_30"
+      ],
+      "policy": "diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte10",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 66.0,
+        "delta_vs_live_cents": null,
+        "entries": 3,
+        "full_loss_cushion": 1,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 120.0,
+        "reconstructed_share": null,
+        "settled": 3,
+        "suppressed_exits": 3,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte11.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; sample below 30 settled; full-loss cushion below 3; suppressed exit decisions below 30.",
+        "sizing_rule": "Quarter-size notional on the candidate's named risk slice; base size otherwise."
+      },
+      "gate": "soft_frontier_midprice_delayed_recheck_rescue",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3",
+        "joined_rows_lt_30"
+      ],
+      "policy": "diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte11",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 200.00000000000006,
+        "delta_vs_live_cents": null,
+        "entries": 0,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 622.0,
+        "reconstructed_share": null,
+        "settled": 14,
+        "suppressed_exits": 5,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using suppress_value_or_reduce_p_hold80.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; sample below 30 settled; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "feature_gate_value_exit",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "selected_side_live_overlap_only",
+        "hold_to_settlement_assumption",
+        "not_live_bot_logic"
+      ],
+      "policy": "suppress_value_or_reduce_p_hold80",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 18.00000000000003,
+        "delta_vs_live_cents": null,
+        "entries": 0,
+        "full_loss_cushion": 0,
+        "loss_control_cost_cents": -2200.0,
+        "losses": null,
+        "net_cents": -206.0,
+        "reconstructed_share": null,
+        "settled": 13,
+        "suppressed_exits": 12,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using feature_gate_exit_bid_min_ge_60_suppress.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; sample below 30 settled; full-loss cushion below 3; suppressed exit decisions below 30; loss-control cost present.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "feature_gate_exit_bid_suppression",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "settled_lt_30",
+        "net_not_positive",
+        "suppressed_decisions_lt_30",
+        "loss_control_cost_negative",
+        "full_loss_cushion_lt_3",
+        "suppressed_losers_present",
+        "suppressed_loss_control_cost_negative"
+      ],
+      "policy": "feature_gate_exit_bid_min_ge_60_suppress",
+      "source": "exit_policy_watch_dashboard"
+    }
+  ],
+  "candidate_cards": 49,
+  "closest_policy_cards": [
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 214.0,
+        "delta_vs_live_cents": null,
+        "entries": 46,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 692.0,
+        "reconstructed_share": null,
+        "settled": 46,
+        "suppressed_exits": 13,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "common_clock_strict_forward_v3",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 242.0,
+        "delta_vs_live_cents": null,
+        "entries": 58,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 668.0,
+        "reconstructed_share": null,
+        "settled": 58,
+        "suppressed_exits": 17,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "common_clock_strict_forward_v2",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 166.0,
+        "delta_vs_live_cents": null,
+        "entries": 46,
+        "full_loss_cushion": 6,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 644.0,
+        "reconstructed_share": null,
+        "settled": 46,
+        "suppressed_exits": 9,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "book_gap_loss_guard_v3",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 242.0,
+        "delta_vs_live_cents": null,
+        "entries": 59,
+        "full_loss_cushion": 5,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 582.0,
+        "reconstructed_share": null,
+        "settled": 59,
+        "suppressed_exits": 17,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "common_clock_strict_forward_v1",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "exit_policy",
+      "evidence": {
+        "coverage_pct": null,
+        "delta_vs_current_cents": 46.0,
+        "delta_vs_live_cents": null,
+        "entries": 40,
+        "full_loss_cushion": 5,
+        "loss_control_cost_cents": 0.0,
+        "losses": null,
+        "net_cents": 556.0,
+        "reconstructed_share": null,
+        "settled": 40,
+        "suppressed_exits": 1,
+        "wins": null,
+        "wins_losses": null
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score on the frozen exit-policy watch dashboard against current-window v28 exits; reconcile later with live-only scorer if promoted.",
+        "entry_rule": "Current live v28 approved entry stream.",
+        "exit_state_rule": "Replace or suppress selected current v28 exits using high_p_favorable_fv.",
+        "iteration_rule": "Collect post-freeze suppressions until >=30 decisions, zero/controlled loss-control cost, cushion >=3, then re-review.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; suppressed exit decisions below 30.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "exit_reduce_drift_guard",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "suppressed_decisions_lt_30"
+      ],
+      "policy": "high_p_favorable_fv",
+      "source": "exit_policy_watch_dashboard"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 741.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2102.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_approved_union_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 741.5,
+        "entries": 76,
+        "full_loss_cushion": 21,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2102.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "67/9"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_union_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 647.5,
+        "entries": 76,
+        "full_loss_cushion": 20,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 2008.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "66/10"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_low_exit_collapse_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 75.24752475247524,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 565.5,
+        "entries": 76,
+        "full_loss_cushion": 19,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1926.5,
+        "reconstructed_share": 0.34210526315789475,
+        "settled": 76,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "66/10"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing top-component parent/fill or false-negative-rescue entry stack.",
+        "exit_state_rule": "Current live v28 exit/state machine.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Current controlled v28 size discipline unless a future live-test spec narrows to size 1."
+      },
+      "gate": "top_component_false_negative_rescue_child",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "diagnostic_prefreeze"
+      ],
+      "policy": "diagnostic_mid_recheck_value_rebound",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty025_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty050_rank_only",
+      "source": "controlled_live_test_gate"
+    },
+    {
+      "candidate_type": "entry_or_stack",
+      "evidence": {
+        "coverage_pct": 82.17821782178217,
+        "delta_vs_current_cents": null,
+        "delta_vs_live_cents": 481.5,
+        "entries": 83,
+        "full_loss_cushion": 18,
+        "loss_control_cost_cents": null,
+        "losses": null,
+        "net_cents": 1842.5,
+        "reconstructed_share": 0.2168674698795181,
+        "settled": 83,
+        "suppressed_exits": null,
+        "wins": null,
+        "wins_losses": "68/15"
+      },
+      "full_policy": {
+        "accounting_pnl_rule": "Score via candidate tracker/controlled-live gate against refreshed live_mushroom_v28_size2 live-only baseline after fees.",
+        "entry_rule": "Existing dual-lane overlap/portfolio entry stack from frozen dual-lane artifacts.",
+        "exit_state_rule": "Use the existing candidate exit stack/rescue rule from its frozen artifact; otherwise current v28 exits.",
+        "iteration_rule": "Freeze or use own-freeze rows only; diagnostic rows can seed but not promote the policy.",
+        "live_test_rule": "No live candidate trades. Continue frozen forward collection in separate research artifacts.",
+        "risk_kill_rule": "Kill or block live testing while not live-ready; insufficient strict-forward evidence.",
+        "sizing_rule": "Candidate-specific continuous shrink/penalty sizing from the frozen artifact."
+      },
+      "gate": "dual_lane_overlap_union",
+      "live_test_allowed": false,
+      "missing_gates": [
+        "live_ready_false",
+        "not_strict_forward",
+        "needs_own_frozen_forward_birth"
+      ],
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty100_rank_only",
+      "source": "controlled_live_test_gate"
+    }
+  ],
+  "decision": "no_live_test",
+  "generated_at_utc": "2026-05-07T21:43:52.279512+00:00",
+  "interpretation": [
+    "No complete policy card clears the live-test gates; continue frozen forward collection.",
+    "Closest full policy is common_clock_strict_forward_v3 / loss_guard_value_p85_reduce_p79_gap0 with missing gates ['live_ready_false', 'suppressed_decisions_lt_30']."
+  ],
+  "live_baseline_cents": 1361.0,
+  "live_test_allowed_count": 0,
+  "purpose": "End-to-end policy cards for existing v28-derived candidates. Research-only; no orders.",
+  "sources": {
+    "controlled_gate": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_controlled_live_test_gate_latest.json",
+    "exit_dashboard": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_policy_watch_dashboard_latest.json",
+    "live_summary": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\summary.json",
+    "readiness": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_candidate_readiness_distance_latest.json",
+    "tracker": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_candidate_pnl_tracker_latest.json"
+  }
+}

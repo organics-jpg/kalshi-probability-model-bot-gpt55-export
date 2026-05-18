@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "actual": 795,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_fv_variants_latest.json",
+      "name": "settled_forward_observation_sample",
+      "passed": true,
+      "required": ">= 100"
+    },
+    {
+      "actual": 181,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_continuous_scorecard_latest.json",
+      "name": "watched_market_sample",
+      "passed": true,
+      "required": ">= 50"
+    },
+    {
+      "actual": 59.11602209944752,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_continuous_scorecard_latest.json",
+      "name": "coverage_target",
+      "passed": false,
+      "required": ">= 75.0%"
+    },
+    {
+      "actual": true,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_continuous_scorecard_latest.json",
+      "name": "risk_stop_clear",
+      "passed": false,
+      "required": "False"
+    },
+    {
+      "actual": 823.0,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_continuous_scorecard_latest.json",
+      "name": "nonnegative_forward_pnl",
+      "passed": true,
+      "required": ">= 0.0"
+    },
+    {
+      "actual": 0.007316655838284281,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_fv_variants_latest.json",
+      "name": "v28_beats_book_brier",
+      "passed": false,
+      "required": "<= -0.001"
+    },
+    {
+      "actual": {
+        "brier_minus_book_prior": 0.0,
+        "variant": "book_ask_prior"
+      },
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_fv_variants_latest.json",
+      "name": "top_candidate_beats_book_brier",
+      "passed": false,
+      "required": "<= -0.001"
+    },
+    {
+      "actual": 0.007316655838284272,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_book_disagreement_calibration_latest.json",
+      "name": "book_disagreement_confirms_v28",
+      "passed": false,
+      "required": "<= -0.001"
+    },
+    {
+      "actual": 0.0015535597484276353,
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_forward_calibration_latest.json",
+      "name": "calibration_error_bounded",
+      "passed": true,
+      "required": "abs <= 0.05"
+    },
+    {
+      "actual": {
+        "raw_brier": 0.16330634137287547,
+        "top_brier": 0.1559896855345912,
+        "top_variant": "book_ask_prior"
+      },
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_fv_variants_latest.json",
+      "name": "candidate_not_worse_than_raw_v28",
+      "passed": true,
+      "required": "top is raw v28 or strictly improves raw v28"
+    },
+    {
+      "actual": {
+        "policy": "book_plus_03_cheap_convex",
+        "resolved": 92
+      },
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_entry_policy_bakeoff_latest.json",
+      "name": "broad_entry_policy_has_sample",
+      "passed": false,
+      "required": "resolved >= 100"
+    },
+    {
+      "actual": {
+        "coverage_pct": 50.82872928176796,
+        "policy": "book_plus_03_cheap_convex"
+      },
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_entry_policy_bakeoff_latest.json",
+      "name": "broad_entry_policy_reaches_coverage",
+      "passed": false,
+      "required": ">= 75.0%"
+    },
+    {
+      "actual": {
+        "gross_cents": 916.0,
+        "losses": 60,
+        "policy": "book_plus_03_cheap_convex"
+      },
+      "evidence": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_shadow_entry_policy_bakeoff_latest.json",
+      "name": "broad_entry_policy_nonnegative",
+      "passed": false,
+      "required": "nonnegative gross and losses not dominant"
+    }
+  ],
+  "current_best_entry_policy": "book_plus_03_cheap_convex",
+  "current_best_variant": "book_ask_prior",
+  "notes": [
+    "This audit only permits review; it does not approve live deployment.",
+    "Coverage is checked because the original goal asked for 75-80% market participation.",
+    "The updated v28 mandate treats coverage as soft, but low coverage still needs explicit ROI justification."
+  ],
+  "ready_for_promotion_review": false,
+  "reason": "evidence_incomplete_or_failed"
+}

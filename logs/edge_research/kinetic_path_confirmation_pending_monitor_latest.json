@@ -1,0 +1,42 @@
+{
+  "generated_utc": "20260505_032000Z",
+  "lock": {
+    "confirmation": {
+      "delay_sec": 60.0,
+      "label": "same_side_for>=60s AND confirm_score>=0.6",
+      "max_ask_worse": null,
+      "min_confirm_book": null,
+      "min_confirm_score": 0.6
+    },
+    "created_utc": "2026-05-03T04:14:31.210896+00:00",
+    "discovery_read": {
+      "current_delta_vs_unconfirmed_cents": 527.0,
+      "reason": "Path-flip diagnostic; positive on both datasets but not v21-dominant, so forward-lock separately.",
+      "v21_delta_vs_unconfirmed_cents": -66.0
+    },
+    "lock_close_dt": "2026-05-03T04:00:00+00:00",
+    "policy": {
+      "ask_max": 95.0,
+      "ask_min": 50.0,
+      "chooser": "kinetic_touch_score_15",
+      "gate": "touch_loss15<=0.90",
+      "label": "choose=kinetic_touch_score_15; kinetic_touch_score_15>=0.55; 50<=ask<=95; sec>=120; gate=touch_loss15<=0.90",
+      "min_score": 0.55,
+      "min_seconds_to_close": 120.0
+    },
+    "source_lock": "logs\\edge_research\\profit_kinetic_touch_fresh_lock.json",
+    "source_scan": "logs\\edge_research\\kinetic_path_confirmation_latest.csv"
+  },
+  "new_records": 0,
+  "removed_post_close_records": 0,
+  "summary": {
+    "accuracy": 0.7478991596638656,
+    "first_pending": "",
+    "losses": 30,
+    "net_pnl_cents": -85.0,
+    "pending": 0,
+    "registered": 119,
+    "resolved": 119,
+    "wins": 89
+  }
+}

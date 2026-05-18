@@ -1,0 +1,8 @@
+{
+  "base_policy": "v28_raw_p52_edge0",
+  "candidate": "raw_p52_skip_midconf_early_no_boundary",
+  "freeze_ts_utc": "2026-05-06T12:20:19.153557+00:00",
+  "physics": "Middle-confidence early NO boundary rows can be overconfident because recross churn remains alive while payout risk is large.",
+  "rule": "Start from v28_raw_p52_edge0 and skip NO rows with 0.62<=p<0.70, stc>=720, abs_d<=0.45, recross>=0.55.",
+  "source_artifact": "v28_raw_p52_early_no_boundary_band_skip_latest.json"
+}

@@ -1,0 +1,42 @@
+{
+  "markets": [
+    {
+      "blocker_counts": {},
+      "bundle_ready": true,
+      "bundle_status": "input_bundle_ready_for_collection",
+      "contract_detail_count": 298,
+      "market_close_ts_utc": "2026-05-18T21:00:00.000Z",
+      "market_ticker": "KXBTC15M-26MAY181700-00",
+      "output_bundle_json": "research_particle/v28_successor/sidecar_input_bundles/20260518T205305790Z_KXBTC15M-26MAY181700-00.json",
+      "packet_error": "",
+      "packet_rows": 18,
+      "strike": 76917.02
+    }
+  ],
+  "summary": {
+    "batch_status": "batch_bundles_ready_for_freeze",
+    "blocker_counts": {},
+    "builder_script": "build_v28_successor_public_rest_sidecar_batch.py",
+    "bundle_ready_files": 1,
+    "diagnostic_only": false,
+    "generated_utc": "2026-05-18T20:53:06.000Z",
+    "markets_selected": 1,
+    "mode": "public_rest",
+    "outputs": {
+      "audit_json": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+      "audit_md": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.md",
+      "demo_batch_json": "research_particle/v28_successor/public_rest_sidecar_batch_demo_latest.json"
+    },
+    "packet_markets": 1,
+    "packet_rows": 18,
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "public REST sidecar batch bundles are collector inputs only; promotion requires pre-close freeze, post-resolution labels, source contract, coverage, evidence scoring, and verifier approval"
+    },
+    "simulated": false,
+    "status_counts": {
+      "input_bundle_ready_for_collection": 1
+    }
+  }
+}

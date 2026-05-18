@@ -1,0 +1,202 @@
+{
+  "blockers": [
+    "broad_feature_gate_metrics_disagree",
+    "size_shrink_runway_metrics_disagree"
+  ],
+  "broad_candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+  "broad_mismatches": [
+    {
+      "metric": "entries",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 54,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 53,
+        "v28_feature_gate_linked_source_runway_latest.json": 53,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 54
+      }
+    },
+    {
+      "metric": "settled",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 42,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 53,
+        "v28_feature_gate_linked_source_runway_latest.json": 53,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 42
+      }
+    },
+    {
+      "metric": "coverage_pct",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 75.0,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 73.61111111111111,
+        "v28_feature_gate_linked_source_runway_latest.json": 74.64788732394366,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 75.0
+      }
+    },
+    {
+      "metric": "net_cents",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 274.0,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 365.0,
+        "v28_feature_gate_linked_source_runway_latest.json": 388.0,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 274.0
+      }
+    },
+    {
+      "metric": "wins",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 26,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 35,
+        "v28_feature_gate_linked_source_runway_latest.json": 35,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 26
+      }
+    },
+    {
+      "metric": "losses",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 16,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 18,
+        "v28_feature_gate_linked_source_runway_latest.json": 18,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 16
+      }
+    },
+    {
+      "metric": "reconstructed_share",
+      "values": {
+        "v28_boundary_clock_feature_gate_candidate_latest.json": 0.37037037037037035,
+        "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json": 0.37735849056603776,
+        "v28_feature_gate_linked_source_runway_latest.json": 0.37735849056603776,
+        "v28_feature_gate_promotion_gap_audit_latest.json": 0.37037037037037035
+      }
+    }
+  ],
+  "broad_rows": [
+    {
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+      "coverage_pct": 75.0,
+      "entries": 54,
+      "future_denominator": 72,
+      "generated_at_utc": "2026-05-07T15:00:39.637007+00:00",
+      "losses": 16,
+      "net_cents": 274.0,
+      "reconstructed_share": 0.37037037037037035,
+      "settled": 42,
+      "source": "v28_boundary_clock_feature_gate_candidate_latest.json",
+      "wins": 26
+    },
+    {
+      "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+      "coverage_pct": 73.61111111111111,
+      "entries": 53,
+      "future_denominator": 72,
+      "generated_at_utc": "2026-05-07T14:53:10.818302+00:00",
+      "losses": 18,
+      "net_cents": 365.0,
+      "reconstructed_share": 0.37735849056603776,
+      "settled": 53,
+      "source": "v28_boundary_clock_feature_gate_source_denominator_audit_latest.json",
+      "wins": 35
+    },
+    {
+      "blockers": [
+        "coverage_too_low",
+        "reconstructed_share_gt_35pct"
+      ],
+      "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+      "coverage_pct": 74.64788732394366,
+      "entries": 53,
+      "future_denominator": 71,
+      "generated_at_utc": "2026-05-07T14:53:15.122001+00:00",
+      "losses": 18,
+      "net_cents": 388.0,
+      "reconstructed_share": 0.37735849056603776,
+      "settled": 53,
+      "source": "v28_feature_gate_linked_source_runway_latest.json",
+      "wins": 35
+    },
+    {
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+      "coverage_pct": 75.0,
+      "entries": 54,
+      "future_denominator": null,
+      "generated_at_utc": "2026-05-07T15:00:48.002769+00:00",
+      "losses": 16,
+      "net_cents": 274.0,
+      "reconstructed_share": 0.37037037037037035,
+      "settled": 42,
+      "source": "v28_feature_gate_promotion_gap_audit_latest.json",
+      "wins": 26
+    }
+  ],
+  "consistent_for_promotion_discussion": false,
+  "generated_at_utc": "2026-05-07T15:00:48.051403+00:00",
+  "interpretation": [
+    "Research-only audit; this does not score new rules, change live logic, or promote a candidate.",
+    "Artifact consistency blockers: ['broad_feature_gate_metrics_disagree', 'size_shrink_runway_metrics_disagree'].",
+    "Broad feature-gate mismatches: ['entries', 'settled', 'coverage_pct', 'net_cents', 'wins', 'losses', 'reconstructed_share'].",
+    "Size-shrink runway mismatches: ['delta_vs_live_cents']."
+  ],
+  "live_baseline_mismatches": [],
+  "live_baseline_rows": [
+    {
+      "live_net_cents": 1147.0,
+      "source": "summary.json"
+    },
+    {
+      "live_net_cents": 1147,
+      "source": "v28_candidate_vs_live_full_table_latest.json"
+    },
+    {
+      "live_net_cents": 1147.0,
+      "source": "v28_feature_gate_promotion_gap_audit_latest.json"
+    }
+  ],
+  "purpose": "research_only_feature_gate_artifact_consistency_guardrail",
+  "size_policy": "repair_low_absd_quarter_else_half",
+  "size_shrink_mismatches": [
+    {
+      "metric": "delta_vs_live_cents",
+      "values": {
+        "v28_feature_gate_coverage_size_shrink_runway_latest.json": -690.0,
+        "v28_feature_gate_size_shrink_source_runway_latest.json": -738.0
+      }
+    }
+  ],
+  "size_shrink_rows": [
+    {
+      "blockers": [
+        "row_reconstructed_share_gt_35pct"
+      ],
+      "coverage_pct": 75.40983606557377,
+      "delta_vs_live_cents": -738.0,
+      "generated_at_utc": "2026-05-07T14:53:15.108515+00:00",
+      "lane": "post_feature_freeze_entry",
+      "policy": "repair_low_absd_quarter_else_half",
+      "row_reconstructed_share": 0.41304347826086957,
+      "settled": 45,
+      "source": "v28_feature_gate_size_shrink_source_runway_latest.json",
+      "weighted_net_cents": 369.0
+    },
+    {
+      "blockers": [
+        "row_reconstructed_share_gt_35pct"
+      ],
+      "coverage_pct": 75.40983606557377,
+      "delta_vs_live_cents": -690.0,
+      "generated_at_utc": "2026-05-07T14:44:15.714545+00:00",
+      "lane": "post_feature_freeze_entry",
+      "policy": "repair_low_absd_quarter_else_half",
+      "row_reconstructed_share": 0.41304347826086957,
+      "settled": 45,
+      "source": "v28_feature_gate_coverage_size_shrink_runway_latest.json",
+      "weighted_net_cents": 369.0
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "base": {
+    "actual_count": 7,
+    "avg_abs_d": 0.3563762142857143,
+    "avg_ask": 0.5774489795918367,
+    "avg_p": 0.6438637551020407,
+    "avg_recross": 0.7820316242072739,
+    "coverage_pct": 98.0,
+    "entries": 98,
+    "losses": 41,
+    "net_cents": -418.0,
+    "settled": 98,
+    "sim_count": 91,
+    "win_rate": 0.5816326530612245,
+    "wins": 57
+  },
+  "blockers": [
+    "coverage_too_high",
+    "net_not_positive",
+    "simulated_share_gt_35pct"
+  ],
+  "candidate_live_ready": false,
+  "candidate_summary": {
+    "actual_count": 7,
+    "avg_abs_d": 0.355015688172043,
+    "avg_ask": 0.5765591397849462,
+    "avg_p": 0.643235311827957,
+    "avg_recross": 0.7754423952400827,
+    "coverage_pct": 93.0,
+    "entries": 93,
+    "losses": 40,
+    "net_cents": -604.0,
+    "settled": 93,
+    "sim_count": 86,
+    "win_rate": 0.5698924731182796,
+    "wins": 53
+  },
+  "checks": [
+    {
+      "name": "settled_rows_ge_30",
+      "needed": 0,
+      "passed": true,
+      "value": 93
+    },
+    {
+      "name": "coverage_75_to_90",
+      "needed": "75.0-90.0",
+      "passed": false,
+      "value": 93.0
+    },
+    {
+      "name": "candidate_net_positive",
+      "needed": ">0",
+      "passed": false,
+      "value": -604.0
+    },
+    {
+      "name": "delta_vs_raw_positive",
+      "needed": ">0",
+      "passed": false,
+      "value": -186.0
+    },
+    {
+      "name": "simulated_share_lte_35pct",
+      "needed": "<=0.35",
+      "passed": false,
+      "value": 0.9247311827956989
+    }
+  ],
+  "delta_net_cents": -186.0,
+  "excluded_in_progress_markets": [
+    "KXBTC15M-26MAY060830-30"
+  ],
+  "freeze": {
+    "base_policy": "v28_raw_p52_edge0",
+    "candidate": "raw_p52_skip_midconf_early_no_boundary",
+    "freeze_ts_utc": "2026-05-06T12:20:19.153557+00:00",
+    "physics": "Middle-confidence early NO boundary rows can be overconfident because recross churn remains alive while payout risk is large.",
+    "rule": "Start from v28_raw_p52_edge0 and skip NO rows with 0.62<=p<0.70, stc>=720, abs_d<=0.45, recross>=0.55.",
+    "source_artifact": "v28_raw_p52_early_no_boundary_band_skip_latest.json"
+  },
+  "future_denominator": 100,
+  "interpretation": [
+    "Need 0 more settled post-freeze candidate rows to reach the 30-row evidence floor.",
+    "Discovery robustness pass is True; forward validation is still separate.",
+    "Promotion remains blocked unless the candidate keeps target coverage, positive net, positive delta versus raw p52, and acceptable simulated share."
+  ],
+  "pending_sensitivity": {
+    "adverse_pending_swing_cents": 0,
+    "current_delta_cents": -186.0,
+    "delta_after_all_pending_skips_win_cents": -186.0,
+    "pending_markets": [],
+    "pending_skipped_rows": 0
+  },
+  "ready_for_consideration": false,
+  "robustness": {
+    "passes_basic_robustness": true,
+    "top_target_coverage_positive_delta_count": null,
+    "worst_leave_one_skipped": {
+      "candidate_net_with_returned_market": 497.0,
+      "delta_vs_base_with_returned_market": 426.0,
+      "returned_market": "KXBTC15M-26MAY060630-30",
+      "returned_net_cents": -136.0
+    }
+  },
+  "skipped_summary": {
+    "actual_count": 0,
+    "avg_abs_d": 0.38168199999999997,
+    "avg_ask": 0.594,
+    "avg_p": 0.6555527999999999,
+    "avg_recross": 0.9045912829970272,
+    "coverage_pct": 5.0,
+    "entries": 5,
+    "losses": 1,
+    "net_cents": 186.0,
+    "settled": 5,
+    "sim_count": 5,
+    "win_rate": 0.8,
+    "wins": 4
+  },
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_raw_p52_early_no_boundary_band_skip_latest.json"
+}

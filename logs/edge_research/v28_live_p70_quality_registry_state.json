@@ -1,0 +1,17 @@
+{
+  "freeze_ts_utc": "2026-05-06T04:49:26.047798+00:00",
+  "registry": "live_v28_p70_quality_tags",
+  "rule": "Track future live v28 approvals with p_side >= 0.70 by fixed physical tags.",
+  "tag_definitions": {
+    "boundary_geometry": "abs_d_sigma < 0.60",
+    "crowded_or_deep_touch": "depth_count >= 500",
+    "deep_geometry": "abs_d_sigma >= 0.90",
+    "early_gt_12m": "seconds_to_close > 720",
+    "edge_ge_4c": "edge_cents >= 4",
+    "middle_time_120_720s": "120 <= seconds_to_close <= 720",
+    "older_book_500ms": "book_age_ms >= 500",
+    "p85_live_threshold": "p_side >= 0.85",
+    "p90_extreme_confidence": "p_side >= 0.90",
+    "thin_edge_lt_4c": "edge_cents < 4"
+  }
+}

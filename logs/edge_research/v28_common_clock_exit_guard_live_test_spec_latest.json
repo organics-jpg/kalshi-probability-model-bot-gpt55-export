@@ -1,0 +1,130 @@
+{
+  "candidate": {
+    "accounting_pnl_rule": "Separate BOT_STORAGE_TAG, logs, stats, execution_events, exchange fills/orders/fees reconciliation, and live-only score comparison.",
+    "entry_rule": "Current v28 approved-entry stream.",
+    "exit_state_rule": "Suppress selected current v28 exits using loss_guard_value_p85_reduce_p79_gap0.",
+    "iteration_rule": "No threshold tweaks during a live trial; version a new candidate after post-trial scoring names the blocker.",
+    "live_test_rule": "Only one DRY_RUN=false process may own real exits. Until a production switch exists, run paper/virtual ledger only.",
+    "risk_kill_rule": "Stop candidate on any harmful suppressed hold, any net loss cluster >=3, drawdown >=200c, accounting mismatch, stale account state, or exchange reconciliation failure.",
+    "sizing_rule": "Start at size=1, max same-market position=1 for any future live trial."
+  },
+  "current_controls": {
+    "account_state_refresh": true,
+    "execution_events": true,
+    "exit_guard_evaluator": true,
+    "exit_guard_mode": true,
+    "exit_guard_shadow_ledger": true,
+    "exit_signal_function": true,
+    "live_lock": true,
+    "separate_storage_tags": true,
+    "strategy_approval_gate": true
+  },
+  "decision": "blocked_do_not_live_test",
+  "generated_at_utc": "2026-05-07T21:40:41.310274+00:00",
+  "go_no_go": [
+    {
+      "current": "blocked",
+      "evidence": "new_exit_mix_common_forward_v2 has 17 suppressions; missing ['live_ready_false', 'suppressed_needed_13']",
+      "gate": "strict_forward_density",
+      "required": ">=30 strict suppressions in the selected common-clock window"
+    },
+    {
+      "current": "pass",
+      "evidence": "harmful=0 loss_cost=0.0c",
+      "gate": "loss_control",
+      "required": "0 harmful suppressions and non-negative loss-control cost"
+    },
+    {
+      "current": "blocked",
+      "evidence": "no_live_test",
+      "gate": "full_policy_live_gate",
+      "required": "full-policy scorecard allows live test"
+    },
+    {
+      "current": "pass",
+      "evidence": "Source has live-lock, v28 exit path, guard mode, evaluator, and paper shadow ledger.",
+      "gate": "single_process_exit_owner",
+      "required": "candidate exit rule owns exits in the same live process or runs only as paper shadow"
+    },
+    {
+      "current": "pass",
+      "evidence": "Candidate kill-state source hooks present.",
+      "gate": "candidate_kill_state",
+      "required": "candidate stops on harmful suppressed hold, loss cluster, drawdown, stale account, or accounting mismatch"
+    },
+    {
+      "current": "planned_not_executed",
+      "evidence": "No live candidate trial has started.",
+      "gate": "exchange_reconciliation_plan",
+      "required": "pre/post Kalshi balance, positions, fills, realized PnL, fees, exposure, and orders reconciled"
+    }
+  ],
+  "live_baseline": {
+    "completed_round_trips": 521,
+    "diagnosis": "ok",
+    "entries_total": 632,
+    "net_cents": 1361.0,
+    "open_positions": 0,
+    "strategy_tag": "live_mushroom_v28_size2"
+  },
+  "proposed_artifacts": {
+    "exchange_reconciliation": "logs/live_mushroom_v28_common_clock_exit_guard_size1/exchange_reconciliation.ndjson",
+    "execution_events": "logs/live_mushroom_v28_common_clock_exit_guard_size1/execution_events.ndjson",
+    "logs": "logs/live_mushroom_v28_common_clock_exit_guard_size1/",
+    "score_mode": "live_only",
+    "state": "state/live_mushroom_v28_common_clock_exit_guard_size1/",
+    "stats": "stats/live_mushroom_v28_common_clock_exit_guard_size1/"
+  },
+  "proposed_live_env": {
+    "BOT_STORAGE_TAG": "live_mushroom_v28_common_clock_exit_guard_size1",
+    "DRY_RUN": "false only after all go/no-go gates pass",
+    "LIVE_APPROVED_STRATEGY_TAG": "mushroom_v28_common_clock_exit_guard_v1_size1",
+    "MULTI_ENTRY_MAX_POSITION_CONTRACTS": "1",
+    "MULTI_ENTRY_SAME_MARKET_ENABLED": "false",
+    "POSITION_SIZE": "1",
+    "STRATEGY_TAG": "mushroom_v28_common_clock_exit_guard_v1_size1"
+  },
+  "purpose": "Conditional live-test contract for the nearest common-clock v28 exit guard. Research-only; no orders.",
+  "readiness_frontier_window": {
+    "candidate_cents": 668.0,
+    "candidate_wl": "41/17",
+    "current_cents": 426.0,
+    "current_wl": "39/19",
+    "delta_vs_current_cents": 242.0,
+    "full_loss_cushion": 6,
+    "harmful_suppressed_rows": 0,
+    "helpful_suppressed_rows": 17,
+    "loss_control_cost_cents": 0.0,
+    "missing_gates": [
+      "live_ready_false",
+      "suppressed_needed_13"
+    ],
+    "settled": 58,
+    "suppressed_exits": 17,
+    "suppressed_needed": 13,
+    "window": "new_exit_mix_common_forward_v2"
+  },
+  "runway_best_window": {
+    "blockers_from_source": [
+      "suppressed_decisions_lt_30"
+    ],
+    "candidate_cents": 692.0,
+    "candidate_wl": "33/13",
+    "current_cents": 478.0,
+    "current_wl": "31/15",
+    "delta_vs_current_cents": 214.0,
+    "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+    "full_loss_cushion": 6,
+    "harmful_suppressed_rows": 0,
+    "helpful_suppressed_rows": 13,
+    "loss_control_cost_cents": 0.0,
+    "missing_gates": [
+      "live_ready_false",
+      "suppressed_needed_17"
+    ],
+    "review_ready_except_global_live": false,
+    "settled": 46,
+    "suppressed_exits": 13,
+    "window": "new_exit_mix_common_forward_v3"
+  }
+}

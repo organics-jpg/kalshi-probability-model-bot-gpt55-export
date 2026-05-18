@@ -1,0 +1,402 @@
+{
+  "by_component": {
+    "delayed_recheck_rescue:drop15_bid60": {
+      "net_cents": -308.0,
+      "rows": 7
+    },
+    "parent_midprice_hold_fill": {
+      "net_cents": -225.0,
+      "rows": 5
+    }
+  },
+  "by_mode": {
+    "missed_exit_rescue_false_negative": {
+      "net_cents": -198.0,
+      "rows": 3,
+      "source_counts": {
+        "approved_entry": 3
+      },
+      "tag_counts": {
+        "exit_policy_error": 3
+      }
+    },
+    "parent_fill_entry_or_fv_loss": {
+      "net_cents": -225.0,
+      "rows": 5,
+      "source_counts": {
+        "rejected_actionable": 5
+      },
+      "tag_counts": {
+        "entry_timing_or_fv_error": 5,
+        "source_quality_risk": 5
+      }
+    },
+    "true_loser_entry_or_fv_loss": {
+      "net_cents": -110.0,
+      "rows": 4,
+      "source_counts": {
+        "approved_entry": 2,
+        "rejected_actionable": 2
+      },
+      "tag_counts": {
+        "fv_or_entry_error": 4,
+        "source_quality_risk": 2
+      }
+    }
+  },
+  "by_source": {
+    "approved_entry": {
+      "net_cents": -230.0,
+      "rows": 5
+    },
+    "rejected_actionable": {
+      "net_cents": -303.0,
+      "rows": 7
+    }
+  },
+  "counterfactual_hold_delta_on_losses_cents": -52.0,
+  "generated_at_utc": "2026-05-11T02:52:54.650127+00:00",
+  "interpretation": [
+    "Research-only loss drilldown; no live bot changes or orders.",
+    "Best inspected variant is rescue_drop15_plus_absd_parent_fill_to75 with net 1680.5c and W/L 64/12.",
+    "Exit-policy false negatives remain: 3 losing rows would have been helped by holding instead of taking current exit marks.",
+    "Parent-fill losses are the entry/FV repair target: 5 rows for -225.0c.",
+    "Rejected/reconstructed losses are still material: 7 losing rows for -303.0c.",
+    "On losing rows with both marks, holding would worsen losses by -52.0c, so these are mostly true FV/entry losers rather than clipped winners."
+  ],
+  "loss_count": 12,
+  "loss_net_cents": -533.0,
+  "portfolio_freeze_ts_utc": "2026-05-07T09:44:04.148307+00:00",
+  "portfolio_generated_at_utc": "2026-05-11T02:52:54.104756+00:00",
+  "source_report": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_top_component_mix_portfolio_latest.json",
+  "variant": "rescue_drop15_plus_absd_parent_fill_to75",
+  "variant_blockers": [
+    "diagnostic_prefreeze",
+    "source_gate_zero_row_margin"
+  ],
+  "variant_coverage_pct": 75.24752475247524,
+  "variant_losses": 12,
+  "variant_net_cents": 1680.5,
+  "variant_wins": 64,
+  "worst_losses": [
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -86.0,
+      "exit_bid": 29.0,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fair_drawdown_cents": 11.739327,
+      "hold_cents": 66.0,
+      "market": "KXBTC15M-26MAY061800-00",
+      "mode": "missed_exit_rescue_false_negative",
+      "p_hold": 0.552607,
+      "raw_edge": null,
+      "raw_selected_cents": -86.0,
+      "recheck_bid": 45.0,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "no",
+      "source": "approved_entry",
+      "tags": [
+        "exit_policy_error"
+      ],
+      "weighted_cents": -86.0,
+      "window_drop_cents": 3.0
+    },
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -70.0,
+      "exit_bid": 47.0,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fair_drawdown_cents": 21.643115,
+      "hold_cents": -156.0,
+      "market": "KXBTC15M-26MAY060745-45",
+      "mode": "true_loser_entry_or_fv_loss",
+      "p_hold": 0.563569,
+      "raw_edge": null,
+      "raw_selected_cents": -70.0,
+      "recheck_bid": 3.0,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "yes",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "fv_or_entry_error"
+      ],
+      "weighted_cents": -70.0,
+      "window_drop_cents": 45.0
+    },
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -60.0,
+      "exit_bid": 17.0,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fair_drawdown_cents": 15.106811,
+      "hold_cents": 116.0,
+      "market": "KXBTC15M-26MAY062015-15",
+      "mode": "missed_exit_rescue_false_negative",
+      "p_hold": 0.268932,
+      "raw_edge": null,
+      "raw_selected_cents": -60.0,
+      "recheck_bid": 10.0,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "no",
+      "source": "approved_entry",
+      "tags": [
+        "exit_policy_error"
+      ],
+      "weighted_cents": -60.0,
+      "window_drop_cents": 8.0
+    },
+    {
+      "abs_d_sigma": 0.72697,
+      "ask_prob": 0.56,
+      "component": "parent_midprice_hold_fill",
+      "current_cents": null,
+      "exit_bid": null,
+      "exit_reason": null,
+      "fair_drawdown_cents": null,
+      "hold_cents": null,
+      "market": "KXBTC15M-26MAY062345-45",
+      "mode": "parent_fill_entry_or_fv_loss",
+      "p_hold": null,
+      "raw_edge": 0.24623799999999996,
+      "raw_selected_cents": -60.0,
+      "recheck_bid": null,
+      "recross_hazard_score": 0.2648024542283173,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "no",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "entry_timing_or_fv_error"
+      ],
+      "weighted_cents": -60.0,
+      "window_drop_cents": null
+    },
+    {
+      "abs_d_sigma": 0.65803,
+      "ask_prob": 0.55,
+      "component": "parent_midprice_hold_fill",
+      "current_cents": null,
+      "exit_bid": null,
+      "exit_reason": null,
+      "fair_drawdown_cents": null,
+      "hold_cents": null,
+      "market": "KXBTC15M-26MAY070630-30",
+      "mode": "parent_fill_entry_or_fv_loss",
+      "p_hold": null,
+      "raw_edge": 0.23815799999999998,
+      "raw_selected_cents": -59.0,
+      "recheck_bid": null,
+      "recross_hazard_score": 0.37230392875591767,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "yes",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "entry_timing_or_fv_error"
+      ],
+      "weighted_cents": -59.0,
+      "window_drop_cents": null
+    },
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -52.0,
+      "exit_bid": 51.0,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fair_drawdown_cents": 28.913827,
+      "hold_cents": 42.0,
+      "market": "KXBTC15M-26MAY060330-30",
+      "mode": "missed_exit_rescue_false_negative",
+      "p_hold": 0.500862,
+      "raw_edge": null,
+      "raw_selected_cents": -52.0,
+      "recheck_bid": 43.0,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "yes",
+      "source": "approved_entry",
+      "tags": [
+        "exit_policy_error"
+      ],
+      "weighted_cents": -52.0,
+      "window_drop_cents": 7.0
+    },
+    {
+      "abs_d_sigma": 0.63149,
+      "ask_prob": 0.43,
+      "component": "parent_midprice_hold_fill",
+      "current_cents": null,
+      "exit_bid": null,
+      "exit_reason": null,
+      "fair_drawdown_cents": null,
+      "hold_cents": null,
+      "market": "KXBTC15M-26MAY070615-15",
+      "mode": "parent_fill_entry_or_fv_loss",
+      "p_hold": null,
+      "raw_edge": 0.34482700000000005,
+      "raw_selected_cents": -47.0,
+      "recheck_bid": null,
+      "recross_hazard_score": 0.1432808396397172,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "yes",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "entry_timing_or_fv_error"
+      ],
+      "weighted_cents": -47.0,
+      "window_drop_cents": null
+    },
+    {
+      "abs_d_sigma": 0.665443,
+      "ask_prob": 0.38,
+      "component": "parent_midprice_hold_fill",
+      "current_cents": null,
+      "exit_bid": null,
+      "exit_reason": null,
+      "fair_drawdown_cents": null,
+      "hold_cents": null,
+      "market": "KXBTC15M-26MAY061700-00",
+      "mode": "parent_fill_entry_or_fv_loss",
+      "p_hold": null,
+      "raw_edge": 0.408347,
+      "raw_selected_cents": -42.0,
+      "recheck_bid": null,
+      "recross_hazard_score": 0.19639134370333244,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "no",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "entry_timing_or_fv_error"
+      ],
+      "weighted_cents": -42.0,
+      "window_drop_cents": null
+    },
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -30.0,
+      "exit_bid": null,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fair_drawdown_cents": 13.356971,
+      "hold_cents": -160.0,
+      "market": "KXBTC15M-26MAY061300-00",
+      "mode": "true_loser_entry_or_fv_loss",
+      "p_hold": 0.66643,
+      "raw_edge": null,
+      "raw_selected_cents": -30.0,
+      "recheck_bid": null,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "yes",
+      "source": "approved_entry",
+      "tags": [
+        "fv_or_entry_error"
+      ],
+      "weighted_cents": -30.0,
+      "window_drop_cents": null
+    },
+    {
+      "abs_d_sigma": 0.60259,
+      "ask_prob": 0.64,
+      "component": "parent_midprice_hold_fill",
+      "current_cents": null,
+      "exit_bid": null,
+      "exit_reason": null,
+      "fair_drawdown_cents": null,
+      "hold_cents": null,
+      "market": "KXBTC15M-26MAY061715-15",
+      "mode": "parent_fill_entry_or_fv_loss",
+      "p_hold": null,
+      "raw_edge": 0.12483699999999998,
+      "raw_selected_cents": -68.0,
+      "recheck_bid": null,
+      "recross_hazard_score": 0.11475429655322977,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "yes",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "entry_timing_or_fv_error"
+      ],
+      "weighted_cents": -17.0,
+      "window_drop_cents": null
+    },
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -32.0,
+      "exit_bid": 57.0,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fair_drawdown_cents": 6.159273,
+      "hold_cents": -152.0,
+      "market": "KXBTC15M-26MAY062130-30",
+      "mode": "true_loser_entry_or_fv_loss",
+      "p_hold": 0.768407,
+      "raw_edge": null,
+      "raw_selected_cents": -32.0,
+      "recheck_bid": 43.0,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "no",
+      "source": "rejected_actionable",
+      "tags": [
+        "source_quality_risk",
+        "fv_or_entry_error"
+      ],
+      "weighted_cents": -8.0,
+      "window_drop_cents": 11.0
+    },
+    {
+      "abs_d_sigma": null,
+      "ask_prob": null,
+      "component": "delayed_recheck_rescue:drop15_bid60",
+      "current_cents": -2.0,
+      "exit_bid": 65.0,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fair_drawdown_cents": 10.343815,
+      "hold_cents": -140.0,
+      "market": "KXBTC15M-26MAY070015-15",
+      "mode": "true_loser_entry_or_fv_loss",
+      "p_hold": 0.596562,
+      "raw_edge": null,
+      "raw_selected_cents": -2.0,
+      "recheck_bid": 52.0,
+      "recross_hazard_score": null,
+      "selected_delta_cents": 0.0,
+      "selected_suppressed": false,
+      "side": "no",
+      "source": "approved_entry",
+      "tags": [
+        "fv_or_entry_error"
+      ],
+      "weighted_cents": -2.0,
+      "window_drop_cents": 41.0
+    }
+  ]
+}

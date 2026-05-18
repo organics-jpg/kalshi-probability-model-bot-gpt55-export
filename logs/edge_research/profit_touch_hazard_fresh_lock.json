@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-05-02T22:22:45.607980+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.6198830409356725,
+    "current_all_coverage": 0.994186046511628,
+    "current_all_net_pnl_cents": 524.0,
+    "current_all_net_roi_on_cost": 0.0520047637951568,
+    "current_holdout_net_pnl_cents": 96.0,
+    "current_train_net_pnl_cents": 265.0,
+    "current_validation_net_pnl_cents": 163.0,
+    "max_median_ask": 55.5,
+    "min_oos_net_roi": 0.0236220472440944,
+    "v21_all_accuracy": 0.6192660550458715,
+    "v21_all_coverage": 0.986425339366516,
+    "v21_all_net_pnl_cents": 711.0,
+    "v21_all_net_roi_on_cost": 0.0555946516537649,
+    "v21_holdout_net_pnl_cents": 364.0,
+    "v21_train_net_pnl_cents": 287.0,
+    "v21_validation_net_pnl_cents": 60.0
+  },
+  "lock_close_dt": "2026-05-02T22:00:00+00:00",
+  "policy": {
+    "ask_max": 80.0,
+    "ask_min": 0.0,
+    "chooser": "book_touch_blend_15",
+    "gate": "none",
+    "label": "choose=book_touch_blend_15; book_touch_blend_15>=0.35; 0<=ask<=80; sec>=120; gate=none",
+    "min_score": 0.35,
+    "min_seconds_to_close": 120.0
+  },
+  "source_frontier_csv": "logs\\edge_research\\profit_touch_hazard_frontier_latest.csv"
+}

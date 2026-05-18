@@ -1,0 +1,50 @@
+{
+  "candidate_family": "exit_shallow_fair_drawdown_watch",
+  "freeze_ts_utc": "2026-05-07T05:50:24.685661+00:00",
+  "origin": "Rounded from v28_exit_unresolved_state_separator best clean diagnostic rule.",
+  "research_only": true,
+  "rules": {
+    "shallow_drawdown_any_exit_lte5": {
+      "exit_reasons": [
+        "mushroom_v28_probability_reduce",
+        "mushroom_v28_probability_collapse_full",
+        "mushroom_v28_exit_value_over_hold"
+      ],
+      "fair_drawdown_cents_max": 5.0,
+      "physics": "Broad sanity check across all v28 soft/value exits; this is expected to be riskier than child rules."
+    },
+    "shallow_drawdown_collapse_only_lte5": {
+      "exit_reasons": [
+        "mushroom_v28_probability_collapse_full"
+      ],
+      "fair_drawdown_cents_max": 5.0,
+      "physics": "Collapse exits with shallow fair drawdown test whether collapse is sometimes mark churn rather than true FV failure."
+    },
+    "shallow_drawdown_reduce_only_lte5": {
+      "exit_reasons": [
+        "mushroom_v28_probability_reduce"
+      ],
+      "fair_drawdown_cents_max": 5.0,
+      "physics": "Probability-reduce exits with shallow fair drawdown are the cleanest clipped-winner hypothesis."
+    },
+    "shallow_drawdown_reduce_or_collapse_lte5": {
+      "exit_reasons": [
+        "mushroom_v28_probability_reduce",
+        "mushroom_v28_probability_collapse_full"
+      ],
+      "fair_drawdown_cents_max": 5.0,
+      "physics": "If fair-value drawdown is shallow, reduce/collapse exits may be path turbulence rather than thesis failure."
+    },
+    "shallow_drawdown_reduce_or_collapse_lte5_p_hold60": {
+      "exit_reasons": [
+        "mushroom_v28_probability_reduce",
+        "mushroom_v28_probability_collapse_full"
+      ],
+      "fair_drawdown_cents_max": 5.0,
+      "p_hold_min": 0.6,
+      "physics": "Requires shallow fair drawdown plus at least modest hold probability before suppressing reduce/collapse exits."
+    }
+  },
+  "source_best_rounded_rule": "fair_drawdown_cents le 5",
+  "strict_forward_note": "Only post_shallow_drawdown_birth lanes count as forward evidence."
+}

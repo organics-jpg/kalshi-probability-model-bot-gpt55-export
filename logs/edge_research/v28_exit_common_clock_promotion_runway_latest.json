@@ -1,0 +1,113 @@
+{
+  "common_clock_generated_at_utc": "2026-05-07T18:03:07.655477+00:00",
+  "generated_at_utc": "2026-05-07T18:03:24.624202+00:00",
+  "interpretation": [
+    "This is a strict common-clock exit runway, not a promotion decision.",
+    "Closest strict exit row is new_exit_mix_common_forward_v2 / loss_guard_value_p85_reduce_p79_gap0: 58 settled, 17 suppressed, 668.0c candidate net, 242.0c delta.",
+    "It still needs 13 suppressed decisions and 0.0c cushion; do not use it live until strict rows mature."
+  ],
+  "requirements": {
+    "min_cushion_cents": 300.0,
+    "min_settled": 30,
+    "min_suppressed_decisions": 30
+  },
+  "rows": [
+    {
+      "avg_net_needed_per_future_row": 0.0,
+      "candidate_gross_cents": 668.0,
+      "candidate_losses": 17,
+      "candidate_wins": 41,
+      "current_gross_cents": 426.0,
+      "delta_vs_current_cents": 242.0,
+      "freeze_ts_utc": "2026-05-06T22:01:04.415577+00:00",
+      "full_loss_cushion_estimate": 6,
+      "future_rows_needed_if_all_suppressible": 13,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 17,
+      "interpretation": "strict positive but immature",
+      "live_ready_by_exit_gates": false,
+      "loss_control_cost_cents": 0.0,
+      "loss_count_reduction": 2,
+      "missing_gates": [
+        "suppressed+13"
+      ],
+      "net_cents_needed_for_cushion3": 0.0,
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "reported_blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "selected_basis": "best_positive_clean_delta",
+      "settled": 58,
+      "settled_rows_needed": 0,
+      "suppressed_decisions_needed": 13,
+      "suppressed_exits": 17,
+      "window": "new_exit_mix_common_forward_v2",
+      "winner_clip_recovered_cents": 242.0
+    },
+    {
+      "avg_net_needed_per_future_row": 0.0,
+      "candidate_gross_cents": 582.0,
+      "candidate_losses": 18,
+      "candidate_wins": 41,
+      "current_gross_cents": 340.0,
+      "delta_vs_current_cents": 242.0,
+      "freeze_ts_utc": "2026-05-06T21:29:32.710906+00:00",
+      "full_loss_cushion_estimate": 5,
+      "future_rows_needed_if_all_suppressible": 13,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 17,
+      "interpretation": "strict positive but immature",
+      "live_ready_by_exit_gates": false,
+      "loss_control_cost_cents": 0.0,
+      "loss_count_reduction": 2,
+      "missing_gates": [
+        "suppressed+13"
+      ],
+      "net_cents_needed_for_cushion3": 0.0,
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "reported_blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "selected_basis": "best_positive_clean_delta",
+      "settled": 59,
+      "settled_rows_needed": 0,
+      "suppressed_decisions_needed": 13,
+      "suppressed_exits": 17,
+      "window": "new_exit_mix_common_forward_v1",
+      "winner_clip_recovered_cents": 242.0
+    },
+    {
+      "avg_net_needed_per_future_row": 0.0,
+      "candidate_gross_cents": 692.0,
+      "candidate_losses": 13,
+      "candidate_wins": 33,
+      "current_gross_cents": 478.0,
+      "delta_vs_current_cents": 214.0,
+      "freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+      "full_loss_cushion_estimate": 6,
+      "future_rows_needed_if_all_suppressible": 17,
+      "harmful_suppressed_rows": 0,
+      "helpful_suppressed_rows": 13,
+      "interpretation": "strict positive but immature",
+      "live_ready_by_exit_gates": false,
+      "loss_control_cost_cents": 0.0,
+      "loss_count_reduction": 2,
+      "missing_gates": [
+        "suppressed+17"
+      ],
+      "net_cents_needed_for_cushion3": 0.0,
+      "policy": "loss_guard_value_p85_reduce_p79_gap0",
+      "reported_blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "selected_basis": "best_positive_clean_delta",
+      "settled": 46,
+      "settled_rows_needed": 0,
+      "suppressed_decisions_needed": 17,
+      "suppressed_exits": 13,
+      "window": "new_exit_mix_common_forward_v3",
+      "winner_clip_recovered_cents": 214.0
+    }
+  ],
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_policy_common_clock_watch_latest.json"
+}

@@ -1,0 +1,1430 @@
+{
+  "datasets": [
+    {
+      "artifact_path": "research_particle/v28_successor/causal_rows_seed_latest.csv",
+      "artifact_type": "causal_rows",
+      "columns": 46,
+      "dataset_id": "seed_causal_rows",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 795,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 795,
+        "is_recomputed_after_resolution": 795,
+        "is_sidecar": 0,
+        "is_simulated": 622,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/causal_rows_seed_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=46",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=795",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=795 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['y_yes_win'] coverage=795/795",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_p_yes', 'v28_p_no'] coverage=795/795 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_fair_yes_cents', 'v28_fair_no_cents'] coverage=795/795 sum_checked=795 sum_violations=0",
+          "gate": "fair_yes_no_cents_complete_and_sum_to_100",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=0/795",
+          "gate": "strike_fields_complete",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=0/795",
+          "gate": "boundary_geometry_complete",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=795/795",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['recross_hazard_score', 'h6_recross_hazard_high'] coverage=795/795",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "forward_rows=0 total_rows=795",
+          "gate": "forward_promotion_rows_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "not_registered_forward_rows=0 forward_rows=0",
+          "gate": "forward_rows_pre_resolution_registered",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0",
+          "gate": "forward_rows_not_after_the_fact",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=795 markets=176 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "forward_promotion_rows_present",
+        "forward_rows_pre_resolution_registered",
+        "forward_rows_not_after_the_fact"
+      ],
+      "manifest_details": {},
+      "market_count": 176,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "fair_yes_no_cents_complete_and_sum_to_100",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 795,
+      "source_details": {
+        "dirty_forward_rows": 0,
+        "forward_rows": 0,
+        "not_registered_forward_rows": 0
+      },
+      "status": "blocked"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/causal_rows_logged_events_latest.csv",
+      "artifact_type": "causal_rows",
+      "columns": 61,
+      "dataset_id": "logged_event_causal_rows",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 1745,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 1745,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 1745,
+        "is_simulated": 0,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/causal_rows_logged_events_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=61",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1745",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=1745 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['y_yes_win'] coverage=1745/1745",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_p_yes', 'v28_p_no'] coverage=1745/1745 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_fair_yes_cents', 'v28_fair_no_cents'] coverage=1745/1745 sum_checked=1745 sum_violations=0",
+          "gate": "fair_yes_no_cents_complete_and_sum_to_100",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=1745/1745",
+          "gate": "strike_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=1745/1745",
+          "gate": "boundary_geometry_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1745/1745",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['recross_hazard_score', 'h6_recross_hazard_high', 'prior_recross_seen'] coverage=1745/1745",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "forward_rows=0 total_rows=1745",
+          "gate": "forward_promotion_rows_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "not_registered_forward_rows=0 forward_rows=0",
+          "gate": "forward_rows_pre_resolution_registered",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0",
+          "gate": "forward_rows_not_after_the_fact",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1745 markets=118 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "forward_promotion_rows_present",
+        "forward_rows_pre_resolution_registered",
+        "forward_rows_not_after_the_fact"
+      ],
+      "manifest_details": {},
+      "market_count": 118,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "fair_yes_no_cents_complete_and_sum_to_100",
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 1745,
+      "source_details": {
+        "dirty_forward_rows": 0,
+        "forward_rows": 0,
+        "not_registered_forward_rows": 0
+      },
+      "status": "blocked"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/features_latest.csv",
+      "artifact_type": "feature_table",
+      "columns": 47,
+      "dataset_id": "seed_feature_table",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 795,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 0,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 0,
+        "is_simulated": 622,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/features_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=47",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=795",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=795 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['target_y_yes_win'] coverage=795/795",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['target_v28_p_yes'] coverage=795/795 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=0/795",
+          "gate": "strike_fields_complete",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=0/795",
+          "gate": "boundary_geometry_complete",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=795/795",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['recross_hazard_score', 'recross_hazard_high'] coverage=795/795",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "forward_rows=0 total_rows=795",
+          "gate": "forward_promotion_rows_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "not_registered_forward_rows=0 forward_rows=0",
+          "gate": "forward_rows_pre_resolution_registered",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0",
+          "gate": "forward_rows_not_after_the_fact",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "path=research_particle/v28_successor/feature_manifest_latest.json",
+          "gate": "feature_manifest_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "feature_count=29",
+          "gate": "feature_manifest_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "leaky_feature_names=[]",
+          "gate": "feature_manifest_no_leaky_names",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "leaky_source_columns=[]",
+          "gate": "feature_manifest_no_leaky_source_columns",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=795 markets=176 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "forward_promotion_rows_present",
+        "forward_rows_pre_resolution_registered",
+        "forward_rows_not_after_the_fact"
+      ],
+      "manifest_details": {
+        "feature_count": 29,
+        "leaky_feature_names": [],
+        "leaky_source_columns": [],
+        "manifest_path": "research_particle/v28_successor/feature_manifest_latest.json"
+      },
+      "market_count": 176,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available",
+        "feature_manifest_exists",
+        "feature_manifest_not_empty",
+        "feature_manifest_no_leaky_names",
+        "feature_manifest_no_leaky_source_columns",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 795,
+      "source_details": {
+        "dirty_forward_rows": 0,
+        "forward_rows": 0,
+        "not_registered_forward_rows": 0
+      },
+      "status": "blocked"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/features_logged_events_latest.csv",
+      "artifact_type": "feature_table",
+      "columns": 100,
+      "dataset_id": "logged_event_feature_table",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 1745,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 1745,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 1745,
+        "is_simulated": 0,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/features_logged_events_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=100",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1745",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=1745 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['target_y_yes_win'] coverage=1745/1745",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['target_v28_p_yes'] coverage=1745/1745 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=1745/1745",
+          "gate": "strike_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['d_sigma', 'abs_d_sigma', 'strike_distance_dollars_abs', 'distance_per_sigma_from_prices'] coverage=1745/1745",
+          "gate": "boundary_geometry_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1745/1745",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['recross_hazard_score', 'recross_hazard_high', 'prior_recross_seen'] coverage=1745/1745",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "forward_rows=0 total_rows=1745",
+          "gate": "forward_promotion_rows_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "not_registered_forward_rows=0 forward_rows=0",
+          "gate": "forward_rows_pre_resolution_registered",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0",
+          "gate": "forward_rows_not_after_the_fact",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "path=research_particle/v28_successor/feature_manifest_logged_events_latest.json",
+          "gate": "feature_manifest_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "feature_count=78",
+          "gate": "feature_manifest_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "leaky_feature_names=[]",
+          "gate": "feature_manifest_no_leaky_names",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "leaky_source_columns=[]",
+          "gate": "feature_manifest_no_leaky_source_columns",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1745 markets=118 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "forward_promotion_rows_present",
+        "forward_rows_pre_resolution_registered",
+        "forward_rows_not_after_the_fact"
+      ],
+      "manifest_details": {
+        "feature_count": 78,
+        "leaky_feature_names": [],
+        "leaky_source_columns": [],
+        "manifest_path": "research_particle/v28_successor/feature_manifest_logged_events_latest.json"
+      },
+      "market_count": 118,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available",
+        "feature_manifest_exists",
+        "feature_manifest_not_empty",
+        "feature_manifest_no_leaky_names",
+        "feature_manifest_no_leaky_source_columns",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 1745,
+      "source_details": {
+        "dirty_forward_rows": 0,
+        "forward_rows": 0,
+        "not_registered_forward_rows": 0
+      },
+      "status": "blocked"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/passive_forward_snapshots_latest.csv",
+      "artifact_type": "passive_forward_snapshots",
+      "columns": 52,
+      "dataset_id": "passive_forward_snapshots",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 0,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 0,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 1750,
+        "is_simulated": 0,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/passive_forward_snapshots_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=52",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1750",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=1750 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=[] coverage=1750/1750",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=[] coverage=1750/1750 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=1750/1750",
+          "gate": "strike_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1686/1750",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "forward_rows=0 total_rows=1750",
+          "gate": "forward_promotion_rows_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "not_registered_forward_rows=0 forward_rows=0",
+          "gate": "forward_rows_pre_resolution_registered",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0",
+          "gate": "forward_rows_not_after_the_fact",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1750 markets=2 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": false,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "forward_promotion_rows_present",
+        "forward_rows_pre_resolution_registered",
+        "forward_rows_not_after_the_fact",
+        "broad_market_coverage_floor"
+      ],
+      "manifest_details": {},
+      "market_count": 2,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "strike_fields_complete",
+        "book_price_or_implied_price_available"
+      ],
+      "row_count": 1750,
+      "source_details": {
+        "dirty_forward_rows": 0,
+        "forward_rows": 0,
+        "not_registered_forward_rows": 0
+      },
+      "status": "blocked"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv",
+      "artifact_type": "shadow_forward_labeled_rows",
+      "columns": 111,
+      "dataset_id": "shadow_forward_labeled_rows",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 0,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 1506,
+        "is_recomputed_after_resolution": 666,
+        "is_sidecar": 1506,
+        "is_simulated": 1506,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=111",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1506",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=1506 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['y_yes_win'] coverage=1506/1506",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_p_yes', 'candidate_p_yes'] coverage=1506/1506 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=1506/1506 sum_checked=1506 sum_violations=0",
+          "gate": "fair_yes_no_cents_complete_and_sum_to_100",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=1506/1506",
+          "gate": "strike_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_d_sigma', 'abs_v28_d_sigma', 'strike_distance_dollars_abs'] coverage=1506/1506",
+          "gate": "boundary_geometry_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=1506/1506",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['recross_hazard_score', 'max_adverse_move_3m'] coverage=1506/1506",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "forward_rows=0 total_rows=1506",
+          "gate": "forward_promotion_rows_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "not_registered_forward_rows=0 forward_rows=0",
+          "gate": "forward_rows_pre_resolution_registered",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "recomputed=0 backfilled=0 simulated=0 sidecar=0 diagnostic=0 posthoc=0 diagnostic_source=0",
+          "gate": "forward_rows_not_after_the_fact",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=1506 markets=2 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": false,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "forward_promotion_rows_present",
+        "forward_rows_pre_resolution_registered",
+        "forward_rows_not_after_the_fact",
+        "broad_market_coverage_floor"
+      ],
+      "manifest_details": {},
+      "market_count": 2,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "fair_yes_no_cents_complete_and_sum_to_100",
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available"
+      ],
+      "row_count": 1506,
+      "source_details": {
+        "dirty_forward_rows": 0,
+        "forward_rows": 0,
+        "not_registered_forward_rows": 0
+      },
+      "status": "blocked"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/forward_registry_latest.csv",
+      "artifact_type": "forward_registry",
+      "columns": 27,
+      "dataset_id": "forward_registry",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 0,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 0,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 0,
+        "is_simulated": 0,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/forward_registry_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=27",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_p_yes', 'v28_p_yes'] coverage=16896/16896 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=16896/16896 sum_checked=16896 sum_violations=0",
+          "gate": "fair_yes_no_cents_complete_and_sum_to_100",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents'] coverage=16896/16896",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16896 registry_status=active",
+          "gate": "forward_registry_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16896 required_rows=200",
+          "gate": "forward_registry_min_rows",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "markets=196 required_markets=40",
+          "gate": "forward_registry_min_markets",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "promotion_ready=True registry_status=active",
+          "gate": "forward_registry_promotion_ready",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "non_frozen_source_rows=0 rows=16896",
+          "gate": "forward_registry_from_frozen_predictions",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing_or_unparseable_freeze_clock=0 freeze_after_close=0 rows=16896",
+          "gate": "forward_registry_frozen_before_close",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "registry_ids=16896/16896 duplicates=0 frozen_prediction_ids=16896/16896 duplicates=0",
+          "gate": "forward_registry_unique_frozen_predictions",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16896 markets=196 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [],
+      "manifest_details": {},
+      "market_count": 196,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "identifier_fields_complete",
+        "probability_fields_complete_and_bounded",
+        "fair_yes_no_cents_complete_and_sum_to_100",
+        "book_price_or_implied_price_available",
+        "forward_registry_not_empty",
+        "forward_registry_min_rows",
+        "forward_registry_min_markets",
+        "forward_registry_promotion_ready",
+        "forward_registry_from_frozen_predictions",
+        "forward_registry_frozen_before_close",
+        "forward_registry_unique_frozen_predictions",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 16896,
+      "source_details": {
+        "duplicate_frozen_prediction_ids": 0,
+        "duplicate_registry_ids": 0,
+        "forward_markets": 196,
+        "forward_rows": 16896,
+        "freeze_after_close_rows": 0,
+        "missing_or_unparseable_freeze_clock": 0,
+        "non_frozen_source_rows": 0,
+        "promotion_ready": true,
+        "registry_status": "active"
+      },
+      "status": "promotion_grade"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/forward_labeled_predictions_latest.csv",
+      "artifact_type": "forward_labeled_predictions",
+      "columns": 55,
+      "dataset_id": "forward_labeled_predictions",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 0,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 0,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 0,
+        "is_simulated": 0,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/forward_labeled_predictions_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=55",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16860",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=16860 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['y_yes_win'] coverage=16860/16860",
+          "gate": "target_label_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_p_yes', 'v28_p_yes'] coverage=16860/16860 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=16860/16860 sum_checked=16860 sum_violations=0",
+          "gate": "fair_yes_no_cents_complete_and_sum_to_100",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=16860/16860",
+          "gate": "strike_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_d_sigma'] coverage=16860/16860",
+          "gate": "boundary_geometry_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=16860/16860",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_sigma_t_dollars'] coverage=16860/16860",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "joined_rows=16860 total_rows=16860",
+          "gate": "forward_labeled_rows_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "joined_rows=16860 required_rows=200",
+          "gate": "forward_labeled_min_rows",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "joined_markets=195 required_markets=40",
+          "gate": "forward_labeled_min_markets",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "blocked_join_rows=0 joined_rows=16860",
+          "gate": "forward_labels_joined_after_resolution",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "non_frozen_source_rows=0 joined_rows=16860",
+          "gate": "forward_labels_from_frozen_predictions",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing_or_unparseable_freeze_clock=0 freeze_after_close=0 joined_rows=16860",
+          "gate": "forward_labels_frozen_before_close",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16860 markets=195 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [],
+      "manifest_details": {},
+      "market_count": 195,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "target_label_present",
+        "probability_fields_complete_and_bounded",
+        "fair_yes_no_cents_complete_and_sum_to_100",
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available",
+        "forward_labeled_rows_present",
+        "forward_labeled_min_rows",
+        "forward_labeled_min_markets",
+        "forward_labels_joined_after_resolution",
+        "forward_labels_from_frozen_predictions",
+        "forward_labels_frozen_before_close",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 16860,
+      "source_details": {
+        "blocked_join_rows": 0,
+        "freeze_after_close_rows": 0,
+        "joined_markets": 195,
+        "joined_rows": 16860,
+        "missing_or_unparseable_freeze_clock": 0,
+        "non_frozen_source_rows": 0
+      },
+      "status": "promotion_grade"
+    },
+    {
+      "artifact_path": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv",
+      "artifact_type": "forward_labeled_predictions",
+      "columns": 55,
+      "dataset_id": "sidecar_batch_labeled_predictions",
+      "diagnostic_counts": {
+        "allowed_for_forward_promotion": 0,
+        "diagnostic_source_quality": 0,
+        "is_backfilled": 0,
+        "is_diagnostic_only": 0,
+        "is_recomputed_after_resolution": 0,
+        "is_sidecar": 0,
+        "is_simulated": 0,
+        "posthoc_source_type": 0
+      },
+      "gates": [
+        {
+          "evidence": "path=research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv",
+          "gate": "artifact_exists",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "columns=55",
+          "gate": "artifact_has_header",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16896",
+          "gate": "artifact_not_empty",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing={'row_id': 0, 'market_ticker': 0, 'decision_ts_utc': 0, 'market_close_ts_utc': 0}",
+          "gate": "identifier_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "checked=16896 missing_or_unparseable=0 decision_after_close=0",
+          "gate": "pre_resolution_clock_valid",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['y_yes_win'] coverage=16860/16896",
+          "gate": "target_label_present",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_p_yes', 'v28_p_yes'] coverage=16896/16896 violations=0",
+          "gate": "probability_fields_complete_and_bounded",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['candidate_fair_yes_cents', 'candidate_fair_no_cents'] coverage=16896/16896 sum_checked=16896 sum_violations=0",
+          "gate": "fair_yes_no_cents_complete_and_sum_to_100",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['strike'] coverage=16896/16896",
+          "gate": "strike_fields_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_d_sigma'] coverage=16896/16896",
+          "gate": "boundary_geometry_complete",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['ask_cents', 'book_implied_yes_from_side_ask'] coverage=16896/16896",
+          "gate": "book_price_or_implied_price_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "fields=['v28_sigma_t_dollars'] coverage=16896/16896",
+          "gate": "recross_or_path_risk_signal_available",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "joined_rows=16860 total_rows=16896",
+          "gate": "forward_labeled_rows_present",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "joined_rows=16860 required_rows=200",
+          "gate": "forward_labeled_min_rows",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "joined_markets=195 required_markets=40",
+          "gate": "forward_labeled_min_markets",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "blocked_join_rows=36 joined_rows=16860",
+          "gate": "forward_labels_joined_after_resolution",
+          "passed": false,
+          "severity": "hard"
+        },
+        {
+          "evidence": "non_frozen_source_rows=0 joined_rows=16860",
+          "gate": "forward_labels_from_frozen_predictions",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "missing_or_unparseable_freeze_clock=0 freeze_after_close=0 joined_rows=16860",
+          "gate": "forward_labels_frozen_before_close",
+          "passed": true,
+          "severity": "hard"
+        },
+        {
+          "evidence": "rows=16896 markets=196 required_rows=200 required_markets=40",
+          "gate": "broad_market_coverage_floor",
+          "passed": true,
+          "severity": "hard"
+        }
+      ],
+      "hard_failed_gates": [
+        "target_label_present",
+        "forward_labels_joined_after_resolution"
+      ],
+      "manifest_details": {},
+      "market_count": 196,
+      "passed_gates": [
+        "artifact_exists",
+        "artifact_has_header",
+        "artifact_not_empty",
+        "identifier_fields_complete",
+        "pre_resolution_clock_valid",
+        "probability_fields_complete_and_bounded",
+        "fair_yes_no_cents_complete_and_sum_to_100",
+        "strike_fields_complete",
+        "boundary_geometry_complete",
+        "book_price_or_implied_price_available",
+        "recross_or_path_risk_signal_available",
+        "forward_labeled_rows_present",
+        "forward_labeled_min_rows",
+        "forward_labeled_min_markets",
+        "forward_labels_from_frozen_predictions",
+        "forward_labels_frozen_before_close",
+        "broad_market_coverage_floor"
+      ],
+      "row_count": 16896,
+      "source_details": {
+        "blocked_join_rows": 36,
+        "freeze_after_close_rows": 0,
+        "joined_markets": 195,
+        "joined_rows": 16860,
+        "missing_or_unparseable_freeze_clock": 0,
+        "non_frozen_source_rows": 0
+      },
+      "status": "blocked"
+    }
+  ],
+  "summary": {
+    "auxiliary_hard_blockers": [
+      "boundary_geometry_complete",
+      "broad_market_coverage_floor",
+      "forward_labels_joined_after_resolution",
+      "forward_promotion_rows_present",
+      "forward_rows_not_after_the_fact",
+      "forward_rows_pre_resolution_registered",
+      "strike_fields_complete",
+      "target_label_present"
+    ],
+    "blocked_datasets": [
+      "seed_causal_rows",
+      "logged_event_causal_rows",
+      "seed_feature_table",
+      "logged_event_feature_table",
+      "passive_forward_snapshots",
+      "shadow_forward_labeled_rows",
+      "sidecar_batch_labeled_predictions"
+    ],
+    "builder_script": "validate_v28_successor_source_contract.py",
+    "contract_version": "v28_successor_source_contract_v1",
+    "dataset_count": 9,
+    "generated_utc": "2026-05-18T20:51:48Z",
+    "hard_blockers": [
+      "boundary_geometry_complete",
+      "broad_market_coverage_floor",
+      "forward_labels_joined_after_resolution",
+      "forward_promotion_rows_present",
+      "forward_rows_not_after_the_fact",
+      "forward_rows_pre_resolution_registered",
+      "strike_fields_complete",
+      "target_label_present"
+    ],
+    "inputs": {
+      "forward_labeled_predictions": "research_particle/v28_successor/forward_labeled_predictions_latest.csv",
+      "forward_registry": "research_particle/v28_successor/forward_registry_latest.csv",
+      "logged_event_causal_rows": "research_particle/v28_successor/causal_rows_logged_events_latest.csv",
+      "logged_event_feature_table": "research_particle/v28_successor/features_logged_events_latest.csv",
+      "passive_forward_snapshots": "research_particle/v28_successor/passive_forward_snapshots_latest.csv",
+      "seed_causal_rows": "research_particle/v28_successor/causal_rows_seed_latest.csv",
+      "seed_feature_table": "research_particle/v28_successor/features_latest.csv",
+      "shadow_forward_labeled_rows": "research_particle/v28_successor/shadow_forward_labeled_rows_latest.csv",
+      "sidecar_batch_labeled_predictions": "research_particle/v28_successor/sidecar_bundle_batch_labeled_latest.csv"
+    },
+    "minimum_forward_markets": 40,
+    "minimum_forward_rows": 200,
+    "missing_required_forward_datasets": [],
+    "non_promotion_ready_required_forward_datasets": [],
+    "outputs": {
+      "csv": "logs/edge_research/v28_successor_source_contract_latest.csv",
+      "json": "logs/edge_research/v28_successor_source_contract_latest.json",
+      "markdown": "logs/edge_research/v28_successor_source_contract_latest.md"
+    },
+    "overall_verdict": "promotion_grade",
+    "promotion_contract_ready": true,
+    "promotion_grade_datasets": [
+      "forward_registry",
+      "forward_labeled_predictions"
+    ],
+    "required_forward_dataset_status": {
+      "forward_labeled_predictions": "promotion_grade",
+      "forward_registry": "promotion_grade"
+    },
+    "required_forward_datasets": [
+      "forward_registry",
+      "forward_labeled_predictions"
+    ],
+    "required_forward_hard_blockers": []
+  }
+}

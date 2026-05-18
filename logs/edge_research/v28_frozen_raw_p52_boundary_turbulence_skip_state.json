@@ -1,0 +1,11 @@
+{
+  "abs_d_sigma_ceiling": 0.2,
+  "base_policy": "v28_raw_p52_edge0",
+  "candidate": "raw_p52_skip_weakraw_nearstrike_recross90",
+  "freeze_ts_utc": "2026-05-06T08:50:27.891448+00:00",
+  "physics": "Near-strike weak-conviction rows with high recross hazard are boundary turbulence, not durable side information.",
+  "raw_p_ceiling": 0.6,
+  "recross_floor": 0.9,
+  "rule": "Start from v28_raw_p52_edge0 and skip rows with p_raw < 0.60, abs_d_sigma <= 0.20, and recross_hazard_score >= 0.90.",
+  "source_artifact": "v28_raw_p52_forward_loss_cluster_latest.json"
+}

@@ -1,0 +1,260 @@
+{
+  "generated_at_utc": "2026-05-07T18:16:28.589597+00:00",
+  "interpretation": [
+    "boundary_clock_repair_entry: 91 settled, coverage 75.20661157024793%, net -151.0c, reconstructed share 0.7142857142857143, clean rows needed for sample/source gate 95, blockers ['net_not_positive', 'reconstructed_share_gt_35pct', 'full_loss_cushion_lt_3'].",
+    "boundary_clock_fv_entry_bridge: 90 settled, coverage 75.63025210084034%, net 229.0c, reconstructed share 0.7888888888888889, clean rows needed for sample/source gate 113, blockers ['reconstructed_share_gt_35pct', 'full_loss_cushion_lt_3'].",
+    "Boundary-clock remains promising but thin: one full-loss row can erase current positive PnL."
+  ],
+  "lanes": [
+    {
+      "blockers": [
+        "net_not_positive",
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate_summary": {
+        "avg_net_cents": -1.6593406593406594,
+        "coverage_pct": 75.20661157024793,
+        "entries": 91,
+        "losses": 33,
+        "net_cents": -151.0,
+        "settled": 91,
+        "wins": 58
+      },
+      "freeze_ts": "2026-05-06T07:07:27.790042+00:00",
+      "full_loss_cushion_estimate": 0,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 1,
+          "still_positive": false,
+          "stressed_net_cents": -251.0,
+          "stressed_settled": 92
+        },
+        {
+          "added_full_losses": 2,
+          "still_positive": false,
+          "stressed_net_cents": -351.0,
+          "stressed_settled": 93
+        },
+        {
+          "added_full_losses": 3,
+          "still_positive": false,
+          "stressed_net_cents": -451.0,
+          "stressed_settled": 94
+        },
+        {
+          "added_full_losses": 4,
+          "still_positive": false,
+          "stressed_net_cents": -551.0,
+          "stressed_settled": 95
+        },
+        {
+          "added_full_losses": 5,
+          "still_positive": false,
+          "stressed_net_cents": -651.0,
+          "stressed_settled": 96
+        }
+      ],
+      "future_approved_rows_for_recon35": 95,
+      "future_clean_rows_for_sample_source_gate": 95,
+      "future_denominator": 121,
+      "lane": "boundary_clock_repair_entry",
+      "reconstructed_share": 0.7142857142857143,
+      "removed_source_counts": {
+        "rejected_actionable": 38
+      },
+      "removed_source_split": [
+        {
+          "avg_net_cents": -15.0,
+          "coverage_pct": 31.40495867768595,
+          "entries": 38,
+          "losses": 20,
+          "net_cents": -570.0,
+          "settled": 38,
+          "source": "rejected_actionable",
+          "wins": 18
+        }
+      ],
+      "repair_source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 19
+      },
+      "repair_source_split": [
+        {
+          "avg_net_cents": 6.9523809523809526,
+          "coverage_pct": 17.355371900826448,
+          "entries": 21,
+          "losses": 3,
+          "net_cents": 146.0,
+          "settled": 21,
+          "source": "approved_entry",
+          "wins": 18
+        },
+        {
+          "avg_net_cents": -19.36842105263158,
+          "coverage_pct": 15.702479338842975,
+          "entries": 19,
+          "losses": 10,
+          "net_cents": -368.0,
+          "settled": 19,
+          "source": "rejected_actionable",
+          "wins": 9
+        }
+      ],
+      "source_counts": {
+        "approved_entry": 26,
+        "rejected_actionable": 65
+      },
+      "source_split": [
+        {
+          "avg_net_cents": 9.384615384615385,
+          "coverage_pct": 21.487603305785125,
+          "entries": 26,
+          "losses": 3,
+          "net_cents": 244.0,
+          "settled": 26,
+          "source": "approved_entry",
+          "wins": 23
+        },
+        {
+          "avg_net_cents": -6.076923076923077,
+          "coverage_pct": 53.71900826446281,
+          "entries": 65,
+          "losses": 30,
+          "net_cents": -395.0,
+          "settled": 65,
+          "source": "rejected_actionable",
+          "wins": 35
+        }
+      ]
+    },
+    {
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate_summary": {
+        "avg_net_cents": 2.5444444444444443,
+        "coverage_pct": 75.63025210084034,
+        "entries": 90,
+        "losses": 35,
+        "net_cents": 229.0,
+        "settled": 90,
+        "wins": 55
+      },
+      "freeze_ts": "2026-05-06T07:35:02.597585+00:00",
+      "full_loss_cushion_estimate": 2,
+      "full_loss_runway": [
+        {
+          "added_full_losses": 1,
+          "still_positive": true,
+          "stressed_net_cents": 129.0,
+          "stressed_settled": 91
+        },
+        {
+          "added_full_losses": 2,
+          "still_positive": true,
+          "stressed_net_cents": 29.0,
+          "stressed_settled": 92
+        },
+        {
+          "added_full_losses": 3,
+          "still_positive": false,
+          "stressed_net_cents": -71.0,
+          "stressed_settled": 93
+        },
+        {
+          "added_full_losses": 4,
+          "still_positive": false,
+          "stressed_net_cents": -171.0,
+          "stressed_settled": 94
+        },
+        {
+          "added_full_losses": 5,
+          "still_positive": false,
+          "stressed_net_cents": -271.0,
+          "stressed_settled": 95
+        }
+      ],
+      "future_approved_rows_for_recon35": 113,
+      "future_clean_rows_for_sample_source_gate": 113,
+      "future_denominator": 119,
+      "lane": "boundary_clock_fv_entry_bridge",
+      "reconstructed_share": 0.7888888888888889,
+      "removed_source_counts": {
+        "rejected_actionable": 28
+      },
+      "removed_source_split": [
+        {
+          "avg_net_cents": -30.785714285714285,
+          "coverage_pct": 23.529411764705884,
+          "entries": 28,
+          "losses": 15,
+          "net_cents": -862.0,
+          "settled": 28,
+          "source": "rejected_actionable",
+          "wins": 13
+        }
+      ],
+      "repair_source_counts": {
+        "approved_entry": 14,
+        "rejected_actionable": 17
+      },
+      "repair_source_split": [
+        {
+          "avg_net_cents": -6.5,
+          "coverage_pct": 11.764705882352942,
+          "entries": 14,
+          "losses": 4,
+          "net_cents": -91.0,
+          "settled": 14,
+          "source": "approved_entry",
+          "wins": 10
+        },
+        {
+          "avg_net_cents": -14.176470588235293,
+          "coverage_pct": 14.285714285714286,
+          "entries": 17,
+          "losses": 8,
+          "net_cents": -241.0,
+          "settled": 17,
+          "source": "rejected_actionable",
+          "wins": 9
+        }
+      ],
+      "source_counts": {
+        "approved_entry": 19,
+        "rejected_actionable": 71
+      },
+      "source_split": [
+        {
+          "avg_net_cents": 0.3684210526315789,
+          "coverage_pct": 15.966386554621849,
+          "entries": 19,
+          "losses": 4,
+          "net_cents": 7.0,
+          "settled": 19,
+          "source": "approved_entry",
+          "wins": 15
+        },
+        {
+          "avg_net_cents": 3.1267605633802815,
+          "coverage_pct": 59.66386554621849,
+          "entries": 71,
+          "losses": 31,
+          "net_cents": 222.0,
+          "settled": 71,
+          "source": "rejected_actionable",
+          "wins": 40
+        }
+      ]
+    }
+  ],
+  "purpose": "Source and full-loss stress for frozen boundary-clock entry lanes.",
+  "requirements": {
+    "coverage_floor": 75.0,
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30
+  }
+}

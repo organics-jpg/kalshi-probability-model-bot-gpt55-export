@@ -1,0 +1,4084 @@
+{
+  "candidate_reports": {
+    "brownian_fpt_current": {
+      "aci": {
+        "candidate": "brownian_fpt_current",
+        "coverage": 0.8888888888888888,
+        "gamma": 0.02,
+        "high_uncertainty_net_cents": 815.0,
+        "high_uncertainty_rows": 139,
+        "high_uncertainty_side_hit_rate": 0.7697841726618705,
+        "low_uncertainty_net_cents": 1406.0,
+        "low_uncertainty_rows": 149,
+        "low_uncertainty_side_hit_rate": 0.7919463087248322,
+        "median_q_pre": 0.8720000000000003,
+        "passes_coverage_band": true,
+        "target_coverage": 0.9,
+        "uncertainty_useful": true,
+        "usable_rows": 288,
+        "warmup": 50
+      },
+      "all": {
+        "avg_cents_per_entry": 8.42153846153846,
+        "cost_basis_dollars": 675.94,
+        "coverage_of_live_entries": 0.5142405063291139,
+        "entries": 325,
+        "flats": 7,
+        "losses": 172,
+        "net_cents": 2737.0,
+        "net_dollars": 27.37,
+        "roi_on_entry_notional": 0.04049175962363523,
+        "win_rate_ex_flats": 0.4591194968553459,
+        "wins": 146
+      },
+      "cpcv_fixed": {
+        "candidate": "brownian_fpt_current",
+        "largest_positive_path_share": 0.1520825721592985,
+        "median_path_edge_cents": 8.665760869565219,
+        "p25_path_edge_cents": 6.157894736842104,
+        "passes_cpcv_gate": true,
+        "path_count": 10,
+        "path_edge_cv": 0.2122107752770769,
+        "paths": [
+          {
+            "avg_cents_per_entry": 8.906474820143885,
+            "net_cents": 1238.0,
+            "path_id": 1,
+            "selected_entries": 139,
+            "stats": {
+              "avg_cents_per_entry": 8.906474820143885,
+              "cost_basis_dollars": 260.07,
+              "coverage_of_live_entries": 0.5515873015873016,
+              "entries": 139,
+              "flats": 0,
+              "losses": 77,
+              "net_cents": 1238.0,
+              "net_dollars": 12.38,
+              "roi_on_entry_notional": 0.04760256853923944,
+              "win_rate_ex_flats": 0.4460431654676259,
+              "wins": 62
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              1
+            ],
+            "win_rate_ex_flats": 0.4460431654676259
+          },
+          {
+            "avg_cents_per_entry": 10.0,
+            "net_cents": 1160.0,
+            "path_id": 2,
+            "selected_entries": 116,
+            "stats": {
+              "avg_cents_per_entry": 10.0,
+              "cost_basis_dollars": 242.49,
+              "coverage_of_live_entries": 0.45849802371541504,
+              "entries": 116,
+              "flats": 0,
+              "losses": 61,
+              "net_cents": 1160.0,
+              "net_dollars": 11.6,
+              "roi_on_entry_notional": 0.0478370242071838,
+              "win_rate_ex_flats": 0.47413793103448276,
+              "wins": 55
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              2
+            ],
+            "win_rate_ex_flats": 0.47413793103448276
+          },
+          {
+            "avg_cents_per_entry": 11.482758620689655,
+            "net_cents": 1665.0,
+            "path_id": 3,
+            "selected_entries": 145,
+            "stats": {
+              "avg_cents_per_entry": 11.482758620689655,
+              "cost_basis_dollars": 265.24,
+              "coverage_of_live_entries": 0.5753968253968254,
+              "entries": 145,
+              "flats": 5,
+              "losses": 74,
+              "net_cents": 1665.0,
+              "net_dollars": 16.65,
+              "roi_on_entry_notional": 0.06277333735484843,
+              "win_rate_ex_flats": 0.4714285714285714,
+              "wins": 66
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              3
+            ],
+            "win_rate_ex_flats": 0.4714285714285714
+          },
+          {
+            "avg_cents_per_entry": 8.875,
+            "net_cents": 1278.0,
+            "path_id": 4,
+            "selected_entries": 144,
+            "stats": {
+              "avg_cents_per_entry": 8.875,
+              "cost_basis_dollars": 321.57,
+              "coverage_of_live_entries": 0.5691699604743083,
+              "entries": 144,
+              "flats": 2,
+              "losses": 83,
+              "net_cents": 1278.0,
+              "net_dollars": 12.78,
+              "roi_on_entry_notional": 0.03974251329415057,
+              "win_rate_ex_flats": 0.4154929577464789,
+              "wins": 59
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              4
+            ],
+            "win_rate_ex_flats": 0.4154929577464789
+          },
+          {
+            "avg_cents_per_entry": 6.073394495412844,
+            "net_cents": 662.0,
+            "path_id": 5,
+            "selected_entries": 109,
+            "stats": {
+              "avg_cents_per_entry": 6.073394495412844,
+              "cost_basis_dollars": 226.94,
+              "coverage_of_live_entries": 0.4308300395256917,
+              "entries": 109,
+              "flats": 0,
+              "losses": 56,
+              "net_cents": 662.0,
+              "net_dollars": 6.62,
+              "roi_on_entry_notional": 0.0291707059134573,
+              "win_rate_ex_flats": 0.48623853211009177,
+              "wins": 53
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              2
+            ],
+            "win_rate_ex_flats": 0.48623853211009177
+          },
+          {
+            "avg_cents_per_entry": 8.456521739130435,
+            "net_cents": 1167.0,
+            "path_id": 6,
+            "selected_entries": 138,
+            "stats": {
+              "avg_cents_per_entry": 8.456521739130435,
+              "cost_basis_dollars": 249.69,
+              "coverage_of_live_entries": 0.5476190476190477,
+              "entries": 138,
+              "flats": 5,
+              "losses": 69,
+              "net_cents": 1167.0,
+              "net_dollars": 11.67,
+              "roi_on_entry_notional": 0.046737955064279704,
+              "win_rate_ex_flats": 0.48120300751879697,
+              "wins": 64
+            },
+            "test_entries": 252,
+            "test_folds": [
+              1,
+              3
+            ],
+            "win_rate_ex_flats": 0.48120300751879697
+          },
+          {
+            "avg_cents_per_entry": 5.693430656934305,
+            "net_cents": 779.9999999999999,
+            "path_id": 7,
+            "selected_entries": 137,
+            "stats": {
+              "avg_cents_per_entry": 5.693430656934305,
+              "cost_basis_dollars": 306.02,
+              "coverage_of_live_entries": 0.541501976284585,
+              "entries": 137,
+              "flats": 2,
+              "losses": 78,
+              "net_cents": 779.9999999999999,
+              "net_dollars": 7.799999999999999,
+              "roi_on_entry_notional": 0.025488530161427356,
+              "win_rate_ex_flats": 0.4222222222222222,
+              "wins": 57
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              4
+            ],
+            "win_rate_ex_flats": 0.4222222222222222
+          },
+          {
+            "avg_cents_per_entry": 9.469565217391304,
+            "net_cents": 1089.0,
+            "path_id": 8,
+            "selected_entries": 115,
+            "stats": {
+              "avg_cents_per_entry": 9.469565217391304,
+              "cost_basis_dollars": 232.10999999999999,
+              "coverage_of_live_entries": 0.45454545454545453,
+              "entries": 115,
+              "flats": 5,
+              "losses": 53,
+              "net_cents": 1089.0,
+              "net_dollars": 10.89,
+              "roi_on_entry_notional": 0.0469174098487786,
+              "win_rate_ex_flats": 0.5181818181818182,
+              "wins": 57
+            },
+            "test_entries": 253,
+            "test_folds": [
+              2,
+              3
+            ],
+            "win_rate_ex_flats": 0.5181818181818182
+          },
+          {
+            "avg_cents_per_entry": 6.157894736842104,
+            "net_cents": 701.9999999999999,
+            "path_id": 9,
+            "selected_entries": 114,
+            "stats": {
+              "avg_cents_per_entry": 6.157894736842104,
+              "cost_basis_dollars": 288.44,
+              "coverage_of_live_entries": 0.44881889763779526,
+              "entries": 114,
+              "flats": 2,
+              "losses": 62,
+              "net_cents": 701.9999999999999,
+              "net_dollars": 7.019999999999999,
+              "roi_on_entry_notional": 0.02433781722368603,
+              "win_rate_ex_flats": 0.44642857142857145,
+              "wins": 50
+            },
+            "test_entries": 254,
+            "test_folds": [
+              2,
+              4
+            ],
+            "win_rate_ex_flats": 0.44642857142857145
+          },
+          {
+            "avg_cents_per_entry": 8.44055944055944,
+            "net_cents": 1207.0,
+            "path_id": 10,
+            "selected_entries": 143,
+            "stats": {
+              "avg_cents_per_entry": 8.44055944055944,
+              "cost_basis_dollars": 311.19,
+              "coverage_of_live_entries": 0.5652173913043478,
+              "entries": 143,
+              "flats": 7,
+              "losses": 75,
+              "net_cents": 1207.0,
+              "net_dollars": 12.07,
+              "roi_on_entry_notional": 0.03878659339953083,
+              "win_rate_ex_flats": 0.4485294117647059,
+              "wins": 61
+            },
+            "test_entries": 253,
+            "test_folds": [
+              3,
+              4
+            ],
+            "win_rate_ex_flats": 0.4485294117647059
+          }
+        ],
+        "positive_paths": 10
+      },
+      "e_process": {
+        "best_lambda": 0.2,
+        "best_max_capital": 9.195307854605952,
+        "crossed_100_any": false,
+        "crossed_20_any": false,
+        "lambda_rows": [
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 1.892956087691129,
+            "lambda": 0.05,
+            "max_capital": 1.892956087691129,
+            "min_capital": 0.9965015
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 3.388738813149159,
+            "lambda": 0.1,
+            "max_capital": 3.388738813149159,
+            "min_capital": 0.9930059999999999
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 9.195307854605952,
+            "lambda": 0.2,
+            "max_capital": 9.195307854605952,
+            "min_capital": 0.986024
+          }
+        ],
+        "scale_cents": 200.0
+      },
+      "family": "brownian_fpt_sanity",
+      "params": {
+        "max_abs_d_sigma": 1.1,
+        "min_abs_d_sigma": 0.7,
+        "min_edge_cents": 3.0,
+        "min_seconds_to_close": 120.0
+      },
+      "role": "FPT sanity gate current replay leader"
+    },
+    "consensus_gap_robust_rank1": {
+      "aci": {
+        "candidate": "consensus_gap_robust_rank1",
+        "coverage": 0.9213483146067416,
+        "gamma": 0.02,
+        "high_uncertainty_net_cents": 649.0,
+        "high_uncertainty_rows": 43,
+        "high_uncertainty_side_hit_rate": 0.7674418604651163,
+        "low_uncertainty_net_cents": 461.0,
+        "low_uncertainty_rows": 46,
+        "low_uncertainty_side_hit_rate": 0.9130434782608695,
+        "median_q_pre": 0.8720000000000003,
+        "passes_coverage_band": true,
+        "target_coverage": 0.9,
+        "uncertainty_useful": false,
+        "usable_rows": 89,
+        "warmup": 50
+      },
+      "all": {
+        "avg_cents_per_entry": 11.617647058823529,
+        "cost_basis_dollars": 204.76,
+        "coverage_of_live_entries": 0.16139240506329114,
+        "entries": 102,
+        "flats": 4,
+        "losses": 47,
+        "net_cents": 1185.0,
+        "net_dollars": 11.85,
+        "roi_on_entry_notional": 0.0578726313733151,
+        "win_rate_ex_flats": 0.5204081632653061,
+        "wins": 51
+      },
+      "cpcv_fixed": {
+        "candidate": "consensus_gap_robust_rank1",
+        "largest_positive_path_share": 0.1567510548523207,
+        "median_path_edge_cents": 12.337922403003756,
+        "p25_path_edge_cents": 8.741379310344827,
+        "passes_cpcv_gate": true,
+        "path_count": 10,
+        "path_edge_cv": 0.4688098096432644,
+        "paths": [
+          {
+            "avg_cents_per_entry": 15.129032258064516,
+            "net_cents": 469.0,
+            "path_id": 1,
+            "selected_entries": 31,
+            "stats": {
+              "avg_cents_per_entry": 15.129032258064516,
+              "cost_basis_dollars": 56.33,
+              "coverage_of_live_entries": 0.12301587301587301,
+              "entries": 31,
+              "flats": 0,
+              "losses": 11,
+              "net_cents": 469.0,
+              "net_dollars": 4.69,
+              "roi_on_entry_notional": 0.08325936445943548,
+              "win_rate_ex_flats": 0.6451612903225806,
+              "wins": 20
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              1
+            ],
+            "win_rate_ex_flats": 0.6451612903225806
+          },
+          {
+            "avg_cents_per_entry": 23.21875,
+            "net_cents": 743.0,
+            "path_id": 2,
+            "selected_entries": 32,
+            "stats": {
+              "avg_cents_per_entry": 23.21875,
+              "cost_basis_dollars": 58.67,
+              "coverage_of_live_entries": 0.12648221343873517,
+              "entries": 32,
+              "flats": 0,
+              "losses": 8,
+              "net_cents": 743.0,
+              "net_dollars": 7.43,
+              "roi_on_entry_notional": 0.12664053178796658,
+              "win_rate_ex_flats": 0.75,
+              "wins": 24
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              2
+            ],
+            "win_rate_ex_flats": 0.75
+          },
+          {
+            "avg_cents_per_entry": 14.617021276595745,
+            "net_cents": 687.0,
+            "path_id": 3,
+            "selected_entries": 47,
+            "stats": {
+              "avg_cents_per_entry": 14.617021276595745,
+              "cost_basis_dollars": 79.58,
+              "coverage_of_live_entries": 0.1865079365079365,
+              "entries": 47,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 687.0,
+              "net_dollars": 6.87,
+              "roi_on_entry_notional": 0.08632822317165117,
+              "win_rate_ex_flats": 0.574468085106383,
+              "wins": 27
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              3
+            ],
+            "win_rate_ex_flats": 0.574468085106383
+          },
+          {
+            "avg_cents_per_entry": 8.741379310344827,
+            "net_cents": 506.99999999999994,
+            "path_id": 4,
+            "selected_entries": 58,
+            "stats": {
+              "avg_cents_per_entry": 8.741379310344827,
+              "cost_basis_dollars": 122.41,
+              "coverage_of_live_entries": 0.22924901185770752,
+              "entries": 58,
+              "flats": 4,
+              "losses": 26,
+              "net_cents": 506.99999999999994,
+              "net_dollars": 5.069999999999999,
+              "roi_on_entry_notional": 0.04141818478882444,
+              "win_rate_ex_flats": 0.5185185185185185,
+              "wins": 28
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              4
+            ],
+            "win_rate_ex_flats": 0.5185185185185185
+          },
+          {
+            "avg_cents_per_entry": 20.94736842105263,
+            "net_cents": 398.0,
+            "path_id": 5,
+            "selected_entries": 19,
+            "stats": {
+              "avg_cents_per_entry": 20.94736842105263,
+              "cost_basis_dollars": 40.18,
+              "coverage_of_live_entries": 0.07509881422924901,
+              "entries": 19,
+              "flats": 0,
+              "losses": 7,
+              "net_cents": 398.0,
+              "net_dollars": 3.98,
+              "roi_on_entry_notional": 0.09905425584868094,
+              "win_rate_ex_flats": 0.631578947368421,
+              "wins": 12
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              2
+            ],
+            "win_rate_ex_flats": 0.631578947368421
+          },
+          {
+            "avg_cents_per_entry": 10.058823529411764,
+            "net_cents": 342.0,
+            "path_id": 6,
+            "selected_entries": 34,
+            "stats": {
+              "avg_cents_per_entry": 10.058823529411764,
+              "cost_basis_dollars": 61.09,
+              "coverage_of_live_entries": 0.1349206349206349,
+              "entries": 34,
+              "flats": 0,
+              "losses": 19,
+              "net_cents": 342.0,
+              "net_dollars": 3.42,
+              "roi_on_entry_notional": 0.05598297593714192,
+              "win_rate_ex_flats": 0.4411764705882353,
+              "wins": 15
+            },
+            "test_entries": 252,
+            "test_folds": [
+              1,
+              3
+            ],
+            "win_rate_ex_flats": 0.4411764705882353
+          },
+          {
+            "avg_cents_per_entry": 3.599999999999999,
+            "net_cents": 161.99999999999997,
+            "path_id": 7,
+            "selected_entries": 45,
+            "stats": {
+              "avg_cents_per_entry": 3.599999999999999,
+              "cost_basis_dollars": 103.92,
+              "coverage_of_live_entries": 0.17786561264822134,
+              "entries": 45,
+              "flats": 4,
+              "losses": 25,
+              "net_cents": 161.99999999999997,
+              "net_dollars": 1.6199999999999997,
+              "roi_on_entry_notional": 0.015588914549653577,
+              "win_rate_ex_flats": 0.3902439024390244,
+              "wins": 16
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              4
+            ],
+            "win_rate_ex_flats": 0.3902439024390244
+          },
+          {
+            "avg_cents_per_entry": 17.6,
+            "net_cents": 616.0,
+            "path_id": 8,
+            "selected_entries": 35,
+            "stats": {
+              "avg_cents_per_entry": 17.6,
+              "cost_basis_dollars": 63.43,
+              "coverage_of_live_entries": 0.1383399209486166,
+              "entries": 35,
+              "flats": 0,
+              "losses": 16,
+              "net_cents": 616.0,
+              "net_dollars": 6.16,
+              "roi_on_entry_notional": 0.09711492984392243,
+              "win_rate_ex_flats": 0.5428571428571428,
+              "wins": 19
+            },
+            "test_entries": 253,
+            "test_folds": [
+              2,
+              3
+            ],
+            "win_rate_ex_flats": 0.5428571428571428
+          },
+          {
+            "avg_cents_per_entry": 9.478260869565217,
+            "net_cents": 435.99999999999994,
+            "path_id": 9,
+            "selected_entries": 46,
+            "stats": {
+              "avg_cents_per_entry": 9.478260869565217,
+              "cost_basis_dollars": 106.26,
+              "coverage_of_live_entries": 0.18110236220472442,
+              "entries": 46,
+              "flats": 4,
+              "losses": 22,
+              "net_cents": 435.99999999999994,
+              "net_dollars": 4.359999999999999,
+              "roi_on_entry_notional": 0.04103143233578015,
+              "win_rate_ex_flats": 0.47619047619047616,
+              "wins": 20
+            },
+            "test_entries": 254,
+            "test_folds": [
+              2,
+              4
+            ],
+            "win_rate_ex_flats": 0.47619047619047616
+          },
+          {
+            "avg_cents_per_entry": 6.22950819672131,
+            "net_cents": 379.99999999999994,
+            "path_id": 10,
+            "selected_entries": 61,
+            "stats": {
+              "avg_cents_per_entry": 6.22950819672131,
+              "cost_basis_dollars": 127.17,
+              "coverage_of_live_entries": 0.24110671936758893,
+              "entries": 61,
+              "flats": 4,
+              "losses": 34,
+              "net_cents": 379.99999999999994,
+              "net_dollars": 3.7999999999999994,
+              "roi_on_entry_notional": 0.029881261303766605,
+              "win_rate_ex_flats": 0.40350877192982454,
+              "wins": 23
+            },
+            "test_entries": 253,
+            "test_folds": [
+              3,
+              4
+            ],
+            "win_rate_ex_flats": 0.40350877192982454
+          }
+        ],
+        "positive_paths": 10
+      },
+      "e_process": {
+        "best_lambda": 0.2,
+        "best_max_capital": 3.054557876003704,
+        "crossed_100_any": false,
+        "crossed_20_any": false,
+        "lambda_rows": [
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 1.3389350461533274,
+            "lambda": 0.05,
+            "max_capital": 1.3389350461533274,
+            "min_capital": 0.9965015
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 1.7773804761645977,
+            "lambda": 0.1,
+            "max_capital": 1.7773804761645977,
+            "min_capital": 0.9930059999999999
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 3.054557876003704,
+            "lambda": 0.2,
+            "max_capital": 3.054557876003704,
+            "min_capital": 0.986024
+          }
+        ],
+        "scale_cents": 200.0
+      },
+      "family": "consensus_probability_gap",
+      "params": {
+        "max_probability_gap": 0.1,
+        "min_edge_cents": 3.0
+      },
+      "role": "Consensus/disagreement supervisor candidate"
+    },
+    "depth_decay_current": {
+      "aci": {
+        "candidate": "depth_decay_current",
+        "coverage": 0.9565217391304348,
+        "gamma": 0.02,
+        "high_uncertainty_net_cents": 908.0,
+        "high_uncertainty_rows": 57,
+        "high_uncertainty_side_hit_rate": 0.8947368421052632,
+        "low_uncertainty_net_cents": 1006.0,
+        "low_uncertainty_rows": 58,
+        "low_uncertainty_side_hit_rate": 0.8620689655172413,
+        "median_q_pre": 0.8780000000000003,
+        "passes_coverage_band": false,
+        "target_coverage": 0.9,
+        "uncertainty_useful": false,
+        "usable_rows": 115,
+        "warmup": 50
+      },
+      "all": {
+        "avg_cents_per_entry": 15.75,
+        "cost_basis_dollars": 314.8,
+        "coverage_of_live_entries": 0.21518987341772153,
+        "entries": 136,
+        "flats": 0,
+        "losses": 79,
+        "net_cents": 2142.0,
+        "net_dollars": 21.42,
+        "roi_on_entry_notional": 0.06804320203303685,
+        "win_rate_ex_flats": 0.41911764705882354,
+        "wins": 57
+      },
+      "cpcv_fixed": {
+        "candidate": "depth_decay_current",
+        "largest_positive_path_share": 0.12978524743230627,
+        "median_path_edge_cents": 15.882710053423992,
+        "p25_path_edge_cents": 12.906249999999998,
+        "passes_cpcv_gate": true,
+        "path_count": 10,
+        "path_edge_cv": 0.20634931168681078,
+        "paths": [
+          {
+            "avg_cents_per_entry": 11.142857142857142,
+            "net_cents": 702.0,
+            "path_id": 1,
+            "selected_entries": 63,
+            "stats": {
+              "avg_cents_per_entry": 11.142857142857142,
+              "cost_basis_dollars": 121.84,
+              "coverage_of_live_entries": 0.25,
+              "entries": 63,
+              "flats": 0,
+              "losses": 37,
+              "net_cents": 702.0,
+              "net_dollars": 7.02,
+              "roi_on_entry_notional": 0.057616546290216675,
+              "win_rate_ex_flats": 0.4126984126984127,
+              "wins": 26
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              1
+            ],
+            "win_rate_ex_flats": 0.4126984126984127
+          },
+          {
+            "avg_cents_per_entry": 17.877551020408163,
+            "net_cents": 876.0,
+            "path_id": 2,
+            "selected_entries": 49,
+            "stats": {
+              "avg_cents_per_entry": 17.877551020408163,
+              "cost_basis_dollars": 107.8,
+              "coverage_of_live_entries": 0.19367588932806323,
+              "entries": 49,
+              "flats": 0,
+              "losses": 27,
+              "net_cents": 876.0,
+              "net_dollars": 8.76,
+              "roi_on_entry_notional": 0.08126159554730983,
+              "win_rate_ex_flats": 0.4489795918367347,
+              "wins": 22
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              2
+            ],
+            "win_rate_ex_flats": 0.4489795918367347
+          },
+          {
+            "avg_cents_per_entry": 16.103448275862068,
+            "net_cents": 934.0,
+            "path_id": 3,
+            "selected_entries": 58,
+            "stats": {
+              "avg_cents_per_entry": 16.103448275862068,
+              "cost_basis_dollars": 112.32000000000001,
+              "coverage_of_live_entries": 0.23015873015873015,
+              "entries": 58,
+              "flats": 0,
+              "losses": 33,
+              "net_cents": 934.0,
+              "net_dollars": 9.34,
+              "roi_on_entry_notional": 0.08315527065527065,
+              "win_rate_ex_flats": 0.43103448275862066,
+              "wins": 25
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              3
+            ],
+            "win_rate_ex_flats": 0.43103448275862066
+          },
+          {
+            "avg_cents_per_entry": 15.661971830985916,
+            "net_cents": 1112.0,
+            "path_id": 4,
+            "selected_entries": 71,
+            "stats": {
+              "avg_cents_per_entry": 15.661971830985916,
+              "cost_basis_dollars": 187.88,
+              "coverage_of_live_entries": 0.28063241106719367,
+              "entries": 71,
+              "flats": 0,
+              "losses": 42,
+              "net_cents": 1112.0,
+              "net_dollars": 11.12,
+              "roi_on_entry_notional": 0.05918671492441984,
+              "win_rate_ex_flats": 0.4084507042253521,
+              "wins": 29
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              4
+            ],
+            "win_rate_ex_flats": 0.4084507042253521
+          },
+          {
+            "avg_cents_per_entry": 14.047619047619047,
+            "net_cents": 590.0,
+            "path_id": 5,
+            "selected_entries": 42,
+            "stats": {
+              "avg_cents_per_entry": 14.047619047619047,
+              "cost_basis_dollars": 86.28,
+              "coverage_of_live_entries": 0.16600790513833993,
+              "entries": 42,
+              "flats": 0,
+              "losses": 24,
+              "net_cents": 590.0,
+              "net_dollars": 5.9,
+              "roi_on_entry_notional": 0.0683820120537784,
+              "win_rate_ex_flats": 0.42857142857142855,
+              "wins": 18
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              2
+            ],
+            "win_rate_ex_flats": 0.42857142857142855
+          },
+          {
+            "avg_cents_per_entry": 12.705882352941176,
+            "net_cents": 648.0,
+            "path_id": 6,
+            "selected_entries": 51,
+            "stats": {
+              "avg_cents_per_entry": 12.705882352941176,
+              "cost_basis_dollars": 90.8,
+              "coverage_of_live_entries": 0.20238095238095238,
+              "entries": 51,
+              "flats": 0,
+              "losses": 30,
+              "net_cents": 648.0,
+              "net_dollars": 6.48,
+              "roi_on_entry_notional": 0.07136563876651983,
+              "win_rate_ex_flats": 0.4117647058823529,
+              "wins": 21
+            },
+            "test_entries": 252,
+            "test_folds": [
+              1,
+              3
+            ],
+            "win_rate_ex_flats": 0.4117647058823529
+          },
+          {
+            "avg_cents_per_entry": 12.906249999999998,
+            "net_cents": 825.9999999999999,
+            "path_id": 7,
+            "selected_entries": 64,
+            "stats": {
+              "avg_cents_per_entry": 12.906249999999998,
+              "cost_basis_dollars": 166.36,
+              "coverage_of_live_entries": 0.25296442687747034,
+              "entries": 64,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 825.9999999999999,
+              "net_dollars": 8.259999999999998,
+              "roi_on_entry_notional": 0.04965135849963932,
+              "win_rate_ex_flats": 0.390625,
+              "wins": 25
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              4
+            ],
+            "win_rate_ex_flats": 0.390625
+          },
+          {
+            "avg_cents_per_entry": 22.216216216216218,
+            "net_cents": 822.0,
+            "path_id": 8,
+            "selected_entries": 37,
+            "stats": {
+              "avg_cents_per_entry": 22.216216216216218,
+              "cost_basis_dollars": 76.76,
+              "coverage_of_live_entries": 0.14624505928853754,
+              "entries": 37,
+              "flats": 0,
+              "losses": 20,
+              "net_cents": 822.0,
+              "net_dollars": 8.22,
+              "roi_on_entry_notional": 0.10708702449192288,
+              "win_rate_ex_flats": 0.4594594594594595,
+              "wins": 17
+            },
+            "test_entries": 253,
+            "test_folds": [
+              2,
+              3
+            ],
+            "win_rate_ex_flats": 0.4594594594594595
+          },
+          {
+            "avg_cents_per_entry": 19.999999999999996,
+            "net_cents": 999.9999999999999,
+            "path_id": 9,
+            "selected_entries": 50,
+            "stats": {
+              "avg_cents_per_entry": 19.999999999999996,
+              "cost_basis_dollars": 152.32,
+              "coverage_of_live_entries": 0.1968503937007874,
+              "entries": 50,
+              "flats": 0,
+              "losses": 29,
+              "net_cents": 999.9999999999999,
+              "net_dollars": 9.999999999999998,
+              "roi_on_entry_notional": 0.06565126050420167,
+              "win_rate_ex_flats": 0.42,
+              "wins": 21
+            },
+            "test_entries": 254,
+            "test_folds": [
+              2,
+              4
+            ],
+            "win_rate_ex_flats": 0.42
+          },
+          {
+            "avg_cents_per_entry": 17.93220338983051,
+            "net_cents": 1058.0,
+            "path_id": 10,
+            "selected_entries": 59,
+            "stats": {
+              "avg_cents_per_entry": 17.93220338983051,
+              "cost_basis_dollars": 156.84,
+              "coverage_of_live_entries": 0.233201581027668,
+              "entries": 59,
+              "flats": 0,
+              "losses": 35,
+              "net_cents": 1058.0,
+              "net_dollars": 10.58,
+              "roi_on_entry_notional": 0.06745728130578933,
+              "win_rate_ex_flats": 0.4067796610169492,
+              "wins": 24
+            },
+            "test_entries": 253,
+            "test_folds": [
+              3,
+              4
+            ],
+            "win_rate_ex_flats": 0.4067796610169492
+          }
+        ],
+        "positive_paths": 10
+      },
+      "e_process": {
+        "best_lambda": 0.2,
+        "best_max_capital": 6.149178552997449,
+        "crossed_100_any": false,
+        "crossed_20_any": false,
+        "lambda_rows": [
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 1.6368636408174904,
+            "lambda": 0.05,
+            "max_capital": 1.6368636408174904,
+            "min_capital": 0.9914627501598486
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 2.609067891153195,
+            "lambda": 0.1,
+            "max_capital": 2.609067891153195,
+            "min_capital": 0.9818889121240182
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 6.149178552997449,
+            "lambda": 0.2,
+            "max_capital": 6.149178552997449,
+            "min_capital": 0.9598575368001198
+          }
+        ],
+        "scale_cents": 200.0
+      },
+      "family": "depth_decay_fillability",
+      "params": {
+        "max_ask_cents": 80.0,
+        "max_book_age_ms": 750.0,
+        "min_depth_ratio": 3.0,
+        "min_seconds_to_close": 600.0
+      },
+      "role": "Depth-decay/fillability current gate"
+    },
+    "hybrid_fpt_depth_current": {
+      "aci": {
+        "candidate": "hybrid_fpt_depth_current",
+        "coverage": 0.9072847682119205,
+        "gamma": 0.02,
+        "high_uncertainty_net_cents": 521.0,
+        "high_uncertainty_rows": 75,
+        "high_uncertainty_side_hit_rate": 0.8,
+        "low_uncertainty_net_cents": 1034.0,
+        "low_uncertainty_rows": 76,
+        "low_uncertainty_side_hit_rate": 0.8289473684210527,
+        "median_q_pre": 0.8760000000000003,
+        "passes_coverage_band": true,
+        "target_coverage": 0.9,
+        "uncertainty_useful": true,
+        "usable_rows": 151,
+        "warmup": 50
+      },
+      "all": {
+        "avg_cents_per_entry": 9.723926380368098,
+        "cost_basis_dollars": 334.05,
+        "coverage_of_live_entries": 0.2579113924050633,
+        "entries": 163,
+        "flats": 1,
+        "losses": 85,
+        "net_cents": 1585.0,
+        "net_dollars": 15.85,
+        "roi_on_entry_notional": 0.04744798682831911,
+        "win_rate_ex_flats": 0.47530864197530864,
+        "wins": 77
+      },
+      "cpcv_fixed": {
+        "candidate": "hybrid_fpt_depth_current",
+        "largest_positive_path_share": 0.19605678233438487,
+        "median_path_edge_cents": 9.666252587991718,
+        "p25_path_edge_cents": 5.962962962962963,
+        "passes_cpcv_gate": true,
+        "path_count": 10,
+        "path_edge_cv": 0.5785743799495878,
+        "paths": [
+          {
+            "avg_cents_per_entry": 2.5185185185185186,
+            "net_cents": 136.0,
+            "path_id": 1,
+            "selected_entries": 54,
+            "stats": {
+              "avg_cents_per_entry": 2.5185185185185186,
+              "cost_basis_dollars": 90.36,
+              "coverage_of_live_entries": 0.21428571428571427,
+              "entries": 54,
+              "flats": 0,
+              "losses": 29,
+              "net_cents": 136.0,
+              "net_dollars": 1.36,
+              "roi_on_entry_notional": 0.015050907481186367,
+              "win_rate_ex_flats": 0.46296296296296297,
+              "wins": 25
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              1
+            ],
+            "win_rate_ex_flats": 0.46296296296296297
+          },
+          {
+            "avg_cents_per_entry": 13.958333333333334,
+            "net_cents": 670.0,
+            "path_id": 2,
+            "selected_entries": 48,
+            "stats": {
+              "avg_cents_per_entry": 13.958333333333334,
+              "cost_basis_dollars": 88.46,
+              "coverage_of_live_entries": 0.18972332015810275,
+              "entries": 48,
+              "flats": 0,
+              "losses": 21,
+              "net_cents": 670.0,
+              "net_dollars": 6.7,
+              "roi_on_entry_notional": 0.07574044765995931,
+              "win_rate_ex_flats": 0.5625,
+              "wins": 27
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              2
+            ],
+            "win_rate_ex_flats": 0.5625
+          },
+          {
+            "avg_cents_per_entry": 16.77777777777778,
+            "net_cents": 1057.0,
+            "path_id": 3,
+            "selected_entries": 63,
+            "stats": {
+              "avg_cents_per_entry": 16.77777777777778,
+              "cost_basis_dollars": 104.15,
+              "coverage_of_live_entries": 0.25,
+              "entries": 63,
+              "flats": 1,
+              "losses": 31,
+              "net_cents": 1057.0,
+              "net_dollars": 10.57,
+              "roi_on_entry_notional": 0.10148823811809889,
+              "win_rate_ex_flats": 0.5,
+              "wins": 31
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              3
+            ],
+            "win_rate_ex_flats": 0.5
+          },
+          {
+            "avg_cents_per_entry": 6.3999999999999995,
+            "net_cents": 447.99999999999994,
+            "path_id": 4,
+            "selected_entries": 70,
+            "stats": {
+              "avg_cents_per_entry": 6.3999999999999995,
+              "cost_basis_dollars": 165.98,
+              "coverage_of_live_entries": 0.2766798418972332,
+              "entries": 70,
+              "flats": 0,
+              "losses": 40,
+              "net_cents": 447.99999999999994,
+              "net_dollars": 4.4799999999999995,
+              "roi_on_entry_notional": 0.026991203759489095,
+              "win_rate_ex_flats": 0.42857142857142855,
+              "wins": 30
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              4
+            ],
+            "win_rate_ex_flats": 0.42857142857142855
+          },
+          {
+            "avg_cents_per_entry": 5.962962962962963,
+            "net_cents": 322.0,
+            "path_id": 5,
+            "selected_entries": 54,
+            "stats": {
+              "avg_cents_per_entry": 5.962962962962963,
+              "cost_basis_dollars": 102.22,
+              "coverage_of_live_entries": 0.2134387351778656,
+              "entries": 54,
+              "flats": 0,
+              "losses": 26,
+              "net_cents": 322.0,
+              "net_dollars": 3.22,
+              "roi_on_entry_notional": 0.0315006847974956,
+              "win_rate_ex_flats": 0.5185185185185185,
+              "wins": 28
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              2
+            ],
+            "win_rate_ex_flats": 0.5185185185185185
+          },
+          {
+            "avg_cents_per_entry": 10.27536231884058,
+            "net_cents": 709.0,
+            "path_id": 6,
+            "selected_entries": 69,
+            "stats": {
+              "avg_cents_per_entry": 10.27536231884058,
+              "cost_basis_dollars": 117.91,
+              "coverage_of_live_entries": 0.27380952380952384,
+              "entries": 69,
+              "flats": 1,
+              "losses": 36,
+              "net_cents": 709.0,
+              "net_dollars": 7.09,
+              "roi_on_entry_notional": 0.060130608090916804,
+              "win_rate_ex_flats": 0.47058823529411764,
+              "wins": 32
+            },
+            "test_entries": 252,
+            "test_folds": [
+              1,
+              3
+            ],
+            "win_rate_ex_flats": 0.47058823529411764
+          },
+          {
+            "avg_cents_per_entry": 1.3157894736842097,
+            "net_cents": 99.99999999999994,
+            "path_id": 7,
+            "selected_entries": 76,
+            "stats": {
+              "avg_cents_per_entry": 1.3157894736842097,
+              "cost_basis_dollars": 179.74,
+              "coverage_of_live_entries": 0.30039525691699603,
+              "entries": 76,
+              "flats": 0,
+              "losses": 45,
+              "net_cents": 99.99999999999994,
+              "net_dollars": 0.9999999999999994,
+              "roi_on_entry_notional": 0.005563591854901521,
+              "win_rate_ex_flats": 0.40789473684210525,
+              "wins": 31
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              4
+            ],
+            "win_rate_ex_flats": 0.40789473684210525
+          },
+          {
+            "avg_cents_per_entry": 19.73015873015873,
+            "net_cents": 1243.0,
+            "path_id": 8,
+            "selected_entries": 63,
+            "stats": {
+              "avg_cents_per_entry": 19.73015873015873,
+              "cost_basis_dollars": 116.01,
+              "coverage_of_live_entries": 0.2490118577075099,
+              "entries": 63,
+              "flats": 1,
+              "losses": 28,
+              "net_cents": 1243.0,
+              "net_dollars": 12.43,
+              "roi_on_entry_notional": 0.10714593569519869,
+              "win_rate_ex_flats": 0.5483870967741935,
+              "wins": 34
+            },
+            "test_entries": 253,
+            "test_folds": [
+              2,
+              3
+            ],
+            "win_rate_ex_flats": 0.5483870967741935
+          },
+          {
+            "avg_cents_per_entry": 9.057142857142857,
+            "net_cents": 634.0,
+            "path_id": 9,
+            "selected_entries": 70,
+            "stats": {
+              "avg_cents_per_entry": 9.057142857142857,
+              "cost_basis_dollars": 177.84,
+              "coverage_of_live_entries": 0.2755905511811024,
+              "entries": 70,
+              "flats": 0,
+              "losses": 37,
+              "net_cents": 634.0,
+              "net_dollars": 6.34,
+              "roi_on_entry_notional": 0.03565002249212775,
+              "win_rate_ex_flats": 0.4714285714285714,
+              "wins": 33
+            },
+            "test_entries": 254,
+            "test_folds": [
+              2,
+              4
+            ],
+            "win_rate_ex_flats": 0.4714285714285714
+          },
+          {
+            "avg_cents_per_entry": 12.011764705882353,
+            "net_cents": 1021.0,
+            "path_id": 10,
+            "selected_entries": 85,
+            "stats": {
+              "avg_cents_per_entry": 12.011764705882353,
+              "cost_basis_dollars": 193.53,
+              "coverage_of_live_entries": 0.3359683794466403,
+              "entries": 85,
+              "flats": 1,
+              "losses": 47,
+              "net_cents": 1021.0,
+              "net_dollars": 10.21,
+              "roi_on_entry_notional": 0.052756678551129026,
+              "win_rate_ex_flats": 0.44047619047619047,
+              "wins": 37
+            },
+            "test_entries": 253,
+            "test_folds": [
+              3,
+              4
+            ],
+            "win_rate_ex_flats": 0.44047619047619047
+          }
+        ],
+        "positive_paths": 10
+      },
+      "e_process": {
+        "best_lambda": 0.2,
+        "best_max_capital": 3.7279576662128826,
+        "crossed_100_any": false,
+        "crossed_20_any": false,
+        "lambda_rows": [
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 1.4458260530715492,
+            "lambda": 0.05,
+            "max_capital": 1.4458260530715492,
+            "min_capital": 0.9864239713260289
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 2.0351305436320417,
+            "lambda": 0.1,
+            "max_capital": 2.0351305436320417,
+            "min_capital": 0.9717401324404483
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 3.725970451248135,
+            "lambda": 0.2,
+            "max_capital": 3.7279576662128826,
+            "min_capital": 0.9393180308924941
+          }
+        ],
+        "scale_cents": 200.0
+      },
+      "family": "hybrid_fpt_depth",
+      "params": {
+        "max_abs_d_sigma": 1.1,
+        "max_ask_cents": 83.0,
+        "max_book_age_ms": 750.0,
+        "min_abs_d_sigma": 0.85,
+        "min_depth_ratio": 8.0,
+        "min_edge_cents": 3.0,
+        "min_seconds_to_close": 120.0
+      },
+      "role": "Hybrid FPT + fillability current gate"
+    },
+    "hybrid_fpt_depth_robust_rank1": {
+      "aci": {
+        "candidate": "hybrid_fpt_depth_robust_rank1",
+        "coverage": 0.9086021505376344,
+        "gamma": 0.02,
+        "high_uncertainty_net_cents": 1049.0,
+        "high_uncertainty_rows": 93,
+        "high_uncertainty_side_hit_rate": 0.8064516129032258,
+        "low_uncertainty_net_cents": 1228.0,
+        "low_uncertainty_rows": 93,
+        "low_uncertainty_side_hit_rate": 0.8279569892473119,
+        "median_q_pre": 0.8750000000000003,
+        "passes_coverage_band": true,
+        "target_coverage": 0.9,
+        "uncertainty_useful": true,
+        "usable_rows": 186,
+        "warmup": 50
+      },
+      "all": {
+        "avg_cents_per_entry": 11.889952153110048,
+        "cost_basis_dollars": 439.77,
+        "coverage_of_live_entries": 0.33069620253164556,
+        "entries": 209,
+        "flats": 3,
+        "losses": 107,
+        "net_cents": 2485.0,
+        "net_dollars": 24.85,
+        "roi_on_entry_notional": 0.05650681037815222,
+        "win_rate_ex_flats": 0.48058252427184467,
+        "wins": 99
+      },
+      "cpcv_fixed": {
+        "candidate": "hybrid_fpt_depth_robust_rank1",
+        "largest_positive_path_share": 0.14959758551307847,
+        "median_path_edge_cents": 12.59302709847984,
+        "p25_path_edge_cents": 9.319148936170214,
+        "passes_cpcv_gate": true,
+        "path_count": 10,
+        "path_edge_cv": 0.33986147927612914,
+        "paths": [
+          {
+            "avg_cents_per_entry": 5.666666666666667,
+            "net_cents": 476.0,
+            "path_id": 1,
+            "selected_entries": 84,
+            "stats": {
+              "avg_cents_per_entry": 5.666666666666667,
+              "cost_basis_dollars": 154.2,
+              "coverage_of_live_entries": 0.3333333333333333,
+              "entries": 84,
+              "flats": 0,
+              "losses": 47,
+              "net_cents": 476.0,
+              "net_dollars": 4.76,
+              "roi_on_entry_notional": 0.030869001297016863,
+              "win_rate_ex_flats": 0.44047619047619047,
+              "wins": 37
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              1
+            ],
+            "win_rate_ex_flats": 0.44047619047619047
+          },
+          {
+            "avg_cents_per_entry": 13.264705882352942,
+            "net_cents": 902.0,
+            "path_id": 2,
+            "selected_entries": 68,
+            "stats": {
+              "avg_cents_per_entry": 13.264705882352942,
+              "cost_basis_dollars": 134.82,
+              "coverage_of_live_entries": 0.26877470355731226,
+              "entries": 68,
+              "flats": 0,
+              "losses": 33,
+              "net_cents": 902.0,
+              "net_dollars": 9.02,
+              "roi_on_entry_notional": 0.0669040201750482,
+              "win_rate_ex_flats": 0.5147058823529411,
+              "wins": 35
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              2
+            ],
+            "win_rate_ex_flats": 0.5147058823529411
+          },
+          {
+            "avg_cents_per_entry": 14.52808988764045,
+            "net_cents": 1293.0,
+            "path_id": 3,
+            "selected_entries": 89,
+            "stats": {
+              "avg_cents_per_entry": 14.52808988764045,
+              "cost_basis_dollars": 156.23,
+              "coverage_of_live_entries": 0.3531746031746032,
+              "entries": 89,
+              "flats": 3,
+              "losses": 45,
+              "net_cents": 1293.0,
+              "net_dollars": 12.93,
+              "roi_on_entry_notional": 0.08276259361198234,
+              "win_rate_ex_flats": 0.47674418604651164,
+              "wins": 41
+            },
+            "test_entries": 252,
+            "test_folds": [
+              0,
+              3
+            ],
+            "win_rate_ex_flats": 0.47674418604651164
+          },
+          {
+            "avg_cents_per_entry": 9.319148936170214,
+            "net_cents": 876.0,
+            "path_id": 4,
+            "selected_entries": 94,
+            "stats": {
+              "avg_cents_per_entry": 9.319148936170214,
+              "cost_basis_dollars": 228.22,
+              "coverage_of_live_entries": 0.3715415019762846,
+              "entries": 94,
+              "flats": 0,
+              "losses": 54,
+              "net_cents": 876.0,
+              "net_dollars": 8.76,
+              "roi_on_entry_notional": 0.03838401542371396,
+              "win_rate_ex_flats": 0.425531914893617,
+              "wins": 40
+            },
+            "test_entries": 253,
+            "test_folds": [
+              0,
+              4
+            ],
+            "win_rate_ex_flats": 0.425531914893617
+          },
+          {
+            "avg_cents_per_entry": 9.852941176470589,
+            "net_cents": 670.0,
+            "path_id": 5,
+            "selected_entries": 68,
+            "stats": {
+              "avg_cents_per_entry": 9.852941176470589,
+              "cost_basis_dollars": 133.22,
+              "coverage_of_live_entries": 0.26877470355731226,
+              "entries": 68,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 670.0,
+              "net_dollars": 6.7,
+              "roi_on_entry_notional": 0.05029274883651104,
+              "win_rate_ex_flats": 0.5294117647058824,
+              "wins": 36
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              2
+            ],
+            "win_rate_ex_flats": 0.5294117647058824
+          },
+          {
+            "avg_cents_per_entry": 11.92134831460674,
+            "net_cents": 1061.0,
+            "path_id": 6,
+            "selected_entries": 89,
+            "stats": {
+              "avg_cents_per_entry": 11.92134831460674,
+              "cost_basis_dollars": 154.63,
+              "coverage_of_live_entries": 0.3531746031746032,
+              "entries": 89,
+              "flats": 3,
+              "losses": 44,
+              "net_cents": 1061.0,
+              "net_dollars": 10.61,
+              "roi_on_entry_notional": 0.06861540451400117,
+              "win_rate_ex_flats": 0.4883720930232558,
+              "wins": 42
+            },
+            "test_entries": 252,
+            "test_folds": [
+              1,
+              3
+            ],
+            "win_rate_ex_flats": 0.4883720930232558
+          },
+          {
+            "avg_cents_per_entry": 6.851063829787234,
+            "net_cents": 644.0,
+            "path_id": 7,
+            "selected_entries": 94,
+            "stats": {
+              "avg_cents_per_entry": 6.851063829787234,
+              "cost_basis_dollars": 226.62,
+              "coverage_of_live_entries": 0.3715415019762846,
+              "entries": 94,
+              "flats": 0,
+              "losses": 53,
+              "net_cents": 644.0,
+              "net_dollars": 6.44,
+              "roi_on_entry_notional": 0.028417615391404114,
+              "win_rate_ex_flats": 0.43617021276595747,
+              "wins": 41
+            },
+            "test_entries": 253,
+            "test_folds": [
+              1,
+              4
+            ],
+            "win_rate_ex_flats": 0.43617021276595747
+          },
+          {
+            "avg_cents_per_entry": 20.36986301369863,
+            "net_cents": 1487.0,
+            "path_id": 8,
+            "selected_entries": 73,
+            "stats": {
+              "avg_cents_per_entry": 20.36986301369863,
+              "cost_basis_dollars": 135.25,
+              "coverage_of_live_entries": 0.2885375494071146,
+              "entries": 73,
+              "flats": 3,
+              "losses": 30,
+              "net_cents": 1487.0,
+              "net_dollars": 14.87,
+              "roi_on_entry_notional": 0.1099445471349353,
+              "win_rate_ex_flats": 0.5714285714285714,
+              "wins": 40
+            },
+            "test_entries": 253,
+            "test_folds": [
+              2,
+              3
+            ],
+            "win_rate_ex_flats": 0.5714285714285714
+          },
+          {
+            "avg_cents_per_entry": 13.717948717948717,
+            "net_cents": 1070.0,
+            "path_id": 9,
+            "selected_entries": 78,
+            "stats": {
+              "avg_cents_per_entry": 13.717948717948717,
+              "cost_basis_dollars": 207.24,
+              "coverage_of_live_entries": 0.30708661417322836,
+              "entries": 78,
+              "flats": 0,
+              "losses": 39,
+              "net_cents": 1070.0,
+              "net_dollars": 10.7,
+              "roi_on_entry_notional": 0.051630959274271374,
+              "win_rate_ex_flats": 0.5,
+              "wins": 39
+            },
+            "test_entries": 254,
+            "test_folds": [
+              2,
+              4
+            ],
+            "win_rate_ex_flats": 0.5
+          },
+          {
+            "avg_cents_per_entry": 14.757575757575758,
+            "net_cents": 1461.0,
+            "path_id": 10,
+            "selected_entries": 99,
+            "stats": {
+              "avg_cents_per_entry": 14.757575757575758,
+              "cost_basis_dollars": 228.65,
+              "coverage_of_live_entries": 0.391304347826087,
+              "entries": 99,
+              "flats": 3,
+              "losses": 51,
+              "net_cents": 1461.0,
+              "net_dollars": 14.61,
+              "roi_on_entry_notional": 0.06389678547999125,
+              "win_rate_ex_flats": 0.46875,
+              "wins": 45
+            },
+            "test_entries": 253,
+            "test_folds": [
+              3,
+              4
+            ],
+            "win_rate_ex_flats": 0.46875
+          }
+        ],
+        "positive_paths": 10
+      },
+      "e_process": {
+        "best_lambda": 0.2,
+        "best_max_capital": 8.283324602244395,
+        "crossed_100_any": false,
+        "crossed_20_any": false,
+        "lambda_rows": [
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 1.793590938465374,
+            "lambda": 0.05,
+            "max_capital": 1.793590938465374,
+            "min_capital": 0.9881440138359056
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 3.098541210944771,
+            "lambda": 0.1,
+            "max_capital": 3.098541210944771,
+            "min_capital": 0.97560391358803
+          },
+          {
+            "cross_100_at": null,
+            "cross_20_at": null,
+            "final_capital": 8.283324602244395,
+            "lambda": 0.2,
+            "max_capital": 8.283324602244395,
+            "min_capital": 0.9486360669757047
+          }
+        ],
+        "scale_cents": 200.0
+      },
+      "family": "hybrid_fpt_depth",
+      "params": {
+        "max_abs_d_sigma": 1.1,
+        "max_ask_cents": 85.0,
+        "max_book_age_ms": 750.0,
+        "min_abs_d_sigma": 0.8,
+        "min_depth_ratio": 8.0,
+        "min_edge_cents": 3.0,
+        "min_seconds_to_close": 120.0
+      },
+      "role": "Hybrid robust replay rank 1 from multi-schedule deepening"
+    }
+  },
+  "cpcv_config": {
+    "embargo_trades": 12,
+    "folds": 5,
+    "test_folds_per_path": 2
+  },
+  "diagnostics": {
+    "feature_event_type_counts": {
+      "plan_built": 632
+    },
+    "feature_index_keys": 1368,
+    "matched_trade_count": 632,
+    "raw_trade_count": 632,
+    "settled_label_rows": 630
+  },
+  "dynamic_family_cpcv": {
+    "brownian_fpt_sanity": {
+      "beat_live_paths": 7,
+      "combined": {
+        "avg_cents_per_entry": 6.228116710875332,
+        "cost_basis_dollars": 2351.33,
+        "coverage_of_live_entries": 0.4473892405063291,
+        "entries": 1131,
+        "flats": 24,
+        "losses": 616,
+        "net_cents": 7044.0,
+        "net_dollars": 70.44,
+        "roi_on_entry_notional": 0.029957513407305653,
+        "win_rate_ex_flats": 0.44354110207768743,
+        "wins": 491
+      },
+      "combined_live": {
+        "avg_cents_per_entry": 2.153481012658228,
+        "cost_basis_dollars": 5090.84,
+        "coverage_of_live_entries": 1.0,
+        "entries": 2528,
+        "flats": 44,
+        "losses": 1344,
+        "net_cents": 5444.0,
+        "net_dollars": 54.44,
+        "roi_on_entry_notional": 0.010693716557581853,
+        "win_rate_ex_flats": 0.45893719806763283,
+        "wins": 1140
+      },
+      "median_path_net_cents": 608.0,
+      "min_path_net_cents": -56.00000000000008,
+      "param_pool_size": 260,
+      "paths": [
+        {
+          "delta_vs_live_cents": -1342.0,
+          "live_stats": {
+            "avg_cents_per_entry": 7.380952380952381,
+            "cost_basis_dollars": 463.23,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 0,
+            "losses": 120,
+            "net_cents": 1860.0,
+            "net_dollars": 18.6,
+            "roi_on_entry_notional": 0.04015283984197915,
+            "win_rate_ex_flats": 0.5238095238095238,
+            "wins": 132
+          },
+          "path_id": 1,
+          "selected_entries": 72,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.85,
+            "min_edge_cents": 4.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 244,
+            "score": [
+              3,
+              431.99999999999994,
+              448.0,
+              1378.0,
+              11.203252032520325,
+              123
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 7.194444444444445,
+            "cost_basis_dollars": 130.3,
+            "coverage_of_live_entries": 0.2857142857142857,
+            "entries": 72,
+            "flats": 0,
+            "losses": 39,
+            "net_cents": 518.0,
+            "net_dollars": 5.18,
+            "roi_on_entry_notional": 0.03975441289332309,
+            "win_rate_ex_flats": 0.4583333333333333,
+            "wins": 33
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            1
+          ]
+        },
+        {
+          "delta_vs_live_cents": 366.0,
+          "live_stats": {
+            "avg_cents_per_entry": 2.5375494071146245,
+            "cost_basis_dollars": 510.91,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 127,
+            "net_cents": 642.0,
+            "net_dollars": 6.42,
+            "roi_on_entry_notional": 0.012565813939832847,
+            "win_rate_ex_flats": 0.4980237154150198,
+            "wins": 126
+          },
+          "path_id": 2,
+          "selected_entries": 109,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.8,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 251,
+            "score": [
+              3,
+              421.99999999999994,
+              551.0,
+              1571.0,
+              8.356382978723405,
+              188
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 9.247706422018348,
+            "cost_basis_dollars": 232.57,
+            "coverage_of_live_entries": 0.4308300395256917,
+            "entries": 109,
+            "flats": 0,
+            "losses": 58,
+            "net_cents": 1008.0,
+            "net_dollars": 10.08,
+            "roi_on_entry_notional": 0.043341789568732,
+            "win_rate_ex_flats": 0.46788990825688076,
+            "wins": 51
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": 108.0,
+          "live_stats": {
+            "avg_cents_per_entry": 5.781746031746032,
+            "cost_basis_dollars": 460.63,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 122,
+            "net_cents": 1457.0,
+            "net_dollars": 14.57,
+            "roi_on_entry_notional": 0.03163059288365934,
+            "win_rate_ex_flats": 0.5060728744939271,
+            "wins": 125
+          },
+          "path_id": 3,
+          "selected_entries": 140,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.8,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 192,
+            "score": [
+              3,
+              233.99999999999997,
+              274.0,
+              789.9999999999999,
+              4.647058823529411,
+              170
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 11.178571428571429,
+            "cost_basis_dollars": 258.21999999999997,
+            "coverage_of_live_entries": 0.5555555555555556,
+            "entries": 140,
+            "flats": 5,
+            "losses": 71,
+            "net_cents": 1565.0,
+            "net_dollars": 15.65,
+            "roi_on_entry_notional": 0.060607234141429794,
+            "win_rate_ex_flats": 0.4740740740740741,
+            "wins": 64
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -726.0,
+          "live_stats": {
+            "avg_cents_per_entry": 6.972332015810276,
+            "cost_basis_dollars": 540.03,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 132,
+            "net_cents": 1764.0,
+            "net_dollars": 17.64,
+            "roi_on_entry_notional": 0.0326648519526693,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 4,
+          "selected_entries": 141,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.8,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 173,
+            "score": [
+              3,
+              226.0,
+              282.0,
+              1439.0,
+              8.774390243902438,
+              164
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 7.361702127659575,
+            "cost_basis_dollars": 317.19,
+            "coverage_of_live_entries": 0.5573122529644269,
+            "entries": 141,
+            "flats": 2,
+            "losses": 82,
+            "net_cents": 1038.0,
+            "net_dollars": 10.38,
+            "roi_on_entry_notional": 0.03272486522273716,
+            "win_rate_ex_flats": 0.41007194244604317,
+            "wins": 57
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 1068.0,
+          "live_stats": {
+            "avg_cents_per_entry": -1.6047430830039529,
+            "cost_basis_dollars": 506.08,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 137,
+            "net_cents": -406.00000000000006,
+            "net_dollars": -4.0600000000000005,
+            "roi_on_entry_notional": -0.008022447043945622,
+            "win_rate_ex_flats": 0.45849802371541504,
+            "wins": 116
+          },
+          "path_id": 5,
+          "selected_entries": 109,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              433.99999999999994,
+              576.0,
+              1621.0,
+              7.830917874396135,
+              207
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 6.073394495412844,
+            "cost_basis_dollars": 226.94,
+            "coverage_of_live_entries": 0.4308300395256917,
+            "entries": 109,
+            "flats": 0,
+            "losses": 56,
+            "net_cents": 662.0,
+            "net_dollars": 6.62,
+            "roi_on_entry_notional": 0.0291707059134573,
+            "win_rate_ex_flats": 0.48623853211009177,
+            "wins": 53
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": 145.00000000000006,
+          "live_stats": {
+            "avg_cents_per_entry": 1.6230158730158728,
+            "cost_basis_dollars": 455.8,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 132,
+            "net_cents": 408.99999999999994,
+            "net_dollars": 4.09,
+            "roi_on_entry_notional": 0.008973233874506362,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 6,
+          "selected_entries": 96,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.85,
+            "min_edge_cents": 4.0,
+            "min_seconds_to_close": 60.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              343.99999999999994,
+              380.0,
+              1146.0,
+              11.693877551020408,
+              98
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 5.770833333333333,
+            "cost_basis_dollars": 168.01,
+            "coverage_of_live_entries": 0.38095238095238093,
+            "entries": 96,
+            "flats": 3,
+            "losses": 51,
+            "net_cents": 554.0,
+            "net_dollars": 5.54,
+            "roi_on_entry_notional": 0.03297422772454021,
+            "win_rate_ex_flats": 0.45161290322580644,
+            "wins": 42
+          },
+          "test_entries": 252,
+          "test_folds": [
+            1,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -772.0000000000001,
+          "live_stats": {
+            "avg_cents_per_entry": 2.8300395256916997,
+            "cost_basis_dollars": 535.2,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 142,
+            "net_cents": 716.0,
+            "net_dollars": 7.16,
+            "roi_on_entry_notional": 0.013378176382660686,
+            "win_rate_ex_flats": 0.4251012145748988,
+            "wins": 105
+          },
+          "path_id": 7,
+          "selected_entries": 127,
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.85,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 257,
+            "score": [
+              3,
+              519.0,
+              594.0,
+              1928.0,
+              13.027027027027026,
+              148
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": -0.4409448818897644,
+            "cost_basis_dollars": 273.1,
+            "coverage_of_live_entries": 0.5019762845849802,
+            "entries": 127,
+            "flats": 2,
+            "losses": 78,
+            "net_cents": -56.00000000000008,
+            "net_dollars": -0.5600000000000008,
+            "roi_on_entry_notional": -0.0020505309410472385,
+            "win_rate_ex_flats": 0.376,
+            "wins": 47
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 1279.0,
+          "live_stats": {
+            "avg_cents_per_entry": -3.197628458498024,
+            "cost_basis_dollars": 503.48,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 5,
+            "losses": 139,
+            "net_cents": -809.0,
+            "net_dollars": -8.09,
+            "roi_on_entry_notional": -0.016068165567649163,
+            "win_rate_ex_flats": 0.43951612903225806,
+            "wins": 109
+          },
+          "path_id": 8,
+          "selected_entries": 86,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 4.0,
+            "min_seconds_to_close": 60.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              679.0,
+              748.0,
+              2187.0,
+              13.017857142857142,
+              168
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 5.465116279069767,
+            "cost_basis_dollars": 166.97,
+            "coverage_of_live_entries": 0.33992094861660077,
+            "entries": 86,
+            "flats": 5,
+            "losses": 42,
+            "net_cents": 470.0,
+            "net_dollars": 4.7,
+            "roi_on_entry_notional": 0.028148769239983232,
+            "win_rate_ex_flats": 0.48148148148148145,
+            "wins": 39
+          },
+          "test_entries": 253,
+          "test_folds": [
+            2,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": 996.0,
+          "live_stats": {
+            "avg_cents_per_entry": -1.9763779527559058,
+            "cost_basis_dollars": 582.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 254,
+            "flats": 6,
+            "losses": 149,
+            "net_cents": -502.00000000000006,
+            "net_dollars": -5.0200000000000005,
+            "roi_on_entry_notional": -0.008612407356574254,
+            "win_rate_ex_flats": 0.39919354838709675,
+            "wins": 99
+          },
+          "path_id": 9,
+          "selected_entries": 125,
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "min_abs_d_sigma": 0.7,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 60.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              692.0,
+              826.0,
+              2551.0,
+              11.810185185185185,
+              216
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 3.9519999999999995,
+            "cost_basis_dollars": 304.88,
+            "coverage_of_live_entries": 0.4921259842519685,
+            "entries": 125,
+            "flats": 4,
+            "losses": 68,
+            "net_cents": 493.99999999999994,
+            "net_dollars": 4.9399999999999995,
+            "roi_on_entry_notional": 0.016203096300183677,
+            "win_rate_ex_flats": 0.4380165289256198,
+            "wins": 53
+          },
+          "test_entries": 254,
+          "test_folds": [
+            2,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 477.99999999999994,
+          "live_stats": {
+            "avg_cents_per_entry": 1.2371541501976282,
+            "cost_basis_dollars": 532.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 11,
+            "losses": 144,
+            "net_cents": 312.99999999999994,
+            "net_dollars": 3.1299999999999994,
+            "roi_on_entry_notional": 0.0058768306421329315,
+            "win_rate_ex_flats": 0.4049586776859504,
+            "wins": 98
+          },
+          "path_id": 10,
+          "selected_entries": 126,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "min_abs_d_sigma": 0.85,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              258.0,
+              274.0,
+              1011.0,
+              8.21951219512195,
+              123
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 6.277777777777777,
+            "cost_basis_dollars": 273.15,
+            "coverage_of_live_entries": 0.4980237154150198,
+            "entries": 126,
+            "flats": 3,
+            "losses": 71,
+            "net_cents": 790.9999999999999,
+            "net_dollars": 7.909999999999999,
+            "roi_on_entry_notional": 0.02895844773933736,
+            "win_rate_ex_flats": 0.42276422764227645,
+            "wins": 52
+          },
+          "test_entries": 253,
+          "test_folds": [
+            3,
+            4
+          ]
+        }
+      ],
+      "positive_paths": 9
+    },
+    "consensus_probability_gap": {
+      "beat_live_paths": 3,
+      "combined": {
+        "avg_cents_per_entry": 2.240592930444697,
+        "cost_basis_dollars": 1826.34,
+        "coverage_of_live_entries": 0.34691455696202533,
+        "entries": 877,
+        "flats": 23,
+        "losses": 454,
+        "net_cents": 1964.9999999999995,
+        "net_dollars": 19.649999999999995,
+        "roi_on_entry_notional": 0.010759223364762309,
+        "win_rate_ex_flats": 0.468384074941452,
+        "wins": 400
+      },
+      "combined_live": {
+        "avg_cents_per_entry": 2.153481012658228,
+        "cost_basis_dollars": 5090.84,
+        "coverage_of_live_entries": 1.0,
+        "entries": 2528,
+        "flats": 44,
+        "losses": 1344,
+        "net_cents": 5444.0,
+        "net_dollars": 54.44,
+        "roi_on_entry_notional": 0.010693716557581853,
+        "win_rate_ex_flats": 0.45893719806763283,
+        "wins": 1140
+      },
+      "median_path_net_cents": 351.5,
+      "min_path_net_cents": -512.0,
+      "param_pool_size": 29,
+      "paths": [
+        {
+          "delta_vs_live_cents": -1261.0,
+          "live_stats": {
+            "avg_cents_per_entry": 7.380952380952381,
+            "cost_basis_dollars": 463.23,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 0,
+            "losses": 120,
+            "net_cents": 1860.0,
+            "net_dollars": 18.6,
+            "roi_on_entry_notional": 0.04015283984197915,
+            "win_rate_ex_flats": 0.5238095238095238,
+            "wins": 132
+          },
+          "path_id": 1,
+          "selected_entries": 58,
+          "selected_params": {
+            "max_probability_gap": 0.2,
+            "min_edge_cents": 4.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 17,
+            "score": [
+              3,
+              260.0,
+              275.99999999999994,
+              836.0,
+              10.072289156626505,
+              83
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 10.327586206896552,
+            "cost_basis_dollars": 105.25,
+            "coverage_of_live_entries": 0.23015873015873015,
+            "entries": 58,
+            "flats": 0,
+            "losses": 27,
+            "net_cents": 599.0,
+            "net_dollars": 5.99,
+            "roi_on_entry_notional": 0.05691211401425178,
+            "win_rate_ex_flats": 0.5344827586206896,
+            "wins": 31
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            1
+          ]
+        },
+        {
+          "delta_vs_live_cents": -617.0,
+          "live_stats": {
+            "avg_cents_per_entry": 2.5375494071146245,
+            "cost_basis_dollars": 510.91,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 127,
+            "net_cents": 642.0,
+            "net_dollars": 6.42,
+            "roi_on_entry_notional": 0.012565813939832847,
+            "win_rate_ex_flats": 0.4980237154150198,
+            "wins": 126
+          },
+          "path_id": 2,
+          "selected_entries": 76,
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 4.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 25,
+            "score": [
+              3,
+              146.0,
+              373.99999999999994,
+              935.9999999999999,
+              6.933333333333333,
+              135
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 0.3289473684210525,
+            "cost_basis_dollars": 149.47,
+            "coverage_of_live_entries": 0.30039525691699603,
+            "entries": 76,
+            "flats": 0,
+            "losses": 37,
+            "net_cents": 24.99999999999999,
+            "net_dollars": 0.2499999999999999,
+            "roi_on_entry_notional": 0.0016725764367431584,
+            "win_rate_ex_flats": 0.5131578947368421,
+            "wins": 39
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": -886.0,
+          "live_stats": {
+            "avg_cents_per_entry": 5.781746031746032,
+            "cost_basis_dollars": 460.63,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 122,
+            "net_cents": 1457.0,
+            "net_dollars": 14.57,
+            "roi_on_entry_notional": 0.03163059288365934,
+            "win_rate_ex_flats": 0.5060728744939271,
+            "wins": 125
+          },
+          "path_id": 3,
+          "selected_entries": 66,
+          "selected_params": {
+            "max_probability_gap": 0.1,
+            "min_edge_cents": 2.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 17,
+            "score": [
+              3,
+              79.99999999999997,
+              110.0,
+              391.99999999999994,
+              5.226666666666666,
+              75
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 8.651515151515152,
+            "cost_basis_dollars": 114.42,
+            "coverage_of_live_entries": 0.2619047619047619,
+            "entries": 66,
+            "flats": 0,
+            "losses": 28,
+            "net_cents": 571.0,
+            "net_dollars": 5.71,
+            "roi_on_entry_notional": 0.0499038629610208,
+            "win_rate_ex_flats": 0.5757575757575758,
+            "wins": 38
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -1257.0,
+          "live_stats": {
+            "avg_cents_per_entry": 6.972332015810276,
+            "cost_basis_dollars": 540.03,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 132,
+            "net_cents": 1764.0,
+            "net_dollars": 17.64,
+            "roi_on_entry_notional": 0.0326648519526693,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 4,
+          "selected_entries": 58,
+          "selected_params": {
+            "max_probability_gap": 0.1,
+            "min_edge_cents": 3.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 18,
+            "score": [
+              3,
+              118.0,
+              270.0,
+              700.0,
+              16.666666666666668,
+              42
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 8.741379310344827,
+            "cost_basis_dollars": 122.41,
+            "coverage_of_live_entries": 0.22924901185770752,
+            "entries": 58,
+            "flats": 4,
+            "losses": 26,
+            "net_cents": 506.99999999999994,
+            "net_dollars": 5.069999999999999,
+            "roi_on_entry_notional": 0.04141818478882444,
+            "win_rate_ex_flats": 0.5185185185185185,
+            "wins": 28
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 418.0,
+          "live_stats": {
+            "avg_cents_per_entry": -1.6047430830039529,
+            "cost_basis_dollars": 506.08,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 137,
+            "net_cents": -406.00000000000006,
+            "net_dollars": -4.0600000000000005,
+            "roi_on_entry_notional": -0.008022447043945622,
+            "win_rate_ex_flats": 0.45849802371541504,
+            "wins": 116
+          },
+          "path_id": 5,
+          "selected_entries": 73,
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 4.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 26,
+            "score": [
+              3,
+              218.0,
+              239.0,
+              843.0,
+              5.695945945945946,
+              148
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 0.16438356164383505,
+            "cost_basis_dollars": 151.68,
+            "coverage_of_live_entries": 0.2885375494071146,
+            "entries": 73,
+            "flats": 0,
+            "losses": 35,
+            "net_cents": 11.99999999999996,
+            "net_dollars": 0.1199999999999996,
+            "roi_on_entry_notional": 0.0007911392405063264,
+            "win_rate_ex_flats": 0.5205479452054794,
+            "wins": 38
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": -28.999999999999943,
+          "live_stats": {
+            "avg_cents_per_entry": 1.6230158730158728,
+            "cost_basis_dollars": 455.8,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 132,
+            "net_cents": 408.99999999999994,
+            "net_dollars": 4.09,
+            "roi_on_entry_notional": 0.008973233874506362,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 6,
+          "selected_entries": 66,
+          "selected_params": {
+            "max_probability_gap": 0.2,
+            "min_edge_cents": 4.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 22,
+            "score": [
+              3,
+              317.0,
+              327.99999999999994,
+              1025.0,
+              14.855072463768115,
+              69
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 5.757575757575758,
+            "cost_basis_dollars": 114.99,
+            "coverage_of_live_entries": 0.2619047619047619,
+            "entries": 66,
+            "flats": 2,
+            "losses": 34,
+            "net_cents": 380.0,
+            "net_dollars": 3.8,
+            "roi_on_entry_notional": 0.03304635185668319,
+            "win_rate_ex_flats": 0.46875,
+            "wins": 30
+          },
+          "test_entries": 252,
+          "test_folds": [
+            1,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -286.00000000000006,
+          "live_stats": {
+            "avg_cents_per_entry": 2.8300395256916997,
+            "cost_basis_dollars": 535.2,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 142,
+            "net_cents": 716.0,
+            "net_dollars": 7.16,
+            "roi_on_entry_notional": 0.013378176382660686,
+            "win_rate_ex_flats": 0.4251012145748988,
+            "wins": 105
+          },
+          "path_id": 7,
+          "selected_entries": 124,
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 3.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 27,
+            "score": [
+              3,
+              334.0,
+              360.99999999999994,
+              1061.0,
+              7.168918918918919,
+              148
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 3.4677419354838706,
+            "cost_basis_dollars": 282.26,
+            "coverage_of_live_entries": 0.4901185770750988,
+            "entries": 124,
+            "flats": 4,
+            "losses": 69,
+            "net_cents": 429.99999999999994,
+            "net_dollars": 4.3,
+            "roi_on_entry_notional": 0.015234181251328562,
+            "win_rate_ex_flats": 0.425,
+            "wins": 51
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 438.99999999999994,
+          "live_stats": {
+            "avg_cents_per_entry": -3.197628458498024,
+            "cost_basis_dollars": 503.48,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 5,
+            "losses": 139,
+            "net_cents": -809.0,
+            "net_dollars": -8.09,
+            "roi_on_entry_notional": -0.016068165567649163,
+            "win_rate_ex_flats": 0.43951612903225806,
+            "wins": 109
+          },
+          "path_id": 8,
+          "selected_entries": 81,
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 4.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 25,
+            "score": [
+              3,
+              291.0,
+              419.99999999999994,
+              1315.0,
+              9.46043165467626,
+              139
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": -4.567901234567902,
+            "cost_basis_dollars": 163.63,
+            "coverage_of_live_entries": 0.3201581027667984,
+            "entries": 81,
+            "flats": 3,
+            "losses": 41,
+            "net_cents": -370.00000000000006,
+            "net_dollars": -3.7000000000000006,
+            "roi_on_entry_notional": -0.022611990466295917,
+            "win_rate_ex_flats": 0.47435897435897434,
+            "wins": 37
+          },
+          "test_entries": 253,
+          "test_folds": [
+            2,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -9.999999999999943,
+          "live_stats": {
+            "avg_cents_per_entry": -1.9763779527559058,
+            "cost_basis_dollars": 582.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 254,
+            "flats": 6,
+            "losses": 149,
+            "net_cents": -502.00000000000006,
+            "net_dollars": -5.0200000000000005,
+            "roi_on_entry_notional": -0.008612407356574254,
+            "win_rate_ex_flats": 0.39919354838709675,
+            "wins": 99
+          },
+          "path_id": 9,
+          "selected_entries": 207,
+          "selected_params": {
+            "max_probability_gap": 0.3,
+            "min_edge_cents": 2.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 28,
+            "score": [
+              3,
+              616.0,
+              617.0,
+              1875.0,
+              7.5,
+              250
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": -2.473429951690821,
+            "cost_basis_dollars": 483.62,
+            "coverage_of_live_entries": 0.8149606299212598,
+            "entries": 207,
+            "flats": 6,
+            "losses": 120,
+            "net_cents": -512.0,
+            "net_dollars": -5.12,
+            "roi_on_entry_notional": -0.010586824366237955,
+            "win_rate_ex_flats": 0.40298507462686567,
+            "wins": 81
+          },
+          "test_entries": 254,
+          "test_folds": [
+            2,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 10.0,
+          "live_stats": {
+            "avg_cents_per_entry": 1.2371541501976282,
+            "cost_basis_dollars": 532.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 11,
+            "losses": 144,
+            "net_cents": 312.99999999999994,
+            "net_dollars": 3.1299999999999994,
+            "roi_on_entry_notional": 0.0058768306421329315,
+            "win_rate_ex_flats": 0.4049586776859504,
+            "wins": 98
+          },
+          "path_id": 10,
+          "selected_entries": 68,
+          "selected_params": {
+            "max_probability_gap": 0.12,
+            "min_edge_cents": 3.0
+          },
+          "selection_info": {
+            "considered": 29,
+            "eligible": 25,
+            "score": [
+              3,
+              196.0,
+              356.0,
+              949.0,
+              18.607843137254903,
+              51
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 4.749999999999999,
+            "cost_basis_dollars": 138.61,
+            "coverage_of_live_entries": 0.26877470355731226,
+            "entries": 68,
+            "flats": 4,
+            "losses": 37,
+            "net_cents": 322.99999999999994,
+            "net_dollars": 3.2299999999999995,
+            "roi_on_entry_notional": 0.023302792006348744,
+            "win_rate_ex_flats": 0.421875,
+            "wins": 27
+          },
+          "test_entries": 253,
+          "test_folds": [
+            3,
+            4
+          ]
+        }
+      ],
+      "positive_paths": 8
+    },
+    "depth_decay_fillability": {
+      "beat_live_paths": 6,
+      "combined": {
+        "avg_cents_per_entry": 5.16036036036036,
+        "cost_basis_dollars": 2366.98,
+        "coverage_of_live_entries": 0.43908227848101267,
+        "entries": 1110,
+        "flats": 9,
+        "losses": 602,
+        "net_cents": 5728.0,
+        "net_dollars": 57.28,
+        "roi_on_entry_notional": 0.02419961300898191,
+        "win_rate_ex_flats": 0.45322434150772023,
+        "wins": 499
+      },
+      "combined_live": {
+        "avg_cents_per_entry": 2.153481012658228,
+        "cost_basis_dollars": 5090.84,
+        "coverage_of_live_entries": 1.0,
+        "entries": 2528,
+        "flats": 44,
+        "losses": 1344,
+        "net_cents": 5444.0,
+        "net_dollars": 54.44,
+        "roi_on_entry_notional": 0.010693716557581853,
+        "win_rate_ex_flats": 0.45893719806763283,
+        "wins": 1140
+      },
+      "median_path_net_cents": 757.0,
+      "min_path_net_cents": -329.0,
+      "param_pool_size": 260,
+      "paths": [
+        {
+          "delta_vs_live_cents": -1158.0,
+          "live_stats": {
+            "avg_cents_per_entry": 7.380952380952381,
+            "cost_basis_dollars": 463.23,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 0,
+            "losses": 120,
+            "net_cents": 1860.0,
+            "net_dollars": 18.6,
+            "roi_on_entry_notional": 0.04015283984197915,
+            "win_rate_ex_flats": 0.5238095238095238,
+            "wins": 132
+          },
+          "path_id": 1,
+          "selected_entries": 63,
+          "selected_params": {
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 258,
+            "score": [
+              3,
+              440.0,
+              450.0,
+              1508.0,
+              21.239436619718308,
+              71
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 11.142857142857142,
+            "cost_basis_dollars": 121.84,
+            "coverage_of_live_entries": 0.25,
+            "entries": 63,
+            "flats": 0,
+            "losses": 37,
+            "net_cents": 702.0,
+            "net_dollars": 7.02,
+            "roi_on_entry_notional": 0.057616546290216675,
+            "win_rate_ex_flats": 0.4126984126984127,
+            "wins": 26
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            1
+          ]
+        },
+        {
+          "delta_vs_live_cents": 170.0,
+          "live_stats": {
+            "avg_cents_per_entry": 2.5375494071146245,
+            "cost_basis_dollars": 510.91,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 127,
+            "net_cents": 642.0,
+            "net_dollars": 6.42,
+            "roi_on_entry_notional": 0.012565813939832847,
+            "win_rate_ex_flats": 0.4980237154150198,
+            "wins": 126
+          },
+          "path_id": 2,
+          "selected_entries": 127,
+          "selected_params": {
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 8.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              473.99999999999994,
+              529.0,
+              1551.0,
+              7.602941176470588,
+              204
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 6.393700787401575,
+            "cost_basis_dollars": 241.02,
+            "coverage_of_live_entries": 0.5019762845849802,
+            "entries": 127,
+            "flats": 0,
+            "losses": 60,
+            "net_cents": 812.0,
+            "net_dollars": 8.12,
+            "roi_on_entry_notional": 0.033690150195004556,
+            "win_rate_ex_flats": 0.5275590551181102,
+            "wins": 67
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": -227.0,
+          "live_stats": {
+            "avg_cents_per_entry": 5.781746031746032,
+            "cost_basis_dollars": 460.63,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 122,
+            "net_cents": 1457.0,
+            "net_dollars": 14.57,
+            "roi_on_entry_notional": 0.03163059288365934,
+            "win_rate_ex_flats": 0.5060728744939271,
+            "wins": 125
+          },
+          "path_id": 3,
+          "selected_entries": 73,
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 259,
+            "score": [
+              3,
+              296.0,
+              494.0,
+              1476.0,
+              15.061224489795919,
+              98
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 16.84931506849315,
+            "cost_basis_dollars": 147.26,
+            "coverage_of_live_entries": 0.2896825396825397,
+            "entries": 73,
+            "flats": 0,
+            "losses": 37,
+            "net_cents": 1230.0,
+            "net_dollars": 12.3,
+            "roi_on_entry_notional": 0.08352573679206846,
+            "win_rate_ex_flats": 0.4931506849315068,
+            "wins": 36
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -594.0,
+          "live_stats": {
+            "avg_cents_per_entry": 6.972332015810276,
+            "cost_basis_dollars": 540.03,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 132,
+            "net_cents": 1764.0,
+            "net_dollars": 17.64,
+            "roi_on_entry_notional": 0.0326648519526693,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 4,
+          "selected_entries": 72,
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 8.0,
+            "min_seconds_to_close": 600.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              280.0,
+              322.0,
+              1188.0,
+              13.054945054945055,
+              91
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 16.25,
+            "cost_basis_dollars": 187.66,
+            "coverage_of_live_entries": 0.2845849802371542,
+            "entries": 72,
+            "flats": 0,
+            "losses": 39,
+            "net_cents": 1170.0,
+            "net_dollars": 11.7,
+            "roi_on_entry_notional": 0.06234679739955238,
+            "win_rate_ex_flats": 0.4583333333333333,
+            "wins": 33
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 560.0000000000001,
+          "live_stats": {
+            "avg_cents_per_entry": -1.6047430830039529,
+            "cost_basis_dollars": 506.08,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 137,
+            "net_cents": -406.00000000000006,
+            "net_dollars": -4.0600000000000005,
+            "roi_on_entry_notional": -0.008022447043945622,
+            "win_rate_ex_flats": 0.45849802371541504,
+            "wins": 116
+          },
+          "path_id": 5,
+          "selected_entries": 147,
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 8.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              469.0,
+              492.0,
+              1579.0,
+              6.986725663716814,
+              226
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 1.047619047619048,
+            "cost_basis_dollars": 292.92,
+            "coverage_of_live_entries": 0.5810276679841897,
+            "entries": 147,
+            "flats": 0,
+            "losses": 76,
+            "net_cents": 154.00000000000003,
+            "net_dollars": 1.5400000000000003,
+            "roi_on_entry_notional": 0.005257408166052165,
+            "win_rate_ex_flats": 0.48299319727891155,
+            "wins": 71
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": -738.0,
+          "live_stats": {
+            "avg_cents_per_entry": 1.6230158730158728,
+            "cost_basis_dollars": 455.8,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 132,
+            "net_cents": 408.99999999999994,
+            "net_dollars": 4.09,
+            "roi_on_entry_notional": 0.008973233874506362,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 6,
+          "selected_entries": 79,
+          "selected_params": {
+            "max_ask_cents": 83.0,
+            "max_book_age_ms": 500.0,
+            "min_depth_ratio": 20.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              494.0,
+              532.0,
+              1718.0,
+              15.761467889908257,
+              109
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": -4.1645569620253164,
+            "cost_basis_dollars": 128.18,
+            "coverage_of_live_entries": 0.3134920634920635,
+            "entries": 79,
+            "flats": 0,
+            "losses": 49,
+            "net_cents": -329.0,
+            "net_dollars": -3.29,
+            "roi_on_entry_notional": -0.025667030738024652,
+            "win_rate_ex_flats": 0.379746835443038,
+            "wins": 30
+          },
+          "test_entries": 252,
+          "test_folds": [
+            1,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": 109.99999999999989,
+          "live_stats": {
+            "avg_cents_per_entry": 2.8300395256916997,
+            "cost_basis_dollars": 535.2,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 142,
+            "net_cents": 716.0,
+            "net_dollars": 7.16,
+            "roi_on_entry_notional": 0.013378176382660686,
+            "win_rate_ex_flats": 0.4251012145748988,
+            "wins": 105
+          },
+          "path_id": 7,
+          "selected_entries": 64,
+          "selected_params": {
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              330.0,
+              450.0,
+              1244.0,
+              19.138461538461538,
+              65
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 12.906249999999998,
+            "cost_basis_dollars": 166.36,
+            "coverage_of_live_entries": 0.25296442687747034,
+            "entries": 64,
+            "flats": 0,
+            "losses": 39,
+            "net_cents": 825.9999999999999,
+            "net_dollars": 8.259999999999998,
+            "roi_on_entry_notional": 0.04965135849963932,
+            "win_rate_ex_flats": 0.390625,
+            "wins": 25
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 496.0,
+          "live_stats": {
+            "avg_cents_per_entry": -3.197628458498024,
+            "cost_basis_dollars": 503.48,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 5,
+            "losses": 139,
+            "net_cents": -809.0,
+            "net_dollars": -8.09,
+            "roi_on_entry_notional": -0.016068165567649163,
+            "win_rate_ex_flats": 0.43951612903225806,
+            "wins": 109
+          },
+          "path_id": 8,
+          "selected_entries": 237,
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              712.0,
+              760.0,
+              2556.0,
+              7.9875,
+              320
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": -1.3206751054852321,
+            "cost_basis_dollars": 470.88,
+            "coverage_of_live_entries": 0.9367588932806324,
+            "entries": 237,
+            "flats": 5,
+            "losses": 126,
+            "net_cents": -313.0,
+            "net_dollars": -3.13,
+            "roi_on_entry_notional": -0.006647128780156303,
+            "win_rate_ex_flats": 0.45689655172413796,
+            "wins": 106
+          },
+          "test_entries": 253,
+          "test_folds": [
+            2,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": 920.0,
+          "live_stats": {
+            "avg_cents_per_entry": -1.9763779527559058,
+            "cost_basis_dollars": 582.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 254,
+            "flats": 6,
+            "losses": 149,
+            "net_cents": -502.00000000000006,
+            "net_dollars": -5.0200000000000005,
+            "roi_on_entry_notional": -0.008612407356574254,
+            "win_rate_ex_flats": 0.39919354838709675,
+            "wins": 99
+          },
+          "path_id": 9,
+          "selected_entries": 189,
+          "selected_params": {
+            "max_ask_cents": 90.0,
+            "max_book_age_ms": 1000.0,
+            "min_depth_ratio": 8.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 260,
+            "score": [
+              3,
+              683.0,
+              703.0,
+              2300.0,
+              7.8231292517006805,
+              294
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 2.2116402116402116,
+            "cost_basis_dollars": 454.02,
+            "coverage_of_live_entries": 0.7440944881889764,
+            "entries": 189,
+            "flats": 4,
+            "losses": 104,
+            "net_cents": 418.0,
+            "net_dollars": 4.18,
+            "roi_on_entry_notional": 0.009206642879168319,
+            "win_rate_ex_flats": 0.43783783783783786,
+            "wins": 81
+          },
+          "test_entries": 254,
+          "test_folds": [
+            2,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 745.0,
+          "live_stats": {
+            "avg_cents_per_entry": 1.2371541501976282,
+            "cost_basis_dollars": 532.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 11,
+            "losses": 144,
+            "net_cents": 312.99999999999994,
+            "net_dollars": 3.1299999999999994,
+            "roi_on_entry_notional": 0.0058768306421329315,
+            "win_rate_ex_flats": 0.4049586776859504,
+            "wins": 98
+          },
+          "path_id": 10,
+          "selected_entries": 59,
+          "selected_params": {
+            "max_ask_cents": 81.0,
+            "max_book_age_ms": 750.0,
+            "min_depth_ratio": 3.0,
+            "min_seconds_to_close": 600.0
+          },
+          "selection_info": {
+            "considered": 260,
+            "eligible": 259,
+            "score": [
+              3,
+              264.0,
+              424.0,
+              1184.0,
+              14.8,
+              80
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 17.93220338983051,
+            "cost_basis_dollars": 156.84,
+            "coverage_of_live_entries": 0.233201581027668,
+            "entries": 59,
+            "flats": 0,
+            "losses": 35,
+            "net_cents": 1058.0,
+            "net_dollars": 10.58,
+            "roi_on_entry_notional": 0.06745728130578933,
+            "win_rate_ex_flats": 0.4067796610169492,
+            "wins": 24
+          },
+          "test_entries": 253,
+          "test_folds": [
+            3,
+            4
+          ]
+        }
+      ],
+      "positive_paths": 8
+    },
+    "hybrid_fpt_depth": {
+      "beat_live_paths": 6,
+      "combined": {
+        "avg_cents_per_entry": 5.145593869731801,
+        "cost_basis_dollars": 2671.92,
+        "coverage_of_live_entries": 0.5162183544303798,
+        "entries": 1305,
+        "flats": 26,
+        "losses": 723,
+        "net_cents": 6715.0,
+        "net_dollars": 67.15,
+        "roi_on_entry_notional": 0.025131740471271598,
+        "win_rate_ex_flats": 0.43471462079749806,
+        "wins": 556
+      },
+      "combined_live": {
+        "avg_cents_per_entry": 2.153481012658228,
+        "cost_basis_dollars": 5090.84,
+        "coverage_of_live_entries": 1.0,
+        "entries": 2528,
+        "flats": 44,
+        "losses": 1344,
+        "net_cents": 5444.0,
+        "net_dollars": 54.44,
+        "roi_on_entry_notional": 0.010693716557581853,
+        "win_rate_ex_flats": 0.45893719806763283,
+        "wins": 1140
+      },
+      "median_path_net_cents": 654.5,
+      "min_path_net_cents": 357.0,
+      "param_pool_size": 421,
+      "paths": [
+        {
+          "delta_vs_live_cents": -1208.0,
+          "live_stats": {
+            "avg_cents_per_entry": 7.380952380952381,
+            "cost_basis_dollars": 463.23,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 0,
+            "losses": 120,
+            "net_cents": 1860.0,
+            "net_dollars": 18.6,
+            "roi_on_entry_notional": 0.04015283984197915,
+            "win_rate_ex_flats": 0.5238095238095238,
+            "wins": 132
+          },
+          "path_id": 1,
+          "selected_entries": 82,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 8.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              526.0,
+              614.0,
+              1909.0,
+              17.354545454545455,
+              110
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 7.951219512195122,
+            "cost_basis_dollars": 146.76,
+            "coverage_of_live_entries": 0.3253968253968254,
+            "entries": 82,
+            "flats": 0,
+            "losses": 46,
+            "net_cents": 652.0,
+            "net_dollars": 6.52,
+            "roi_on_entry_notional": 0.044426274189152355,
+            "win_rate_ex_flats": 0.43902439024390244,
+            "wins": 36
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            1
+          ]
+        },
+        {
+          "delta_vs_live_cents": 137.0,
+          "live_stats": {
+            "avg_cents_per_entry": 2.5375494071146245,
+            "cost_basis_dollars": 510.91,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 127,
+            "net_cents": 642.0,
+            "net_dollars": 6.42,
+            "roi_on_entry_notional": 0.012565813939832847,
+            "win_rate_ex_flats": 0.4980237154150198,
+            "wins": 126
+          },
+          "path_id": 2,
+          "selected_entries": 95,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.8,
+            "min_depth_ratio": 8.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              554.0,
+              659.0,
+              1881.0,
+              11.4,
+              165
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 8.2,
+            "cost_basis_dollars": 195.85,
+            "coverage_of_live_entries": 0.37549407114624506,
+            "entries": 95,
+            "flats": 0,
+            "losses": 51,
+            "net_cents": 779.0,
+            "net_dollars": 7.79,
+            "roi_on_entry_notional": 0.039775338269083485,
+            "win_rate_ex_flats": 0.4631578947368421,
+            "wins": 44
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": -546.0,
+          "live_stats": {
+            "avg_cents_per_entry": 5.781746031746032,
+            "cost_basis_dollars": 460.63,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 122,
+            "net_cents": 1457.0,
+            "net_dollars": 14.57,
+            "roi_on_entry_notional": 0.03163059288365934,
+            "win_rate_ex_flats": 0.5060728744939271,
+            "wins": 125
+          },
+          "path_id": 3,
+          "selected_entries": 152,
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.8,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              362.0,
+              397.99999999999994,
+              1162.0,
+              6.213903743315508,
+              187
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 5.993421052631579,
+            "cost_basis_dollars": 264.87,
+            "coverage_of_live_entries": 0.6031746031746031,
+            "entries": 152,
+            "flats": 5,
+            "losses": 82,
+            "net_cents": 911.0,
+            "net_dollars": 9.11,
+            "roi_on_entry_notional": 0.03439423113225355,
+            "win_rate_ex_flats": 0.4421768707482993,
+            "wins": 65
+          },
+          "test_entries": 252,
+          "test_folds": [
+            0,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -620.0,
+          "live_stats": {
+            "avg_cents_per_entry": 6.972332015810276,
+            "cost_basis_dollars": 540.03,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 132,
+            "net_cents": 1764.0,
+            "net_dollars": 17.64,
+            "roi_on_entry_notional": 0.0326648519526693,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 4,
+          "selected_entries": 129,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.8,
+            "min_depth_ratio": 8.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              338.0,
+              348.0,
+              1399.0,
+              8.478787878787879,
+              165
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 8.868217054263566,
+            "cost_basis_dollars": 296.52,
+            "coverage_of_live_entries": 0.5098814229249012,
+            "entries": 129,
+            "flats": 0,
+            "losses": 73,
+            "net_cents": 1144.0,
+            "net_dollars": 11.44,
+            "roi_on_entry_notional": 0.038580871442061244,
+            "win_rate_ex_flats": 0.43410852713178294,
+            "wins": 56
+          },
+          "test_entries": 253,
+          "test_folds": [
+            0,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 1140.0,
+          "live_stats": {
+            "avg_cents_per_entry": -1.6047430830039529,
+            "cost_basis_dollars": 506.08,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 0,
+            "losses": 137,
+            "net_cents": -406.00000000000006,
+            "net_dollars": -4.0600000000000005,
+            "roi_on_entry_notional": -0.008022447043945622,
+            "win_rate_ex_flats": 0.45849802371541504,
+            "wins": 116
+          },
+          "path_id": 5,
+          "selected_entries": 65,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 3.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              485.99999999999994,
+              541.0,
+              1572.0,
+              10.621621621621621,
+              148
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 11.292307692307693,
+            "cost_basis_dollars": 132.08,
+            "coverage_of_live_entries": 0.25691699604743085,
+            "entries": 65,
+            "flats": 0,
+            "losses": 33,
+            "net_cents": 734.0,
+            "net_dollars": 7.34,
+            "roi_on_entry_notional": 0.05557238037552997,
+            "win_rate_ex_flats": 0.49230769230769234,
+            "wins": 32
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            2
+          ]
+        },
+        {
+          "delta_vs_live_cents": 168.00000000000006,
+          "live_stats": {
+            "avg_cents_per_entry": 1.6230158730158728,
+            "cost_basis_dollars": 455.8,
+            "coverage_of_live_entries": 1.0,
+            "entries": 252,
+            "flats": 5,
+            "losses": 132,
+            "net_cents": 408.99999999999994,
+            "net_dollars": 4.09,
+            "roi_on_entry_notional": 0.008973233874506362,
+            "win_rate_ex_flats": 0.46558704453441296,
+            "wins": 115
+          },
+          "path_id": 6,
+          "selected_entries": 143,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              586.0,
+              695.0,
+              2031.0,
+              10.415384615384616,
+              195
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 4.034965034965035,
+            "cost_basis_dollars": 250.57,
+            "coverage_of_live_entries": 0.5674603174603174,
+            "entries": 143,
+            "flats": 3,
+            "losses": 76,
+            "net_cents": 577.0,
+            "net_dollars": 5.77,
+            "roi_on_entry_notional": 0.023027497306141995,
+            "win_rate_ex_flats": 0.45714285714285713,
+            "wins": 64
+          },
+          "test_entries": 252,
+          "test_folds": [
+            1,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": -328.00000000000006,
+          "live_stats": {
+            "avg_cents_per_entry": 2.8300395256916997,
+            "cost_basis_dollars": 535.2,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 6,
+            "losses": 142,
+            "net_cents": 716.0,
+            "net_dollars": 7.16,
+            "roi_on_entry_notional": 0.013378176382660686,
+            "win_rate_ex_flats": 0.4251012145748988,
+            "wins": 105
+          },
+          "path_id": 7,
+          "selected_entries": 143,
+          "selected_params": {
+            "max_abs_d_sigma": 1.1,
+            "max_ask_cents": 83.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              619.0,
+              663.0,
+              1982.0,
+              11.011111111111111,
+              180
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 2.713286713286713,
+            "cost_basis_dollars": 320.22,
+            "coverage_of_live_entries": 0.5652173913043478,
+            "entries": 143,
+            "flats": 2,
+            "losses": 86,
+            "net_cents": 387.99999999999994,
+            "net_dollars": 3.8799999999999994,
+            "roi_on_entry_notional": 0.012116669789519703,
+            "win_rate_ex_flats": 0.3900709219858156,
+            "wins": 55
+          },
+          "test_entries": 253,
+          "test_folds": [
+            1,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 1166.0,
+          "live_stats": {
+            "avg_cents_per_entry": -3.197628458498024,
+            "cost_basis_dollars": 503.48,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 5,
+            "losses": 139,
+            "net_cents": -809.0,
+            "net_dollars": -8.09,
+            "roi_on_entry_notional": -0.016068165567649163,
+            "win_rate_ex_flats": 0.43951612903225806,
+            "wins": 109
+          },
+          "path_id": 8,
+          "selected_entries": 173,
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 5.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              716.0,
+              749.0,
+              2215.0,
+              8.264925373134329,
+              268
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 2.0635838150289016,
+            "cost_basis_dollars": 334.32,
+            "coverage_of_live_entries": 0.6837944664031621,
+            "entries": 173,
+            "flats": 5,
+            "losses": 90,
+            "net_cents": 357.0,
+            "net_dollars": 3.57,
+            "roi_on_entry_notional": 0.010678391959798994,
+            "win_rate_ex_flats": 0.4642857142857143,
+            "wins": 78
+          },
+          "test_entries": 253,
+          "test_folds": [
+            2,
+            3
+          ]
+        },
+        {
+          "delta_vs_live_cents": 1018.0,
+          "live_stats": {
+            "avg_cents_per_entry": -1.9763779527559058,
+            "cost_basis_dollars": 582.88,
+            "coverage_of_live_entries": 1.0,
+            "entries": 254,
+            "flats": 6,
+            "losses": 149,
+            "net_cents": -502.00000000000006,
+            "net_dollars": -5.0200000000000005,
+            "roi_on_entry_notional": -0.008612407356574254,
+            "win_rate_ex_flats": 0.39919354838709675,
+            "wins": 99
+          },
+          "path_id": 9,
+          "selected_entries": 194,
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "max_ask_cents": 85.0,
+            "max_book_age_ms": 1000.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              721.0,
+              770.0,
+              2403.0,
+              8.9,
+              270
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 2.6597938144329896,
+            "cost_basis_dollars": 452.8,
+            "coverage_of_live_entries": 0.7637795275590551,
+            "entries": 194,
+            "flats": 6,
+            "losses": 108,
+            "net_cents": 516.0,
+            "net_dollars": 5.16,
+            "roi_on_entry_notional": 0.011395759717314487,
+            "win_rate_ex_flats": 0.425531914893617,
+            "wins": 80
+          },
+          "test_entries": 254,
+          "test_folds": [
+            2,
+            4
+          ]
+        },
+        {
+          "delta_vs_live_cents": 343.99999999999994,
+          "live_stats": {
+            "avg_cents_per_entry": 1.2371541501976282,
+            "cost_basis_dollars": 532.6,
+            "coverage_of_live_entries": 1.0,
+            "entries": 253,
+            "flats": 11,
+            "losses": 144,
+            "net_cents": 312.99999999999994,
+            "net_dollars": 3.1299999999999994,
+            "roi_on_entry_notional": 0.0058768306421329315,
+            "win_rate_ex_flats": 0.4049586776859504,
+            "wins": 98
+          },
+          "path_id": 10,
+          "selected_entries": 129,
+          "selected_params": {
+            "max_abs_d_sigma": 1.25,
+            "max_ask_cents": 80.0,
+            "max_book_age_ms": 750.0,
+            "min_abs_d_sigma": 0.7,
+            "min_depth_ratio": 3.0,
+            "min_edge_cents": 2.0,
+            "min_seconds_to_close": 120.0
+          },
+          "selection_info": {
+            "considered": 421,
+            "eligible": 421,
+            "score": [
+              3,
+              552.0,
+              673.0,
+              1943.0,
+              13.308219178082192,
+              146
+            ]
+          },
+          "stats": {
+            "avg_cents_per_entry": 5.093023255813953,
+            "cost_basis_dollars": 277.93,
+            "coverage_of_live_entries": 0.5098814229249012,
+            "entries": 129,
+            "flats": 5,
+            "losses": 78,
+            "net_cents": 656.9999999999999,
+            "net_dollars": 6.5699999999999985,
+            "roi_on_entry_notional": 0.023639045802900004,
+            "win_rate_ex_flats": 0.3709677419354839,
+            "wins": 46
+          },
+          "test_entries": 253,
+          "test_folds": [
+            3,
+            4
+          ]
+        }
+      ],
+      "positive_paths": 10
+    }
+  },
+  "feature_audit": {
+    "available": {
+      "abs_d_sigma": {
+        "description": "FPT normalized distance proxy",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "book_age_ms": {
+        "description": "book freshness",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "conformal_score": {
+        "description": "post-outcome conformal score",
+        "rows_present": 630,
+        "share": 0.9968354430379747
+      },
+      "depth_ratio": {
+        "description": "fillability depth/required",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "p28": {
+        "description": "raw p_model/probability",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "pnl_cents": {
+        "description": "realized after-exit PnL",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "probability_gap": {
+        "description": "model disagreement proxy",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "seconds_to_close": {
+        "description": "time-to-close",
+        "rows_present": 632,
+        "share": 1.0
+      },
+      "side_correct": {
+        "description": "settlement side correctness",
+        "rows_present": 630,
+        "share": 0.9968354430379747
+      }
+    },
+    "missing_or_not_native": [
+      "native conformal interval width",
+      "e_process_value at decision time",
+      "ACI threshold q_t at decision time",
+      "Brownian FPT probability",
+      "jump-diffusion FPT probability",
+      "order arrival/cancel/execution counts",
+      "queue position",
+      "depth decay slope per market",
+      "CPCV path ID in live shadow logs"
+    ]
+  },
+  "generated_at_utc": "2026-05-08T00:47:59.739316+00:00",
+  "live_baseline": {
+    "avg_cents_per_entry": 2.153481012658228,
+    "cost_basis_dollars": 1272.71,
+    "coverage_of_live_entries": 1.0,
+    "entries": 632,
+    "flats": 11,
+    "losses": 336,
+    "net_cents": 1361.0,
+    "net_dollars": 13.61,
+    "roi_on_entry_notional": 0.010693716557581853,
+    "win_rate_ex_flats": 0.45893719806763283,
+    "wins": 285
+  },
+  "purpose": "Research-only promotion-gate diagnostics from Truffle arXiv synthesis."
+}

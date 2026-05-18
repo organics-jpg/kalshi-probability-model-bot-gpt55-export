@@ -1,0 +1,12 @@
+{
+  "candidate_family": "hybrid_boundary_entry_stack",
+  "components": [
+    "target_hybrid_veto_warning",
+    "boundary_clock_composite_repair",
+    "boundary_clock_adjusted_edge_floor",
+    "early_no_boundary_decay_repair"
+  ],
+  "coverage_floor": 75.0,
+  "freeze_ts_utc": "2026-05-06T15:37:04.750154+00:00",
+  "physics": "The shared failure mode is false conviction near unresolved boundaries: raw FV clears the ask, but path churn, clock state, or shrink-to-50 says the edge is fragile. The stack removes those rows and repairs coverage with cleaner missed-market rows."
+}

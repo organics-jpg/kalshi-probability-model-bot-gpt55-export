@@ -1,0 +1,170 @@
+{
+  "generated_utc": "20260504_132943Z",
+  "policy": "choose=book_p_side; book_p_side>=0.8; ask<=95; sec_to_close>=120",
+  "reports": {
+    "block_csv": "logs\\edge_research\\book_p80_failure_physics_blocks_latest.csv",
+    "condition_csv": "logs\\edge_research\\book_p80_failure_physics_conditions_latest.csv",
+    "md": "logs\\edge_research\\book_p80_failure_physics_audit_latest.md",
+    "selected_csv": "logs\\edge_research\\book_p80_failure_physics_selected_latest.csv"
+  },
+  "summaries": {
+    "current": {
+      "accuracy": 0.8609271523178808,
+      "accuracy_minus_break_even": 0.005927152317880768,
+      "base_markets": 317,
+      "coverage": 0.9526813880126183,
+      "fee_aware_break_even_accuracy": 0.855,
+      "losses": 42,
+      "mean_ask": 84.12251655629139,
+      "median_ask": 83.0,
+      "median_seconds_to_close": 555.8625,
+      "net_pnl_cents": 179.0,
+      "net_roi_on_cost": 0.006932341892258239,
+      "p75_ask": 86.0,
+      "selected_markets": 302,
+      "wins": 260
+    },
+    "v21": {
+      "accuracy": 0.8854166666666666,
+      "accuracy_minus_break_even": 0.015572916666666714,
+      "base_markets": 221,
+      "coverage": 0.8687782805429864,
+      "fee_aware_break_even_accuracy": 0.8698437499999999,
+      "losses": 22,
+      "mean_ask": 85.76041666666667,
+      "median_ask": 85.0,
+      "median_seconds_to_close": 539.1280895,
+      "net_pnl_cents": 299.0,
+      "net_roi_on_cost": 0.01790311957367822,
+      "p75_ask": 89.0,
+      "selected_markets": 192,
+      "wins": 170
+    }
+  },
+  "top_separations": {
+    "current": [
+      {
+        "feature": "seconds_to_close",
+        "loss_median": 622.8025,
+        "loss_minus_win": 78.47299999999996,
+        "win_median": 544.3295
+      },
+      {
+        "feature": "signed_move_15m",
+        "loss_median": 38.09000000000378,
+        "loss_minus_win": 23.195000000006985,
+        "win_median": 14.894999999996799
+      },
+      {
+        "feature": "signed_move_5m",
+        "loss_median": 45.85000000000582,
+        "loss_minus_win": 20.480000000010477,
+        "win_median": 25.369999999995343
+      },
+      {
+        "feature": "rv_sigma_t_15m",
+        "loss_median": 65.17034159407355,
+        "loss_minus_win": 10.601777899827596,
+        "win_median": 54.56856369424595
+      },
+      {
+        "feature": "margin_dollars",
+        "loss_median": 36.445000000006985,
+        "loss_minus_win": 7.06500000001688,
+        "win_median": 29.379999999990105
+      },
+      {
+        "feature": "rv_sigma_t_30m",
+        "loss_median": 63.32470121958204,
+        "loss_minus_win": 4.106332792159549,
+        "win_median": 59.21836842742249
+      },
+      {
+        "feature": "signed_move_3m",
+        "loss_median": 24.514999999992142,
+        "loss_minus_win": 1.1699999999909778,
+        "win_median": 23.345000000001164
+      },
+      {
+        "feature": "signed_move_30m",
+        "loss_median": 20.154999999998836,
+        "loss_minus_win": 0.5649999999950523,
+        "win_median": 19.590000000003783
+      },
+      {
+        "feature": "margin_per_rv_sigma_15m",
+        "loss_median": 0.5710901192651241,
+        "loss_minus_win": 0.031924791790955975,
+        "win_median": 0.5391653274741681
+      },
+      {
+        "feature": "brownian_p_rv_30m",
+        "loss_median": 0.7089019058661099,
+        "loss_minus_win": 0.027693208607231012,
+        "win_median": 0.6812086972588789
+      }
+    ],
+    "v21": [
+      {
+        "feature": "seconds_to_close",
+        "loss_median": 419.59337949999997,
+        "loss_minus_win": -119.62261500000011,
+        "win_median": 539.2159945000001
+      },
+      {
+        "feature": "signed_move_15m",
+        "loss_median": 43.01499999999942,
+        "loss_minus_win": -14.330000000001746,
+        "win_median": 57.345000000001164
+      },
+      {
+        "feature": "signed_move_5m",
+        "loss_median": 47.13999999999942,
+        "loss_minus_win": -14.034999999996217,
+        "win_median": 61.174999999995634
+      },
+      {
+        "feature": "margin_dollars",
+        "loss_median": 57.19999999999709,
+        "loss_minus_win": -5.280000000006112,
+        "win_median": 62.4800000000032
+      },
+      {
+        "feature": "signed_move_3m",
+        "loss_median": 50.37000000000262,
+        "loss_minus_win": -2.834999999999127,
+        "win_median": 53.205000000001746
+      },
+      {
+        "feature": "rv_sigma_t_30m",
+        "loss_median": 62.058711534287156,
+        "loss_minus_win": -2.6486014918939986,
+        "win_median": 64.70731302618115
+      },
+      {
+        "feature": "rv_sigma_t_15m",
+        "loss_median": 63.21851141384904,
+        "loss_minus_win": 1.2862896713094756,
+        "win_median": 61.93222174253957
+      },
+      {
+        "feature": "signed_move_30m",
+        "loss_median": 52.51000000000204,
+        "loss_minus_win": -1.264999999999418,
+        "win_median": 53.775000000001455
+      },
+      {
+        "feature": "margin_per_rv_sigma_15m",
+        "loss_median": 0.9372771299280601,
+        "loss_minus_win": -0.03455757369818835,
+        "win_median": 0.9718347036262485
+      },
+      {
+        "feature": "brownian_p_rv_30m",
+        "loss_median": 0.8075943551469817,
+        "loss_minus_win": -0.009680305550034407,
+        "win_median": 0.8172746606970162
+      }
+    ]
+  }
+}

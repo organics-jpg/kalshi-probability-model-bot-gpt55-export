@@ -1,0 +1,1055 @@
+{
+  "diagnostics": {
+    "detailed_feature_matches": 632,
+    "feature_event_type_counts": {
+      "plan_built": 632
+    },
+    "feature_index_keys": 1368,
+    "matched_trade_count": 632,
+    "raw_trade_count": 632,
+    "settled_label_rows": 630
+  },
+  "fillability_and_depth_decay": {
+    "book_age_bins": [
+      {
+        "avg_fill_fraction": 0.5482456140350878,
+        "bin": "<100ms",
+        "entries": 114,
+        "fill_any_rate": 0.5526315789473685
+      },
+      {
+        "avg_fill_fraction": 0.5791139240506329,
+        "bin": "100-250ms",
+        "entries": 158,
+        "fill_any_rate": 0.5822784810126582
+      },
+      {
+        "avg_fill_fraction": 0.5954356846473029,
+        "bin": "250-500ms",
+        "entries": 241,
+        "fill_any_rate": 0.5975103734439834
+      },
+      {
+        "avg_fill_fraction": 0.5855855855855856,
+        "bin": "500-750ms",
+        "entries": 222,
+        "fill_any_rate": 0.5855855855855856
+      },
+      {
+        "avg_fill_fraction": 0.5265151515151515,
+        "bin": ">=750ms",
+        "entries": 264,
+        "fill_any_rate": 0.5303030303030303
+      }
+    ],
+    "depth_decay_cross_section": {
+      "intercept": 4.044862941166599,
+      "n": 999,
+      "r2": 0.000882003669979494,
+      "slope": 0.09528779345445805
+    },
+    "depth_decay_market_median_slope": -0.22634343416460573,
+    "depth_decay_market_p25_slope": -2.736282966950576,
+    "depth_decay_market_p75_slope": 2.440511652053103,
+    "depth_decay_market_slope_count": 154,
+    "depth_decay_share_within_dubach_0p55_pm0p20": 0.05844155844155844,
+    "depth_ratio_bins": [
+      {
+        "avg_fill_fraction": 0.3333333333333333,
+        "bin": "<1",
+        "entries": 15,
+        "fill_any_rate": 0.3333333333333333
+      },
+      {
+        "avg_fill_fraction": 0.39375,
+        "bin": "1-3",
+        "entries": 80,
+        "fill_any_rate": 0.4
+      },
+      {
+        "avg_fill_fraction": 0.4793814432989691,
+        "bin": "3-8",
+        "entries": 97,
+        "fill_any_rate": 0.4845360824742268
+      },
+      {
+        "avg_fill_fraction": 0.5132978723404256,
+        "bin": "8-20",
+        "entries": 188,
+        "fill_any_rate": 0.5212765957446809
+      },
+      {
+        "avg_fill_fraction": 0.6252019386106623,
+        "bin": ">=20",
+        "entries": 619,
+        "fill_any_rate": 0.6252019386106623
+      }
+    ],
+    "entry_submit_rows": 999,
+    "filled_any_rows": 569,
+    "idea": "Queue-reactive fillability proxy plus empirical depth-decay slope.",
+    "qr_proxy_mean_filled": 0.48515855165140537,
+    "qr_proxy_mean_zero_fill": 0.3621583254301834,
+    "qr_proxy_rows": 999,
+    "qr_proxy_spearman_vs_fill_any": 0.2010897089868573,
+    "zero_fill_rows": 430
+  },
+  "fpt_and_jump_sanity": {
+    "btc_cache_available": true,
+    "caveat": "Kalshi settles terminal price, so this uses terminal Gaussian probabilities rather than literal barrier hit probability.",
+    "idea": "Brownian terminal and jump-inflated terminal sanity checks.",
+    "jump_parameter_summary": {
+      "median_expected_jumps": 0.13708535986296327,
+      "median_lambda_per_min": 0.013860895019788804
+    },
+    "rows_with_brownian_terminal": 632,
+    "rows_with_jump_terminal": 80,
+    "scores": {
+      "brownian_terminal": {
+        "brier": 0.1712011493130969,
+        "calibration_buckets": [
+          {
+            "avg_p": 0.7307502615508632,
+            "bucket": 1,
+            "hit_rate": 0.7142857142857143,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.805277588782092,
+            "bucket": 2,
+            "hit_rate": 0.7380952380952381,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.8175237481384732,
+            "bucket": 3,
+            "hit_rate": 0.9047619047619048,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.836153866039245,
+            "bucket": 4,
+            "hit_rate": 0.7380952380952381,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.8910786801889368,
+            "bucket": 5,
+            "hit_rate": 0.8174603174603174,
+            "rows": 126
+          }
+        ],
+        "log_loss": 0.5274300971912176,
+        "rows": 630
+      },
+      "jump_adjusted_terminal": {
+        "brier": 0.13221789998950692,
+        "calibration_buckets": [
+          {
+            "avg_p": 0.6747845127381751,
+            "bucket": 1,
+            "hit_rate": 0.875,
+            "rows": 16
+          },
+          {
+            "avg_p": 0.745012432021339,
+            "bucket": 2,
+            "hit_rate": 1.0,
+            "rows": 16
+          },
+          {
+            "avg_p": 0.7664421362132089,
+            "bucket": 3,
+            "hit_rate": 0.875,
+            "rows": 16
+          },
+          {
+            "avg_p": 0.7907501286682823,
+            "bucket": 4,
+            "hit_rate": 0.625,
+            "rows": 16
+          },
+          {
+            "avg_p": 0.8548293782028826,
+            "bucket": 5,
+            "hit_rate": 0.9375,
+            "rows": 16
+          }
+        ],
+        "log_loss": 0.4365559756039802,
+        "rows": 80
+      },
+      "v28_side_probability": {
+        "brier": 0.18137497282581427,
+        "calibration_buckets": [
+          {
+            "avg_p": 0.8529690238095238,
+            "bucket": 1,
+            "hit_rate": 0.7698412698412699,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.8604014444444444,
+            "bucket": 2,
+            "hit_rate": 0.8253968253968254,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.8737552539682539,
+            "bucket": 3,
+            "hit_rate": 0.7777777777777778,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.8947102222222222,
+            "bucket": 4,
+            "hit_rate": 0.746031746031746,
+            "rows": 126
+          },
+          {
+            "avg_p": 0.9374929365079365,
+            "bucket": 5,
+            "hit_rate": 0.7936507936507936,
+            "rows": 126
+          }
+        ],
+        "log_loss": 0.5753235244804452,
+        "rows": 630
+      }
+    }
+  },
+  "generated_at_utc": "2026-05-08T01:14:23.404187+00:00",
+  "imprecise_probability": {
+    "caveat": "This is a practical interval proxy, not the full imprecise-probability scoring-rule implementation.",
+    "high_width": {
+      "avg_cents_per_entry": 2.3555555555555556,
+      "cost_basis_dollars": 635.3,
+      "coverage_of_live_entries": 0.49841772151898733,
+      "entries": 315,
+      "flats": 7,
+      "losses": 176,
+      "net_cents": 742.0,
+      "net_dollars": 7.42,
+      "roi_on_entry_notional": 0.011679521485912168,
+      "win_rate_ex_flats": 0.42857142857142855,
+      "wins": 132
+    },
+    "idea": "Imprecise probability proxy using v22-v28 disagreement as interval width.",
+    "interval_gate_delta_vs_robust_cents": -2350.0,
+    "low_width": {
+      "avg_cents_per_entry": 1.8126984126984123,
+      "cost_basis_dollars": 633.89,
+      "coverage_of_live_entries": 0.49841772151898733,
+      "entries": 315,
+      "flats": 4,
+      "losses": 160,
+      "net_cents": 570.9999999999999,
+      "net_dollars": 5.709999999999999,
+      "roi_on_entry_notional": 0.009007872028269888,
+      "win_rate_ex_flats": 0.4855305466237942,
+      "wins": 151
+    },
+    "mean_interval_score_proxy": 0.10689936230274603,
+    "mean_point_brier": 0.18137497282581427,
+    "robust_hybrid_base": {
+      "avg_cents_per_entry": 11.889952153110048,
+      "cost_basis_dollars": 439.77,
+      "coverage_of_live_entries": 0.33069620253164556,
+      "entries": 209,
+      "flats": 3,
+      "losses": 107,
+      "net_cents": 2485.0,
+      "net_dollars": 24.85,
+      "roi_on_entry_notional": 0.05650681037815222,
+      "win_rate_ex_flats": 0.48058252427184467,
+      "wins": 99
+    },
+    "robust_hybrid_interval_lower_edge_ge_0": {
+      "avg_cents_per_entry": 4.999999999999999,
+      "cost_basis_dollars": 49.84,
+      "coverage_of_live_entries": 0.04272151898734177,
+      "entries": 27,
+      "flats": 0,
+      "losses": 14,
+      "net_cents": 134.99999999999997,
+      "net_dollars": 1.3499999999999996,
+      "roi_on_entry_notional": 0.027086677367576233,
+      "win_rate_ex_flats": 0.48148148148148145,
+      "wins": 13
+    },
+    "rows": 630,
+    "width_pnl_spearman": -0.047066264502629525
+  },
+  "live_baseline": {
+    "avg_cents_per_entry": 2.153481012658228,
+    "cost_basis_dollars": 1272.71,
+    "coverage_of_live_entries": 1.0,
+    "entries": 632,
+    "flats": 11,
+    "losses": 336,
+    "net_cents": 1361.0,
+    "net_dollars": 13.61,
+    "roi_on_entry_notional": 0.010693716557581853,
+    "win_rate_ex_flats": 0.45893719806763283,
+    "wins": 285
+  },
+  "online_model_selection": {
+    "caveat": "Uses retrospective full-information shadow labels; it is a design for forward shadow logging, not live proof.",
+    "idea": "Online model-selection proxy using only trailing candidate shadow outcomes before each row.",
+    "variants": [
+      {
+        "choice_counts": {
+          "brownian_fpt_current": 93,
+          "consensus_gap_robust_rank1": 62,
+          "depth_decay_current": 85,
+          "hybrid_fpt_depth_robust_rank1": 66
+        },
+        "config": {
+          "min_history": 15,
+          "min_mean_cents": 0.0,
+          "warmup": 80,
+          "window": 60
+        },
+        "name": "oms_warm80_win60_hist15_mean_gt_0",
+        "negative_score_blocks": 2,
+        "no_history_blocks": 0,
+        "selected": {
+          "avg_cents_per_entry": 8.049019607843137,
+          "cost_basis_dollars": 635.99,
+          "coverage_of_live_entries": 0.48417721518987344,
+          "entries": 306,
+          "flats": 9,
+          "losses": 157,
+          "net_cents": 2463.0,
+          "net_dollars": 24.63,
+          "roi_on_entry_notional": 0.03872702400981147,
+          "win_rate_ex_flats": 0.4713804713804714,
+          "wins": 140
+        },
+        "switches": 142
+      },
+      {
+        "choice_counts": {
+          "brownian_fpt_current": 93,
+          "consensus_gap_robust_rank1": 60,
+          "depth_decay_current": 86,
+          "hybrid_fpt_depth_robust_rank1": 58
+        },
+        "config": {
+          "min_history": 20,
+          "min_mean_cents": 0.0,
+          "warmup": 100,
+          "window": 90
+        },
+        "name": "oms_warm100_win90_hist20_mean_gt_0",
+        "negative_score_blocks": 0,
+        "no_history_blocks": 1,
+        "selected": {
+          "avg_cents_per_entry": 8.003367003367003,
+          "cost_basis_dollars": 617.51,
+          "coverage_of_live_entries": 0.4699367088607595,
+          "entries": 297,
+          "flats": 9,
+          "losses": 153,
+          "net_cents": 2377.0,
+          "net_dollars": 23.77,
+          "roi_on_entry_notional": 0.038493303752165954,
+          "win_rate_ex_flats": 0.46875,
+          "wins": 135
+        },
+        "switches": 141
+      },
+      {
+        "choice_counts": {
+          "brownian_fpt_current": 96,
+          "consensus_gap_robust_rank1": 63,
+          "depth_decay_current": 90,
+          "hybrid_fpt_depth_robust_rank1": 36
+        },
+        "config": {
+          "min_history": 25,
+          "min_mean_cents": 1.0,
+          "warmup": 120,
+          "window": 120
+        },
+        "name": "oms_warm120_win120_hist25_mean_gt_1",
+        "negative_score_blocks": 0,
+        "no_history_blocks": 1,
+        "selected": {
+          "avg_cents_per_entry": 7.659649122807018,
+          "cost_basis_dollars": 597.05,
+          "coverage_of_live_entries": 0.4509493670886076,
+          "entries": 285,
+          "flats": 9,
+          "losses": 148,
+          "net_cents": 2183.0,
+          "net_dollars": 21.83,
+          "roi_on_entry_notional": 0.03656310191776233,
+          "win_rate_ex_flats": 0.463768115942029,
+          "wins": 128
+        },
+        "switches": 124
+      }
+    ]
+  },
+  "purpose": "Research-only probes for remaining Truffle/arXiv strategy ideas.",
+  "regime_monitors": {
+    "caveat": "These are lightweight diagnostics; reset thresholds need forward registration before use.",
+    "exchangeability_power_martingale": {
+      "crossing_count": 0,
+      "crossings": [],
+      "epsilon": 0.5,
+      "max_capital": 1.14564392373896,
+      "threshold": 10.0,
+      "trace_tail": [
+        {
+          "capital": 2.3160323136154776e-54,
+          "idx": 621,
+          "p_value": 0.8641975308641975,
+          "score": 0.09508399999999995
+        },
+        {
+          "capital": 1.2456846366192654e-54,
+          "idx": 622,
+          "p_value": 0.8641975308641975,
+          "score": 0.09508399999999995
+        },
+        {
+          "capital": 8.754446512245236e-55,
+          "idx": 623,
+          "p_value": 0.5061728395061729,
+          "score": 0.14071699999999998
+        },
+        {
+          "capital": 6.078781907565262e-55,
+          "idx": 624,
+          "p_value": 0.5185185185185185,
+          "score": 0.14071699999999998
+        },
+        {
+          "capital": 4.497055153442357e-55,
+          "idx": 625,
+          "p_value": 0.4567901234567901,
+          "score": 0.14338799999999996
+        },
+        {
+          "capital": 3.282834050526773e-55,
+          "idx": 626,
+          "p_value": 0.4691358024691358,
+          "score": 0.14338799999999996
+        },
+        {
+          "capital": 1.9919576388193183e-55,
+          "idx": 627,
+          "p_value": 0.6790123456790124,
+          "score": 0.13295800000000002
+        },
+        {
+          "capital": 1.20867980951213e-55,
+          "idx": 628,
+          "p_value": 0.6790123456790124,
+          "score": 0.13295800000000002
+        },
+        {
+          "capital": 8.70946498973978e-56,
+          "idx": 629,
+          "p_value": 0.48148148148148145,
+          "score": 0.14269500000000002
+        },
+        {
+          "capital": 6.275837472466829e-56,
+          "idx": 630,
+          "p_value": 0.48148148148148145,
+          "score": 0.14269500000000002
+        }
+      ],
+      "window": 80
+    },
+    "hybrid_trigger_impact": {
+      "exchangeability": {
+        "horizon_rows": 40,
+        "impacts": [],
+        "median_after_net_cents": null,
+        "triggered_windows": 0
+      },
+      "watch": {
+        "horizon_rows": 40,
+        "impacts": [
+          {
+            "after_entries": 11,
+            "after_net_cents": 84.0,
+            "before_entries": 21,
+            "before_net_cents": 188.0,
+            "idx": 50
+          },
+          {
+            "after_entries": 8,
+            "after_net_cents": -108.0,
+            "before_entries": 22,
+            "before_net_cents": 216.0,
+            "idx": 59
+          },
+          {
+            "after_entries": 9,
+            "after_net_cents": 110.0,
+            "before_entries": 10,
+            "before_net_cents": 36.0,
+            "idx": 88
+          },
+          {
+            "after_entries": 9,
+            "after_net_cents": 154.0,
+            "before_entries": 11,
+            "before_net_cents": 84.0,
+            "idx": 92
+          },
+          {
+            "after_entries": 9,
+            "after_net_cents": 154.0,
+            "before_entries": 9,
+            "before_net_cents": 126.0,
+            "idx": 96
+          },
+          {
+            "after_entries": 11,
+            "after_net_cents": 236.0,
+            "before_entries": 10,
+            "before_net_cents": 7.999999999999998,
+            "idx": 107
+          },
+          {
+            "after_entries": 10,
+            "after_net_cents": 248.0,
+            "before_entries": 11,
+            "before_net_cents": -4.000000000000002,
+            "idx": 112
+          },
+          {
+            "after_entries": 11,
+            "after_net_cents": 108.0,
+            "before_entries": 9,
+            "before_net_cents": 110.0,
+            "idx": 127
+          },
+          {
+            "after_entries": 11,
+            "after_net_cents": 24.0,
+            "before_entries": 9,
+            "before_net_cents": 154.0,
+            "idx": 136
+          },
+          {
+            "after_entries": 10,
+            "after_net_cents": 62.0,
+            "before_entries": 9,
+            "before_net_cents": 284.0,
+            "idx": 138
+          },
+          {
+            "after_entries": 10,
+            "after_net_cents": 120.0,
+            "before_entries": 10,
+            "before_net_cents": 282.0,
+            "idx": 140
+          },
+          {
+            "after_entries": 15,
+            "after_net_cents": 166.0,
+            "before_entries": 11,
+            "before_net_cents": 24.0,
+            "idx": 172
+          },
+          {
+            "after_entries": 7,
+            "after_net_cents": 40.0,
+            "before_entries": 14,
+            "before_net_cents": -84.0,
+            "idx": 252
+          },
+          {
+            "after_entries": 12,
+            "after_net_cents": 220.0,
+            "before_entries": 8,
+            "before_net_cents": -36.0,
+            "idx": 289
+          },
+          {
+            "after_entries": 8,
+            "after_net_cents": 120.00000000000001,
+            "before_entries": 8,
+            "before_net_cents": 416.0,
+            "idx": 358
+          },
+          {
+            "after_entries": 18,
+            "after_net_cents": 113.0,
+            "before_entries": 10,
+            "before_net_cents": 354.0,
+            "idx": 385
+          },
+          {
+            "after_entries": 16,
+            "after_net_cents": 206.0,
+            "before_entries": 8,
+            "before_net_cents": 464.0,
+            "idx": 473
+          },
+          {
+            "after_entries": 17,
+            "after_net_cents": -20.0,
+            "before_entries": 16,
+            "before_net_cents": 422.0,
+            "idx": 494
+          },
+          {
+            "after_entries": 16,
+            "after_net_cents": -152.0,
+            "before_entries": 15,
+            "before_net_cents": 374.0,
+            "idx": 504
+          },
+          {
+            "after_entries": 23,
+            "after_net_cents": 378.0,
+            "before_entries": 17,
+            "before_net_cents": -88.0,
+            "idx": 552
+          }
+        ],
+        "median_after_net_cents": 120.0,
+        "triggered_windows": 21
+      }
+    },
+    "idea": "Exchangeability and WATCH-like monitors over conformal errors.",
+    "watch_ewma_miss_monitor": {
+      "ewma_lambda": 0.12,
+      "target_miss_rate": 0.1,
+      "threshold": 0.24,
+      "trace_tail": [
+        {
+          "ewma_miss": 0.03345498013626834,
+          "idx": 623,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.02944038251991614,
+          "idx": 624,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.025907536617526202,
+          "idx": 625,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.022798632223423057,
+          "idx": 626,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.02006279635661229,
+          "idx": 627,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.017655260793818815,
+          "idx": 628,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.015536629498560557,
+          "idx": 629,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.01367223395873329,
+          "idx": 630,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.012031565883685294,
+          "idx": 631,
+          "miss": 0.0
+        },
+        {
+          "ewma_miss": 0.01058777797764306,
+          "idx": 632,
+          "miss": 0.0
+        }
+      ],
+      "trigger_count": 21,
+      "triggers": [
+        {
+          "ewma_miss": 0.2915121735997854,
+          "idx": 50
+        },
+        {
+          "ewma_miss": 0.30040398115955014,
+          "idx": 59
+        },
+        {
+          "ewma_miss": 0.30515484146068206,
+          "idx": 88
+        },
+        {
+          "ewma_miss": 0.261746176,
+          "idx": 92
+        },
+        {
+          "ewma_miss": 0.285569536,
+          "idx": 96
+        },
+        {
+          "ewma_miss": 0.24125603302595564,
+          "idx": 107
+        },
+        {
+          "ewma_miss": 0.26570119168,
+          "idx": 112
+        },
+        {
+          "ewma_miss": 0.2655150969544017,
+          "idx": 127
+        },
+        {
+          "ewma_miss": 0.29361690974727706,
+          "idx": 136
+        },
+        {
+          "ewma_miss": 0.30304,
+          "idx": 138
+        },
+        {
+          "ewma_miss": 0.30304,
+          "idx": 140
+        },
+        {
+          "ewma_miss": 0.3105185969491988,
+          "idx": 172
+        },
+        {
+          "ewma_miss": 0.27028468448798154,
+          "idx": 252
+        },
+        {
+          "ewma_miss": 0.24772849075045347,
+          "idx": 289
+        },
+        {
+          "ewma_miss": 0.32113296972272376,
+          "idx": 358
+        },
+        {
+          "ewma_miss": 0.3216978020946204,
+          "idx": 385
+        },
+        {
+          "ewma_miss": 0.3266581926582688,
+          "idx": 473
+        },
+        {
+          "ewma_miss": 0.2805656090401607,
+          "idx": 494
+        },
+        {
+          "ewma_miss": 0.25345009760094017,
+          "idx": 504
+        },
+        {
+          "ewma_miss": 0.24451932016337571,
+          "idx": 552
+        },
+        {
+          "ewma_miss": 0.3208238897086583,
+          "idx": 593
+        }
+      ]
+    }
+  },
+  "scrc": {
+    "caveat": "This is a prequential proxy, not a theorem-valid S-CRC implementation.",
+    "idea": "Selective conformal risk-control proxy over the robust hybrid candidate.",
+    "variants": [
+      {
+        "accepted": {
+          "avg_cents_per_entry": 11.316455696202532,
+          "cost_basis_dollars": 168.72,
+          "coverage_of_live_entries": 0.125,
+          "entries": 79,
+          "flats": 1,
+          "losses": 36,
+          "net_cents": 894.0,
+          "net_dollars": 8.94,
+          "roi_on_entry_notional": 0.05298719772403983,
+          "win_rate_ex_flats": 0.5384615384615384,
+          "wins": 42
+        },
+        "accepted_indices": [
+          85,
+          90,
+          97,
+          101,
+          102,
+          103,
+          104,
+          110,
+          122,
+          125,
+          131,
+          137,
+          139,
+          140,
+          147,
+          184,
+          186,
+          203,
+          206,
+          214
+        ],
+        "accepted_share_of_base": 0.37799043062200954,
+        "base": {
+          "avg_cents_per_entry": 11.889952153110048,
+          "cost_basis_dollars": 439.77,
+          "coverage_of_live_entries": 0.33069620253164556,
+          "entries": 209,
+          "flats": 3,
+          "losses": 107,
+          "net_cents": 2485.0,
+          "net_dollars": 24.85,
+          "roi_on_entry_notional": 0.05650681037815222,
+          "win_rate_ex_flats": 0.48058252427184467,
+          "wins": 99
+        },
+        "config": {
+          "max_recent_loss_rate": null,
+          "min_lower_edge_cents": -100.0,
+          "recent_window": 80,
+          "warmup": 80
+        },
+        "delta_vs_base_cents": -1591.0,
+        "lower_edge_block_count": 0,
+        "name": "singleton_only_no_lower_edge",
+        "rejected_base": {
+          "avg_cents_per_entry": 12.238461538461538,
+          "cost_basis_dollars": 271.05,
+          "coverage_of_live_entries": 0.20569620253164558,
+          "entries": 130,
+          "flats": 2,
+          "losses": 71,
+          "net_cents": 1591.0,
+          "net_dollars": 15.91,
+          "roi_on_entry_notional": 0.058697657258808336,
+          "win_rate_ex_flats": 0.4453125,
+          "wins": 57
+        },
+        "risk_block_count": 0,
+        "singleton_base_rows": 111
+      },
+      {
+        "accepted": {
+          "avg_cents_per_entry": -7.2666666666666675,
+          "cost_basis_dollars": 28.54,
+          "coverage_of_live_entries": 0.023734177215189875,
+          "entries": 15,
+          "flats": 0,
+          "losses": 10,
+          "net_cents": -109.00000000000001,
+          "net_dollars": -1.09,
+          "roi_on_entry_notional": -0.03819201121233357,
+          "win_rate_ex_flats": 0.3333333333333333,
+          "wins": 5
+        },
+        "accepted_indices": [
+          101,
+          206,
+          381,
+          382,
+          411,
+          412,
+          421,
+          422,
+          429,
+          430,
+          512,
+          513,
+          587,
+          588,
+          593
+        ],
+        "accepted_share_of_base": 0.07177033492822966,
+        "base": {
+          "avg_cents_per_entry": 11.889952153110048,
+          "cost_basis_dollars": 439.77,
+          "coverage_of_live_entries": 0.33069620253164556,
+          "entries": 209,
+          "flats": 3,
+          "losses": 107,
+          "net_cents": 2485.0,
+          "net_dollars": 24.85,
+          "roi_on_entry_notional": 0.05650681037815222,
+          "win_rate_ex_flats": 0.48058252427184467,
+          "wins": 99
+        },
+        "config": {
+          "max_recent_loss_rate": null,
+          "min_lower_edge_cents": 0.0,
+          "recent_window": 80,
+          "warmup": 80
+        },
+        "delta_vs_base_cents": -2594.0,
+        "lower_edge_block_count": 92,
+        "name": "singleton_gap_lower_edge_ge_0",
+        "rejected_base": {
+          "avg_cents_per_entry": 13.371134020618557,
+          "cost_basis_dollars": 411.23,
+          "coverage_of_live_entries": 0.3069620253164557,
+          "entries": 194,
+          "flats": 3,
+          "losses": 97,
+          "net_cents": 2594.0,
+          "net_dollars": 25.94,
+          "roi_on_entry_notional": 0.0630790555163777,
+          "win_rate_ex_flats": 0.49214659685863876,
+          "wins": 94
+        },
+        "risk_block_count": 0,
+        "singleton_base_rows": 111
+      },
+      {
+        "accepted": {
+          "avg_cents_per_entry": -7.2666666666666675,
+          "cost_basis_dollars": 28.54,
+          "coverage_of_live_entries": 0.023734177215189875,
+          "entries": 15,
+          "flats": 0,
+          "losses": 10,
+          "net_cents": -109.00000000000001,
+          "net_dollars": -1.09,
+          "roi_on_entry_notional": -0.03819201121233357,
+          "win_rate_ex_flats": 0.3333333333333333,
+          "wins": 5
+        },
+        "accepted_indices": [
+          101,
+          206,
+          381,
+          382,
+          411,
+          412,
+          421,
+          422,
+          429,
+          430,
+          512,
+          513,
+          587,
+          588,
+          593
+        ],
+        "accepted_share_of_base": 0.07177033492822966,
+        "base": {
+          "avg_cents_per_entry": 11.889952153110048,
+          "cost_basis_dollars": 439.77,
+          "coverage_of_live_entries": 0.33069620253164556,
+          "entries": 209,
+          "flats": 3,
+          "losses": 107,
+          "net_cents": 2485.0,
+          "net_dollars": 24.85,
+          "roi_on_entry_notional": 0.05650681037815222,
+          "win_rate_ex_flats": 0.48058252427184467,
+          "wins": 99
+        },
+        "config": {
+          "max_recent_loss_rate": 0.52,
+          "min_lower_edge_cents": 0.0,
+          "recent_window": 80,
+          "warmup": 80
+        },
+        "delta_vs_base_cents": -2594.0,
+        "lower_edge_block_count": 92,
+        "name": "singleton_gap_lower_edge_ge_0_lossrate_le_52pct",
+        "rejected_base": {
+          "avg_cents_per_entry": 13.371134020618557,
+          "cost_basis_dollars": 411.23,
+          "coverage_of_live_entries": 0.3069620253164557,
+          "entries": 194,
+          "flats": 3,
+          "losses": 97,
+          "net_cents": 2594.0,
+          "net_dollars": 25.94,
+          "roi_on_entry_notional": 0.0630790555163777,
+          "win_rate_ex_flats": 0.49214659685863876,
+          "wins": 94
+        },
+        "risk_block_count": 0,
+        "singleton_base_rows": 111
+      },
+      {
+        "accepted": {
+          "avg_cents_per_entry": -15.0,
+          "cost_basis_dollars": 21.4,
+          "coverage_of_live_entries": 0.015822784810126583,
+          "entries": 10,
+          "flats": 0,
+          "losses": 8,
+          "net_cents": -150.0,
+          "net_dollars": -1.5,
+          "roi_on_entry_notional": -0.07009345794392524,
+          "win_rate_ex_flats": 0.2,
+          "wins": 2
+        },
+        "accepted_indices": [
+          101,
+          411,
+          412,
+          421,
+          422,
+          512,
+          513,
+          587,
+          588,
+          593
+        ],
+        "accepted_share_of_base": 0.04784688995215311,
+        "base": {
+          "avg_cents_per_entry": 11.889952153110048,
+          "cost_basis_dollars": 439.77,
+          "coverage_of_live_entries": 0.33069620253164556,
+          "entries": 209,
+          "flats": 3,
+          "losses": 107,
+          "net_cents": 2485.0,
+          "net_dollars": 24.85,
+          "roi_on_entry_notional": 0.05650681037815222,
+          "win_rate_ex_flats": 0.48058252427184467,
+          "wins": 99
+        },
+        "config": {
+          "max_recent_loss_rate": 0.52,
+          "min_lower_edge_cents": 2.0,
+          "recent_window": 80,
+          "warmup": 80
+        },
+        "delta_vs_base_cents": -2635.0,
+        "lower_edge_block_count": 97,
+        "name": "singleton_gap_lower_edge_ge_2_lossrate_le_52pct",
+        "rejected_base": {
+          "avg_cents_per_entry": 13.241206030150753,
+          "cost_basis_dollars": 418.37,
+          "coverage_of_live_entries": 0.314873417721519,
+          "entries": 199,
+          "flats": 3,
+          "losses": 99,
+          "net_cents": 2635.0,
+          "net_dollars": 26.35,
+          "roi_on_entry_notional": 0.06298252742787486,
+          "win_rate_ex_flats": 0.49489795918367346,
+          "wins": 97
+        },
+        "risk_block_count": 0,
+        "singleton_base_rows": 111
+      }
+    ]
+  }
+}

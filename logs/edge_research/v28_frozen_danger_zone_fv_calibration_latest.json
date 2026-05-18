@@ -1,0 +1,66 @@
+{
+  "best_overlay": "danger_to_book",
+  "danger_rows": 8,
+  "freeze": {
+    "danger_rule": "raw-book gap > 0.30, or same-side reentry raw-book gap > 0.15",
+    "entry_surface": "actual_v28_approved_entries_only",
+    "freeze_ts_utc": "2026-05-06T03:14:35.467881+00:00",
+    "overlays": [
+      "raw_probability",
+      "book_probability",
+      "danger_to_book"
+    ]
+  },
+  "future_markets": 84,
+  "future_rows": 142,
+  "interpretation": [
+    "Frozen danger-zone FV best overlay is danger_to_book with Brier/logloss deltas -0.004051658561887328/-0.05274815488405854.",
+    "Future rows/danger rows: 142/8."
+  ],
+  "ranked": [
+    {
+      "avg_brier": 0.10283595128247183,
+      "avg_logloss": 0.3587178923606507,
+      "avg_p": 0.8669374577464789,
+      "blockers": [],
+      "brier_delta_vs_raw": -0.004051658561887328,
+      "danger_rows": 8,
+      "logloss_delta_vs_raw": -0.05274815488405854,
+      "losses": 17,
+      "overlay": "danger_to_book",
+      "rows": 142,
+      "win_rate": 0.8802816901408451,
+      "wins": 125
+    },
+    {
+      "avg_brier": 0.10688760984435916,
+      "avg_logloss": 0.41146604724470925,
+      "avg_p": 0.8844793169014085,
+      "blockers": [],
+      "brier_delta_vs_raw": 0.0,
+      "danger_rows": 8,
+      "logloss_delta_vs_raw": 0.0,
+      "losses": 17,
+      "overlay": "raw_probability",
+      "rows": 142,
+      "win_rate": 0.8802816901408451,
+      "wins": 125
+    },
+    {
+      "avg_brier": 0.1118838028169014,
+      "avg_logloss": 0.3853010009541165,
+      "avg_p": 0.7811971830985917,
+      "blockers": [
+        "brier_not_better_than_raw"
+      ],
+      "brier_delta_vs_raw": 0.004996192972542238,
+      "danger_rows": 8,
+      "logloss_delta_vs_raw": -0.02616504629059274,
+      "losses": 17,
+      "overlay": "book_probability",
+      "rows": 142,
+      "win_rate": 0.8802816901408451,
+      "wins": 125
+    }
+  ]
+}

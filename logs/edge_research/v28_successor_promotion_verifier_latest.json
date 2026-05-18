@@ -1,0 +1,1880 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "v28_raw",
+      "failed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "forward_evidence_scored_and_promotable",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28_raw",
+          "gate": "candidate_is_not_baseline",
+          "passed": false
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.15820989 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.47502182 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.23950671 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.23697039 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=328.00000000 shadow_expected_ev_cents=457.84290000",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=baseline_v28_raw model_hash=92cd09ac8c08636c3053fd48 allowed_for_forward_collection=False diagnostic_promotion_status=baseline_not_candidate",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": false
+        }
+      ],
+      "model_hash": "92cd09ac8c08636c3053fd48",
+      "model_track": "baseline",
+      "model_type": "baseline_v28_raw",
+      "passed_gates": [
+        "holdout_coverage",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_logistic_calibration_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_logistic_calibration_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.18540583 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.55600000 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.24669493 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.24267097 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=-193.00000000 shadow_expected_ev_cents=182.84758667",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_logistic_calibration_v001', 'delta_brier_candidate_minus_v28': 0.036523314868374346, 'delta_logloss_candidate_minus_v28': 0.10546835247237224, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.027230451817453677, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=regularized_logistic model_hash=7d371feef5f09d24d2b83d90 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "7d371feef5f09d24d2b83d90",
+      "model_track": "pure_physics",
+      "model_type": "regularized_logistic",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_logistic_boundary_physics_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_logistic_boundary_physics_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.18787532 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.56192761 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.24123810 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.24123414 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=45.00000000 shadow_expected_ev_cents=196.59438357",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_logistic_boundary_physics_v001', 'delta_brier_candidate_minus_v28': 0.3424322391231054, 'delta_logloss_candidate_minus_v28': 1.90683520054116, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.26328615430888, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=regularized_logistic model_hash=71c9c323a2b22c1cda078553 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "71c9c323a2b22c1cda078553",
+      "model_track": "pure_physics",
+      "model_type": "regularized_logistic",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_logistic_book_reliability_diag_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.18662745 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.56050555 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.24320112 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.24362562 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=-142.00000000 shadow_expected_ev_cents=448.45303524",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_logistic_book_reliability_diag_v001', 'delta_brier_candidate_minus_v28': 0.23846525589376374, 'delta_logloss_candidate_minus_v28': 0.7818658630244664, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.143062724447518, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=regularized_logistic model_hash=4fd4aac68789e9c885f46767 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "4fd4aac68789e9c885f46767",
+      "model_track": "book_aware_diagnostic",
+      "model_type": "regularized_logistic",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_monotonic_tabular_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_monotonic_tabular_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.16468951 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.49069237 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.24477283 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.24676250 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=94.00000000 shadow_expected_ev_cents=515.84433674",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_monotonic_tabular_v001', 'delta_brier_candidate_minus_v28': 0.005656282970433163, 'delta_logloss_candidate_minus_v28': 0.027749630831097438, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.001167911101211061, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=be73833bdead411c157e790e allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "be73833bdead411c157e790e",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_blend_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_blend_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.16468951 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.49069237 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.24477283 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.24676250 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=94.00000000 shadow_expected_ev_cents=515.84433674",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_blend_v001', 'delta_brier_candidate_minus_v28': 0.0024051648427151073, 'delta_logloss_candidate_minus_v28': 0.0067245947683555185, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 154, 'near_boundary_delta_brier_candidate_minus_v28': 0.0018924878873253503, 'near_boundary_rows': 1156, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1760, 'rows_per_market': 11.428571428571429, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=631a5c49f164f77440c3381c allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "631a5c49f164f77440c3381c",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_light_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_light_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.16007210 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.47949743 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.24111896 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.23995263 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=96.00000000 shadow_expected_ev_cents=466.84889257",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_light_v001', 'delta_brier_candidate_minus_v28': 0.0005869509521295724, 'delta_logloss_candidate_minus_v28': 0.0016079826612204196, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 152, 'near_boundary_delta_brier_candidate_minus_v28': 0.00047868816614579646, 'near_boundary_rows': 1150, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1754, 'rows_per_market': 11.539473684210526, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=4b1b6170f9698bf3786aa5d7 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "4b1b6170f9698bf3786aa5d7",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_time_safe_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.15869814 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.47608821 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.23999761 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.23782853 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=298.00000000 shadow_expected_ev_cents=461.01772364",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_time_safe_v001', 'delta_brier_candidate_minus_v28': 6.910580132671318e-05, 'delta_logloss_candidate_minus_v28': -4.468988451650224e-05, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 151, 'near_boundary_delta_brier_candidate_minus_v28': 9.814580373065929e-05, 'near_boundary_rows': 1148, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1752, 'rows_per_market': 11.602649006622517, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=8dfbc48a962472ac6230eede allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "8dfbc48a962472ac6230eede",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_micro_time_safe_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.15835472 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.47533780 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.23965286 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.23722549 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": false
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=328.00000000 shadow_expected_ev_cents=458.44384582",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_micro_time_safe_v001', 'delta_brier_candidate_minus_v28': 2.1972555713956066e-05, 'delta_logloss_candidate_minus_v28': -2.6895646578595223e-05, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 117, 'near_boundary_delta_brier_candidate_minus_v28': 3.438242945441594e-05, 'near_boundary_rows': 1046, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1620, 'rows_per_market': 13.846153846153847, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=5229f8966bde26448e9c4403 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "5229f8966bde26448e9c4403",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+      "failed_gates": [
+        "holdout_logloss_better_than_v28"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_late_dsigma_residual_tilt_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=159 markets=36 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.15820989 baseline=0.15820989",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.47502182 baseline=0.47502182",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_v28_40_60 candidate=0.23950671 baseline=0.23950671 rows=51",
+          "gate": "boundary_brier_not_degraded",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.23697039 baseline=0.23697039 rows=75",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=328.00000000 shadow_expected_ev_cents=457.84290000",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_late_dsigma_residual_tilt_v001', 'delta_brier_candidate_minus_v28': -0.0009617142950745367, 'delta_logloss_candidate_minus_v28': -0.0038030676445250378, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': [], 'forward_evidence_promotable': True, 'market_shortfall': 0, 'markets': 111, 'near_boundary_delta_brier_candidate_minus_v28': -0.001071788171632393, 'near_boundary_rows': 984, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1558, 'rows_per_market': 14.036036036036036, 'status': 'pass'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": true
+        },
+        {
+          "evidence": "model_type=fixed_logit_residual model_hash=6c24b9d069769194cd6bf7fd allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "6c24b9d069769194cd6bf7fd",
+      "model_track": "pure_physics",
+      "model_type": "fixed_logit_residual",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "holdout_brier_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "forward_evidence_scored_and_promotable",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "seed_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28_raw",
+      "failed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "forward_evidence_scored_and_promotable",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28_raw",
+          "gate": "candidate_is_not_baseline",
+          "passed": false
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.09951287 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.33764805 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13107656 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=2800.00000000 shadow_expected_ev_cents=3207.22560000",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=baseline_v28_raw model_hash=92cd09ac8c08636c3053fd48 allowed_for_forward_collection=False diagnostic_promotion_status=baseline_not_candidate",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": false
+        }
+      ],
+      "model_hash": "92cd09ac8c08636c3053fd48",
+      "model_track": "baseline",
+      "model_type": "baseline_v28_raw",
+      "passed_gates": [
+        "holdout_coverage",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_logistic_calibration_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_logistic_calibration_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.15827708 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.50216490 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.18457249 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=-264.00000000 shadow_expected_ev_cents=16.20296088",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_logistic_calibration_v001', 'delta_brier_candidate_minus_v28': 0.036523314868374346, 'delta_logloss_candidate_minus_v28': 0.10546835247237224, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.027230451817453677, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=regularized_logistic model_hash=065072105a4f4792a473a741 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "065072105a4f4792a473a741",
+      "model_track": "pure_physics",
+      "model_type": "regularized_logistic",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_logistic_boundary_physics_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_logistic_boundary_physics_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.12538289 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.41022674 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.16849443 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=1820.00000000 shadow_expected_ev_cents=1635.38960238",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_logistic_boundary_physics_v001', 'delta_brier_candidate_minus_v28': 0.3424322391231054, 'delta_logloss_candidate_minus_v28': 1.90683520054116, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.26328615430888, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=regularized_logistic model_hash=a938bf30c29577fc972b5a7d allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "a938bf30c29577fc972b5a7d",
+      "model_track": "pure_physics",
+      "model_type": "regularized_logistic",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_logistic_book_reliability_diag_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.14113659 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.46107390 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.15089898 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=223.00000000 shadow_expected_ev_cents=145.44358516",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_logistic_book_reliability_diag_v001', 'delta_brier_candidate_minus_v28': 0.23846525589376374, 'delta_logloss_candidate_minus_v28': 0.7818658630244664, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.143062724447518, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=regularized_logistic model_hash=1612cf1a1fd3d451ff05ccad allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "1612cf1a1fd3d451ff05ccad",
+      "model_track": "book_aware_diagnostic",
+      "model_type": "regularized_logistic",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_monotonic_tabular_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_monotonic_tabular_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.10616549 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.37070987 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13243326 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=1568.00000000 shadow_expected_ev_cents=1279.85846853",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_monotonic_tabular_v001', 'delta_brier_candidate_minus_v28': 0.005656282970433163, 'delta_logloss_candidate_minus_v28': 0.027749630831097438, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 195, 'near_boundary_delta_brier_candidate_minus_v28': 0.001167911101211061, 'near_boundary_rows': 1364, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 2104, 'rows_per_market': 10.78974358974359, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=f01a85e32739def20cd8c3b0 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "f01a85e32739def20cd8c3b0",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_blend_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_blend_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.10251092 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.35491173 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13243326 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=2152.00000000 shadow_expected_ev_cents=1406.25021763",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_blend_v001', 'delta_brier_candidate_minus_v28': 0.0024051648427151073, 'delta_logloss_candidate_minus_v28': 0.0067245947683555185, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 154, 'near_boundary_delta_brier_candidate_minus_v28': 0.0018924878873253503, 'near_boundary_rows': 1156, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1760, 'rows_per_market': 11.428571428571429, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=db7461bb1e38cb2256cf3530 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "db7461bb1e38cb2256cf3530",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_light_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_light_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.09967610 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.34036483 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13078481 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=2800.00000000 shadow_expected_ev_cents=2524.46378484",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_light_v001', 'delta_brier_candidate_minus_v28': 0.0005869509521295724, 'delta_logloss_candidate_minus_v28': 0.0016079826612204196, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'forward_logloss_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 152, 'near_boundary_delta_brier_candidate_minus_v28': 0.00047868816614579646, 'near_boundary_rows': 1150, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1754, 'rows_per_market': 11.539473684210526, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=c1edea2fdb0e0eb8b405faf0 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "c1edea2fdb0e0eb8b405faf0",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+      "failed_gates": [
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_time_safe_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.09941267 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.33757095 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": true
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13095011 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=2800.00000000 shadow_expected_ev_cents=3050.45892571",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_time_safe_v001', 'delta_brier_candidate_minus_v28': 6.910580132671318e-05, 'delta_logloss_candidate_minus_v28': -4.468988451650224e-05, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 151, 'near_boundary_delta_brier_candidate_minus_v28': 9.814580373065929e-05, 'near_boundary_rows': 1148, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1752, 'rows_per_market': 11.602649006622517, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=9b461a310d06c06b55af2e2d allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "9b461a310d06c06b55af2e2d",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+      "failed_gates": [
+        "forward_evidence_scored_and_promotable"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_boundary_monotonic_micro_time_safe_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.09947776 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.33760147 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": true
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13103350 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=2800.00000000 shadow_expected_ev_cents=3160.19559771",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_boundary_monotonic_micro_time_safe_v001', 'delta_brier_candidate_minus_v28': 2.1972555713956066e-05, 'delta_logloss_candidate_minus_v28': -2.6895646578595223e-05, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': ['forward_brier_not_better_than_v28', 'near_boundary_brier_degraded'], 'forward_evidence_promotable': False, 'market_shortfall': 0, 'markets': 117, 'near_boundary_delta_brier_candidate_minus_v28': 3.438242945441594e-05, 'near_boundary_rows': 1046, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1620, 'rows_per_market': 13.846153846153847, 'status': 'fail'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": false
+        },
+        {
+          "evidence": "model_type=monotonic_tabular_calibration model_hash=9c831d7954e3c65fec6c0794 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "9c831d7954e3c65fec6c0794",
+      "model_track": "pure_physics",
+      "model_type": "monotonic_tabular_calibration",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    },
+    {
+      "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+      "failed_gates": [
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "boundary_brier_not_degraded"
+      ],
+      "gates": [
+        {
+          "evidence": "candidate_id=v28s_late_dsigma_residual_tilt_v001",
+          "gate": "candidate_is_not_baseline",
+          "passed": true
+        },
+        {
+          "evidence": "rows=412 markets=24 required_rows=100 required_markets=20",
+          "gate": "holdout_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "candidate=0.09970922 baseline=0.09951287",
+          "gate": "holdout_brier_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=0.33769948 baseline=0.33764805",
+          "gate": "holdout_logloss_better_than_v28",
+          "passed": false
+        },
+        {
+          "evidence": "slice=near_boundary_abs_d_lte_1 candidate=0.13146838 baseline=0.13107656 rows=208",
+          "gate": "boundary_brier_not_degraded",
+          "passed": false
+        },
+        {
+          "evidence": "candidate=NA baseline=NA rows=0",
+          "gate": "recross_brier_not_degraded_or_unavailable",
+          "passed": true
+        },
+        {
+          "evidence": "shadow_net_pnl_cents=2800.00000000 shadow_expected_ev_cents=3418.37968811",
+          "gate": "shadow_economics_reported",
+          "passed": true
+        },
+        {
+          "evidence": "source_contract_ready=True evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195",
+          "gate": "source_quality_forward_registered",
+          "passed": true
+        },
+        {
+          "evidence": "promotion_contract_ready=True overall_verdict=promotion_grade missing_required_forward_datasets=[]",
+          "gate": "source_contract_promotion_ready",
+          "passed": true
+        },
+        {
+          "evidence": "registry_status=active rows=16896 required_rows=200",
+          "gate": "frozen_forward_registry_present",
+          "passed": true
+        },
+        {
+          "evidence": "forward_markets=196 required_markets=40",
+          "gate": "forward_market_coverage",
+          "passed": true
+        },
+        {
+          "evidence": "evidence_status=scored_forward_evidence clean_rows=16860 clean_markets=195 candidate_gate={'candidate_id': 'v28s_late_dsigma_residual_tilt_v001', 'delta_brier_candidate_minus_v28': -0.0009617142950745367, 'delta_logloss_candidate_minus_v28': -0.0038030676445250378, 'estimated_additional_markets_needed': 0, 'estimated_markets_to_row_floor': 0, 'fail_reasons': [], 'forward_evidence_promotable': True, 'market_shortfall': 0, 'markets': 111, 'near_boundary_delta_brier_candidate_minus_v28': -0.001071788171632393, 'near_boundary_rows': 984, 'required_markets': 40, 'required_rows': 200, 'row_shortfall': 0, 'rows': 1558, 'rows_per_market': 14.036036036036036, 'status': 'pass'}",
+          "gate": "forward_evidence_scored_and_promotable",
+          "passed": true
+        },
+        {
+          "evidence": "model_type=fixed_logit_residual model_hash=b160fbf8edd98b998b089805 allowed_for_forward_collection=True diagnostic_promotion_status=fail",
+          "gate": "candidate_manifest_frozen_and_inspectable",
+          "passed": true
+        }
+      ],
+      "model_hash": "b160fbf8edd98b998b089805",
+      "model_track": "pure_physics",
+      "model_type": "fixed_logit_residual",
+      "passed_gates": [
+        "candidate_is_not_baseline",
+        "holdout_coverage",
+        "recross_brier_not_degraded_or_unavailable",
+        "shadow_economics_reported",
+        "source_quality_forward_registered",
+        "source_contract_promotion_ready",
+        "frozen_forward_registry_present",
+        "forward_market_coverage",
+        "forward_evidence_scored_and_promotable",
+        "candidate_manifest_frozen_and_inspectable"
+      ],
+      "variant": "logged_events_diagnostic",
+      "verdict": "blocked"
+    }
+  ],
+  "summary": {
+    "blocked_candidate_count": 20,
+    "blocked_candidate_hard_blockers": [
+      "forward_evidence_scored_and_promotable"
+    ],
+    "builder_script": "verify_v28_successor_promotion.py",
+    "candidate_count": 20,
+    "generated_utc": "2026-05-18T20:51:50Z",
+    "hard_blockers": [
+      "forward_evidence_scored_and_promotable"
+    ],
+    "inputs": {
+      "forward_evidence_score": "logs/edge_research/v28_successor_forward_evidence_score_latest.json",
+      "forward_registry": "logs/edge_research/v28_successor_forward_registry_latest.json",
+      "logged_events_diagnostic": {
+        "calibration_json": "logs/edge_research/v28_successor_logged_event_calibration_latest.json",
+        "calibration_promotion_verdict": "not_promotable",
+        "candidate_manifest": "research_particle/v28_successor/candidate_manifests_logged_events_latest.json",
+        "metrics_csv": "logs/edge_research/v28_successor_logged_event_calibration_metrics_latest.csv"
+      },
+      "seed_diagnostic": {
+        "calibration_json": "logs/edge_research/v28_successor_calibration_latest.json",
+        "calibration_promotion_verdict": "not_promotable",
+        "candidate_manifest": "research_particle/v28_successor/candidate_manifests_latest.json",
+        "metrics_csv": "logs/edge_research/v28_successor_calibration_metrics_latest.csv"
+      },
+      "source_contract": "logs/edge_research/v28_successor_source_contract_latest.json"
+    },
+    "outputs": {
+      "csv": "logs/edge_research/v28_successor_promotion_verifier_latest.csv",
+      "json": "logs/edge_research/v28_successor_promotion_verifier_latest.json",
+      "markdown": "logs/edge_research/v28_successor_promotion_verifier_latest.md"
+    },
+    "overall_verdict": "blocked",
+    "promotable_candidates": []
+  }
+}

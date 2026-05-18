@@ -1,0 +1,13 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "target_coverage_side_asymmetry_adjusted_edge2pp_strict_farthest_boundary_repair",
+  "coverage_floor": 75.0,
+  "edge_floor": 0.02,
+  "freeze_ts_utc": "2026-05-06T13:24:47.507897+00:00",
+  "min_settled": 30,
+  "physics": "Boundary-clock and NO-side asymmetry states can be unresolved path states where raw v28 overstates certainty. The adjusted FV collapses those rows toward 50/50; if the adjusted edge no longer pays the ask, entry is false conviction. Repairs must be physically clean and far from the boundary, not just retrospective replacements.",
+  "repair_ranker": "farthest_boundary",
+  "rule": "Start from the target-coverage policy; skip target rows where adjusted_probability - ask_probability < 0.02; repair coverage with strict clean rows clearing the same adjusted-edge floor, ranked by abs_d_sigma descending.",
+  "source_coverage_freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+  "source_discovery": "v28_side_asymmetry_bridge_strict_repair_latest"
+}

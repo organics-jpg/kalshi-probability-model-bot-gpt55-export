@@ -1,0 +1,346 @@
+{
+  "candidate_live_ready": false,
+  "candidate_summary": {
+    "blockers": [
+      "post_freeze_rows_lt_30",
+      "harmful_hold_rows_present",
+      "known_hold_delta_lt_300c"
+    ],
+    "exit_reason_counts": {
+      "mushroom_v28_probability_collapse_full": 1,
+      "mushroom_v28_probability_reduce": 2
+    },
+    "failure_class_counts": {
+      "exit_policy_cost": 2,
+      "fv_or_entry_timing_error": 1
+    },
+    "harmful_rows": 1,
+    "helpful_rows": 2,
+    "known_hold_delta_cents": -20.0,
+    "known_rows": 3,
+    "precision_on_known": 0.6666666666666666,
+    "rows": 3,
+    "unknown_rows": 0
+  },
+  "generated_at_utc": "2026-05-11T03:07:51.793958+00:00",
+  "interpretation": [
+    "Forward watch only; not a full exit-PnL simulator and not promotion evidence by itself.",
+    "Post-freeze matched-unchanged rows: 7; selected rows: 3; known helpful/harmful/unknown: 2/1/0.",
+    "Blockers: ['post_freeze_rows_lt_30', 'harmful_hold_rows_present', 'known_hold_delta_lt_300c']."
+  ],
+  "missed_known_helpful_examples": [
+    {
+      "actual_cents": -14.0,
+      "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+      "exit_cents": 70,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 15.700151,
+      "hold_cents": 46,
+      "hold_delta_cents": 60.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_hold": 0.612998,
+      "selected": null,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "crowded_depth",
+        "exit_policy_clip_vs_hold"
+      ]
+    },
+    {
+      "actual_cents": -36.0,
+      "entry_ts": "2026-05-07T13:45:58.883423+00:00",
+      "exit_cents": 55,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 11.2423,
+      "hold_cents": 54,
+      "hold_delta_cents": 90.0,
+      "market": "KXBTC15M-26MAY071000-00",
+      "p_hold": 0.617577,
+      "selected": null,
+      "side": "no",
+      "tags": [
+        "medium_25_49c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -38.0,
+      "entry_ts": "2026-05-07T16:23:59.930534+00:00",
+      "exit_cents": 65,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 17.709724,
+      "hold_cents": 32,
+      "hold_delta_cents": 70.0,
+      "market": "KXBTC15M-26MAY071230-30",
+      "p_hold": 0.662903,
+      "selected": null,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "exit_policy_cost",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "rich_entry"
+      ]
+    }
+  ],
+  "missed_known_helpful_rows": 3,
+  "post_freeze_examples": [
+    {
+      "actual_cents": -2.0,
+      "entry_ts": "2026-05-07T04:10:20.371309+00:00",
+      "exit_cents": 69,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fail_reasons": [
+        "p_hold_below_floor",
+        "fair_drawdown_above_ceiling"
+      ],
+      "failure_class": "fv_or_entry_timing_error",
+      "fair_drawdown_cents": 10.343815,
+      "hold_cents": -140,
+      "hold_delta_cents": -138.0,
+      "market": "KXBTC15M-26MAY070015-15",
+      "p_hold": 0.596562,
+      "selected": false,
+      "side": "no",
+      "tags": [
+        "micro_lt_10c",
+        "fv_or_entry_timing_error"
+      ]
+    },
+    {
+      "actual_cents": -14.0,
+      "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+      "exit_cents": 70,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fail_reasons": [
+        "fair_drawdown_above_ceiling"
+      ],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 15.700151,
+      "hold_cents": 46,
+      "hold_delta_cents": 60.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_hold": 0.612998,
+      "selected": false,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "crowded_depth",
+        "exit_policy_clip_vs_hold"
+      ]
+    },
+    {
+      "actual_cents": -36.0,
+      "entry_ts": "2026-05-07T13:45:58.883423+00:00",
+      "exit_cents": 55,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fail_reasons": [
+        "fair_drawdown_above_ceiling"
+      ],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 11.2423,
+      "hold_cents": 54,
+      "hold_delta_cents": 90.0,
+      "market": "KXBTC15M-26MAY071000-00",
+      "p_hold": 0.617577,
+      "selected": false,
+      "side": "no",
+      "tags": [
+        "medium_25_49c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -16.0,
+      "entry_ts": "2026-05-07T14:06:01.660553+00:00",
+      "exit_cents": 73,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fail_reasons": [],
+      "failure_class": "fv_or_entry_timing_error",
+      "fair_drawdown_cents": 4.602013,
+      "hold_cents": -162,
+      "hold_delta_cents": -146.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "p_hold": 0.76398,
+      "selected": true,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -24.0,
+      "entry_ts": "2026-05-07T14:16:08.501513+00:00",
+      "exit_cents": 65,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 6.016933,
+      "hold_cents": 46,
+      "hold_delta_cents": 70.0,
+      "market": "KXBTC15M-26MAY071030-30",
+      "p_hold": 0.709831,
+      "selected": true,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -10.0,
+      "entry_ts": "2026-05-07T16:23:06.054499+00:00",
+      "exit_cents": 72,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 2.062161,
+      "hold_cents": 46,
+      "hold_delta_cents": 56.0,
+      "market": "KXBTC15M-26MAY071230-30",
+      "p_hold": 0.749378,
+      "selected": true,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -38.0,
+      "entry_ts": "2026-05-07T16:23:59.930534+00:00",
+      "exit_cents": 65,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fail_reasons": [
+        "fair_drawdown_above_ceiling"
+      ],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 17.709724,
+      "hold_cents": 32,
+      "hold_delta_cents": 70.0,
+      "market": "KXBTC15M-26MAY071230-30",
+      "p_hold": 0.662903,
+      "selected": false,
+      "side": "yes",
+      "tags": [
+        "medium_25_49c",
+        "exit_policy_cost",
+        "exit_policy_clip_vs_hold",
+        "thin_raw_edge",
+        "rich_entry"
+      ]
+    }
+  ],
+  "post_freeze_matched_unchanged_rows": 7,
+  "selected_examples": [
+    {
+      "actual_cents": -16.0,
+      "entry_ts": "2026-05-07T14:06:01.660553+00:00",
+      "exit_cents": 73,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fail_reasons": [],
+      "failure_class": "fv_or_entry_timing_error",
+      "fair_drawdown_cents": 4.602013,
+      "hold_cents": -162,
+      "hold_delta_cents": -146.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "p_hold": 0.76398,
+      "selected": null,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "fv_or_entry_timing_error",
+        "recross_hazard_high",
+        "thin_raw_edge",
+        "rich_entry",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -24.0,
+      "entry_ts": "2026-05-07T14:16:08.501513+00:00",
+      "exit_cents": 65,
+      "exit_reason": "mushroom_v28_probability_collapse_full",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 6.016933,
+      "hold_cents": 46,
+      "hold_delta_cents": 70.0,
+      "market": "KXBTC15M-26MAY071030-30",
+      "p_hold": 0.709831,
+      "selected": null,
+      "side": "no",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    },
+    {
+      "actual_cents": -10.0,
+      "entry_ts": "2026-05-07T16:23:06.054499+00:00",
+      "exit_cents": 72,
+      "exit_reason": "mushroom_v28_probability_reduce",
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": 2.062161,
+      "hold_cents": 46,
+      "hold_delta_cents": 56.0,
+      "market": "KXBTC15M-26MAY071230-30",
+      "p_hold": 0.749378,
+      "selected": null,
+      "side": "yes",
+      "tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "recross_hazard_high",
+        "thin_touch_depth",
+        "exit_policy_clip_vs_hold",
+        "near_boundary"
+      ]
+    }
+  ],
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_loss_escape_analysis_latest.json",
+  "state": {
+    "candidate": "fair_drawdown_lte10_p_hold_ge060_exit_clip_separator",
+    "fair_drawdown_cents_ceiling": 10.0,
+    "freeze_ts_utc": "2026-05-07T04:04:23.876080+00:00",
+    "p_hold_floor": 0.6,
+    "physics": "A shallow fair-value drawdown with still-adequate p_hold is more likely a clipped-winner exit than a true FV/entry failure.",
+    "research_only": true,
+    "rule": "For matched unchanged loss rows, flag rows with fair_drawdown_cents <= 10 and p_hold >= 0.60.",
+    "source_artifact": "v28_exit_clip_separator_diagnostic_latest.json"
+  }
+}

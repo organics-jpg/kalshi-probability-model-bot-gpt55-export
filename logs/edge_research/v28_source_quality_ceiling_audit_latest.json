@@ -1,0 +1,89 @@
+{
+  "audit": "source_quality_ceiling",
+  "conclusion": {
+    "approved_only_coverage_pct": 45.45454545454545,
+    "best_current_status": "promising_but_not_promotable",
+    "best_frontier_coverage_pct": 72.72727272727273,
+    "best_frontier_reconstructed_share": 0.375,
+    "goal_ready": false,
+    "soft_frontier_post_settled": 0,
+    "source_quality_ceiling_active": true,
+    "why": "No current observable post-freeze rule simultaneously clears broad coverage, positive net, source quality, sample size, and full-loss cushion. The nearest broad frontier is still below coverage or above the reconstructed-share ceiling, while cleaner approved-only rows are too narrow."
+  },
+  "findings": [
+    {
+      "evidence": {
+        "approved_available_share": 0.3125,
+        "available_source_market_counts": {
+          "approved_entry": 5,
+          "reconstructed_or_rejected": 11
+        },
+        "coverage_pct": 45.45454545454545,
+        "net_cents": 52.0,
+        "rule": "raw05_recross60_abs085_ask65",
+        "selected_reconstructed_share": 0.0
+      },
+      "finding": "approved_only_is_profitable_but_too_narrow",
+      "interpretation": "The cleanest currently observed source slice wins but cannot reach the 75% coverage target."
+    },
+    {
+      "evidence": {
+        "blockers": [
+          "settled_lt_30",
+          "coverage_too_low",
+          "reconstructed_share_gt_35pct",
+          "full_loss_cushion_lt_3"
+        ],
+        "clean_broad_positive_exists": false,
+        "coverage_pct": 72.72727272727273,
+        "net_cents": 107.0,
+        "reconstructed_share": 0.375,
+        "rule": "raw03_recross50_abs50_ask35"
+      },
+      "finding": "best_observable_broad_frontier_still_misses_gates",
+      "interpretation": "The best post-freeze observable frontier is close but still below coverage and just above the reconstructed-share ceiling."
+    },
+    {
+      "evidence": {
+        "diagnostic_coverage_pct": null,
+        "diagnostic_net_cents": null,
+        "diagnostic_reconstructed_share": null,
+        "diagnostic_rule": null,
+        "post_blockers": null,
+        "post_rule": null,
+        "post_settled": null
+      },
+      "finding": "diagnostic_soft_frontier_is_promising_but_unproven",
+      "interpretation": "The soft frontier is the most coherent repair idea, but its strict post-birth sample is basically empty."
+    },
+    {
+      "evidence": {
+        "diagnostic_candidate": "hybrid_veto_plus_early_no_raw_clean_realized_oracle_uncapped",
+        "diagnostic_clean_rows_needed_for_source_gate": 18,
+        "diagnostic_net_cents": 1459.0,
+        "post_candidate": "hybrid_veto_plus_early_no_raw_clean_realized_oracle_uncapped",
+        "post_clean_rows_needed_for_source_gate": 19,
+        "post_coverage_pct": 76.47058823529412,
+        "post_net_cents": 130.0,
+        "post_reconstructed_share": null
+      },
+      "finding": "hybrid_boundary_stack_needs_clean_forward_dilution",
+      "interpretation": "The combined stack can be promising, but current forward evidence is too reconstructed-heavy to trust."
+    }
+  ],
+  "generated_at_utc": "2026-05-06T20:39:40.335073+00:00",
+  "inputs": {
+    "feature_coverage_frontier": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_clock_feature_gate_coverage_source_frontier_latest.json",
+    "feature_soft_frontier": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_clock_feature_gate_soft_frontier_watch_latest.json",
+    "feature_source_denominator": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_clock_feature_gate_source_denominator_audit_latest.json",
+    "goal_audit": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_goal_completion_audit_latest.json",
+    "hybrid_source_dilution": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_hybrid_boundary_source_dilution_runway_latest.json",
+    "hybrid_source_frontier": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_hybrid_boundary_source_frontier_latest.json"
+  },
+  "next": [
+    "Keep the soft-frontier and combined-stack monitors running until post-birth rows reach real sample size.",
+    "Do not promote broad candidates while source_quality_ceiling_active is true.",
+    "Treat approved-only profitable rows as calibration hints, not a broad strategy, until they naturally cover more markets.",
+    "Search for observable features that explain why reconstructed-heavy rows differ: cheap ask tails, weak abs-distance, thin edge, and moderate recross are the current suspects."
+  ]
+}

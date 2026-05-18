@@ -1,0 +1,9 @@
+{
+  "candidate_family": "target_hybrid_veto_repair",
+  "coverage_floor": 75.0,
+  "danger_rule": "raw edge >= 0 but hybrid confidence-shrink edge < 0",
+  "freeze_ts_utc": "2026-05-06T15:26:49.986562+00:00",
+  "physics": "When raw FV barely clears the ask but shrink-to-50 pulls fair value below the ask, the market is usually near a noisy boundary where the apparent edge is path-fragile. The repair pool tries to keep broad participation by shifting that risk budget to cleaner rows with positive hybrid edge, calmer recross geometry, or stronger distance.",
+  "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "repair_rule": "replace skipped target markets with first clean missed-market rows ranked by hybrid-adjusted stability"
+}

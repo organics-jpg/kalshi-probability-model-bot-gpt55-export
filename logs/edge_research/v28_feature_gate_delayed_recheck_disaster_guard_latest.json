@@ -1,0 +1,771 @@
+{
+  "base_delayed_summary": {
+    "adverse_10c_rows": 2,
+    "adverse_25c_rows": 2,
+    "adverse_50c_rows": 1,
+    "delta_vs_live_cents": 2272.0,
+    "reason_group_counts": {
+      "probability_collapse": 1,
+      "probability_reduce": 3,
+      "value_over_hold": 7
+    },
+    "rows": 11,
+    "worst_min_after_exit_bid_cents": -55.0
+  },
+  "best": {
+    "adverse_25_kept": 0,
+    "adverse_25_removed": 2,
+    "adverse_50_kept": 0,
+    "adverse_50_removed": 1,
+    "base_delta_cents": 2272.0,
+    "base_suppressed": 11,
+    "blockers": [
+      "diagnostic_prefreeze",
+      "suppressed_decisions_lt_30",
+      "gives_up_large_recovery"
+    ],
+    "delta_given_up_pct": 0.3274647887323944,
+    "description": "Reject value-over-hold delayed suppressions with recheck bid <=82c.",
+    "guarded_rejections": 3,
+    "kept_delta_cents": 1528.0,
+    "kept_reason_counts": {
+      "probability_collapse": 1,
+      "probability_reduce": 3,
+      "value_over_hold": 4
+    },
+    "kept_suppressions": 8,
+    "name": "reject_value_over_hold_recheck_bid_lte_82",
+    "rejected_delta_cents": 744.0,
+    "rejected_markets": [
+      "KXBTC15M-26MAY062100-00",
+      "KXBTC15M-26MAY061800-00",
+      "KXBTC15M-26MAY070030-30"
+    ],
+    "rejected_reason_counts": {
+      "value_over_hold": 3
+    }
+  },
+  "generated_at_utc": "2026-05-07T08:43:54.843396+00:00",
+  "interpretation": [
+    "All rows are diagnostic/prefreeze; this is not promotion evidence.",
+    "A usable disaster guard should remove large adverse paths without giving back most delayed-recheck recovery.",
+    "If every clean-looking guard either leaves large adverse rows or sacrifices too much recovery, keep the frozen delayed-recheck watch unchanged until strict rows arrive."
+  ],
+  "tradeoff_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_feature_gate_delayed_recheck_survival_tradeoff_latest.json",
+  "variants": [
+    {
+      "adverse_25_kept": 0,
+      "adverse_25_removed": 2,
+      "adverse_50_kept": 0,
+      "adverse_50_removed": 1,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.3274647887323944,
+      "description": "Reject value-over-hold delayed suppressions with recheck bid <=82c.",
+      "guarded_rejections": 3,
+      "kept_delta_cents": 1528.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 4
+      },
+      "kept_suppressions": 8,
+      "name": "reject_value_over_hold_recheck_bid_lte_82",
+      "rejected_delta_cents": 744.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY062100-00",
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY070030-30"
+      ],
+      "rejected_reason_counts": {
+        "value_over_hold": 3
+      }
+    },
+    {
+      "adverse_25_kept": 0,
+      "adverse_25_removed": 2,
+      "adverse_50_kept": 0,
+      "adverse_50_removed": 1,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.8019366197183099,
+      "description": "Reject delayed suppression if recheck bid <= 85c.",
+      "guarded_rejections": 6,
+      "kept_delta_cents": 450.0,
+      "kept_reason_counts": {
+        "probability_reduce": 1,
+        "value_over_hold": 4
+      },
+      "kept_suppressions": 5,
+      "name": "reject_recheck_bid_lte_85",
+      "rejected_delta_cents": 1822.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY062100-00",
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY062045-45",
+        "KXBTC15M-26MAY070030-30"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 2,
+        "value_over_hold": 3
+      }
+    },
+    {
+      "adverse_25_kept": 0,
+      "adverse_25_removed": 2,
+      "adverse_50_kept": 0,
+      "adverse_50_removed": 1,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.9577464788732394,
+      "description": "Reject delayed suppression if minimum bid during recheck window <= 80c.",
+      "guarded_rejections": 8,
+      "kept_delta_cents": 96.0,
+      "kept_reason_counts": {
+        "value_over_hold": 3
+      },
+      "kept_suppressions": 3,
+      "name": "reject_min_window_bid_lte_80",
+      "rejected_delta_cents": 2176.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY062100-00",
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY070115-15",
+        "KXBTC15M-26MAY062045-45",
+        "KXBTC15M-26MAY070030-30",
+        "KXBTC15M-26MAY061815-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 4
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain"
+      ],
+      "delta_given_up_pct": 0.07746478873239436,
+      "description": "Reject delayed suppression if recheck bid <= 60c.",
+      "guarded_rejections": 1,
+      "kept_delta_cents": 2096.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 10,
+      "name": "reject_recheck_bid_lte_60",
+      "rejected_delta_cents": 176.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00"
+      ],
+      "rejected_reason_counts": {
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain"
+      ],
+      "delta_given_up_pct": 0.07746478873239436,
+      "description": "Reject delayed suppression if window drop >= 8c.",
+      "guarded_rejections": 1,
+      "kept_delta_cents": 2096.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 10,
+      "name": "reject_window_drop_gte_8",
+      "rejected_delta_cents": 176.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00"
+      ],
+      "rejected_reason_counts": {
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain"
+      ],
+      "delta_given_up_pct": 0.07746478873239436,
+      "description": "Reject value-over-hold delayed suppressions with window drop >=8c.",
+      "guarded_rejections": 1,
+      "kept_delta_cents": 2096.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 10,
+      "name": "reject_value_over_hold_window_drop_gte_8",
+      "rejected_delta_cents": 176.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00"
+      ],
+      "rejected_reason_counts": {
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain"
+      ],
+      "delta_given_up_pct": 0.07746478873239436,
+      "description": "Reject value-over-hold delayed suppressions with min-window bid <=61c.",
+      "guarded_rejections": 1,
+      "kept_delta_cents": 2096.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 10,
+      "name": "reject_value_over_hold_min_window_lte_61",
+      "rejected_delta_cents": 176.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00"
+      ],
+      "rejected_reason_counts": {
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 2,
+      "adverse_25_removed": 0,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "no_guarded_rows",
+        "does_not_remove_large_adverse_rows",
+        "large_adverse_rows_remain"
+      ],
+      "delta_given_up_pct": 0.0,
+      "description": "Reject delayed suppression if window drop >= 10c.",
+      "guarded_rejections": 0,
+      "kept_delta_cents": 2272.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 7
+      },
+      "kept_suppressions": 11,
+      "name": "reject_window_drop_gte_10",
+      "rejected_delta_cents": 0,
+      "rejected_markets": [],
+      "rejected_reason_counts": {}
+    },
+    {
+      "adverse_25_kept": 2,
+      "adverse_25_removed": 0,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "does_not_remove_large_adverse_rows",
+        "large_adverse_rows_remain"
+      ],
+      "delta_given_up_pct": 0.14964788732394366,
+      "description": "Reject probability-reduce delayed suppressions with recheck bid <=76c.",
+      "guarded_rejections": 1,
+      "kept_delta_cents": 1932.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 2,
+        "value_over_hold": 7
+      },
+      "kept_suppressions": 10,
+      "name": "reject_reduce_recheck_bid_lte_76",
+      "rejected_delta_cents": 340.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY062315-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_reduce": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.25880281690140844,
+      "description": "Reject delayed suppression if recheck bid <= 65c.",
+      "guarded_rejections": 2,
+      "kept_delta_cents": 1684.0,
+      "kept_reason_counts": {
+        "probability_reduce": 3,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 9,
+      "name": "reject_recheck_bid_lte_65",
+      "rejected_delta_cents": 588.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062215-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.25880281690140844,
+      "description": "Reject delayed suppression if recheck bid <= 70c.",
+      "guarded_rejections": 2,
+      "kept_delta_cents": 1684.0,
+      "kept_reason_counts": {
+        "probability_reduce": 3,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 9,
+      "name": "reject_recheck_bid_lte_70",
+      "rejected_delta_cents": 588.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062215-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.3274647887323944,
+      "description": "Reject delayed suppression if window drop >= 5c.",
+      "guarded_rejections": 3,
+      "kept_delta_cents": 1528.0,
+      "kept_reason_counts": {
+        "probability_reduce": 3,
+        "value_over_hold": 5
+      },
+      "kept_suppressions": 8,
+      "name": "reject_window_drop_gte_5",
+      "rejected_delta_cents": 744.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY070115-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "value_over_hold": 2
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.3626760563380282,
+      "description": "Reject delayed suppression if window drop >= 3c.",
+      "guarded_rejections": 5,
+      "kept_delta_cents": 1448.0,
+      "kept_reason_counts": {
+        "probability_reduce": 3,
+        "value_over_hold": 3
+      },
+      "kept_suppressions": 6,
+      "name": "reject_window_drop_gte_3",
+      "rejected_delta_cents": 824.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY070115-15",
+        "KXBTC15M-26MAY061400-00",
+        "KXBTC15M-26MAY062200-00"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "value_over_hold": 4
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.4022887323943662,
+      "description": "Reject delayed suppression if minimum bid during recheck window <= 65c.",
+      "guarded_rejections": 3,
+      "kept_delta_cents": 1358.0,
+      "kept_reason_counts": {
+        "probability_reduce": 2,
+        "value_over_hold": 6
+      },
+      "kept_suppressions": 8,
+      "name": "reject_min_window_bid_lte_65",
+      "rejected_delta_cents": 914.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY062045-45"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 1,
+        "value_over_hold": 1
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.4154929577464789,
+      "description": "Reject delayed suppression if recheck bid <= 75c.",
+      "guarded_rejections": 3,
+      "kept_delta_cents": 1328.0,
+      "kept_reason_counts": {
+        "probability_reduce": 3,
+        "value_over_hold": 5
+      },
+      "kept_suppressions": 8,
+      "name": "reject_recheck_bid_lte_75",
+      "rejected_delta_cents": 944.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY070030-30"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "value_over_hold": 2
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.5651408450704225,
+      "description": "Reject delayed suppression if recheck bid <= 80c.",
+      "guarded_rejections": 4,
+      "kept_delta_cents": 988.0,
+      "kept_reason_counts": {
+        "probability_reduce": 2,
+        "value_over_hold": 5
+      },
+      "kept_suppressions": 7,
+      "name": "reject_recheck_bid_lte_80",
+      "rejected_delta_cents": 1284.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY070030-30"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 1,
+        "value_over_hold": 2
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.6628521126760564,
+      "description": "Reject delayed suppression if window drop >= 0c.",
+      "guarded_rejections": 8,
+      "kept_delta_cents": 766.0,
+      "kept_reason_counts": {
+        "probability_reduce": 1,
+        "value_over_hold": 2
+      },
+      "kept_suppressions": 3,
+      "name": "reject_window_drop_gte_0",
+      "rejected_delta_cents": 1506.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY070115-15",
+        "KXBTC15M-26MAY061400-00",
+        "KXBTC15M-26MAY062200-00",
+        "KXBTC15M-26MAY062045-45",
+        "KXBTC15M-26MAY061615-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 2,
+        "value_over_hold": 5
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.795774647887324,
+      "description": "Reject delayed suppression if minimum bid during recheck window <= 70c.",
+      "guarded_rejections": 6,
+      "kept_delta_cents": 464.0,
+      "kept_reason_counts": {
+        "value_over_hold": 5
+      },
+      "kept_suppressions": 5,
+      "name": "reject_min_window_bid_lte_70",
+      "rejected_delta_cents": 1808.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY062045-45",
+        "KXBTC15M-26MAY070030-30",
+        "KXBTC15M-26MAY061815-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 2
+      }
+    },
+    {
+      "adverse_25_kept": 1,
+      "adverse_25_removed": 1,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.795774647887324,
+      "description": "Reject delayed suppression if minimum bid during recheck window <= 75c.",
+      "guarded_rejections": 6,
+      "kept_delta_cents": 464.0,
+      "kept_reason_counts": {
+        "value_over_hold": 5
+      },
+      "kept_suppressions": 5,
+      "name": "reject_min_window_bid_lte_75",
+      "rejected_delta_cents": 1808.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY061800-00",
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062215-15",
+        "KXBTC15M-26MAY062045-45",
+        "KXBTC15M-26MAY070030-30",
+        "KXBTC15M-26MAY061815-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 3,
+        "value_over_hold": 2
+      }
+    },
+    {
+      "adverse_25_kept": 2,
+      "adverse_25_removed": 0,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "does_not_remove_large_adverse_rows",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.1813380281690141,
+      "description": "Reject delayed suppression if minimum bid during recheck window <= 60c.",
+      "guarded_rejections": 1,
+      "kept_delta_cents": 1860.0,
+      "kept_reason_counts": {
+        "probability_reduce": 3,
+        "value_over_hold": 7
+      },
+      "kept_suppressions": 10,
+      "name": "reject_min_window_bid_lte_60",
+      "rejected_delta_cents": 412.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY062215-15"
+      ],
+      "rejected_reason_counts": {
+        "probability_collapse": 1
+      }
+    },
+    {
+      "adverse_25_kept": 2,
+      "adverse_25_removed": 0,
+      "adverse_50_kept": 1,
+      "adverse_50_removed": 0,
+      "base_delta_cents": 2272.0,
+      "base_suppressed": 11,
+      "blockers": [
+        "diagnostic_prefreeze",
+        "suppressed_decisions_lt_30",
+        "does_not_remove_large_adverse_rows",
+        "large_adverse_rows_remain",
+        "gives_up_large_recovery"
+      ],
+      "delta_given_up_pct": 0.29313380281690143,
+      "description": "Reject probability-reduce delayed suppressions with nonpositive/immediate weak recheck window.",
+      "guarded_rejections": 2,
+      "kept_delta_cents": 1606.0,
+      "kept_reason_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 1,
+        "value_over_hold": 7
+      },
+      "kept_suppressions": 9,
+      "name": "reject_reduce_window_drop_gte_0",
+      "rejected_delta_cents": 666.0,
+      "rejected_markets": [
+        "KXBTC15M-26MAY062315-15",
+        "KXBTC15M-26MAY062045-45"
+      ],
+      "rejected_reason_counts": {
+        "probability_reduce": 2
+      }
+    }
+  ]
+}

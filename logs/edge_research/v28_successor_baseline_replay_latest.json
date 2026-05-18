@@ -1,0 +1,98 @@
+{
+  "audit_hash": "d4d19143548dc1f0ca958409",
+  "baseline_replay_verdict": "logged_baseline_audited_true_api_recompute_blocked",
+  "blockers": [
+    "current seed rows are posthoc calibration rows",
+    "current seed rows have zero allowed_for_forward_promotion rows",
+    "seed rows are missing strike",
+    "true v28 API recomputation requires predecision BTC/bar sequence and serialized engine transport state"
+  ],
+  "builder_script": "replay_v28_successor_baselines.py",
+  "delta_summaries": {
+    "ask_cents": {
+      "count": 67,
+      "max_abs": 8.0,
+      "mean_abs": 0.9402985074626866
+    },
+    "edge_cents": {
+      "count": 67,
+      "max_abs": 50.582034,
+      "mean_abs": 2.1718896268656716
+    },
+    "fair_yes_cents": {
+      "count": 67,
+      "max_abs": 49.582072000000004,
+      "mean_abs": 2.066031268656716
+    },
+    "p_side": {
+      "count": 67,
+      "max_abs": 0.495821,
+      "mean_abs": 0.02066034328358209
+    },
+    "p_yes": {
+      "count": 67,
+      "max_abs": 0.495821,
+      "mean_abs": 0.02066034328358209
+    },
+    "sigma_t_dollars": {
+      "count": 67,
+      "max_abs": 19.735800999999995,
+      "mean_abs": 4.545895820895522
+    }
+  },
+  "generated_utc": "2026-05-12T07:29:14Z",
+  "inputs": {
+    "execution_events": {
+      "event_type_counts": {
+        "execution_deferred": 509,
+        "fill_full": 564,
+        "fill_partial": 5,
+        "mushroom_v28_approved": 1078,
+        "plan_built": 999,
+        "signal_seen": 1078
+      },
+      "exists": true,
+      "lines_read": 16078,
+      "logged_v28_events": 4233,
+      "logged_v28_markets": 314,
+      "logged_v28_time_range": {
+        "end": "2026-05-07T17:11:41.297Z",
+        "start": "2026-05-01T02:17:02.389Z"
+      },
+      "parse_errors": 0,
+      "source_hash": "3a0ca283d6d43b037c1b362916fadaf869164c2383e8490cbc93d596991ea5ef",
+      "source_path": "logs/live_mushroom_v28_size2/execution_events.ndjson"
+    },
+    "seed_rows_csv": "research_particle/v28_successor/causal_rows_seed_latest.csv",
+    "seed_rows_hash": "fb9f4a1a5e09f84839d84adfd317855f8e62ae11cfc1ef87e971a4ff2c884d2b"
+  },
+  "match_seconds_tolerance": 2.0,
+  "matched_logged_v28_markets": 44,
+  "matched_logged_v28_rows": 67,
+  "missing_logged_component_fields_on_matches": {
+    "p_anchor": 67,
+    "p_long_transport": 67,
+    "p_recent_transport": 67,
+    "p_static_boundary_field": 67,
+    "transport_long_n": 67,
+    "transport_recent_n": 67
+  },
+  "missing_seed_fields": {
+    "decision_ts_utc": 0,
+    "sigma_t_dollars": 0,
+    "strike": 795,
+    "v28_p_yes": 0
+  },
+  "outputs": {
+    "replay_audit_csv": "research_particle/v28_successor/v28_baseline_replay_audit_latest.csv",
+    "replay_audit_json": "research_particle/v28_successor/v28_baseline_replay_audit_latest.json",
+    "summary_json": "logs/edge_research/v28_successor_baseline_replay_latest.json",
+    "summary_md": "logs/edge_research/v28_successor_baseline_replay_latest.md"
+  },
+  "promotion_relevance": "diagnostic_only_not_forward_promotion_evidence",
+  "seed_forward_promotion_rows": 0,
+  "seed_markets": 176,
+  "seed_posthoc_rows": 795,
+  "seed_rows": 795,
+  "unmatched_seed_rows": 728
+}

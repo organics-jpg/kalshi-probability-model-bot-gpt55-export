@@ -1,0 +1,43 @@
+{
+  "candidate_family": "feature_gate_middle_distance_observable_core",
+  "freeze_ts_utc": "2026-05-07T12:00:53.752707+00:00",
+  "physics": "Low-abs-distance repair rows behave like boundary-noise filler. The abs 0.75-1.25 pocket has enough distance from the strike to avoid the worst recross noise while avoiding far-tail overpayment.",
+  "promotion_note": "This is a frozen watch lane only. It cannot be live-tested until its own post-freeze rows clear sample, source, net, cushion, and controlled live-test gates.",
+  "rules": {
+    "abs_floor_raw03_recross50_abs075_ask35": {
+      "abs_max": null,
+      "abs_min": 0.75,
+      "ask_min": 0.35,
+      "raw_min": 0.03,
+      "recross_max": 0.5
+    },
+    "abs_floor_raw05_recross60_abs075_ask35": {
+      "abs_max": null,
+      "abs_min": 0.75,
+      "ask_min": 0.35,
+      "raw_min": 0.05,
+      "recross_max": 0.6
+    },
+    "middle_core_raw03_recross50_abs075_125_ask35": {
+      "abs_max": 1.25,
+      "abs_min": 0.75,
+      "ask_min": 0.35,
+      "raw_min": 0.03,
+      "recross_max": 0.5
+    },
+    "middle_core_raw05_recross60_abs075_125_ask35": {
+      "abs_max": 1.25,
+      "abs_min": 0.75,
+      "ask_min": 0.35,
+      "raw_min": 0.05,
+      "recross_max": 0.6
+    },
+    "upper_abs_tail_raw03_recross50_abs125_ask35": {
+      "abs_max": null,
+      "abs_min": 1.25,
+      "ask_min": 0.35,
+      "raw_min": 0.03,
+      "recross_max": 0.5
+    }
+  }
+}

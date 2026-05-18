@@ -1,0 +1,130 @@
+{
+  "best_lane": {
+    "blockers": [
+      "overlay_selected_settled_lt_30",
+      "overlay_net_not_positive",
+      "overlay_full_loss_cushion_lt_3",
+      "overlay_source_share_unknown"
+    ],
+    "diagnostics": {
+      "possible_market_windows_since_freeze": 10,
+      "pre_sample_short_circuit": true
+    },
+    "live_ready": false,
+    "overlay_rule": "dual_lane_conflict_arbiter_suppress_ask_ge078_recross_ge030",
+    "rows": [],
+    "selected_markets": [],
+    "sidecar_policy": "post_dual_overlay_filter_entry_cheap_penalty025_rank_only",
+    "strict_forward": true,
+    "summary": {
+      "avg_net_cents": 0.0,
+      "coverage_pct": 0.0,
+      "entries": 0,
+      "full_loss_cushion": 0,
+      "losses": 0,
+      "net_cents": 0,
+      "reconstructed_share": null,
+      "settled": 0,
+      "source_counts": {},
+      "source_gate_row_margin": null,
+      "wins": 0,
+      "worst_loss_cents": 0.0
+    }
+  },
+  "earliest_min_sample_local_time": "2026-05-08T07:58:41.954114-04:00",
+  "earliest_min_sample_utc": "2026-05-08T11:58:41.954114+00:00",
+  "force_replay": false,
+  "freeze_local_time": "2026-05-08T00:28:41.954114-04:00",
+  "generated_at_utc": "2026-05-08T07:04:41.721107+00:00",
+  "lanes": [
+    {
+      "blockers": [
+        "overlay_selected_settled_lt_30",
+        "overlay_net_not_positive",
+        "overlay_full_loss_cushion_lt_3",
+        "overlay_source_share_unknown"
+      ],
+      "diagnostics": {
+        "possible_market_windows_since_freeze": 10,
+        "pre_sample_short_circuit": true
+      },
+      "live_ready": false,
+      "overlay_rule": "dual_lane_conflict_arbiter_suppress_ask_ge078_recross_ge030",
+      "rows": [],
+      "selected_markets": [],
+      "sidecar_policy": "post_dual_overlay_filter_entry_cheap_penalty025_rank_only",
+      "strict_forward": true,
+      "summary": {
+        "avg_net_cents": 0.0,
+        "coverage_pct": 0.0,
+        "entries": 0,
+        "full_loss_cushion": 0,
+        "losses": 0,
+        "net_cents": 0,
+        "reconstructed_share": null,
+        "settled": 0,
+        "source_counts": {},
+        "source_gate_row_margin": null,
+        "wins": 0,
+        "worst_loss_cents": 0.0
+      }
+    },
+    {
+      "blockers": [
+        "overlay_selected_settled_lt_30",
+        "overlay_net_not_positive",
+        "overlay_full_loss_cushion_lt_3",
+        "overlay_source_share_unknown"
+      ],
+      "diagnostics": {
+        "possible_market_windows_since_freeze": 10,
+        "pre_sample_short_circuit": true
+      },
+      "live_ready": false,
+      "overlay_rule": "dual_lane_conflict_arbiter_suppress_ask_ge078_recross_ge030",
+      "rows": [],
+      "selected_markets": [],
+      "sidecar_policy": "post_dual_overlay_filter_bridge_cheap_penalty025_rank_only",
+      "strict_forward": true,
+      "summary": {
+        "avg_net_cents": 0.0,
+        "coverage_pct": 0.0,
+        "entries": 0,
+        "full_loss_cushion": 0,
+        "losses": 0,
+        "net_cents": 0,
+        "reconstructed_share": null,
+        "settled": 0,
+        "source_counts": {},
+        "source_gate_row_margin": null,
+        "wins": 0,
+        "worst_loss_cents": 0.0
+      }
+    }
+  ],
+  "live_baseline_cents": 2215.0,
+  "market_windows_remaining_to_min_sample": 20,
+  "possible_market_windows_since_freeze": 10,
+  "pre_sample_short_circuit": true,
+  "promotion_use": "own_freeze_only",
+  "read": [
+    "Research-only own-freeze dual-lane conflict arbiter; no live bot changes or orders.",
+    "This is a coordinator arbiter candidate, not a second independent live bot.",
+    "The rule is observable before entry: suppress rows with ask_prob >= 0.78 and recross hazard >= 0.30.",
+    "Rows before this freeze are diagnostic only and cannot promote this branch."
+  ],
+  "state": {
+    "arbiter_rule": {
+      "name": "dual_lane_conflict_arbiter_suppress_ask_ge078_recross_ge030",
+      "suppress_when": {
+        "ask_prob_min": 0.78,
+        "recross_hazard_score_min": 0.3
+      },
+      "use": "single_process_live_coordinator_conflict_arbiter_candidate"
+    },
+    "base_candidate": "dual_lane_overlap_union",
+    "candidate_family": "dual_lane_conflict_arbiter_watch",
+    "freeze_ts_utc": "2026-05-08T04:28:41.954114+00:00",
+    "physical_hypothesis": "High ask cost plus elevated recross hazard marks path-unstable rows where a simple dual-lane entry is likely to need v28-style side-flip or exit-state management. The arbiter suppresses those rows and keeps the lower-conflict dual-lane opportunities."
+  }
+}

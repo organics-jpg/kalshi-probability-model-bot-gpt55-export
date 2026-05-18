@@ -1,0 +1,341 @@
+{
+  "generated_utc": "20260502_184704Z",
+  "lock": {
+    "candidates": [
+      {
+        "kind": "simple",
+        "name": "raw_regime_blend_high_price_20260502_1510",
+        "policy": {
+          "ask_max": 100.0,
+          "chooser": "score_regime_blend",
+          "gate": "none",
+          "label": "choose=score_regime_blend; score_regime_blend>=0.95; ask<=100; sec_to_close>=0",
+          "min_score": 0.95,
+          "min_seconds_to_close": 0.0
+        }
+      },
+      {
+        "kind": "simple",
+        "name": "raw_score_min_book_rv15_existing_lock",
+        "policy": {
+          "ask_max": 100.0,
+          "chooser": "score_min_book_rv15",
+          "gate": "none",
+          "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=100; sec_to_close>=0",
+          "min_score": 0.9,
+          "min_seconds_to_close": 0.0
+        }
+      },
+      {
+        "kind": "simple",
+        "name": "economical_score_min_book_rv15_20260502_1511",
+        "policy": {
+          "ask_max": 95.0,
+          "chooser": "score_min_book_rv15",
+          "gate": "none",
+          "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.8; ask<=95; sec_to_close>=60",
+          "min_score": 0.8,
+          "min_seconds_to_close": 60.0
+        }
+      },
+      {
+        "fallback": {
+          "ask_max": 100.0,
+          "chooser": "score_min_book_rv15",
+          "gate": "none",
+          "label": "fallback; choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=100; sec>=0; sec<=300",
+          "max_seconds_to_close": 300.0,
+          "min_score": 0.9,
+          "min_seconds_to_close": 0.0,
+          "name": "fallback"
+        },
+        "kind": "staged",
+        "name": "staged_score_min_fallback_20260502_1511",
+        "stage1": {
+          "ask_max": 90.0,
+          "chooser": "score_min_book_rv15",
+          "gate": "none",
+          "label": "economical; choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=90; sec>=60",
+          "max_seconds_to_close": null,
+          "min_score": 0.9,
+          "min_seconds_to_close": 60.0,
+          "name": "economical"
+        }
+      }
+    ],
+    "created_utc": "2026-05-02T15:16:29.409376+00:00",
+    "lock_close_dt": "2026-05-02T15:00:00+00:00",
+    "lock_id": "locked_interval_candidates_v1"
+  },
+  "summaries": [
+    {
+      "kind": "simple",
+      "label": "choose=score_regime_blend; score_regime_blend>=0.95; ask<=100; sec_to_close>=0",
+      "metrics": {
+        "all": {
+          "accuracy": 0.986013986013986,
+          "ask_eq_100": 19,
+          "ask_ge_95": 126,
+          "base_markets": 159,
+          "coverage": 0.89937106918239,
+          "losses": 2,
+          "markets": 143,
+          "median_ask": 97.0,
+          "median_seconds_to_close": 233.037,
+          "wins": 141
+        },
+        "fresh": {
+          "accuracy": 1.0,
+          "ask_eq_100": 1,
+          "ask_ge_95": 9,
+          "base_markets": 12,
+          "coverage": 0.8333333333333334,
+          "losses": 0,
+          "markets": 10,
+          "median_ask": 96.5,
+          "median_seconds_to_close": 173.595,
+          "wins": 10
+        },
+        "holdout": {
+          "accuracy": 1.0,
+          "ask_eq_100": 4,
+          "ask_ge_95": 24,
+          "base_markets": 32,
+          "coverage": 0.875,
+          "losses": 0,
+          "markets": 28,
+          "median_ask": 97.5,
+          "median_seconds_to_close": 224.04000000000002,
+          "wins": 28
+        },
+        "train": {
+          "accuracy": 0.9770114942528736,
+          "ask_eq_100": 12,
+          "ask_ge_95": 78,
+          "base_markets": 95,
+          "coverage": 0.9157894736842105,
+          "losses": 2,
+          "markets": 87,
+          "median_ask": 97.0,
+          "median_seconds_to_close": 235.717,
+          "wins": 85
+        },
+        "validation": {
+          "accuracy": 1.0,
+          "ask_eq_100": 3,
+          "ask_ge_95": 24,
+          "base_markets": 32,
+          "coverage": 0.875,
+          "losses": 0,
+          "markets": 28,
+          "median_ask": 97.0,
+          "median_seconds_to_close": 162.619,
+          "wins": 28
+        }
+      },
+      "name": "raw_regime_blend_high_price_20260502_1510"
+    },
+    {
+      "kind": "simple",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=100; sec_to_close>=0",
+      "metrics": {
+        "all": {
+          "accuracy": 0.9794520547945206,
+          "ask_eq_100": 14,
+          "ask_ge_95": 87,
+          "base_markets": 159,
+          "coverage": 0.9182389937106918,
+          "losses": 3,
+          "markets": 146,
+          "median_ask": 96.0,
+          "median_seconds_to_close": 240.02949999999998,
+          "wins": 143
+        },
+        "fresh": {
+          "accuracy": 1.0,
+          "ask_eq_100": 0,
+          "ask_ge_95": 4,
+          "base_markets": 12,
+          "coverage": 0.8333333333333334,
+          "losses": 0,
+          "markets": 10,
+          "median_ask": 94.0,
+          "median_seconds_to_close": 271.57050000000004,
+          "wins": 10
+        },
+        "holdout": {
+          "accuracy": 1.0,
+          "ask_eq_100": 2,
+          "ask_ge_95": 16,
+          "base_markets": 32,
+          "coverage": 0.90625,
+          "losses": 0,
+          "markets": 29,
+          "median_ask": 96.0,
+          "median_seconds_to_close": 237.43,
+          "wins": 29
+        },
+        "train": {
+          "accuracy": 0.9659090909090909,
+          "ask_eq_100": 10,
+          "ask_ge_95": 57,
+          "base_markets": 95,
+          "coverage": 0.9263157894736842,
+          "losses": 3,
+          "markets": 88,
+          "median_ask": 96.0,
+          "median_seconds_to_close": 269.87699999999995,
+          "wins": 85
+        },
+        "validation": {
+          "accuracy": 1.0,
+          "ask_eq_100": 2,
+          "ask_ge_95": 14,
+          "base_markets": 32,
+          "coverage": 0.90625,
+          "losses": 0,
+          "markets": 29,
+          "median_ask": 94.0,
+          "median_seconds_to_close": 233.037,
+          "wins": 29
+        }
+      },
+      "name": "raw_score_min_book_rv15_existing_lock"
+    },
+    {
+      "kind": "simple",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.8; ask<=95; sec_to_close>=60",
+      "metrics": {
+        "all": {
+          "accuracy": 0.8805970149253731,
+          "ask_eq_100": 0,
+          "ask_ge_95": 10,
+          "base_markets": 159,
+          "coverage": 0.8427672955974843,
+          "losses": 16,
+          "markets": 134,
+          "median_ask": 88.0,
+          "median_seconds_to_close": 473.071,
+          "wins": 118
+        },
+        "fresh": {
+          "accuracy": 0.9,
+          "ask_eq_100": 0,
+          "ask_ge_95": 0,
+          "base_markets": 12,
+          "coverage": 0.8333333333333334,
+          "losses": 1,
+          "markets": 10,
+          "median_ask": 85.0,
+          "median_seconds_to_close": 594.5239999999999,
+          "wins": 9
+        },
+        "holdout": {
+          "accuracy": 0.9230769230769231,
+          "ask_eq_100": 0,
+          "ask_ge_95": 1,
+          "base_markets": 32,
+          "coverage": 0.8125,
+          "losses": 2,
+          "markets": 26,
+          "median_ask": 88.5,
+          "median_seconds_to_close": 526.729,
+          "wins": 24
+        },
+        "train": {
+          "accuracy": 0.8734177215189873,
+          "ask_eq_100": 0,
+          "ask_ge_95": 5,
+          "base_markets": 95,
+          "coverage": 0.8315789473684211,
+          "losses": 10,
+          "markets": 79,
+          "median_ask": 88.0,
+          "median_seconds_to_close": 475.734,
+          "wins": 69
+        },
+        "validation": {
+          "accuracy": 0.8620689655172413,
+          "ask_eq_100": 0,
+          "ask_ge_95": 4,
+          "base_markets": 32,
+          "coverage": 0.90625,
+          "losses": 4,
+          "markets": 29,
+          "median_ask": 88.0,
+          "median_seconds_to_close": 408.034,
+          "wins": 25
+        }
+      },
+      "name": "economical_score_min_book_rv15_20260502_1511"
+    },
+    {
+      "fallback": "fallback; choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=100; sec>=0; sec<=300",
+      "kind": "staged",
+      "metrics": {
+        "all": {
+          "accuracy": 1.0,
+          "ask_eq_100": 22,
+          "ask_ge_95": 118,
+          "base_markets": 159,
+          "coverage": 0.9119496855345912,
+          "losses": 0,
+          "markets": 145,
+          "median_ask": 97.0,
+          "median_seconds_to_close": 234.065,
+          "wins": 145
+        },
+        "fresh": {
+          "accuracy": 1.0,
+          "ask_eq_100": 0,
+          "ask_ge_95": 7,
+          "base_markets": 12,
+          "coverage": 0.8333333333333334,
+          "losses": 0,
+          "markets": 10,
+          "median_ask": 97.0,
+          "median_seconds_to_close": 256.205,
+          "wins": 10
+        },
+        "holdout": {
+          "accuracy": 1.0,
+          "ask_eq_100": 3,
+          "ask_ge_95": 22,
+          "base_markets": 32,
+          "coverage": 0.90625,
+          "losses": 0,
+          "markets": 29,
+          "median_ask": 97.0,
+          "median_seconds_to_close": 237.254,
+          "wins": 29
+        },
+        "train": {
+          "accuracy": 1.0,
+          "ask_eq_100": 17,
+          "ask_ge_95": 76,
+          "base_markets": 95,
+          "coverage": 0.9263157894736842,
+          "losses": 0,
+          "markets": 88,
+          "median_ask": 98.0,
+          "median_seconds_to_close": 233.9035,
+          "wins": 88
+        },
+        "validation": {
+          "accuracy": 1.0,
+          "ask_eq_100": 2,
+          "ask_ge_95": 20,
+          "base_markets": 32,
+          "coverage": 0.875,
+          "losses": 0,
+          "markets": 28,
+          "median_ask": 96.0,
+          "median_seconds_to_close": 203.723,
+          "wins": 28
+        }
+      },
+      "name": "staged_score_min_fallback_20260502_1511",
+      "stage1": "economical; choose=score_min_book_rv15; score_min_book_rv15>=0.9; ask<=90; sec>=60"
+    }
+  ]
+}

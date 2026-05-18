@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-05-04T16:29:38.997395+00:00",
+  "diagnostic_metrics": {
+    "btc_age_ms<=600": {
+      "guard": "btc_age_ms<=600",
+      "holdout_net": 0.22000000000000022,
+      "holdout_retention": 0.9807692307692307,
+      "market_retention": 0.9568345323741008,
+      "markets": 133,
+      "negative_trades": 105,
+      "negative_trades_delta": -4,
+      "net_delta_vs_baseline_dollars": 2.8599999999999985,
+      "net_pnl_dollars": 9.189999999999998,
+      "recurring_market_coverage": 0.3993993993993994,
+      "settled_losses": 0,
+      "strict_pass": true,
+      "trade_retention": 0.9523809523809523,
+      "trades": 200,
+      "train_net": 3.0099999999999993,
+      "train_retention": 0.9428571428571428,
+      "validation_net": 5.96,
+      "validation_retention": 0.9433962264150944
+    },
+    "current_v28_filled_markets": 139,
+    "current_v28_recurring_market_coverage": 0.4174174174174174,
+    "edge_cents>=2.1 AND eligible_depth<=1300": {
+      "guard": "edge_cents>=2.1 AND eligible_depth<=1300",
+      "holdout_net": 0.33999999999999986,
+      "holdout_retention": 0.8461538461538461,
+      "market_retention": 0.8992805755395683,
+      "markets": 125,
+      "negative_trades": 94,
+      "negative_trades_delta": -15,
+      "net_delta_vs_baseline_dollars": 4.44,
+      "net_pnl_dollars": 10.77,
+      "recurring_market_coverage": 0.37537537537537535,
+      "settled_losses": 0,
+      "strict_pass": true,
+      "trade_retention": 0.8666666666666667,
+      "trades": 182,
+      "train_net": 4.75,
+      "train_retention": 0.8952380952380953,
+      "validation_net": 5.680000000000001,
+      "validation_retention": 0.8301886792452831
+    },
+    "matched_trades": 210,
+    "observed_resolved_recurring_markets": 333,
+    "selection_warning": "Research-only forward shadow. These guards improve the current v28 filled-entry stream, but the live v28 bot itself is far below the broad 80% recurring-market coverage target.",
+    "source": "live_v28_current_bot_loss_guard_latest"
+  },
+  "lock_close_dt": "2026-05-04T16:30:00+00:00",
+  "lock_name": "live_v28_entry_guard_shadow",
+  "rules": [
+    {
+      "label": "skip_if_btc_age_ms_gt_600",
+      "research_note": "Clean physics cue: do not trust an entry snapshot whose BTC spot tick is stale.",
+      "threshold": 600.0,
+      "type": "btc_age_gt"
+    },
+    {
+      "edge_min": 2.1,
+      "eligible_depth_max": 1300.0,
+      "label": "skip_if_edge_lt_2p1_or_eligible_depth_gt_1300",
+      "research_note": "Higher retrospective P&L cue; more suspicious because depth can be a crowded-book artifact.",
+      "type": "top_retrospective_guard_fail"
+    }
+  ]
+}

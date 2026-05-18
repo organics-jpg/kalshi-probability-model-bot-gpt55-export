@@ -1,0 +1,10 @@
+{
+  "candidate": "fair_drawdown_lte10_p_hold_ge060_exit_clip_separator",
+  "fair_drawdown_cents_ceiling": 10.0,
+  "freeze_ts_utc": "2026-05-07T04:04:23.876080+00:00",
+  "p_hold_floor": 0.6,
+  "physics": "A shallow fair-value drawdown with still-adequate p_hold is more likely a clipped-winner exit than a true FV/entry failure.",
+  "research_only": true,
+  "rule": "For matched unchanged loss rows, flag rows with fair_drawdown_cents <= 10 and p_hold >= 0.60.",
+  "source_artifact": "v28_exit_clip_separator_diagnostic_latest.json"
+}

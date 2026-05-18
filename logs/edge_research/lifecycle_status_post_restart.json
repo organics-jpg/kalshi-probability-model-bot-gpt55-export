@@ -1,0 +1,123 @@
+{
+  "artifact_exists": {
+    "bot_log": true,
+    "execution_events": true,
+    "guard_ledger": false,
+    "lifecycle_ledger": false,
+    "reconciliation_ledger": true,
+    "score_summary": true
+  },
+  "artifacts": {
+    "bot_log": "logs\\live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\bot.log",
+    "execution_events": "logs\\live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\execution_events.ndjson",
+    "guard_ledger": "logs\\live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\mushroom_v28_exit_guard_shadow.ndjson",
+    "lifecycle_ledger": "logs\\live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\v28_trade_lifecycle.ndjson",
+    "reconciliation_ledger": "logs\\live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\exchange_reconciliation.ndjson",
+    "score_summary": "stats\\mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live\\summary.json"
+  },
+  "candidate_recent_fills_since_run": [],
+  "candidate_recent_fills_since_run_count": 0,
+  "exchange": {
+    "available": false,
+    "error": "HTTPError('429 Too Many Requests: {\"error\":{\"code\":\"too_many_requests\",\"message\":\"too many requests\"}}')"
+  },
+  "exchange_accounting": {
+    "balance": {},
+    "balance_cents": null,
+    "by_market": {},
+    "markets": [],
+    "portfolio_value_cents": null,
+    "source": "kalshi_api_positions_and_fills_since_live_lock",
+    "totals": {
+      "buy_contracts": 0.0,
+      "buy_notional_dollars": 0.0,
+      "exchange_fees_paid_dollars": 0.0,
+      "exchange_gross_realized_pnl_dollars": 0.0,
+      "exchange_net_realized_pnl_after_fees_dollars": 0.0,
+      "fill_fees_dollars": 0.0,
+      "fills": 0,
+      "sell_contracts": 0.0,
+      "sell_notional_dollars": 0.0
+    }
+  },
+  "exchange_active_positions": [],
+  "exchange_active_positions_count": 0,
+  "exchange_resting_orders_count": null,
+  "execution_events": {
+    "approved_seen": 57,
+    "event_types": {
+      "execution_deferred": 17,
+      "exit_capacity_estimated": 1,
+      "exit_plan_built": 1,
+      "exit_reconciled": 1,
+      "exit_signal_seen": 1,
+      "exit_snapshot_built": 1,
+      "exit_submit_full": 1,
+      "exit_submit_start": 1,
+      "exit_submit_success": 1,
+      "fill_full": 2,
+      "mushroom_v28_approved": 18,
+      "mushroom_v28_rejected": 126,
+      "order_submit_start": 4,
+      "order_submit_success": 4,
+      "plan_built": 3,
+      "signal_seen": 18
+    },
+    "events_scanned": 200,
+    "latest_balance_ok": true,
+    "latest_btc_ok": true,
+    "latest_decision_reason": "book_stale",
+    "latest_event_type": "mushroom_v28_rejected",
+    "latest_market": "KXBTC15M-26MAY102230-30",
+    "latest_position_size": 0,
+    "latest_wall_ts": "2026-05-11T02:17:07.081871+00:00",
+    "order_like_seen": 15,
+    "reject_reasons": {
+      "<blank>": 51,
+      "ask_too_high": 9,
+      "book_stale": 50,
+      "btc_stale": 1,
+      "depth_ratio": 7,
+      "edge_below_floor": 45,
+      "exit_trigger": 3,
+      "feature_gate": 10,
+      "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 8,
+      "risk_or_depth": 2,
+      "single_shot_abundant_depth": 12,
+      "warming": 2
+    }
+  },
+  "generated_at_utc": "2026-05-11T02:17:19.199717+00:00",
+  "lifecycle": {
+    "actions": {},
+    "buckets": {},
+    "event_counts": {},
+    "events_scanned": 0,
+    "latest_action": null,
+    "latest_bucket": null,
+    "latest_event": null,
+    "latest_market": null,
+    "latest_ts": null,
+    "reward_delta_cents_tail": 0
+  },
+  "lock": {
+    "acquired_at": "2026-05-11T02:16:25.550967+00:00",
+    "pid": 43572,
+    "run_id": "ad464f5c-439e-4d9b-84ce-feeffc25b5ea",
+    "strategy_tag": "mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live"
+  },
+  "lock_matches": true,
+  "log_source_tag": "live_mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live",
+  "process_running": true,
+  "reconciliation_snapshot_appended": false,
+  "score": {
+    "completed_round_trips": 22,
+    "diagnosis": "ok",
+    "entries_total": 25,
+    "net_pnl_total_dollars": -0.89,
+    "open_positions": 0,
+    "score_mode": "live_only"
+  },
+  "status": "running_scored_round_trips",
+  "strategy_tag": "mushroom_v28_common_clock_phi_reward_memory_lifecycle_exit_toll_size2_live"
+}

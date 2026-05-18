@@ -1,0 +1,43 @@
+{
+  "depth_gate_freeze_ts_utc": "2026-05-06T20:19:43.176664+00:00",
+  "diagnostic_best": {
+    "blockers": [],
+    "candidate": "diagnostic_from_reduce_freeze_reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+    "delta_vs_current_cents": 397.0,
+    "full_loss_cushion": 3,
+    "full_losses_absorbable": 3,
+    "future_settled_rows_needed": 0,
+    "future_suppressed_exits_needed": 0,
+    "has_harmful_suppressed_exit": false,
+    "net_cents_needed_for_cushion3": 0.0,
+    "ready_for_consideration": true,
+    "settled": 132,
+    "suppressed_exits": 8,
+    "suppressed_losers": 0
+  },
+  "generated_at_utc": "2026-05-11T03:14:20.311485+00:00",
+  "interpretation": [
+    "This is a runway report only; diagnostic rows are mechanism evidence, not promotion evidence.",
+    "Diagnostic best diagnostic_from_reduce_freeze_reduce_suppress_p_hold_ge_079_entry_depth_lte_384 has settled 132, suppressed 8, delta 397.0c, and full-loss cushion 3.",
+    "Post-birth best post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384 has settled 60, suppressed 2, delta 94.0c, full-loss cushion 0, and blockers ['full_loss_cushion_lt_3'].",
+    "Post-birth still needs 0 settled rows, 3 suppressed exits, and 206.0c of net cushion before this exit repair is promotion-reviewable."
+  ],
+  "post_birth_best": {
+    "blockers": [
+      "full_loss_cushion_lt_3"
+    ],
+    "candidate": "post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+    "delta_vs_current_cents": 94.0,
+    "full_loss_cushion": 0,
+    "full_losses_absorbable": 0,
+    "future_settled_rows_needed": 0,
+    "future_suppressed_exits_needed": 3,
+    "has_harmful_suppressed_exit": false,
+    "net_cents_needed_for_cushion3": 206.0,
+    "ready_for_consideration": false,
+    "settled": 60,
+    "suppressed_exits": 2,
+    "suppressed_losers": 0
+  },
+  "source_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_depth_gate_latest.json"
+}

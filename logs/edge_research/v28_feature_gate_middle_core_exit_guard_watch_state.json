@@ -1,0 +1,44 @@
+{
+  "candidate_family": "feature_gate_middle_core_exit_guard_watch",
+  "entry_rule": "raw_edge>=0.03, recross<=0.50, abs_d_sigma>=0.75, ask_prob>=0.35",
+  "freeze_ts_utc": "2026-05-07T12:17:14.970836+00:00",
+  "physics": "Middle-distance core rows have strong settlement/hold behavior, but v28-style exits often clip winners. This watch tests existing exit guard suppression signals on that core.",
+  "promotion_note": "Parent-window rows are diagnostic only. Post-freeze rows must clear sample, source, PnL, cushion, and controlled live-test gates before any live test.",
+  "variants": [
+    {
+      "name": "entry_hold_or_no_exit_control",
+      "source": null,
+      "suppress_field": null
+    },
+    {
+      "name": "book_gap_current_exit_control",
+      "source": "book_gap",
+      "suppress_field": "__never__"
+    },
+    {
+      "name": "book_gap_hold_if_suppressed",
+      "source": "book_gap",
+      "suppress_field": "suppressed"
+    },
+    {
+      "name": "loss_guard_v1_hold_if_suppressed",
+      "source": "loss_guard_v1",
+      "suppress_field": "suppressed"
+    },
+    {
+      "name": "loss_guard_v2_hold_if_suppressed",
+      "source": "loss_guard_v2",
+      "suppress_field": "suppressed"
+    },
+    {
+      "name": "loss_guard_v3_hold_if_suppressed",
+      "source": "loss_guard_v3",
+      "suppress_field": "suppressed"
+    },
+    {
+      "name": "reduce_hold_if_suppressed",
+      "source": "reduce",
+      "suppress_field": "suppressed"
+    }
+  ]
+}

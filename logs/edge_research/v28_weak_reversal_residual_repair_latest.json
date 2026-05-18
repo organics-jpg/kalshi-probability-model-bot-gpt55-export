@@ -1,0 +1,422 @@
+{
+  "base_policy": "p60_recross75_near25_delay240_abstain",
+  "base_summary": {
+    "avg_net_cents": -8.947368421052632,
+    "coverage_pct": 75.0,
+    "entries": 114,
+    "losses": 47,
+    "net_cents": -1020.0,
+    "settled": 114,
+    "wins": 67
+  },
+  "best": {
+    "base_summary": {
+      "avg_net_cents": -8.947368421052632,
+      "coverage_pct": 75.0,
+      "entries": 114,
+      "losses": 47,
+      "net_cents": -1020.0,
+      "settled": 114,
+      "wins": 67
+    },
+    "candidate_summary": {
+      "avg_net_cents": -1.6306306306306306,
+      "coverage_pct": 73.02631578947368,
+      "entries": 111,
+      "losses": 38,
+      "net_cents": -181.0,
+      "settled": 111,
+      "wins": 73
+    },
+    "chosen_repairs": 21,
+    "coverage_repaired": false,
+    "delta_vs_weak_reversal_cents": 839.0,
+    "kept_summary": {
+      "avg_net_cents": 0.6111111111111112,
+      "coverage_pct": 59.21052631578947,
+      "entries": 90,
+      "losses": 30,
+      "net_cents": 55.0,
+      "settled": 90,
+      "wins": 60
+    },
+    "loo": {
+      "best_net_cents": -20.0,
+      "negative_exclusions": 111,
+      "worst_net_cents": -322.0
+    },
+    "needed_repairs": 24,
+    "policy": "weak_reversal_skip_recross_65_80_repair_farthest_boundary",
+    "repair_summary": {
+      "avg_net_cents": -11.238095238095237,
+      "coverage_pct": 13.81578947368421,
+      "entries": 21,
+      "losses": 8,
+      "net_cents": -236.0,
+      "settled": 21,
+      "wins": 13
+    },
+    "skipped_summary": {
+      "avg_net_cents": -44.708333333333336,
+      "coverage_pct": 15.789473684210526,
+      "entries": 24,
+      "losses": 17,
+      "net_cents": -1073.0,
+      "settled": 24,
+      "wins": 7
+    }
+  },
+  "diagnostic": "weak_reversal_residual_repair",
+  "forward_denominator": 152,
+  "interpretation": [
+    "Weak-reversal base net is -1020.0c at 75.0% coverage.",
+    "Best residual repair is weak_reversal_skip_recross_65_80_repair_farthest_boundary with net -181.0c at 73.02631578947368% coverage.",
+    "The repair improves damage if positive delta, but is still not live-promotable unless net becomes positive and forward-robust.",
+    "Best leave-one-market worst net is -322.0c with 111 negative exclusions.",
+    "This is discovery-only; any skip tag must be frozen before promotion."
+  ],
+  "ranked": [
+    {
+      "base_summary": {
+        "avg_net_cents": -8.947368421052632,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 47,
+        "net_cents": -1020.0,
+        "settled": 114,
+        "wins": 67
+      },
+      "candidate_summary": {
+        "avg_net_cents": -1.6306306306306306,
+        "coverage_pct": 73.02631578947368,
+        "entries": 111,
+        "losses": 38,
+        "net_cents": -181.0,
+        "settled": 111,
+        "wins": 73
+      },
+      "chosen_repairs": 21,
+      "coverage_repaired": false,
+      "delta_vs_weak_reversal_cents": 839.0,
+      "kept_summary": {
+        "avg_net_cents": 0.6111111111111112,
+        "coverage_pct": 59.21052631578947,
+        "entries": 90,
+        "losses": 30,
+        "net_cents": 55.0,
+        "settled": 90,
+        "wins": 60
+      },
+      "loo": {
+        "best_net_cents": -20.0,
+        "negative_exclusions": 111,
+        "worst_net_cents": -322.0
+      },
+      "needed_repairs": 24,
+      "policy": "weak_reversal_skip_recross_65_80_repair_farthest_boundary",
+      "repair_summary": {
+        "avg_net_cents": -11.238095238095237,
+        "coverage_pct": 13.81578947368421,
+        "entries": 21,
+        "losses": 8,
+        "net_cents": -236.0,
+        "settled": 21,
+        "wins": 13
+      },
+      "skipped_summary": {
+        "avg_net_cents": -44.708333333333336,
+        "coverage_pct": 15.789473684210526,
+        "entries": 24,
+        "losses": 17,
+        "net_cents": -1073.0,
+        "settled": 24,
+        "wins": 7
+      }
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -8.947368421052632,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 47,
+        "net_cents": -1020.0,
+        "settled": 114,
+        "wins": 67
+      },
+      "candidate_summary": {
+        "avg_net_cents": -6.598039215686274,
+        "coverage_pct": 67.10526315789474,
+        "entries": 102,
+        "losses": 40,
+        "net_cents": -673.0,
+        "settled": 102,
+        "wins": 62
+      },
+      "chosen_repairs": 21,
+      "coverage_repaired": false,
+      "delta_vs_weak_reversal_cents": 347.0,
+      "kept_summary": {
+        "avg_net_cents": -5.395061728395062,
+        "coverage_pct": 53.28947368421053,
+        "entries": 81,
+        "losses": 32,
+        "net_cents": -437.0,
+        "settled": 81,
+        "wins": 49
+      },
+      "loo": {
+        "best_net_cents": -512.0,
+        "negative_exclusions": 102,
+        "worst_net_cents": -814.0
+      },
+      "needed_repairs": 33,
+      "policy": "weak_reversal_skip_stc_gte850_repair_farthest_boundary",
+      "repair_summary": {
+        "avg_net_cents": -11.238095238095237,
+        "coverage_pct": 13.81578947368421,
+        "entries": 21,
+        "losses": 8,
+        "net_cents": -236.0,
+        "settled": 21,
+        "wins": 13
+      },
+      "skipped_summary": {
+        "avg_net_cents": -17.606060606060606,
+        "coverage_pct": 21.710526315789473,
+        "entries": 33,
+        "losses": 15,
+        "net_cents": -581.0,
+        "settled": 33,
+        "wins": 18
+      }
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -8.947368421052632,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 47,
+        "net_cents": -1020.0,
+        "settled": 114,
+        "wins": 67
+      },
+      "candidate_summary": {
+        "avg_net_cents": -6.825242718446602,
+        "coverage_pct": 67.76315789473684,
+        "entries": 103,
+        "losses": 40,
+        "net_cents": -703.0,
+        "settled": 103,
+        "wins": 63
+      },
+      "chosen_repairs": 21,
+      "coverage_repaired": false,
+      "delta_vs_weak_reversal_cents": 317.0,
+      "kept_summary": {
+        "avg_net_cents": -5.695121951219512,
+        "coverage_pct": 53.94736842105263,
+        "entries": 82,
+        "losses": 32,
+        "net_cents": -467.0,
+        "settled": 82,
+        "wins": 50
+      },
+      "loo": {
+        "best_net_cents": -542.0,
+        "negative_exclusions": 103,
+        "worst_net_cents": -844.0
+      },
+      "needed_repairs": 32,
+      "policy": "weak_reversal_skip_ask_55_65_repair_farthest_boundary",
+      "repair_summary": {
+        "avg_net_cents": -11.238095238095237,
+        "coverage_pct": 13.81578947368421,
+        "entries": 21,
+        "losses": 8,
+        "net_cents": -236.0,
+        "settled": 21,
+        "wins": 13
+      },
+      "skipped_summary": {
+        "avg_net_cents": -17.21875,
+        "coverage_pct": 21.05263157894737,
+        "entries": 32,
+        "losses": 15,
+        "net_cents": -551.0,
+        "settled": 32,
+        "wins": 17
+      }
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -8.947368421052632,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 47,
+        "net_cents": -1020.0,
+        "settled": 114,
+        "wins": 67
+      },
+      "candidate_summary": {
+        "avg_net_cents": -8.894736842105264,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 46,
+        "net_cents": -1014.0,
+        "settled": 114,
+        "wins": 68
+      },
+      "chosen_repairs": 12,
+      "coverage_repaired": true,
+      "delta_vs_weak_reversal_cents": 6.0,
+      "kept_summary": {
+        "avg_net_cents": -8.490196078431373,
+        "coverage_pct": 67.10526315789474,
+        "entries": 102,
+        "losses": 42,
+        "net_cents": -866.0,
+        "settled": 102,
+        "wins": 60
+      },
+      "loo": {
+        "best_net_cents": -853.0,
+        "negative_exclusions": 114,
+        "worst_net_cents": -1155.0
+      },
+      "needed_repairs": 12,
+      "policy": "weak_reversal_skip_edge_5_8pp_no_repair_farthest_boundary",
+      "repair_summary": {
+        "avg_net_cents": -12.333333333333334,
+        "coverage_pct": 7.894736842105263,
+        "entries": 12,
+        "losses": 4,
+        "net_cents": -148.0,
+        "settled": 12,
+        "wins": 8
+      },
+      "skipped_summary": {
+        "avg_net_cents": -12.666666666666666,
+        "coverage_pct": 7.894736842105263,
+        "entries": 12,
+        "losses": 5,
+        "net_cents": -152.0,
+        "settled": 12,
+        "wins": 7
+      }
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -8.947368421052632,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 47,
+        "net_cents": -1020.0,
+        "settled": 114,
+        "wins": 67
+      },
+      "candidate_summary": {
+        "avg_net_cents": -9.552631578947368,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 46,
+        "net_cents": -1089.0,
+        "settled": 114,
+        "wins": 68
+      },
+      "chosen_repairs": 12,
+      "coverage_repaired": true,
+      "delta_vs_weak_reversal_cents": -69.0,
+      "kept_summary": {
+        "avg_net_cents": -9.22549019607843,
+        "coverage_pct": 67.10526315789474,
+        "entries": 102,
+        "losses": 42,
+        "net_cents": -941.0,
+        "settled": 102,
+        "wins": 60
+      },
+      "loo": {
+        "best_net_cents": -928.0,
+        "negative_exclusions": 114,
+        "worst_net_cents": -1230.0
+      },
+      "needed_repairs": 12,
+      "policy": "weak_reversal_skip_edge_5_8pp_rejected_repair_farthest_boundary",
+      "repair_summary": {
+        "avg_net_cents": -12.333333333333334,
+        "coverage_pct": 7.894736842105263,
+        "entries": 12,
+        "losses": 4,
+        "net_cents": -148.0,
+        "settled": 12,
+        "wins": 8
+      },
+      "skipped_summary": {
+        "avg_net_cents": -6.416666666666667,
+        "coverage_pct": 7.894736842105263,
+        "entries": 12,
+        "losses": 5,
+        "net_cents": -77.0,
+        "settled": 12,
+        "wins": 7
+      }
+    },
+    {
+      "base_summary": {
+        "avg_net_cents": -8.947368421052632,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 47,
+        "net_cents": -1020.0,
+        "settled": 114,
+        "wins": 67
+      },
+      "candidate_summary": {
+        "avg_net_cents": -10.56140350877193,
+        "coverage_pct": 75.0,
+        "entries": 114,
+        "losses": 49,
+        "net_cents": -1204.0,
+        "settled": 114,
+        "wins": 65
+      },
+      "chosen_repairs": 20,
+      "coverage_repaired": true,
+      "delta_vs_weak_reversal_cents": -184.0,
+      "kept_summary": {
+        "avg_net_cents": -9.904255319148936,
+        "coverage_pct": 61.8421052631579,
+        "entries": 94,
+        "losses": 41,
+        "net_cents": -931.0,
+        "settled": 94,
+        "wins": 53
+      },
+      "loo": {
+        "best_net_cents": -1043.0,
+        "negative_exclusions": 114,
+        "worst_net_cents": -1345.0
+      },
+      "needed_repairs": 20,
+      "policy": "weak_reversal_skip_edge_5_8pp_repair_farthest_boundary",
+      "repair_summary": {
+        "avg_net_cents": -13.65,
+        "coverage_pct": 13.157894736842104,
+        "entries": 20,
+        "losses": 8,
+        "net_cents": -273.0,
+        "settled": 20,
+        "wins": 12
+      },
+      "skipped_summary": {
+        "avg_net_cents": -4.35,
+        "coverage_pct": 13.157894736842104,
+        "entries": 20,
+        "losses": 6,
+        "net_cents": -87.0,
+        "settled": 20,
+        "wins": 14
+      }
+    }
+  ]
+}

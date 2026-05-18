@@ -1,0 +1,10 @@
+{
+  "candidate": "lead_fv_bridge_plus_reduce_geometry_plus_collapse_drawdown_lte_12",
+  "exit_rules": [
+    "Suppress mushroom_v28_probability_reduce when p_hold >= 0.75 and fair_drawdown sign agrees with held side.",
+    "Suppress mushroom_v28_probability_collapse_full when fair_drawdown_cents <= 12."
+  ],
+  "freeze_ts_utc": "2026-05-06T15:02:08.902210+00:00",
+  "fv_bridge": "first_eligible_top80_escape_energy+escape_edge6_or_p65_or_far_edge4+continuous_recross_forget",
+  "physics": "Recover still-valid high-conviction theses clipped by reduce exits, and avoid full-collapse exits when drawdown is shallow enough to look like turbulence."
+}

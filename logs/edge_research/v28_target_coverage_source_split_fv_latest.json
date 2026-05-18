@@ -1,0 +1,152 @@
+{
+  "entries": 112,
+  "forward_denominator": 152,
+  "freeze_ts": "2026-05-06T02:08:01.321286+00:00",
+  "interpretation": [
+    "all best is logit125_p75 over 112 rows with Brier/logloss deltas -0.0015769093300218757/-0.00675303480588537.",
+    "approved_entry best is logit125_p70 over 7 rows with Brier/logloss deltas -0.005753117335864851/-0.03925202238843982.",
+    "rejected_actionable best is logit125_p75 over 105 rows with Brier/logloss deltas -0.0012984954629656775/-0.004586435633715074."
+  ],
+  "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "settled": 112,
+  "source_groups": [
+    {
+      "best_variant": "logit125_p75",
+      "ranked": [
+        {
+          "brier_mean_delta": -0.0015769093300218757,
+          "brier_negative_count": 20,
+          "brier_positive_count": 1,
+          "logloss_mean_delta": -0.00675303480588537,
+          "logloss_negative_count": 20,
+          "logloss_positive_count": 1,
+          "losses": 48,
+          "net_cents": -626.0,
+          "rows": 112,
+          "variant": "logit125_p75",
+          "wins": 64
+        },
+        {
+          "brier_mean_delta": -0.0003773633313270222,
+          "brier_negative_count": 26,
+          "brier_positive_count": 5,
+          "logloss_mean_delta": -0.003571990138160214,
+          "logloss_negative_count": 26,
+          "logloss_positive_count": 5,
+          "losses": 48,
+          "net_cents": -626.0,
+          "rows": 112,
+          "variant": "logit125_p70",
+          "wins": 64
+        },
+        {
+          "brier_mean_delta": 0.0,
+          "brier_negative_count": 0,
+          "brier_positive_count": 0,
+          "logloss_mean_delta": 0.0,
+          "logloss_negative_count": 0,
+          "logloss_positive_count": 0,
+          "losses": 48,
+          "net_cents": -626.0,
+          "rows": 112,
+          "variant": "raw_probability",
+          "wins": 64
+        }
+      ],
+      "rows": 112,
+      "source": "all"
+    },
+    {
+      "best_variant": "logit125_p70",
+      "ranked": [
+        {
+          "brier_mean_delta": -0.005753117335864851,
+          "brier_negative_count": 7,
+          "brier_positive_count": 0,
+          "logloss_mean_delta": -0.03925202238843982,
+          "logloss_negative_count": 7,
+          "logloss_positive_count": 0,
+          "losses": 0,
+          "net_cents": 63.0,
+          "rows": 7,
+          "variant": "logit125_p70",
+          "wins": 7
+        },
+        {
+          "brier_mean_delta": -0.005753117335864851,
+          "brier_negative_count": 7,
+          "brier_positive_count": 0,
+          "logloss_mean_delta": -0.03925202238843982,
+          "logloss_negative_count": 7,
+          "logloss_positive_count": 0,
+          "losses": 0,
+          "net_cents": 63.0,
+          "rows": 7,
+          "variant": "logit125_p75",
+          "wins": 7
+        },
+        {
+          "brier_mean_delta": 0.0,
+          "brier_negative_count": 0,
+          "brier_positive_count": 0,
+          "logloss_mean_delta": 0.0,
+          "logloss_negative_count": 0,
+          "logloss_positive_count": 0,
+          "losses": 0,
+          "net_cents": 63.0,
+          "rows": 7,
+          "variant": "raw_probability",
+          "wins": 7
+        }
+      ],
+      "rows": 7,
+      "source": "approved_entry"
+    },
+    {
+      "best_variant": "logit125_p75",
+      "ranked": [
+        {
+          "brier_mean_delta": -0.0012984954629656775,
+          "brier_negative_count": 13,
+          "brier_positive_count": 1,
+          "logloss_mean_delta": -0.004586435633715074,
+          "logloss_negative_count": 13,
+          "logloss_positive_count": 1,
+          "losses": 48,
+          "net_cents": -689.0,
+          "rows": 105,
+          "variant": "logit125_p75",
+          "wins": 57
+        },
+        {
+          "brier_mean_delta": -1.897973102450031e-05,
+          "brier_negative_count": 19,
+          "brier_positive_count": 5,
+          "logloss_mean_delta": -0.0011933213214749068,
+          "logloss_negative_count": 19,
+          "logloss_positive_count": 5,
+          "losses": 48,
+          "net_cents": -689.0,
+          "rows": 105,
+          "variant": "logit125_p70",
+          "wins": 57
+        },
+        {
+          "brier_mean_delta": 0.0,
+          "brier_negative_count": 0,
+          "brier_positive_count": 0,
+          "logloss_mean_delta": 0.0,
+          "logloss_negative_count": 0,
+          "logloss_positive_count": 0,
+          "losses": 48,
+          "net_cents": -689.0,
+          "rows": 105,
+          "variant": "raw_probability",
+          "wins": 57
+        }
+      ],
+      "rows": 105,
+      "source": "rejected_actionable"
+    }
+  ]
+}

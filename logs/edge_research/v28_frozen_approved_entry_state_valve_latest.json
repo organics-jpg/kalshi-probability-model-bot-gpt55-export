@@ -1,0 +1,37 @@
+{
+  "blockers": [],
+  "candidate": {
+    "delta_vs_control_cents": 180.0,
+    "entries": 138,
+    "gross_cents": 885.0,
+    "losses": 16,
+    "market_coverage_pct": 100.0,
+    "policy": "same_side_reentry_gap_lte_15pp",
+    "settled": 138,
+    "skipped_entries": 6,
+    "skipped_gross_cents": -180.0,
+    "wins": 122
+  },
+  "control": {
+    "entries": 144,
+    "gross_cents": 705.0,
+    "losses": 17,
+    "market_coverage_pct": 100.0,
+    "policy": "current_v28_approved_all",
+    "settled": 144,
+    "skipped_entries": 0,
+    "skipped_gross_cents": 0,
+    "wins": 127
+  },
+  "freeze": {
+    "freeze_ts_utc": "2026-05-06T02:42:53.253731+00:00",
+    "policy": "same_side_reentry_gap_lte_15pp",
+    "rule": "keep first same-market same-side entry; for same-side reentries require raw_probability - ask_probability <= 0.15"
+  },
+  "future_markets": 86,
+  "future_rows": 144,
+  "interpretation": [
+    "Frozen policy same_side_reentry_gap_lte_15pp has 138 future settled approved rows and delta 180.0c vs current approved entries.",
+    "This validates only actual v28-approved entries after the freeze timestamp; it does not use rejected simulated rows."
+  ]
+}

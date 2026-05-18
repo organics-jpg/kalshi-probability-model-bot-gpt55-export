@@ -1,0 +1,82 @@
+{
+  "avg_brier_yes": 0.14567028417757133,
+  "builder_script": "build_v28_successor_logged_event_dataset.py",
+  "by_event_type": {
+    "execution_deferred": 197,
+    "fill_full": 251,
+    "fill_partial": 2,
+    "mushroom_v28_approved": 450,
+    "plan_built": 395,
+    "signal_seen": 450
+  },
+  "by_side": {
+    "no": 1007,
+    "yes": 738
+  },
+  "eligibility_counts": {
+    "forward_promotion": 0,
+    "holdout": 0,
+    "training": 1745,
+    "validation": 1745
+  },
+  "generated_utc": "2026-05-12T07:29:16Z",
+  "inputs": {
+    "execution_events": {
+      "event_type_counts": {
+        "execution_deferred": 509,
+        "fill_full": 564,
+        "fill_partial": 5,
+        "mushroom_v28_approved": 1078,
+        "plan_built": 999,
+        "signal_seen": 1078
+      },
+      "exists": true,
+      "lines_read": 16078,
+      "logged_v28_events": 4233,
+      "logged_v28_markets": 314,
+      "logged_v28_time_range": {
+        "end": "2026-05-07T17:11:41.297Z",
+        "start": "2026-05-01T02:17:02.389Z"
+      },
+      "parse_errors": 0,
+      "source_hash": "3a0ca283d6d43b037c1b362916fadaf869164c2383e8490cbc93d596991ea5ef",
+      "source_path": "logs/live_mushroom_v28_size2/execution_events.ndjson"
+    },
+    "seed_rows_csv": "research_particle/v28_successor/causal_rows_seed_latest.csv",
+    "seed_rows_hash": "fb9f4a1a5e09f84839d84adfd317855f8e62ae11cfc1ef87e971a4ff2c884d2b"
+  },
+  "label_summary": {
+    "conflicting_label_markets": 0,
+    "conflicts": {},
+    "label_markets": 176,
+    "seed_rows": 795
+  },
+  "leakage_audit": {
+    "notes": [
+      "Logged v28 event fields are predecision outputs.",
+      "Market labels are attached after resolution from the posthoc seed label lookup.",
+      "Rows are diagnostic only and not allowed for forward promotion."
+    ],
+    "status": "pass_for_logged_event_diagnostic_not_promotion"
+  },
+  "market_count": 118,
+  "missing_counts": {
+    "arrow": 0,
+    "book_age_ms": 0,
+    "btc_price": 0,
+    "d_sigma": 0,
+    "decision_ts_utc": 0,
+    "prior_adverse_path_memory_dollars": 0,
+    "prior_logged_event_count": 0,
+    "strike": 0,
+    "y_yes_win": 0
+  },
+  "outputs": {
+    "audit_json": "logs/edge_research/v28_successor_logged_event_dataset_audit_latest.json",
+    "audit_md": "logs/edge_research/v28_successor_logged_event_dataset_audit_latest.md",
+    "logged_rows_csv": "research_particle/v28_successor/causal_rows_logged_events_latest.csv",
+    "logged_rows_json": "research_particle/v28_successor/causal_rows_logged_events_latest.json"
+  },
+  "pre_resolution_rows": 1745,
+  "row_count": 1745
+}

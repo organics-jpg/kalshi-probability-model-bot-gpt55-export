@@ -1,0 +1,28 @@
+{
+  "freeze_ts": "2026-05-05T22:57:17.938743+00:00",
+  "policies": [
+    {
+      "physics": "Raises raw v28 confidence floor from 0.50 to 0.52 while keeping nonnegative executable edge. Tests whether a tiny probability margin removes noisy boundary rows while keeping broad coverage.",
+      "policy": "v28_raw_p52_edge0",
+      "role": "raw_calibration_challenger"
+    },
+    {
+      "physics": "Subtracts estimated Kalshi taker fee from raw v28 probability before entry. This is pure execution physics, not a fitted threshold.",
+      "policy": "raw_fee_friction_p50_edge0",
+      "role": "fee_aware_raw_challenger"
+    },
+    {
+      "physics": "Subtracts fee plus fragile-touch depth penalties. Tests whether thin/crowded touch conditions make raw fair value overconfident.",
+      "policy": "raw_touch_friction_p50_edge0",
+      "role": "touch_depth_raw_challenger"
+    }
+  ],
+  "promotion_floor": {
+    "fv_validation_allows_shadow_rows": true,
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

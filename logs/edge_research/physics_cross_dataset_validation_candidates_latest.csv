@@ -1,0 +1,73 @@
+contract_accuracy,contract_retention,contract_wins,contracts,dataset,family,label,rule_id,total_contracts,total_trades,trade_accuracy,trade_retention,trade_wins,trades
+1.0,1.0,160,160,entry_90_stop_78,baseline,all resolved trades,baseline,160,80,1.0,1.0,80,80
+1.0,0.95,152,152,entry_90_stop_78,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,160,80,1.0,0.95,76,76
+1.0,0.875,140,140,entry_90_stop_78,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,160,80,1.0,0.875,70,70
+1.0,0.875,140,140,entry_90_stop_78,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,160,80,1.0,0.875,70,70
+1.0,0.7875,126,126,entry_90_stop_78,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,160,80,1.0,0.7875,63,63
+1.0,0.75,120,120,entry_90_stop_78,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,160,80,1.0,0.75,60,60
+1.0,0.85,136,136,entry_90_stop_78,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,160,80,1.0,0.85,68,68
+1.0,0.825,132,132,entry_90_stop_78,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,160,80,1.0,0.825,66,66
+1.0,0.775,124,124,entry_90_stop_78,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,160,80,1.0,0.775,62,62
+0.6453900709219859,1.0,91,141,live_87_77_67,baseline,all resolved trades,baseline,141,9,0.7777777777777778,1.0,7,9
+0.6453900709219859,1.0,91,141,live_87_77_67,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,141,9,0.7777777777777778,1.0,7,9
+0.6453900709219859,1.0,91,141,live_87_77_67,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,141,9,0.7777777777777778,1.0,7,9
+0.6453900709219859,1.0,91,141,live_87_77_67,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,141,9,0.7777777777777778,1.0,7,9
+0.5867768595041323,0.8581560283687943,71,121,live_87_77_67,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,141,9,0.75,0.8888888888888888,6,8
+0.5867768595041323,0.8581560283687943,71,121,live_87_77_67,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,141,9,0.75,0.8888888888888888,6,8
+0.6453900709219859,1.0,91,141,live_87_77_67,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,141,9,0.7777777777777778,1.0,7,9
+0.6453900709219859,1.0,91,141,live_87_77_67,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,141,9,0.7777777777777778,1.0,7,9
+0.5867768595041323,0.8581560283687943,71,121,live_87_77_67,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,141,9,0.75,0.8888888888888888,6,8
+0.9839454144089905,1.0,4903,4983,live_90_70,baseline,all resolved trades,baseline,4983,509,0.9842829076620825,1.0,501,509
+0.982913284920974,0.939594621713827,4602,4682,live_90_70,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,4983,509,0.9832635983263598,0.9390962671905697,470,478
+0.9841269841269841,0.885009030704395,4340,4410,live_90_70,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,4983,509,0.9844444444444445,0.8840864440078585,443,450
+0.9836829836829837,0.8609271523178808,4220,4290,live_90_70,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,4983,509,0.9840182648401826,0.8605108055009824,431,438
+0.9826732673267327,0.8107565723459763,3970,4040,live_90_70,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,4983,509,0.9830508474576272,0.8113948919449901,406,413
+0.9819587628865979,0.7786474011639575,3810,3880,live_90_70,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,4983,509,0.982367758186398,0.7799607072691552,390,397
+0.9827586206896551,0.8147702187437287,3990,4060,live_90_70,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,4983,509,0.983132530120482,0.8153241650294696,408,415
+0.9822784810126582,0.7926951635560907,3880,3950,live_90_70,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,4983,509,0.9826732673267327,0.793713163064833,397,404
+0.9822784810126582,0.7926951635560907,3880,3950,live_90_70,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,4983,509,0.9826732673267327,0.793713163064833,397,404
+1.0,1.0,1174,1174,live_90_78,baseline,all resolved trades,baseline,1174,163,1.0,1.0,163,163
+1.0,0.9301533219761499,1092,1092,live_90_78,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,1174,163,1.0,0.9202453987730062,150,150
+1.0,0.9114139693356048,1070,1070,live_90_78,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,1174,163,1.0,0.8895705521472392,145,145
+1.0,0.873083475298126,1025,1025,live_90_78,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,1174,163,1.0,0.8711656441717791,142,142
+1.0,0.7632027257240205,896,896,live_90_78,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,1174,163,1.0,0.7300613496932515,119,119
+1.0,0.7350936967632027,863,863,live_90_78,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,1174,163,1.0,0.6993865030674846,114,114
+1.0,0.797274275979557,936,936,live_90_78,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,1174,163,1.0,0.7730061349693251,126,126
+1.0,0.797274275979557,936,936,live_90_78,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,1174,163,1.0,0.7730061349693251,126,126
+1.0,0.7461669505962522,876,876,live_90_78,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,1174,163,1.0,0.7055214723926381,115,115
+0.8888888888888888,1.0,112,126,live_90_truffle_exit_size2,baseline,all resolved trades,baseline,126,63,0.8888888888888888,1.0,56,63
+0.8928571428571429,0.8888888888888888,100,112,live_90_truffle_exit_size2,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,126,63,0.8928571428571429,0.8888888888888888,50,56
+0.8846153846153846,0.8253968253968254,92,104,live_90_truffle_exit_size2,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,126,63,0.8846153846153846,0.8253968253968254,46,52
+0.8846153846153846,0.8253968253968254,92,104,live_90_truffle_exit_size2,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,126,63,0.8846153846153846,0.8253968253968254,46,52
+0.9069767441860465,0.6825396825396826,78,86,live_90_truffle_exit_size2,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,126,63,0.9069767441860465,0.6825396825396826,39,43
+0.8837209302325582,0.6825396825396826,76,86,live_90_truffle_exit_size2,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,126,63,0.8837209302325582,0.6825396825396826,38,43
+0.8936170212765957,0.746031746031746,84,94,live_90_truffle_exit_size2,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,126,63,0.8936170212765957,0.746031746031746,42,47
+0.9111111111111111,0.7142857142857143,82,90,live_90_truffle_exit_size2,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,126,63,0.9111111111111111,0.7142857142857143,41,45
+0.9047619047619048,0.6666666666666666,76,84,live_90_truffle_exit_size2,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,126,63,0.9047619047619048,0.6666666666666666,38,42
+0.4,1.0,8,20,live_liquidity_dwell_size2,baseline,all resolved trades,baseline,20,5,0.4,1.0,2,5
+0.4,1.0,8,20,live_liquidity_dwell_size2,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,20,5,0.4,1.0,2,5
+0.4,1.0,8,20,live_liquidity_dwell_size2,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,20,5,0.4,1.0,2,5
+0.4,1.0,8,20,live_liquidity_dwell_size2,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,20,5,0.4,1.0,2,5
+0.3333333333333333,0.6,4,12,live_liquidity_dwell_size2,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,20,5,0.3333333333333333,0.6,1,3
+0.3333333333333333,0.6,4,12,live_liquidity_dwell_size2,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,20,5,0.3333333333333333,0.6,1,3
+0.25,0.8,4,16,live_liquidity_dwell_size2,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,20,5,0.25,0.8,1,4
+0.25,0.8,4,16,live_liquidity_dwell_size2,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,20,5,0.25,0.8,1,4
+0.3333333333333333,0.6,4,12,live_liquidity_dwell_size2,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,20,5,0.3333333333333333,0.6,1,3
+0.9531153608883405,1.0,1545,1621,pooled_independent_ex_live_90_70,baseline,all resolved trades,baseline,1621,320,0.9625,1.0,308,320
+0.9512195121951219,0.9358420727945712,1443,1517,pooled_independent_ex_live_90_70,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,1621,320,0.9628378378378378,0.925,285,296
+0.9498305084745763,0.9099321406539174,1401,1475,pooled_independent_ex_live_90_70,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,1621,320,0.9608540925266904,0.878125,270,281
+0.9482517482517483,0.8821714990746453,1356,1430,pooled_independent_ex_live_90_70,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,1621,320,0.960431654676259,0.86875,267,278
+0.9468170829975826,0.7655768044417026,1175,1241,pooled_independent_ex_live_90_70,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,1621,320,0.9661016949152542,0.7375,228,236
+0.9434276206322796,0.7415175817396669,1134,1202,pooled_independent_ex_live_90_70,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,1621,320,0.9605263157894737,0.7125,219,228
+0.9455782312925171,0.8161628624305984,1251,1323,pooled_independent_ex_live_90_70,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,1621,320,0.9606299212598425,0.79375,244,254
+0.9467680608365019,0.81122763726095,1245,1315,pooled_independent_ex_live_90_70,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,1621,320,0.964,0.78125,241,250
+0.9457682826622843,0.7507711289327575,1151,1217,pooled_independent_ex_live_90_70,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,1621,320,0.9652173913043478,0.71875,222,230
+0.9763779527559056,1.0,6448,6604,pooled_all,baseline,all resolved trades,baseline,6604,829,0.9758745476477684,1.0,809,829
+0.9751572834328117,0.9386735311932163,6045,6199,pooled_all,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.5,adverse15_gt10_v28_cushion_0p5,6604,829,0.975452196382429,0.9336550060313631,755,774
+0.9755310110450297,0.8911265899454875,5741,5885,pooled_all,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>0.75,adverse15_gt10_v28_cushion_0p75,6604,829,0.9753761969904241,0.8817852834740652,713,731
+0.9748251748251748,0.8661417322834646,5576,5720,pooled_all,adverse_drift_guard,ask<=100; block 15m adverse>10 unless v28 cushion>1.0,adverse15_gt10_v28_cushion_1p0,6604,829,0.9748603351955307,0.8636911942098915,698,716
+0.9742473016474152,0.7996668685645063,5145,5281,pooled_all,realized_vol_cushion,ask<=100; margin/rv30>=0.5,rv30_cushion_0p5,6604,829,0.9768875192604006,0.7828709288299156,634,649
+0.9728453364817001,0.7695336159903089,4944,5082,pooled_all,realized_vol_cushion,ask<=100; margin/rv60>=0.5,rv60_cushion_0p5,6604,829,0.9744,0.7539203860072377,609,625
+0.9736206576258591,0.8151120533010296,5241,5383,pooled_all,realized_vol_cushion,ask<=100; margin/rv15>=0.5,rv15_cushion_0p5,6604,829,0.9745889387144993,0.8069963811821471,652,669
+0.97340930674264,0.797244094488189,5125,5265,pooled_all,brownian_realized_vol,ask<=100; Phi(margin/rv15)>=0.7,rv15_brownian_p_0p7,6604,829,0.9755351681957186,0.7889022919179735,638,654
+0.9736791174762919,0.782404603270745,5031,5167,pooled_all,brownian_realized_vol,ask<=100; Phi(margin/rv30)>=0.7,rv30_brownian_p_0p7,6604,829,0.9763406940063092,0.7647768395657418,619,634

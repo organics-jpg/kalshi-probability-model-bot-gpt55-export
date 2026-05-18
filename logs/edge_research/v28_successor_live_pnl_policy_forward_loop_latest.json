@@ -1,0 +1,65 @@
+{
+  "collect_mode": "none",
+  "collection_scope": "nearest_close",
+  "controlled_live_test_authorized": false,
+  "final": {
+    "blockers": [],
+    "cycle_status": "profit_goal_candidate_forward_ready",
+    "generated_utc": "2026-05-14T01:02:49Z",
+    "iteration": 1,
+    "joined_primary_markets": 11,
+    "joined_primary_rows": 313,
+    "next_actions": [],
+    "overall_status": "complete",
+    "policy_hash": "5bf8d66dbe2b31e01d38abe8a0238e68",
+    "policy_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+    "primary_delta_vs_v28_cents": 762.3,
+    "primary_entered_rows": 3,
+    "primary_net_pnl_cents": 70.0,
+    "primary_policy_rows_after_hash": 314,
+    "profit_goal_complete": true,
+    "registry_rows": 16302,
+    "test_status": "pass"
+  },
+  "generated_utc": "2026-05-14T01:02:49Z",
+  "iterations": [
+    {
+      "blockers": [],
+      "cycle_status": "profit_goal_candidate_forward_ready",
+      "generated_utc": "2026-05-14T01:02:49Z",
+      "iteration": 1,
+      "joined_primary_markets": 11,
+      "joined_primary_rows": 313,
+      "next_actions": [],
+      "overall_status": "complete",
+      "policy_hash": "5bf8d66dbe2b31e01d38abe8a0238e68",
+      "policy_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+      "primary_delta_vs_v28_cents": 762.3,
+      "primary_entered_rows": 3,
+      "primary_net_pnl_cents": 70.0,
+      "primary_policy_rows_after_hash": 314,
+      "profit_goal_complete": true,
+      "registry_rows": 16302,
+      "test_status": "pass"
+    }
+  ],
+  "iterations_requested": 1,
+  "iterations_run": 1,
+  "loop_status": "completed_iterations",
+  "outputs": {
+    "json": "logs/edge_research/v28_successor_live_pnl_policy_forward_loop_latest.json",
+    "markdown": "logs/edge_research/v28_successor_live_pnl_policy_forward_loop_latest.md"
+  },
+  "profit_goal_complete": true,
+  "promotion_allowed": false,
+  "research_only_guardrails": [
+    "does not start or stop live bot processes",
+    "does not read or write secrets",
+    "does not place orders",
+    "does not mutate live thresholds, order logic, state, or sizing",
+    "uses public/recorded sidecar artifacts only",
+    "keeps pre-policy-hash rows diagnostic only",
+    "keeps controlled live authorization false unless the strict audit eventually passes"
+  ],
+  "started_utc": "2026-05-14T01:01:15Z"
+}

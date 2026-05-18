@@ -1,0 +1,159 @@
+{
+  "all_metric": {
+    "accuracy": 0.7568493150684932,
+    "accuracy_minus_break_even": 0.042226027397260224,
+    "ask_cost_cents": 20294.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 295,
+    "coverage": 0.9898305084745763,
+    "coverage_pass": true,
+    "entry_cost_cents": 20867.0,
+    "entry_fee_cents": 573.0,
+    "fee_aware_break_even_accuracy": 0.714623287671233,
+    "gross_pnl_cents": 1806.0,
+    "gross_roi_on_ask": 0.08899182024243618,
+    "losses": 71,
+    "markets": 292,
+    "mean_ask": 69.5,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.285,
+    "net_edge_per_base_market_cents": 4.179661016949153,
+    "net_edge_per_selected_cents": 4.222602739726027,
+    "net_pnl_cents": 1233.0,
+    "net_roi_on_cost": 0.05908851296305171,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7045171643411514,
+    "wilson_minus_break_even": -0.01010612333008154,
+    "wins": 221
+  },
+  "fresh_metric": {
+    "accuracy": 0.6666666666666666,
+    "accuracy_minus_break_even": -0.043333333333333446,
+    "ask_cost_cents": 621.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 9,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 639.0,
+    "entry_fee_cents": 18.0,
+    "fee_aware_break_even_accuracy": 0.7100000000000001,
+    "gross_pnl_cents": -21.0,
+    "gross_roi_on_ask": -0.033816425120772944,
+    "losses": 3,
+    "markets": 9,
+    "mean_ask": 69.0,
+    "median_ask": 69.0,
+    "median_seconds_to_close": 766.535,
+    "net_edge_per_base_market_cents": -4.333333333333333,
+    "net_edge_per_selected_cents": -4.333333333333333,
+    "net_pnl_cents": -39.0,
+    "net_roi_on_cost": -0.06103286384976526,
+    "p75_ask": 70.0,
+    "positive_net": false,
+    "wilson95_lower": 0.35420213558039626,
+    "wilson_minus_break_even": -0.3557978644196038,
+    "wins": 6
+  },
+  "generated_utc": "20260504_075215Z",
+  "lock": {
+    "anchor_policy": {
+      "ask_max": 95.0,
+      "chooser": "book_p_side",
+      "gate": "margin_rv15>=0",
+      "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "created_utc": "2026-05-04T04:24:00+00:00",
+    "discovery_metrics": {
+      "current_all_accuracy": 0.7588652482269503,
+      "current_all_coverage": 0.9929577464788732,
+      "current_all_net_pnl_cents": 1773.0,
+      "current_delta_vs_book_margin_cents": 645.0,
+      "current_holdout_net_pnl_cents": 224.0,
+      "current_validation_net_pnl_cents": 706.0,
+      "min_oos_net_roi": 0.0549558390578999,
+      "v21_all_accuracy": 0.7351598173515982,
+      "v21_all_coverage": 0.9909502262443439,
+      "v21_all_net_pnl_cents": 785.0,
+      "v21_delta_vs_book_margin_cents": 360.0,
+      "v21_holdout_net_pnl_cents": 374.0,
+      "v21_train_net_pnl_cents": 35.0,
+      "v21_validation_net_pnl_cents": 376.0
+    },
+    "lock_close_dt": "2026-05-04T04:30:00+00:00",
+    "reference_policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120; abs_book_rv15_gap<=0.20",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "reference_veto": {
+      "feature": "abs_book_rv15_gap",
+      "op": "<=",
+      "threshold": 0.2
+    },
+    "research_note": "Forward-registered from book_v2_regime_switch_scan_latest.csv as the best causal-class book-to-score switch before the 04:30 UTC boundary. Physical hypothesis: when the later score/coherence reference has weak margin per RV sigma, the book anchor is less trustworthy and the score-gap reference captures the recurring-market state better. Diagnostic only; promotion requires strict pre-resolution live evidence, sample size, and >=75-80% recurring-market coverage.",
+    "source_scan_csv": "logs\\edge_research\\book_v2_regime_switch_scan_latest.csv",
+    "switch_rule": {
+      "anchor_label": "refmargin_score_switch:book_margin",
+      "condition": {
+        "feature": "margin_per_rv_sigma_15m",
+        "op": "<=",
+        "threshold": 0.5
+      },
+      "condition_false_anchor_fallback": "first_anchor_at_or_after_reference",
+      "condition_false_anchor_label": "refmargin_score_switch:book_margin_after_reference",
+      "condition_source": "reference",
+      "label": "book_margin_switch_to_score_min60_gap020_if_reference_margin_per_rv_sigma_15m<=0.5",
+      "reference_label": "refmargin_score_switch:score_min60_gap020",
+      "use_reference_when_anchor_missing": true
+    }
+  },
+  "name": "book_refmargin_score_switch",
+  "registry_recompute_divergence": {
+    "compared": 9,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY040130-30",
+        "recomputed": "2026-05-04T05:17:06.838000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:19:06.925000+00:00 no 62.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040145-45",
+        "recomputed": "2026-05-04T05:31:08.227000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:35:08.515000+00:00 no 69.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040245-45",
+        "recomputed": "2026-05-04T06:32:13.465000+00:00 yes 75.0c",
+        "strict": "2026-05-04T06:33:13.573000+00:00 yes 71.0c"
+      }
+    ],
+    "mismatches": 3,
+    "missing_recompute": 5
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.6923076923076923,
+    "base_markets": 14,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7061538461538461,
+    "losses": 4,
+    "markets": 13,
+    "median_ask": 69.0,
+    "net_pnl_cents": -18.0,
+    "net_roi_on_cost": -0.0196078431372549,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 14,
+    "wilson95_lower": 0.42369343180549035,
+    "wilson_minus_break_even": -0.2824604143483558,
+    "wins": 9
+  }
+}

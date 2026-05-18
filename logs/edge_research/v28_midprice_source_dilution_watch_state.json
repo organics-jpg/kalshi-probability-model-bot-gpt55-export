@@ -1,0 +1,13 @@
+{
+  "candidate": "quarter_midprice_boundary_plus_weak_boundary_absd_gte_055",
+  "candidate_family": "midprice_source_dilution_watch",
+  "freeze_ts_utc": "2026-05-07T06:29:57.062817+00:00",
+  "parent": "soft_frontier_midprice_boundary_shrink",
+  "physics": "The parent lane is source-blocked by a very small number of weak-boundary rows. The dilution rule drops only rows whose observed distance to strike is too small to justify full side conviction, while keeping the continuous midprice notional shrink.",
+  "rule": {
+    "abs_d_min": 0.55,
+    "ask_min": null,
+    "physics": "Drop only the closest boundary-touch rows; abs_d below 0.55 is too close to strike for reliable side conviction."
+  },
+  "strict_forward_note": "Rows before this timestamp are diagnostic only; post_dilution_birth rows are promotion evidence."
+}

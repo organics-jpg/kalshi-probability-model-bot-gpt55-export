@@ -1,0 +1,165 @@
+{
+  "all_metric": {
+    "accuracy": 0.7615658362989324,
+    "accuracy_minus_break_even": 0.046975088967971534,
+    "ask_cost_cents": 19529.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 284,
+    "coverage": 0.9894366197183099,
+    "coverage_pass": true,
+    "entry_cost_cents": 20080.0,
+    "entry_fee_cents": 551.0,
+    "fee_aware_break_even_accuracy": 0.7145907473309608,
+    "gross_pnl_cents": 1871.0,
+    "gross_roi_on_ask": 0.0958062368784884,
+    "losses": 67,
+    "markets": 281,
+    "mean_ask": 69.4982206405694,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.281,
+    "net_edge_per_base_market_cents": 4.647887323943662,
+    "net_edge_per_selected_cents": 4.697508896797153,
+    "net_pnl_cents": 1320.0,
+    "net_roi_on_cost": 0.06573705179282868,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7084264703325309,
+    "wilson_minus_break_even": -0.006164276998429918,
+    "wins": 214
+  },
+  "fresh_metric": {
+    "accuracy": 0.7619047619047619,
+    "accuracy_minus_break_even": 0.020476190476190426,
+    "ask_cost_cents": 1516.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 21,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 1557.0,
+    "entry_fee_cents": 41.0,
+    "fee_aware_break_even_accuracy": 0.7414285714285714,
+    "gross_pnl_cents": 84.0,
+    "gross_roi_on_ask": 0.055408970976253295,
+    "losses": 5,
+    "markets": 21,
+    "mean_ask": 72.19047619047619,
+    "median_ask": 69.0,
+    "median_seconds_to_close": 774.359,
+    "net_edge_per_base_market_cents": 2.0476190476190474,
+    "net_edge_per_selected_cents": 2.0476190476190474,
+    "net_pnl_cents": 43.0,
+    "net_roi_on_cost": 0.027617212588310854,
+    "p75_ask": 78.0,
+    "positive_net": true,
+    "wilson95_lower": 0.5490882631704924,
+    "wilson_minus_break_even": -0.19234030825807902,
+    "wins": 16
+  },
+  "generated_utc": "20260504_040638Z",
+  "lock": {
+    "candidate_policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "combined_label": "take frontier_v2 unless first v2 seconds_to_close>=600, then wait for score_min60",
+    "created_utc": "2026-05-03T22:36:27.501634+00:00",
+    "discovery_metrics": {
+      "both_coverage_pass": true,
+      "both_oos_positive": true,
+      "combined_delta_vs_v2_cents": 304.0,
+      "current_all_accuracy": 0.7626459143968871,
+      "current_all_coverage": 0.9884615384615384,
+      "current_all_net_pnl_cents": 1320.0,
+      "current_all_net_roi_on_cost": 0.0722100656455142,
+      "current_delta_vs_v2_cents": 1029.0,
+      "current_holdout_accuracy": 0.7307692307692307,
+      "current_holdout_coverage": 1.0,
+      "current_holdout_net_pnl_cents": 47.0,
+      "min_oos_roi": 0.012523314681588,
+      "v21_all_accuracy": 0.7385321100917431,
+      "v21_all_coverage": 0.986425339366516,
+      "v21_all_net_pnl_cents": 558.0,
+      "v21_all_net_roi_on_cost": 0.0359027152232659,
+      "v21_delta_vs_v2_cents": -725.0,
+      "v21_holdout_accuracy": 0.7727272727272727,
+      "v21_holdout_coverage": 0.9777777777777776,
+      "v21_holdout_net_pnl_cents": 179.0
+    },
+    "lock_close_dt": "2026-05-03T22:00:00+00:00",
+    "research_note": "Forward-registered conditional wait candidate from the V2 conditional scan. Diagnostic only: the scan improved the current ledger but gave back v21 edge, so promotion requires strict pre-resolution live evidence and >=80% recurring-market coverage.",
+    "source_candidate_lock": "logs\\edge_research\\profit_frontier_score_min60_lock.json",
+    "source_scan_csv": "logs\\edge_research\\v2_conditional_wait_scan_latest.csv",
+    "source_v2_lock": "logs\\edge_research\\profit_frontier_v2_fresh_lock.json",
+    "v2_policy": {
+      "ask_max": 95.0,
+      "chooser": "brownian_p_rv_15m",
+      "gate": "none",
+      "label": "choose=brownian_p_rv_15m; brownian_p_rv_15m>=0.55; ask<=95; sec_to_close>=120",
+      "min_score": 0.55,
+      "min_seconds_to_close": 120.0
+    },
+    "wait_rule": {
+      "candidate": "score_min60",
+      "feature": "seconds_to_close",
+      "label": "wait_for_score_min60_if_v2_seconds_to_close>=600",
+      "op": ">=",
+      "threshold": 600.0
+    }
+  },
+  "registry_recompute_divergence": {
+    "compared": 21,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY031945-45",
+        "recomputed": "2026-05-03T23:31:35.210000+00:00 yes 63.0c",
+        "strict": "2026-05-03T23:32:05.265000+00:00 yes 66.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032045-45",
+        "recomputed": "2026-05-04T00:38:11.191000+00:00 no 78.0c",
+        "strict": "2026-05-04T00:34:55.918000+00:00 yes 65.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032115-15",
+        "recomputed": "2026-05-04T01:01:13.732000+00:00 no 69.0c",
+        "strict": "2026-05-04T01:02:13.838000+00:00 no 81.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032130-30",
+        "recomputed": "2026-05-04T01:18:00.227000+00:00 yes 73.0c",
+        "strict": "2026-05-04T01:17:45.202000+00:00 yes 73.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032200-00",
+        "recomputed": "2026-05-04T01:48:02.822000+00:00 yes 68.0c",
+        "strict": "2026-05-04T01:49:02.931000+00:00 yes 77.0c"
+      }
+    ],
+    "mismatches": 7,
+    "missing_recompute": 1
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.7142857142857143,
+    "base_markets": 22,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7366666666666667,
+    "losses": 6,
+    "markets": 21,
+    "median_ask": 69.0,
+    "net_pnl_cents": -47.0,
+    "net_roi_on_cost": -0.030381383322559793,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 22,
+    "wilson95_lower": 0.5004361928391441,
+    "wilson_minus_break_even": -0.2362304738275226,
+    "wins": 15
+  }
+}

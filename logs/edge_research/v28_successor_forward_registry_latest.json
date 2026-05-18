@@ -1,0 +1,100 @@
+{
+  "blockers": [
+    "settled label join and forward evidence scoring are still required before promotion"
+  ],
+  "builder_script": "register_v28_successor_forward_predictions.py",
+  "candidate_count": 10,
+  "feature_forward_row_ids": 0,
+  "forward_collection_candidate_count": 9,
+  "forward_collection_candidates": [
+    "v28s_logistic_calibration_v001",
+    "v28s_logistic_boundary_physics_v001",
+    "v28s_logistic_book_reliability_diag_v001",
+    "v28s_monotonic_tabular_v001",
+    "v28s_boundary_monotonic_blend_v001",
+    "v28s_boundary_monotonic_light_v001",
+    "v28s_boundary_monotonic_time_safe_v001",
+    "v28s_boundary_monotonic_micro_time_safe_v001",
+    "v28s_late_dsigma_residual_tilt_v001"
+  ],
+  "forward_freeze_preflight": {
+    "audit_json": "logs/edge_research/v28_successor_forward_freeze_preflight_latest.json",
+    "freeze_ready_markets": 0,
+    "freeze_ready_rows": 0,
+    "open_input_rows_now": 0,
+    "preflight_status": "blocked",
+    "readiness_blockers": [
+      "insufficient_freeze_ready_markets",
+      "insufficient_freeze_ready_rows",
+      "market_already_closed_now",
+      "missing_btc_state",
+      "missing_candidate_prediction",
+      "missing_top_book",
+      "missing_v28_baseline",
+      "row_not_registered_pre_resolution",
+      "staging_registration_not_before_close"
+    ]
+  },
+  "forward_packet_contract": {
+    "audit_json": "logs/edge_research/v28_successor_forward_packet_contract_latest.json",
+    "group_missing_counts": {
+      "btc_and_feed": 1750,
+      "candidate_prediction": 1750,
+      "causality": 0,
+      "identity_and_clock": 0,
+      "market_and_book": 128,
+      "v28_baseline": 1750
+    },
+    "packet_ready_markets": 0,
+    "packet_ready_rows": 0,
+    "packet_status": "blocked"
+  },
+  "frozen_forward_predictions": {
+    "forward_allowed_candidate_count": null,
+    "forward_collection_candidate_count": null,
+    "freeze_status": "sidecar_forward_staged_ready_for_label_join",
+    "frozen_prediction_markets": 196,
+    "frozen_prediction_rows": 16896,
+    "summary_json": "logs/edge_research/v28_successor_frozen_forward_predictions_latest.json"
+  },
+  "generated_utc": "2026-05-18T20:51:42Z",
+  "inputs": {
+    "candidate_manifest_hash": "ca5254fa0ae1312b6f26eb4d5181ab6d63a8cd943cec4afba57280cefc2b5da8",
+    "candidate_manifest_json": "research_particle/v28_successor/candidate_manifests_latest.json",
+    "candidate_predictions_csv": "research_particle/v28_successor/candidate_predictions_latest.csv",
+    "candidate_predictions_hash": "951738849b842213b05a43c97a6963dbd493c16314f1a0abad4455febadcacbe",
+    "features_csv": "research_particle/v28_successor/features_latest.csv",
+    "features_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "frozen_forward_csv": "research_particle/v28_successor/frozen_forward_predictions_latest.csv",
+    "frozen_forward_hash": "28035bd197cbc766dd65a1321c5469addd9c61c3ff4d0cfb34737c73386b0270"
+  },
+  "market_count": 196,
+  "outputs": {
+    "forward_registry_csv": "research_particle/v28_successor/forward_registry_latest.csv",
+    "forward_registry_json": "research_particle/v28_successor/forward_registry_latest.json",
+    "forward_registry_summary_json": "logs/edge_research/v28_successor_forward_registry_latest.json",
+    "forward_registry_summary_md": "logs/edge_research/v28_successor_forward_registry_latest.md"
+  },
+  "passive_forward_staging": {
+    "audit_json": "logs/edge_research/v28_successor_passive_forward_snapshots_latest.json",
+    "forward_promotion_rows": 0,
+    "markets": 2,
+    "missing_counts": {
+      "ask_cents": 64,
+      "btc_state": 1750,
+      "candidate_prediction": 1750,
+      "market_close_ts_utc": 0,
+      "settlement_label": 1750,
+      "strike": 0,
+      "v28_baseline": 1750
+    },
+    "registered_pre_resolution_rows": 0,
+    "rows": 1750
+  },
+  "promotion_ready": true,
+  "registry_status": "active",
+  "row_count": 16896,
+  "source_status_counts": {
+    "frozen_pre_resolution_prediction": 16896
+  }
+}

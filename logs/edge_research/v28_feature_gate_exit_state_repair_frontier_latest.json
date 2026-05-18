@@ -1,0 +1,2142 @@
+{
+  "alignment_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_feature_gate_live_outcome_alignment_latest.json",
+  "execution_events_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\execution_events.ndjson",
+  "generated_at_utc": "2026-05-11T01:54:29.639158+00:00",
+  "interpretation": [
+    "Research-only frontier; it does not change live exits or place orders.",
+    "Baseline selected-side live PnL is 311.0c across 40 traded feature-gate markets.",
+    "Best diagnostic variant is suppress_value_or_reduce_p_hold85 at 1331.6c, delta 1020.5999999999999c versus actual live selected-side exits.",
+    "Rows remain non-deployable from this report alone because the simulation uses settlement outcomes and only covers live selected-side overlap."
+  ],
+  "markets": [
+    {
+      "exit_event_count": 96,
+      "families": [
+        "probability_collapse",
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 11,
+          "max_p_hold": 0.641818,
+          "min_fair_drawdown_cents": 5.818234
+        },
+        "probability_reduce": {
+          "events": 65,
+          "max_p_hold": 0.786203,
+          "min_fair_drawdown_cents": -8.620336
+        },
+        "value_over_hold": {
+          "events": 20,
+          "max_p_hold": 0.920444,
+          "min_fair_drawdown_cents": -13.044359
+        }
+      },
+      "hold_delta_cents": 280.0,
+      "hold_net_cents": 208.0,
+      "live_net_cents": -72.0,
+      "market": "KXBTC15M-26MAY071000-00",
+      "max_p_hold": 0.920444,
+      "min_fair_drawdown_cents": -13.044359,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 12,
+        "mushroom_v28_probability_collapse_full": 4,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 7,
+        "mushroom_v28_probability_reduce": 24,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 41
+      },
+      "selected_entry_ts_min": "2026-05-07 09:45:51",
+      "selected_exit_ts_max": "2026-05-07 09:57:29",
+      "selected_side_qty": 12.0,
+      "selected_side_trade_count": 3,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 27.0
+    },
+    {
+      "exit_event_count": 42,
+      "families": [
+        "probability_collapse",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 11,
+          "max_p_hold": 0.713279,
+          "min_fair_drawdown_cents": 11.672124
+        },
+        "value_over_hold": {
+          "events": 31,
+          "max_p_hold": 0.87602,
+          "min_fair_drawdown_cents": 0.397981
+        }
+      },
+      "hold_delta_cents": 178.0,
+      "hold_net_cents": 78.0,
+      "live_net_cents": -100.0,
+      "market": "KXBTC15M-26MAY070030-30",
+      "max_p_hold": 0.87602,
+      "min_fair_drawdown_cents": 0.397981,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 12,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 19,
+        "mushroom_v28_probability_collapse_full": 4,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 7
+      },
+      "selected_entry_ts_min": "2026-05-07 00:20:00",
+      "selected_exit_ts_max": "2026-05-07 00:27:06",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 15.0
+    },
+    {
+      "exit_event_count": 55,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 55,
+          "max_p_hold": 0.793309,
+          "min_fair_drawdown_cents": 0.70236
+        }
+      },
+      "hold_delta_cents": 169.0,
+      "hold_net_cents": 97.0,
+      "live_net_cents": -72.0,
+      "market": "KXBTC15M-26MAY062315-15",
+      "max_p_hold": 0.793309,
+      "min_fair_drawdown_cents": 0.70236,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 20,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 35
+      },
+      "selected_entry_ts_min": "2026-05-06 23:02:56",
+      "selected_exit_ts_max": "2026-05-06 23:08:11",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 15.0
+    },
+    {
+      "exit_event_count": 86,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 65,
+          "max_p_hold": 0.797666,
+          "min_fair_drawdown_cents": -0.766567
+        },
+        "value_over_hold": {
+          "events": 21,
+          "max_p_hold": 0.926891,
+          "min_fair_drawdown_cents": -15.689061
+        }
+      },
+      "hold_delta_cents": 151.6,
+      "hold_net_cents": 143.6,
+      "live_net_cents": -8.0,
+      "market": "KXBTC15M-26MAY071315-15",
+      "max_p_hold": 0.926891,
+      "min_fair_drawdown_cents": -15.689061,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 13,
+        "mushroom_v28_probability_reduce": 24,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 41
+      },
+      "selected_entry_ts_min": "2026-05-07 13:06:27",
+      "selected_exit_ts_max": "2026-05-07 13:12:13",
+      "selected_side_qty": 8.0,
+      "selected_side_trade_count": 3,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 20.0
+    },
+    {
+      "exit_event_count": 65,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 55,
+          "max_p_hold": 0.792216,
+          "min_fair_drawdown_cents": -1.221635
+        },
+        "value_over_hold": {
+          "events": 10,
+          "max_p_hold": 0.854162,
+          "min_fair_drawdown_cents": -1.416204
+        }
+      },
+      "hold_delta_cents": 144.0,
+      "hold_net_cents": 91.0,
+      "live_net_cents": -53.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "max_p_hold": 0.854162,
+      "min_fair_drawdown_cents": -1.416204,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 4,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 6,
+        "mushroom_v28_probability_reduce": 20,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 35
+      },
+      "selected_entry_ts_min": "2026-05-07 08:19:33",
+      "selected_exit_ts_max": "2026-05-07 08:25:27",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 21.0
+    },
+    {
+      "exit_event_count": 32,
+      "families": [
+        "probability_collapse"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 32,
+          "max_p_hold": 0.717741,
+          "min_fair_drawdown_cents": 1.225921
+        }
+      },
+      "hold_delta_cents": 136.0,
+      "hold_net_cents": 159.0,
+      "live_net_cents": 23.0,
+      "market": "KXBTC15M-26MAY062215-15",
+      "max_p_hold": 0.717741,
+      "min_fair_drawdown_cents": 1.225921,
+      "reason_counts": {
+        "mushroom_v28_probability_collapse_full": 12,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 20
+      },
+      "selected_entry_ts_min": "2026-05-06 22:02:08",
+      "selected_exit_ts_max": "2026-05-06 22:03:31",
+      "selected_side_qty": 8.0,
+      "selected_side_trade_count": 3,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 33.0
+    },
+    {
+      "exit_event_count": 44,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 44,
+          "max_p_hold": 0.794753,
+          "min_fair_drawdown_cents": -3.475345
+        }
+      },
+      "hold_delta_cents": 129.0,
+      "hold_net_cents": 127.0,
+      "live_net_cents": -2.0,
+      "market": "KXBTC15M-26MAY062045-45",
+      "max_p_hold": 0.794753,
+      "min_fair_drawdown_cents": -3.475345,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 16,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 28
+      },
+      "selected_entry_ts_min": "2026-05-06 20:32:44",
+      "selected_exit_ts_max": "2026-05-06 20:35:32",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 3,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 18.0
+    },
+    {
+      "exit_event_count": 34,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 34,
+          "max_p_hold": 0.788457,
+          "min_fair_drawdown_cents": 1.154256
+        }
+      },
+      "hold_delta_cents": 127.0,
+      "hold_net_cents": 108.0,
+      "live_net_cents": -18.999999999999993,
+      "market": "KXBTC15M-26MAY070745-45",
+      "max_p_hold": 0.788457,
+      "min_fair_drawdown_cents": 1.154256,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 12,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 22
+      },
+      "selected_entry_ts_min": "2026-05-07 07:33:24",
+      "selected_exit_ts_max": "2026-05-07 07:37:01",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 30.0
+    },
+    {
+      "exit_event_count": 33,
+      "families": [
+        "probability_collapse",
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 11,
+          "max_p_hold": 0.666135,
+          "min_fair_drawdown_cents": 18.386512
+        },
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.752324,
+          "min_fair_drawdown_cents": 1.767612
+        }
+      },
+      "hold_delta_cents": 122.0,
+      "hold_net_cents": 100.0,
+      "live_net_cents": -22.0,
+      "market": "KXBTC15M-26MAY071230-30",
+      "max_p_hold": 0.752324,
+      "min_fair_drawdown_cents": 1.767612,
+      "reason_counts": {
+        "mushroom_v28_probability_collapse_full": 4,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 7,
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-07 12:23:06",
+      "selected_exit_ts_max": "2026-05-07 12:24:31",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 3,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 21.0
+    },
+    {
+      "exit_event_count": 33,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 33,
+          "max_p_hold": 0.760507,
+          "min_fair_drawdown_cents": 3.949325
+        }
+      },
+      "hold_delta_cents": 108.0,
+      "hold_net_cents": 68.0,
+      "live_net_cents": -40.0,
+      "market": "KXBTC15M-26MAY070930-30",
+      "max_p_hold": 0.760507,
+      "min_fair_drawdown_cents": 3.949325,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 12,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 21
+      },
+      "selected_entry_ts_min": "2026-05-07 09:18:24",
+      "selected_exit_ts_max": "2026-05-07 09:27:22",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 17.0
+    },
+    {
+      "exit_event_count": 65,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 44,
+          "max_p_hold": 0.778677,
+          "min_fair_drawdown_cents": -5.867667
+        },
+        "value_over_hold": {
+          "events": 21,
+          "max_p_hold": 0.936637,
+          "min_fair_drawdown_cents": -4.663664
+        }
+      },
+      "hold_delta_cents": 105.6,
+      "hold_net_cents": 96.6,
+      "live_net_cents": -9.0,
+      "market": "KXBTC15M-26MAY062100-00",
+      "max_p_hold": 0.936637,
+      "min_fair_drawdown_cents": -5.867667,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 13,
+        "mushroom_v28_probability_reduce": 16,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 28
+      },
+      "selected_entry_ts_min": "2026-05-06 20:48:27",
+      "selected_exit_ts_max": "2026-05-06 20:57:06",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 3,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 37.0
+    },
+    {
+      "exit_event_count": 33,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.7904,
+          "min_fair_drawdown_cents": -9.039966
+        },
+        "value_over_hold": {
+          "events": 11,
+          "max_p_hold": 0.818363,
+          "min_fair_drawdown_cents": -4.836282
+        }
+      },
+      "hold_delta_cents": 88.0,
+      "hold_net_cents": 94.0,
+      "live_net_cents": 5.999999999999999,
+      "market": "KXBTC15M-26MAY061800-00",
+      "max_p_hold": 0.818363,
+      "min_fair_drawdown_cents": -9.039966,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 4,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 7,
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-06 17:47:08",
+      "selected_exit_ts_max": "2026-05-06 17:57:57",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 28.0
+    },
+    {
+      "exit_event_count": 22,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 22,
+          "max_p_hold": 0.87984,
+          "min_fair_drawdown_cents": -1.984025
+        }
+      },
+      "hold_delta_cents": 76.2,
+      "hold_net_cents": 96.2,
+      "live_net_cents": 20.0,
+      "market": "KXBTC15M-26MAY070115-15",
+      "max_p_hold": 0.87984,
+      "min_fair_drawdown_cents": -1.984025,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-07 01:02:12",
+      "selected_exit_ts_max": "2026-05-07 01:09:17",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 16.0
+    },
+    {
+      "exit_event_count": 43,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.745317,
+          "min_fair_drawdown_cents": -7.531678
+        },
+        "value_over_hold": {
+          "events": 21,
+          "max_p_hold": 0.919677,
+          "min_fair_drawdown_cents": -6.967664
+        }
+      },
+      "hold_delta_cents": 70.8,
+      "hold_net_cents": 116.8,
+      "live_net_cents": 46.0,
+      "market": "KXBTC15M-26MAY062115-15",
+      "max_p_hold": 0.919677,
+      "min_fair_drawdown_cents": -7.531678,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 13,
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-06 21:02:16",
+      "selected_exit_ts_max": "2026-05-06 21:13:26",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 25.0
+    },
+    {
+      "exit_event_count": 42,
+      "families": [
+        "probability_collapse",
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 21,
+          "max_p_hold": 0.661618,
+          "min_fair_drawdown_cents": 19.838176
+        },
+        "probability_reduce": {
+          "events": 21,
+          "max_p_hold": 0.752493,
+          "min_fair_drawdown_cents": 10.750708
+        }
+      },
+      "hold_delta_cents": 69.0,
+      "hold_net_cents": 22.0,
+      "live_net_cents": -47.0,
+      "market": "KXBTC15M-26MAY062015-15",
+      "max_p_hold": 0.752493,
+      "min_fair_drawdown_cents": 10.750708,
+      "reason_counts": {
+        "mushroom_v28_probability_collapse_full": 8,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 13,
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 13
+      },
+      "selected_entry_ts_min": "2026-05-06 20:07:47",
+      "selected_exit_ts_max": "2026-05-06 20:09:07",
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 56.0
+    },
+    {
+      "exit_event_count": 22,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.793263,
+          "min_fair_drawdown_cents": -6.326254
+        }
+      },
+      "hold_delta_cents": 68.0,
+      "hold_net_cents": 91.0,
+      "live_net_cents": 23.0,
+      "market": "KXBTC15M-26MAY071045-45",
+      "max_p_hold": 0.793263,
+      "min_fair_drawdown_cents": -6.326254,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-07 10:31:13",
+      "selected_exit_ts_max": "2026-05-07 10:31:53",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 24.0
+    },
+    {
+      "exit_event_count": 22,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.785691,
+          "min_fair_drawdown_cents": -5.56909
+        }
+      },
+      "hold_delta_cents": 68.0,
+      "hold_net_cents": 124.0,
+      "live_net_cents": 56.0,
+      "market": "KXBTC15M-26MAY070915-15",
+      "max_p_hold": 0.785691,
+      "min_fair_drawdown_cents": -5.56909,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-07 09:00:47",
+      "selected_exit_ts_max": "2026-05-07 09:02:17",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 20.0
+    },
+    {
+      "exit_event_count": 42,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 42,
+          "max_p_hold": 0.789858,
+          "min_fair_drawdown_cents": -1.985812
+        }
+      },
+      "hold_delta_cents": 67.0,
+      "hold_net_cents": 104.0,
+      "live_net_cents": 37.0,
+      "market": "KXBTC15M-26MAY071030-30",
+      "max_p_hold": 0.789858,
+      "min_fair_drawdown_cents": -1.985812,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 16,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 26
+      },
+      "selected_entry_ts_min": "2026-05-07 10:16:02",
+      "selected_exit_ts_max": "2026-05-07 10:16:38",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 21.0
+    },
+    {
+      "exit_event_count": 22,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.750081,
+          "min_fair_drawdown_cents": 1.991874
+        }
+      },
+      "hold_delta_cents": 66.0,
+      "hold_net_cents": 84.0,
+      "live_net_cents": 18.0,
+      "market": "KXBTC15M-26MAY061815-15",
+      "max_p_hold": 0.750081,
+      "min_fair_drawdown_cents": 1.991874,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-06 18:03:57",
+      "selected_exit_ts_max": "2026-05-06 18:05:01",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 14.0
+    },
+    {
+      "exit_event_count": 22,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.798137,
+          "min_fair_drawdown_cents": -1.813658
+        }
+      },
+      "hold_delta_cents": 48.0,
+      "hold_net_cents": 86.0,
+      "live_net_cents": 38.0,
+      "market": "KXBTC15M-26MAY062030-30",
+      "max_p_hold": 0.798137,
+      "min_fair_drawdown_cents": -1.813658,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-06 20:17:10",
+      "selected_exit_ts_max": "2026-05-06 20:19:19",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 31.0
+    },
+    {
+      "exit_event_count": 11,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 11,
+          "max_p_hold": 0.7423,
+          "min_fair_drawdown_cents": 14.769975
+        }
+      },
+      "hold_delta_cents": 32.0,
+      "hold_net_cents": 18.0,
+      "live_net_cents": -14.000000000000002,
+      "market": "KXBTC15M-26MAY061400-00",
+      "max_p_hold": 0.7423,
+      "min_fair_drawdown_cents": 14.769975,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 4,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 7
+      },
+      "selected_entry_ts_min": "2026-05-06 13:56:31",
+      "selected_exit_ts_max": "2026-05-06 13:57:01",
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 10.0
+    },
+    {
+      "exit_event_count": 21,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 21,
+          "max_p_hold": 0.960028,
+          "min_fair_drawdown_cents": -6.002775
+        }
+      },
+      "hold_delta_cents": 8.0,
+      "hold_net_cents": 20.0,
+      "live_net_cents": 12.0,
+      "market": "KXBTC15M-26MAY061615-15",
+      "max_p_hold": 0.960028,
+      "min_fair_drawdown_cents": -6.002775,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 13
+      },
+      "selected_entry_ts_min": "2026-05-06 16:04:49",
+      "selected_exit_ts_max": "2026-05-06 16:08:15",
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 9.0
+    },
+    {
+      "exit_event_count": 11,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 11,
+          "max_p_hold": 0.969996,
+          "min_fair_drawdown_cents": -13.999555
+        }
+      },
+      "hold_delta_cents": 6.400000000000013,
+      "hold_net_cents": 64.4,
+      "live_net_cents": 57.99999999999999,
+      "market": "KXBTC15M-26MAY062200-00",
+      "max_p_hold": 0.969996,
+      "min_fair_drawdown_cents": -13.999555,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 4,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 7
+      },
+      "selected_entry_ts_min": "2026-05-06 21:51:26",
+      "selected_exit_ts_max": "2026-05-06 21:57:03",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 4.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.00020000000003506102,
+      "hold_net_cents": 87.00020000000004,
+      "live_net_cents": 87.0,
+      "market": "KXBTC15M-26MAY070815-15",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 08:03:22",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 9.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.00020000000003506102,
+      "hold_net_cents": 139.00020000000004,
+      "live_net_cents": 139.0,
+      "market": "KXBTC15M-26MAY070945-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 09:31:35",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 28.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 53.0,
+      "live_net_cents": 53.0,
+      "market": "KXBTC15M-26MAY070545-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 05:38:02",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 16.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY071215-15",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -75.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY062245-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -5.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY070145-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -3.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY062300-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -2.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY071115-15",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -7.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061430-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -5.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061530-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -3.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061545-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 15.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061600-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -7.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061630-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 96.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061730-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -5.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061900-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 8.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061930-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -2.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY062145-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 6.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY070000-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 20.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY070130-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -4.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY070900-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -6.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY071200-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 20.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY071245-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 8.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY071300-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -10.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY071330-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 16.0
+    },
+    {
+      "exit_event_count": 9,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 9,
+          "max_p_hold": 0.992014,
+          "min_fair_drawdown_cents": -11.201356
+        }
+      },
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 24.0,
+      "live_net_cents": 24.0,
+      "market": "KXBTC15M-26MAY061445-45",
+      "max_p_hold": 0.992014,
+      "min_fair_drawdown_cents": -11.201356,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 4,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 5
+      },
+      "selected_entry_ts_min": "2026-05-06 14:33:05",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 8.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY070200-00",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -11.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061830-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -6.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0,
+      "hold_net_cents": 0,
+      "live_net_cents": 0,
+      "market": "KXBTC15M-26MAY061415-15",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": null,
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 0,
+      "selected_side_trade_count": 0,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -3.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 30.0,
+      "live_net_cents": 30.0,
+      "market": "KXBTC15M-26MAY070530-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 05:21:08",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 7.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 37.0,
+      "live_net_cents": 37.0,
+      "market": "KXBTC15M-26MAY070715-15",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 07:02:47",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "theory_net_cents": 8.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 42.0,
+      "live_net_cents": 42.0,
+      "market": "KXBTC15M-26MAY071130-30",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 11:18:38",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 13.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 45.0,
+      "live_net_cents": 45.0,
+      "market": "KXBTC15M-26MAY061645-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-06 16:30:50",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 21.0
+    },
+    {
+      "exit_event_count": 37,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 37,
+          "max_p_hold": 0.994779,
+          "min_fair_drawdown_cents": -17.4779
+        }
+      },
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 67.0,
+      "live_net_cents": 67.0,
+      "market": "KXBTC15M-26MAY061915-15",
+      "max_p_hold": 0.994779,
+      "min_fair_drawdown_cents": -17.4779,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 16,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 21
+      },
+      "selected_entry_ts_min": "2026-05-06 19:01:12",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 11.0
+    },
+    {
+      "exit_event_count": 0,
+      "families": [],
+      "family_stats": {},
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 101.0,
+      "live_net_cents": 101.0,
+      "market": "KXBTC15M-26MAY070645-45",
+      "max_p_hold": null,
+      "min_fair_drawdown_cents": null,
+      "reason_counts": {},
+      "selected_entry_ts_min": "2026-05-07 06:30:33",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 16.0
+    },
+    {
+      "exit_event_count": 39,
+      "families": [
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "value_over_hold": {
+          "events": 39,
+          "max_p_hold": 0.995509,
+          "min_fair_drawdown_cents": -17.5509
+        }
+      },
+      "hold_delta_cents": 0.0,
+      "hold_net_cents": 106.0,
+      "live_net_cents": 106.0,
+      "market": "KXBTC15M-26MAY071145-45",
+      "max_p_hold": 0.995509,
+      "min_fair_drawdown_cents": -17.5509,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 16,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 23
+      },
+      "selected_entry_ts_min": "2026-05-07 11:31:43",
+      "selected_exit_ts_max": null,
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "theory_net_cents": 20.0
+    },
+    {
+      "exit_event_count": 22,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.775624,
+          "min_fair_drawdown_cents": -0.562416
+        }
+      },
+      "hold_delta_cents": -152.0,
+      "hold_net_cents": -161.0,
+      "live_net_cents": -9.0,
+      "market": "KXBTC15M-26MAY070615-15",
+      "max_p_hold": 0.775624,
+      "min_fair_drawdown_cents": -0.562416,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-07 06:09:04",
+      "selected_exit_ts_max": "2026-05-07 06:09:39",
+      "selected_side_qty": 2.0,
+      "selected_side_trade_count": 1,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -68.0
+    },
+    {
+      "exit_event_count": 33,
+      "families": [
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 33,
+          "max_p_hold": 0.787538,
+          "min_fair_drawdown_cents": -4.75376
+        }
+      },
+      "hold_delta_cents": -216.0,
+      "hold_net_cents": -308.0,
+      "live_net_cents": -92.0,
+      "market": "KXBTC15M-26MAY062130-30",
+      "max_p_hold": 0.787538,
+      "min_fair_drawdown_cents": -4.75376,
+      "reason_counts": {
+        "mushroom_v28_probability_reduce": 12,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 21
+      },
+      "selected_entry_ts_min": "2026-05-06 21:18:01",
+      "selected_exit_ts_max": "2026-05-06 21:23:46",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 1,
+      "side": "no",
+      "side_won": false,
+      "source": "approved_entry",
+      "theory_net_cents": -78.0
+    },
+    {
+      "exit_event_count": 44,
+      "families": [
+        "probability_collapse",
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 11,
+          "max_p_hold": 0.445947,
+          "min_fair_drawdown_cents": 21.405338
+        },
+        "probability_reduce": {
+          "events": 33,
+          "max_p_hold": 0.796601,
+          "min_fair_drawdown_cents": -0.660056
+        }
+      },
+      "hold_delta_cents": -245.84000000000003,
+      "hold_net_cents": -344.84000000000003,
+      "live_net_cents": -99.0,
+      "market": "KXBTC15M-26MAY070015-15",
+      "max_p_hold": 0.796601,
+      "min_fair_drawdown_cents": -0.660056,
+      "reason_counts": {
+        "mushroom_v28_probability_collapse_full": 4,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 7,
+        "mushroom_v28_probability_reduce": 12,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 21
+      },
+      "selected_entry_ts_min": "2026-05-07 00:06:54",
+      "selected_exit_ts_max": "2026-05-07 00:13:41",
+      "selected_side_qty": 5.0,
+      "selected_side_trade_count": 3,
+      "side": "no",
+      "side_won": false,
+      "source": "approved_entry",
+      "theory_net_cents": -72.0
+    },
+    {
+      "exit_event_count": 33,
+      "families": [
+        "probability_collapse",
+        "probability_reduce"
+      ],
+      "family_stats": {
+        "probability_collapse": {
+          "events": 11,
+          "max_p_hold": 0.635708,
+          "min_fair_drawdown_cents": 11.429179
+        },
+        "probability_reduce": {
+          "events": 22,
+          "max_p_hold": 0.756224,
+          "min_fair_drawdown_cents": -4.622356
+        }
+      },
+      "hold_delta_cents": -260.0,
+      "hold_net_cents": -304.0,
+      "live_net_cents": -44.0,
+      "market": "KXBTC15M-26MAY062345-45",
+      "max_p_hold": 0.756224,
+      "min_fair_drawdown_cents": -4.622356,
+      "reason_counts": {
+        "mushroom_v28_probability_collapse_full": 4,
+        "mushroom_v28_probability_collapse_full_single_shot_visible_depth": 7,
+        "mushroom_v28_probability_reduce": 8,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 14
+      },
+      "selected_entry_ts_min": "2026-05-06 23:34:15",
+      "selected_exit_ts_max": "2026-05-06 23:37:09",
+      "selected_side_qty": 4.0,
+      "selected_side_trade_count": 2,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "theory_net_cents": -15.0
+    },
+    {
+      "exit_event_count": 55,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 44,
+          "max_p_hold": 0.790534,
+          "min_fair_drawdown_cents": 0.801983
+        },
+        "value_over_hold": {
+          "events": 11,
+          "max_p_hold": 0.770126,
+          "min_fair_drawdown_cents": 0.987395
+        }
+      },
+      "hold_delta_cents": -462.0,
+      "hold_net_cents": -494.0,
+      "live_net_cents": -32.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "max_p_hold": 0.790534,
+      "min_fair_drawdown_cents": 0.801983,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 4,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 7,
+        "mushroom_v28_probability_reduce": 16,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 28
+      },
+      "selected_entry_ts_min": "2026-05-07 10:05:16",
+      "selected_exit_ts_max": "2026-05-07 10:07:54",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 3,
+      "side": "no",
+      "side_won": false,
+      "source": "approved_entry",
+      "theory_net_cents": -80.0
+    },
+    {
+      "exit_event_count": 54,
+      "families": [
+        "probability_reduce",
+        "value_over_hold"
+      ],
+      "family_stats": {
+        "probability_reduce": {
+          "events": 32,
+          "max_p_hold": 0.799519,
+          "min_fair_drawdown_cents": 0.048139
+        },
+        "value_over_hold": {
+          "events": 22,
+          "max_p_hold": 0.83428,
+          "min_fair_drawdown_cents": 1.571974
+        }
+      },
+      "hold_delta_cents": -488.0,
+      "hold_net_cents": -511.0,
+      "live_net_cents": -23.0,
+      "market": "KXBTC15M-26MAY071100-00",
+      "max_p_hold": 0.83428,
+      "min_fair_drawdown_cents": 0.048139,
+      "reason_counts": {
+        "mushroom_v28_exit_value_over_hold": 8,
+        "mushroom_v28_exit_value_over_hold_single_shot_visible_depth": 14,
+        "mushroom_v28_probability_reduce": 12,
+        "mushroom_v28_probability_reduce_single_shot_visible_depth": 20
+      },
+      "selected_entry_ts_min": "2026-05-07 10:51:11",
+      "selected_exit_ts_max": "2026-05-07 10:56:43",
+      "selected_side_qty": 6.0,
+      "selected_side_trade_count": 3,
+      "side": "yes",
+      "side_won": false,
+      "source": "approved_entry",
+      "theory_net_cents": -84.0
+    }
+  ],
+  "target_candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+  "trades_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\trades.csv",
+  "variants": [
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 1020.5999999999999,
+      "delta_vs_hold_all_oracle_cents": 526.8395999999999,
+      "description": "Suppress value/reduce exits only when observed p_hold reached 0.85+.",
+      "family_counts": {
+        "probability_collapse": 2,
+        "probability_reduce": 5,
+        "value_over_hold": 12
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 1331.6,
+      "source_counts": {
+        "approved_entry": 11,
+        "rejected_actionable": 1
+      },
+      "suppressed_losers": 0,
+      "suppressed_markets": 12,
+      "suppressed_winners": 12,
+      "variant": "suppress_value_or_reduce_p_hold85",
+      "worst_market_cents": -99.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 899.3604,
+      "delta_vs_hold_all_oracle_cents": 405.6,
+      "description": "Source-quality diagnostic: hold only rows labelled approved_entry.",
+      "family_counts": {
+        "probability_collapse": 6,
+        "probability_reduce": 21,
+        "value_over_hold": 15
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 1210.3604,
+      "source_counts": {
+        "approved_entry": 35
+      },
+      "suppressed_losers": 4,
+      "suppressed_markets": 35,
+      "suppressed_winners": 31,
+      "variant": "hold_approved_entry_source_oracle",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 899.3599999999999,
+      "delta_vs_hold_all_oracle_cents": 405.5995999999999,
+      "description": "Source diagnostic: suppress any recognized exit only on approved_entry rows.",
+      "family_counts": {
+        "probability_collapse": 6,
+        "probability_reduce": 21,
+        "value_over_hold": 15
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 1210.36,
+      "source_counts": {
+        "approved_entry": 29
+      },
+      "suppressed_losers": 4,
+      "suppressed_markets": 29,
+      "suppressed_winners": 25,
+      "variant": "approved_suppress_any_exit_family",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 763.3599999999999,
+      "delta_vs_hold_all_oracle_cents": 269.5995999999999,
+      "description": "Source diagnostic: suppress value/reduce only on approved_entry rows.",
+      "family_counts": {
+        "probability_collapse": 5,
+        "probability_reduce": 21,
+        "value_over_hold": 15
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 1074.36,
+      "source_counts": {
+        "approved_entry": 28
+      },
+      "suppressed_losers": 4,
+      "suppressed_markets": 28,
+      "suppressed_winners": 24,
+      "variant": "approved_suppress_value_or_reduce",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 620.6,
+      "delta_vs_hold_all_oracle_cents": 126.83960000000002,
+      "description": "Suppress value/reduce exits only when observed p_hold reached 0.80+.",
+      "family_counts": {
+        "probability_collapse": 2,
+        "probability_reduce": 7,
+        "value_over_hold": 14
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 931.6,
+      "source_counts": {
+        "approved_entry": 13,
+        "rejected_actionable": 1
+      },
+      "suppressed_losers": 1,
+      "suppressed_markets": 14,
+      "suppressed_winners": 13,
+      "variant": "suppress_value_or_reduce_p_hold80",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 493.7604,
+      "delta_vs_hold_all_oracle_cents": 0.0,
+      "description": "Oracle bound: hold every selected-side live entry to settlement.",
+      "family_counts": {
+        "probability_collapse": 7,
+        "probability_reduce": 23,
+        "value_over_hold": 16
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 804.7604,
+      "source_counts": {
+        "approved_entry": 35,
+        "rejected_actionable": 5
+      },
+      "suppressed_losers": 6,
+      "suppressed_markets": 40,
+      "suppressed_winners": 34,
+      "variant": "hold_all_selected_oracle",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 493.76,
+      "delta_vs_hold_all_oracle_cents": -0.0004000000000132786,
+      "description": "Suppress any recognized v28 exit family on selected feature-gate rows.",
+      "family_counts": {
+        "probability_collapse": 7,
+        "probability_reduce": 23,
+        "value_over_hold": 16
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 804.76,
+      "source_counts": {
+        "approved_entry": 29,
+        "rejected_actionable": 3
+      },
+      "suppressed_losers": 6,
+      "suppressed_markets": 32,
+      "suppressed_winners": 26,
+      "variant": "suppress_any_exit_family",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 357.76,
+      "delta_vs_hold_all_oracle_cents": -136.0004,
+      "description": "Suppress value_over_hold or probability_reduce exits on selected feature-gate rows.",
+      "family_counts": {
+        "probability_collapse": 6,
+        "probability_reduce": 23,
+        "value_over_hold": 16
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 668.76,
+      "source_counts": {
+        "approved_entry": 28,
+        "rejected_actionable": 3
+      },
+      "suppressed_losers": 6,
+      "suppressed_markets": 31,
+      "suppressed_winners": 25,
+      "variant": "suppress_value_or_reduce",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 279.15999999999997,
+      "delta_vs_hold_all_oracle_cents": -214.60040000000004,
+      "description": "Suppress probability_collapse exits on selected feature-gate rows.",
+      "family_counts": {
+        "probability_collapse": 7,
+        "probability_reduce": 5,
+        "value_over_hold": 2
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 590.16,
+      "source_counts": {
+        "approved_entry": 6,
+        "rejected_actionable": 1
+      },
+      "suppressed_losers": 2,
+      "suppressed_markets": 7,
+      "suppressed_winners": 5,
+      "variant": "suppress_probability_collapse",
+      "worst_market_cents": -344.84000000000003
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 256.76,
+      "delta_vs_hold_all_oracle_cents": -237.0004,
+      "description": "Suppress value/reduce exits only when fair drawdown was <=5c.",
+      "family_counts": {
+        "probability_collapse": 5,
+        "probability_reduce": 22,
+        "value_over_hold": 15
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 567.76,
+      "source_counts": {
+        "approved_entry": 26,
+        "rejected_actionable": 3
+      },
+      "suppressed_losers": 6,
+      "suppressed_markets": 29,
+      "suppressed_winners": 23,
+      "variant": "suppress_value_or_reduce_shallow_dd5",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 190.60000000000002,
+      "delta_vs_hold_all_oracle_cents": -303.1604,
+      "description": "Suppress value_over_hold exits on selected feature-gate rows.",
+      "family_counts": {
+        "probability_collapse": 2,
+        "probability_reduce": 8,
+        "value_over_hold": 16
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 501.6,
+      "source_counts": {
+        "approved_entry": 15,
+        "rejected_actionable": 1
+      },
+      "suppressed_losers": 2,
+      "suppressed_markets": 16,
+      "suppressed_winners": 14,
+      "variant": "suppress_value_over_hold",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 57.15999999999997,
+      "delta_vs_hold_all_oracle_cents": -436.60040000000004,
+      "description": "Suppress probability_reduce exits on selected feature-gate rows.",
+      "family_counts": {
+        "probability_collapse": 5,
+        "probability_reduce": 23,
+        "value_over_hold": 8
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 368.15999999999997,
+      "source_counts": {
+        "approved_entry": 21,
+        "rejected_actionable": 2
+      },
+      "suppressed_losers": 6,
+      "suppressed_markets": 23,
+      "suppressed_winners": 17,
+      "variant": "suppress_probability_reduce",
+      "worst_market_cents": -511.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": 0.0,
+      "delta_vs_hold_all_oracle_cents": -493.7604,
+      "description": "Actual live selected-side exits/state on feature-gate rows.",
+      "family_counts": {},
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": 311.0,
+      "source_counts": {},
+      "suppressed_losers": 0,
+      "suppressed_markets": 0,
+      "suppressed_winners": 0,
+      "variant": "baseline_live",
+      "worst_market_cents": -100.0
+    },
+    {
+      "baseline_live_net_cents": 311.0,
+      "blockers": [
+        "diagnostic_counterfactual_uses_settlement_outcomes",
+        "selected_side_live_subset_only",
+        "not_frozen_forward_shadow_policy"
+      ],
+      "delta_vs_baseline_cents": -405.6,
+      "delta_vs_hold_all_oracle_cents": -899.3604,
+      "description": "Source-quality diagnostic: hold only rows labelled rejected_actionable.",
+      "family_counts": {
+        "probability_collapse": 1,
+        "probability_reduce": 2,
+        "value_over_hold": 1
+      },
+      "hold_all_oracle_net_cents": 804.7604,
+      "selected_side_live_traded_markets": 40,
+      "simulated_net_cents": -94.6,
+      "source_counts": {
+        "rejected_actionable": 5
+      },
+      "suppressed_losers": 2,
+      "suppressed_markets": 5,
+      "suppressed_winners": 3,
+      "variant": "hold_rejected_actionable_source_oracle",
+      "worst_market_cents": -304.0
+    }
+  ]
+}

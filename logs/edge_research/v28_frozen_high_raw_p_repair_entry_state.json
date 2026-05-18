@@ -1,0 +1,9 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "skip_paid_or_weak_boundary_repair_highest_raw_p",
+  "coverage_floor": 75.0,
+  "danger_rule": "paid_price_fragile OR weak_boundary_turbulence",
+  "freeze_ts_utc": "2026-05-06T07:59:24.730118+00:00",
+  "physics": "After removing unresolved or paid-price fragile states, restore coverage with the strongest clean FV states.",
+  "repair_rule": "clean repair rows ranked by highest raw p_side, missed markets first"
+}

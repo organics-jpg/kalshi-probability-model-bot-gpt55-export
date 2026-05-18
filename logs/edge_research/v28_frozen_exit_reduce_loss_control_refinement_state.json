@@ -1,0 +1,34 @@
+{
+  "candidate_family": "exit_reduce_loss_control_refinement",
+  "freeze_ts_utc": "2026-05-06T20:08:44.785765+00:00",
+  "origin": "Derived from the reduce-suppression risk ledger; earlier rows are diagnostic only.",
+  "rules": {
+    "reduce_suppress_p_hold_ge_075_drawdown_lte_2p5": {
+      "drawdown_lte_zero": false,
+      "drawdown_max": 2.5,
+      "p_hold_min": 0.75,
+      "physics": "Suppress reduce exits only when the fair-value drawdown is small."
+    },
+    "reduce_suppress_p_hold_ge_075_fair_drawdown_lte_0": {
+      "drawdown_lte_zero": true,
+      "drawdown_max": null,
+      "p_hold_min": 0.75,
+      "physics": "Suppress reduce exits only when fair value still favors holding over the exit mark."
+    },
+    "reduce_suppress_p_hold_ge_079": {
+      "drawdown_lte_zero": false,
+      "drawdown_max": null,
+      "p_hold_min": 0.79,
+      "physics": "Only suppress reduce exits when held-side probability is very high."
+    },
+    "reduce_suppress_p_hold_ge_079_or_drawdown_lte_2p5": {
+      "drawdown_lte_zero": false,
+      "drawdown_max": null,
+      "or_drawdown_max": 2.5,
+      "or_p_hold_min": 0.79,
+      "p_hold_min": 0.75,
+      "physics": "Permit suppression if either held probability is very high or fair-value drawdown is small."
+    }
+  },
+  "strict_forward_note": "Only post_refinement_birth lanes count as forward evidence."
+}

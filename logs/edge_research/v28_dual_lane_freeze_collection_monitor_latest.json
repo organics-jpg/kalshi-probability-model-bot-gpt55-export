@@ -1,0 +1,222 @@
+{
+  "blocker": null,
+  "freeze_local_time": "2026-05-07T09:00:17.363339-04:00",
+  "freeze_ts_utc": "2026-05-07T13:00:17.363339+00:00",
+  "generated_at_utc": "2026-05-11T03:46:13.723316+00:00",
+  "interpretation": [
+    "This is a collection monitor, not a strategy scorecard.",
+    "The own-freeze scorecard remains authoritative for live readiness.",
+    "A waiting-for-min-window blocker means evidence cannot be mature yet, even if shadow events are arriving."
+  ],
+  "live_baseline_cents": -255.98999999999998,
+  "own_freeze_unions": [
+    {
+      "blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 77.77777777777777,
+      "full_loss_cushion": 0,
+      "live_ready": false,
+      "losses": 2,
+      "net_cents": 49.0,
+      "policy": "post_dual_union_birth_entry_cheap_penalty025_rank_only",
+      "reconstructed_share": 0.14285714285714285,
+      "settled": 14,
+      "wins": 12
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "coverage_pct": 77.77777777777777,
+      "full_loss_cushion": 0,
+      "live_ready": false,
+      "losses": 2,
+      "net_cents": 49.0,
+      "policy": "post_dual_union_birth_bridge_cheap_penalty025_rank_only",
+      "reconstructed_share": 0.14285714285714285,
+      "settled": 14,
+      "wins": 12
+    }
+  ],
+  "requirements": {
+    "coverage_max_pct": 90.0,
+    "coverage_min_pct": 75.0,
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30
+  },
+  "sample_clock": {
+    "earliest_min_sample_local_time": "2026-05-07T16:30:17.363339-04:00",
+    "earliest_min_sample_utc": "2026-05-07T20:30:17.363339+00:00",
+    "possible_market_windows_since_freeze": 347,
+    "windows_remaining_to_min_sample": 0
+  },
+  "shadow_collection": {
+    "pending_post_exit_clock_rows": 0,
+    "post_freeze_distinct_markets": 15,
+    "post_freeze_entry_rows": 26,
+    "post_freeze_event_counts": {
+      "exit_capacity_estimated": 32,
+      "exit_plan_built": 32,
+      "exit_reconciled": 32,
+      "exit_signal_seen": 32,
+      "exit_snapshot_built": 32,
+      "exit_submit_full": 32,
+      "exit_submit_start": 32,
+      "exit_submit_success": 32,
+      "fill_full": 71,
+      "mushroom_v28_approved": 39,
+      "mushroom_v28_rejected": 2256,
+      "order_submit_start": 71,
+      "order_submit_success": 71,
+      "plan_built": 39,
+      "signal_seen": 39
+    },
+    "post_freeze_events": 2842,
+    "post_freeze_exit_clock_rows": 26,
+    "recent_post_freeze_rows": [
+      {
+        "actual_gross_cents": 30,
+        "entry_ts": "2026-05-07T15:18:39.003964+00:00",
+        "exit_reason": "",
+        "exit_ts": "",
+        "hold_gross_cents": 30,
+        "market": "KXBTC15M-26MAY071130-30",
+        "result": "no",
+        "side": "no",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": 44,
+        "entry_ts": "2026-05-07T15:31:46.752356+00:00",
+        "exit_reason": "mushroom_v28_exit_value_over_hold",
+        "exit_ts": "2026-05-07T15:42:14.190856+00:00",
+        "hold_gross_cents": 46,
+        "market": "KXBTC15M-26MAY071145-45",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": 42,
+        "entry_ts": "2026-05-07T15:57:45.898203+00:00",
+        "exit_reason": "mushroom_v28_exit_value_over_hold",
+        "exit_ts": "2026-05-07T15:58:16.718230+00:00",
+        "hold_gross_cents": 46,
+        "market": "KXBTC15M-26MAY071200-00",
+        "result": "no",
+        "side": "no",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": -16,
+        "entry_ts": "2026-05-07T16:07:13.004846+00:00",
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-07T16:08:26.386908+00:00",
+        "hold_gross_cents": 32,
+        "market": "KXBTC15M-26MAY071215-15",
+        "result": "no",
+        "side": "no",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": 2,
+        "entry_ts": "2026-05-07T16:08:28.013065+00:00",
+        "exit_reason": "mushroom_v28_exit_value_over_hold",
+        "exit_ts": "2026-05-07T16:08:58.509728+00:00",
+        "hold_gross_cents": 44,
+        "market": "KXBTC15M-26MAY071215-15",
+        "result": "no",
+        "side": "no",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": -8,
+        "entry_ts": "2026-05-07T16:08:58.574979+00:00",
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-07T16:09:39.381902+00:00",
+        "hold_gross_cents": 40,
+        "market": "KXBTC15M-26MAY071215-15",
+        "result": "no",
+        "side": "no",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": -10,
+        "entry_ts": "2026-05-07T16:23:06.093545+00:00",
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-07T16:23:37.942874+00:00",
+        "hold_gross_cents": 46,
+        "market": "KXBTC15M-26MAY071230-30",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": -38,
+        "entry_ts": "2026-05-07T16:23:59.966329+00:00",
+        "exit_reason": "mushroom_v28_probability_collapse_full",
+        "exit_ts": "2026-05-07T16:24:30.935590+00:00",
+        "hold_gross_cents": 32,
+        "market": "KXBTC15M-26MAY071230-30",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": 40,
+        "entry_ts": "2026-05-07T16:24:52.871742+00:00",
+        "exit_reason": "",
+        "exit_ts": "",
+        "hold_gross_cents": 40,
+        "market": "KXBTC15M-26MAY071230-30",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": -6,
+        "entry_ts": "2026-05-07T17:06:27.372033+00:00",
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-07T17:10:38.168558+00:00",
+        "hold_gross_cents": 40,
+        "market": "KXBTC15M-26MAY071315-15",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": -14,
+        "entry_ts": "2026-05-07T17:10:51.288944+00:00",
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-07T17:11:27.190018+00:00",
+        "hold_gross_cents": 38,
+        "market": "KXBTC15M-26MAY071315-15",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      },
+      {
+        "actual_gross_cents": 32,
+        "entry_ts": "2026-05-07T17:11:28.526206+00:00",
+        "exit_reason": "mushroom_v28_exit_value_over_hold",
+        "exit_ts": "2026-05-07T17:12:12.158487+00:00",
+        "hold_gross_cents": 44,
+        "market": "KXBTC15M-26MAY071315-15",
+        "result": "yes",
+        "side": "yes",
+        "status": "finalized"
+      }
+    ],
+    "reconstructed_trades_total": 173,
+    "settled_post_entry_rows": 26,
+    "settled_post_exit_clock_rows": 26,
+    "status_counts": {
+      "finalized": 26
+    },
+    "total_events": 26023
+  }
+}

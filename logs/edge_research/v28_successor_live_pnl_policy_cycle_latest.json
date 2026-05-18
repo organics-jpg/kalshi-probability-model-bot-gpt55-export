@@ -1,0 +1,171 @@
+{
+  "artifacts": {
+    "cycle_report": "logs/edge_research/v28_successor_live_pnl_policy_cycle_latest.json",
+    "labeled_decisions": "research_particle/v28_successor/live_pnl_labeled_decisions_latest.csv",
+    "policy_registry": "research_particle/v28_successor/live_pnl_policy_registry_latest.csv",
+    "policy_score": "logs/edge_research/v28_successor_live_pnl_policy_score_latest.json",
+    "readiness": "logs/edge_research/v28_successor_live_pnl_readiness_latest.json",
+    "sidecar_cycle": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json"
+  },
+  "live_pnl_readiness": {
+    "checks": [
+      {
+        "evidence": "live_pnl_policy_registry_latest.csv",
+        "item": "reproducible research-only live policy capture pipeline",
+        "status": "pass"
+      },
+      {
+        "evidence": "5bf8d66dbe2b31e01d38abe8a0238e68",
+        "item": "at least one frozen inspectable policy version",
+        "status": "pass"
+      },
+      {
+        "evidence": "16302 converted frozen FV rows",
+        "item": "frozen pre-resolution policy rows for incoming live markets",
+        "status": "pass"
+      },
+      {
+        "evidence": "314 captured primary policy rows after hash",
+        "item": "validation rows occur after policy hash creation",
+        "status": "pass"
+      },
+      {
+        "evidence": "314 joined primary rows after hash; 16302 total joined diagnostic+primary rows",
+        "item": "post-resolution labels joined after settlement for primary rows",
+        "status": "pass"
+      },
+      {
+        "evidence": "v28_successor_live_pnl_policy_score_latest.json",
+        "item": "fee-aware same-row comparison against regular v28 and successor FV-only",
+        "status": "pass"
+      },
+      {
+        "evidence": "12 labeled primary markets, 314 labeled primary paired opportunities",
+        "item": "bootstrap sample count of 10 finalized close windows or 25 paired opportunities",
+        "status": "pass"
+      },
+      {
+        "evidence": "readiness, score, and capture-health reports",
+        "item": "denominator reporting",
+        "status": "pass"
+      },
+      {
+        "evidence": "v28_successor_live_pnl_source_contract_latest.json",
+        "item": "source-quality verification",
+        "status": "pass"
+      },
+      {
+        "evidence": "v28_successor_live_pnl_capture_health_latest.json",
+        "item": "capture-health evidence",
+        "status": "pass"
+      },
+      {
+        "evidence": "v28_successor_live_pnl_fill_model_audit_latest.json",
+        "item": "fill-model audit or explicit assumptions report",
+        "status": "pass"
+      },
+      {
+        "evidence": "test_v28_successor_live_pnl_policy_lab.py; test_run_status=pass",
+        "item": "tests for causality, fee math, policy hash freezing, and no retroactive credit",
+        "status": "pass"
+      },
+      {
+        "evidence": "v28_successor_live_pnl_policy_experiment_ledger_latest.csv",
+        "item": "experiment ledger includes failed and deprecated policies",
+        "status": "pass"
+      },
+      {
+        "evidence": "v28_successor_live_pnl_readiness_latest.md",
+        "item": "bootstrap continue/retire/replace report",
+        "status": "pass"
+      }
+    ],
+    "diagnostic_rows_not_primary_credit": 15988,
+    "joined_primary_rows_after_policy_hash": 314,
+    "level_1_complete": true,
+    "level_2_controlled_live_test_ready": false,
+    "next_actions": [
+      "Run the live sidecar policy capture after this policy hash exists.",
+      "Score only future rows as primary live-forward policy evidence.",
+      "Keep existing pre-policy rows as diagnostic scaffolding only."
+    ],
+    "primary_markets_after_policy_hash": 12,
+    "primary_policy_rows_after_hash": 314,
+    "primary_rows_after_policy_hash": 314,
+    "readiness_verdict": "level_1_bootstrap_complete"
+  },
+  "live_pnl_score_summary": {
+    "diagnostic_markets": 189,
+    "diagnostic_rows_not_primary_credit": 15988,
+    "joined_rows": 16302,
+    "no_retroactive_credit_enforced": true,
+    "primary_live_forward_rows_after_policy_hash": 314,
+    "primary_markets": 12,
+    "score_status": "scored"
+  },
+  "research_only_guardrails": [
+    "does not start or stop live bot processes",
+    "does not read or write secrets",
+    "does not place orders",
+    "does not mutate live thresholds or order logic",
+    "uses public/recorded sidecar artifacts only",
+    "keeps rows before the policy hash as diagnostic only"
+  ],
+  "sidecar_cycle_summary": {
+    "blockers": [],
+    "builder_script": "run_v28_successor_sidecar_collection_cycle.py",
+    "collect_mode": "none",
+    "cycle_status": "sidecar_cycle_ready_for_external_promotion_verifier",
+    "generated_utc": "2026-05-18T18:30:49Z",
+    "minimum_forward_markets": 40,
+    "minimum_forward_rows": 200,
+    "next_actions": [],
+    "outputs": {
+      "cycle_json": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json",
+      "cycle_md": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.md"
+    },
+    "promotion_allowed": false,
+    "promotion_status": {
+      "allowed": false,
+      "reason": "collection cycles can create forward evidence, but promotion still requires source contract, coverage, evidence, verifier, and frozen forward gates"
+    },
+    "research_only_guardrails": [
+      "does not start or stop live bot processes",
+      "does not read or write secrets",
+      "does not place orders",
+      "does not mutate live thresholds or order logic",
+      "does not write canonical promotion ledgers directly",
+      "promotion_allowed is always false for this cycle report"
+    ],
+    "sidecar_clean_forward_markets": 189,
+    "sidecar_clean_forward_rows": 16302,
+    "sidecar_frozen_markets": 189,
+    "sidecar_frozen_rows": 16302,
+    "sidecar_joined_markets": 189,
+    "sidecar_joined_rows": 16302,
+    "sidecar_promotable_candidate_count": 1,
+    "steps_run": 8
+  },
+  "summary": {
+    "blockers": [],
+    "collect_mode": "none",
+    "controlled_live_test_authorized": false,
+    "cycle_status": "profit_goal_candidate_forward_ready",
+    "diagnostic_rows_not_primary_credit": 15988,
+    "joined_rows": 16302,
+    "next_actions": [],
+    "policy_created_utc": "2026-05-13T18:04:43.040Z",
+    "policy_hash": "5bf8d66dbe2b31e01d38abe8a0238e68",
+    "policy_id": "v28s_live_pnl_midband_no_fade_yes_v019",
+    "primary_delta_vs_v28_cents": "762.300000",
+    "primary_entered_rows_after_policy_hash": 3,
+    "primary_live_forward_rows_after_policy_hash": 314,
+    "primary_markets_after_policy_hash": 12,
+    "primary_net_pnl_cents": "70.000000",
+    "primary_policy_rows_after_hash": 314,
+    "primary_v28_net_pnl_cents": "-692.300000",
+    "promotion_allowed": false,
+    "readiness_verdict": "level_1_bootstrap_complete",
+    "registry_rows": 16302
+  }
+}

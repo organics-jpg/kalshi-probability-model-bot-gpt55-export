@@ -1,0 +1,33 @@
+{
+  "freeze_ts": "2026-05-05T22:07:37.064896+00:00",
+  "policies": [
+    {
+      "physics": "Retain raw v28 only on first market-side observation, then forget stale geometry and anchor to book. Requires effective p >= 0.60 and nonnegative effective edge.",
+      "policy": "first_side_raw_later_book_p60_edge0",
+      "role": "primary_calibrated_broad_candidate"
+    },
+    {
+      "physics": "Use RMT regime plus repeated-side state to decide how aggressively to forget v28 and anchor to book. Requires effective p >= 0.60 and nonnegative effective edge.",
+      "policy": "rmt_repetition_forget_p60_edge0",
+      "role": "primary_rmt_forgetting_candidate"
+    },
+    {
+      "physics": "Pure executable book favorite control. Tests whether the edge is just book favorites above 60c.",
+      "policy": "book_ask_prior_p60_edge0",
+      "role": "book_favorite_control"
+    },
+    {
+      "physics": "Raw v28 broad control. Kept to test whether better P&L is unstable over time despite weaker calibration.",
+      "policy": "v28_raw_p50_edge0",
+      "role": "raw_broad_control"
+    }
+  ],
+  "promotion_floor": {
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "must_have_nonnegative_temporal_halves": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

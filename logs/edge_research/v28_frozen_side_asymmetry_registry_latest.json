@@ -1,0 +1,143 @@
+{
+  "bucket_summary": {
+    "avg_net_cents": -31.166666666666668,
+    "avg_p_side": 0.6387485,
+    "calibration_gap": 0.30541516666666674,
+    "coverage_pct": 5.084745762711864,
+    "entries": 6,
+    "losses": 4,
+    "net_cents": -187.0,
+    "settled": 6,
+    "win_rate": 0.3333333333333333,
+    "wins": 2
+  },
+  "freeze": {
+    "freeze_ts_utc": "2026-05-06T07:47:04.735626+00:00",
+    "hypothesis": "Mid-confidence NO at moderate distance can be unresolved boundary hesitation, not a mirror image of YES escape.",
+    "promotion_note": "Registry only; do not add an FV penalty until future rows show enough settled negative expectancy or overconfidence.",
+    "registry": "side_asymmetry_no_p60_70_midboundary_midrecross",
+    "rule": "side=no, 0.60<=p_side<0.70, 0.30<=abs_d_sigma<0.55, 0.45<=recross_hazard_score<0.75"
+  },
+  "future_denominator": 118,
+  "interpretation": [
+    "Future denominator is 118; side-asymmetry bucket has 6 entries and 6 settled rows.",
+    "Non-clock subset has 6 entries and 6 settled rows.",
+    "This is a registry only; it becomes a candidate only after enough future evidence accumulates."
+  ],
+  "non_clock_bucket_summary": {
+    "avg_net_cents": -31.166666666666668,
+    "avg_p_side": 0.6387485,
+    "calibration_gap": 0.30541516666666674,
+    "coverage_pct": 5.084745762711864,
+    "entries": 6,
+    "losses": 4,
+    "net_cents": -187.0,
+    "settled": 6,
+    "win_rate": 0.3333333333333333,
+    "wins": 2
+  },
+  "rows": [
+    {
+      "abs_d_sigma": 0.322198,
+      "ask_prob": 0.45,
+      "clock_hazard": false,
+      "market": "KXBTC15M-26MAY060445-45",
+      "net_cents": -94.0,
+      "p_side": 0.636374,
+      "raw_edge_prob": 0.18637399999999998,
+      "recross_hazard_score": 0.6665690270808117,
+      "seconds_to_close": 864.716,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-06T08:30:35.287901+00:00"
+    },
+    {
+      "abs_d_sigma": 0.377919,
+      "ask_prob": 0.61,
+      "clock_hazard": false,
+      "market": "KXBTC15M-26MAY060500-00",
+      "net_cents": -126.0,
+      "p_side": 0.674136,
+      "raw_edge_prob": 0.06413599999999997,
+      "recross_hazard_score": 0.6203177051235377,
+      "seconds_to_close": 783.254,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-06T08:46:56.748188+00:00"
+    },
+    {
+      "abs_d_sigma": 0.323422,
+      "ask_prob": 0.44,
+      "clock_hazard": false,
+      "market": "KXBTC15M-26MAY060545-45",
+      "net_cents": -92.0,
+      "p_side": 0.626642,
+      "raw_edge_prob": 0.18664200000000003,
+      "recross_hazard_score": 0.6890532658346525,
+      "seconds_to_close": 807.56,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-06T09:31:32.441205+00:00"
+    },
+    {
+      "abs_d_sigma": 0.321769,
+      "ask_prob": 0.51,
+      "clock_hazard": false,
+      "market": "KXBTC15M-26MAY062045-45",
+      "net_cents": 94.0,
+      "p_side": 0.61792,
+      "raw_edge_prob": 0.10792000000000002,
+      "recross_hazard_score": 0.5903043382646713,
+      "seconds_to_close": 834.661,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-07T00:31:05.341326+00:00"
+    },
+    {
+      "abs_d_sigma": 0.321159,
+      "ask_prob": 0.22,
+      "clock_hazard": false,
+      "market": "KXBTC15M-26MAY062100-00",
+      "net_cents": -47.0,
+      "p_side": 0.615588,
+      "raw_edge_prob": 0.39558800000000005,
+      "recross_hazard_score": 0.5154674438225817,
+      "seconds_to_close": 683.547,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-07T00:48:36.454910+00:00"
+    },
+    {
+      "abs_d_sigma": 0.404187,
+      "ask_prob": 0.59,
+      "clock_hazard": false,
+      "market": "KXBTC15M-26MAY062215-15",
+      "net_cents": 78.0,
+      "p_side": 0.661831,
+      "raw_edge_prob": 0.07183099999999998,
+      "recross_hazard_score": 0.6698685223589202,
+      "seconds_to_close": 850.282,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-07T02:00:49.721290+00:00"
+    }
+  ],
+  "target_summary": {
+    "avg_net_cents": -3.689655172413793,
+    "avg_p_side": 0.6459196091954023,
+    "calibration_gap": 0.08270121839080458,
+    "coverage_pct": 73.72881355932203,
+    "entries": 87,
+    "losses": 38,
+    "net_cents": -321.0,
+    "settled": 87,
+    "win_rate": 0.5632183908045977,
+    "wins": 49
+  }
+}

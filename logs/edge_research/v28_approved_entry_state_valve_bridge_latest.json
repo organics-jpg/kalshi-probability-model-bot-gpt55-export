@@ -1,0 +1,195 @@
+{
+  "any_promotion_ready": false,
+  "interpretation": [
+    "2 approved-entry-only frozen valve(s) are positive versus approved-entry control.",
+    "No valve is promotion-ready from this bridge because the validation surface is approved-entry-only and not yet in candidate-vs-live/live-readiness gates.",
+    "The strongest immediate research action is a full-surface replay/adapter, not a live change."
+  ],
+  "live_net_cents": 1157.0,
+  "missing_sources": [],
+  "next_steps": [
+    "Keep both valves research-only; they validate actual approved entries only.",
+    "Before tracker integration, build a full-surface replay that computes market coverage against the same denominator used by broad entry lanes.",
+    "Compare the valve output to current live-only baseline, source-quality gates, full-loss cushion, and live-readiness gates in one candidate row.",
+    "Inspect skipped winners separately; danger-zone skips include some winners, so the physical rule must prove it removes more exit/state churn than upside."
+  ],
+  "promising_approved_only_rows": 2,
+  "rows": [
+    {
+      "approved_row_source_share": 0.0,
+      "approved_surface_coverage_pct": 100.0,
+      "blockers": [
+        "approved_surface_coverage_above_90_not_broad_strategy_comparable",
+        "delta_full_loss_cushion_lt_3",
+        "not_in_candidate_vs_live_table",
+        "approved_entry_surface_only_not_full_strategy_surface",
+        "live_readiness_not_evaluated_for_valve",
+        "does_not_beat_live_on_naive_cents_comparison"
+      ],
+      "candidate_vs_live_table_present": false,
+      "control_gross_cents": 487.0,
+      "delta_full_loss_cushion": 2,
+      "delta_vs_approved_control_cents": 258.0,
+      "entries": 110,
+      "freeze_ts_utc": "2026-05-06T03:09:58.042066+00:00",
+      "future_markets": 71,
+      "future_rows": 118,
+      "gates": {
+        "approved_row_source_share_le_35": true,
+        "approved_surface_coverage_ge_75": true,
+        "approved_surface_coverage_le_90": false,
+        "beats_live_cents_naive": false,
+        "delta_full_loss_cushion_ge_3": false,
+        "gross_full_loss_cushion_ge_3": true,
+        "positive_delta_vs_approved_control": true,
+        "positive_on_approved_surface": true,
+        "present_in_candidate_vs_live": false,
+        "strict_frozen_forward": true
+      },
+      "gross_cents": 745.0,
+      "gross_full_loss_cushion": 7,
+      "label": "danger_zone_entry_valve",
+      "losses": 12,
+      "naive_delta_vs_live_cents": -412.0,
+      "policy": "skip_reentry_gap15_or_gap30",
+      "promotion_ready": false,
+      "settled": 110,
+      "skipped_entries": 8,
+      "skipped_examples": [
+        {
+          "ask_cents": 9,
+          "gross_cents": -18,
+          "hold_gross_cents": -18,
+          "market": "KXBTC15M-26MAY060330-30",
+          "market_side_entry_index": 0,
+          "p_side": 0.999788,
+          "raw_book_gap": 0.909788,
+          "side": "no",
+          "won": false
+        },
+        {
+          "ask_cents": 66,
+          "gross_cents": -32,
+          "hold_gross_cents": 68,
+          "market": "KXBTC15M-26MAY060800-00",
+          "market_side_entry_index": 1,
+          "p_side": 0.874265,
+          "raw_book_gap": 0.21426499999999993,
+          "side": "yes",
+          "won": true
+        },
+        {
+          "ask_cents": 70,
+          "gross_cents": -16,
+          "hold_gross_cents": 60,
+          "market": "KXBTC15M-26MAY060945-45",
+          "market_side_entry_index": 1,
+          "p_side": 0.850231,
+          "raw_book_gap": 0.150231,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 71,
+          "gross_cents": -12,
+          "hold_gross_cents": 58,
+          "market": "KXBTC15M-26MAY060945-45",
+          "market_side_entry_index": 2,
+          "p_side": 0.861162,
+          "raw_book_gap": 0.15116200000000002,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 70,
+          "gross_cents": 0,
+          "hold_gross_cents": 60,
+          "market": "KXBTC15M-26MAY061015-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.85586,
+          "raw_book_gap": 0.15586,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 42,
+          "gross_cents": -60,
+          "hold_gross_cents": 116,
+          "market": "KXBTC15M-26MAY062015-15",
+          "market_side_entry_index": 0,
+          "p_side": 0.871622,
+          "raw_book_gap": 0.451622,
+          "side": "no",
+          "won": true
+        },
+        {
+          "ask_cents": 67,
+          "gross_cents": -134,
+          "hold_gross_cents": -134,
+          "market": "KXBTC15M-26MAY062015-15",
+          "market_side_entry_index": 1,
+          "p_side": 0.885657,
+          "raw_book_gap": 0.215657,
+          "side": "yes",
+          "won": false
+        },
+        {
+          "ask_cents": 61,
+          "gross_cents": 14,
+          "hold_gross_cents": 78,
+          "market": "KXBTC15M-26MAY062100-00",
+          "market_side_entry_index": 2,
+          "p_side": 0.852359,
+          "raw_book_gap": 0.242359,
+          "side": "yes",
+          "won": true
+        }
+      ],
+      "wins": 98
+    },
+    {
+      "approved_row_source_share": 0.0,
+      "approved_surface_coverage_pct": 100.0,
+      "blockers": [
+        "approved_surface_coverage_above_90_not_broad_strategy_comparable",
+        "delta_full_loss_cushion_lt_3",
+        "not_in_candidate_vs_live_table",
+        "approved_entry_surface_only_not_full_strategy_surface",
+        "live_readiness_not_evaluated_for_valve",
+        "does_not_beat_live_on_naive_cents_comparison"
+      ],
+      "candidate_vs_live_table_present": false,
+      "control_gross_cents": 477.0,
+      "delta_full_loss_cushion": 1,
+      "delta_vs_approved_control_cents": 180.0,
+      "entries": 114,
+      "freeze_ts_utc": "2026-05-06T02:42:53.253731+00:00",
+      "future_markets": 73,
+      "future_rows": 120,
+      "gates": {
+        "approved_row_source_share_le_35": true,
+        "approved_surface_coverage_ge_75": true,
+        "approved_surface_coverage_le_90": false,
+        "beats_live_cents_naive": false,
+        "delta_full_loss_cushion_ge_3": false,
+        "gross_full_loss_cushion_ge_3": true,
+        "positive_delta_vs_approved_control": true,
+        "positive_on_approved_surface": true,
+        "present_in_candidate_vs_live": false,
+        "strict_frozen_forward": true
+      },
+      "gross_cents": 657.0,
+      "gross_full_loss_cushion": 6,
+      "label": "approved_entry_state_valve",
+      "losses": 13,
+      "naive_delta_vs_live_cents": -500.0,
+      "policy": "same_side_reentry_gap_lte_15pp",
+      "promotion_ready": false,
+      "settled": 114,
+      "skipped_entries": 6,
+      "skipped_examples": [],
+      "wins": 101
+    }
+  ],
+  "tracker_counts": {}
+}

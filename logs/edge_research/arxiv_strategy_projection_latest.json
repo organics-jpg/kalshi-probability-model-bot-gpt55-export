@@ -1,0 +1,433 @@
+{
+  "candidate_artifact_crosswalk": [
+    {
+      "blockers": [
+        "diagnostic_prefreeze",
+        "source_gate_zero_row_margin"
+      ],
+      "coverage_pct": 75.24752475247524,
+      "delta_vs_live_cents": 872.0,
+      "entries": 76,
+      "gate": "top_component_parent_fill_repair_child",
+      "ideas": "Dubach/Lokin execution model",
+      "live_ready": false,
+      "losses": 9,
+      "name": "best_existing_fillability_candidate",
+      "net_cents": 2233.0,
+      "net_dollars": 22.33,
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter",
+      "settled": 76,
+      "simulated_share": 0.34210526315789475,
+      "win_rate_ex_flats": 0.881578947368421,
+      "wins": 67
+    },
+    {
+      "blockers": [
+        "needs_own_frozen_forward_birth",
+        "live_ready_false"
+      ],
+      "coverage_pct": 82.17821782178217,
+      "delta_vs_live_cents": 481.5,
+      "entries": 83,
+      "gate": "dual_lane_overlap_union",
+      "ideas": "Brownian/FPT or path physics",
+      "live_ready": false,
+      "losses": 15,
+      "name": "best_existing_fpt_physics_candidate",
+      "net_cents": 1842.5,
+      "net_dollars": 18.425,
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty025_rank_only",
+      "settled": 83,
+      "simulated_share": 0.2168674698795181,
+      "win_rate_ex_flats": 0.8192771084337349,
+      "wins": 68
+    },
+    {
+      "blockers": [
+        "net_not_positive",
+        "simulated_share_gt_35pct",
+        "control_risk_stop_active"
+      ],
+      "coverage_pct": 87.12871287128714,
+      "delta_vs_live_cents": -1980.0,
+      "entries": 88,
+      "gate": "raw_p52_book_disagreement_skip",
+      "ideas": "conformal/agreement/interval uncertainty",
+      "live_ready": false,
+      "losses": 36,
+      "name": "best_existing_consensus_candidate",
+      "net_cents": -619.0,
+      "net_dollars": -6.19,
+      "policy": "raw_p52_skip_v28_minus_book_gt15pp",
+      "settled": 88,
+      "simulated_share": 0.9318181818181818,
+      "win_rate_ex_flats": 0.5909090909090909,
+      "wins": 52
+    }
+  ],
+  "diagnostics": {
+    "feature_event_type_counts": {
+      "plan_built": 632
+    },
+    "feature_index_keys": 1368,
+    "matched_trade_count": 632,
+    "raw_trade_count": 632
+  },
+  "generated_at_utc": "2026-05-07T23:00:57.288806+00:00",
+  "inputs": {
+    "candidate_table_json": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_candidate_vs_live_full_table_latest.json",
+    "execution_events": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\execution_events.ndjson",
+    "live_summary_json": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\summary.json",
+    "trades_csv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\trades.csv"
+  },
+  "live_summary": {
+    "blocked_trade_count": 0,
+    "blocked_trade_net_pnl_total_dollars": 0,
+    "completed_round_trips": 521,
+    "confirmed_losses": 4,
+    "confirmed_losses_by_sign": 336,
+    "confirmed_wins": 107,
+    "confirmed_wins_by_sign": 285,
+    "csv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\trades.csv",
+    "diagnosis": "ok",
+    "entries_total": 632,
+    "execution_events_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\execution_events.ndjson",
+    "execution_events_present": true,
+    "gross_cost_basis_dollars": 1272.71,
+    "gross_pnl_total_dollars": 13.61,
+    "gross_pnl_total_percent": 1.0694,
+    "lease_block_markets": 0,
+    "lease_events_csv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\lease_events.csv",
+    "lease_events_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\lease_events.ndjson",
+    "lease_events_present": false,
+    "lease_markets_issued": 0,
+    "lease_summary_json": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\lease_summary.json",
+    "log_files_scanned": [
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\process_stderr_restart_20260503_160153.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\process_stdout_restart_20260503_160153.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\manual_restart_stderr_20260505_141027.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\manual_restart_stdout_20260505_141027.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\manual_restart_stderr_20260505_141053.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\manual_restart_stdout_20260505_141053.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\manual_restart_stderr_20260505_153015.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\bot.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\manual_restart_stdout_20260505_153015.log",
+      "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\hourly_monitor.log"
+    ],
+    "log_source_tag": "live_mushroom_v28_size2",
+    "market_results_csv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\stats\\live_mushroom_v28_size2\\market_results.csv",
+    "net_pnl_total_dollars": 13.61,
+    "net_pnl_total_percent": 1.0694,
+    "open_positions": 0,
+    "raw_entry_lines_found": 1394,
+    "raw_exit_lines_found": 1298,
+    "resolved_markets": 591,
+    "score_mode": "live_only",
+    "strategy_tag": "live_mushroom_v28_size2",
+    "unresolved_markets": 1,
+    "voids": 0
+  },
+  "purpose": "Research-only projection of Truffle/arXiv-inspired strategy gates over recorded live v28 entries.",
+  "strategies": [
+    {
+      "all": {
+        "avg_cents_per_entry": 2.153481012658228,
+        "cost_basis_dollars": 1272.71,
+        "coverage_of_live_entries": 1.0,
+        "entries": 632,
+        "flats": 11,
+        "losses": 336,
+        "net_cents": 1361.0,
+        "net_dollars": 13.61,
+        "roi_on_entry_notional": 0.010693716557581853,
+        "win_rate_ex_flats": 0.45893719806763283,
+        "wins": 285
+      },
+      "ideas": "baseline",
+      "interpretation": "Control row for same-window comparison.",
+      "name": "current_live_v28_replay",
+      "rule": "All matched live v28 entries from the refreshed scorer window.",
+      "splits": {
+        "holdout_last_20pct": {
+          "avg_cents_per_entry": 2.4409448818897634,
+          "cost_basis_dollars": 306.0,
+          "coverage_of_live_entries": 1.0,
+          "entries": 127,
+          "flats": 6,
+          "losses": 77,
+          "net_cents": 309.99999999999994,
+          "net_dollars": 3.0999999999999996,
+          "roi_on_entry_notional": 0.010130718954248365,
+          "win_rate_ex_flats": 0.36363636363636365,
+          "wins": 44
+        },
+        "train_first_60pct": {
+          "avg_cents_per_entry": 2.7651715039577835,
+          "cost_basis_dollars": 740.11,
+          "coverage_of_live_entries": 1.0,
+          "entries": 379,
+          "flats": 0,
+          "losses": 192,
+          "net_cents": 1048.0,
+          "net_dollars": 10.48,
+          "roi_on_entry_notional": 0.014160057288781398,
+          "win_rate_ex_flats": 0.49340369393139843,
+          "wins": 187
+        },
+        "validation_next_20pct": {
+          "avg_cents_per_entry": 0.023809523809523628,
+          "cost_basis_dollars": 226.6,
+          "coverage_of_live_entries": 1.0,
+          "entries": 126,
+          "flats": 5,
+          "losses": 67,
+          "net_cents": 2.999999999999977,
+          "net_dollars": 0.02999999999999977,
+          "roi_on_entry_notional": 0.0001323918799646945,
+          "win_rate_ex_flats": 0.4462809917355372,
+          "wins": 54
+        }
+      }
+    },
+    {
+      "all": {
+        "avg_cents_per_entry": 11.876404494382022,
+        "cost_basis_dollars": 175.82,
+        "coverage_of_live_entries": 0.14082278481012658,
+        "entries": 89,
+        "flats": 2,
+        "losses": 38,
+        "net_cents": 1057.0,
+        "net_dollars": 10.57,
+        "roi_on_entry_notional": 0.060118302809691736,
+        "win_rate_ex_flats": 0.5632183908045977,
+        "wins": 49
+      },
+      "ideas": "conformal interval / ensemble agreement",
+      "interpretation": "A cheap proxy for calibrated uncertainty: use v22-v28 agreement as an interval width. It tilts toward hit rate, but may sacrifice too much coverage and total PnL.",
+      "name": "conformal_consensus_winrate_gate",
+      "rule": "Keep current v28 entries only when v28-v22 probability gap <= 0.12 and v28 edge >= 4c.",
+      "splits": {
+        "holdout_last_20pct": {
+          "avg_cents_per_entry": 7.615384615384614,
+          "cost_basis_dollars": 62.34,
+          "coverage_of_live_entries": 0.2047244094488189,
+          "entries": 26,
+          "flats": 2,
+          "losses": 13,
+          "net_cents": 197.99999999999997,
+          "net_dollars": 1.9799999999999998,
+          "roi_on_entry_notional": 0.031761308950914335,
+          "win_rate_ex_flats": 0.4583333333333333,
+          "wins": 11
+        },
+        "train_first_60pct": {
+          "avg_cents_per_entry": 15.657894736842104,
+          "cost_basis_dollars": 72.09,
+          "coverage_of_live_entries": 0.10026385224274406,
+          "entries": 38,
+          "flats": 0,
+          "losses": 13,
+          "net_cents": 595.0,
+          "net_dollars": 5.95,
+          "roi_on_entry_notional": 0.08253571923983909,
+          "win_rate_ex_flats": 0.6578947368421053,
+          "wins": 25
+        },
+        "validation_next_20pct": {
+          "avg_cents_per_entry": 10.56,
+          "cost_basis_dollars": 41.39,
+          "coverage_of_live_entries": 0.1984126984126984,
+          "entries": 25,
+          "flats": 0,
+          "losses": 12,
+          "net_cents": 264.0,
+          "net_dollars": 2.64,
+          "roi_on_entry_notional": 0.06378352258999759,
+          "win_rate_ex_flats": 0.52,
+          "wins": 13
+        }
+      }
+    },
+    {
+      "all": {
+        "avg_cents_per_entry": 15.75,
+        "cost_basis_dollars": 314.8,
+        "coverage_of_live_entries": 0.21518987341772153,
+        "entries": 136,
+        "flats": 0,
+        "losses": 79,
+        "net_cents": 2142.0,
+        "net_dollars": 21.42,
+        "roi_on_entry_notional": 0.06804320203303685,
+        "win_rate_ex_flats": 0.41911764705882354,
+        "wins": 57
+      },
+      "ideas": "Dubach depth decay / Lokin state-dependent fill probability",
+      "interpretation": "A conservative execution-quality gate: enough displayed depth, fresh enough book, not too late in the round, and not paying the expensive tail.",
+      "name": "depth_decay_fillability_gate",
+      "rule": "Keep current v28 entries only when depth/required >= 3, book age <= 750ms, ask <= 80c, and seconds_to_close >= 600.",
+      "splits": {
+        "holdout_last_20pct": {
+          "avg_cents_per_entry": 17.166666666666668,
+          "cost_basis_dollars": 116.2,
+          "coverage_of_live_entries": 0.28346456692913385,
+          "entries": 36,
+          "flats": 0,
+          "losses": 22,
+          "net_cents": 618.0,
+          "net_dollars": 6.18,
+          "roi_on_entry_notional": 0.053184165232358,
+          "win_rate_ex_flats": 0.3888888888888889,
+          "wins": 14
+        },
+        "train_first_60pct": {
+          "avg_cents_per_entry": 14.077922077922079,
+          "cost_basis_dollars": 157.96,
+          "coverage_of_live_entries": 0.20316622691292877,
+          "entries": 77,
+          "flats": 0,
+          "losses": 44,
+          "net_cents": 1084.0,
+          "net_dollars": 10.84,
+          "roi_on_entry_notional": 0.0686249683464168,
+          "win_rate_ex_flats": 0.42857142857142855,
+          "wins": 33
+        },
+        "validation_next_20pct": {
+          "avg_cents_per_entry": 19.130434782608695,
+          "cost_basis_dollars": 40.64,
+          "coverage_of_live_entries": 0.18253968253968253,
+          "entries": 23,
+          "flats": 0,
+          "losses": 13,
+          "net_cents": 440.0,
+          "net_dollars": 4.4,
+          "roi_on_entry_notional": 0.10826771653543307,
+          "win_rate_ex_flats": 0.43478260869565216,
+          "wins": 10
+        }
+      }
+    },
+    {
+      "all": {
+        "avg_cents_per_entry": 8.42153846153846,
+        "cost_basis_dollars": 675.94,
+        "coverage_of_live_entries": 0.5142405063291139,
+        "entries": 325,
+        "flats": 7,
+        "losses": 172,
+        "net_cents": 2737.0,
+        "net_dollars": 27.37,
+        "roi_on_entry_notional": 0.04049175962363523,
+        "win_rate_ex_flats": 0.4591194968553459,
+        "wins": 146
+      },
+      "ideas": "Brownian first-passage / jump-diffusion baseline",
+      "interpretation": "Use the terminal-distribution idea as a sanity band: avoid extremely thin/remote or late states where the v28 fair value has historically been less reliable.",
+      "name": "brownian_fpt_sanity_gate",
+      "rule": "Keep current v28 entries only when v28 edge >= 3c, seconds_to_close >= 120, and 0.70 <= abs_d_sigma <= 1.10.",
+      "splits": {
+        "holdout_last_20pct": {
+          "avg_cents_per_entry": 5.774647887323943,
+          "cost_basis_dollars": 183.76,
+          "coverage_of_live_entries": 0.5590551181102362,
+          "entries": 71,
+          "flats": 2,
+          "losses": 42,
+          "net_cents": 409.99999999999994,
+          "net_dollars": 4.1,
+          "roi_on_entry_notional": 0.022311710927296474,
+          "win_rate_ex_flats": 0.391304347826087,
+          "wins": 27
+        },
+        "train_first_60pct": {
+          "avg_cents_per_entry": 8.406593406593407,
+          "cost_basis_dollars": 364.75,
+          "coverage_of_live_entries": 0.48021108179419525,
+          "entries": 182,
+          "flats": 0,
+          "losses": 97,
+          "net_cents": 1530.0,
+          "net_dollars": 15.3,
+          "roi_on_entry_notional": 0.04194653872515422,
+          "win_rate_ex_flats": 0.46703296703296704,
+          "wins": 85
+        },
+        "validation_next_20pct": {
+          "avg_cents_per_entry": 11.069444444444445,
+          "cost_basis_dollars": 127.42999999999999,
+          "coverage_of_live_entries": 0.5714285714285714,
+          "entries": 72,
+          "flats": 5,
+          "losses": 33,
+          "net_cents": 797.0,
+          "net_dollars": 7.97,
+          "roi_on_entry_notional": 0.06254414188181746,
+          "win_rate_ex_flats": 0.5074626865671642,
+          "wins": 34
+        }
+      }
+    },
+    {
+      "all": {
+        "avg_cents_per_entry": 9.723926380368098,
+        "cost_basis_dollars": 334.05,
+        "coverage_of_live_entries": 0.2579113924050633,
+        "entries": 163,
+        "flats": 1,
+        "losses": 85,
+        "net_cents": 1585.0,
+        "net_dollars": 15.85,
+        "roi_on_entry_notional": 0.04744798682831911,
+        "win_rate_ex_flats": 0.47530864197530864,
+        "wins": 77
+      },
+      "ideas": "Brownian FPT + LOB fillability",
+      "interpretation": "A stricter combined gate. It is cleaner mechanically, but the projection shows that stacking filters can over-reduce the opportunity set.",
+      "name": "hybrid_fpt_depth_gate",
+      "rule": "Keep current v28 entries only when edge >= 3c, depth/required >= 8, book age <= 750ms, ask <= 83c, seconds_to_close >= 120, and 0.85 <= abs_d_sigma <= 1.10.",
+      "splits": {
+        "holdout_last_20pct": {
+          "avg_cents_per_entry": 4.478260869565216,
+          "cost_basis_dollars": 127.67999999999999,
+          "coverage_of_live_entries": 0.36220472440944884,
+          "entries": 46,
+          "flats": 0,
+          "losses": 28,
+          "net_cents": 205.99999999999994,
+          "net_dollars": 2.0599999999999996,
+          "roi_on_entry_notional": 0.01613408521303258,
+          "win_rate_ex_flats": 0.391304347826087,
+          "wins": 18
+        },
+        "train_first_60pct": {
+          "avg_cents_per_entry": 7.230769230769231,
+          "cost_basis_dollars": 140.52,
+          "coverage_of_live_entries": 0.20580474934036938,
+          "entries": 78,
+          "flats": 0,
+          "losses": 38,
+          "net_cents": 564.0,
+          "net_dollars": 5.64,
+          "roi_on_entry_notional": 0.040136635354397945,
+          "win_rate_ex_flats": 0.5128205128205128,
+          "wins": 40
+        },
+        "validation_next_20pct": {
+          "avg_cents_per_entry": 20.897435897435898,
+          "cost_basis_dollars": 65.85,
+          "coverage_of_live_entries": 0.30952380952380953,
+          "entries": 39,
+          "flats": 1,
+          "losses": 19,
+          "net_cents": 815.0,
+          "net_dollars": 8.15,
+          "roi_on_entry_notional": 0.1237661351556568,
+          "win_rate_ex_flats": 0.5,
+          "wins": 19
+        }
+      }
+    }
+  ]
+}

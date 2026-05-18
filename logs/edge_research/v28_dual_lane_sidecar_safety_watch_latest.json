@@ -1,0 +1,144 @@
+{
+  "best": {
+    "blockers": [
+      "settled_lt_30",
+      "net_not_positive",
+      "full_loss_cushion_lt_3",
+      "coverage_lt_75pct",
+      "source_share_unknown",
+      "does_not_beat_refreshed_live_baseline"
+    ],
+    "lane": {
+      "denominator": 29,
+      "lane": "post_dual_sidecar_safety_entry",
+      "policy": "post_dual_sidecar_safety_entry_cheap_penalty025_rank_only",
+      "skip_reason": "possible_market_windows_29_lt_30",
+      "skipped": true,
+      "source": "boundary_clock_feature_gate_continuous_penalty"
+    },
+    "live_ready": false,
+    "promotion_scope": "dual_lane_sidecar_safety_only",
+    "rows": [],
+    "strict_forward": true,
+    "summary": {
+      "avg_net_cents": 0.0,
+      "coverage_pct": 0.0,
+      "entries": 0,
+      "full_loss_cushion": 0,
+      "losses": 0,
+      "net_cents": 0,
+      "reconstructed_share": null,
+      "settled": 0,
+      "source_counts": {},
+      "source_gate_row_margin": null,
+      "wins": 0,
+      "worst_loss_cents": 0.0
+    }
+  },
+  "candidates": [
+    {
+      "blockers": [
+        "settled_lt_30",
+        "net_not_positive",
+        "full_loss_cushion_lt_3",
+        "coverage_lt_75pct",
+        "source_share_unknown",
+        "does_not_beat_refreshed_live_baseline"
+      ],
+      "lane": {
+        "denominator": 29,
+        "lane": "post_dual_sidecar_safety_entry",
+        "policy": "post_dual_sidecar_safety_entry_cheap_penalty025_rank_only",
+        "skip_reason": "possible_market_windows_29_lt_30",
+        "skipped": true,
+        "source": "boundary_clock_feature_gate_continuous_penalty"
+      },
+      "live_ready": false,
+      "promotion_scope": "dual_lane_sidecar_safety_only",
+      "rows": [],
+      "strict_forward": true,
+      "summary": {
+        "avg_net_cents": 0.0,
+        "coverage_pct": 0.0,
+        "entries": 0,
+        "full_loss_cushion": 0,
+        "losses": 0,
+        "net_cents": 0,
+        "reconstructed_share": null,
+        "settled": 0,
+        "source_counts": {},
+        "source_gate_row_margin": null,
+        "wins": 0,
+        "worst_loss_cents": 0.0
+      }
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "net_not_positive",
+        "full_loss_cushion_lt_3",
+        "coverage_lt_75pct",
+        "source_share_unknown",
+        "does_not_beat_refreshed_live_baseline"
+      ],
+      "lane": {
+        "denominator": 29,
+        "lane": "post_dual_sidecar_safety_bridge",
+        "policy": "post_dual_sidecar_safety_bridge_cheap_penalty025_rank_only",
+        "skip_reason": "possible_market_windows_29_lt_30",
+        "skipped": true,
+        "source": "boundary_clock_feature_gate_continuous_penalty"
+      },
+      "live_ready": false,
+      "promotion_scope": "dual_lane_sidecar_safety_only",
+      "rows": [],
+      "strict_forward": true,
+      "summary": {
+        "avg_net_cents": 0.0,
+        "coverage_pct": 0.0,
+        "entries": 0,
+        "full_loss_cushion": 0,
+        "losses": 0,
+        "net_cents": 0,
+        "reconstructed_share": null,
+        "settled": 0,
+        "source_counts": {},
+        "source_gate_row_margin": null,
+        "wins": 0,
+        "worst_loss_cents": 0.0
+      }
+    }
+  ],
+  "earliest_min_sample_local_time": "2026-05-07T19:46:00.768697-04:00",
+  "earliest_min_sample_utc": "2026-05-07T23:46:00.768697+00:00",
+  "force_replay": false,
+  "freeze_local_time": "2026-05-07T12:16:00.768697-04:00",
+  "generated_at_utc": "2026-05-07T23:45:40.446268+00:00",
+  "interpretation": [
+    "Research-only dual-lane sidecar-safety watch; no live bot changes or orders.",
+    "This branch tests whether the clean observable sidecar can be a deployable fallback while parent-lane repairs mature.",
+    "Rows before this freeze are diagnostic only and cannot promote this branch."
+  ],
+  "live_baseline_cents": 1361.0,
+  "market_windows_remaining_to_min_sample": 1,
+  "possible_market_windows_since_freeze": 29,
+  "pre_sample_short_circuit": true,
+  "promotion_use": "own_freeze_only",
+  "readiness_requirements": {
+    "coverage_max_pct": 90.0,
+    "coverage_min_pct": 75.0,
+    "max_reconstructed_share": 0.35,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30,
+    "must_beat_live_baseline_cents": 1361.0,
+    "strict_forward_only": true
+  },
+  "state": {
+    "base_candidate": "dual_lane_overlap_union",
+    "candidate_family": "dual_lane_sidecar_safety_watch",
+    "freeze_ts_utc": "2026-05-07T16:16:00.768697+00:00",
+    "note": "Born after live-market preview showed approved-source sidecar strength and parent/proxy damage. This is a dual-lane family fallback, not a promotion of the original union.",
+    "rule": "sidecar_first_until_parent_lane_proves_forward_safety",
+    "sidecar_penalty": "cheap_penalty025_rank_only"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "anchor_policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "created_utc": "2026-05-04T04:24:00+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.7588652482269503,
+    "current_all_coverage": 0.9929577464788732,
+    "current_all_net_pnl_cents": 1773.0,
+    "current_delta_vs_book_margin_cents": 645.0,
+    "current_holdout_net_pnl_cents": 224.0,
+    "current_validation_net_pnl_cents": 706.0,
+    "min_oos_net_roi": 0.0549558390578999,
+    "v21_all_accuracy": 0.7351598173515982,
+    "v21_all_coverage": 0.9909502262443439,
+    "v21_all_net_pnl_cents": 785.0,
+    "v21_delta_vs_book_margin_cents": 360.0,
+    "v21_holdout_net_pnl_cents": 374.0,
+    "v21_train_net_pnl_cents": 35.0,
+    "v21_validation_net_pnl_cents": 376.0
+  },
+  "lock_close_dt": "2026-05-04T04:30:00+00:00",
+  "reference_policy": {
+    "ask_max": 95.0,
+    "chooser": "score_min_book_rv15",
+    "gate": "none",
+    "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120; abs_book_rv15_gap<=0.20",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "reference_veto": {
+    "feature": "abs_book_rv15_gap",
+    "op": "<=",
+    "threshold": 0.2
+  },
+  "research_note": "Forward-registered from book_v2_regime_switch_scan_latest.csv as the best causal-class book-to-score switch before the 04:30 UTC boundary. Physical hypothesis: when the later score/coherence reference has weak margin per RV sigma, the book anchor is less trustworthy and the score-gap reference captures the recurring-market state better. Diagnostic only; promotion requires strict pre-resolution live evidence, sample size, and >=75-80% recurring-market coverage.",
+  "source_scan_csv": "logs\\edge_research\\book_v2_regime_switch_scan_latest.csv",
+  "switch_rule": {
+    "anchor_label": "refmargin_score_switch:book_margin",
+    "condition": {
+      "feature": "margin_per_rv_sigma_15m",
+      "op": "<=",
+      "threshold": 0.5
+    },
+    "condition_source": "reference",
+    "condition_false_anchor_fallback": "first_anchor_at_or_after_reference",
+    "condition_false_anchor_label": "refmargin_score_switch:book_margin_after_reference",
+    "label": "book_margin_switch_to_score_min60_gap020_if_reference_margin_per_rv_sigma_15m<=0.5",
+    "reference_label": "refmargin_score_switch:score_min60_gap020",
+    "use_reference_when_anchor_missing": true
+  }
+}

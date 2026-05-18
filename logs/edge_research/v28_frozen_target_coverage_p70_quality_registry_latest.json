@@ -1,0 +1,547 @@
+{
+  "freeze": {
+    "entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "freeze_ts_utc": "2026-05-06T04:32:03.738730+00:00",
+    "registry": "p70_quality_tags",
+    "rule": "Track future target-coverage rows with raw p>=0.70 and fixed physical quality tags before considering tag-conditioned sharpening.",
+    "tag_definitions": {
+      "book_discount_ge_4pp": "raw_edge_prob >= 0.04",
+      "boundary_geometry": "abs_d_sigma < 0.60",
+      "calm_recross": "recross_hazard_score <= 0.45",
+      "deep_geometry": "abs_d_sigma >= 0.90",
+      "expensive_ask_ge_85c": "ask_prob >= 0.85",
+      "late_or_extreme_time": "seconds_to_close < 120 or seconds_to_close > 720",
+      "middle_time_120_720s": "120 <= seconds_to_close <= 720",
+      "thin_edge_lt_3pp": "raw_edge_prob < 0.03",
+      "turbulent_recross": "recross_hazard_score >= 0.65"
+    }
+  },
+  "future_denominator": 131,
+  "interpretation": [
+    "The registry has 24 p70-adjustable rows over 131 future markets; settled 24.",
+    "Use tag rollups only as forward evidence; do not tune tag definitions from these rows."
+  ],
+  "p70_rows": 24,
+  "rows": [
+    {
+      "abs_d_sigma": 0.694496,
+      "ask_prob": 0.79,
+      "market": "KXBTC15M-26MAY060100-00",
+      "net_cents": -161.0,
+      "p_raw": 0.799928,
+      "raw_edge_prob": 0.009927999999999937,
+      "recross_hazard_score": 0.40756093134438426,
+      "seconds_to_close": 684.076,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "tags": [
+        "calm_recross",
+        "thin_edge_lt_3pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.672314,
+      "ask_prob": 0.75,
+      "market": "KXBTC15M-26MAY060600-00",
+      "net_cents": 47.0,
+      "p_raw": 0.792357,
+      "raw_edge_prob": 0.04235699999999998,
+      "recross_hazard_score": 0.5522738981680996,
+      "seconds_to_close": 868.886,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "book_discount_ge_4pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.648099,
+      "ask_prob": 0.5,
+      "market": "KXBTC15M-26MAY060945-45",
+      "net_cents": 96.0,
+      "p_raw": 0.761891,
+      "raw_edge_prob": 0.261891,
+      "recross_hazard_score": 0.7777211088980476,
+      "seconds_to_close": 884.381,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "turbulent_recross",
+        "book_discount_ge_4pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.597049,
+      "ask_prob": 0.74,
+      "market": "KXBTC15M-26MAY061100-00",
+      "net_cents": -151.0,
+      "p_raw": 0.740374,
+      "raw_edge_prob": 0.00037399999999998546,
+      "recross_hazard_score": 0.8095870263237541,
+      "seconds_to_close": 865.321,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "tags": [
+        "turbulent_recross",
+        "boundary_geometry",
+        "thin_edge_lt_3pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.876136,
+      "ask_prob": 0.81,
+      "market": "KXBTC15M-26MAY061200-00",
+      "net_cents": 35.0,
+      "p_raw": 0.848576,
+      "raw_edge_prob": 0.038575999999999944,
+      "recross_hazard_score": 0.6137067077911612,
+      "seconds_to_close": 868.928,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 1.815216,
+      "ask_prob": 0.89,
+      "market": "KXBTC15M-26MAY061400-00",
+      "net_cents": -11.0,
+      "p_raw": 0.97364,
+      "raw_edge_prob": 0.08363999999999994,
+      "recross_hazard_score": 0.05173622929495089,
+      "seconds_to_close": 208.945,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "tags": [
+        "calm_recross",
+        "deep_geometry",
+        "book_discount_ge_4pp",
+        "expensive_ask_ge_85c",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.536135,
+      "ask_prob": 0.71,
+      "market": "KXBTC15M-26MAY061445-45",
+      "net_cents": 55.0,
+      "p_raw": 0.724164,
+      "raw_edge_prob": 0.014164000000000065,
+      "recross_hazard_score": 0.8002629316895712,
+      "seconds_to_close": 884.401,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "turbulent_recross",
+        "boundary_geometry",
+        "thin_edge_lt_3pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.652892,
+      "ask_prob": 0.74,
+      "market": "KXBTC15M-26MAY061615-15",
+      "net_cents": 49.0,
+      "p_raw": 0.770727,
+      "raw_edge_prob": 0.03072700000000006,
+      "recross_hazard_score": 0.5006638913435426,
+      "seconds_to_close": 784.161,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.561593,
+      "ask_prob": 0.71,
+      "market": "KXBTC15M-26MAY061645-45",
+      "net_cents": 55.0,
+      "p_raw": 0.736529,
+      "raw_edge_prob": 0.026529000000000025,
+      "recross_hazard_score": 0.5883745447496512,
+      "seconds_to_close": 858.442,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "boundary_geometry",
+        "thin_edge_lt_3pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.442267,
+      "ask_prob": 0.68,
+      "market": "KXBTC15M-26MAY061800-00",
+      "net_cents": 60.0,
+      "p_raw": 0.700391,
+      "raw_edge_prob": 0.020390999999999937,
+      "recross_hazard_score": 0.54576569140668,
+      "seconds_to_close": 789.738,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "boundary_geometry",
+        "thin_edge_lt_3pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.683153,
+      "ask_prob": 0.72,
+      "market": "KXBTC15M-26MAY061815-15",
+      "net_cents": 53.0,
+      "p_raw": 0.794472,
+      "raw_edge_prob": 0.07447199999999998,
+      "recross_hazard_score": 0.36363731769686664,
+      "seconds_to_close": 670.498,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "calm_recross",
+        "book_discount_ge_4pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 1.171707,
+      "ask_prob": 0.87,
+      "market": "KXBTC15M-26MAY061915-15",
+      "net_cents": 22.0,
+      "p_raw": 0.923342,
+      "raw_edge_prob": 0.053342,
+      "recross_hazard_score": 0.2295042151020138,
+      "seconds_to_close": 714.621,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "tags": [
+        "calm_recross",
+        "deep_geometry",
+        "book_discount_ge_4pp",
+        "expensive_ask_ge_85c",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.481781,
+      "ask_prob": 0.38,
+      "market": "KXBTC15M-26MAY062230-30",
+      "net_cents": -80.0,
+      "p_raw": 0.718015,
+      "raw_edge_prob": 0.33801499999999995,
+      "recross_hazard_score": 0.34967152719409217,
+      "seconds_to_close": 460.951,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "tags": [
+        "calm_recross",
+        "boundary_geometry",
+        "book_discount_ge_4pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.609402,
+      "ask_prob": 0.73,
+      "market": "KXBTC15M-26MAY062300-00",
+      "net_cents": 51.0,
+      "p_raw": 0.758354,
+      "raw_edge_prob": 0.02835399999999999,
+      "recross_hazard_score": 0.5727845346949045,
+      "seconds_to_close": 855.282,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "thin_edge_lt_3pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.562923,
+      "ask_prob": 0.68,
+      "market": "KXBTC15M-26MAY062315-15",
+      "net_cents": 60.0,
+      "p_raw": 0.74458,
+      "raw_edge_prob": 0.06457999999999997,
+      "recross_hazard_score": 0.45500961379933097,
+      "seconds_to_close": 639.531,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "boundary_geometry",
+        "book_discount_ge_4pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.906372,
+      "ask_prob": 0.78,
+      "market": "KXBTC15M-26MAY070000-00",
+      "net_cents": 0.0,
+      "p_raw": 0.863962,
+      "raw_edge_prob": 0.08396199999999998,
+      "recross_hazard_score": 0.1931875391606329,
+      "seconds_to_close": 387.203,
+      "side": "no",
+      "side_won": true,
+      "source": "approved_entry",
+      "tags": [
+        "calm_recross",
+        "deep_geometry",
+        "book_discount_ge_4pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.649457,
+      "ask_prob": 0.72,
+      "market": "KXBTC15M-26MAY070115-15",
+      "net_cents": 53.0,
+      "p_raw": 0.773654,
+      "raw_edge_prob": 0.05365399999999998,
+      "recross_hazard_score": 0.48884383667306214,
+      "seconds_to_close": 774.782,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "book_discount_ge_4pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.811917,
+      "ask_prob": 0.81,
+      "market": "KXBTC15M-26MAY070145-45",
+      "net_cents": 35.0,
+      "p_raw": 0.83804,
+      "raw_edge_prob": 0.028039999999999954,
+      "recross_hazard_score": 0.20614032759403206,
+      "seconds_to_close": 396.525,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "calm_recross",
+        "thin_edge_lt_3pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.46275,
+      "ask_prob": 0.6,
+      "market": "KXBTC15M-26MAY070545-45",
+      "net_cents": -124.0,
+      "p_raw": 0.707647,
+      "raw_edge_prob": 0.10764700000000005,
+      "recross_hazard_score": 0.6220148866755595,
+      "seconds_to_close": 855.69,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "tags": [
+        "boundary_geometry",
+        "book_discount_ge_4pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.495921,
+      "ask_prob": 0.67,
+      "market": "KXBTC15M-26MAY070600-00",
+      "net_cents": 62.0,
+      "p_raw": 0.72396,
+      "raw_edge_prob": 0.05396000000000001,
+      "recross_hazard_score": 0.39442076468786447,
+      "seconds_to_close": 534.677,
+      "side": "yes",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "calm_recross",
+        "boundary_geometry",
+        "book_discount_ge_4pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 1.013529,
+      "ask_prob": 0.81,
+      "market": "KXBTC15M-26MAY070645-45",
+      "net_cents": 35.0,
+      "p_raw": 0.895399,
+      "raw_edge_prob": 0.08539899999999989,
+      "recross_hazard_score": 0.36879792565874936,
+      "seconds_to_close": 816.468,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "tags": [
+        "calm_recross",
+        "deep_geometry",
+        "book_discount_ge_4pp",
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 1.081343,
+      "ask_prob": 0.68,
+      "market": "KXBTC15M-26MAY070745-45",
+      "net_cents": 32.0,
+      "p_raw": 0.903807,
+      "raw_edge_prob": 0.22380699999999998,
+      "recross_hazard_score": 0.1975936328082862,
+      "seconds_to_close": 474.481,
+      "side": "yes",
+      "side_won": true,
+      "source": "approved_entry",
+      "tags": [
+        "calm_recross",
+        "deep_geometry",
+        "book_discount_ge_4pp",
+        "middle_time_120_720s"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.676857,
+      "ask_prob": 0.75,
+      "market": "KXBTC15M-26MAY070915-15",
+      "net_cents": 47.0,
+      "p_raw": 0.788001,
+      "raw_edge_prob": 0.03800099999999995,
+      "recross_hazard_score": 0.5197512124916837,
+      "seconds_to_close": 819.337,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "tags": [
+        "late_or_extreme_time"
+      ]
+    },
+    {
+      "abs_d_sigma": 0.573733,
+      "ask_prob": 0.7,
+      "market": "KXBTC15M-26MAY071230-30",
+      "net_cents": -143.0,
+      "p_raw": 0.729882,
+      "raw_edge_prob": 0.029882000000000075,
+      "recross_hazard_score": 0.8150157354486834,
+      "seconds_to_close": 863.492,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "tags": [
+        "turbulent_recross",
+        "boundary_geometry",
+        "thin_edge_lt_3pp",
+        "late_or_extreme_time"
+      ]
+    }
+  ],
+  "settled_p70_rows": 24,
+  "tag_rollups": [
+    {
+      "avg_raw_p": 0.7662818571428571,
+      "losses": 3,
+      "net_cents": 165.0,
+      "rows": 14,
+      "settled": 14,
+      "tag": "late_or_extreme_time",
+      "wins": 11
+    },
+    {
+      "avg_raw_p": 0.8135943076923078,
+      "losses": 2,
+      "net_cents": 245.0,
+      "rows": 13,
+      "settled": 13,
+      "tag": "book_discount_ge_4pp",
+      "wins": 11
+    },
+    {
+      "avg_raw_p": 0.8434564999999999,
+      "losses": 2,
+      "net_cents": -13.0,
+      "rows": 10,
+      "settled": 10,
+      "tag": "calm_recross",
+      "wins": 8
+    },
+    {
+      "avg_raw_p": 0.8283746000000001,
+      "losses": 2,
+      "net_cents": 12.0,
+      "rows": 10,
+      "settled": 10,
+      "tag": "middle_time_120_720s",
+      "wins": 8
+    },
+    {
+      "avg_raw_p": 0.7250602222222222,
+      "losses": 4,
+      "net_cents": -206.0,
+      "rows": 9,
+      "settled": 9,
+      "tag": "boundary_geometry",
+      "wins": 5
+    },
+    {
+      "avg_raw_p": 0.75345775,
+      "losses": 3,
+      "net_cents": -199.0,
+      "rows": 8,
+      "settled": 8,
+      "tag": "thin_edge_lt_3pp",
+      "wins": 5
+    },
+    {
+      "avg_raw_p": 0.91203,
+      "losses": 0,
+      "net_cents": 78.0,
+      "rows": 5,
+      "settled": 5,
+      "tag": "deep_geometry",
+      "wins": 5
+    },
+    {
+      "avg_raw_p": 0.73907775,
+      "losses": 2,
+      "net_cents": -143.0,
+      "rows": 4,
+      "settled": 4,
+      "tag": "turbulent_recross",
+      "wins": 2
+    },
+    {
+      "avg_raw_p": 0.948491,
+      "losses": 0,
+      "net_cents": 11.0,
+      "rows": 2,
+      "settled": 2,
+      "tag": "expensive_ask_ge_85c",
+      "wins": 2
+    }
+  ],
+  "target_entries": 95
+}

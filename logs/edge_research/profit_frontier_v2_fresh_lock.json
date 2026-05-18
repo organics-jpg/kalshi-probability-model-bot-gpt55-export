@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-05-03T13:44:59.264749+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.6444444444444445,
+    "current_all_coverage": 0.9911894273127754,
+    "current_all_net_pnl_cents": 535.0,
+    "current_all_net_roi_on_cost": 0.0383100608664518,
+    "max_median_ask": 60.0,
+    "min_oos_net_roi": 0.0339734121122599,
+    "v21_all_accuracy": 0.680365296803653,
+    "v21_all_coverage": 0.990950226244344,
+    "v21_all_net_pnl_cents": 1283.0,
+    "v21_all_net_roi_on_cost": 0.0942204597194683
+  },
+  "lock_close_dt": "2026-05-03T13:30:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "chooser": "brownian_p_rv_15m",
+    "gate": "none",
+    "label": "choose=brownian_p_rv_15m; brownian_p_rv_15m>=0.55; ask<=95; sec_to_close>=120",
+    "min_score": 0.55,
+    "min_seconds_to_close": 120.0
+  },
+  "source_frontier_csv": "logs\\edge_research\\cross_dataset_profit_frontier_latest.csv"
+}

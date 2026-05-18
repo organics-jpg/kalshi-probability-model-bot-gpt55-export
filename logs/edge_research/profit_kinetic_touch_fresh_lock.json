@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-05-03T02:24:15.192074+00:00",
+  "discovery_metrics": {
+    "current_all_accuracy": 0.6944444444444444,
+    "current_all_coverage": 0.989010989010989,
+    "current_all_net_pnl_cents": 611.0,
+    "current_all_net_roi_on_cost": 0.051392043065018,
+    "current_holdout_net_pnl_cents": 62.0,
+    "current_train_net_pnl_cents": 449.0,
+    "current_validation_net_pnl_cents": 100.0,
+    "max_median_ask": 64.0,
+    "min_oos_net_roi": 0.0265183917878528,
+    "v21_all_accuracy": 0.7031963470319634,
+    "v21_all_coverage": 0.990950226244344,
+    "v21_all_net_pnl_cents": 860.0,
+    "v21_all_net_roi_on_cost": 0.0591471801925722,
+    "v21_holdout_net_pnl_cents": 256.0,
+    "v21_train_net_pnl_cents": 316.0,
+    "v21_validation_net_pnl_cents": 288.0
+  },
+  "lock_close_dt": "2026-05-03T02:15:00+00:00",
+  "policy": {
+    "ask_max": 95.0,
+    "ask_min": 50.0,
+    "chooser": "kinetic_touch_score_15",
+    "gate": "touch_loss15<=0.90",
+    "label": "choose=kinetic_touch_score_15; kinetic_touch_score_15>=0.55; 50<=ask<=95; sec>=120; gate=touch_loss15<=0.90",
+    "min_score": 0.55,
+    "min_seconds_to_close": 120.0
+  },
+  "source_frontier_csv": "logs\\edge_research\\profit_touch_hazard_frontier_latest.csv"
+}

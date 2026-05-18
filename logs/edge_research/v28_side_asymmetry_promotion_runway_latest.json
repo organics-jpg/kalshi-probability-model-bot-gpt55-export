@@ -1,0 +1,70 @@
+{
+  "adjusted": 43,
+  "brier_mean_delta": -0.011711620895563213,
+  "checks": [
+    {
+      "actual": 87,
+      "name": "settled_rows",
+      "note": "need 0 more settled rows",
+      "passed": true,
+      "required": ">=30"
+    },
+    {
+      "actual": 43,
+      "name": "adjusted_rows",
+      "note": "need 0 more adjusted rows",
+      "passed": true,
+      "required": ">=8"
+    },
+    {
+      "actual": 73.72881355932203,
+      "name": "coverage_band",
+      "note": "coverage must stay compatible with the goal",
+      "passed": false,
+      "required": "75.0-90.0%"
+    },
+    {
+      "actual": -0.011711620895563213,
+      "name": "brier_better",
+      "note": "future Brier delta must remain negative",
+      "passed": true,
+      "required": "<0 vs raw"
+    },
+    {
+      "actual": -0.024525492188571918,
+      "name": "logloss_better",
+      "note": "future logloss delta must remain negative",
+      "passed": true,
+      "required": "<0 vs raw"
+    },
+    {
+      "actual": false,
+      "name": "live_readiness_gate",
+      "note": "control_risk_stop_active",
+      "passed": false,
+      "required": "true"
+    }
+  ],
+  "clock_adjusted": 37,
+  "coverage_pct": 73.72881355932203,
+  "discovery_best_overlay": "clock_then_side_no_midboundary_0p00",
+  "entries": null,
+  "family": "side_asymmetry_fv_overlay",
+  "freeze_ts": "2026-05-06T07:52:22.405861+00:00",
+  "future_denominator": 118,
+  "interpretation": [
+    "Frozen side-asymmetry has 87 settled rows and 43 adjusted rows.",
+    "Current Brier/logloss deltas are -0.011711620895563213/-0.024525492188571918.",
+    "Promotion blockers remaining: 2.",
+    "Live readiness blockers: control_risk_stop_active.",
+    "This lane can only improve FV calibration; it does not by itself fix negative broad-entry PnL."
+  ],
+  "live_ready_blockers": [
+    "control_risk_stop_active"
+  ],
+  "logloss_mean_delta": -0.024525492188571918,
+  "ready_for_consideration": false,
+  "settled": 87,
+  "side_adjusted": 6,
+  "variant": "clock_then_side_no_midboundary_0p00"
+}

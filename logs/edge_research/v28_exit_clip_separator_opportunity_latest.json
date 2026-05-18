@@ -1,0 +1,336 @@
+{
+  "blockers": [
+    "post_rows_lt_30",
+    "selected_rows_lt_30",
+    "selected_delta_lt_300c"
+  ],
+  "fail_reason_counts": {
+    "fair_drawdown_above_ceiling": 1,
+    "p_hold_below_floor": 1
+  },
+  "generated_at_utc": "2026-05-07T13:33:31.658932+00:00",
+  "interpretation": [
+    "Research-only opportunity and margin audit; no live bot logic changes or orders.",
+    "The frozen rule has 2 post-freeze denominator rows and selected 1 row(s).",
+    "Near misses with one or two failed gates: 1.",
+    "Threshold variants are post-freeze diagnostics only; they do not create a new child freeze."
+  ],
+  "live_ready": false,
+  "near_miss_examples": [
+    {
+      "actual_cents": -2.0,
+      "entry_ts": "2026-05-07T04:10:20.371309+00:00",
+      "exit_cents": 69,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fail_count": 2,
+      "fail_reasons": [
+        "p_hold_below_floor",
+        "fair_drawdown_above_ceiling"
+      ],
+      "failure_class": "exited_unsettled",
+      "fair_drawdown_cents": 10.343815,
+      "fair_drawdown_margin_cents": -0.3438149999999993,
+      "hold_cents": null,
+      "hold_delta_cents": null,
+      "market": "KXBTC15M-26MAY070015-15",
+      "p_hold": 0.596562,
+      "p_hold_margin": -0.003437999999999941,
+      "physics_tags": [
+        "micro_lt_10c",
+        "exited_unsettled",
+        "hold_result_unknown"
+      ],
+      "selected": false,
+      "side": "no"
+    }
+  ],
+  "near_miss_rows": 1,
+  "near_miss_summary": {
+    "exit_reason_counts": {
+      "mushroom_v28_exit_value_over_hold": 1
+    },
+    "failure_class_counts": {
+      "exited_unsettled": 1
+    },
+    "harmful_rows": 0,
+    "helpful_rows": 0,
+    "known_hold_delta_cents": 0,
+    "known_rows": 0,
+    "rows": 1,
+    "unknown_rows": 1
+  },
+  "post_freeze_rows": 2,
+  "post_summary": {
+    "exit_reason_counts": {
+      "mushroom_v28_exit_value_over_hold": 2
+    },
+    "failure_class_counts": {
+      "exit_policy_cost": 1,
+      "exited_unsettled": 1
+    },
+    "harmful_rows": 0,
+    "helpful_rows": 1,
+    "known_hold_delta_cents": 60.0,
+    "known_rows": 1,
+    "rows": 2,
+    "unknown_rows": 1
+  },
+  "selected_examples": [
+    {
+      "actual_cents": -14.0,
+      "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+      "exit_cents": 91,
+      "exit_reason": "mushroom_v28_exit_value_over_hold",
+      "fail_count": 0,
+      "fail_reasons": [],
+      "failure_class": "exit_policy_cost",
+      "fair_drawdown_cents": -0.535395,
+      "fair_drawdown_margin_cents": 10.535395,
+      "hold_cents": 46.0,
+      "hold_delta_cents": 60.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "p_hold": 0.825354,
+      "p_hold_margin": 0.22535400000000005,
+      "physics_tags": [
+        "small_10_24c",
+        "exit_policy_cost",
+        "crowded_depth",
+        "exit_policy_clip_vs_hold"
+      ],
+      "selected": true,
+      "side": "no"
+    }
+  ],
+  "selected_rows": 1,
+  "selected_summary": {
+    "exit_reason_counts": {
+      "mushroom_v28_exit_value_over_hold": 1
+    },
+    "failure_class_counts": {
+      "exit_policy_cost": 1
+    },
+    "harmful_rows": 0,
+    "helpful_rows": 1,
+    "known_hold_delta_cents": 60.0,
+    "known_rows": 1,
+    "rows": 1,
+    "unknown_rows": 0
+  },
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_loss_escape_analysis_latest.json",
+  "state": {
+    "candidate": "fair_drawdown_lte10_p_hold_ge060_exit_clip_separator",
+    "fair_drawdown_cents_ceiling": 10.0,
+    "freeze_ts_utc": "2026-05-07T04:04:23.876080+00:00",
+    "p_hold_floor": 0.6,
+    "physics": "A shallow fair-value drawdown with still-adequate p_hold is more likely a clipped-winner exit than a true FV/entry failure.",
+    "research_only": true,
+    "rule": "For matched unchanged loss rows, flag rows with fair_drawdown_cents <= 10 and p_hold >= 0.60.",
+    "source_artifact": "v28_exit_clip_separator_diagnostic_latest.json"
+  },
+  "threshold_variants_on_post_rows": [
+    {
+      "fair_drawdown_cents_ceiling": 10.0,
+      "p_hold_floor": 0.6,
+      "rows": [
+        {
+          "actual_cents": -14.0,
+          "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+          "exit_cents": 91,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fail_count": 0,
+          "fail_reasons": [],
+          "failure_class": "exit_policy_cost",
+          "fair_drawdown_cents": -0.535395,
+          "fair_drawdown_margin_cents": 10.535395,
+          "hold_cents": 46.0,
+          "hold_delta_cents": 60.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "p_hold": 0.825354,
+          "p_hold_margin": 0.22535400000000005,
+          "physics_tags": [
+            "small_10_24c",
+            "exit_policy_cost",
+            "crowded_depth",
+            "exit_policy_clip_vs_hold"
+          ],
+          "selected": true,
+          "side": "no"
+        }
+      ],
+      "summary": {
+        "exit_reason_counts": {
+          "mushroom_v28_exit_value_over_hold": 1
+        },
+        "failure_class_counts": {
+          "exit_policy_cost": 1
+        },
+        "harmful_rows": 0,
+        "helpful_rows": 1,
+        "known_hold_delta_cents": 60.0,
+        "known_rows": 1,
+        "rows": 1,
+        "unknown_rows": 0
+      },
+      "variant": "frozen_rule"
+    },
+    {
+      "fair_drawdown_cents_ceiling": 12.5,
+      "p_hold_floor": 0.6,
+      "rows": [
+        {
+          "actual_cents": -14.0,
+          "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+          "exit_cents": 91,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fail_count": 0,
+          "fail_reasons": [],
+          "failure_class": "exit_policy_cost",
+          "fair_drawdown_cents": -0.535395,
+          "fair_drawdown_margin_cents": 13.035395,
+          "hold_cents": 46.0,
+          "hold_delta_cents": 60.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "p_hold": 0.825354,
+          "p_hold_margin": 0.22535400000000005,
+          "physics_tags": [
+            "small_10_24c",
+            "exit_policy_cost",
+            "crowded_depth",
+            "exit_policy_clip_vs_hold"
+          ],
+          "selected": true,
+          "side": "no"
+        }
+      ],
+      "summary": {
+        "exit_reason_counts": {
+          "mushroom_v28_exit_value_over_hold": 1
+        },
+        "failure_class_counts": {
+          "exit_policy_cost": 1
+        },
+        "harmful_rows": 0,
+        "helpful_rows": 1,
+        "known_hold_delta_cents": 60.0,
+        "known_rows": 1,
+        "rows": 1,
+        "unknown_rows": 0
+      },
+      "variant": "drawdown_lte_12p5_same_p"
+    },
+    {
+      "fair_drawdown_cents_ceiling": 10.0,
+      "p_hold_floor": 0.55,
+      "rows": [
+        {
+          "actual_cents": -14.0,
+          "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+          "exit_cents": 91,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fail_count": 0,
+          "fail_reasons": [],
+          "failure_class": "exit_policy_cost",
+          "fair_drawdown_cents": -0.535395,
+          "fair_drawdown_margin_cents": 10.535395,
+          "hold_cents": 46.0,
+          "hold_delta_cents": 60.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "p_hold": 0.825354,
+          "p_hold_margin": 0.275354,
+          "physics_tags": [
+            "small_10_24c",
+            "exit_policy_cost",
+            "crowded_depth",
+            "exit_policy_clip_vs_hold"
+          ],
+          "selected": true,
+          "side": "no"
+        }
+      ],
+      "summary": {
+        "exit_reason_counts": {
+          "mushroom_v28_exit_value_over_hold": 1
+        },
+        "failure_class_counts": {
+          "exit_policy_cost": 1
+        },
+        "harmful_rows": 0,
+        "helpful_rows": 1,
+        "known_hold_delta_cents": 60.0,
+        "known_rows": 1,
+        "rows": 1,
+        "unknown_rows": 0
+      },
+      "variant": "p_hold_ge_055_same_drawdown"
+    },
+    {
+      "fair_drawdown_cents_ceiling": 12.5,
+      "p_hold_floor": 0.55,
+      "rows": [
+        {
+          "actual_cents": -2.0,
+          "entry_ts": "2026-05-07T04:10:20.371309+00:00",
+          "exit_cents": 69,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fail_count": 0,
+          "fail_reasons": [],
+          "failure_class": "exited_unsettled",
+          "fair_drawdown_cents": 10.343815,
+          "fair_drawdown_margin_cents": 2.1561850000000007,
+          "hold_cents": null,
+          "hold_delta_cents": null,
+          "market": "KXBTC15M-26MAY070015-15",
+          "p_hold": 0.596562,
+          "p_hold_margin": 0.04656199999999999,
+          "physics_tags": [
+            "micro_lt_10c",
+            "exited_unsettled",
+            "hold_result_unknown"
+          ],
+          "selected": true,
+          "side": "no"
+        },
+        {
+          "actual_cents": -14.0,
+          "entry_ts": "2026-05-07T12:25:30.079423+00:00",
+          "exit_cents": 91,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fail_count": 0,
+          "fail_reasons": [],
+          "failure_class": "exit_policy_cost",
+          "fair_drawdown_cents": -0.535395,
+          "fair_drawdown_margin_cents": 13.035395,
+          "hold_cents": 46.0,
+          "hold_delta_cents": 60.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "p_hold": 0.825354,
+          "p_hold_margin": 0.275354,
+          "physics_tags": [
+            "small_10_24c",
+            "exit_policy_cost",
+            "crowded_depth",
+            "exit_policy_clip_vs_hold"
+          ],
+          "selected": true,
+          "side": "no"
+        }
+      ],
+      "summary": {
+        "exit_reason_counts": {
+          "mushroom_v28_exit_value_over_hold": 2
+        },
+        "failure_class_counts": {
+          "exit_policy_cost": 1,
+          "exited_unsettled": 1
+        },
+        "harmful_rows": 0,
+        "helpful_rows": 1,
+        "known_hold_delta_cents": 60.0,
+        "known_rows": 1,
+        "rows": 2,
+        "unknown_rows": 1
+      },
+      "variant": "drawdown_lte_12p5_p_hold_ge055"
+    }
+  ]
+}

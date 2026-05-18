@@ -1,0 +1,8 @@
+{
+  "candidate_family": "soft_frontier_midprice_boundary_clip_exit_stack",
+  "entry_parent": "v28_soft_frontier_midprice_boundary_shrink",
+  "exit_parent": "v28_exit_clip_separator_replay",
+  "freeze_ts_utc": "2026-05-07T04:12:10.990761+00:00",
+  "rule": "Suppress probability-reduce/collapse-full exits only when p_hold>=0.60 and fair_drawdown_cents<=10; apply entry size weights to exit PnL.",
+  "strict_forward_note": "Rows before this stack freeze are diagnostic only. Post-stack rows must satisfy sample, source, cushion, and loss-control gates before any live use."
+}

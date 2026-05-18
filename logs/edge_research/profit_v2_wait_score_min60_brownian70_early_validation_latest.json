@@ -1,0 +1,174 @@
+{
+  "all_metric": {
+    "accuracy": 0.7615658362989324,
+    "accuracy_minus_break_even": 0.04957295373665482,
+    "ask_cost_cents": 19456.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 284,
+    "coverage": 0.9894366197183099,
+    "coverage_pass": true,
+    "entry_cost_cents": 20007.0,
+    "entry_fee_cents": 551.0,
+    "fee_aware_break_even_accuracy": 0.7119928825622776,
+    "gross_pnl_cents": 1944.0,
+    "gross_roi_on_ask": 0.09991776315789473,
+    "losses": 67,
+    "markets": 281,
+    "mean_ask": 69.23843416370107,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.782,
+    "net_edge_per_base_market_cents": 4.904929577464789,
+    "net_edge_per_selected_cents": 4.95729537366548,
+    "net_pnl_cents": 1393.0,
+    "net_roi_on_cost": 0.0696256310291398,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7084264703325309,
+    "wilson_minus_break_even": -0.0035664122297466294,
+    "wins": 214
+  },
+  "fresh_metric": {
+    "accuracy": 0.8235294117647058,
+    "accuracy_minus_break_even": 0.06647058823529417,
+    "ask_cost_cents": 1254.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 17,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 1287.0,
+    "entry_fee_cents": 33.0,
+    "fee_aware_break_even_accuracy": 0.7570588235294117,
+    "gross_pnl_cents": 146.0,
+    "gross_roi_on_ask": 0.11642743221690591,
+    "losses": 3,
+    "markets": 17,
+    "mean_ask": 73.76470588235294,
+    "median_ask": 72.0,
+    "median_seconds_to_close": 770.081,
+    "net_edge_per_base_market_cents": 6.647058823529412,
+    "net_edge_per_selected_cents": 6.647058823529412,
+    "net_pnl_cents": 113.0,
+    "net_roi_on_cost": 0.08780108780108781,
+    "p75_ask": 79.0,
+    "positive_net": true,
+    "wilson95_lower": 0.5897054143116587,
+    "wilson_minus_break_even": -0.167353409217753,
+    "wins": 14
+  },
+  "generated_utc": "20260504_040654Z",
+  "lock": {
+    "candidate_policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "combined_label": "take frontier_v2 unless first v2 seconds_to_close>=600 and brownian_p_rv_15m<=0.70, then wait for score_min60",
+    "created_utc": "2026-05-03T23:42:23.954125+00:00",
+    "discovery_metrics": {
+      "both_coverage_pass": true,
+      "both_oos_positive": true,
+      "combined_delta_vs_v2_cents": 650.0,
+      "current_all_accuracy": 0.7604562737642585,
+      "current_all_coverage": 0.9887218045112782,
+      "current_all_net_pnl_cents": 1345.0,
+      "current_all_net_roi_on_cost": 0.0720986330742428,
+      "current_delta_vs_v2_cents": 1178.0,
+      "current_holdout_accuracy": 0.7222222222222222,
+      "current_holdout_coverage": 1.0,
+      "current_holdout_net_pnl_cents": 6.0,
+      "min_oos_roi": 0.0015408320493066,
+      "v21_all_accuracy": 0.7431192660550459,
+      "v21_all_coverage": 0.986425339366516,
+      "v21_all_net_pnl_cents": 755.0,
+      "v21_all_net_roi_on_cost": 0.0488831337002266,
+      "v21_delta_vs_v2_cents": -528.0,
+      "v21_holdout_accuracy": 0.7727272727272727,
+      "v21_holdout_coverage": 0.9777777777777776,
+      "v21_holdout_net_pnl_cents": 208.0
+    },
+    "lock_close_dt": "2026-05-03T23:30:00+00:00",
+    "research_note": "Forward-registered rich conditional wait candidate from the V2 rich conditional scan. Diagnostic only: it improves the prior conditional wait in broad current/v21 ledgers, but promotion requires strict pre-resolution live evidence and >=80% recurring-market coverage.",
+    "source_candidate_lock": "logs\\edge_research\\profit_frontier_score_min60_lock.json",
+    "source_scan_csv": "logs\\edge_research\\v2_rich_conditional_wait_scan_latest.csv",
+    "source_v2_lock": "logs\\edge_research\\profit_frontier_v2_fresh_lock.json",
+    "v2_policy": {
+      "ask_max": 95.0,
+      "chooser": "brownian_p_rv_15m",
+      "gate": "none",
+      "label": "choose=brownian_p_rv_15m; brownian_p_rv_15m>=0.55; ask<=95; sec_to_close>=120",
+      "min_score": 0.55,
+      "min_seconds_to_close": 120.0
+    },
+    "wait_rule": {
+      "candidate": "score_min60",
+      "conditions": [
+        {
+          "feature": "seconds_to_close",
+          "op": ">=",
+          "threshold": 600.0
+        },
+        {
+          "feature": "brownian_p_rv_15m",
+          "op": "<=",
+          "threshold": 0.7
+        }
+      ],
+      "label": "wait_for_score_min60_if_v2_seconds_to_close>=600_AND_brownian_p_rv_15m<=0.7"
+    }
+  },
+  "registry_recompute_divergence": {
+    "compared": 17,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY032045-45",
+        "recomputed": "2026-05-04T00:38:11.191000+00:00 no 78.0c",
+        "strict": "2026-05-04T00:34:55.918000+00:00 yes 65.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032115-15",
+        "recomputed": "2026-05-04T01:01:13.732000+00:00 no 69.0c",
+        "strict": "2026-05-04T01:02:13.838000+00:00 no 81.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032130-30",
+        "recomputed": "2026-05-04T01:18:00.227000+00:00 yes 73.0c",
+        "strict": "2026-05-04T01:17:45.202000+00:00 yes 73.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032200-00",
+        "recomputed": "2026-05-04T01:48:02.822000+00:00 yes 68.0c",
+        "strict": "2026-05-04T01:49:02.931000+00:00 yes 77.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032230-30",
+        "recomputed": "2026-05-04T02:17:05.641000+00:00 no 79.0c",
+        "strict": "2026-05-04T02:18:05.671000+00:00 no 66.0c"
+      }
+    ],
+    "mismatches": 6,
+    "missing_recompute": 1
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.7647058823529411,
+    "base_markets": 18,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7494117647058823,
+    "losses": 4,
+    "markets": 17,
+    "median_ask": 72.0,
+    "net_pnl_cents": 26.0,
+    "net_roi_on_cost": 0.02040816326530612,
+    "pending": 1,
+    "positive_net": true,
+    "registered_markets": 18,
+    "wilson95_lower": 0.5273820188043501,
+    "wilson_minus_break_even": -0.22202974590153224,
+    "wins": 13
+  }
+}

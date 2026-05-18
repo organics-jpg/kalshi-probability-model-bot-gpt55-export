@@ -1,0 +1,66 @@
+{
+  "denominator": {
+    "observed_candidate_markets": 1,
+    "pending_candidate_markets": 0,
+    "resolved_candidate_markets": 1
+  },
+  "generated_utc": "2026-05-05T12:05:02.694719+00:00",
+  "latent_hole_markets_in_log": 0,
+  "lock": {
+    "base_model": "v38_long60_antipersist",
+    "book_anchor_recross": {
+      "mode": "book_plus2",
+      "model_minus_book_min": 0.05,
+      "side_margin_sigma15_max": 1.0,
+      "side_velocity_3m_min_dps": 0.2
+    },
+    "created_utc": "2026-05-05T11:55:01.340156+00:00",
+    "entry": {
+      "ask_cap_cents": 100.0,
+      "ask_floor_cents": 1.0,
+      "edge_floor_cents": 0.0,
+      "max_seconds_to_close": 600.0,
+      "min_seconds_to_close": 0.0,
+      "p_side_floor": 0.65
+    },
+    "exit": {
+      "min_hold_seconds": 0.0,
+      "probability_floor": 0.54
+    },
+    "latent_state": {
+      "book_weight": 0.9,
+      "edge_floor_cents": -2.0,
+      "edge_hole_high": 20.0,
+      "edge_hole_low": 8.0,
+      "max_seconds_to_close": 600.0,
+      "min_seconds_to_close": 60.0,
+      "p_side_floor": 0.65,
+      "posterior": "book_blend"
+    },
+    "lock_id": "v66_no_bookgap_balanced_shadow_v1",
+    "model_defined_utc": "2026-05-05T11:55:01.340156+00:00",
+    "no_bookgap_shrink": {
+      "book_blend_weight": 0.75,
+      "model_minus_book_min": 0.08,
+      "selected_side": "no"
+    },
+    "policy": "v66_no_bookgap_g08_blend75_edge0_p65_stc0_600_prob54",
+    "purpose": "Strict-forward shadow validation of v66 balanced NO-side book-gap FV candidate.",
+    "recross_hazard": {
+      "seconds_to_close_max": 600.0,
+      "seconds_to_close_min": 0.0,
+      "selected_p_side_cap": 0.68,
+      "side_margin_sigma15_max": 1.0,
+      "side_velocity_3m_min_dps": 0.5
+    },
+    "thin_edge_certainty": {
+      "seconds_to_close_max": 600.0,
+      "seconds_to_close_min": 450.0,
+      "selected_ask_min_cents": 90.0,
+      "selected_edge_max_cents": 1.0,
+      "selected_p_side_cap": 0.75
+    }
+  },
+  "new_rows": 0,
+  "registered": 1
+}

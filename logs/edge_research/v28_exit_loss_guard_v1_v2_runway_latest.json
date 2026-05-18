@@ -1,0 +1,173 @@
+{
+  "generated_at_utc": "2026-05-11T03:15:44.940185+00:00",
+  "interpretation": [
+    "This runway is research-only and does not change any live exit rule.",
+    "V2 strict-forward has 58 settled rows, 5 v2 suppressions, 152.0c v2 delta, and blockers ['v2_suppressed_decisions_lt_30', 'full_loss_cushion_lt_3'].",
+    "V1-only opportunity cost after the v2 freeze is 90.0c over 12 rows; this is the current cost of v2 strictness.",
+    "V2 opportunity denominator has 43 soft exits and 5 would-suppress rows; fail reasons {'not_soft_exit': 15, 'reduce_gap_below_floor': 2, 'reduce_p_hold_below_floor': 8, 'value_fair_drawdown_too_deep': 13, 'value_gap_below_floor': 30, 'value_p_hold_below_floor': 18}.",
+    "For promotion review, v2 still needs 0 settled rows, 25 v2 suppressions, and 148.0c additional cushion.",
+    "V3 strict-forward has 46 settled rows, 9 v3 suppressions, 166.0c v3 delta, and blockers ['v3_suppressed_decisions_lt_30', 'full_loss_cushion_lt_3'].",
+    "V1 strict-forward remains an alternate watch: 59 settled rows, 5 v2-equivalent suppressions, and 90.0c v1-only cost."
+  ],
+  "source_paths": {
+    "contrast": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_loss_guard_v1_v2_v3_contrast_latest.json",
+    "v1": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_loss_guard_latest.json",
+    "v2": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_loss_guard_v2_latest.json",
+    "v2_opportunity": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_book_gap_loss_guard_v2_opportunity_latest.json",
+    "v3": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_book_gap_loss_guard_v3_latest.json"
+  },
+  "strict_variant_runways": [
+    {
+      "blockers": [
+        "v1_suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "delta_cents": 242.0,
+      "full_losses_absorbable": 2,
+      "harmful_delta_cents": 0.0,
+      "net_cents_needed_for_cushion3": 58.0,
+      "ready_for_review": false,
+      "rows_needed": 0,
+      "settled": 59,
+      "suppressed_decisions": 17,
+      "suppressed_needed": 13,
+      "variant": "v1",
+      "window": "v1_strict_forward"
+    },
+    {
+      "blockers": [
+        "v2_suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "delta_cents": 152.0,
+      "full_losses_absorbable": 1,
+      "harmful_delta_cents": 0.0,
+      "net_cents_needed_for_cushion3": 148.0,
+      "ready_for_review": false,
+      "rows_needed": 0,
+      "settled": 58,
+      "suppressed_decisions": 5,
+      "suppressed_needed": 25,
+      "variant": "v2",
+      "window": "v2_strict_forward"
+    },
+    {
+      "blockers": [
+        "v3_suppressed_decisions_lt_30",
+        "full_loss_cushion_lt_3"
+      ],
+      "delta_cents": 166.0,
+      "full_losses_absorbable": 1,
+      "harmful_delta_cents": 0.0,
+      "net_cents_needed_for_cushion3": 134.0,
+      "ready_for_review": false,
+      "rows_needed": 0,
+      "settled": 46,
+      "suppressed_decisions": 9,
+      "suppressed_needed": 21,
+      "variant": "v3",
+      "window": "v3_strict_forward"
+    }
+  ],
+  "v1_freeze_ts_utc": "2026-05-06T21:29:32.710906+00:00",
+  "v1_strict_runway": {
+    "blockers": [
+      "v2_suppressed_decisions_lt_30",
+      "full_loss_cushion_lt_3"
+    ],
+    "full_losses_absorbable": 1,
+    "net_cents_needed_for_cushion3": 148.0,
+    "ready_for_review": false,
+    "rows_needed": 0,
+    "settled": 59,
+    "v1_only_opportunity_cost_cents": 90.0,
+    "v1_only_rows": 12,
+    "v2_delta_cents": 152.0,
+    "v2_harmful_delta_cents": 0.0,
+    "v2_suppressed_decisions": 5,
+    "v2_suppressed_needed": 25,
+    "window": "v1_strict_forward"
+  },
+  "v1_summary": {
+    "blockers": [
+      "suppressed_decisions_lt_30"
+    ],
+    "delta_vs_current_cents": 242.0,
+    "loss_control_cost_cents": 0.0,
+    "settled": 59,
+    "suppressed_exits": 17,
+    "winner_recovery_cents": 242.0
+  },
+  "v2_freeze_ts_utc": "2026-05-06T22:01:04.415577+00:00",
+  "v2_opportunity": {
+    "fail_reason_counts": {
+      "not_soft_exit": 15,
+      "reduce_gap_below_floor": 2,
+      "reduce_p_hold_below_floor": 8,
+      "value_fair_drawdown_too_deep": 13,
+      "value_gap_below_floor": 30,
+      "value_p_hold_below_floor": 18
+    },
+    "probability_reduce_rows": 10,
+    "soft_exit_rows": 43,
+    "total_rows": 58,
+    "value_over_hold_rows": 33,
+    "would_suppress_rows": 5
+  },
+  "v2_strict_runway": {
+    "blockers": [
+      "v2_suppressed_decisions_lt_30",
+      "full_loss_cushion_lt_3"
+    ],
+    "full_losses_absorbable": 1,
+    "net_cents_needed_for_cushion3": 148.0,
+    "ready_for_review": false,
+    "rows_needed": 0,
+    "settled": 58,
+    "v1_only_opportunity_cost_cents": 90.0,
+    "v1_only_rows": 12,
+    "v2_delta_cents": 152.0,
+    "v2_harmful_delta_cents": 0.0,
+    "v2_suppressed_decisions": 5,
+    "v2_suppressed_needed": 25,
+    "window": "v2_strict_forward"
+  },
+  "v2_summary": {
+    "blockers": [
+      "suppressed_decisions_lt_30"
+    ],
+    "delta_vs_current_cents": 152.0,
+    "loss_control_cost_cents": 0.0,
+    "settled": 58,
+    "suppressed_exits": 5,
+    "winner_recovery_cents": 152.0
+  },
+  "v3_freeze_ts_utc": "2026-05-07T01:01:45.501061+00:00",
+  "v3_strict_runway": {
+    "blockers": [
+      "v3_suppressed_decisions_lt_30",
+      "full_loss_cushion_lt_3"
+    ],
+    "delta_cents": 166.0,
+    "full_losses_absorbable": 1,
+    "harmful_delta_cents": 0.0,
+    "net_cents_needed_for_cushion3": 134.0,
+    "ready_for_review": false,
+    "rows_needed": 0,
+    "settled": 46,
+    "suppressed_decisions": 9,
+    "suppressed_needed": 21,
+    "variant": "v3",
+    "window": "v3_strict_forward"
+  },
+  "v3_summary": {
+    "blockers": [
+      "suppressed_decisions_lt_30"
+    ],
+    "delta_vs_current_cents": 166.0,
+    "loss_control_cost_cents": 0.0,
+    "settled": 46,
+    "suppressed_exits": 9,
+    "winner_recovery_cents": 166.0
+  }
+}

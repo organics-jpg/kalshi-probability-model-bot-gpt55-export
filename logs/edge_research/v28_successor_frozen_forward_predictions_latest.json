@@ -1,0 +1,32 @@
+{
+  "blocker_counts": {},
+  "builder_script": "stage_v28_successor_sidecar_forward_evidence.py",
+  "coverage_ready": true,
+  "duplicate_source_rows": 0,
+  "freeze_ready_input_rows": 16896,
+  "freeze_status": "sidecar_forward_staged_ready_for_label_join",
+  "frozen_prediction_markets": 196,
+  "frozen_prediction_rows": 16896,
+  "generated_utc": "2026-05-18T20:51:42Z",
+  "inputs": {
+    "sidecar_batch_frozen_csv": "research_particle/v28_successor/sidecar_bundle_batch_frozen_latest.csv",
+    "sidecar_batch_frozen_hash": "28035bd197cbc766dd65a1321c5469addd9c61c3ff4d0cfb34737c73386b0270"
+  },
+  "minimum_forward_markets": 40,
+  "minimum_forward_rows": 200,
+  "outputs": {
+    "frozen_csv": "research_particle/v28_successor/frozen_forward_predictions_latest.csv",
+    "frozen_json": "research_particle/v28_successor/frozen_forward_predictions_latest.json",
+    "summary_json": "logs/edge_research/v28_successor_frozen_forward_predictions_latest.json",
+    "summary_md": "logs/edge_research/v28_successor_frozen_forward_predictions_latest.md"
+  },
+  "passive_input_rows": 0,
+  "promotion_status": {
+    "allowed_for_promotion_scoring": false,
+    "reason": "staged sidecar rows are canonical forward evidence inputs only; promotion still requires labels, source contract, coverage, evidence scoring, and verifier approval"
+  },
+  "source_family": "sidecar_batch",
+  "source_frozen_rows": 16896,
+  "stage_status": "sidecar_forward_staged_ready_for_label_join",
+  "valid_source_rows": 16896
+}

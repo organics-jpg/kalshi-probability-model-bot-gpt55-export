@@ -1,0 +1,3234 @@
+{
+  "active_expected_rows": 257,
+  "active_extra_tracker_rows": [
+    {
+      "gate": "approved_entry_book_fv",
+      "policy": "actual_approved_entries + book_probability"
+    },
+    {
+      "gate": "approved_entry_book_raw_blend_fv",
+      "policy": "book_raw_blend_alpha_0p50"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_bridge_raw03_recross70_abs075"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_bridge_raw05_recross60_abs085"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_bridge_raw05_recross60_abs085_ask65"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_bridge_raw07_recross60_abs085"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_entry_raw03_recross70_abs075"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_entry_raw05_recross60_abs085"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_entry_raw05_recross60_abs085_ask65"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_candidate",
+      "policy": "post_feature_freeze_entry_raw07_recross60_abs085"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_clean_broad_frontier",
+      "policy": "post_clean_broad_freeze_bridge_raw03_recross50_abs50_ask35"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_clean_broad_frontier",
+      "policy": "post_clean_broad_freeze_entry_raw03_recross50_abs50_ask35"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_bridge_cheap_penalty050_floor05"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_entry_cheap_penalty050_floor05"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_continuous_penalty",
+      "policy": "post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "policy": "post_soft_frontier_birth_bridge_soft_raw03_recross50_abs50_ask35"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "policy": "post_soft_frontier_birth_bridge_soft_raw03_recross50_abs50_ask50"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "policy": "post_soft_frontier_birth_bridge_soft_raw03_recross50_abs65_ask35"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "policy": "post_soft_frontier_birth_entry_soft_raw03_recross50_abs50_ask35"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "policy": "post_soft_frontier_birth_entry_soft_raw03_recross50_abs50_ask50"
+    },
+    {
+      "gate": "boundary_clock_feature_gate_soft_frontier",
+      "policy": "post_soft_frontier_birth_entry_soft_raw03_recross50_abs65_ask35"
+    },
+    {
+      "gate": "boundary_clock_fv_entry_bridge",
+      "policy": "boundary_clock_adjusted_edge_floor_0p02_repair_lowest_recross"
+    },
+    {
+      "gate": "boundary_clock_fv_overlay",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + clock_shrink_0p00"
+    },
+    {
+      "gate": "boundary_clock_repair_entry",
+      "policy": "skip_boundary_clock_composite_repair_lowest_recross"
+    },
+    {
+      "gate": "boundary_energy_fv_entry",
+      "policy": "boundary_energy_fv_entry"
+    },
+    {
+      "gate": "boundary_recross_shrink_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + boundary_recross_shrink_probability"
+    },
+    {
+      "gate": "boundary_temperature_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + boundary_temp_strong"
+    },
+    {
+      "gate": "composite_false_conviction_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + composite_false_conviction_full_to_book"
+    },
+    {
+      "gate": "dual_exit_book_gap_else_reduce",
+      "policy": "dual_exit_book_gap_else_reduce"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "source_blocker_mechanism:repair_low_absd_quarter_else_half + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "source_blocker_mechanism:repair_low_absd_quarter_else_half + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_exit_child_only_control + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_exit_child_only_control + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_half + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_half + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_half + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_half + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_half + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_half + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_quarter + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_quarter + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_quarter + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_quarter + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_quarter + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_observable_mid_confidence_parent_fill_quarter + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_parent_fill_mid_absd_ask_notch + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_parent_fill_mid_absd_ask_notch + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_parent_fill_mid_absd_ask_notch + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_parent_fill_mid_absd_ask_notch + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_parent_fill_mid_absd_ask_notch + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_confirmation_filter",
+      "policy": "top_component_parent_fill_repair_child:diagnostic_parent_fill_mid_absd_ask_notch + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "feature_gate_ledger:raw05_recross60_abs085 + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "feature_gate_ledger:raw05_recross60_abs085 + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_control_no_shrink + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_half_midprice_boundary + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "midprice_boundary_shrink:post_feature_freeze_entry_quarter_midprice_boundary + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:delayed_base_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:delayed_base_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:delayed_base_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:delayed_base_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:delayed_base_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:delayed_base_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_exit_clock_rows_only + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_bridge_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_bridge_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_entry_cheap_penalty050_rank_only"
+    },
+    {
+      "gate": "dual_lane_overlap_union",
+      "policy": "top_component_mix_portfolio:rescue_drop15_plus_approved_parent_fill + post_penalty_birth_entry_cheap_penalty100_rank_only"
+    },
+    {
+      "gate": "dual_lane_own_freeze_watch",
+      "policy": "top_component_parent_fill_repair_child:post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter + post_dual_union_birth_bridge_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "dual_lane_own_freeze_watch",
+      "policy": "top_component_parent_fill_repair_child:post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter + post_dual_union_birth_entry_cheap_penalty025_rank_only"
+    },
+    {
+      "gate": "early_boundary_opposite_wait_repair",
+      "policy": "early_boundary_wait480_p50_opposite_side_delay480"
+    },
+    {
+      "gate": "early_boundary_wait_repair",
+      "policy": "early_boundary_wait480_p50_any_side"
+    },
+    {
+      "gate": "early_no_boundary_fv_entry",
+      "policy": "early_no_boundary_fv_entry"
+    },
+    {
+      "gate": "edge_gate_opposite_side",
+      "policy": "edge_phase_skip_then_same_or_later_opposite"
+    },
+    {
+      "gate": "edge_phase_edge_gate",
+      "policy": "edge_phase_shrink adjusted_edge_floor=-0.12"
+    },
+    {
+      "gate": "edge_phase_shrink_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + edge_phase_shrink"
+    },
+    {
+      "gate": "exit_book_gap_loss_guard",
+      "policy": "book_gap_loss_guard_value_p85_reduce_p79_gap0"
+    },
+    {
+      "gate": "exit_book_gap_loss_guard_v2",
+      "policy": "book_gap_loss_guard_v2_value_gap0_or_p85_shallowdd_reduce_p79_gap0"
+    },
+    {
+      "gate": "exit_book_gap_loss_guard_v3",
+      "policy": "book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0"
+    },
+    {
+      "gate": "exit_book_gap_suppression",
+      "policy": "suppress_soft_gap15_or_p_hold75"
+    },
+    {
+      "gate": "exit_book_gap_value_only",
+      "policy": "value_only_gap15_or_p75"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "diagnostic_midband_p60_75_exit50_70_asklt80"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "diagnostic_midband_p60_75_exit50_75_asklt80"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "diagnostic_midband_p60_75_exit50_75_asklt80_fairddgte0"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "diagnostic_midband_p65_75_exit50_75_asklt80"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "post_birth_midband_p60_75_exit50_70_asklt80"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "post_birth_midband_p60_75_exit50_75_asklt80"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "post_birth_midband_p60_75_exit50_75_asklt80_fairddgte0"
+    },
+    {
+      "gate": "exit_midband_reduce_rescue",
+      "policy": "post_birth_midband_p65_75_exit50_75_asklt80"
+    },
+    {
+      "gate": "exit_reduce_depth_gate",
+      "policy": "post_depth_gate_birth_reduce_suppress_p_hold_ge_075_entry_depth_lte_295"
+    },
+    {
+      "gate": "exit_reduce_depth_gate",
+      "policy": "post_depth_gate_birth_reduce_suppress_p_hold_ge_075_entry_depth_lte_384"
+    },
+    {
+      "gate": "exit_reduce_depth_gate",
+      "policy": "post_depth_gate_birth_reduce_suppress_p_hold_ge_075_entry_depth_lte_384_drawdown_lte_2p5"
+    },
+    {
+      "gate": "exit_reduce_depth_gate",
+      "policy": "post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384"
+    },
+    {
+      "gate": "exit_reduce_geometry_relaxed_watch",
+      "policy": "side_geometry_or_no_deep_loss20_suppress_reduce_p_hold_ge_075"
+    },
+    {
+      "gate": "exit_reduce_geometry_suppression",
+      "policy": "side_geometry_suppress_reduce_p_hold_ge_075"
+    },
+    {
+      "gate": "exit_reduce_loss_control_refinement",
+      "policy": "post_refinement_birth_reduce_suppress_p_hold_ge_075_drawdown_lte_2p5"
+    },
+    {
+      "gate": "exit_reduce_loss_control_refinement",
+      "policy": "post_refinement_birth_reduce_suppress_p_hold_ge_075_fair_drawdown_lte_0"
+    },
+    {
+      "gate": "exit_reduce_loss_control_refinement",
+      "policy": "post_refinement_birth_reduce_suppress_p_hold_ge_079"
+    },
+    {
+      "gate": "exit_reduce_loss_control_refinement",
+      "policy": "post_refinement_birth_reduce_suppress_p_hold_ge_079_or_drawdown_lte_2p5"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_depth_lte384_and_duration_lte75"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_depth_lte384_or_duration_lte52"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_duration_lte_52"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_entry_book_age_gte_672"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_entry_stc_lte_596"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_entry_volshock_gte_0468"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_exit_cents_lte_72"
+    },
+    {
+      "gate": "exit_reduce_observable_loss_control",
+      "policy": "post_observable_birth_reduce_suppress_p75_exit_sigma_gte_110"
+    },
+    {
+      "gate": "exit_reduce_suppression",
+      "policy": "suppress_reduce_p_hold_ge_075"
+    },
+    {
+      "gate": "exit_reduce_yes_suppression",
+      "policy": "suppress_yes_reduce_p_hold_ge_075"
+    },
+    {
+      "gate": "exit_value_reduce_depth_composite",
+      "policy": "value_v2_reduce_depth384"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw03_recross70_abs075_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw03_recross70_abs075_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw03_recross70_abs075_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw03_recross70_abs075_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_ask65_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_ask65_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_ask65_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_ask65_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw05_recross60_abs085_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw07_recross60_abs085_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw07_recross60_abs085_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw07_recross60_abs085_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_bridge_raw07_recross60_abs085_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw03_recross70_abs075_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw03_recross70_abs075_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw03_recross70_abs075_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw03_recross70_abs075_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_ask65_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_ask65_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_ask65_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_ask65_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw05_recross60_abs085_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw07_recross60_abs085_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw07_recross60_abs085_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw07_recross60_abs085_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "policy": "post_stack_entry_raw07_recross60_abs085_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_bridge_cheap_lt10_half"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_bridge_cheap_lt10_quarter"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_bridge_cheap_lt15_half"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_bridge_cheap_lt15_quarter"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_bridge_no_shrink_control"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_entry_cheap_lt10_half"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_entry_cheap_lt10_quarter"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_entry_cheap_lt15_half"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_entry_cheap_lt15_quarter"
+    },
+    {
+      "gate": "feature_gate_cheap_tail_shrink",
+      "policy": "post_cheap_tail_shrink_birth_entry_no_shrink_control"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_fast_collapse60_only"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_high60_only"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_high60_or_fast_collapse60"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_high60_or_fast_collapse60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_high60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "diagnostic_prefreeze_context_late_collapse90_only"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_fast_collapse60_only"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_high60_only"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_high60_or_fast_collapse60"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_high60_or_fast_collapse60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_high60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_confirmed_dual_clock_fill",
+      "policy": "post_confirmed_dual_clock_fill_birth_late_collapse90_only"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "approved_expansion_full_reconstructed_quarter"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "broad_full_control"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "cheap_tail_quarter_else_half"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "continuous_ask_scaled_expansion"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "continuous_quality_scaled_expansion"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "core_only"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "expansion_half"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "expansion_quarter"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "skip_source_thin_cheap_else_half"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "skip_thin_cheap_else_half"
+    },
+    {
+      "gate": "feature_gate_core_expansion_mix",
+      "policy": "source_or_cheap_quarter_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_absd_linear"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_absd_recross_scaled"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_absd_squared"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_eighth"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_full_control"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_recross_eighth_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_midcheap_quarter_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_bridge_repair_quarter"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_absd_linear"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_absd_recross_scaled"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_absd_squared"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_eighth"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_full_control"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_low_absd_recross_eighth_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_midcheap_quarter_else_half"
+    },
+    {
+      "gate": "feature_gate_coverage_size_shrink",
+      "policy": "post_feature_freeze_entry_repair_quarter"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_fast_collapse60_only"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_high60_only"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_high60_or_fast_collapse60"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_high60_or_fast_collapse60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_high60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_late_collapse90_only"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_fast_collapse60_only"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_high60_only"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_high60_or_fast_collapse60"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_high60_or_fast_collapse60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_high60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_dual_clock_recheck_rescue",
+      "policy": "post_dual_clock_rescue_birth_late_collapse90_only"
+    },
+    {
+      "gate": "feature_gate_exit_bid_delayed_recheck",
+      "policy": "delay60_bid_ge60_drop_lte10"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_combo_high60_or_late_collapse120"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_combo_high60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_late_collapse_delay120_exit25_recheck45_rebound25_drop15"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_late_collapse_delay150_exit25_recheck55_rebound30_drop15"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_late_collapse_delay90_exit25_recheck25_rebound8_drop15"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "post_late_collapse_rescue_birth_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "post_late_collapse_rescue_birth_combo_high60_or_late_collapse120"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "post_late_collapse_rescue_birth_combo_high60_or_late_collapse90"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "post_late_collapse_rescue_birth_late_collapse_delay120_exit25_recheck45_rebound25_drop15"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "post_late_collapse_rescue_birth_late_collapse_delay150_exit25_recheck55_rebound30_drop15"
+    },
+    {
+      "gate": "feature_gate_late_collapse_recheck_rescue",
+      "policy": "post_late_collapse_rescue_birth_late_collapse_delay90_exit25_recheck25_rebound8_drop15"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_book_gap_current_exit_control"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_book_gap_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_entry_hold_or_no_exit_control"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_loss_guard_v1_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_loss_guard_v2_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_loss_guard_v3_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_bridge_reduce_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_book_gap_current_exit_control"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_book_gap_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_entry_hold_or_no_exit_control"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_loss_guard_v1_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_loss_guard_v2_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_loss_guard_v3_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_core_exit_guard_watch",
+      "policy": "post_middle_exit_guard_freeze_entry_reduce_hold_if_suppressed"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_bridge_abs_floor_raw03_recross50_abs075_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_bridge_abs_floor_raw05_recross60_abs075_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_bridge_middle_core_raw03_recross50_abs075_125_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_bridge_middle_core_raw05_recross60_abs075_125_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_bridge_upper_abs_tail_raw03_recross50_abs125_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_entry_abs_floor_raw03_recross50_abs075_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_entry_abs_floor_raw05_recross60_abs075_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_entry_middle_core_raw03_recross50_abs075_125_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_entry_middle_core_raw05_recross60_abs075_125_ask35"
+    },
+    {
+      "gate": "feature_gate_middle_distance_core_watch",
+      "policy": "post_middle_core_freeze_entry_upper_abs_tail_raw03_recross50_abs125_ask35"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_80pct_repairs_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_80pct_repairs_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_80pct_repairs_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_80pct_repairs_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_80pct_repairs_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_80pct_repairs_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_max90_repairs_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_max90_repairs_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_max90_repairs_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_max90_repairs_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_max90_repairs_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_max90_repairs_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_min_coverage_repairs_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_min_coverage_repairs_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_min_coverage_repairs_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_min_coverage_repairs_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_min_coverage_repairs_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_anchor_plus_min_coverage_repairs_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_same_market_repair_rule_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_same_market_repair_rule_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_same_market_repair_rule_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_same_market_repair_rule_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_same_market_repair_rule_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_bridge_same_market_repair_rule_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_80pct_repairs_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_80pct_repairs_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_80pct_repairs_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_80pct_repairs_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_80pct_repairs_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_80pct_repairs_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_max90_repairs_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_max90_repairs_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_max90_repairs_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_max90_repairs_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_max90_repairs_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_max90_repairs_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_min_coverage_repairs_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_min_coverage_repairs_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_min_coverage_repairs_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_min_coverage_repairs_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_min_coverage_repairs_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_anchor_plus_min_coverage_repairs_raw_edge"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_same_market_repair_rule_absd_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_same_market_repair_rule_edge_absd_cheap_penalty"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_same_market_repair_rule_edge_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_same_market_repair_rule_low_recross_then_raw"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_same_market_repair_rule_pside_absd_recross"
+    },
+    {
+      "gate": "feature_gate_observable_selection_mix",
+      "policy": "post_feature_freeze_entry_same_market_repair_rule_raw_edge"
+    },
+    {
+      "gate": "feature_gate_quarantine_core",
+      "policy": "post_quarantine_freeze_bridge_core_raw03_recross50_abs65_ask35"
+    },
+    {
+      "gate": "feature_gate_quarantine_core",
+      "policy": "post_quarantine_freeze_bridge_core_raw03_recross50_abs65_ask50"
+    },
+    {
+      "gate": "feature_gate_quarantine_core",
+      "policy": "post_quarantine_freeze_bridge_core_raw05_recross60_abs085_ask65"
+    },
+    {
+      "gate": "feature_gate_quarantine_core",
+      "policy": "post_quarantine_freeze_entry_core_raw03_recross50_abs65_ask35"
+    },
+    {
+      "gate": "feature_gate_quarantine_core",
+      "policy": "post_quarantine_freeze_entry_core_raw03_recross50_abs65_ask50"
+    },
+    {
+      "gate": "feature_gate_quarantine_core",
+      "policy": "post_quarantine_freeze_entry_core_raw05_recross60_abs085_ask65"
+    },
+    {
+      "gate": "feature_gate_quarantine_tail",
+      "policy": "post_quarantine_freeze_bridge_tail_raw03_recross50_abs75_asklt35"
+    },
+    {
+      "gate": "feature_gate_quarantine_tail",
+      "policy": "post_quarantine_freeze_bridge_tail_raw05_recross50_abs85_asklt35"
+    },
+    {
+      "gate": "feature_gate_quarantine_tail",
+      "policy": "post_quarantine_freeze_entry_tail_raw03_recross50_abs75_asklt35"
+    },
+    {
+      "gate": "feature_gate_quarantine_tail",
+      "policy": "post_quarantine_freeze_entry_tail_raw05_recross50_abs85_asklt35"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "diagnostic_prefreeze_context_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "diagnostic_prefreeze_context_delay120_bid60_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "diagnostic_prefreeze_context_delay60_bid60_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "diagnostic_prefreeze_context_delay60_bid60_drop11"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "diagnostic_prefreeze_context_delay60_bid65_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "post_delayed_recheck_overlay_birth_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "post_delayed_recheck_overlay_birth_delay120_bid60_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "post_delayed_recheck_overlay_birth_delay60_bid60_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "post_delayed_recheck_overlay_birth_delay60_bid60_drop11"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "policy": "post_delayed_recheck_overlay_birth_delay60_bid65_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_collapse_rebound_delay60_exit45_recheck40_rebound10_drop15"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_collapse_rebound_delay60_exit50_recheck45_rebound10_drop15"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_combo_high60_or_collapse40"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_high_bid_delay60_bid60_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "post_rescue_overlay_birth_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "post_rescue_overlay_birth_collapse_rebound_delay60_exit45_recheck40_rebound10_drop15"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "post_rescue_overlay_birth_collapse_rebound_delay60_exit50_recheck45_rebound10_drop15"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "post_rescue_overlay_birth_combo_high60_or_collapse40"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "policy": "post_rescue_overlay_birth_high_bid_delay60_bid60_drop10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_base_current_exit_control"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_book_gap_only"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_book_gap_or_clip_p60_drawdown10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_book_gap_or_reduce_p75"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_book_gap_or_reduce_p75_or_clip"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_clip_p60_drawdown10_only"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_reduce_p75_only"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_base_current_exit_control"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_only"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_or_clip_p60_drawdown10"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_or_reduce_p75"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_or_reduce_p75_or_clip"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_clip_p60_drawdown10_only"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "policy": "post_feature_freeze_entry_repair_low_absd_quarter_else_half_reduce_p75_only"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask35_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask35_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask35_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask35_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask50_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask50_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask50_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask50_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs65_ask35_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs65_ask35_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs65_ask35_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_bridge_soft_raw03_recross50_abs65_ask35_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask35_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask35_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask35_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask35_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask50_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask50_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask50_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs50_ask50_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs65_ask35_book_gap_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs65_ask35_loss_guard_v1_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs65_ask35_loss_guard_v2_exit"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "policy": "post_soft_stack_entry_soft_raw03_recross50_abs65_ask35_loss_guard_v3_exit"
+    },
+    {
+      "gate": "feature_gate_source_confirmation_replacement",
+      "policy": "diagnostic_prefreeze_context_collapse_rebound_delay60_exit45_recheck40_rebound10_drop15"
+    },
+    {
+      "gate": "feature_gate_source_confirmation_replacement",
+      "policy": "post_confirmation_replacement_birth_base_no_exit_overlay"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_bridge_stc240_core_plus_absd_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_bridge_stc240_core_plus_ask_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_bridge_stc240_core_plus_low_recross_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_bridge_stc240_core_plus_p_side_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_bridge_stc240_core_plus_raw_edge_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_bridge_stc240_core_plus_source_proxy_score_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_entry_stc240_core_plus_absd_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_entry_stc240_core_plus_ask_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_entry_stc240_core_plus_low_recross_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_entry_stc240_core_plus_p_side_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_entry_stc240_core_plus_raw_edge_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "diagnostic_feature_freeze_entry_stc240_core_plus_source_proxy_score_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_bridge_stc240_core_plus_absd_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_bridge_stc240_core_plus_ask_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_bridge_stc240_core_plus_low_recross_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_bridge_stc240_core_plus_p_side_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_bridge_stc240_core_plus_raw_edge_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_bridge_stc240_core_plus_source_proxy_score_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_entry_stc240_core_plus_absd_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_entry_stc240_core_plus_ask_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_entry_stc240_core_plus_low_recross_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_entry_stc240_core_plus_p_side_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_entry_stc240_core_plus_raw_edge_fillers"
+    },
+    {
+      "gate": "feature_gate_source_proxy_coverage_repair",
+      "policy": "post_source_proxy_birth_entry_stc240_core_plus_source_proxy_score_fillers"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_ask_gte_45_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_ask_gte_60_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_ask_gte_65_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_book_age_lte_1000_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_book_age_lte_1000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_book_age_lte_1500_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_book_age_lte_2000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_btc_age_lte_1000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_btc_age_lte_1500_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_btc_age_lte_2000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_btc_age_lte_250_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_btc_age_lte_500_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_none_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_p_side_gte_65_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_p_side_gte_70_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_p_side_gte_75_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_p_side_gte_80_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_p_side_gte_85_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_p_side_gte_85_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_raw04_fresh_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_raw_edge_gte_4_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_raw_edge_gte_5_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_raw_edge_gte_6_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_raw_edge_gte_7_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_raw_edge_gte_7_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_stc_gte_120_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_stc_gte_180_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_filter_stc_gte_60_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_bridge_rank_raw_edge"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_ask_gte_45_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_ask_gte_60_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_ask_gte_65_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_book_age_lte_1000_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_book_age_lte_1000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_book_age_lte_1500_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_book_age_lte_2000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_btc_age_lte_1000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_btc_age_lte_1500_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_btc_age_lte_2000_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_btc_age_lte_250_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_btc_age_lte_500_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_none_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_p_side_gte_65_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_p_side_gte_70_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_p_side_gte_75_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_p_side_gte_80_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_p_side_gte_85_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_p_side_gte_85_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_raw04_fresh_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_raw_edge_gte_4_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_raw_edge_gte_5_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_raw_edge_gte_6_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_raw_edge_gte_7_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_raw_edge_gte_7_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_stc_gte_120_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_stc_gte_180_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_filter_stc_gte_60_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_rank_depth_fresh_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "diagnostic_feature_freeze_entry_rank_raw_edge"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "post_source_proxy_birth_bridge_filter_p_side_gte_75_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "post_source_proxy_birth_bridge_filter_raw_edge_gte_4_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "post_source_proxy_birth_bridge_filter_stc_gte_240_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "post_source_proxy_birth_entry_filter_p_side_gte_75_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "post_source_proxy_birth_entry_filter_raw_edge_gte_4_rank_raw"
+    },
+    {
+      "gate": "feature_gate_source_quality_proxy",
+      "policy": "post_source_proxy_birth_entry_filter_stc_gte_240_rank_raw"
+    },
+    {
+      "gate": "frozen_feature_gate_value_exit_watch",
+      "policy": "diagnostic_prefreeze_context_suppress_value_or_reduce_p_hold80"
+    },
+    {
+      "gate": "frozen_feature_gate_value_exit_watch",
+      "policy": "diagnostic_prefreeze_context_suppress_value_over_hold"
+    },
+    {
+      "gate": "frozen_feature_gate_value_exit_watch",
+      "policy": "post_value_exit_birth_suppress_value_or_reduce_p_hold80"
+    },
+    {
+      "gate": "frozen_feature_gate_value_exit_watch",
+      "policy": "post_value_exit_birth_suppress_value_over_hold"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_bridge_absd_gte_055_or_ask_gte_065"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_bridge_control_no_extra_filter"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_bridge_mid_or_better_ask_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_bridge_weak_boundary_absd_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_bridge_weak_boundary_absd_gte_060"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_entry_absd_gte_055_or_ask_gte_065"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_entry_control_no_extra_filter"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_entry_mid_or_better_ask_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_entry_weak_boundary_absd_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "diagnostic_parent_entry_weak_boundary_absd_gte_060"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_bridge_absd_gte_055_or_ask_gte_065"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_bridge_control_no_extra_filter"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_bridge_mid_or_better_ask_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_bridge_weak_boundary_absd_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_bridge_weak_boundary_absd_gte_060"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_entry_absd_gte_055_or_ask_gte_065"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_entry_control_no_extra_filter"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_entry_mid_or_better_ask_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_entry_weak_boundary_absd_gte_055"
+    },
+    {
+      "gate": "midprice_source_dilution_watch",
+      "policy": "post_dilution_birth_entry_weak_boundary_absd_gte_060"
+    },
+    {
+      "gate": "no_mid_edge_fv",
+      "policy": "no_mid_to_book"
+    },
+    {
+      "gate": "p50_book_edge_no_side_shrink_watch",
+      "policy": "p50_book_plus_05_edge_nonnegative_quarter_no_side"
+    },
+    {
+      "gate": "path_state_p70_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + path_state_guarded_p70_logit125"
+    },
+    {
+      "gate": "raw_p52_boundary_turbulence_skip",
+      "policy": "raw_p52_skip_weakraw_nearstrike_recross90"
+    },
+    {
+      "gate": "side_asymmetry_fv_overlay",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + clock_then_side_no_midboundary_0p00"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "diagnostic_bridge_control_no_shrink_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "diagnostic_bridge_half_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "diagnostic_entry_control_no_shrink_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "diagnostic_entry_half_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_feature_freeze_entry_control_no_shrink_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_clip_separator_weighted_exit_stack"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_control_no_shrink_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_control_no_shrink_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_control_no_shrink_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_control_no_shrink_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_half_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_half_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_half_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_half_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_control_no_shrink_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_control_no_shrink_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_control_no_shrink_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_control_no_shrink_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_half_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_half_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_half_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_half_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_control_no_shrink_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_control_no_shrink_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_control_no_shrink_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_control_no_shrink_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_or_base"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_or_no_midprice_boundary_suppress"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_or_reduce_p_hold80"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_control_no_shrink_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_control_no_shrink_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_control_no_shrink_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_control_no_shrink_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_half_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_half_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_half_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_half_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_bridge_quarter_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_control_no_shrink_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_control_no_shrink_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_control_no_shrink_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_control_no_shrink_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_half_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_half_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_half_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_half_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "diagnostic_entry_quarter_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_control_no_shrink_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_control_no_shrink_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_control_no_shrink_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_control_no_shrink_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_half_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_feature_freeze_entry_quarter_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_control_no_shrink_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_half_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_midprice_shrink_birth_entry_quarter_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_control_no_shrink_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_half_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_book_gap_and_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_book_gap_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_book_gap_or_clip"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "policy": "post_soft_frontier_birth_entry_quarter_midprice_boundary_clip_only"
+    },
+    {
+      "gate": "soft_frontier_midprice_delayed_recheck_exit",
+      "policy": "diagnostic_prefreeze_context_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte10"
+    },
+    {
+      "gate": "soft_frontier_midprice_delayed_recheck_rescue",
+      "policy": "diagnostic_prefreeze_context_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte11"
+    },
+    {
+      "gate": "target_cluster_penalty_observable_stability",
+      "policy": "post_observable_proxy_birth_heavy_far_calm"
+    },
+    {
+      "gate": "target_cluster_penalty_observable_stability",
+      "policy": "post_observable_proxy_birth_light_paid_stable"
+    },
+    {
+      "gate": "target_cluster_penalty_observable_stability",
+      "policy": "post_observable_proxy_birth_medium_far_calm_light"
+    },
+    {
+      "gate": "target_cluster_penalty_observable_stability",
+      "policy": "post_observable_proxy_birth_medium_far_calm_medium"
+    },
+    {
+      "gate": "target_cluster_penalty_observable_stability",
+      "policy": "post_observable_proxy_birth_medium_paid_stable"
+    },
+    {
+      "gate": "target_cluster_penalty_source_aware",
+      "policy": "post_source_aware_birth_heavy_src_penalty050"
+    },
+    {
+      "gate": "target_cluster_penalty_source_aware",
+      "policy": "post_source_aware_birth_light_src_penalty050"
+    },
+    {
+      "gate": "target_cluster_penalty_source_aware",
+      "policy": "post_source_aware_birth_medium_src_penalty025"
+    },
+    {
+      "gate": "target_cluster_penalty_source_aware",
+      "policy": "post_source_aware_birth_medium_src_penalty050"
+    },
+    {
+      "gate": "target_cluster_penalty_source_aware",
+      "policy": "post_source_aware_birth_medium_src_penalty100"
+    },
+    {
+      "gate": "target_coverage_conservative_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + logit125_p60_calm_mid_or_p75"
+    },
+    {
+      "gate": "target_coverage_fv",
+      "policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25 + book_probability"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "diagnostic_approved_union_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "diagnostic_low_exit_collapse_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "diagnostic_mid_recheck_value_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "diagnostic_union_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "post_child_birth_approved_union_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "post_child_birth_low_exit_collapse_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "post_child_birth_mid_recheck_value_rebound"
+    },
+    {
+      "gate": "top_component_false_negative_rescue_child",
+      "policy": "post_child_birth_union_rebound"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "delayed_base_exit_clock_rows_only"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "post_birth_rescue_drop15_exit_clock_rows_only"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "post_birth_rescue_drop15_plus_absd_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "post_birth_rescue_drop15_plus_all_parent_fill"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "post_birth_rescue_drop15_plus_ask_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "post_birth_rescue_drop15_plus_observable_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "post_birth_rescue_drop15_plus_recross_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_exit_clock_rows_only"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_plus_absd_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_plus_all_parent_fill"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_plus_approved_parent_fill"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_plus_ask_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_plus_observable_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_mix_portfolio",
+      "policy": "rescue_drop15_plus_recross_parent_fill_to75"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "low_ask_quarter"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "observable_quarantine_control"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "smooth_weak_touch"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "very_weak_touch_zero"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "weak_boundary_quarter"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "weak_touch_half"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "weak_touch_quarter"
+    },
+    {
+      "gate": "top_component_observable_quarantine_autopsy_context",
+      "policy": "weak_touch_zero"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "low_ask_quarter"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "observable_quarantine_control"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "smooth_weak_touch"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "very_weak_touch_zero"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "weak_boundary_quarter"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "weak_touch_half"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "weak_touch_quarter"
+    },
+    {
+      "gate": "top_component_observable_quarantine_child",
+      "policy": "weak_touch_zero"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_exit_child_only_control"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_mid_confidence_parent_fill_half"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_mid_confidence_parent_fill_quarter"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_half"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_observable_mid_confidence_parent_fill_quarter"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_parent_fill_all_rejected_half"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_parent_fill_all_rejected_quarter"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_parent_fill_mid_absd_ask_notch"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_parent_fill_wide_mid_absd_ask_notch"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "diagnostic_smooth_parent_fill_source_risk"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_exit_child_only_control"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_mid_confidence_parent_fill_half"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_mid_confidence_parent_fill_quarter"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_half"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_observable_mid_confidence_parent_fill_quarter"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_parent_fill_all_rejected_half"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_parent_fill_all_rejected_quarter"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_parent_fill_mid_absd_ask_notch"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_parent_fill_wide_mid_absd_ask_notch"
+    },
+    {
+      "gate": "top_component_parent_fill_repair_child",
+      "policy": "post_parent_fill_child_birth_smooth_parent_fill_source_risk"
+    },
+    {
+      "gate": "weak_reversal_residual_fv_shrink",
+      "policy": "half_to_50"
+    },
+    {
+      "gate": "weak_reversal_residual_repair",
+      "policy": "weak_reversal_skip_edge_5_8pp_no_repair_farthest_boundary"
+    }
+  ],
+  "active_missing_rows": [],
+  "active_registry_complete": true,
+  "diagnostic_candidate_like_untracked_count": 2653,
+  "diagnostic_candidate_like_untracked_examples": [
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "book_probability",
+      "net_cents": null,
+      "path": "ranked/0",
+      "settled": 173
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "noise_shrink_light_probability",
+      "net_cents": null,
+      "path": "ranked/1",
+      "settled": 173
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "entry_conditioned_plus03_probability",
+      "net_cents": null,
+      "path": "ranked/3",
+      "settled": 173
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "entry_conditioned_logit125_probability",
+      "net_cents": null,
+      "path": "ranked/4",
+      "settled": 173
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "entry_conditioned_logit125_p60_only_probability",
+      "net_cents": null,
+      "path": "ranked/5",
+      "settled": 173
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "entry_conditioned_plus05_noise_attenuated_probability",
+      "net_cents": null,
+      "path": "ranked/6",
+      "settled": 173
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_fv_overlay_validator_latest.json",
+      "name": "entry_conditioned_plus05_probability",
+      "net_cents": null,
+      "path": "ranked/7",
+      "settled": 173
+    },
+    {
+      "entries": 110,
+      "file": "v28_approved_entry_state_valve_bridge_latest.json",
+      "name": "skip_reentry_gap15_or_gap30",
+      "net_cents": null,
+      "path": "rows/0",
+      "settled": 110
+    },
+    {
+      "entries": 114,
+      "file": "v28_approved_entry_state_valve_bridge_latest.json",
+      "name": "same_side_reentry_gap_lte_15pp",
+      "net_cents": null,
+      "path": "rows/1",
+      "settled": 114
+    },
+    {
+      "entries": 165,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "same_side_reentry_gap_lte_15pp",
+      "net_cents": null,
+      "path": "ranked/0",
+      "settled": 165
+    },
+    {
+      "entries": 165,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "same_side_reentry_gap_lte15_and_book_not_down10",
+      "net_cents": null,
+      "path": "ranked/1",
+      "settled": 165
+    },
+    {
+      "entries": 168,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "same_side_reentry_book_not_down_10pp",
+      "net_cents": null,
+      "path": "ranked/2",
+      "settled": 168
+    },
+    {
+      "entries": 146,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "raw_book_gap_lte_15pp",
+      "net_cents": null,
+      "path": "ranked/3",
+      "settled": 146
+    },
+    {
+      "entries": 156,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "raw_book_gap_lte_20pp",
+      "net_cents": null,
+      "path": "ranked/4",
+      "settled": 156
+    },
+    {
+      "entries": 173,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "current_v28_approved_all",
+      "net_cents": null,
+      "path": "ranked/5",
+      "settled": 173
+    },
+    {
+      "entries": 116,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "no_same_side_reentry",
+      "net_cents": null,
+      "path": "ranked/6",
+      "settled": 116
+    },
+    {
+      "entries": 107,
+      "file": "v28_approved_entry_state_valves_latest.json",
+      "name": "first_entry_per_market",
+      "net_cents": null,
+      "path": "ranked/7",
+      "settled": 107
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap15_or_drawdown10",
+      "net_cents": null,
+      "path": "views/0/ranked/0",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap15_half_book",
+      "net_cents": null,
+      "path": "views/0/ranked/1",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap20_half_book",
+      "net_cents": null,
+      "path": "views/0/ranked/2",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "book_probability",
+      "net_cents": null,
+      "path": "views/0/ranked/3",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap15_and_drawdown10_only",
+      "net_cents": null,
+      "path": "views/0/ranked/4",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "book_drawdown10_heavy_book",
+      "net_cents": null,
+      "path": "views/0/ranked/5",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "book_probability",
+      "net_cents": null,
+      "path": "views/1/ranked/0",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap15_or_drawdown10",
+      "net_cents": null,
+      "path": "views/1/ranked/1",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap15_half_book",
+      "net_cents": null,
+      "path": "views/1/ranked/2",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap20_half_book",
+      "net_cents": null,
+      "path": "views/1/ranked/3",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "book_drawdown10_heavy_book",
+      "net_cents": null,
+      "path": "views/1/ranked/5",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "gap15_and_drawdown10_only",
+      "net_cents": null,
+      "path": "views/1/ranked/6",
+      "settled": null
+    },
+    {
+      "entries": null,
+      "file": "v28_book_disagreement_trajectory_fv_latest.json",
+      "name": "book_probability",
+      "net_cents": null,
+      "path": "views/2/ranked/0",
+      "settled": null
+    }
+  ],
+  "generated_at_utc": "2026-05-11T03:08:57.386794+00:00",
+  "interpretation": [
+    "active_registry_complete=true means the consolidated table covers the frozen leaderboard and special tracked families.",
+    "diagnostic_candidate_like_untracked rows are old scans/frontiers/diagnostics; they are not automatically promotion-tracked candidates."
+  ],
+  "sources": {
+    "frozen_leaderboard": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_candidate_leaderboard_latest.json",
+    "special_sources": {
+      "boundary_memory_fv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_memory_fv_candidates_latest.json",
+      "collapse_reentry_registry": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_live_collapse_reentry_registry_latest.json",
+      "exit_clip_separator_watch": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_clip_separator_watch_latest.json",
+      "exit_common_clock_residual_child_watch": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_common_clock_residual_child_watch_latest.json",
+      "exit_reduce_drift_guard": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_drift_guard_watch_latest.json",
+      "exit_shallow_drawdown": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_shallow_drawdown_watch_latest.json",
+      "exit_shallow_duration_lte52": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_shallow_duration_watch_latest.json",
+      "false_conviction_family_scorecard": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_false_conviction_family_scorecard_latest.json",
+      "feature_gate_exit_bid_suppression_watch": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_feature_gate_exit_bid_suppression_watch_latest.json",
+      "frozen_value_exit_feature_side_guard": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_value_exit_feature_side_guard_latest.json",
+      "matched_unchanged_loss_guard_watch": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_matched_unchanged_loss_guard_watch_latest.json",
+      "path_rmt_forward_gate": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_path_rmt_forward_gate_latest.json",
+      "phi_forgetting_fv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_phi_forgetting_fv_candidates_latest.json",
+      "reward_memory_fv": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_reward_memory_fv_candidates_latest.json",
+      "rmt_forgetting_entry_bakeoff": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_rmt_forgetting_entry_bakeoff_latest.json",
+      "soft_frontier_midprice_boundary_exit_stack": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_soft_frontier_midprice_boundary_exit_stack_latest.json",
+      "soft_frontier_midprice_boundary_shrink": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_soft_frontier_midprice_boundary_shrink_latest.json",
+      "soft_frontier_midprice_delayed_recheck_exit": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_soft_frontier_midprice_delayed_recheck_exit_latest.json",
+      "soft_frontier_midprice_delayed_recheck_rescue": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_soft_frontier_midprice_delayed_recheck_rescue_latest.json",
+      "soft_frontier_size_shrink_portfolio": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_soft_frontier_size_shrink_portfolio_latest.json"
+    },
+    "tracker": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_candidate_pnl_tracker_latest.json"
+  },
+  "tracker_rows": 995
+}

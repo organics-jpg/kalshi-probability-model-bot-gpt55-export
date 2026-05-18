@@ -1,0 +1,130 @@
+{
+  "fresh_after_lock": {
+    "accuracy_gate": true,
+    "baseline": {
+      "baseline_resolved_contracts": 12,
+      "baseline_resolved_trades": 6,
+      "contract_accuracy": 0.8333333333333334,
+      "contract_retention": 1.0,
+      "contract_wins": 10,
+      "contracts": 12,
+      "trade_accuracy": 0.8333333333333334,
+      "trade_retention": 1.0,
+      "trade_wins": 5,
+      "trades": 6
+    },
+    "evaluable_rows": 6,
+    "min_fresh_contracts": 150,
+    "min_fresh_trades": 75,
+    "passes_gate": false,
+    "resolved_rows": 6,
+    "retention_gate": false,
+    "rows": 6,
+    "sample_ready": false,
+    "selected_contract_shortfall": 142,
+    "selected_rows": 4,
+    "selected_trade_shortfall": 71,
+    "shadow": {
+      "baseline_resolved_contracts": 12,
+      "baseline_resolved_trades": 6,
+      "contract_accuracy": 1.0,
+      "contract_retention": 0.6666666666666666,
+      "contract_wins": 8,
+      "contracts": 8,
+      "trade_accuracy": 1.0,
+      "trade_retention": 0.6666666666666666,
+      "trade_wins": 4,
+      "trades": 4
+    },
+    "unresolved_rows": 0
+  },
+  "generated_utc": "20260502_152508Z",
+  "lock": {
+    "bot_log": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\bot.log",
+    "created_utc": "2026-05-02T05:08:16.423429+00:00",
+    "execution_log": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_size2\\execution_events.ndjson",
+    "initial_max_entry_dt": "2026-05-02T04:48:07.375070+00:00",
+    "initial_max_source_line_no": 3222,
+    "lock_id": "live_v28_physics_shadow_lock_v1",
+    "purpose": "Out-of-sample boundary for fresh current-v28 physics shadow validation.",
+    "rule_id": "adverse15_gt10_v28_cushion_0p5",
+    "rule_label": "ask<=100; block 15m adverse>10 unless v28 cushion>0.5"
+  },
+  "projections": [
+    {
+      "additional_selected_losses_allowed_at_floor": 3,
+      "additional_selected_needed": 71,
+      "current_baseline": 6,
+      "current_selected": 4,
+      "current_selected_wins": 4,
+      "max_future_blocked_at_floor": 23,
+      "max_future_total_at_floor": 94,
+      "max_total_at_floor": 100,
+      "min_selected": 75,
+      "required_selected_wins_at_floor": 72,
+      "retention_floor": 0.75,
+      "selected_at_floor": 75,
+      "unit": "trades"
+    },
+    {
+      "additional_selected_losses_allowed_at_floor": 7,
+      "additional_selected_needed": 142,
+      "current_baseline": 12,
+      "current_selected": 8,
+      "current_selected_wins": 8,
+      "max_future_blocked_at_floor": 46,
+      "max_future_total_at_floor": 188,
+      "max_total_at_floor": 200,
+      "min_selected": 150,
+      "required_selected_wins_at_floor": 143,
+      "retention_floor": 0.75,
+      "selected_at_floor": 150,
+      "unit": "contracts"
+    },
+    {
+      "additional_selected_losses_allowed_at_floor": 3,
+      "additional_selected_needed": 71,
+      "current_baseline": 6,
+      "current_selected": 4,
+      "current_selected_wins": 4,
+      "max_future_blocked_at_floor": 16,
+      "max_future_total_at_floor": 87,
+      "max_total_at_floor": 93,
+      "min_selected": 75,
+      "required_selected_wins_at_floor": 72,
+      "retention_floor": 0.8,
+      "selected_at_floor": 75,
+      "unit": "trades"
+    },
+    {
+      "additional_selected_losses_allowed_at_floor": 7,
+      "additional_selected_needed": 142,
+      "current_baseline": 12,
+      "current_selected": 8,
+      "current_selected_wins": 8,
+      "max_future_blocked_at_floor": 33,
+      "max_future_total_at_floor": 175,
+      "max_total_at_floor": 187,
+      "min_selected": 150,
+      "required_selected_wins_at_floor": 143,
+      "retention_floor": 0.8,
+      "selected_at_floor": 150,
+      "unit": "contracts"
+    }
+  ],
+  "retention_floors": [
+    0.75,
+    0.8
+  ],
+  "rule": {
+    "adverse_feature": "adverse_move_15m",
+    "adverse_min": 10.0,
+    "ask_max": 100.0,
+    "cushion_feature": "margin_per_v28_sigma",
+    "cushion_min": 0.5,
+    "label": "ask<=100; block 15m adverse>10 unless v28 cushion>0.5",
+    "rule_id": "adverse15_gt10_v28_cushion_0p5"
+  },
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\live_v28_physics_shadow_latest.json",
+  "target_accuracy": 0.95
+}

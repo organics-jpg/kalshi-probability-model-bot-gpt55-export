@@ -1,0 +1,521 @@
+{
+  "base": {
+    "candidate_coverage_pct": 75.0,
+    "candidate_entries": 114,
+    "candidate_net_cents": 213.0,
+    "candidate_settled": 114,
+    "delta_vs_target_cents": 819.0,
+    "pending_rows": 0,
+    "removed_net_cents": -933.0,
+    "repair_net_cents": -114.0
+  },
+  "interpretation": [
+    "Base diagnostic candidate net is 213.0c with delta 819.0c over 114 settled rows.",
+    "Worst leave-one-market delta is 685.0c after removing KXBTC15M-26MAY060800-00.",
+    "If all pending rows lose at ask-sized loss, pending stress is 0c and stressed delta is 819.0c.",
+    "This audit is still diagnostic; promotion still requires frozen future rows."
+  ],
+  "leave_one_market": [
+    {
+      "candidate_net_without_market_cents": 79.0,
+      "delta_without_market_cents": 685.0,
+      "market": "KXBTC15M-26MAY060800-00",
+      "observed_contribution_cents": 134.0
+    },
+    {
+      "candidate_net_without_market_cents": 85.0,
+      "delta_without_market_cents": 691.0,
+      "market": "KXBTC15M-26MAY061900-00",
+      "observed_contribution_cents": 128.0
+    },
+    {
+      "candidate_net_without_market_cents": 94.0,
+      "delta_without_market_cents": 700.0,
+      "market": "KXBTC15M-26MAY052100-00",
+      "observed_contribution_cents": 119.0
+    },
+    {
+      "candidate_net_without_market_cents": 99.0,
+      "delta_without_market_cents": 705.0,
+      "market": "KXBTC15M-26MAY062130-30",
+      "observed_contribution_cents": 114.0
+    },
+    {
+      "candidate_net_without_market_cents": 104.0,
+      "delta_without_market_cents": 710.0,
+      "market": "KXBTC15M-26MAY052115-15",
+      "observed_contribution_cents": 109.0
+    },
+    {
+      "candidate_net_without_market_cents": 105.0,
+      "delta_without_market_cents": 711.0,
+      "market": "KXBTC15M-26MAY070815-15",
+      "observed_contribution_cents": 108.0
+    },
+    {
+      "candidate_net_without_market_cents": 111.0,
+      "delta_without_market_cents": 717.0,
+      "market": "KXBTC15M-26MAY061930-30",
+      "observed_contribution_cents": 102.0
+    },
+    {
+      "candidate_net_without_market_cents": 113.0,
+      "delta_without_market_cents": 719.0,
+      "market": "KXBTC15M-26MAY070045-45",
+      "observed_contribution_cents": 100.0
+    },
+    {
+      "candidate_net_without_market_cents": 113.0,
+      "delta_without_market_cents": 719.0,
+      "market": "KXBTC15M-26MAY070530-30",
+      "observed_contribution_cents": 100.0
+    },
+    {
+      "candidate_net_without_market_cents": 113.0,
+      "delta_without_market_cents": 719.0,
+      "market": "KXBTC15M-26MAY070945-45",
+      "observed_contribution_cents": 100.0
+    },
+    {
+      "candidate_net_without_market_cents": 118.0,
+      "delta_without_market_cents": 724.0,
+      "market": "KXBTC15M-26MAY060645-45",
+      "observed_contribution_cents": 95.0
+    },
+    {
+      "candidate_net_without_market_cents": 119.0,
+      "delta_without_market_cents": 725.0,
+      "market": "KXBTC15M-26MAY070715-15",
+      "observed_contribution_cents": 94.0
+    },
+    {
+      "candidate_net_without_market_cents": 121.0,
+      "delta_without_market_cents": 727.0,
+      "market": "KXBTC15M-26MAY060200-00",
+      "observed_contribution_cents": 92.0
+    },
+    {
+      "candidate_net_without_market_cents": 121.0,
+      "delta_without_market_cents": 727.0,
+      "market": "KXBTC15M-26MAY061015-15",
+      "observed_contribution_cents": 92.0
+    },
+    {
+      "candidate_net_without_market_cents": 127.0,
+      "delta_without_market_cents": 733.0,
+      "market": "KXBTC15M-26MAY070900-00",
+      "observed_contribution_cents": 86.0
+    },
+    {
+      "candidate_net_without_market_cents": 129.0,
+      "delta_without_market_cents": 735.0,
+      "market": "KXBTC15M-26MAY060730-30",
+      "observed_contribution_cents": 84.0
+    },
+    {
+      "candidate_net_without_market_cents": 135.0,
+      "delta_without_market_cents": 741.0,
+      "market": "KXBTC15M-26MAY060130-30",
+      "observed_contribution_cents": 78.0
+    },
+    {
+      "candidate_net_without_market_cents": 145.0,
+      "delta_without_market_cents": 751.0,
+      "market": "KXBTC15M-26MAY062145-45",
+      "observed_contribution_cents": 68.0
+    },
+    {
+      "candidate_net_without_market_cents": 147.0,
+      "delta_without_market_cents": 753.0,
+      "market": "KXBTC15M-26MAY061130-30",
+      "observed_contribution_cents": 66.0
+    },
+    {
+      "candidate_net_without_market_cents": 151.0,
+      "delta_without_market_cents": 757.0,
+      "market": "KXBTC15M-26MAY060415-15",
+      "observed_contribution_cents": 62.0
+    },
+    {
+      "candidate_net_without_market_cents": 151.0,
+      "delta_without_market_cents": 757.0,
+      "market": "KXBTC15M-26MAY061430-30",
+      "observed_contribution_cents": 62.0
+    },
+    {
+      "candidate_net_without_market_cents": 158.0,
+      "delta_without_market_cents": 764.0,
+      "market": "KXBTC15M-26MAY061445-45",
+      "observed_contribution_cents": 55.0
+    },
+    {
+      "candidate_net_without_market_cents": 173.0,
+      "delta_without_market_cents": 779.0,
+      "market": "KXBTC15M-26MAY060015-15",
+      "observed_contribution_cents": 40.0
+    },
+    {
+      "candidate_net_without_market_cents": 176.0,
+      "delta_without_market_cents": 782.0,
+      "market": "KXBTC15M-26MAY060845-45",
+      "observed_contribution_cents": 37.0
+    },
+    {
+      "candidate_net_without_market_cents": 179.0,
+      "delta_without_market_cents": 785.0,
+      "market": "KXBTC15M-26MAY061415-15",
+      "observed_contribution_cents": 34.0
+    },
+    {
+      "candidate_net_without_market_cents": 182.0,
+      "delta_without_market_cents": 788.0,
+      "market": "KXBTC15M-26MAY061000-00",
+      "observed_contribution_cents": 31.0
+    },
+    {
+      "candidate_net_without_market_cents": 185.0,
+      "delta_without_market_cents": 791.0,
+      "market": "KXBTC15M-26MAY060145-45",
+      "observed_contribution_cents": 28.0
+    },
+    {
+      "candidate_net_without_market_cents": 186.0,
+      "delta_without_market_cents": 792.0,
+      "market": "KXBTC15M-26MAY061530-30",
+      "observed_contribution_cents": 27.0
+    },
+    {
+      "candidate_net_without_market_cents": 186.0,
+      "delta_without_market_cents": 792.0,
+      "market": "KXBTC15M-26MAY060615-15",
+      "observed_contribution_cents": 27.0
+    },
+    {
+      "candidate_net_without_market_cents": 186.0,
+      "delta_without_market_cents": 792.0,
+      "market": "KXBTC15M-26MAY061145-45",
+      "observed_contribution_cents": 27.0
+    },
+    {
+      "candidate_net_without_market_cents": 188.0,
+      "delta_without_market_cents": 794.0,
+      "market": "KXBTC15M-26MAY062115-15",
+      "observed_contribution_cents": 25.0
+    },
+    {
+      "candidate_net_without_market_cents": 188.0,
+      "delta_without_market_cents": 794.0,
+      "market": "KXBTC15M-26MAY071000-00",
+      "observed_contribution_cents": 25.0
+    },
+    {
+      "candidate_net_without_market_cents": 191.0,
+      "delta_without_market_cents": 797.0,
+      "market": "KXBTC15M-26MAY071045-45",
+      "observed_contribution_cents": 22.0
+    },
+    {
+      "candidate_net_without_market_cents": 193.0,
+      "delta_without_market_cents": 799.0,
+      "market": "KXBTC15M-26MAY071315-15",
+      "observed_contribution_cents": 20.0
+    },
+    {
+      "candidate_net_without_market_cents": 193.0,
+      "delta_without_market_cents": 799.0,
+      "market": "KXBTC15M-26MAY060115-15",
+      "observed_contribution_cents": 20.0
+    },
+    {
+      "candidate_net_without_market_cents": 194.0,
+      "delta_without_market_cents": 800.0,
+      "market": "KXBTC15M-26MAY052200-00",
+      "observed_contribution_cents": 19.0
+    },
+    {
+      "candidate_net_without_market_cents": 195.0,
+      "delta_without_market_cents": 801.0,
+      "market": "KXBTC15M-26MAY060900-00",
+      "observed_contribution_cents": 18.0
+    },
+    {
+      "candidate_net_without_market_cents": 195.0,
+      "delta_without_market_cents": 801.0,
+      "market": "KXBTC15M-26MAY071215-15",
+      "observed_contribution_cents": 18.0
+    },
+    {
+      "candidate_net_without_market_cents": 195.0,
+      "delta_without_market_cents": 801.0,
+      "market": "KXBTC15M-26MAY060815-15",
+      "observed_contribution_cents": 18.0
+    },
+    {
+      "candidate_net_without_market_cents": 196.0,
+      "delta_without_market_cents": 802.0,
+      "market": "KXBTC15M-26MAY060715-15",
+      "observed_contribution_cents": 17.0
+    },
+    {
+      "candidate_net_without_market_cents": 197.0,
+      "delta_without_market_cents": 803.0,
+      "market": "KXBTC15M-26MAY060230-30",
+      "observed_contribution_cents": 16.0
+    },
+    {
+      "candidate_net_without_market_cents": 197.0,
+      "delta_without_market_cents": 803.0,
+      "market": "KXBTC15M-26MAY060315-15",
+      "observed_contribution_cents": 16.0
+    },
+    {
+      "candidate_net_without_market_cents": 197.0,
+      "delta_without_market_cents": 803.0,
+      "market": "KXBTC15M-26MAY071330-30",
+      "observed_contribution_cents": 16.0
+    },
+    {
+      "candidate_net_without_market_cents": 198.0,
+      "delta_without_market_cents": 804.0,
+      "market": "KXBTC15M-26MAY060700-00",
+      "observed_contribution_cents": 15.0
+    },
+    {
+      "candidate_net_without_market_cents": 266.0,
+      "delta_without_market_cents": 872.0,
+      "market": "KXBTC15M-26MAY071245-45",
+      "observed_contribution_cents": -53.0
+    },
+    {
+      "candidate_net_without_market_cents": 268.0,
+      "delta_without_market_cents": 874.0,
+      "market": "KXBTC15M-26MAY070030-30",
+      "observed_contribution_cents": -55.0
+    },
+    {
+      "candidate_net_without_market_cents": 275.0,
+      "delta_without_market_cents": 881.0,
+      "market": "KXBTC15M-26MAY061215-15",
+      "observed_contribution_cents": -62.0
+    },
+    {
+      "candidate_net_without_market_cents": 276.0,
+      "delta_without_market_cents": 882.0,
+      "market": "KXBTC15M-26MAY060515-15",
+      "observed_contribution_cents": -63.0
+    },
+    {
+      "candidate_net_without_market_cents": 276.0,
+      "delta_without_market_cents": 882.0,
+      "market": "KXBTC15M-26MAY061115-15",
+      "observed_contribution_cents": -63.0
+    },
+    {
+      "candidate_net_without_market_cents": 278.0,
+      "delta_without_market_cents": 884.0,
+      "market": "KXBTC15M-26MAY070930-30",
+      "observed_contribution_cents": -65.0
+    },
+    {
+      "candidate_net_without_market_cents": 279.0,
+      "delta_without_market_cents": 885.0,
+      "market": "KXBTC15M-26MAY070830-30",
+      "observed_contribution_cents": -66.0
+    },
+    {
+      "candidate_net_without_market_cents": 280.0,
+      "delta_without_market_cents": 886.0,
+      "market": "KXBTC15M-26MAY060000-00",
+      "observed_contribution_cents": -67.0
+    },
+    {
+      "candidate_net_without_market_cents": 285.0,
+      "delta_without_market_cents": 891.0,
+      "market": "KXBTC15M-26MAY070015-15",
+      "observed_contribution_cents": -72.0
+    },
+    {
+      "candidate_net_without_market_cents": 285.0,
+      "delta_without_market_cents": 891.0,
+      "market": "KXBTC15M-26MAY061245-45",
+      "observed_contribution_cents": -72.0
+    },
+    {
+      "candidate_net_without_market_cents": 286.0,
+      "delta_without_market_cents": 892.0,
+      "market": "KXBTC15M-26MAY052045-45",
+      "observed_contribution_cents": -73.0
+    },
+    {
+      "candidate_net_without_market_cents": 293.0,
+      "delta_without_market_cents": 899.0,
+      "market": "KXBTC15M-26MAY060345-45",
+      "observed_contribution_cents": -80.0
+    },
+    {
+      "candidate_net_without_market_cents": 293.0,
+      "delta_without_market_cents": 899.0,
+      "market": "KXBTC15M-26MAY060745-45",
+      "observed_contribution_cents": -80.0
+    },
+    {
+      "candidate_net_without_market_cents": 295.0,
+      "delta_without_market_cents": 901.0,
+      "market": "KXBTC15M-26MAY061300-00",
+      "observed_contribution_cents": -82.0
+    },
+    {
+      "candidate_net_without_market_cents": 297.0,
+      "delta_without_market_cents": 903.0,
+      "market": "KXBTC15M-26MAY071100-00",
+      "observed_contribution_cents": -84.0
+    },
+    {
+      "candidate_net_without_market_cents": 301.0,
+      "delta_without_market_cents": 907.0,
+      "market": "KXBTC15M-26MAY061945-45",
+      "observed_contribution_cents": -88.0
+    },
+    {
+      "candidate_net_without_market_cents": 306.0,
+      "delta_without_market_cents": 912.0,
+      "market": "KXBTC15M-26MAY060215-15",
+      "observed_contribution_cents": -93.0
+    },
+    {
+      "candidate_net_without_market_cents": 307.0,
+      "delta_without_market_cents": 913.0,
+      "market": "KXBTC15M-26MAY070800-00",
+      "observed_contribution_cents": -94.0
+    },
+    {
+      "candidate_net_without_market_cents": 309.0,
+      "delta_without_market_cents": 915.0,
+      "market": "KXBTC15M-26MAY070730-30",
+      "observed_contribution_cents": -96.0
+    },
+    {
+      "candidate_net_without_market_cents": 311.0,
+      "delta_without_market_cents": 917.0,
+      "market": "KXBTC15M-26MAY052030-30",
+      "observed_contribution_cents": -98.0
+    },
+    {
+      "candidate_net_without_market_cents": 311.0,
+      "delta_without_market_cents": 917.0,
+      "market": "KXBTC15M-26MAY070630-30",
+      "observed_contribution_cents": -98.0
+    },
+    {
+      "candidate_net_without_market_cents": 315.0,
+      "delta_without_market_cents": 921.0,
+      "market": "KXBTC15M-26MAY052015-15",
+      "observed_contribution_cents": -102.0
+    },
+    {
+      "candidate_net_without_market_cents": 315.0,
+      "delta_without_market_cents": 921.0,
+      "market": "KXBTC15M-26MAY061045-45",
+      "observed_contribution_cents": -102.0
+    },
+    {
+      "candidate_net_without_market_cents": 317.0,
+      "delta_without_market_cents": 923.0,
+      "market": "KXBTC15M-26MAY071200-00",
+      "observed_contribution_cents": -104.0
+    },
+    {
+      "candidate_net_without_market_cents": 319.0,
+      "delta_without_market_cents": 925.0,
+      "market": "KXBTC15M-26MAY060030-30",
+      "observed_contribution_cents": -106.0
+    },
+    {
+      "candidate_net_without_market_cents": 325.0,
+      "delta_without_market_cents": 931.0,
+      "market": "KXBTC15M-26MAY060530-30",
+      "observed_contribution_cents": -112.0
+    },
+    {
+      "candidate_net_without_market_cents": 325.0,
+      "delta_without_market_cents": 931.0,
+      "market": "KXBTC15M-26MAY062245-45",
+      "observed_contribution_cents": -112.0
+    },
+    {
+      "candidate_net_without_market_cents": 326.0,
+      "delta_without_market_cents": 932.0,
+      "market": "KXBTC15M-26MAY060245-45",
+      "observed_contribution_cents": -113.0
+    },
+    {
+      "candidate_net_without_market_cents": 334.0,
+      "delta_without_market_cents": 940.0,
+      "market": "KXBTC15M-26MAY060630-30",
+      "observed_contribution_cents": -121.0
+    },
+    {
+      "candidate_net_without_market_cents": 335.0,
+      "delta_without_market_cents": 941.0,
+      "market": "KXBTC15M-26MAY060830-30",
+      "observed_contribution_cents": -122.0
+    },
+    {
+      "candidate_net_without_market_cents": 337.0,
+      "delta_without_market_cents": 943.0,
+      "market": "KXBTC15M-26MAY060930-30",
+      "observed_contribution_cents": -124.0
+    },
+    {
+      "candidate_net_without_market_cents": 337.0,
+      "delta_without_market_cents": 943.0,
+      "market": "KXBTC15M-26MAY071015-15",
+      "observed_contribution_cents": -124.0
+    },
+    {
+      "candidate_net_without_market_cents": 353.0,
+      "delta_without_market_cents": 959.0,
+      "market": "KXBTC15M-26MAY061230-30",
+      "observed_contribution_cents": -140.0
+    },
+    {
+      "candidate_net_without_market_cents": 357.0,
+      "delta_without_market_cents": 963.0,
+      "market": "KXBTC15M-26MAY061700-00",
+      "observed_contribution_cents": -144.0
+    },
+    {
+      "candidate_net_without_market_cents": 359.0,
+      "delta_without_market_cents": 965.0,
+      "market": "KXBTC15M-26MAY060100-00",
+      "observed_contribution_cents": -146.0
+    },
+    {
+      "candidate_net_without_market_cents": 364.0,
+      "delta_without_market_cents": 970.0,
+      "market": "KXBTC15M-26MAY061100-00",
+      "observed_contribution_cents": -151.0
+    },
+    {
+      "candidate_net_without_market_cents": 397.0,
+      "delta_without_market_cents": 1003.0,
+      "market": "KXBTC15M-26MAY071300-00",
+      "observed_contribution_cents": -184.0
+    }
+  ],
+  "passes_basic_robustness": true,
+  "pending_adverse": {
+    "assumed_loss_cents": 0,
+    "candidate_net_cents": 213.0,
+    "delta_vs_target_cents": 819.0,
+    "pending_rows": []
+  },
+  "purpose": "Stress-test the diagnostic before treating it as a serious frozen candidate.",
+  "rule": "clock_composite",
+  "worst_leave_one": {
+    "candidate_net_without_market_cents": 79.0,
+    "delta_without_market_cents": 685.0,
+    "market": "KXBTC15M-26MAY060800-00",
+    "observed_contribution_cents": 134.0
+  }
+}

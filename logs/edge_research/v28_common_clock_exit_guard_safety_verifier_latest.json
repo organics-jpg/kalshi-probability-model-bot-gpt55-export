@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "evidence": "disabled",
+      "name": "default_guard_mode_disabled",
+      "passed": true,
+      "required": "Config default must be disabled.",
+      "status": "pass"
+    },
+    {
+      "evidence": false,
+      "name": "default_reconciliation_disabled",
+      "passed": true,
+      "required": "Exchange reconciliation must be opt-in to avoid surprise API calls.",
+      "status": "pass"
+    },
+    {
+      "evidence": false,
+      "name": "default_kill_switch_not_active",
+      "passed": true,
+      "required": "Default kill switch should not alter disabled behavior.",
+      "status": "pass"
+    },
+    {
+      "evidence": "MUSHROOM_V28_EXIT_GUARD_MODE default disabled",
+      "name": "env_mode_default_disabled",
+      "passed": true,
+      "required": "load_config must default guard mode to disabled.",
+      "status": "pass"
+    },
+    {
+      "evidence": "disabled|paper|enforce validation present",
+      "name": "mode_validation",
+      "passed": true,
+      "required": "Invalid guard modes must fail config validation.",
+      "status": "pass"
+    },
+    {
+      "evidence": "emit_mushroom_v28_exit_guard_shadow returns in disabled mode",
+      "name": "disabled_mode_short_circuits_shadow_emit",
+      "passed": true,
+      "required": "Disabled mode must not write the paper ledger.",
+      "status": "pass"
+    },
+    {
+      "evidence": "enforce mode plus suppress_exit gate",
+      "name": "enforcement_requires_enforce_mode",
+      "passed": true,
+      "required": "The guard must not suppress exits in disabled or paper mode.",
+      "status": "pass"
+    },
+    {
+      "evidence": "MUSHROOM_V28_EXIT_GUARD_RECONCILIATION_ENABLED gate",
+      "name": "reconciliation_requires_opt_in_flag",
+      "passed": true,
+      "required": "Kalshi reconciliation API calls must be behind an explicit flag.",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "blockers": [],
+        "decision": "implementation_ready_for_paper_shadow_review"
+      },
+      "name": "implementation_gap_has_no_source_blockers",
+      "passed": true,
+      "required": "Implementation-gap probe must report source scaffolding ready for paper-shadow review.",
+      "status": "pass"
+    }
+  ],
+  "decision": "pass_paper_shadow_source_safety",
+  "generated_at_utc": "2026-05-07T21:42:32.983231+00:00",
+  "purpose": "Verify dormant common-clock exit guard safety invariants.",
+  "sources": {
+    "implementation_gap": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_common_clock_exit_guard_implementation_gap_latest.json",
+    "live_bot": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\kalshi_btc15m_bot_ws.py"
+  },
+  "summary": {
+    "checks_failed": 0,
+    "checks_passed": 9,
+    "checks_total": 9
+  }
+}

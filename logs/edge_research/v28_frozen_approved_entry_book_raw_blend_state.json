@@ -1,0 +1,13 @@
+{
+  "alpha_grid": [
+    0.35,
+    0.5,
+    0.75
+  ],
+  "entry_surface": "actual_v28_approved_entries_only",
+  "freeze_ts_utc": "2026-05-06T22:58:06.332385+00:00",
+  "physics": "Use the executable book as a humility anchor while retaining a continuous memory term from raw v28 when the model's conviction is physically supported. This avoids a hard book-vs-raw cutoff.",
+  "primary_candidate": "book_raw_blend_alpha_0p50",
+  "rule": "p = book_probability + alpha * (raw_probability - book_probability)",
+  "strict_forward_note": "Rows before this timestamp are diagnostic context only."
+}

@@ -1,0 +1,4366 @@
+{
+  "baseline": {
+    "brownian_terminal_forward_after_200": {
+      "auc": 0.5762107051826678,
+      "brier": 0.16187956255369243,
+      "log_loss": 0.5037725674574408,
+      "rows": 269
+    },
+    "p_calibrated_forward_after_200": {
+      "auc": 0.5782922684791844,
+      "brier": 0.16437360997275574,
+      "log_loss": 0.5127190013662928,
+      "rows": 269
+    },
+    "robust_hybrid_base_forward_after_200": {
+      "avg_cents_per_entry": 11.626373626373626,
+      "entries": 91,
+      "flats": 1,
+      "losses": 42,
+      "net_cents": 1058.0,
+      "net_dollars": 10.58,
+      "win_rate_ex_flat": 0.5333333333333333,
+      "wins": 48
+    },
+    "robust_p_cal_ge_0p70_forward_after_200": {
+      "avg_cents_per_entry": 16.37142857142857,
+      "entries": 70,
+      "flats": 1,
+      "losses": 31,
+      "net_cents": 1146.0,
+      "net_dollars": 11.46,
+      "win_rate_ex_flat": 0.5507246376811594,
+      "wins": 38
+    },
+    "robust_p_cal_ge_0p80_forward_after_200": {
+      "avg_cents_per_entry": 20.51923076923077,
+      "entries": 52,
+      "flats": 1,
+      "losses": 19,
+      "net_cents": 1067.0,
+      "net_dollars": 10.67,
+      "win_rate_ex_flat": 0.6274509803921569,
+      "wins": 32
+    }
+  },
+  "diagnostics": {
+    "aci_locked_calibrator": {
+      "cap": 0.9,
+      "eta": 0.2,
+      "max_bias": 0.25,
+      "name": "capped_aci_brownian_terminal_p_side_eta0.20_cap0.90",
+      "scores": {
+        "all": {
+          "brier": 0.16422649376615975,
+          "coverage": 0.8976545842217484,
+          "log_loss": 0.5113244516148143,
+          "rows": 469
+        },
+        "all_after_200": {
+          "brier": 0.16437360997275574,
+          "coverage": 0.8996282527881041,
+          "log_loss": 0.5127190013662928,
+          "rows": 269
+        },
+        "first_400": {
+          "brier": 0.16496984612766172,
+          "coverage": 0.8947368421052632,
+          "log_loss": 0.5146111978923869,
+          "rows": 399
+        },
+        "holdout_401_end": {
+          "brier": 0.15998938530559845,
+          "coverage": 0.9142857142857143,
+          "log_loss": 0.4925899978326515,
+          "rows": 70
+        },
+        "train_1_200": {
+          "brier": 0.16402862246828812,
+          "coverage": 0.895,
+          "log_loss": 0.5094487821990759,
+          "rows": 200
+        },
+        "validation_201_400": {
+          "brier": 0.16591579955416785,
+          "coverage": 0.8944723618090452,
+          "log_loss": 0.5197995553731013,
+          "rows": 199
+        }
+      },
+      "selection_score": {
+        "train_brier": 0.16402862246828812,
+        "train_log_loss": 0.5094487821990759
+      },
+      "source_key": "brownian_terminal_p_side",
+      "target_coverage": 0.9
+    },
+    "candle_stats": {
+      "cache_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\coinbase_btc_usd_1m_cache.parquet",
+      "candle_max_utc": "2026-05-07 17:14:00+00:00",
+      "candle_min_utc": "2026-03-14 00:54:00+00:00",
+      "candle_rows": 78736,
+      "fetch_missing": true,
+      "fetched_rows": 10258
+    },
+    "dropped": {
+      "missing_btc_frame": 0,
+      "missing_label": 1
+    },
+    "raw_rows": 470,
+    "row_diagnostics": {
+      "detailed_feature_matches": 470,
+      "feature_event_type_counts": {
+        "plan_built": 470
+      },
+      "feature_index_keys": 1368,
+      "matched_trade_count": 470,
+      "raw_trade_count": 470,
+      "settled_label_rows": 469
+    },
+    "usable_row_idx_max": 470,
+    "usable_row_idx_min": 1,
+    "usable_rows": 469
+  },
+  "families": {
+    "base_only": {
+      "family": "base_only",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma"
+      ],
+      "frames_minutes": [],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.40471092077087795,
+          "pnl_cv_abs": 4.708152713634892,
+          "positive_windows": 2,
+          "stats": {
+            "avg_cents_per_entry": -0.7256097560975612,
+            "entries": 164,
+            "flats": 0,
+            "losses": 83,
+            "net_cents": -119.00000000000003,
+            "net_dollars": -1.1900000000000004,
+            "win_rate_ex_flat": 0.49390243902439024,
+            "wins": 81
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            70,
+            70,
+            13,
+            11
+          ],
+          "window_net_cents": [
+            -104.00000000000001,
+            -189.00000000000003,
+            68.0,
+            106.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.3163751987281399,
+          "pnl_cv_abs": 1.4657431191578114,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 10.693333333333333,
+            "entries": 75,
+            "flats": 1,
+            "losses": 34,
+            "net_cents": 802.0,
+            "net_dollars": 8.02,
+            "win_rate_ex_flat": 0.5405405405405406,
+            "wins": 40
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            20,
+            12,
+            30,
+            13
+          ],
+          "window_net_cents": [
+            -228.0,
+            398.0,
+            386.0,
+            245.99999999999997
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 1.8097014925373132,
+              "entries": 268,
+              "flats": 5,
+              "losses": 137,
+              "net_cents": 484.99999999999994,
+              "net_dollars": 4.85,
+              "win_rate_ex_flat": 0.4790874524714829,
+              "wins": 126
+            },
+            "threshold": 0.52,
+            "train_stats": {
+              "avg_cents_per_entry": 10.196891191709845,
+              "entries": 193,
+              "flats": 0,
+              "losses": 86,
+              "net_cents": 1968.0,
+              "net_dollars": 19.68,
+              "win_rate_ex_flat": 0.5544041450777202,
+              "wins": 107
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 11.626373626373626,
+              "entries": 91,
+              "flats": 1,
+              "losses": 42,
+              "net_cents": 1058.0,
+              "net_dollars": 10.58,
+              "win_rate_ex_flat": 0.5333333333333333,
+              "wins": 48
+            },
+            "threshold": 0.5,
+            "train_stats": {
+              "avg_cents_per_entry": 10.09375,
+              "entries": 64,
+              "flats": 0,
+              "losses": 35,
+              "net_cents": 646.0,
+              "net_dollars": 6.46,
+              "win_rate_ex_flat": 0.453125,
+              "wins": 29
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5834324553950723,
+          "brier": 0.15892480247630608,
+          "log_loss": 0.49829416185460124,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.5300764655904843,
+        "brier": 0.16313067588816288,
+        "log_loss": 0.5093055565047109,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": null,
+        "feature_count": 0,
+        "mean_abs_corr": null
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -1.485714285714286,
+                "entries": 70,
+                "flats": 0,
+                "losses": 35,
+                "net_cents": -104.00000000000001,
+                "net_dollars": -1.04,
+                "win_rate_ex_flat": 0.5,
+                "wins": 35
+              },
+              "threshold": 0.52,
+              "train_stats": {
+                "avg_cents_per_entry": 10.196891191709845,
+                "entries": 193,
+                "flats": 0,
+                "losses": 86,
+                "net_cents": 1968.0,
+                "net_dollars": 19.68,
+                "win_rate_ex_flat": 0.5544041450777202,
+                "wins": 107
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -11.4,
+                "entries": 20,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": -228.0,
+                "net_dollars": -2.28,
+                "win_rate_ex_flat": 0.4,
+                "wins": 8
+              },
+              "threshold": 0.5,
+              "train_stats": {
+                "avg_cents_per_entry": 10.09375,
+                "entries": 64,
+                "flats": 0,
+                "losses": 35,
+                "net_cents": 646.0,
+                "net_dollars": 6.46,
+                "win_rate_ex_flat": 0.453125,
+                "wins": 29
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.47058823529411764,
+            "brier": 0.20802104341923394,
+            "log_loss": 0.6229343863869261,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.49303745432400137,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.7000000000000006,
+                "entries": 70,
+                "flats": 0,
+                "losses": 37,
+                "net_cents": -189.00000000000003,
+                "net_dollars": -1.8900000000000003,
+                "win_rate_ex_flat": 0.4714285714285714,
+                "wins": 33
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 5.989473684210527,
+                "entries": 190,
+                "flats": 0,
+                "losses": 86,
+                "net_cents": 1138.0,
+                "net_dollars": 11.38,
+                "win_rate_ex_flat": 0.5473684210526316,
+                "wins": 104
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 33.166666666666664,
+                "entries": 12,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 398.0,
+                "net_dollars": 3.98,
+                "win_rate_ex_flat": 0.8333333333333334,
+                "wins": 10
+              },
+              "threshold": 0.68,
+              "train_stats": {
+                "avg_cents_per_entry": 8.829268292682928,
+                "entries": 41,
+                "flats": 0,
+                "losses": 23,
+                "net_cents": 362.0,
+                "net_dollars": 3.62,
+                "win_rate_ex_flat": 0.43902439024390244,
+                "wins": 18
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.49489795918367346,
+            "brier": 0.16465799869300504,
+            "log_loss": 0.5115108860424241,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.5447573375692405,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 5.230769230769231,
+                "entries": 13,
+                "flats": 0,
+                "losses": 5,
+                "net_cents": 68.0,
+                "net_dollars": 0.68,
+                "win_rate_ex_flat": 0.6153846153846154,
+                "wins": 8
+              },
+              "threshold": 0.84,
+              "train_stats": {
+                "avg_cents_per_entry": 15.454545454545455,
+                "entries": 33,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": 510.0,
+                "net_dollars": 5.1,
+                "win_rate_ex_flat": 0.6666666666666666,
+                "wins": 22
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 12.866666666666667,
+                "entries": 30,
+                "flats": 1,
+                "losses": 14,
+                "net_cents": 386.0,
+                "net_dollars": 3.86,
+                "win_rate_ex_flat": 0.5172413793103449,
+                "wins": 15
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 11.563636363636364,
+                "entries": 55,
+                "flats": 0,
+                "losses": 23,
+                "net_cents": 636.0,
+                "net_dollars": 6.36,
+                "win_rate_ex_flat": 0.5818181818181818,
+                "wins": 32
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.5482695810564663,
+            "brier": 0.11925777391439425,
+            "log_loss": 0.40392867368661517,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.5043937142814168,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 9.636363636363637,
+                "entries": 11,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": 106.0,
+                "net_dollars": 1.06,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 5
+              },
+              "threshold": 0.86,
+              "train_stats": {
+                "avg_cents_per_entry": 10.08695652173913,
+                "entries": 23,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 232.0,
+                "net_dollars": 2.32,
+                "win_rate_ex_flat": 0.6086956521739131,
+                "wins": 14
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 18.92307692307692,
+                "entries": 13,
+                "flats": 0,
+                "losses": 6,
+                "net_cents": 245.99999999999997,
+                "net_dollars": 2.4599999999999995,
+                "win_rate_ex_flat": 0.5384615384615384,
+                "wins": 7
+              },
+              "threshold": 0.8,
+              "train_stats": {
+                "avg_cents_per_entry": 19.4,
+                "entries": 30,
+                "flats": 1,
+                "losses": 10,
+                "net_cents": 582.0,
+                "net_dollars": 5.82,
+                "win_rate_ex_flat": 0.6551724137931034,
+                "wins": 19
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.6404682274247492,
+            "brier": 0.1601114354584998,
+            "log_loss": 0.4968986181635535,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4780158886540062,
+          "train_rows": 200
+        }
+      ]
+    },
+    "log_3": {
+      "family": "log_3",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_4m_side_ret_z",
+        "frame_4m_abs_ret_z",
+        "frame_4m_range_pct",
+        "frame_4m_side_dollar",
+        "frame_16m_side_ret_z",
+        "frame_16m_abs_ret_z",
+        "frame_16m_range_pct",
+        "frame_16m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        4,
+        16
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.8344549125168237,
+          "pnl_cv_abs": 1.7135979246819233,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 3.4702970297029703,
+            "entries": 202,
+            "flats": 3,
+            "losses": 101,
+            "net_cents": 701.0,
+            "net_dollars": 7.01,
+            "win_rate_ex_flat": 0.49246231155778897,
+            "wins": 98
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            68,
+            61,
+            21,
+            52
+          ],
+          "window_net_cents": [
+            91.99999999999999,
+            -21.000000000000014,
+            10.000000000000004,
+            620.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.5032863849765258,
+          "pnl_cv_abs": 0.8710180910902917,
+          "positive_windows": 4,
+          "stats": {
+            "avg_cents_per_entry": 15.0,
+            "entries": 71,
+            "flats": 1,
+            "losses": 30,
+            "net_cents": 1065.0,
+            "net_dollars": 10.65,
+            "win_rate_ex_flat": 0.5714285714285714,
+            "wins": 40
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            19,
+            16,
+            12,
+            24
+          ],
+          "window_net_cents": [
+            16.0,
+            536.0,
+            143.0,
+            370.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 3.26953125,
+              "entries": 256,
+              "flats": 4,
+              "losses": 130,
+              "net_cents": 837.0,
+              "net_dollars": 8.37,
+              "win_rate_ex_flat": 0.48412698412698413,
+              "wins": 122
+            },
+            "threshold": 0.6,
+            "train_stats": {
+              "avg_cents_per_entry": 10.994475138121548,
+              "entries": 181,
+              "flats": 0,
+              "losses": 78,
+              "net_cents": 1990.0,
+              "net_dollars": 19.9,
+              "win_rate_ex_flat": 0.569060773480663,
+              "wins": 103
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 15.363636363636363,
+              "entries": 88,
+              "flats": 1,
+              "losses": 40,
+              "net_cents": 1352.0,
+              "net_dollars": 13.52,
+              "win_rate_ex_flat": 0.5402298850574713,
+              "wins": 47
+            },
+            "threshold": 0.62,
+            "train_stats": {
+              "avg_cents_per_entry": 11.540983606557377,
+              "entries": 61,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 704.0,
+              "net_dollars": 7.04,
+              "win_rate_ex_flat": 0.47540983606557374,
+              "wins": 29
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.564910790144435,
+          "brier": 0.1665167878367256,
+          "log_loss": 0.5290243482098091,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.49252336448598133,
+        "brier": 0.17200286156280495,
+        "log_loss": 0.5452895518957734,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 148.957292101623,
+        "feature_count": 12,
+        "mean_abs_corr": 0.3764856194231624,
+        "median_abs_corr": 0.2891767766024341
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 1.352941176470588,
+                "entries": 68,
+                "flats": 0,
+                "losses": 34,
+                "net_cents": 91.99999999999999,
+                "net_dollars": 0.9199999999999998,
+                "win_rate_ex_flat": 0.5,
+                "wins": 34
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 10.994475138121548,
+                "entries": 181,
+                "flats": 0,
+                "losses": 78,
+                "net_cents": 1990.0,
+                "net_dollars": 19.9,
+                "win_rate_ex_flat": 0.569060773480663,
+                "wins": 103
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 0.8421052631578947,
+                "entries": 19,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": 16.0,
+                "net_dollars": 0.16,
+                "win_rate_ex_flat": 0.42105263157894735,
+                "wins": 8
+              },
+              "threshold": 0.62,
+              "train_stats": {
+                "avg_cents_per_entry": 11.540983606557377,
+                "entries": 61,
+                "flats": 0,
+                "losses": 32,
+                "net_cents": 704.0,
+                "net_dollars": 7.04,
+                "win_rate_ex_flat": 0.47540983606557374,
+                "wins": 29
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.4613003095975232,
+            "brier": 0.22074884772702313,
+            "log_loss": 0.700190509150356,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.46476803752592555,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.34426229508196743,
+                "entries": 61,
+                "flats": 0,
+                "losses": 31,
+                "net_cents": -21.000000000000014,
+                "net_dollars": -0.21000000000000013,
+                "win_rate_ex_flat": 0.4918032786885246,
+                "wins": 30
+              },
+              "threshold": 0.66,
+              "train_stats": {
+                "avg_cents_per_entry": 8.474358974358974,
+                "entries": 156,
+                "flats": 0,
+                "losses": 66,
+                "net_cents": 1322.0,
+                "net_dollars": 13.22,
+                "win_rate_ex_flat": 0.5769230769230769,
+                "wins": 90
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 33.5,
+                "entries": 16,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 536.0,
+                "net_dollars": 5.36,
+                "win_rate_ex_flat": 0.875,
+                "wins": 14
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 11.755102040816327,
+                "entries": 49,
+                "flats": 0,
+                "losses": 25,
+                "net_cents": 576.0,
+                "net_dollars": 5.76,
+                "win_rate_ex_flat": 0.4897959183673469,
+                "wins": 24
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.5089285714285714,
+            "brier": 0.16320866662830047,
+            "log_loss": 0.5052932446874197,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.521366362355704,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 0.4761904761904764,
+                "entries": 21,
+                "flats": 1,
+                "losses": 10,
+                "net_cents": 10.000000000000004,
+                "net_dollars": 0.10000000000000003,
+                "win_rate_ex_flat": 0.5,
+                "wins": 10
+              },
+              "threshold": 0.82,
+              "train_stats": {
+                "avg_cents_per_entry": 9.414634146341463,
+                "entries": 82,
+                "flats": 0,
+                "losses": 39,
+                "net_cents": 772.0,
+                "net_dollars": 7.72,
+                "win_rate_ex_flat": 0.524390243902439,
+                "wins": 43
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 11.916666666666666,
+                "entries": 12,
+                "flats": 1,
+                "losses": 4,
+                "net_cents": 143.0,
+                "net_dollars": 1.43,
+                "win_rate_ex_flat": 0.6363636363636364,
+                "wins": 7
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 18.25,
+                "entries": 40,
+                "flats": 0,
+                "losses": 15,
+                "net_cents": 730.0,
+                "net_dollars": 7.3,
+                "win_rate_ex_flat": 0.625,
+                "wins": 25
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.44808743169398907,
+            "brier": 0.13631301657750075,
+            "log_loss": 0.4462934792870706,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.4809090575172861,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 11.923076923076923,
+                "entries": 52,
+                "flats": 2,
+                "losses": 26,
+                "net_cents": 620.0,
+                "net_dollars": 6.2,
+                "win_rate_ex_flat": 0.48,
+                "wins": 24
+              },
+              "threshold": 0.7,
+              "train_stats": {
+                "avg_cents_per_entry": 1.9132947976878614,
+                "entries": 173,
+                "flats": 1,
+                "losses": 83,
+                "net_cents": 331.0,
+                "net_dollars": 3.31,
+                "win_rate_ex_flat": 0.5174418604651163,
+                "wins": 89
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 15.416666666666666,
+                "entries": 24,
+                "flats": 0,
+                "losses": 13,
+                "net_cents": 370.0,
+                "net_dollars": 3.7,
+                "win_rate_ex_flat": 0.4583333333333333,
+                "wins": 11
+              },
+              "threshold": 0.62,
+              "train_stats": {
+                "avg_cents_per_entry": 16.896551724137932,
+                "entries": 58,
+                "flats": 1,
+                "losses": 23,
+                "net_cents": 980.0,
+                "net_dollars": 9.8,
+                "win_rate_ex_flat": 0.5964912280701754,
+                "wins": 34
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.5903010033444817,
+            "brier": 0.1669463151711327,
+            "log_loss": 0.5264149684953193,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.44666931038852636,
+          "train_rows": 200
+        }
+      ]
+    },
+    "log_6": {
+      "family": "log_6",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_4m_side_ret_z",
+        "frame_4m_abs_ret_z",
+        "frame_4m_range_pct",
+        "frame_4m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_16m_side_ret_z",
+        "frame_16m_abs_ret_z",
+        "frame_16m_range_pct",
+        "frame_16m_side_dollar",
+        "frame_32m_side_ret_z",
+        "frame_32m_abs_ret_z",
+        "frame_32m_range_pct",
+        "frame_32m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.5356125356125356,
+          "pnl_cv_abs": 20.361794288978246,
+          "positive_windows": 1,
+          "stats": {
+            "avg_cents_per_entry": 0.2617801047120416,
+            "entries": 191,
+            "flats": 2,
+            "losses": 93,
+            "net_cents": 49.99999999999995,
+            "net_dollars": 0.4999999999999995,
+            "win_rate_ex_flat": 0.5079365079365079,
+            "wins": 96
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            67,
+            68,
+            36,
+            20
+          ],
+          "window_net_cents": [
+            -196.0,
+            -123.00000000000003,
+            -7.0,
+            376.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.3380703066566941,
+          "pnl_cv_abs": 1.407483553612929,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 13.348484848484848,
+            "entries": 66,
+            "flats": 1,
+            "losses": 29,
+            "net_cents": 881.0,
+            "net_dollars": 8.81,
+            "win_rate_ex_flat": 0.5538461538461539,
+            "wins": 36
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            20,
+            12,
+            15,
+            19
+          ],
+          "window_net_cents": [
+            -228.0,
+            452.0,
+            257.0,
+            400.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 2.467479674796748,
+              "entries": 246,
+              "flats": 4,
+              "losses": 125,
+              "net_cents": 607.0,
+              "net_dollars": 6.07,
+              "win_rate_ex_flat": 0.4834710743801653,
+              "wins": 117
+            },
+            "threshold": 0.6,
+            "train_stats": {
+              "avg_cents_per_entry": 11.149425287356323,
+              "entries": 174,
+              "flats": 0,
+              "losses": 75,
+              "net_cents": 1940.0,
+              "net_dollars": 19.4,
+              "win_rate_ex_flat": 0.5689655172413793,
+              "wins": 99
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 11.8,
+              "entries": 90,
+              "flats": 1,
+              "losses": 41,
+              "net_cents": 1062.0,
+              "net_dollars": 10.62,
+              "win_rate_ex_flat": 0.5393258426966292,
+              "wins": 48
+            },
+            "threshold": 0.52,
+            "train_stats": {
+              "avg_cents_per_entry": 10.96774193548387,
+              "entries": 62,
+              "flats": 0,
+              "losses": 33,
+              "net_cents": 680.0,
+              "net_dollars": 6.8,
+              "win_rate_ex_flat": 0.46774193548387094,
+              "wins": 29
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5749362786745964,
+          "brier": 0.1640848704100618,
+          "log_loss": 0.5322008187710198,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.48844519966015293,
+        "brier": 0.1770885436670605,
+        "log_loss": 0.5652086548422618,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 650.1199507794431,
+        "feature_count": 24,
+        "mean_abs_corr": 0.2894840356883359,
+        "median_abs_corr": 0.18798907840809642
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.925373134328358,
+                "entries": 67,
+                "flats": 0,
+                "losses": 34,
+                "net_cents": -196.0,
+                "net_dollars": -1.96,
+                "win_rate_ex_flat": 0.4925373134328358,
+                "wins": 33
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 11.149425287356323,
+                "entries": 174,
+                "flats": 0,
+                "losses": 75,
+                "net_cents": 1940.0,
+                "net_dollars": 19.4,
+                "win_rate_ex_flat": 0.5689655172413793,
+                "wins": 99
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -11.4,
+                "entries": 20,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": -228.0,
+                "net_dollars": -2.28,
+                "win_rate_ex_flat": 0.4,
+                "wins": 8
+              },
+              "threshold": 0.52,
+              "train_stats": {
+                "avg_cents_per_entry": 10.96774193548387,
+                "entries": 62,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 680.0,
+                "net_dollars": 6.8,
+                "win_rate_ex_flat": 0.46774193548387094,
+                "wins": 29
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.46852425180598556,
+            "brier": 0.21827538093283944,
+            "log_loss": 0.7191972412452553,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.43886132361520624,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -1.8088235294117652,
+                "entries": 68,
+                "flats": 0,
+                "losses": 36,
+                "net_cents": -123.00000000000003,
+                "net_dollars": -1.2300000000000002,
+                "win_rate_ex_flat": 0.47058823529411764,
+                "wins": 32
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 8.459770114942529,
+                "entries": 174,
+                "flats": 0,
+                "losses": 76,
+                "net_cents": 1472.0,
+                "net_dollars": 14.72,
+                "win_rate_ex_flat": 0.5632183908045977,
+                "wins": 98
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 37.666666666666664,
+                "entries": 12,
+                "flats": 0,
+                "losses": 1,
+                "net_cents": 452.0,
+                "net_dollars": 4.52,
+                "win_rate_ex_flat": 0.9166666666666666,
+                "wins": 11
+              },
+              "threshold": 0.72,
+              "train_stats": {
+                "avg_cents_per_entry": 16.88,
+                "entries": 25,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 422.0,
+                "net_dollars": 4.22,
+                "win_rate_ex_flat": 0.52,
+                "wins": 13
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.5969387755102041,
+            "brier": 0.1579041942622669,
+            "log_loss": 0.4907977521057613,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.5019171430387708,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.19444444444444445,
+                "entries": 36,
+                "flats": 1,
+                "losses": 16,
+                "net_cents": -7.0,
+                "net_dollars": -0.07,
+                "win_rate_ex_flat": 0.5428571428571428,
+                "wins": 19
+              },
+              "threshold": 0.78,
+              "train_stats": {
+                "avg_cents_per_entry": 9.495726495726496,
+                "entries": 117,
+                "flats": 0,
+                "losses": 56,
+                "net_cents": 1111.0,
+                "net_dollars": 11.11,
+                "win_rate_ex_flat": 0.5213675213675214,
+                "wins": 61
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 17.133333333333333,
+                "entries": 15,
+                "flats": 1,
+                "losses": 6,
+                "net_cents": 257.0,
+                "net_dollars": 2.57,
+                "win_rate_ex_flat": 0.5714285714285714,
+                "wins": 8
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 18.615384615384617,
+                "entries": 39,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 726.0,
+                "net_dollars": 7.26,
+                "win_rate_ex_flat": 0.5897435897435898,
+                "wins": 23
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.36065573770491804,
+            "brier": 0.15790411984796104,
+            "log_loss": 0.49917125032923776,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.44358791818566456,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 18.8,
+                "entries": 20,
+                "flats": 1,
+                "losses": 7,
+                "net_cents": 376.0,
+                "net_dollars": 3.76,
+                "win_rate_ex_flat": 0.631578947368421,
+                "wins": 12
+              },
+              "threshold": 0.88,
+              "train_stats": {
+                "avg_cents_per_entry": 7.573333333333333,
+                "entries": 75,
+                "flats": 0,
+                "losses": 31,
+                "net_cents": 568.0,
+                "net_dollars": 5.68,
+                "win_rate_ex_flat": 0.5866666666666667,
+                "wins": 44
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 21.05263157894737,
+                "entries": 19,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 400.0,
+                "net_dollars": 4.0,
+                "win_rate_ex_flat": 0.47368421052631576,
+                "wins": 9
+              },
+              "threshold": 0.76,
+              "train_stats": {
+                "avg_cents_per_entry": 21.31578947368421,
+                "entries": 38,
+                "flats": 1,
+                "losses": 12,
+                "net_cents": 810.0,
+                "net_dollars": 8.1,
+                "win_rate_ex_flat": 0.6756756756756757,
+                "wins": 25
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.5551839464882943,
+            "brier": 0.17374507785465343,
+            "log_loss": 0.5491439168635699,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4199734284549243,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_15s_seed_rounded": {
+      "family": "phi_15s_seed_rounded",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_4m_side_ret_z",
+        "frame_4m_abs_ret_z",
+        "frame_4m_range_pct",
+        "frame_4m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_7m_side_ret_z",
+        "frame_7m_abs_ret_z",
+        "frame_7m_range_pct",
+        "frame_7m_side_dollar",
+        "frame_12m_side_ret_z",
+        "frame_12m_abs_ret_z",
+        "frame_12m_range_pct",
+        "frame_12m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        12
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.35538005923000987,
+          "pnl_cv_abs": 3.007472846165806,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 2.411042944785276,
+            "entries": 163,
+            "flats": 3,
+            "losses": 82,
+            "net_cents": 392.99999999999994,
+            "net_dollars": 3.9299999999999993,
+            "win_rate_ex_flat": 0.4875,
+            "wins": 78
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            66,
+            28,
+            22,
+            47
+          ],
+          "window_net_cents": [
+            81.99999999999999,
+            -310.0,
+            261.0,
+            359.99999999999994
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.42857142857142855,
+          "pnl_cv_abs": 0.6973926172429946,
+          "positive_windows": 4,
+          "stats": {
+            "avg_cents_per_entry": 11.11111111111111,
+            "entries": 63,
+            "flats": 1,
+            "losses": 31,
+            "net_cents": 700.0,
+            "net_dollars": 7.0,
+            "win_rate_ex_flat": 0.5,
+            "wins": 31
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            19,
+            4,
+            19,
+            21
+          ],
+          "window_net_cents": [
+            16.0,
+            152.0,
+            300.0,
+            231.99999999999997
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 3.38671875,
+              "entries": 256,
+              "flats": 5,
+              "losses": 130,
+              "net_cents": 867.0,
+              "net_dollars": 8.67,
+              "win_rate_ex_flat": 0.4820717131474104,
+              "wins": 121
+            },
+            "threshold": 0.56,
+            "train_stats": {
+              "avg_cents_per_entry": 11.6,
+              "entries": 185,
+              "flats": 0,
+              "losses": 82,
+              "net_cents": 2146.0,
+              "net_dollars": 21.46,
+              "win_rate_ex_flat": 0.5567567567567567,
+              "wins": 103
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 14.337078651685394,
+              "entries": 89,
+              "flats": 1,
+              "losses": 41,
+              "net_cents": 1276.0,
+              "net_dollars": 12.76,
+              "win_rate_ex_flat": 0.5340909090909091,
+              "wins": 47
+            },
+            "threshold": 0.56,
+            "train_stats": {
+              "avg_cents_per_entry": 13.475409836065573,
+              "entries": 61,
+              "flats": 0,
+              "losses": 33,
+              "net_cents": 822.0,
+              "net_dollars": 8.22,
+              "win_rate_ex_flat": 0.45901639344262296,
+              "wins": 28
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5374681393372982,
+          "brier": 0.17490966071063155,
+          "log_loss": 0.6195449783236212,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.4592183517417162,
+        "brier": 0.18650725649093663,
+        "log_loss": 0.6542442765924322,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 803.3862681556523,
+        "feature_count": 28,
+        "mean_abs_corr": 0.3296336952821242,
+        "median_abs_corr": 0.24617489852402524
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 1.2424242424242422,
+                "entries": 66,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 81.99999999999999,
+                "net_dollars": 0.8199999999999998,
+                "win_rate_ex_flat": 0.5,
+                "wins": 33
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 11.6,
+                "entries": 185,
+                "flats": 0,
+                "losses": 82,
+                "net_cents": 2146.0,
+                "net_dollars": 21.46,
+                "win_rate_ex_flat": 0.5567567567567567,
+                "wins": 103
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 0.8421052631578947,
+                "entries": 19,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": 16.0,
+                "net_dollars": 0.16,
+                "win_rate_ex_flat": 0.42105263157894735,
+                "wins": 8
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 13.475409836065573,
+                "entries": 61,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 822.0,
+                "net_dollars": 8.22,
+                "win_rate_ex_flat": 0.45901639344262296,
+                "wins": 28
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.4231166150670795,
+            "brier": 0.23509112459328219,
+            "log_loss": 0.950091025016584,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.433661864380441,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -11.071428571428571,
+                "entries": 28,
+                "flats": 0,
+                "losses": 17,
+                "net_cents": -310.0,
+                "net_dollars": -3.1,
+                "win_rate_ex_flat": 0.39285714285714285,
+                "wins": 11
+              },
+              "threshold": 0.8,
+              "train_stats": {
+                "avg_cents_per_entry": 15.851851851851851,
+                "entries": 81,
+                "flats": 0,
+                "losses": 30,
+                "net_cents": 1284.0,
+                "net_dollars": 12.84,
+                "win_rate_ex_flat": 0.6296296296296297,
+                "wins": 51
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 38.0,
+                "entries": 4,
+                "flats": 0,
+                "losses": 0,
+                "net_cents": 152.0,
+                "net_dollars": 1.52,
+                "win_rate_ex_flat": 1.0,
+                "wins": 4
+              },
+              "threshold": 0.8,
+              "train_stats": {
+                "avg_cents_per_entry": 20.823529411764707,
+                "entries": 17,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 354.0,
+                "net_dollars": 3.54,
+                "win_rate_ex_flat": 0.5882352941176471,
+                "wins": 10
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.4336734693877551,
+            "brier": 0.19308293270443935,
+            "log_loss": 0.6476248437670235,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.49545080216824144,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 11.863636363636363,
+                "entries": 22,
+                "flats": 1,
+                "losses": 7,
+                "net_cents": 261.0,
+                "net_dollars": 2.61,
+                "win_rate_ex_flat": 0.6666666666666666,
+                "wins": 14
+              },
+              "threshold": 0.86,
+              "train_stats": {
+                "avg_cents_per_entry": 13.287671232876713,
+                "entries": 73,
+                "flats": 0,
+                "losses": 31,
+                "net_cents": 970.0,
+                "net_dollars": 9.7,
+                "win_rate_ex_flat": 0.5753424657534246,
+                "wins": 42
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 15.789473684210526,
+                "entries": 19,
+                "flats": 1,
+                "losses": 8,
+                "net_cents": 300.0,
+                "net_dollars": 3.0,
+                "win_rate_ex_flat": 0.5555555555555556,
+                "wins": 10
+              },
+              "threshold": 0.7,
+              "train_stats": {
+                "avg_cents_per_entry": 17.4468085106383,
+                "entries": 47,
+                "flats": 0,
+                "losses": 19,
+                "net_cents": 820.0,
+                "net_dollars": 8.2,
+                "win_rate_ex_flat": 0.5957446808510638,
+                "wins": 28
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.46265938069216755,
+            "brier": 0.14387003391724426,
+            "log_loss": 0.469617556585912,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.43336848582938353,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 7.659574468085105,
+                "entries": 47,
+                "flats": 2,
+                "losses": 25,
+                "net_cents": 359.99999999999994,
+                "net_dollars": 3.5999999999999996,
+                "win_rate_ex_flat": 0.4444444444444444,
+                "wins": 20
+              },
+              "threshold": 0.76,
+              "train_stats": {
+                "avg_cents_per_entry": 6.943262411347518,
+                "entries": 141,
+                "flats": 2,
+                "losses": 60,
+                "net_cents": 979.0,
+                "net_dollars": 9.79,
+                "win_rate_ex_flat": 0.5683453237410072,
+                "wins": 79
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 11.047619047619046,
+                "entries": 21,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 231.99999999999997,
+                "net_dollars": 2.32,
+                "win_rate_ex_flat": 0.42857142857142855,
+                "wins": 9
+              },
+              "threshold": 0.72,
+              "train_stats": {
+                "avg_cents_per_entry": 16.08888888888889,
+                "entries": 45,
+                "flats": 1,
+                "losses": 18,
+                "net_cents": 724.0,
+                "net_dollars": 7.24,
+                "win_rate_ex_flat": 0.5909090909090909,
+                "wins": 26
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.580267558528428,
+            "brier": 0.17165026459346355,
+            "log_loss": 0.5301418750423372,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4072271177875243,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_3": {
+      "family": "phi_3",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        3,
+        8
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.42896935933147634,
+          "pnl_cv_abs": 4.706370256662029,
+          "positive_windows": 2,
+          "stats": {
+            "avg_cents_per_entry": 0.9441624365482231,
+            "entries": 197,
+            "flats": 3,
+            "losses": 98,
+            "net_cents": 185.99999999999994,
+            "net_dollars": 1.8599999999999994,
+            "win_rate_ex_flat": 0.4948453608247423,
+            "wins": 96
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            67,
+            68,
+            36,
+            26
+          ],
+          "window_net_cents": [
+            144.0,
+            -159.00000000000003,
+            -107.0,
+            308.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.4416135881104034,
+          "pnl_cv_abs": 0.6472346132909481,
+          "positive_windows": 4,
+          "stats": {
+            "avg_cents_per_entry": 15.966101694915254,
+            "entries": 59,
+            "flats": 1,
+            "losses": 25,
+            "net_cents": 942.0,
+            "net_dollars": 9.42,
+            "win_rate_ex_flat": 0.5689655172413793,
+            "wins": 33
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            18,
+            14,
+            5,
+            22
+          ],
+          "window_net_cents": [
+            68.0,
+            416.0,
+            162.0,
+            296.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 3.5852713178294575,
+              "entries": 258,
+              "flats": 5,
+              "losses": 130,
+              "net_cents": 925.0,
+              "net_dollars": 9.25,
+              "win_rate_ex_flat": 0.48616600790513836,
+              "wins": 123
+            },
+            "threshold": 0.56,
+            "train_stats": {
+              "avg_cents_per_entry": 11.879781420765028,
+              "entries": 183,
+              "flats": 0,
+              "losses": 78,
+              "net_cents": 2174.0,
+              "net_dollars": 21.74,
+              "win_rate_ex_flat": 0.5737704918032787,
+              "wins": 105
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 15.310344827586206,
+              "entries": 87,
+              "flats": 1,
+              "losses": 39,
+              "net_cents": 1332.0,
+              "net_dollars": 13.32,
+              "win_rate_ex_flat": 0.5465116279069767,
+              "wins": 47
+            },
+            "threshold": 0.56,
+            "train_stats": {
+              "avg_cents_per_entry": 13.559322033898304,
+              "entries": 59,
+              "flats": 0,
+              "losses": 31,
+              "net_cents": 800.0,
+              "net_dollars": 8.0,
+              "win_rate_ex_flat": 0.4745762711864407,
+              "wins": 28
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5649957519116398,
+          "brier": 0.1660860051098573,
+          "log_loss": 0.5348847636096264,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.5129991503823279,
+        "brier": 0.1752501530082298,
+        "log_loss": 0.5682420977730908,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 151.4363261613909,
+        "feature_count": 12,
+        "mean_abs_corr": 0.3758003030168653,
+        "median_abs_corr": 0.22761422424481084
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 2.1492537313432836,
+                "entries": 67,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 144.0,
+                "net_dollars": 1.44,
+                "win_rate_ex_flat": 0.5074626865671642,
+                "wins": 34
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 11.879781420765028,
+                "entries": 183,
+                "flats": 0,
+                "losses": 78,
+                "net_cents": 2174.0,
+                "net_dollars": 21.74,
+                "win_rate_ex_flat": 0.5737704918032787,
+                "wins": 105
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 3.7777777777777777,
+                "entries": 18,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 68.0,
+                "net_dollars": 0.68,
+                "win_rate_ex_flat": 0.4444444444444444,
+                "wins": 8
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 13.559322033898304,
+                "entries": 59,
+                "flats": 0,
+                "losses": 31,
+                "net_cents": 800.0,
+                "net_dollars": 8.0,
+                "win_rate_ex_flat": 0.4745762711864407,
+                "wins": 28
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.4406604747162023,
+            "brier": 0.23088438779854725,
+            "log_loss": 0.7553599684670708,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.4503985057437772,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.3382352941176476,
+                "entries": 68,
+                "flats": 0,
+                "losses": 36,
+                "net_cents": -159.00000000000003,
+                "net_dollars": -1.5900000000000003,
+                "win_rate_ex_flat": 0.47058823529411764,
+                "wins": 32
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 6.345945945945946,
+                "entries": 185,
+                "flats": 0,
+                "losses": 84,
+                "net_cents": 1174.0,
+                "net_dollars": 11.74,
+                "win_rate_ex_flat": 0.5459459459459459,
+                "wins": 101
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 29.714285714285715,
+                "entries": 14,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 416.0,
+                "net_dollars": 4.16,
+                "win_rate_ex_flat": 0.7857142857142857,
+                "wins": 11
+              },
+              "threshold": 0.64,
+              "train_stats": {
+                "avg_cents_per_entry": 9.45,
+                "entries": 40,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": 378.0,
+                "net_dollars": 3.78,
+                "win_rate_ex_flat": 0.475,
+                "wins": 19
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.5127551020408163,
+            "brier": 0.18162976543792383,
+            "log_loss": 0.607129405327191,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.5259275690380081,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.9722222222222223,
+                "entries": 36,
+                "flats": 1,
+                "losses": 17,
+                "net_cents": -107.0,
+                "net_dollars": -1.07,
+                "win_rate_ex_flat": 0.5142857142857142,
+                "wins": 18
+              },
+              "threshold": 0.78,
+              "train_stats": {
+                "avg_cents_per_entry": 8.63963963963964,
+                "entries": 111,
+                "flats": 0,
+                "losses": 50,
+                "net_cents": 959.0,
+                "net_dollars": 9.59,
+                "win_rate_ex_flat": 0.5495495495495496,
+                "wins": 61
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 32.4,
+                "entries": 5,
+                "flats": 1,
+                "losses": 0,
+                "net_cents": 162.0,
+                "net_dollars": 1.62,
+                "win_rate_ex_flat": 1.0,
+                "wins": 4
+              },
+              "threshold": 0.84,
+              "train_stats": {
+                "avg_cents_per_entry": 21.5,
+                "entries": 20,
+                "flats": 0,
+                "losses": 7,
+                "net_cents": 430.0,
+                "net_dollars": 4.3,
+                "win_rate_ex_flat": 0.65,
+                "wins": 13
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.48633879781420764,
+            "brier": 0.12976061877076675,
+            "log_loss": 0.4274862166763786,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.4733842784884068,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 11.846153846153847,
+                "entries": 26,
+                "flats": 2,
+                "losses": 12,
+                "net_cents": 308.0,
+                "net_dollars": 3.08,
+                "win_rate_ex_flat": 0.5,
+                "wins": 12
+              },
+              "threshold": 0.84,
+              "train_stats": {
+                "avg_cents_per_entry": 8.654761904761905,
+                "entries": 84,
+                "flats": 1,
+                "losses": 32,
+                "net_cents": 727.0,
+                "net_dollars": 7.27,
+                "win_rate_ex_flat": 0.6144578313253012,
+                "wins": 51
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 13.454545454545455,
+                "entries": 22,
+                "flats": 0,
+                "losses": 12,
+                "net_cents": 296.0,
+                "net_dollars": 2.96,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 10
+              },
+              "threshold": 0.68,
+              "train_stats": {
+                "avg_cents_per_entry": 13.961538461538462,
+                "entries": 52,
+                "flats": 1,
+                "losses": 22,
+                "net_cents": 726.0,
+                "net_dollars": 7.26,
+                "win_rate_ex_flat": 0.5686274509803921,
+                "wins": 29
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.7391304347826086,
+            "brier": 0.1556450359102908,
+            "log_loss": 0.4670988638646873,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4382101506944846,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_6": {
+      "family": "phi_6",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_13m_side_ret_z",
+        "frame_13m_abs_ret_z",
+        "frame_13m_range_pct",
+        "frame_13m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.5796269727403156,
+          "pnl_cv_abs": 2.5573297027886106,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 1.9625668449197857,
+            "entries": 187,
+            "flats": 3,
+            "losses": 94,
+            "net_cents": 366.99999999999994,
+            "net_dollars": 3.6699999999999995,
+            "win_rate_ex_flat": 0.4891304347826087,
+            "wins": 90
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            66,
+            46,
+            34,
+            41
+          ],
+          "window_net_cents": [
+            73.99999999999999,
+            -165.0,
+            54.00000000000001,
+            404.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.48327939590075514,
+          "pnl_cv_abs": 0.7283217943376158,
+          "positive_windows": 4,
+          "stats": {
+            "avg_cents_per_entry": 13.835820895522389,
+            "entries": 67,
+            "flats": 1,
+            "losses": 29,
+            "net_cents": 927.0,
+            "net_dollars": 9.27,
+            "win_rate_ex_flat": 0.5606060606060606,
+            "wins": 37
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            18,
+            14,
+            15,
+            20
+          ],
+          "window_net_cents": [
+            68.0,
+            448.0,
+            133.0,
+            278.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 3.1478599221789882,
+              "entries": 257,
+              "flats": 5,
+              "losses": 130,
+              "net_cents": 809.0,
+              "net_dollars": 8.09,
+              "win_rate_ex_flat": 0.48412698412698413,
+              "wins": 122
+            },
+            "threshold": 0.56,
+            "train_stats": {
+              "avg_cents_per_entry": 12.088397790055248,
+              "entries": 181,
+              "flats": 0,
+              "losses": 77,
+              "net_cents": 2188.0,
+              "net_dollars": 21.88,
+              "win_rate_ex_flat": 0.574585635359116,
+              "wins": 104
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 15.431818181818182,
+              "entries": 88,
+              "flats": 1,
+              "losses": 39,
+              "net_cents": 1358.0,
+              "net_dollars": 13.58,
+              "win_rate_ex_flat": 0.5517241379310345,
+              "wins": 48
+            },
+            "threshold": 0.54,
+            "train_stats": {
+              "avg_cents_per_entry": 13.5,
+              "entries": 60,
+              "flats": 0,
+              "losses": 32,
+              "net_cents": 810.0,
+              "net_dollars": 8.1,
+              "win_rate_ex_flat": 0.4666666666666667,
+              "wins": 28
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.554375531011045,
+          "brier": 0.17058587650268053,
+          "log_loss": 0.594060444712413,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.4883602378929482,
+        "brier": 0.18027847147955156,
+        "log_loss": 0.6411142573116859,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 701.1618405082199,
+        "feature_count": 24,
+        "mean_abs_corr": 0.30947883167998336,
+        "median_abs_corr": 0.19243371946959437
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 1.121212121212121,
+                "entries": 66,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 73.99999999999999,
+                "net_dollars": 0.7399999999999999,
+                "win_rate_ex_flat": 0.5,
+                "wins": 33
+              },
+              "threshold": 0.56,
+              "train_stats": {
+                "avg_cents_per_entry": 12.088397790055248,
+                "entries": 181,
+                "flats": 0,
+                "losses": 77,
+                "net_cents": 2188.0,
+                "net_dollars": 21.88,
+                "win_rate_ex_flat": 0.574585635359116,
+                "wins": 104
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 3.7777777777777777,
+                "entries": 18,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 68.0,
+                "net_dollars": 0.68,
+                "win_rate_ex_flat": 0.4444444444444444,
+                "wins": 8
+              },
+              "threshold": 0.54,
+              "train_stats": {
+                "avg_cents_per_entry": 13.5,
+                "entries": 60,
+                "flats": 0,
+                "losses": 32,
+                "net_cents": 810.0,
+                "net_dollars": 8.1,
+                "win_rate_ex_flat": 0.4666666666666667,
+                "wins": 28
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.40350877192982454,
+            "brier": 0.23849649637404552,
+            "log_loss": 0.9542362605529318,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.43763267235190706,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -3.5869565217391304,
+                "entries": 46,
+                "flats": 0,
+                "losses": 25,
+                "net_cents": -165.0,
+                "net_dollars": -1.65,
+                "win_rate_ex_flat": 0.45652173913043476,
+                "wins": 21
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 11.145454545454545,
+                "entries": 110,
+                "flats": 0,
+                "losses": 44,
+                "net_cents": 1226.0,
+                "net_dollars": 12.26,
+                "win_rate_ex_flat": 0.6,
+                "wins": 66
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 32.0,
+                "entries": 14,
+                "flats": 0,
+                "losses": 2,
+                "net_cents": 448.0,
+                "net_dollars": 4.48,
+                "win_rate_ex_flat": 0.8571428571428571,
+                "wins": 12
+              },
+              "threshold": 0.62,
+              "train_stats": {
+                "avg_cents_per_entry": 11.951219512195122,
+                "entries": 41,
+                "flats": 0,
+                "losses": 20,
+                "net_cents": 490.0,
+                "net_dollars": 4.9,
+                "win_rate_ex_flat": 0.5121951219512195,
+                "wins": 21
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.5216836734693877,
+            "brier": 0.18142699190669154,
+            "log_loss": 0.6498574981729717,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.501211781809427,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 1.5882352941176472,
+                "entries": 34,
+                "flats": 1,
+                "losses": 15,
+                "net_cents": 54.00000000000001,
+                "net_dollars": 0.54,
+                "win_rate_ex_flat": 0.5454545454545454,
+                "wins": 18
+              },
+              "threshold": 0.8,
+              "train_stats": {
+                "avg_cents_per_entry": 8.71875,
+                "entries": 96,
+                "flats": 0,
+                "losses": 45,
+                "net_cents": 837.0,
+                "net_dollars": 8.37,
+                "win_rate_ex_flat": 0.53125,
+                "wins": 51
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 8.866666666666667,
+                "entries": 15,
+                "flats": 1,
+                "losses": 6,
+                "net_cents": 133.0,
+                "net_dollars": 1.33,
+                "win_rate_ex_flat": 0.5714285714285714,
+                "wins": 8
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 18.7,
+                "entries": 40,
+                "flats": 0,
+                "losses": 15,
+                "net_cents": 748.0,
+                "net_dollars": 7.48,
+                "win_rate_ex_flat": 0.625,
+                "wins": 25
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.4681238615664845,
+            "brier": 0.13675775845153842,
+            "log_loss": 0.4458342991950303,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.4459765899384077,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 9.853658536585366,
+                "entries": 41,
+                "flats": 2,
+                "losses": 21,
+                "net_cents": 404.0,
+                "net_dollars": 4.04,
+                "win_rate_ex_flat": 0.46153846153846156,
+                "wins": 18
+              },
+              "threshold": 0.8,
+              "train_stats": {
+                "avg_cents_per_entry": 5.110169491525424,
+                "entries": 118,
+                "flats": 0,
+                "losses": 50,
+                "net_cents": 603.0,
+                "net_dollars": 6.03,
+                "win_rate_ex_flat": 0.576271186440678,
+                "wins": 68
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 13.9,
+                "entries": 20,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": 278.0,
+                "net_dollars": 2.78,
+                "win_rate_ex_flat": 0.45,
+                "wins": 9
+              },
+              "threshold": 0.7,
+              "train_stats": {
+                "avg_cents_per_entry": 14.28,
+                "entries": 50,
+                "flats": 1,
+                "losses": 20,
+                "net_cents": 714.0,
+                "net_dollars": 7.14,
+                "win_rate_ex_flat": 0.5918367346938775,
+                "wins": 29
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.6822742474916388,
+            "brier": 0.16147833147017077,
+            "log_loss": 0.49092832478607007,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.42167435170606576,
+          "train_rows": 200
+        }
+      ]
+    },
+    "phi_seconds_rounded": {
+      "family": "phi_seconds_rounded",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_8m_side_ret_z",
+        "frame_8m_abs_ret_z",
+        "frame_8m_range_pct",
+        "frame_8m_side_dollar",
+        "frame_10m_side_ret_z",
+        "frame_10m_abs_ret_z",
+        "frame_10m_range_pct",
+        "frame_10m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        10
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.4440944881889764,
+          "pnl_cv_abs": 1.3569032031596824,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 2.633720930232558,
+            "entries": 172,
+            "flats": 3,
+            "losses": 85,
+            "net_cents": 452.99999999999994,
+            "net_dollars": 4.529999999999999,
+            "win_rate_ex_flat": 0.4970414201183432,
+            "wins": 84
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            65,
+            44,
+            32,
+            31
+          ],
+          "window_net_cents": [
+            134.0,
+            -91.0,
+            128.0,
+            282.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.5178197064989518,
+          "pnl_cv_abs": 0.8957608175679127,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 13.768115942028986,
+            "entries": 69,
+            "flats": 1,
+            "losses": 31,
+            "net_cents": 950.0,
+            "net_dollars": 9.5,
+            "win_rate_ex_flat": 0.5441176470588235,
+            "wins": 37
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            17,
+            16,
+            18,
+            18
+          ],
+          "window_net_cents": [
+            -2.0,
+            494.0,
+            150.0,
+            308.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 3.43359375,
+              "entries": 256,
+              "flats": 5,
+              "losses": 129,
+              "net_cents": 879.0,
+              "net_dollars": 8.79,
+              "win_rate_ex_flat": 0.4860557768924303,
+              "wins": 122
+            },
+            "threshold": 0.58,
+            "train_stats": {
+              "avg_cents_per_entry": 11.337078651685394,
+              "entries": 178,
+              "flats": 0,
+              "losses": 78,
+              "net_cents": 2018.0,
+              "net_dollars": 20.18,
+              "win_rate_ex_flat": 0.5617977528089888,
+              "wins": 100
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 15.511627906976743,
+              "entries": 86,
+              "flats": 1,
+              "losses": 39,
+              "net_cents": 1334.0,
+              "net_dollars": 13.34,
+              "win_rate_ex_flat": 0.5411764705882353,
+              "wins": 46
+            },
+            "threshold": 0.62,
+            "train_stats": {
+              "avg_cents_per_entry": 12.290909090909091,
+              "entries": 55,
+              "flats": 0,
+              "losses": 30,
+              "net_cents": 676.0,
+              "net_dollars": 6.76,
+              "win_rate_ex_flat": 0.45454545454545453,
+              "wins": 25
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5395921835174171,
+          "brier": 0.17242382512790264,
+          "log_loss": 0.6026765365037015,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.4824978759558199,
+        "brier": 0.18171930227511568,
+        "log_loss": 0.6423953790950986,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 713.0102480145104,
+        "feature_count": 24,
+        "mean_abs_corr": 0.3243911077251841,
+        "median_abs_corr": 0.20472410670835445
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 2.0615384615384613,
+                "entries": 65,
+                "flats": 0,
+                "losses": 32,
+                "net_cents": 134.0,
+                "net_dollars": 1.34,
+                "win_rate_ex_flat": 0.5076923076923077,
+                "wins": 33
+              },
+              "threshold": 0.58,
+              "train_stats": {
+                "avg_cents_per_entry": 11.337078651685394,
+                "entries": 178,
+                "flats": 0,
+                "losses": 78,
+                "net_cents": 2018.0,
+                "net_dollars": 20.18,
+                "win_rate_ex_flat": 0.5617977528089888,
+                "wins": 100
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -0.11764705882352941,
+                "entries": 17,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": -2.0,
+                "net_dollars": -0.02,
+                "win_rate_ex_flat": 0.4117647058823529,
+                "wins": 7
+              },
+              "threshold": 0.62,
+              "train_stats": {
+                "avg_cents_per_entry": 12.290909090909091,
+                "entries": 55,
+                "flats": 0,
+                "losses": 30,
+                "net_cents": 676.0,
+                "net_dollars": 6.76,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 25
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.3849329205366357,
+            "brier": 0.2439143539253921,
+            "log_loss": 0.9777939199799544,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.43761761237521996,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.0681818181818183,
+                "entries": 44,
+                "flats": 0,
+                "losses": 24,
+                "net_cents": -91.0,
+                "net_dollars": -0.91,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 20
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 9.931034482758621,
+                "entries": 116,
+                "flats": 0,
+                "losses": 48,
+                "net_cents": 1152.0,
+                "net_dollars": 11.52,
+                "win_rate_ex_flat": 0.5862068965517241,
+                "wins": 68
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 30.875,
+                "entries": 16,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 494.0,
+                "net_dollars": 4.94,
+                "win_rate_ex_flat": 0.8125,
+                "wins": 13
+              },
+              "threshold": 0.58,
+              "train_stats": {
+                "avg_cents_per_entry": 12.909090909090908,
+                "entries": 44,
+                "flats": 0,
+                "losses": 22,
+                "net_cents": 568.0,
+                "net_dollars": 5.68,
+                "win_rate_ex_flat": 0.5,
+                "wins": 22
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.5051020408163265,
+            "brier": 0.18540118993109056,
+            "log_loss": 0.6429211568490993,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.506145439528273,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 4.0,
+                "entries": 32,
+                "flats": 1,
+                "losses": 14,
+                "net_cents": 128.0,
+                "net_dollars": 1.28,
+                "win_rate_ex_flat": 0.5483870967741935,
+                "wins": 17
+              },
+              "threshold": 0.78,
+              "train_stats": {
+                "avg_cents_per_entry": 8.853211009174313,
+                "entries": 109,
+                "flats": 0,
+                "losses": 50,
+                "net_cents": 965.0,
+                "net_dollars": 9.65,
+                "win_rate_ex_flat": 0.5412844036697247,
+                "wins": 59
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 8.333333333333334,
+                "entries": 18,
+                "flats": 1,
+                "losses": 9,
+                "net_cents": 150.0,
+                "net_dollars": 1.5,
+                "win_rate_ex_flat": 0.47058823529411764,
+                "wins": 8
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 17.15,
+                "entries": 40,
+                "flats": 0,
+                "losses": 16,
+                "net_cents": 686.0,
+                "net_dollars": 6.86,
+                "win_rate_ex_flat": 0.6,
+                "wins": 24
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.5318761384335154,
+            "brier": 0.1280275339190729,
+            "log_loss": 0.4200662365220151,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.45290822155620186,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 9.096774193548388,
+                "entries": 31,
+                "flats": 2,
+                "losses": 15,
+                "net_cents": 282.0,
+                "net_dollars": 2.82,
+                "win_rate_ex_flat": 0.4827586206896552,
+                "wins": 14
+              },
+              "threshold": 0.84,
+              "train_stats": {
+                "avg_cents_per_entry": 7.764044943820225,
+                "entries": 89,
+                "flats": 0,
+                "losses": 38,
+                "net_cents": 691.0,
+                "net_dollars": 6.91,
+                "win_rate_ex_flat": 0.5730337078651685,
+                "wins": 51
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 17.11111111111111,
+                "entries": 18,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 308.0,
+                "net_dollars": 3.08,
+                "win_rate_ex_flat": 0.5,
+                "wins": 9
+              },
+              "threshold": 0.78,
+              "train_stats": {
+                "avg_cents_per_entry": 16.525,
+                "entries": 40,
+                "flats": 1,
+                "losses": 16,
+                "net_cents": 661.0,
+                "net_dollars": 6.61,
+                "win_rate_ex_flat": 0.5897435897435898,
+                "wins": 23
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.6471571906354515,
+            "brier": 0.1672623197918174,
+            "log_loss": 0.5076214413899439,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4168315754195484,
+          "train_rows": 200
+        }
+      ]
+    },
+    "standard_3": {
+      "family": "standard_3",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_15m_side_ret_z",
+        "frame_15m_abs_ret_z",
+        "frame_15m_range_pct",
+        "frame_15m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        5,
+        15
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.40042372881355937,
+          "pnl_cv_abs": 6.533681928844297,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 0.4771573604060911,
+            "entries": 197,
+            "flats": 3,
+            "losses": 100,
+            "net_cents": 93.99999999999994,
+            "net_dollars": 0.9399999999999994,
+            "win_rate_ex_flat": 0.4845360824742268,
+            "wins": 94
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            66,
+            70,
+            35,
+            26
+          ],
+          "window_net_cents": [
+            95.99999999999999,
+            -189.00000000000003,
+            21.000000000000004,
+            165.99999999999997
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.42984590429845904,
+          "pnl_cv_abs": 0.772465672080205,
+          "positive_windows": 4,
+          "stats": {
+            "avg_cents_per_entry": 17.869565217391305,
+            "entries": 69,
+            "flats": 1,
+            "losses": 28,
+            "net_cents": 1233.0,
+            "net_dollars": 12.33,
+            "win_rate_ex_flat": 0.5882352941176471,
+            "wins": 40
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            19,
+            17,
+            13,
+            20
+          ],
+          "window_net_cents": [
+            16.0,
+            530.0,
+            215.0,
+            472.0
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 2.884920634920635,
+              "entries": 252,
+              "flats": 4,
+              "losses": 128,
+              "net_cents": 727.0,
+              "net_dollars": 7.27,
+              "win_rate_ex_flat": 0.4838709677419355,
+              "wins": 120
+            },
+            "threshold": 0.64,
+            "train_stats": {
+              "avg_cents_per_entry": 11.011764705882353,
+              "entries": 170,
+              "flats": 0,
+              "losses": 75,
+              "net_cents": 1872.0,
+              "net_dollars": 18.72,
+              "win_rate_ex_flat": 0.5588235294117647,
+              "wins": 95
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 15.363636363636363,
+              "entries": 88,
+              "flats": 1,
+              "losses": 40,
+              "net_cents": 1352.0,
+              "net_dollars": 13.52,
+              "win_rate_ex_flat": 0.5402298850574713,
+              "wins": 47
+            },
+            "threshold": 0.64,
+            "train_stats": {
+              "avg_cents_per_entry": 12.10909090909091,
+              "entries": 55,
+              "flats": 0,
+              "losses": 30,
+              "net_cents": 666.0,
+              "net_dollars": 6.66,
+              "win_rate_ex_flat": 0.45454545454545453,
+              "wins": 25
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5914188615123195,
+          "brier": 0.16285990259532895,
+          "log_loss": 0.5188872453624735,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.5082412914188615,
+        "brier": 0.17083425401965674,
+        "log_loss": 0.5426776935410618,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 147.82335004725678,
+        "feature_count": 12,
+        "mean_abs_corr": 0.37127633394863924,
+        "median_abs_corr": 0.29513594041392865
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 1.4545454545454544,
+                "entries": 66,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 95.99999999999999,
+                "net_dollars": 0.9599999999999999,
+                "win_rate_ex_flat": 0.5,
+                "wins": 33
+              },
+              "threshold": 0.64,
+              "train_stats": {
+                "avg_cents_per_entry": 11.011764705882353,
+                "entries": 170,
+                "flats": 0,
+                "losses": 75,
+                "net_cents": 1872.0,
+                "net_dollars": 18.72,
+                "win_rate_ex_flat": 0.5588235294117647,
+                "wins": 95
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 0.8421052631578947,
+                "entries": 19,
+                "flats": 0,
+                "losses": 11,
+                "net_cents": 16.0,
+                "net_dollars": 0.16,
+                "win_rate_ex_flat": 0.42105263157894735,
+                "wins": 8
+              },
+              "threshold": 0.64,
+              "train_stats": {
+                "avg_cents_per_entry": 12.10909090909091,
+                "entries": 55,
+                "flats": 0,
+                "losses": 30,
+                "net_cents": 666.0,
+                "net_dollars": 6.66,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 25
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.4582043343653251,
+            "brier": 0.22050398156756681,
+            "log_loss": 0.7105966454370738,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.4656128891813169,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -2.7000000000000006,
+                "entries": 70,
+                "flats": 0,
+                "losses": 37,
+                "net_cents": -189.00000000000003,
+                "net_dollars": -1.8900000000000003,
+                "win_rate_ex_flat": 0.4714285714285714,
+                "wins": 33
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 7.251396648044692,
+                "entries": 179,
+                "flats": 0,
+                "losses": 82,
+                "net_cents": 1298.0,
+                "net_dollars": 12.98,
+                "win_rate_ex_flat": 0.5418994413407822,
+                "wins": 97
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 31.176470588235293,
+                "entries": 17,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 530.0,
+                "net_dollars": 5.3,
+                "win_rate_ex_flat": 0.8235294117647058,
+                "wins": 14
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 12.25531914893617,
+                "entries": 47,
+                "flats": 0,
+                "losses": 24,
+                "net_cents": 576.0,
+                "net_dollars": 5.76,
+                "win_rate_ex_flat": 0.48936170212765956,
+                "wins": 23
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.6122448979591837,
+            "brier": 0.15614501705351136,
+            "log_loss": 0.4853974383634718,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.5265607032321841,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 0.6000000000000001,
+                "entries": 35,
+                "flats": 1,
+                "losses": 16,
+                "net_cents": 21.000000000000004,
+                "net_dollars": 0.21000000000000005,
+                "win_rate_ex_flat": 0.5294117647058824,
+                "wins": 18
+              },
+              "threshold": 0.78,
+              "train_stats": {
+                "avg_cents_per_entry": 9.63888888888889,
+                "entries": 108,
+                "flats": 0,
+                "losses": 50,
+                "net_cents": 1041.0,
+                "net_dollars": 10.41,
+                "win_rate_ex_flat": 0.5370370370370371,
+                "wins": 58
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 16.53846153846154,
+                "entries": 13,
+                "flats": 1,
+                "losses": 4,
+                "net_cents": 215.0,
+                "net_dollars": 2.15,
+                "win_rate_ex_flat": 0.6666666666666666,
+                "wins": 8
+              },
+              "threshold": 0.76,
+              "train_stats": {
+                "avg_cents_per_entry": 18.205128205128204,
+                "entries": 39,
+                "flats": 0,
+                "losses": 15,
+                "net_cents": 710.0,
+                "net_dollars": 7.1,
+                "win_rate_ex_flat": 0.6153846153846154,
+                "wins": 24
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.424408014571949,
+            "brier": 0.139057008888324,
+            "log_loss": 0.4505601461844061,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.469495373829549,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 6.384615384615383,
+                "entries": 26,
+                "flats": 2,
+                "losses": 14,
+                "net_cents": 165.99999999999997,
+                "net_dollars": 1.6599999999999997,
+                "win_rate_ex_flat": 0.4166666666666667,
+                "wins": 10
+              },
+              "threshold": 0.86,
+              "train_stats": {
+                "avg_cents_per_entry": 6.962962962962963,
+                "entries": 54,
+                "flats": 0,
+                "losses": 25,
+                "net_cents": 376.0,
+                "net_dollars": 3.76,
+                "win_rate_ex_flat": 0.5370370370370371,
+                "wins": 29
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 23.6,
+                "entries": 20,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 472.0,
+                "net_dollars": 4.72,
+                "win_rate_ex_flat": 0.5,
+                "wins": 10
+              },
+              "threshold": 0.72,
+              "train_stats": {
+                "avg_cents_per_entry": 16.5,
+                "entries": 48,
+                "flats": 0,
+                "losses": 18,
+                "net_cents": 792.0,
+                "net_dollars": 7.92,
+                "win_rate_ex_flat": 0.625,
+                "wins": 30
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.5886287625418061,
+            "brier": 0.16703379331575433,
+            "log_loss": 0.5207034485355763,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4465761517161136,
+          "train_rows": 200
+        }
+      ]
+    },
+    "standard_6": {
+      "family": "standard_6",
+      "feature_names": [
+        "logit_p_calibrated",
+        "logit_brownian_terminal",
+        "edge28_10c",
+        "log_depth_ratio",
+        "ask_cents_100",
+        "seconds_to_close_900",
+        "abs_d_sigma",
+        "frame_1m_side_ret_z",
+        "frame_1m_abs_ret_z",
+        "frame_1m_range_pct",
+        "frame_1m_side_dollar",
+        "frame_2m_side_ret_z",
+        "frame_2m_abs_ret_z",
+        "frame_2m_range_pct",
+        "frame_2m_side_dollar",
+        "frame_3m_side_ret_z",
+        "frame_3m_abs_ret_z",
+        "frame_3m_range_pct",
+        "frame_3m_side_dollar",
+        "frame_5m_side_ret_z",
+        "frame_5m_abs_ret_z",
+        "frame_5m_range_pct",
+        "frame_5m_side_dollar",
+        "frame_10m_side_ret_z",
+        "frame_10m_abs_ret_z",
+        "frame_10m_range_pct",
+        "frame_10m_side_dollar",
+        "frame_15m_side_ret_z",
+        "frame_15m_abs_ret_z",
+        "frame_15m_range_pct",
+        "frame_15m_side_dollar"
+      ],
+      "frames_minutes": [
+        1,
+        2,
+        3,
+        5,
+        10,
+        15
+      ],
+      "gates": {
+        "model_all": {
+          "max_window_share_abs": 0.5650969529085873,
+          "pnl_cv_abs": 1.7206912565428034,
+          "positive_windows": 3,
+          "stats": {
+            "avg_cents_per_entry": 2.970414201183432,
+            "entries": 169,
+            "flats": 3,
+            "losses": 82,
+            "net_cents": 502.0,
+            "net_dollars": 5.02,
+            "win_rate_ex_flat": 0.5060240963855421,
+            "wins": 84
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            67,
+            25,
+            30,
+            47
+          ],
+          "window_net_cents": [
+            144.0,
+            -110.0,
+            60.00000000000001,
+            408.0
+          ]
+        },
+        "robust_overlay": {
+          "max_window_share_abs": 0.5260915867944622,
+          "pnl_cv_abs": 0.7773761055030295,
+          "positive_windows": 4,
+          "stats": {
+            "avg_cents_per_entry": 14.446153846153846,
+            "entries": 65,
+            "flats": 1,
+            "losses": 27,
+            "net_cents": 939.0,
+            "net_dollars": 9.39,
+            "win_rate_ex_flat": 0.578125,
+            "wins": 37
+          },
+          "traded_windows": 4,
+          "window_entries": [
+            18,
+            16,
+            14,
+            17
+          ],
+          "window_net_cents": [
+            68.0,
+            494.0,
+            171.0,
+            205.99999999999997
+          ]
+        }
+      },
+      "locked_train200": {
+        "gates": {
+          "model_all": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 3.2528735632183907,
+              "entries": 261,
+              "flats": 5,
+              "losses": 132,
+              "net_cents": 849.0,
+              "net_dollars": 8.49,
+              "win_rate_ex_flat": 0.484375,
+              "wins": 124
+            },
+            "threshold": 0.52,
+            "train_stats": {
+              "avg_cents_per_entry": 10.849462365591398,
+              "entries": 186,
+              "flats": 0,
+              "losses": 81,
+              "net_cents": 2018.0,
+              "net_dollars": 20.18,
+              "win_rate_ex_flat": 0.5645161290322581,
+              "wins": 105
+            }
+          },
+          "robust_overlay": {
+            "fallback_threshold": false,
+            "test_stats": {
+              "avg_cents_per_entry": 16.137931034482758,
+              "entries": 87,
+              "flats": 1,
+              "losses": 39,
+              "net_cents": 1404.0,
+              "net_dollars": 14.04,
+              "win_rate_ex_flat": 0.5465116279069767,
+              "wins": 47
+            },
+            "threshold": 0.62,
+            "train_stats": {
+              "avg_cents_per_entry": 12.290909090909091,
+              "entries": 55,
+              "flats": 0,
+              "losses": 30,
+              "net_cents": 676.0,
+              "net_dollars": 6.76,
+              "win_rate_ex_flat": 0.45454545454545453,
+              "wins": 25
+            }
+          }
+        },
+        "probability": {
+          "auc": 0.5368734069668649,
+          "brier": 0.17262339647371022,
+          "log_loss": 0.6043932621265631,
+          "rows": 269
+        },
+        "test_rows": 269,
+        "train_rows": 200
+      },
+      "probability": {
+        "auc": 0.45029736618521665,
+        "brier": 0.18502726805485162,
+        "log_loss": 0.6559281882078183,
+        "rows": 269
+      },
+      "redundancy": {
+        "condition_number": 691.0491383318147,
+        "feature_count": 24,
+        "mean_abs_corr": 0.30658949491549703,
+        "median_abs_corr": 0.1882061047115886
+      },
+      "splits": [
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 2.1492537313432836,
+                "entries": 67,
+                "flats": 0,
+                "losses": 33,
+                "net_cents": 144.0,
+                "net_dollars": 1.44,
+                "win_rate_ex_flat": 0.5074626865671642,
+                "wins": 34
+              },
+              "threshold": 0.52,
+              "train_stats": {
+                "avg_cents_per_entry": 10.849462365591398,
+                "entries": 186,
+                "flats": 0,
+                "losses": 81,
+                "net_cents": 2018.0,
+                "net_dollars": 20.18,
+                "win_rate_ex_flat": 0.5645161290322581,
+                "wins": 105
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 3.7777777777777777,
+                "entries": 18,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 68.0,
+                "net_dollars": 0.68,
+                "win_rate_ex_flat": 0.4444444444444444,
+                "wins": 8
+              },
+              "threshold": 0.62,
+              "train_stats": {
+                "avg_cents_per_entry": 12.290909090909091,
+                "entries": 55,
+                "flats": 0,
+                "losses": 30,
+                "net_cents": 676.0,
+                "net_dollars": 6.76,
+                "win_rate_ex_flat": 0.45454545454545453,
+                "wins": 25
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_201_270",
+          "probability": {
+            "auc": 0.34881320949432404,
+            "brier": 0.24500406360398524,
+            "log_loss": 0.9820462722994372,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.4330800752724089,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": -4.4,
+                "entries": 25,
+                "flats": 0,
+                "losses": 14,
+                "net_cents": -110.0,
+                "net_dollars": -1.1,
+                "win_rate_ex_flat": 0.44,
+                "wins": 11
+              },
+              "threshold": 0.82,
+              "train_stats": {
+                "avg_cents_per_entry": 13.59375,
+                "entries": 64,
+                "flats": 0,
+                "losses": 25,
+                "net_cents": 870.0,
+                "net_dollars": 8.7,
+                "win_rate_ex_flat": 0.609375,
+                "wins": 39
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 30.875,
+                "entries": 16,
+                "flats": 0,
+                "losses": 3,
+                "net_cents": 494.0,
+                "net_dollars": 4.94,
+                "win_rate_ex_flat": 0.8125,
+                "wins": 13
+              },
+              "threshold": 0.6,
+              "train_stats": {
+                "avg_cents_per_entry": 12.790697674418604,
+                "entries": 43,
+                "flats": 0,
+                "losses": 21,
+                "net_cents": 550.0,
+                "net_dollars": 5.5,
+                "win_rate_ex_flat": 0.5116279069767442,
+                "wins": 22
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_271_340",
+          "probability": {
+            "auc": 0.5306122448979592,
+            "brier": 0.18400414264486253,
+            "log_loss": 0.6363399442580066,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.505344153042343,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 2.0000000000000004,
+                "entries": 30,
+                "flats": 1,
+                "losses": 12,
+                "net_cents": 60.00000000000001,
+                "net_dollars": 0.6000000000000001,
+                "win_rate_ex_flat": 0.5862068965517241,
+                "wins": 17
+              },
+              "threshold": 0.82,
+              "train_stats": {
+                "avg_cents_per_entry": 10.976470588235294,
+                "entries": 85,
+                "flats": 0,
+                "losses": 39,
+                "net_cents": 933.0,
+                "net_dollars": 9.33,
+                "win_rate_ex_flat": 0.5411764705882353,
+                "wins": 46
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 12.214285714285714,
+                "entries": 14,
+                "flats": 1,
+                "losses": 5,
+                "net_cents": 171.0,
+                "net_dollars": 1.71,
+                "win_rate_ex_flat": 0.6153846153846154,
+                "wins": 8
+              },
+              "threshold": 0.8,
+              "train_stats": {
+                "avg_cents_per_entry": 20.16,
+                "entries": 25,
+                "flats": 0,
+                "losses": 10,
+                "net_cents": 504.0,
+                "net_dollars": 5.04,
+                "win_rate_ex_flat": 0.6,
+                "wins": 15
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_341_410",
+          "probability": {
+            "auc": 0.47540983606557374,
+            "brier": 0.1354349670878722,
+            "log_loss": 0.44159100215108493,
+            "rows": 70
+          },
+          "test_rows": 70,
+          "train_nll": 0.45357972808336733,
+          "train_rows": 200
+        },
+        {
+          "gates": {
+            "model_all": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 8.680851063829786,
+                "entries": 47,
+                "flats": 2,
+                "losses": 23,
+                "net_cents": 408.0,
+                "net_dollars": 4.08,
+                "win_rate_ex_flat": 0.4888888888888889,
+                "wins": 22
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 4.032679738562091,
+                "entries": 153,
+                "flats": 0,
+                "losses": 73,
+                "net_cents": 617.0,
+                "net_dollars": 6.17,
+                "win_rate_ex_flat": 0.5228758169934641,
+                "wins": 80
+              }
+            },
+            "robust_overlay": {
+              "fallback_threshold": false,
+              "test_stats": {
+                "avg_cents_per_entry": 12.117647058823527,
+                "entries": 17,
+                "flats": 0,
+                "losses": 9,
+                "net_cents": 205.99999999999997,
+                "net_dollars": 2.0599999999999996,
+                "win_rate_ex_flat": 0.47058823529411764,
+                "wins": 8
+              },
+              "threshold": 0.74,
+              "train_stats": {
+                "avg_cents_per_entry": 15.23404255319149,
+                "entries": 47,
+                "flats": 0,
+                "losses": 20,
+                "net_cents": 716.0,
+                "net_dollars": 7.16,
+                "win_rate_ex_flat": 0.574468085106383,
+                "wins": 27
+              }
+            }
+          },
+          "model_success": true,
+          "name": "wfa_411_end",
+          "probability": {
+            "auc": 0.5484949832775919,
+            "brier": 0.17392055886753705,
+            "log_loss": 0.5465470731916287,
+            "rows": 59
+          },
+          "test_rows": 59,
+          "train_nll": 0.4197451591864435,
+          "train_rows": 200
+        }
+      ]
+    }
+  },
+  "generated_at_utc": "2026-05-10T04:35:01.872951+00:00",
+  "hypothesis": "Phi/geometric lookback features reduce redundant timeframe noise and improve forward stability versus standard calendar frames.",
+  "limitations": [
+    "Local source is 1-minute Coinbase candles, so true 1-second/15-second phi frames are approximated by rounded minute lookbacks.",
+    "PnL uses historical filled rows only; this does not include all skipped candidates or counterfactual fill probability.",
+    "All frame models use the same fixed ridge penalty and the same train-only threshold selection grid."
+  ],
+  "scope": "research_only_filled_trade_replay",
+  "summary_rows": [
+    {
+      "auc": 0.5082412914188615,
+      "avg_cents_per_entry": 17.869565217391305,
+      "brier": 0.17083425401965674,
+      "condition_number": 147.82335004725678,
+      "entries": 69,
+      "family": "standard_3",
+      "feature_count": 19,
+      "flats": 1,
+      "frames_minutes": "1,5,15",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 15.363636363636363,
+      "locked_robust_entries": 88,
+      "locked_robust_net_dollars": 13.52,
+      "locked_robust_threshold": 0.64,
+      "log_loss": 0.5426776935410618,
+      "losses": 28,
+      "mean_abs_corr": 0.37127633394863924,
+      "net_dollars": 12.33,
+      "pnl_cv_abs": 0.772465672080205,
+      "positive_windows": 4,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5882352941176471,
+      "wins": 40
+    },
+    {
+      "auc": 0.49252336448598133,
+      "avg_cents_per_entry": 15.0,
+      "brier": 0.17200286156280495,
+      "condition_number": 148.957292101623,
+      "entries": 71,
+      "family": "log_3",
+      "feature_count": 19,
+      "flats": 1,
+      "frames_minutes": "1,4,16",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 15.363636363636363,
+      "locked_robust_entries": 88,
+      "locked_robust_net_dollars": 13.52,
+      "locked_robust_threshold": 0.62,
+      "log_loss": 0.5452895518957734,
+      "losses": 30,
+      "mean_abs_corr": 0.3764856194231624,
+      "net_dollars": 10.65,
+      "pnl_cv_abs": 0.8710180910902917,
+      "positive_windows": 4,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5714285714285714,
+      "wins": 40
+    },
+    {
+      "auc": 0.5129991503823279,
+      "avg_cents_per_entry": 15.966101694915254,
+      "brier": 0.1752501530082298,
+      "condition_number": 151.4363261613909,
+      "entries": 59,
+      "family": "phi_3",
+      "feature_count": 19,
+      "flats": 1,
+      "frames_minutes": "1,3,8",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 15.310344827586206,
+      "locked_robust_entries": 87,
+      "locked_robust_net_dollars": 13.32,
+      "locked_robust_threshold": 0.56,
+      "log_loss": 0.5682420977730908,
+      "losses": 25,
+      "mean_abs_corr": 0.3758003030168653,
+      "net_dollars": 9.42,
+      "pnl_cv_abs": 0.6472346132909481,
+      "positive_windows": 4,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5689655172413793,
+      "wins": 33
+    },
+    {
+      "auc": 0.45029736618521665,
+      "avg_cents_per_entry": 14.446153846153846,
+      "brier": 0.18502726805485162,
+      "condition_number": 691.0491383318147,
+      "entries": 65,
+      "family": "standard_6",
+      "feature_count": 31,
+      "flats": 1,
+      "frames_minutes": "1,2,3,5,10,15",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 16.137931034482758,
+      "locked_robust_entries": 87,
+      "locked_robust_net_dollars": 14.04,
+      "locked_robust_threshold": 0.62,
+      "log_loss": 0.6559281882078183,
+      "losses": 27,
+      "mean_abs_corr": 0.30658949491549703,
+      "net_dollars": 9.39,
+      "pnl_cv_abs": 0.7773761055030295,
+      "positive_windows": 4,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.578125,
+      "wins": 37
+    },
+    {
+      "auc": 0.4883602378929482,
+      "avg_cents_per_entry": 13.835820895522389,
+      "brier": 0.18027847147955156,
+      "condition_number": 701.1618405082199,
+      "entries": 67,
+      "family": "phi_6",
+      "feature_count": 31,
+      "flats": 1,
+      "frames_minutes": "1,2,3,5,8,13",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 15.431818181818182,
+      "locked_robust_entries": 88,
+      "locked_robust_net_dollars": 13.58,
+      "locked_robust_threshold": 0.54,
+      "log_loss": 0.6411142573116859,
+      "losses": 29,
+      "mean_abs_corr": 0.30947883167998336,
+      "net_dollars": 9.27,
+      "pnl_cv_abs": 0.7283217943376158,
+      "positive_windows": 4,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5606060606060606,
+      "wins": 37
+    },
+    {
+      "auc": 0.4592183517417162,
+      "avg_cents_per_entry": 11.11111111111111,
+      "brier": 0.18650725649093663,
+      "condition_number": 803.3862681556523,
+      "entries": 63,
+      "family": "phi_15s_seed_rounded",
+      "feature_count": 35,
+      "flats": 1,
+      "frames_minutes": "1,2,3,4,5,7,12",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 14.337078651685394,
+      "locked_robust_entries": 89,
+      "locked_robust_net_dollars": 12.76,
+      "locked_robust_threshold": 0.56,
+      "log_loss": 0.6542442765924322,
+      "losses": 31,
+      "mean_abs_corr": 0.3296336952821242,
+      "net_dollars": 7.0,
+      "pnl_cv_abs": 0.6973926172429946,
+      "positive_windows": 4,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5,
+      "wins": 31
+    },
+    {
+      "auc": 0.4824978759558199,
+      "avg_cents_per_entry": 13.768115942028986,
+      "brier": 0.18171930227511568,
+      "condition_number": 713.0102480145104,
+      "entries": 69,
+      "family": "phi_seconds_rounded",
+      "feature_count": 31,
+      "flats": 1,
+      "frames_minutes": "1,2,3,5,8,10",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 15.511627906976743,
+      "locked_robust_entries": 86,
+      "locked_robust_net_dollars": 13.34,
+      "locked_robust_threshold": 0.62,
+      "log_loss": 0.6423953790950986,
+      "losses": 31,
+      "mean_abs_corr": 0.3243911077251841,
+      "net_dollars": 9.5,
+      "pnl_cv_abs": 0.8957608175679127,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5441176470588235,
+      "wins": 37
+    },
+    {
+      "auc": 0.48844519966015293,
+      "avg_cents_per_entry": 13.348484848484848,
+      "brier": 0.1770885436670605,
+      "condition_number": 650.1199507794431,
+      "entries": 66,
+      "family": "log_6",
+      "feature_count": 31,
+      "flats": 1,
+      "frames_minutes": "1,2,4,8,16,32",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 11.8,
+      "locked_robust_entries": 90,
+      "locked_robust_net_dollars": 10.62,
+      "locked_robust_threshold": 0.52,
+      "log_loss": 0.5652086548422618,
+      "losses": 29,
+      "mean_abs_corr": 0.2894840356883359,
+      "net_dollars": 8.81,
+      "pnl_cv_abs": 1.407483553612929,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5538461538461539,
+      "wins": 36
+    },
+    {
+      "auc": 0.5300764655904843,
+      "avg_cents_per_entry": 10.693333333333333,
+      "brier": 0.16313067588816288,
+      "condition_number": null,
+      "entries": 75,
+      "family": "base_only",
+      "feature_count": 7,
+      "flats": 1,
+      "frames_minutes": "",
+      "gate": "robust_overlay",
+      "locked_robust_avg_cents_per_entry": 11.626373626373626,
+      "locked_robust_entries": 91,
+      "locked_robust_net_dollars": 10.58,
+      "locked_robust_threshold": 0.5,
+      "log_loss": 0.5093055565047109,
+      "losses": 34,
+      "mean_abs_corr": null,
+      "net_dollars": 8.02,
+      "pnl_cv_abs": 1.4657431191578114,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5405405405405406,
+      "wins": 40
+    },
+    {
+      "auc": 0.49252336448598133,
+      "avg_cents_per_entry": 3.4702970297029703,
+      "brier": 0.17200286156280495,
+      "condition_number": 148.957292101623,
+      "entries": 202,
+      "family": "log_3",
+      "feature_count": 19,
+      "flats": 3,
+      "frames_minutes": "1,4,16",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 15.363636363636363,
+      "locked_robust_entries": 88,
+      "locked_robust_net_dollars": 13.52,
+      "locked_robust_threshold": 0.62,
+      "log_loss": 0.5452895518957734,
+      "losses": 101,
+      "mean_abs_corr": 0.3764856194231624,
+      "net_dollars": 7.01,
+      "pnl_cv_abs": 1.7135979246819233,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.49246231155778897,
+      "wins": 98
+    },
+    {
+      "auc": 0.45029736618521665,
+      "avg_cents_per_entry": 2.970414201183432,
+      "brier": 0.18502726805485162,
+      "condition_number": 691.0491383318147,
+      "entries": 169,
+      "family": "standard_6",
+      "feature_count": 31,
+      "flats": 3,
+      "frames_minutes": "1,2,3,5,10,15",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 16.137931034482758,
+      "locked_robust_entries": 87,
+      "locked_robust_net_dollars": 14.04,
+      "locked_robust_threshold": 0.62,
+      "log_loss": 0.6559281882078183,
+      "losses": 82,
+      "mean_abs_corr": 0.30658949491549703,
+      "net_dollars": 5.02,
+      "pnl_cv_abs": 1.7206912565428034,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5060240963855421,
+      "wins": 84
+    },
+    {
+      "auc": 0.4824978759558199,
+      "avg_cents_per_entry": 2.633720930232558,
+      "brier": 0.18171930227511568,
+      "condition_number": 713.0102480145104,
+      "entries": 172,
+      "family": "phi_seconds_rounded",
+      "feature_count": 31,
+      "flats": 3,
+      "frames_minutes": "1,2,3,5,8,10",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 15.511627906976743,
+      "locked_robust_entries": 86,
+      "locked_robust_net_dollars": 13.34,
+      "locked_robust_threshold": 0.62,
+      "log_loss": 0.6423953790950986,
+      "losses": 85,
+      "mean_abs_corr": 0.3243911077251841,
+      "net_dollars": 4.529999999999999,
+      "pnl_cv_abs": 1.3569032031596824,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4970414201183432,
+      "wins": 84
+    },
+    {
+      "auc": 0.4592183517417162,
+      "avg_cents_per_entry": 2.411042944785276,
+      "brier": 0.18650725649093663,
+      "condition_number": 803.3862681556523,
+      "entries": 163,
+      "family": "phi_15s_seed_rounded",
+      "feature_count": 35,
+      "flats": 3,
+      "frames_minutes": "1,2,3,4,5,7,12",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 14.337078651685394,
+      "locked_robust_entries": 89,
+      "locked_robust_net_dollars": 12.76,
+      "locked_robust_threshold": 0.56,
+      "log_loss": 0.6542442765924322,
+      "losses": 82,
+      "mean_abs_corr": 0.3296336952821242,
+      "net_dollars": 3.9299999999999993,
+      "pnl_cv_abs": 3.007472846165806,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4875,
+      "wins": 78
+    },
+    {
+      "auc": 0.4883602378929482,
+      "avg_cents_per_entry": 1.9625668449197857,
+      "brier": 0.18027847147955156,
+      "condition_number": 701.1618405082199,
+      "entries": 187,
+      "family": "phi_6",
+      "feature_count": 31,
+      "flats": 3,
+      "frames_minutes": "1,2,3,5,8,13",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 15.431818181818182,
+      "locked_robust_entries": 88,
+      "locked_robust_net_dollars": 13.58,
+      "locked_robust_threshold": 0.54,
+      "log_loss": 0.6411142573116859,
+      "losses": 94,
+      "mean_abs_corr": 0.30947883167998336,
+      "net_dollars": 3.6699999999999995,
+      "pnl_cv_abs": 2.5573297027886106,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4891304347826087,
+      "wins": 90
+    },
+    {
+      "auc": 0.5082412914188615,
+      "avg_cents_per_entry": 0.4771573604060911,
+      "brier": 0.17083425401965674,
+      "condition_number": 147.82335004725678,
+      "entries": 197,
+      "family": "standard_3",
+      "feature_count": 19,
+      "flats": 3,
+      "frames_minutes": "1,5,15",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 15.363636363636363,
+      "locked_robust_entries": 88,
+      "locked_robust_net_dollars": 13.52,
+      "locked_robust_threshold": 0.64,
+      "log_loss": 0.5426776935410618,
+      "losses": 100,
+      "mean_abs_corr": 0.37127633394863924,
+      "net_dollars": 0.9399999999999994,
+      "pnl_cv_abs": 6.533681928844297,
+      "positive_windows": 3,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4845360824742268,
+      "wins": 94
+    },
+    {
+      "auc": 0.5129991503823279,
+      "avg_cents_per_entry": 0.9441624365482231,
+      "brier": 0.1752501530082298,
+      "condition_number": 151.4363261613909,
+      "entries": 197,
+      "family": "phi_3",
+      "feature_count": 19,
+      "flats": 3,
+      "frames_minutes": "1,3,8",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 15.310344827586206,
+      "locked_robust_entries": 87,
+      "locked_robust_net_dollars": 13.32,
+      "locked_robust_threshold": 0.56,
+      "log_loss": 0.5682420977730908,
+      "losses": 98,
+      "mean_abs_corr": 0.3758003030168653,
+      "net_dollars": 1.8599999999999994,
+      "pnl_cv_abs": 4.706370256662029,
+      "positive_windows": 2,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.4948453608247423,
+      "wins": 96
+    },
+    {
+      "auc": 0.5300764655904843,
+      "avg_cents_per_entry": -0.7256097560975612,
+      "brier": 0.16313067588816288,
+      "condition_number": null,
+      "entries": 164,
+      "family": "base_only",
+      "feature_count": 7,
+      "flats": 0,
+      "frames_minutes": "",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 11.626373626373626,
+      "locked_robust_entries": 91,
+      "locked_robust_net_dollars": 10.58,
+      "locked_robust_threshold": 0.5,
+      "log_loss": 0.5093055565047109,
+      "losses": 83,
+      "mean_abs_corr": null,
+      "net_dollars": -1.1900000000000004,
+      "pnl_cv_abs": 4.708152713634892,
+      "positive_windows": 2,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.49390243902439024,
+      "wins": 81
+    },
+    {
+      "auc": 0.48844519966015293,
+      "avg_cents_per_entry": 0.2617801047120416,
+      "brier": 0.1770885436670605,
+      "condition_number": 650.1199507794431,
+      "entries": 191,
+      "family": "log_6",
+      "feature_count": 31,
+      "flats": 2,
+      "frames_minutes": "1,2,4,8,16,32",
+      "gate": "model_all",
+      "locked_robust_avg_cents_per_entry": 11.8,
+      "locked_robust_entries": 90,
+      "locked_robust_net_dollars": 10.62,
+      "locked_robust_threshold": 0.52,
+      "log_loss": 0.5652086548422618,
+      "losses": 93,
+      "mean_abs_corr": 0.2894840356883359,
+      "net_dollars": 0.4999999999999995,
+      "pnl_cv_abs": 20.361794288978246,
+      "positive_windows": 1,
+      "traded_windows": 4,
+      "win_rate_ex_flat": 0.5079365079365079,
+      "wins": 96
+    }
+  ]
+}

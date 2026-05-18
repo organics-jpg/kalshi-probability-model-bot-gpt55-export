@@ -1,0 +1,12 @@
+{
+  "base_candidate": "dual_lane_overlap_union",
+  "candidate_family": "dual_lane_overlay_filter_watch",
+  "freeze_ts_utc": "2026-05-07T16:34:55.927871+00:00",
+  "note": "Born after same-window live comparison showed dual-lane is not a replacement but may reduce live-v28 loss clusters on NO-side low-recross rows.",
+  "overlay_rule": {
+    "name": "dual_lane_overlay_no_recross_le030",
+    "recross_hazard_score_max": 0.3,
+    "side": "no",
+    "use": "risk_control_overlay_only"
+  }
+}

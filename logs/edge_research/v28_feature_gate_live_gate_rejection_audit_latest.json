@@ -1,0 +1,440 @@
+{
+  "blocker_notes": [
+    "zero_feature_gate_passes_observed",
+    "raw_edge_is_primary_or_secondary_bottleneck",
+    "abs_d_boundary_geometry_filters_many_rows",
+    "ask_floor_filters_cheap_or_mid_contracts"
+  ],
+  "counterfactual_variants": [
+    {
+      "ask_min": null,
+      "market_counts": {
+        "KXBTC15M-26MAY071415-15": 3
+      },
+      "markets": [
+        "KXBTC15M-26MAY071415-15"
+      ],
+      "pass_count": 3,
+      "recent_examples": [
+        {
+          "abs_d": 0.878728,
+          "ask": 0.13,
+          "book_age_ms": 6359.0,
+          "btc_age_ms": 16.0,
+          "depth": 54,
+          "edge_cents": 4.463176,
+          "market": "KXBTC15M-26MAY071415-15",
+          "p_side": 0.184632,
+          "raw_edge_prob": 0.054632,
+          "reason": "book_stale",
+          "recross": 0.279889,
+          "side": "no",
+          "ts_wall": "2026-05-07T18:08:23.758666+00:00"
+        },
+        {
+          "abs_d": 1.168573,
+          "ask": 0.01,
+          "book_age_ms": 625.0,
+          "btc_age_ms": 16.0,
+          "depth": 3830,
+          "edge_cents": 9.274723,
+          "market": "KXBTC15M-26MAY071415-15",
+          "p_side": 0.112747,
+          "raw_edge_prob": 0.102747,
+          "reason": "time_window",
+          "recross": 0.026362,
+          "side": "no",
+          "ts_wall": "2026-05-07T18:14:10.024325+00:00"
+        },
+        {
+          "abs_d": 1.504395,
+          "ask": 0.01,
+          "book_age_ms": 625.0,
+          "btc_age_ms": 625.0,
+          "depth": 7827,
+          "edge_cents": 4.427163,
+          "market": "KXBTC15M-26MAY071415-15",
+          "p_side": 0.064272,
+          "raw_edge_prob": 0.054272,
+          "reason": "time_window",
+          "recross": 0.011299,
+          "side": "no",
+          "ts_wall": "2026-05-07T18:14:30.032702+00:00"
+        }
+      ],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": null,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {
+        "no": 3
+      },
+      "variant": "raw05_recross60_abs085_no_ask"
+    },
+    {
+      "ask_min": 0.55,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.55,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "raw05_recross60_abs085_ask55"
+    },
+    {
+      "ask_min": 0.6,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.6,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "raw05_recross60_abs085_ask60"
+    },
+    {
+      "ask_min": 0.65,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.65,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "raw05_recross60_abs085_ask65"
+    },
+    {
+      "ask_min": 0.7,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.7,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "raw05_recross60_abs085_ask70"
+    },
+    {
+      "ask_min": 0.35,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.35,
+        "raw_edge_min": 0.03,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "frontier_raw03_recross60_abs85_ask35"
+    },
+    {
+      "ask_min": 0.45,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.45,
+        "raw_edge_min": 0.03,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "frontier_raw03_recross60_abs85_ask45"
+    },
+    {
+      "ask_min": 0.55,
+      "market_counts": {},
+      "markets": [],
+      "pass_count": 0,
+      "recent_examples": [],
+      "rule": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.55,
+        "raw_edge_min": 0.03,
+        "recross_max": 0.6
+      },
+      "sides": {},
+      "variant": "frontier_raw03_recross60_abs85_ask55"
+    }
+  ],
+  "decision_rows": 149,
+  "event_path": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\live_mushroom_v28_feature_gate_ask65_size1\\execution_events.ndjson",
+  "event_rows": 153,
+  "feature_gate_rows": 149,
+  "feature_ranges": {
+    "abs_d_min_median_max": [
+      0.002512,
+      0.203708,
+      3.938213
+    ],
+    "ask_prob_min_median_max": [
+      0.0,
+      0.45,
+      1.0
+    ],
+    "raw_edge_prob_min_median_max": [
+      -0.247732,
+      0.011484,
+      0.237732
+    ],
+    "recross_min_median_max": [
+      0.00033,
+      0.532047,
+      1.447477
+    ]
+  },
+  "gate_pass_counts": {
+    "abs_d_ok": 10,
+    "ask_ok": 25,
+    "balance_ok": 143,
+    "book_ok": 131,
+    "btc_ok": 139,
+    "model_price_ok": 60,
+    "raw_edge_ok": 30,
+    "recross_ok": 75,
+    "risk_ok": 131
+  },
+  "gate_pass_rates_pct": {
+    "abs_d_ok": 6.7114093959731544,
+    "ask_ok": 16.778523489932887,
+    "balance_ok": 95.97315436241611,
+    "book_ok": 87.91946308724832,
+    "btc_ok": 93.28859060402685,
+    "feature_gate_pass": 0.0,
+    "model_price_ok": 40.26845637583892,
+    "raw_edge_ok": 20.13422818791946,
+    "recross_ok": 50.33557046979866,
+    "risk_ok": 87.91946308724832
+  },
+  "generated_at_utc": "2026-05-07T18:22:37.349478+00:00",
+  "interpretation": [
+    "This report is observational; counterfactual pass counts do not imply fills or profitability.",
+    "If no-ask has many passes but ask65 has zero, the ask floor is the live coverage bottleneck.",
+    "If no-ask also has zero passes, the current market simply did not show the raw-edge plus boundary geometry setup."
+  ],
+  "live_lock": {
+    "acquired_at": "2026-05-07T18:08:13.329922+00:00",
+    "pid": 4972,
+    "run_id": "99e01c3f-0a04-4449-b1b4-e6daca2a4580",
+    "strategy_tag": "mushroom_v28_feature_gate_raw05_recross60_abs085_ask65_size1_live"
+  },
+  "near_misses": [
+    {
+      "abs_d": 0.087323,
+      "ask": 0.23,
+      "book_age_ms": 1015.0,
+      "btc_age_ms": 0.0,
+      "depth": 525,
+      "edge_cents": 21.773218,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.467732,
+      "raw_edge_prob": 0.237732,
+      "reason": "book_stale",
+      "recross": 0.117696,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:13:44.414844+00:00"
+    },
+    {
+      "abs_d": 0.042283,
+      "ask": 0.25,
+      "book_age_ms": 515.0,
+      "btc_age_ms": 62.0,
+      "depth": 555,
+      "edge_cents": 21.620344,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.486203,
+      "raw_edge_prob": 0.236203,
+      "reason": "feature_gate",
+      "recross": 0.123923,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:13:43.917742+00:00"
+    },
+    {
+      "abs_d": 0.410289,
+      "ask": 0.1,
+      "book_age_ms": 609.0,
+      "btc_age_ms": 344.0,
+      "depth": 520,
+      "edge_cents": 22.603142,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.336031,
+      "raw_edge_prob": 0.236031,
+      "reason": "time_window",
+      "recross": 0.078914,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:13:50.012976+00:00"
+    },
+    {
+      "abs_d": 0.379383,
+      "ask": 0.21,
+      "book_age_ms": 515.0,
+      "btc_age_ms": 500.0,
+      "depth": 625,
+      "edge_cents": 12.026896,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.350269,
+      "raw_edge_prob": 0.140269,
+      "reason": "feature_gate",
+      "recross": 0.158575,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:12:43.920930+00:00"
+    },
+    {
+      "abs_d": 0.010392,
+      "ask": 0.37,
+      "book_age_ms": 671.0,
+      "btc_age_ms": 31.0,
+      "depth": 0,
+      "edge_cents": 11.015918,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.500159,
+      "raw_edge_prob": 0.130159,
+      "reason": "risk_or_depth",
+      "recross": 0.174765,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:13:16.070634+00:00"
+    },
+    {
+      "abs_d": 0.620982,
+      "ask": 0.14,
+      "book_age_ms": 0.0,
+      "btc_age_ms": 16.0,
+      "depth": 155,
+      "edge_cents": 11.629837,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.266298,
+      "raw_edge_prob": 0.126298,
+      "reason": "risk_or_depth",
+      "recross": 0.362052,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:08:23.769795+00:00"
+    },
+    {
+      "abs_d": 0.125678,
+      "ask": 0.33,
+      "book_age_ms": 515.0,
+      "btc_age_ms": 62.0,
+      "depth": 55,
+      "edge_cents": 10.25538,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.452554,
+      "raw_edge_prob": 0.122554,
+      "reason": "feature_gate",
+      "recross": 0.143988,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:13:23.915438+00:00"
+    },
+    {
+      "abs_d": 0.010409,
+      "ask": 0.38,
+      "book_age_ms": 1015.0,
+      "btc_age_ms": 375.0,
+      "depth": 124,
+      "edge_cents": 10.015209,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.500152,
+      "raw_edge_prob": 0.120152,
+      "reason": "book_stale",
+      "recross": 0.174178,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:13:16.419647+00:00"
+    },
+    {
+      "abs_d": 0.249614,
+      "ask": 0.29,
+      "book_age_ms": 62.0,
+      "btc_age_ms": 141.0,
+      "depth": 0,
+      "edge_cents": 9.319038,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.40319,
+      "raw_edge_prob": 0.11319,
+      "reason": "risk_or_depth",
+      "recross": 0.187768,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:12:38.466312+00:00"
+    },
+    {
+      "abs_d": 0.519642,
+      "ask": 0.19,
+      "book_age_ms": 203.0,
+      "btc_age_ms": 0.0,
+      "depth": 0,
+      "edge_cents": 8.866229,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.298662,
+      "raw_edge_prob": 0.108662,
+      "reason": "risk_or_depth",
+      "recross": 0.328535,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:09:34.610080+00:00"
+    },
+    {
+      "abs_d": 1.168573,
+      "ask": 0.01,
+      "book_age_ms": 625.0,
+      "btc_age_ms": 16.0,
+      "depth": 3830,
+      "edge_cents": 9.274723,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.112747,
+      "raw_edge_prob": 0.102747,
+      "reason": "time_window",
+      "recross": 0.026362,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:14:10.024325+00:00"
+    },
+    {
+      "abs_d": 0.029462,
+      "ask": 0.39,
+      "book_age_ms": 515.0,
+      "btc_age_ms": 672.0,
+      "depth": 125,
+      "edge_cents": 7.778961,
+      "market": "KXBTC15M-26MAY071415-15",
+      "p_side": 0.48779,
+      "raw_edge_prob": 0.09779,
+      "reason": "feature_gate",
+      "recross": 0.258028,
+      "side": "no",
+      "ts_wall": "2026-05-07T18:12:23.911574+00:00"
+    }
+  ],
+  "reason_counts": {
+    "ask_too_high": 1,
+    "book_stale": 16,
+    "btc_stale": 10,
+    "edge_below_floor": 66,
+    "feature_gate": 38,
+    "risk_or_depth": 10,
+    "time_window": 8
+  },
+  "side_counts": {
+    "no": 90,
+    "yes": 59
+  },
+  "storage_tag": "live_mushroom_v28_feature_gate_ask65_size1",
+  "strategy_tag": "mushroom_v28_feature_gate_raw05_recross60_abs085_ask65_size1_live"
+}

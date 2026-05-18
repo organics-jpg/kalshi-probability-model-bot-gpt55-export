@@ -1,0 +1,28 @@
+{
+  "base_rule": {
+    "abs_d_min": 0.85,
+    "raw_edge_min": 0.05,
+    "recross_max": 0.6
+  },
+  "candidate_family": "boundary_clock_feature_gate_continuous_cheap_side_penalty",
+  "freeze_ts_utc": "2026-05-06T18:50:42.450675+00:00",
+  "origin": "Derived after ask-floor mechanism audit; earlier rows are diagnostic only.",
+  "penalties": {
+    "cheap_penalty025_rank_only": {
+      "adjusted_edge_min": null,
+      "lambda": 0.25
+    },
+    "cheap_penalty050_floor05": {
+      "adjusted_edge_min": 0.05,
+      "lambda": 0.5
+    },
+    "cheap_penalty050_rank_only": {
+      "adjusted_edge_min": null,
+      "lambda": 0.5
+    },
+    "cheap_penalty100_rank_only": {
+      "adjusted_edge_min": null,
+      "lambda": 1.0
+    }
+  }
+}

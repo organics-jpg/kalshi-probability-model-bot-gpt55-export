@@ -1,0 +1,27 @@
+{
+  "candidate_family": "feature_gate_soft_frontier_exit_stack",
+  "entry_rules": {
+    "soft_raw03_recross50_abs50_ask35": {
+      "abs_d_min": 0.5,
+      "ask_min": 0.35,
+      "raw_edge_min": 0.03,
+      "recross_max": 0.5
+    },
+    "soft_raw03_recross50_abs50_ask50": {
+      "abs_d_min": 0.5,
+      "ask_min": 0.5,
+      "raw_edge_min": 0.03,
+      "recross_max": 0.5
+    },
+    "soft_raw03_recross50_abs65_ask35": {
+      "abs_d_min": 0.65,
+      "ask_min": 0.35,
+      "raw_edge_min": 0.03,
+      "recross_max": 0.5
+    }
+  },
+  "exit_rule": "Use frozen book-gap/loss-guard exit candidates only for unambiguous matched live v28 exit rows.",
+  "freeze_ts_utc": "2026-05-07T01:24:41.529764+00:00",
+  "physics": "The soft frontier preserves target coverage by admitting moderate boundary distance when raw edge, recross risk, and ask quality are all acceptable. Guarded exits then test whether the main remaining failure is exit clipping rather than entry selection.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only; only post-freeze rows count for promotion."
+}

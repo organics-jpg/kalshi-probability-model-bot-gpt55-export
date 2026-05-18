@@ -1,0 +1,353 @@
+{
+  "base_blanket_suppression": {
+    "blockers": [
+      "suppressed_loss_control_cost_negative"
+    ],
+    "candidate": "suppress_reduce_p_hold_ge_075",
+    "candidate_live_ready": false,
+    "delta_vs_current_cents": 212.0,
+    "freeze_ts_utc": "2026-05-06T06:33:56.987999+00:00",
+    "harmful_rows": [
+      {
+        "candidate_cents": -168.0,
+        "current_cents": -8.0,
+        "delta_cents": -160.0,
+        "entry_cents": 84,
+        "entry_ts": "2026-05-06T10:49:34.864495+00:00",
+        "exit_cents": 80,
+        "exit_reason": "mushroom_v28_probability_reduce",
+        "exit_ts": "2026-05-06T10:51:28.209785+00:00",
+        "fair_drawdown_cents": 4.039746,
+        "hold_cents": -168.0,
+        "market": "KXBTC15M-26MAY060700-00",
+        "p_hold": 0.799603,
+        "result": "yes",
+        "side": "no",
+        "suppressed": true,
+        "worst_post_exit_hold_mark_cents": 10
+      }
+    ],
+    "invalidators_now": [
+      "suppressed_loss_control_cost_negative",
+      "robustness_shadow_interest_false"
+    ],
+    "rule": "If exit reason is mushroom_v28_probability_reduce and p_hold >= 0.75, score as held to settlement; otherwise keep current v28 exit.",
+    "settled": 62,
+    "suppressed_exits": 8,
+    "suppressed_harmful_rows": 1,
+    "suppressed_helpful_rows": 7,
+    "suppressed_loss_control_cost_cents": -160.0,
+    "suppressed_winner_recovery_cents": 372.0
+  },
+  "child_watch_summaries": [
+    {
+      "blockers": [],
+      "candidate": "diagnostic_from_reduce_freeze_reduce_suppress_p_hold_ge_075_entry_depth_lte_384_drawdown_lte_2p5",
+      "delta_vs_current_cents": 319.0,
+      "full_loss_cushion_estimate": 3,
+      "loss_control_cost_cents": 0.0,
+      "missing_review_gates": [],
+      "ready_for_review": false,
+      "rule": {
+        "drawdown_max": 2.5,
+        "entry_depth_max": 384.0,
+        "p_hold_min": 0.75,
+        "physics": "Require shallow original entry depth and small fair-value drawdown at the reduce exit."
+      },
+      "settled": 98,
+      "source": "depth_gate_diagnostic",
+      "strict_post_freeze": false,
+      "suppressed_exits": 6,
+      "suppressed_losers": 0,
+      "suppressed_winners": 6,
+      "winner_recovery_cents": 319.0
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "no_suppressed_exits_yet",
+        "delta_not_positive",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+      "delta_vs_current_cents": 0.0,
+      "full_loss_cushion_estimate": 0,
+      "loss_control_cost_cents": 0.0,
+      "missing_review_gates": [
+        "settled+4",
+        "suppressed+30",
+        "positive_delta",
+        "cushion+3"
+      ],
+      "ready_for_review": false,
+      "rule": {
+        "entry_depth_max": 384.0,
+        "p_hold_min": 0.79,
+        "physics": "Require both high hold probability and shallow original entry depth."
+      },
+      "settled": 26,
+      "source": "depth_gate_strict",
+      "strict_post_freeze": true,
+      "suppressed_exits": 0,
+      "suppressed_losers": 0,
+      "suppressed_winners": 0,
+      "winner_recovery_cents": 0.0
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate": "diagnostic_from_reduce_freeze_reduce_suppress_p75_entry_stc_lte_596",
+      "delta_vs_current_cents": 499.0,
+      "full_loss_cushion_estimate": 4,
+      "loss_control_cost_cents": 0.0,
+      "missing_review_gates": [],
+      "ready_for_review": false,
+      "rule": {
+        "entry_seconds_to_close_max": 596.372,
+        "p_hold_min": 0.75,
+        "physics": "Late-entry reduce exits are more likely to be transient mark churn than a real change in settlement odds."
+      },
+      "settled": 99,
+      "source": "observable_loss_control_diagnostic",
+      "strict_post_freeze": false,
+      "suppressed_exits": 9,
+      "suppressed_losers": 0,
+      "suppressed_winners": 9,
+      "winner_recovery_cents": 499.0
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "delta_not_positive",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "post_observable_birth_reduce_suppress_p75_entry_stc_lte_596",
+      "delta_vs_current_cents": 0.0,
+      "full_loss_cushion_estimate": 0,
+      "loss_control_cost_cents": 0.0,
+      "missing_review_gates": [
+        "settled+9",
+        "suppressed+30",
+        "positive_delta",
+        "cushion+3"
+      ],
+      "ready_for_review": false,
+      "rule": {
+        "entry_seconds_to_close_max": 596.372,
+        "p_hold_min": 0.75,
+        "physics": "Late-entry reduce exits are more likely to be transient mark churn than a real change in settlement odds."
+      },
+      "settled": 21,
+      "source": "observable_loss_control_strict",
+      "strict_post_freeze": true,
+      "suppressed_exits": 0,
+      "suppressed_losers": 0,
+      "suppressed_winners": 0,
+      "winner_recovery_cents": 0.0
+    },
+    {
+      "blockers": [],
+      "candidate": "side_geometry_or_no_deep_loss20_suppress_reduce_p_hold_ge_075",
+      "delta_vs_current_cents": 318.0,
+      "full_loss_cushion_estimate": 3,
+      "loss_control_cost_cents": 0.0,
+      "missing_review_gates": [],
+      "ready_for_review": false,
+      "rule": null,
+      "settled": 62,
+      "source": "side_geometry_diagnostic",
+      "strict_post_freeze": false,
+      "suppressed_exits": 6,
+      "suppressed_losers": 0,
+      "suppressed_winners": 6,
+      "winner_recovery_cents": 318.0
+    },
+    {
+      "blockers": [
+        "settled_lt_30",
+        "suppressed_decisions_lt_30",
+        "delta_not_positive",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "base_suppress_reduce_p_hold_ge_075",
+      "delta_vs_current_cents": 0.0,
+      "full_loss_cushion_estimate": 0,
+      "loss_control_cost_cents": 0.0,
+      "missing_review_gates": [
+        "settled+24",
+        "suppressed+30",
+        "positive_delta",
+        "cushion+3"
+      ],
+      "ready_for_review": false,
+      "rule": null,
+      "settled": 6,
+      "source": "side_geometry_strict",
+      "strict_post_freeze": true,
+      "suppressed_exits": 0,
+      "suppressed_losers": 0,
+      "suppressed_winners": 0,
+      "winner_recovery_cents": 0.0
+    }
+  ],
+  "decision": "watch_child_repairs_do_not_promote_blanket",
+  "generated_at_utc": "2026-05-07T05:16:58.852930+00:00",
+  "interpretation": [
+    "Blanket p_hold>=0.75 suppression is not promotable: it has positive delta, but at least one suppressed loser turned a controlled reduce exit into a large loss.",
+    "Best clean diagnostic guard is diagnostic_from_reduce_freeze_reduce_suppress_p75_entry_stc_lte_596 with 499.0c delta, 9 suppressions, and no loss-control cost.",
+    "Strict child watches have not yet produced enough post-freeze suppressed decisions to judge the repair.",
+    "Action: keep the cleaner child watches collecting; do not promote blanket reduce suppression while loss-control cost or suppressed-loser blockers remain."
+  ],
+  "purpose": "Research-only decision ledger for probability-reduce exit suppression blockers.",
+  "requirements": {
+    "loss_control_cost_must_be_nonnegative": true,
+    "min_full_loss_cushion": 3,
+    "min_settled": 30,
+    "min_suppressed_decisions": 30
+  },
+  "risk_group_summaries": {
+    "drawdown_2p5_5": {
+      "avg_delta_cents": -16.666666666666668,
+      "avg_fair_drawdown_cents": 3.7966553333333333,
+      "avg_p_hold": 0.7820336666666666,
+      "current_cents": -38.0,
+      "hold_cents": -88.0,
+      "net_delta_cents": -50.0,
+      "rows": 3,
+      "tag_counts": {
+        "large_adverse_mark_after_exit": 2,
+        "loss_control_cost": 1,
+        "marginal_p_hold": 1,
+        "moderate_adverse_mark_after_exit": 1,
+        "moderate_fair_drawdown": 3,
+        "negative_delta": 1,
+        "positive_delta": 2,
+        "very_high_p_hold": 2,
+        "winner_recovery": 2
+      }
+    },
+    "drawdown_gt_5": {
+      "avg_delta_cents": 46.0,
+      "avg_fair_drawdown_cents": 8.216985,
+      "avg_p_hold": 0.79783,
+      "current_cents": -22.0,
+      "hold_cents": 24.0,
+      "net_delta_cents": 46.0,
+      "rows": 1,
+      "tag_counts": {
+        "large_adverse_mark_after_exit": 1,
+        "large_fair_drawdown": 1,
+        "positive_delta": 1,
+        "very_high_p_hold": 1,
+        "winner_recovery": 1
+      }
+    },
+    "drawdown_lte_2p5": {
+      "avg_delta_cents": 54.0,
+      "avg_fair_drawdown_cents": 0.41577625000000007,
+      "avg_p_hold": 0.7883425,
+      "current_cents": -50.0,
+      "hold_cents": 166.0,
+      "net_delta_cents": 216.0,
+      "rows": 4,
+      "tag_counts": {
+        "favorable_fair_value": 1,
+        "large_adverse_mark_after_exit": 3,
+        "marginal_p_hold": 2,
+        "positive_delta": 4,
+        "post_exit_mark_went_full_loss": 1,
+        "small_fair_drawdown": 3,
+        "very_high_p_hold": 2,
+        "winner_recovery": 4
+      }
+    },
+    "loss_control_cost": {
+      "avg_delta_cents": -160.0,
+      "avg_fair_drawdown_cents": 4.039746,
+      "avg_p_hold": 0.799603,
+      "current_cents": -8.0,
+      "hold_cents": -168.0,
+      "net_delta_cents": -160.0,
+      "rows": 1,
+      "tag_counts": {
+        "large_adverse_mark_after_exit": 1,
+        "loss_control_cost": 1,
+        "moderate_fair_drawdown": 1,
+        "negative_delta": 1,
+        "very_high_p_hold": 1
+      }
+    },
+    "p_hold_075_079": {
+      "avg_delta_cents": 57.333333333333336,
+      "avg_fair_drawdown_cents": 1.9757983333333333,
+      "avg_p_hold": 0.7702423333333333,
+      "current_cents": -46.0,
+      "hold_cents": 126.0,
+      "net_delta_cents": 172.0,
+      "rows": 3,
+      "tag_counts": {
+        "large_adverse_mark_after_exit": 3,
+        "marginal_p_hold": 3,
+        "moderate_fair_drawdown": 1,
+        "positive_delta": 3,
+        "small_fair_drawdown": 2,
+        "winner_recovery": 3
+      }
+    },
+    "p_hold_ge_079": {
+      "avg_delta_cents": 8.0,
+      "avg_fair_drawdown_cents": 3.0685322,
+      "avg_p_hold": 0.7973148,
+      "current_cents": -64.0,
+      "hold_cents": -24.0,
+      "net_delta_cents": 40.0,
+      "rows": 5,
+      "tag_counts": {
+        "favorable_fair_value": 1,
+        "large_adverse_mark_after_exit": 3,
+        "large_fair_drawdown": 1,
+        "loss_control_cost": 1,
+        "moderate_adverse_mark_after_exit": 1,
+        "moderate_fair_drawdown": 2,
+        "negative_delta": 1,
+        "positive_delta": 4,
+        "post_exit_mark_went_full_loss": 1,
+        "small_fair_drawdown": 1,
+        "very_high_p_hold": 5,
+        "winner_recovery": 4
+      }
+    },
+    "winner_recovery": {
+      "avg_delta_cents": 53.142857142857146,
+      "avg_fair_drawdown_cents": 2.4614728571428572,
+      "avg_p_hold": 0.7853854285714286,
+      "current_cents": -102.0,
+      "hold_cents": 270.0,
+      "net_delta_cents": 372.0,
+      "rows": 7,
+      "tag_counts": {
+        "favorable_fair_value": 1,
+        "large_adverse_mark_after_exit": 5,
+        "large_fair_drawdown": 1,
+        "marginal_p_hold": 3,
+        "moderate_adverse_mark_after_exit": 1,
+        "moderate_fair_drawdown": 2,
+        "positive_delta": 7,
+        "post_exit_mark_went_full_loss": 1,
+        "small_fair_drawdown": 3,
+        "very_high_p_hold": 4,
+        "winner_recovery": 7
+      }
+    }
+  },
+  "source_paths": {
+    "base": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_suppression_latest.json",
+    "depth": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_depth_gate_latest.json",
+    "geometry": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_geometry_relaxed_watch_latest.json",
+    "observable": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_frozen_exit_reduce_observable_loss_control_watch_latest.json",
+    "risk": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_reduce_suppression_risk_ledger_latest.json",
+    "runway": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_reduce_promotion_runway_latest.json"
+  }
+}

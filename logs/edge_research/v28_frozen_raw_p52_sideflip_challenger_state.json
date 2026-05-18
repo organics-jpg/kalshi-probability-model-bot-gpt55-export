@@ -1,0 +1,18 @@
+{
+  "freeze_ts": "2026-05-05T23:14:05.888026+00:00",
+  "policies": [
+    {
+      "physics": "Use raw p50 early entries unless p52 later confirms the opposite side. Avoids paying up for same-side confirmation while allowing boundary side flips.",
+      "policy": "raw_p50_else_p52_sideflip_confirm",
+      "role": "raw_p50_with_p52_sideflip_confirmation"
+    }
+  ],
+  "promotion_floor": {
+    "fv_validation_allows_shadow_rows": true,
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

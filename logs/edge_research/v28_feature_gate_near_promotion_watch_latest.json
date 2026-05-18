@@ -1,0 +1,845 @@
+{
+  "best_candidate": "post_feature_freeze_entry_raw05_recross60_abs085",
+  "best_missing_gates": [
+    "coverage+7.9pp"
+  ],
+  "candidate_live_ready": false,
+  "feature_gate_freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+  "generated_at_utc": "2026-05-11T01:54:25.736096+00:00",
+  "interpretation": [
+    "This watch tracks already-frozen feature-gate rules only; it is not a new threshold search.",
+    "Pending approved rows can close sample/source gaps, but promotion still requires settled PnL and full-loss cushion.",
+    "Best watched row post_feature_freeze_entry_raw05_recross60_abs085 has net 445.0c, coverage 67.07317073170732%, reconstructed share 0.2727272727272727, and missing gates ['coverage+7.9pp']."
+  ],
+  "rows": [
+    {
+      "avg_future_net_needed_for_cushion3": 0.0,
+      "candidate": "post_feature_freeze_entry_raw05_recross60_abs085",
+      "clean_rows_needed_for_source": null,
+      "coverage_entries_needed": 7,
+      "coverage_pct": 67.07317073170732,
+      "entries": 55,
+      "full_loss_cushion": 4,
+      "future_clean_rows_needed_for_all_gates": 7,
+      "future_denominator": 82,
+      "lane": "post_feature_freeze_entry",
+      "largest_losses": [
+        {
+          "abs_d_sigma": 1.010241,
+          "ask_prob": 0.83,
+          "market": "KXBTC15M-26MAY071100-00",
+          "net_cents": -84.0,
+          "raw_edge": 0.054041000000000006,
+          "recross_hazard_score": 0.30500573389101787,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.936079,
+          "ask_prob": 0.78,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -80.0,
+          "raw_edge": 0.08109199999999994,
+          "recross_hazard_score": 0.41762272221317515,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.999156,
+          "ask_prob": 0.76,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": -78.0,
+          "raw_edge": 0.12777700000000003,
+          "recross_hazard_score": 0.3038697963028121,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "net_cents": -72.0,
+          "raw_edge": 0.2636590000000001,
+          "recross_hazard_score": 0.07375286170271013,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.932497,
+          "ask_prob": 0.08,
+          "market": "KXBTC15M-26MAY071300-00",
+          "net_cents": -10.0,
+          "raw_edge": 0.05323499999999999,
+          "recross_hazard_score": 0.0838612713123607,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.967753,
+          "ask_prob": 0.06,
+          "market": "KXBTC15M-26MAY061600-00",
+          "net_cents": -7.0,
+          "raw_edge": 0.057585,
+          "recross_hazard_score": 0.08357682604279555,
+          "side": "no",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.01449,
+          "ask_prob": 0.06,
+          "market": "KXBTC15M-26MAY071115-15",
+          "net_cents": -7.0,
+          "raw_edge": 0.052022,
+          "recross_hazard_score": 0.0621043045893775,
+          "side": "no",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.997837,
+          "ask_prob": 0.05,
+          "market": "KXBTC15M-26MAY061830-30",
+          "net_cents": -6.0,
+          "raw_edge": 0.059156,
+          "recross_hazard_score": 0.16075609997197524,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        }
+      ],
+      "live_ready": false,
+      "loss_tag_counts": {
+        "cheap_tail": 12,
+        "source_quality": 12,
+        "unclassified": 4
+      },
+      "losses": 16,
+      "missing_gates": [
+        "coverage+7.9pp"
+      ],
+      "net_cents": 445.0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "pending": 0,
+      "pending_approved": 0,
+      "pending_reconstructed_or_unknown": 0,
+      "pending_source_counts": {},
+      "reconstructed_share": 0.2727272727272727,
+      "required_entries_for_75pct": 62,
+      "rule": "raw05_recross60_abs085",
+      "selected_rows": 55,
+      "settled": 55,
+      "settled_rows_needed": 0,
+      "settled_source_counts": {
+        "approved_entry": 40,
+        "rejected_actionable": 15
+      },
+      "source_counts": {
+        "approved_entry": 40,
+        "rejected_actionable": 15
+      },
+      "wins": 39
+    },
+    {
+      "avg_future_net_needed_for_cushion3": 0.0,
+      "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+      "clean_rows_needed_for_source": null,
+      "coverage_entries_needed": 7,
+      "coverage_pct": 67.07317073170732,
+      "entries": 55,
+      "full_loss_cushion": 4,
+      "future_clean_rows_needed_for_all_gates": 7,
+      "future_denominator": 82,
+      "lane": "post_feature_freeze_bridge",
+      "largest_losses": [
+        {
+          "abs_d_sigma": 1.010241,
+          "ask_prob": 0.83,
+          "market": "KXBTC15M-26MAY071100-00",
+          "net_cents": -84.0,
+          "raw_edge": 0.054041000000000006,
+          "recross_hazard_score": 0.30500573389101787,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.936079,
+          "ask_prob": 0.78,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -80.0,
+          "raw_edge": 0.08109199999999994,
+          "recross_hazard_score": 0.41762272221317515,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.999156,
+          "ask_prob": 0.76,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": -78.0,
+          "raw_edge": 0.12777700000000003,
+          "recross_hazard_score": 0.3038697963028121,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "net_cents": -72.0,
+          "raw_edge": 0.2636590000000001,
+          "recross_hazard_score": 0.07375286170271013,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.932497,
+          "ask_prob": 0.08,
+          "market": "KXBTC15M-26MAY071300-00",
+          "net_cents": -10.0,
+          "raw_edge": 0.05323499999999999,
+          "recross_hazard_score": 0.0838612713123607,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.967753,
+          "ask_prob": 0.06,
+          "market": "KXBTC15M-26MAY061600-00",
+          "net_cents": -7.0,
+          "raw_edge": 0.057585,
+          "recross_hazard_score": 0.08357682604279555,
+          "side": "no",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.01449,
+          "ask_prob": 0.06,
+          "market": "KXBTC15M-26MAY071115-15",
+          "net_cents": -7.0,
+          "raw_edge": 0.052022,
+          "recross_hazard_score": 0.0621043045893775,
+          "side": "no",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.997837,
+          "ask_prob": 0.05,
+          "market": "KXBTC15M-26MAY061830-30",
+          "net_cents": -6.0,
+          "raw_edge": 0.059156,
+          "recross_hazard_score": 0.16075609997197524,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        }
+      ],
+      "live_ready": false,
+      "loss_tag_counts": {
+        "cheap_tail": 12,
+        "source_quality": 12,
+        "unclassified": 4
+      },
+      "losses": 16,
+      "missing_gates": [
+        "coverage+7.9pp"
+      ],
+      "net_cents": 445.0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "pending": 0,
+      "pending_approved": 0,
+      "pending_reconstructed_or_unknown": 0,
+      "pending_source_counts": {},
+      "reconstructed_share": 0.2727272727272727,
+      "required_entries_for_75pct": 62,
+      "rule": "raw05_recross60_abs085",
+      "selected_rows": 55,
+      "settled": 55,
+      "settled_rows_needed": 0,
+      "settled_source_counts": {
+        "approved_entry": 40,
+        "rejected_actionable": 15
+      },
+      "source_counts": {
+        "approved_entry": 40,
+        "rejected_actionable": 15
+      },
+      "wins": 39
+    },
+    {
+      "avg_future_net_needed_for_cushion3": 0.0,
+      "candidate": "post_feature_freeze_entry_raw05_recross60_abs085_ask65",
+      "clean_rows_needed_for_source": null,
+      "coverage_entries_needed": 15,
+      "coverage_pct": 57.31707317073171,
+      "entries": 47,
+      "full_loss_cushion": 3,
+      "future_clean_rows_needed_for_all_gates": 15,
+      "future_denominator": 82,
+      "lane": "post_feature_freeze_entry",
+      "largest_losses": [
+        {
+          "abs_d_sigma": 1.010241,
+          "ask_prob": 0.83,
+          "market": "KXBTC15M-26MAY071100-00",
+          "net_cents": -84.0,
+          "raw_edge": 0.054041000000000006,
+          "recross_hazard_score": 0.30500573389101787,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.936079,
+          "ask_prob": 0.78,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -80.0,
+          "raw_edge": 0.08109199999999994,
+          "recross_hazard_score": 0.41762272221317515,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.999156,
+          "ask_prob": 0.76,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": -78.0,
+          "raw_edge": 0.12777700000000003,
+          "recross_hazard_score": 0.3038697963028121,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "net_cents": -72.0,
+          "raw_edge": 0.2636590000000001,
+          "recross_hazard_score": 0.07375286170271013,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.973796,
+          "ask_prob": 0.67,
+          "market": "KXBTC15M-26MAY062015-15",
+          "net_cents": -71.0,
+          "raw_edge": 0.215657,
+          "recross_hazard_score": 0.03209081623854011,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        }
+      ],
+      "live_ready": false,
+      "loss_tag_counts": {
+        "unclassified": 5
+      },
+      "losses": 5,
+      "missing_gates": [
+        "coverage+17.7pp"
+      ],
+      "net_cents": 344.0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "pending": 0,
+      "pending_approved": 0,
+      "pending_reconstructed_or_unknown": 0,
+      "pending_source_counts": {},
+      "reconstructed_share": 0.0425531914893617,
+      "required_entries_for_75pct": 62,
+      "rule": "raw05_recross60_abs085_ask65",
+      "selected_rows": 47,
+      "settled": 47,
+      "settled_rows_needed": 0,
+      "settled_source_counts": {
+        "approved_entry": 45,
+        "rejected_actionable": 2
+      },
+      "source_counts": {
+        "approved_entry": 45,
+        "rejected_actionable": 2
+      },
+      "wins": 42
+    },
+    {
+      "avg_future_net_needed_for_cushion3": 0.0,
+      "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085_ask65",
+      "clean_rows_needed_for_source": null,
+      "coverage_entries_needed": 15,
+      "coverage_pct": 57.31707317073171,
+      "entries": 47,
+      "full_loss_cushion": 3,
+      "future_clean_rows_needed_for_all_gates": 15,
+      "future_denominator": 82,
+      "lane": "post_feature_freeze_bridge",
+      "largest_losses": [
+        {
+          "abs_d_sigma": 1.010241,
+          "ask_prob": 0.83,
+          "market": "KXBTC15M-26MAY071100-00",
+          "net_cents": -84.0,
+          "raw_edge": 0.054041000000000006,
+          "recross_hazard_score": 0.30500573389101787,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.936079,
+          "ask_prob": 0.78,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -80.0,
+          "raw_edge": 0.08109199999999994,
+          "recross_hazard_score": 0.41762272221317515,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.999156,
+          "ask_prob": 0.76,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": -78.0,
+          "raw_edge": 0.12777700000000003,
+          "recross_hazard_score": 0.3038697963028121,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "net_cents": -72.0,
+          "raw_edge": 0.2636590000000001,
+          "recross_hazard_score": 0.07375286170271013,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.973796,
+          "ask_prob": 0.67,
+          "market": "KXBTC15M-26MAY062015-15",
+          "net_cents": -71.0,
+          "raw_edge": 0.215657,
+          "recross_hazard_score": 0.03209081623854011,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        }
+      ],
+      "live_ready": false,
+      "loss_tag_counts": {
+        "unclassified": 5
+      },
+      "losses": 5,
+      "missing_gates": [
+        "coverage+17.7pp"
+      ],
+      "net_cents": 344.0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "pending": 0,
+      "pending_approved": 0,
+      "pending_reconstructed_or_unknown": 0,
+      "pending_source_counts": {},
+      "reconstructed_share": 0.0425531914893617,
+      "required_entries_for_75pct": 62,
+      "rule": "raw05_recross60_abs085_ask65",
+      "selected_rows": 47,
+      "settled": 47,
+      "settled_rows_needed": 0,
+      "settled_source_counts": {
+        "approved_entry": 45,
+        "rejected_actionable": 2
+      },
+      "source_counts": {
+        "approved_entry": 45,
+        "rejected_actionable": 2
+      },
+      "wins": 42
+    },
+    {
+      "avg_future_net_needed_for_cushion3": 0.0,
+      "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+      "clean_rows_needed_for_source": 8,
+      "coverage_entries_needed": 0,
+      "coverage_pct": 78.04878048780488,
+      "entries": 64,
+      "full_loss_cushion": 3,
+      "future_clean_rows_needed_for_all_gates": 8,
+      "future_denominator": 82,
+      "lane": "post_feature_freeze_entry",
+      "largest_losses": [
+        {
+          "abs_d_sigma": 1.010241,
+          "ask_prob": 0.83,
+          "market": "KXBTC15M-26MAY071100-00",
+          "net_cents": -84.0,
+          "raw_edge": 0.054041000000000006,
+          "recross_hazard_score": 0.30500573389101787,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.936079,
+          "ask_prob": 0.78,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -80.0,
+          "raw_edge": 0.08109199999999994,
+          "recross_hazard_score": 0.41762272221317515,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.999156,
+          "ask_prob": 0.76,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": -78.0,
+          "raw_edge": 0.12777700000000003,
+          "recross_hazard_score": 0.3038697963028121,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.790551,
+          "ask_prob": 0.72,
+          "market": "KXBTC15M-26MAY071215-15",
+          "net_cents": -75.0,
+          "raw_edge": 0.10828199999999999,
+          "recross_hazard_score": 0.48773958548079466,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "net_cents": -72.0,
+          "raw_edge": 0.2636590000000001,
+          "recross_hazard_score": 0.07375286170271013,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.819952,
+          "ask_prob": 0.64,
+          "market": "KXBTC15M-26MAY070615-15",
+          "net_cents": -68.0,
+          "raw_edge": 0.20093099999999997,
+          "recross_hazard_score": 0.2533484847166239,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.784861,
+          "ask_prob": 0.13,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -15.0,
+          "raw_edge": 0.041601,
+          "recross_hazard_score": 0.13225659322745886,
+          "side": "no",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail",
+            "thin_raw_edge"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.758696,
+          "ask_prob": 0.09,
+          "market": "KXBTC15M-26MAY070200-00",
+          "net_cents": -11.0,
+          "raw_edge": 0.08693400000000001,
+          "recross_hazard_score": 0.12224159683597033,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        }
+      ],
+      "live_ready": false,
+      "loss_tag_counts": {
+        "cheap_tail": 16,
+        "source_quality": 18,
+        "thin_raw_edge": 4,
+        "unclassified": 4
+      },
+      "losses": 22,
+      "missing_gates": [
+        "clean_rows+8"
+      ],
+      "net_cents": 307.0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "pending": 0,
+      "pending_approved": 0,
+      "pending_reconstructed_or_unknown": 0,
+      "pending_source_counts": {},
+      "reconstructed_share": 0.390625,
+      "required_entries_for_75pct": 62,
+      "rule": "raw03_recross70_abs075",
+      "selected_rows": 64,
+      "settled": 64,
+      "settled_rows_needed": 0,
+      "settled_source_counts": {
+        "approved_entry": 39,
+        "rejected_actionable": 25
+      },
+      "source_counts": {
+        "approved_entry": 39,
+        "rejected_actionable": 25
+      },
+      "wins": 42
+    },
+    {
+      "avg_future_net_needed_for_cushion3": 0.0,
+      "candidate": "post_feature_freeze_bridge_raw03_recross70_abs075",
+      "clean_rows_needed_for_source": 8,
+      "coverage_entries_needed": 0,
+      "coverage_pct": 78.04878048780488,
+      "entries": 64,
+      "full_loss_cushion": 3,
+      "future_clean_rows_needed_for_all_gates": 8,
+      "future_denominator": 82,
+      "lane": "post_feature_freeze_bridge",
+      "largest_losses": [
+        {
+          "abs_d_sigma": 1.010241,
+          "ask_prob": 0.83,
+          "market": "KXBTC15M-26MAY071100-00",
+          "net_cents": -84.0,
+          "raw_edge": 0.054041000000000006,
+          "recross_hazard_score": 0.30500573389101787,
+          "side": "yes",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.936079,
+          "ask_prob": 0.78,
+          "market": "KXBTC15M-26MAY071015-15",
+          "net_cents": -80.0,
+          "raw_edge": 0.08109199999999994,
+          "recross_hazard_score": 0.41762272221317515,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.999156,
+          "ask_prob": 0.76,
+          "market": "KXBTC15M-26MAY062130-30",
+          "net_cents": -78.0,
+          "raw_edge": 0.12777700000000003,
+          "recross_hazard_score": 0.3038697963028121,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.790551,
+          "ask_prob": 0.72,
+          "market": "KXBTC15M-26MAY071215-15",
+          "net_cents": -75.0,
+          "raw_edge": 0.10828199999999999,
+          "recross_hazard_score": 0.48773958548079466,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality"
+          ]
+        },
+        {
+          "abs_d_sigma": 1.543579,
+          "ask_prob": 0.7,
+          "market": "KXBTC15M-26MAY070015-15",
+          "net_cents": -72.0,
+          "raw_edge": 0.2636590000000001,
+          "recross_hazard_score": 0.07375286170271013,
+          "side": "no",
+          "source": "approved_entry",
+          "tags": [
+            "unclassified"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.819952,
+          "ask_prob": 0.64,
+          "market": "KXBTC15M-26MAY070615-15",
+          "net_cents": -68.0,
+          "raw_edge": 0.20093099999999997,
+          "recross_hazard_score": 0.2533484847166239,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.784861,
+          "ask_prob": 0.13,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -15.0,
+          "raw_edge": 0.041601,
+          "recross_hazard_score": 0.13225659322745886,
+          "side": "no",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail",
+            "thin_raw_edge"
+          ]
+        },
+        {
+          "abs_d_sigma": 0.758696,
+          "ask_prob": 0.09,
+          "market": "KXBTC15M-26MAY070200-00",
+          "net_cents": -11.0,
+          "raw_edge": 0.08693400000000001,
+          "recross_hazard_score": 0.12224159683597033,
+          "side": "yes",
+          "source": "rejected_actionable",
+          "tags": [
+            "source_quality",
+            "cheap_tail"
+          ]
+        }
+      ],
+      "live_ready": false,
+      "loss_tag_counts": {
+        "cheap_tail": 16,
+        "source_quality": 18,
+        "thin_raw_edge": 4,
+        "unclassified": 4
+      },
+      "losses": 22,
+      "missing_gates": [
+        "clean_rows+8"
+      ],
+      "net_cents": 307.0,
+      "net_cents_needed_for_cushion3": 0.0,
+      "pending": 0,
+      "pending_approved": 0,
+      "pending_reconstructed_or_unknown": 0,
+      "pending_source_counts": {},
+      "reconstructed_share": 0.390625,
+      "required_entries_for_75pct": 62,
+      "rule": "raw03_recross70_abs075",
+      "selected_rows": 64,
+      "settled": 64,
+      "settled_rows_needed": 0,
+      "settled_source_counts": {
+        "approved_entry": 39,
+        "rejected_actionable": 25
+      },
+      "source_counts": {
+        "approved_entry": 39,
+        "rejected_actionable": 25
+      },
+      "wins": 42
+    }
+  ],
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_boundary_clock_feature_gate_candidate_latest.json"
+}

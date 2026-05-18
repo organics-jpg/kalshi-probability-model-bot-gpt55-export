@@ -1,0 +1,7 @@
+{
+  "entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T05:29:47.434585+00:00",
+  "physics": "Near-boundary high-recross states are turbulent repeated-crossing regimes; confidence should lose memory rather than sharpen.",
+  "rule": "shrink raw probability halfway toward 50 when recross>=0.55 and abs_d<0.45, or raw_edge<3pp and recross>=0.40",
+  "variant": "boundary_recross_shrink_probability"
+}

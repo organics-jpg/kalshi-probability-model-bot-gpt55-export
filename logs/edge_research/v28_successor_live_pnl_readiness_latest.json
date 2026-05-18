@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "evidence": "live_pnl_policy_registry_latest.csv",
+      "item": "reproducible research-only live policy capture pipeline",
+      "status": "pass"
+    },
+    {
+      "evidence": "5bf8d66dbe2b31e01d38abe8a0238e68",
+      "item": "at least one frozen inspectable policy version",
+      "status": "pass"
+    },
+    {
+      "evidence": "16302 converted frozen FV rows",
+      "item": "frozen pre-resolution policy rows for incoming live markets",
+      "status": "pass"
+    },
+    {
+      "evidence": "314 captured primary policy rows after hash",
+      "item": "validation rows occur after policy hash creation",
+      "status": "pass"
+    },
+    {
+      "evidence": "314 joined primary rows after hash; 16302 total joined diagnostic+primary rows",
+      "item": "post-resolution labels joined after settlement for primary rows",
+      "status": "pass"
+    },
+    {
+      "evidence": "v28_successor_live_pnl_policy_score_latest.json",
+      "item": "fee-aware same-row comparison against regular v28 and successor FV-only",
+      "status": "pass"
+    },
+    {
+      "evidence": "12 labeled primary markets, 314 labeled primary paired opportunities",
+      "item": "bootstrap sample count of 10 finalized close windows or 25 paired opportunities",
+      "status": "pass"
+    },
+    {
+      "evidence": "readiness, score, and capture-health reports",
+      "item": "denominator reporting",
+      "status": "pass"
+    },
+    {
+      "evidence": "v28_successor_live_pnl_source_contract_latest.json",
+      "item": "source-quality verification",
+      "status": "pass"
+    },
+    {
+      "evidence": "v28_successor_live_pnl_capture_health_latest.json",
+      "item": "capture-health evidence",
+      "status": "pass"
+    },
+    {
+      "evidence": "v28_successor_live_pnl_fill_model_audit_latest.json",
+      "item": "fill-model audit or explicit assumptions report",
+      "status": "pass"
+    },
+    {
+      "evidence": "test_v28_successor_live_pnl_policy_lab.py; test_run_status=pass",
+      "item": "tests for causality, fee math, policy hash freezing, and no retroactive credit",
+      "status": "pass"
+    },
+    {
+      "evidence": "v28_successor_live_pnl_policy_experiment_ledger_latest.csv",
+      "item": "experiment ledger includes failed and deprecated policies",
+      "status": "pass"
+    },
+    {
+      "evidence": "v28_successor_live_pnl_readiness_latest.md",
+      "item": "bootstrap continue/retire/replace report",
+      "status": "pass"
+    }
+  ],
+  "diagnostic_rows_not_primary_credit": 15988,
+  "joined_primary_rows_after_policy_hash": 314,
+  "level_1_complete": true,
+  "level_2_controlled_live_test_ready": false,
+  "next_actions": [
+    "Run the live sidecar policy capture after this policy hash exists.",
+    "Score only future rows as primary live-forward policy evidence.",
+    "Keep existing pre-policy rows as diagnostic scaffolding only."
+  ],
+  "primary_markets_after_policy_hash": 12,
+  "primary_policy_rows_after_hash": 314,
+  "primary_rows_after_policy_hash": 314,
+  "readiness_verdict": "level_1_bootstrap_complete"
+}

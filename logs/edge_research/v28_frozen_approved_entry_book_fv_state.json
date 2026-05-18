@@ -1,0 +1,12 @@
+{
+  "candidate": "book_probability",
+  "entry_surface": "actual_v28_approved_entries_only",
+  "freeze_ts_utc": "2026-05-06T06:20:06.824407+00:00",
+  "overlays": [
+    "raw_probability",
+    "book_probability",
+    "noise_shrink_light_probability"
+  ],
+  "physics": "Raw v28 may select direction, while the executable book is a stronger calibration anchor after selection and fees.",
+  "rule": "Compare book_probability against raw_probability only on future actual v28-approved entries."
+}

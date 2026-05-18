@@ -1,0 +1,1010 @@
+{
+  "freeze_ts_utc": "2026-05-06T22:01:04.415577+00:00",
+  "generated_at_utc": "2026-05-07T18:03:46.256830+00:00",
+  "interpretation": [
+    "This is an audit over the existing strict common-clock v2 rows; it does not create or change a live exit rule.",
+    "Best audit policy v1_like_on_v2_clock has 58 settled, 17 suppressions, candidate net 668.0c, delta 242.0c, loss cost 0c, blockers ['suppressed_decisions_lt_30'].",
+    "V2 control suppresses 5 rows for 152.0c delta; the scarcity problem remains suppression count and cushion, not observed harmful suppressions."
+  ],
+  "policies": [
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_net_cents": 668.0,
+      "current_net_cents": 426.0,
+      "delta_cents": 242.0,
+      "full_loss_cushion": 6,
+      "harmful_suppressed": 0,
+      "harmful_tag_counts": {},
+      "helpful_suppressed": 17,
+      "loss_cost_cents": 0,
+      "policy": "v1_like_on_v2_clock",
+      "ready_for_review": false,
+      "settled": 58,
+      "suppressed": 17,
+      "suppressed_tag_counts": {
+        "drawdown_deep_lt_neg10": 8,
+        "drawdown_neg2p5_to_neg5": 1,
+        "drawdown_neg5_to_neg10": 4,
+        "drawdown_shallow_ge_neg2p5": 4,
+        "gap_neg_0_5pp": 15,
+        "gap_nonnegative": 2,
+        "p_hold_79_85": 2,
+        "p_hold_85_90": 5,
+        "p_hold_90_95": 3,
+        "p_hold_ge95": 7,
+        "probability_reduce": 2,
+        "value_over_hold": 15
+      },
+      "winner_recovery_cents": 242.0,
+      "worst_suppressed_rows": [
+        {
+          "current_cents": 20.0,
+          "delta_cents": 2.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -8.671753,
+          "hold_book_gap": -0.013282000000000016,
+          "hold_cents": 22.0,
+          "market": "KXBTC15M-26MAY061830-30",
+          "p_hold": 0.976718,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 24.0,
+          "delta_cents": 2.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -11.198704,
+          "hold_book_gap": -0.008012999999999937,
+          "hold_cents": 26.0,
+          "market": "KXBTC15M-26MAY061915-15",
+          "p_hold": 0.981987,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 22.0,
+          "delta_cents": 2.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -10.246054,
+          "hold_book_gap": -0.007538999999999962,
+          "hold_cents": 24.0,
+          "market": "KXBTC15M-26MAY062115-15",
+          "p_hold": 0.982461,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 44.0,
+          "delta_cents": 2.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -17.214598,
+          "hold_book_gap": -0.007854000000000028,
+          "hold_cents": 46.0,
+          "market": "KXBTC15M-26MAY071145-45",
+          "p_hold": 0.982146,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 42.0,
+          "delta_cents": 4.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -19.116535,
+          "hold_book_gap": -0.018834999999999935,
+          "hold_cents": 46.0,
+          "market": "KXBTC15M-26MAY071200-00",
+          "p_hold": 0.961165,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 30.0,
+          "delta_cents": 6.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -10.177771,
+          "hold_book_gap": -0.04822199999999999,
+          "hold_cents": 36.0,
+          "market": "KXBTC15M-26MAY070030-30",
+          "p_hold": 0.921778,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_90_95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 34.0,
+          "delta_cents": 6.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -13.999536,
+          "hold_book_gap": -0.01000499999999993,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY070930-30",
+          "p_hold": 0.969995,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 24.0,
+          "delta_cents": 8.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -11.068394,
+          "hold_book_gap": -0.009315999999999991,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY061815-15",
+          "p_hold": 0.950684,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 20.0,
+          "delta_cents": 12.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -8.310249,
+          "hold_book_gap": -0.01689799999999997,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071015-15",
+          "p_hold": 0.923102,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_90_95",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 32.0,
+          "delta_cents": 12.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -14.749774,
+          "hold_book_gap": -0.012501999999999902,
+          "hold_cents": 44.0,
+          "market": "KXBTC15M-26MAY071315-15",
+          "p_hold": 0.927498,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_90_95",
+            "gap_neg_0_5pp",
+            "drawdown_deep_lt_neg10"
+          ],
+          "won": true
+        }
+      ]
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_net_cents": 626.0,
+      "current_net_cents": 426.0,
+      "delta_cents": 200.0,
+      "full_loss_cushion": 6,
+      "harmful_suppressed": 0,
+      "harmful_tag_counts": {},
+      "helpful_suppressed": 9,
+      "loss_cost_cents": 0,
+      "policy": "value_p85_shallow10",
+      "ready_for_review": false,
+      "settled": 58,
+      "suppressed": 9,
+      "suppressed_tag_counts": {
+        "drawdown_neg2p5_to_neg5": 1,
+        "drawdown_neg5_to_neg10": 4,
+        "drawdown_shallow_ge_neg2p5": 4,
+        "gap_neg_0_5pp": 7,
+        "gap_nonnegative": 2,
+        "p_hold_79_85": 2,
+        "p_hold_85_90": 5,
+        "p_hold_90_95": 1,
+        "p_hold_ge95": 1,
+        "probability_reduce": 2,
+        "value_over_hold": 7
+      },
+      "winner_recovery_cents": 200.0,
+      "worst_suppressed_rows": [
+        {
+          "current_cents": 20.0,
+          "delta_cents": 2.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -8.671753,
+          "hold_book_gap": -0.013282000000000016,
+          "hold_cents": 22.0,
+          "market": "KXBTC15M-26MAY061830-30",
+          "p_hold": 0.976718,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 20.0,
+          "delta_cents": 12.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -8.310249,
+          "hold_book_gap": -0.01689799999999997,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071015-15",
+          "p_hold": 0.923102,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_90_95",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 24.0,
+          "delta_cents": 16.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -9.138584,
+          "hold_book_gap": -0.02861400000000003,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY062045-45",
+          "p_hold": 0.891386,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 18.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -7.256748,
+          "hold_book_gap": -0.017433000000000032,
+          "hold_cents": 36.0,
+          "market": "KXBTC15M-26MAY070545-45",
+          "p_hold": 0.892567,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 2.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -1.046434,
+          "hold_book_gap": -0.019535999999999998,
+          "hold_cents": 20.0,
+          "market": "KXBTC15M-26MAY070815-15",
+          "p_hold": 0.890464,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 14.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -4.884431,
+          "hold_book_gap": -0.021156000000000064,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071115-15",
+          "p_hold": 0.888844,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_neg2p5_to_neg5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 10.0,
+          "delta_cents": 22.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -2.067333,
+          "hold_book_gap": -0.029326999999999992,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY062215-15",
+          "p_hold": 0.860673,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -6.0,
+          "delta_cents": 46.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": -0.834147,
+          "hold_book_gap": 0.02834099999999995,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY071315-15",
+          "p_hold": 0.798341,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -16.0,
+          "delta_cents": 48.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 4.233856,
+          "hold_book_gap": 0.037660999999999945,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071215-15",
+          "p_hold": 0.797661,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        }
+      ]
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_net_cents": 578.0,
+      "current_net_cents": 426.0,
+      "delta_cents": 152.0,
+      "full_loss_cushion": 5,
+      "harmful_suppressed": 0,
+      "harmful_tag_counts": {},
+      "helpful_suppressed": 5,
+      "loss_cost_cents": 0,
+      "policy": "v2_control",
+      "ready_for_review": false,
+      "settled": 58,
+      "suppressed": 5,
+      "suppressed_tag_counts": {
+        "drawdown_neg2p5_to_neg5": 1,
+        "drawdown_shallow_ge_neg2p5": 4,
+        "gap_neg_0_5pp": 3,
+        "gap_nonnegative": 2,
+        "p_hold_79_85": 2,
+        "p_hold_85_90": 3,
+        "probability_reduce": 2,
+        "value_over_hold": 3
+      },
+      "winner_recovery_cents": 152.0,
+      "worst_suppressed_rows": [
+        {
+          "current_cents": 2.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -1.046434,
+          "hold_book_gap": -0.019535999999999998,
+          "hold_cents": 20.0,
+          "market": "KXBTC15M-26MAY070815-15",
+          "p_hold": 0.890464,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 14.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -4.884431,
+          "hold_book_gap": -0.021156000000000064,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071115-15",
+          "p_hold": 0.888844,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_neg2p5_to_neg5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 10.0,
+          "delta_cents": 22.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -2.067333,
+          "hold_book_gap": -0.029326999999999992,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY062215-15",
+          "p_hold": 0.860673,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -6.0,
+          "delta_cents": 46.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": -0.834147,
+          "hold_book_gap": 0.02834099999999995,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY071315-15",
+          "p_hold": 0.798341,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -16.0,
+          "delta_cents": 48.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 4.233856,
+          "hold_book_gap": 0.037660999999999945,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071215-15",
+          "p_hold": 0.797661,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        }
+      ]
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_net_cents": 578.0,
+      "current_net_cents": 426.0,
+      "delta_cents": 152.0,
+      "full_loss_cushion": 5,
+      "harmful_suppressed": 0,
+      "harmful_tag_counts": {},
+      "helpful_suppressed": 5,
+      "loss_cost_cents": 0,
+      "policy": "value_v2_plus_reduce_shallow2p5",
+      "ready_for_review": false,
+      "settled": 58,
+      "suppressed": 5,
+      "suppressed_tag_counts": {
+        "drawdown_neg2p5_to_neg5": 1,
+        "drawdown_shallow_ge_neg2p5": 4,
+        "gap_neg_0_5pp": 3,
+        "gap_nonnegative": 2,
+        "p_hold_79_85": 2,
+        "p_hold_85_90": 3,
+        "probability_reduce": 2,
+        "value_over_hold": 3
+      },
+      "winner_recovery_cents": 152.0,
+      "worst_suppressed_rows": [
+        {
+          "current_cents": 2.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -1.046434,
+          "hold_book_gap": -0.019535999999999998,
+          "hold_cents": 20.0,
+          "market": "KXBTC15M-26MAY070815-15",
+          "p_hold": 0.890464,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 14.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -4.884431,
+          "hold_book_gap": -0.021156000000000064,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071115-15",
+          "p_hold": 0.888844,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_neg2p5_to_neg5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 10.0,
+          "delta_cents": 22.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -2.067333,
+          "hold_book_gap": -0.029326999999999992,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY062215-15",
+          "p_hold": 0.860673,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -6.0,
+          "delta_cents": 46.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": -0.834147,
+          "hold_book_gap": 0.02834099999999995,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY071315-15",
+          "p_hold": 0.798341,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -16.0,
+          "delta_cents": 48.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 4.233856,
+          "hold_book_gap": 0.037660999999999945,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071215-15",
+          "p_hold": 0.797661,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        }
+      ]
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30"
+      ],
+      "candidate_net_cents": 534.0,
+      "current_net_cents": 426.0,
+      "delta_cents": 108.0,
+      "full_loss_cushion": 5,
+      "harmful_suppressed": 0,
+      "harmful_tag_counts": {},
+      "helpful_suppressed": 4,
+      "loss_cost_cents": 0,
+      "policy": "value_p90_shallow10",
+      "ready_for_review": false,
+      "settled": 58,
+      "suppressed": 4,
+      "suppressed_tag_counts": {
+        "drawdown_neg5_to_neg10": 2,
+        "drawdown_shallow_ge_neg2p5": 2,
+        "gap_neg_0_5pp": 2,
+        "gap_nonnegative": 2,
+        "p_hold_79_85": 2,
+        "p_hold_90_95": 1,
+        "p_hold_ge95": 1,
+        "probability_reduce": 2,
+        "value_over_hold": 2
+      },
+      "winner_recovery_cents": 108.0,
+      "worst_suppressed_rows": [
+        {
+          "current_cents": 20.0,
+          "delta_cents": 2.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -8.671753,
+          "hold_book_gap": -0.013282000000000016,
+          "hold_cents": 22.0,
+          "market": "KXBTC15M-26MAY061830-30",
+          "p_hold": 0.976718,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_ge95",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 20.0,
+          "delta_cents": 12.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -8.310249,
+          "hold_book_gap": -0.01689799999999997,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071015-15",
+          "p_hold": 0.923102,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_90_95",
+            "gap_neg_0_5pp",
+            "drawdown_neg5_to_neg10"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -6.0,
+          "delta_cents": 46.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": -0.834147,
+          "hold_book_gap": 0.02834099999999995,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY071315-15",
+          "p_hold": 0.798341,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -16.0,
+          "delta_cents": 48.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 4.233856,
+          "hold_book_gap": 0.037660999999999945,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071215-15",
+          "p_hold": 0.797661,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        }
+      ]
+    },
+    {
+      "blockers": [
+        "suppressed_decisions_lt_30",
+        "delta_not_positive",
+        "loss_control_cost_negative",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate_net_cents": 272.0,
+      "current_net_cents": 426.0,
+      "delta_cents": -154.0,
+      "full_loss_cushion": 2,
+      "harmful_suppressed": 2,
+      "harmful_tag_counts": {
+        "drawdown_shallow_ge_neg2p5": 2,
+        "gap_neg_0_5pp": 1,
+        "gap_neg_gt5pp": 1,
+        "p_hold_79_85": 2,
+        "value_over_hold": 2
+      },
+      "helpful_suppressed": 7,
+      "loss_cost_cents": -350.0,
+      "policy": "value_p80_shallow5",
+      "ready_for_review": false,
+      "settled": 58,
+      "suppressed": 9,
+      "suppressed_tag_counts": {
+        "drawdown_neg2p5_to_neg5": 1,
+        "drawdown_shallow_ge_neg2p5": 8,
+        "gap_neg_0_5pp": 4,
+        "gap_neg_gt5pp": 3,
+        "gap_nonnegative": 2,
+        "p_hold_79_85": 6,
+        "p_hold_85_90": 3,
+        "probability_reduce": 2,
+        "value_over_hold": 7
+      },
+      "winner_recovery_cents": 196.0,
+      "worst_suppressed_rows": [
+        {
+          "current_cents": 8.0,
+          "delta_cents": -180.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": 4.764109,
+          "hold_book_gap": -0.08764099999999997,
+          "hold_cents": -172.0,
+          "market": "KXBTC15M-26MAY062015-15",
+          "p_hold": 0.812359,
+          "result": "no",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_79_85",
+            "gap_neg_gt5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": false
+        },
+        {
+          "current_cents": 4.0,
+          "delta_cents": -170.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -0.675039,
+          "hold_book_gap": -0.013249999999999984,
+          "hold_cents": -166.0,
+          "market": "KXBTC15M-26MAY071100-00",
+          "p_hold": 0.83675,
+          "result": "no",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_79_85",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": false
+        },
+        {
+          "current_cents": 2.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -1.046434,
+          "hold_book_gap": -0.019535999999999998,
+          "hold_cents": 20.0,
+          "market": "KXBTC15M-26MAY070815-15",
+          "p_hold": 0.890464,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 18.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -0.535395,
+          "hold_book_gap": -0.084646,
+          "hold_cents": 36.0,
+          "market": "KXBTC15M-26MAY070830-30",
+          "p_hold": 0.825354,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_79_85",
+            "gap_neg_gt5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 14.0,
+          "delta_cents": 18.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -4.884431,
+          "hold_book_gap": -0.021156000000000064,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071115-15",
+          "p_hold": 0.888844,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_neg2p5_to_neg5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 10.0,
+          "delta_cents": 22.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": -2.067333,
+          "hold_book_gap": -0.029326999999999992,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY062215-15",
+          "p_hold": 0.860673,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_85_90",
+            "gap_neg_0_5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": 6.0,
+          "delta_cents": 26.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "fair_drawdown_cents": 2.881757,
+          "hold_book_gap": -0.05881800000000004,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY062315-15",
+          "p_hold": 0.811182,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "value_over_hold",
+            "p_hold_79_85",
+            "gap_neg_gt5pp",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -6.0,
+          "delta_cents": 46.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": -0.834147,
+          "hold_book_gap": 0.02834099999999995,
+          "hold_cents": 40.0,
+          "market": "KXBTC15M-26MAY071315-15",
+          "p_hold": 0.798341,
+          "result": "yes",
+          "side": "yes",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        },
+        {
+          "current_cents": -16.0,
+          "delta_cents": 48.0,
+          "exit_reason": "mushroom_v28_probability_reduce",
+          "fair_drawdown_cents": 4.233856,
+          "hold_book_gap": 0.037660999999999945,
+          "hold_cents": 32.0,
+          "market": "KXBTC15M-26MAY071215-15",
+          "p_hold": 0.797661,
+          "result": "no",
+          "side": "no",
+          "tags": [
+            "probability_reduce",
+            "p_hold_79_85",
+            "gap_nonnegative",
+            "drawdown_shallow_ge_neg2p5"
+          ],
+          "won": true
+        }
+      ]
+    }
+  ],
+  "purpose": "Strict-window suppression scarcity audit for the closest positive exit watch.",
+  "row_count": 58,
+  "window": "new_exit_mix_common_forward_v2"
+}

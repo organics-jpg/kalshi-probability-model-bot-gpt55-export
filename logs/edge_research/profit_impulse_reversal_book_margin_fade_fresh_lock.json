@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-05-04T10:05:32.3805100Z",
+  "diagnostic_metrics": {
+    "audit": "impulse_reversal_regime_frontier_latest",
+    "combined_all_net_pnl_cents": 4141.0,
+    "combined_oos_net_pnl_cents": 1837.0,
+    "current_all_accuracy": 0.7081967213114754,
+    "current_all_coverage": 0.993485342019544,
+    "current_all_net_pnl_cents": 2337.0,
+    "current_all_net_roi_on_cost": 0.12509524424638727,
+    "current_fade_selected": 44,
+    "current_holdout_net_pnl_cents": 880.0,
+    "current_validation_net_pnl_cents": 173.0,
+    "min_positive_block_rate": 0.6666666666666666,
+    "min_split_coverage": 0.9777777777777777,
+    "selection_warning": "Selected after seeing historical current/v21 outcomes through the 2026-05-04T09:45:00Z market; forward-test only and not promotion evidence. Strict frontier gate failed because positive block rate was below the 0.70 stability floor.",
+    "strict_pass": false,
+    "v21_all_accuracy": 0.7123287671232876,
+    "v21_all_coverage": 0.9909502262443439,
+    "v21_all_net_pnl_cents": 1804.0,
+    "v21_all_net_roi_on_cost": 0.13607499434480235,
+    "v21_fade_selected": 41,
+    "v21_holdout_net_pnl_cents": 314.0,
+    "v21_validation_net_pnl_cents": 470.0
+  },
+  "lock_close_dt": "2026-05-04T09:45:00+00:00",
+  "base_policy": {
+    "ask_max": 95.0,
+    "chooser": "book_p_side",
+    "gate": "margin_rv15>=0",
+    "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0",
+    "min_score": 0.6,
+    "min_seconds_to_close": 120.0
+  },
+  "impulse_rule": {
+    "impulse_abs_min": 60.0,
+    "impulse_col": "impulse_3_5m",
+    "label": "fresh impulse exceeds margin",
+    "max_chosen_score": 0.82,
+    "max_margin_sigma": 0.75,
+    "min_seconds_to_close": 600.0,
+    "over_margin_min": 20.0
+  },
+  "fade_rule": {
+    "base_label": "book_margin_base",
+    "label": "fade_impulse_3_5m_abs60_over20",
+    "max_fade_ask": 45.0
+  },
+  "research_note": "Forward-registered after impulse-over-margin reversal scan. Physical hypothesis: when the selected side's favorable 3-5 minute BTC impulse is larger than the remaining distance to strike, early terminal probabilities are over-marking a transient displacement; if the opposite side is still cheap, fading that impulse may preserve coverage while improving EV. The diagnostic scan was strong but failed block stability, so this lock exists only to collect causal live evidence.",
+  "source_frontier_csv": "logs\\edge_research\\impulse_reversal_regime_frontier_latest.csv"
+}

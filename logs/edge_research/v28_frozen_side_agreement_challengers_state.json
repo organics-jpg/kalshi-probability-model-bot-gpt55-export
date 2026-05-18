@@ -1,0 +1,22 @@
+{
+  "freeze_ts": "2026-05-05T22:28:58.054865+00:00",
+  "policies": [
+    {
+      "physics": "Use raw broad timing when the p60 forgetting candidate agrees with raw side; if side flips, wait for the p60 forgetting/book-anchored row.",
+      "policy": "raw_when_same_else_first_side_raw_later_book_p60_edge0",
+      "role": "side_agreement_first_side_wait"
+    },
+    {
+      "physics": "Use raw broad timing when the RMT repetition candidate agrees with raw side; if side flips, wait for the RMT p60 row.",
+      "policy": "raw_when_same_else_rmt_repetition_forget_p60_edge0",
+      "role": "side_agreement_rmt_wait"
+    }
+  ],
+  "promotion_floor": {
+    "max_simulated_share": 0.35,
+    "min_settled": 30,
+    "must_be_net_positive": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

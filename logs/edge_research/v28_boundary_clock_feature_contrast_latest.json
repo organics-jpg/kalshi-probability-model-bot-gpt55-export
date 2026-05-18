@@ -1,0 +1,426 @@
+{
+  "generated_at_utc": "2026-05-07T18:06:07.932212+00:00",
+  "interpretation": [
+    "boundary_clock_repair_entry: Test raw_edge floor: approved median 0.0873 > reconstructed median 0.0531.",
+    "boundary_clock_repair_entry: Test recross_hazard_score cap: approved median 0.2337 < reconstructed median 0.5966.",
+    "boundary_clock_repair_entry: Test abs_d_sigma floor: approved median 0.9416 > reconstructed median 0.3795.",
+    "boundary_clock_repair_entry: Test ask_prob floor: approved median 0.7800 > reconstructed median 0.6000.",
+    "boundary_clock_fv_entry_bridge: Test raw_edge floor: approved median 0.0840 > reconstructed median 0.0708.",
+    "boundary_clock_fv_entry_bridge: Test recross_hazard_score cap: approved median 0.2295 < reconstructed median 0.6479.",
+    "boundary_clock_fv_entry_bridge: Test abs_d_sigma floor: approved median 0.9289 > reconstructed median 0.3265.",
+    "boundary_clock_fv_entry_bridge: Test ask_prob floor: approved median 0.7800 > reconstructed median 0.5200."
+  ],
+  "lanes": [
+    {
+      "freeze_ts": "2026-05-06T07:07:27.790042+00:00",
+      "future_denominator": 121,
+      "groups": [
+        {
+          "features": {
+            "abs_d_sigma": {
+              "max": 1.815216,
+              "mean": 1.0223607307692308,
+              "median": 0.941593,
+              "min": 0.850077,
+              "n": 26,
+              "p25": 0.904673,
+              "p75": 1.004534
+            },
+            "ask_prob": {
+              "max": 0.89,
+              "mean": 0.77,
+              "median": 0.78,
+              "min": 0.65,
+              "n": 26,
+              "p25": 0.74,
+              "p75": 0.8
+            },
+            "net_cents": {
+              "max": 32.0,
+              "mean": 8.961538461538462,
+              "median": 19.0,
+              "min": -82.0,
+              "n": 26,
+              "p25": 16.0,
+              "p75": 21.0
+            },
+            "raw_edge": {
+              "max": 0.2636590000000001,
+              "mean": 0.11278230769230767,
+              "median": 0.08726999999999996,
+              "min": 0.053342,
+              "n": 26,
+              "p25": 0.07015299999999991,
+              "p75": 0.11526000000000003
+            },
+            "recross_hazard_score": {
+              "max": 0.5866639910305327,
+              "mean": 0.24094957088111152,
+              "median": 0.23371719144367753,
+              "min": 0.05173622929495089,
+              "n": 26,
+              "p25": 0.13037654446491642,
+              "p75": 0.30173010638435865
+            },
+            "seconds_to_close": {
+              "max": 841.121,
+              "mean": 475.35026923076924,
+              "median": 468.17949999999996,
+              "min": 134.131,
+              "n": 26,
+              "p25": 245.135,
+              "p75": 680.06
+            }
+          },
+          "group": "current_candidate_approved",
+          "losses": 3,
+          "markets": 26,
+          "net_cents": 233.0,
+          "rows": 26,
+          "wins": 23
+        },
+        {
+          "features": {
+            "abs_d_sigma": {
+              "max": 0.927901,
+              "mean": 0.4356478,
+              "median": 0.379541,
+              "min": 0.019784,
+              "n": 65,
+              "p25": 0.276153,
+              "p75": 0.609402
+            },
+            "ask_prob": {
+              "max": 0.82,
+              "mean": 0.5744615384615385,
+              "median": 0.6,
+              "min": 0.12,
+              "n": 65,
+              "p25": 0.5,
+              "p75": 0.7
+            },
+            "net_cents": {
+              "max": 69.0,
+              "mean": -7.153846153846154,
+              "median": 16.0,
+              "min": -84.0,
+              "n": 65,
+              "p25": -54.0,
+              "p75": 29.0
+            },
+            "raw_edge": {
+              "max": 0.663823,
+              "mean": 0.10878940000000001,
+              "median": 0.05305599999999999,
+              "min": 0.0016650000000000276,
+              "n": 65,
+              "p25": 0.03072700000000006,
+              "p75": 0.14676500000000003
+            },
+            "recross_hazard_score": {
+              "max": 1.1682803908710917,
+              "mean": 0.5652840686897205,
+              "median": 0.5965758829179154,
+              "min": 0.08154090794553985,
+              "n": 65,
+              "p25": 0.39442076468786447,
+              "p75": 0.6890532658346525
+            },
+            "seconds_to_close": {
+              "max": 884.381,
+              "mean": 650.551,
+              "median": 689.739,
+              "min": 89.291,
+              "n": 65,
+              "p25": 532.791,
+              "p75": 849.989
+            }
+          },
+          "group": "current_candidate_reconstructed",
+          "losses": 30,
+          "markets": 65,
+          "net_cents": -465.0,
+          "rows": 65,
+          "wins": 35
+        },
+        {
+          "features": {
+            "abs_d_sigma": {
+              "max": 3.991247,
+              "mean": 1.0923615866666667,
+              "median": 0.965012,
+              "min": 0.832571,
+              "n": 75,
+              "p25": 0.900687,
+              "p75": 1.169169
+            },
+            "ask_prob": {
+              "max": 0.9,
+              "mean": 0.7665333333333333,
+              "median": 0.78,
+              "min": 0.09,
+              "n": 75,
+              "p25": 0.73,
+              "p75": 0.82
+            },
+            "net_cents": {
+              "max": 56.0,
+              "mean": 11.826666666666666,
+              "median": 18.0,
+              "min": -84.0,
+              "n": 75,
+              "p25": 13.0,
+              "p75": 23.0
+            },
+            "raw_edge": {
+              "max": 0.909788,
+              "mean": 0.12379937333333332,
+              "median": 0.09227799999999997,
+              "min": 0.05079899999999993,
+              "n": 75,
+              "p25": 0.060905999999999905,
+              "p75": 0.12527699999999997
+            },
+            "recross_hazard_score": {
+              "max": 0.5882306018534502,
+              "mean": 0.27984400276421767,
+              "median": 0.2720718279701733,
+              "min": 0.002807203427908955,
+              "n": 75,
+              "p25": 0.18008324702870745,
+              "p75": 0.3347696641718883
+            },
+            "seconds_to_close": {
+              "max": 868.655,
+              "mean": 557.3457733333333,
+              "median": 584.336,
+              "min": 88.182,
+              "n": 75,
+              "p25": 392.038,
+              "p75": 714.621
+            }
+          },
+          "group": "approved_source_raw_edge_frontier",
+          "losses": 7,
+          "markets": 75,
+          "net_cents": 887.0,
+          "rows": 75,
+          "wins": 68
+        }
+      ],
+      "hypotheses": [
+        "Test raw_edge floor: approved median 0.0873 > reconstructed median 0.0531.",
+        "Test recross_hazard_score cap: approved median 0.2337 < reconstructed median 0.5966.",
+        "Test abs_d_sigma floor: approved median 0.9416 > reconstructed median 0.3795.",
+        "Test ask_prob floor: approved median 0.7800 > reconstructed median 0.6000."
+      ],
+      "lane": "boundary_clock_repair_entry"
+    },
+    {
+      "freeze_ts": "2026-05-06T07:35:02.597585+00:00",
+      "future_denominator": 119,
+      "groups": [
+        {
+          "features": {
+            "abs_d_sigma": {
+              "max": 1.815216,
+              "mean": 1.0404038947368421,
+              "median": 0.928896,
+              "min": 0.850077,
+              "n": 19,
+              "p25": 0.901711,
+              "p75": 1.013529
+            },
+            "ask_prob": {
+              "max": 0.89,
+              "mean": 0.7673684210526316,
+              "median": 0.78,
+              "min": 0.65,
+              "n": 19,
+              "p25": 0.73,
+              "p75": 0.8
+            },
+            "net_cents": {
+              "max": 31.0,
+              "mean": -0.21052631578947367,
+              "median": 18.0,
+              "min": -82.0,
+              "n": 19,
+              "p25": 10.0,
+              "p75": 20.0
+            },
+            "raw_edge": {
+              "max": 0.2636590000000001,
+              "mean": 0.11668605263157893,
+              "median": 0.08396199999999998,
+              "min": 0.053342,
+              "n": 19,
+              "p25": 0.06386899999999995,
+              "p75": 0.131629
+            },
+            "recross_hazard_score": {
+              "max": 0.5866639910305327,
+              "mean": 0.2473125991892609,
+              "median": 0.2295042151020138,
+              "min": 0.03209081623854011,
+              "n": 19,
+              "p25": 0.11042228288847712,
+              "p75": 0.33327148213923247
+            },
+            "seconds_to_close": {
+              "max": 841.121,
+              "mean": 481.3334736842105,
+              "median": 474.481,
+              "min": 90.328,
+              "n": 19,
+              "p25": 211.581,
+              "p75": 714.621
+            }
+          },
+          "group": "current_candidate_approved",
+          "losses": 4,
+          "markets": 19,
+          "net_cents": -4.0,
+          "rows": 19,
+          "wins": 15
+        },
+        {
+          "features": {
+            "abs_d_sigma": {
+              "max": 0.927901,
+              "mean": 0.3837606901408451,
+              "median": 0.326478,
+              "min": 0.001392,
+              "n": 71,
+              "p25": 0.1415,
+              "p75": 0.562923
+            },
+            "ask_prob": {
+              "max": 0.82,
+              "mean": 0.5428169014084507,
+              "median": 0.52,
+              "min": 0.12,
+              "n": 71,
+              "p25": 0.44,
+              "p75": 0.69
+            },
+            "net_cents": {
+              "max": 69.0,
+              "mean": -1.5352112676056338,
+              "median": 16.0,
+              "min": -84.0,
+              "n": 71,
+              "p25": -48.0,
+              "p75": 34.0
+            },
+            "raw_edge": {
+              "max": 0.663823,
+              "mean": 0.1171480985915493,
+              "median": 0.07077799999999995,
+              "min": 0.015958000000000028,
+              "n": 71,
+              "p25": 0.040105999999999975,
+              "p75": 0.14676500000000003
+            },
+            "recross_hazard_score": {
+              "max": 1.35887119729371,
+              "mean": 0.6326904735825692,
+              "median": 0.647900380591622,
+              "min": 0.08154090794553985,
+              "n": 71,
+              "p25": 0.48884383667306214,
+              "p75": 0.8063530983288354
+            },
+            "seconds_to_close": {
+              "max": 884.381,
+              "mean": 686.3612394366197,
+              "median": 771.226,
+              "min": 89.291,
+              "n": 71,
+              "p25": 609.066,
+              "p75": 849.989
+            }
+          },
+          "group": "current_candidate_reconstructed",
+          "losses": 31,
+          "markets": 71,
+          "net_cents": -109.0,
+          "rows": 71,
+          "wins": 40
+        },
+        {
+          "features": {
+            "abs_d_sigma": {
+              "max": 1.815216,
+              "mean": 1.0538539452054794,
+              "median": 0.951357,
+              "min": 0.832571,
+              "n": 73,
+              "p25": 0.900687,
+              "p75": 1.169169
+            },
+            "ask_prob": {
+              "max": 0.9,
+              "mean": 0.7756164383561643,
+              "median": 0.78,
+              "min": 0.42,
+              "n": 73,
+              "p25": 0.74,
+              "p75": 0.83
+            },
+            "net_cents": {
+              "max": 56.0,
+              "mean": 12.04109589041096,
+              "median": 18.0,
+              "min": -84.0,
+              "n": 73,
+              "p25": 13.0,
+              "p75": 23.0
+            },
+            "raw_edge": {
+              "max": 0.451622,
+              "mean": 0.11316758904109588,
+              "median": 0.08979300000000001,
+              "min": 0.05079899999999993,
+              "n": 73,
+              "p25": 0.060905999999999905,
+              "p75": 0.12527699999999997
+            },
+            "recross_hazard_score": {
+              "max": 0.5882306018534502,
+              "mean": 0.2836579688647178,
+              "median": 0.2720718279701733,
+              "min": 0.036021852060430126,
+              "n": 73,
+              "p25": 0.18476769845807034,
+              "p75": 0.35378003234582406
+            },
+            "seconds_to_close": {
+              "max": 868.655,
+              "mean": 561.3285890410959,
+              "median": 584.336,
+              "min": 88.182,
+              "n": 73,
+              "p25": 413.948,
+              "p75": 758.195
+            }
+          },
+          "group": "approved_source_raw_edge_frontier",
+          "losses": 6,
+          "markets": 73,
+          "net_cents": 879.0,
+          "rows": 73,
+          "wins": 67
+        }
+      ],
+      "hypotheses": [
+        "Test raw_edge floor: approved median 0.0840 > reconstructed median 0.0708.",
+        "Test recross_hazard_score cap: approved median 0.2295 < reconstructed median 0.6479.",
+        "Test abs_d_sigma floor: approved median 0.9289 > reconstructed median 0.3265.",
+        "Test ask_prob floor: approved median 0.7800 > reconstructed median 0.5200."
+      ],
+      "lane": "boundary_clock_fv_entry_bridge"
+    }
+  ],
+  "purpose": "Observable-feature contrast for learning from approved-source boundary-clock rows."
+}

@@ -1,0 +1,264 @@
+{
+  "best_lane": {
+    "blockers": [
+      "overlay_selected_settled_lt_30",
+      "overlay_full_loss_cushion_lt_3",
+      "overlay_source_gate_zero_row_margin"
+    ],
+    "diagnostics": {
+      "primary_rows": 2,
+      "sidecar_add_rows": 0,
+      "sidecar_rows": 1
+    },
+    "live_ready": false,
+    "overlay_rule": "dual_lane_overlay_raw05_recross_le030_abs085",
+    "rows": [
+      {
+        "abs_d_sigma": 0.850077,
+        "ask_prob": 0.78,
+        "component": "strict_delayed_recheck_rescue:drop15_bid60",
+        "current_cents": 32.0,
+        "exit_bid": 96.0,
+        "exit_child_delta_cents": 0.0,
+        "exit_child_rescue": false,
+        "exit_child_selected_cents": 44.0,
+        "exit_child_weighted_cents": 44.0,
+        "exit_reason": "mushroom_v28_exit_value_over_hold",
+        "exit_ts": "2026-05-07T17:12:12.158487+00:00",
+        "fair_drawdown_cents": -14.749774,
+        "final_weighted_cents": 44.0,
+        "hold_cents": 44.0,
+        "joined_exit": true,
+        "market": "KXBTC15M-26MAY071315-15",
+        "midprice_boundary_band": false,
+        "min_window_bid": 92.0,
+        "overlay_filter": "dual_lane_overlay_raw05_recross_le030_abs085",
+        "p_hold": 0.927498,
+        "parent_fill_scale": 1.0,
+        "parent_fill_shrink_delta_cents": 0.0,
+        "raw_edge": 0.07082699999999997,
+        "raw_net_cents": 20.0,
+        "recheck_bid": 98.0,
+        "recheck_missing": false,
+        "recross_hazard_score": 0.13242642354050885,
+        "selected_cents": 44.0,
+        "selected_delta_cents": 12.0,
+        "selected_suppressed": true,
+        "selected_weighted_cents": 44.0,
+        "side": "yes",
+        "side_won": true,
+        "source": "approved_entry",
+        "suppressed": true,
+        "weight": 1.0,
+        "weighted_net_cents": 20.0,
+        "window_drop_cents": 4.0
+      }
+    ],
+    "selected_markets": [
+      "KXBTC15M-26MAY071315-15"
+    ],
+    "sidecar_policy": "post_dual_overlay_filter_entry_cheap_penalty025_rank_only",
+    "strict_forward": true,
+    "summary": {
+      "avg_net_cents": 44.0,
+      "coverage_pct": 50.0,
+      "entries": 1,
+      "full_loss_cushion": 0,
+      "losses": 0,
+      "net_cents": 44.0,
+      "reconstructed_share": 0.0,
+      "settled": 1,
+      "source_counts": {
+        "approved_entry": 1
+      },
+      "source_gate_row_margin": 0,
+      "wins": 1,
+      "worst_loss_cents": 44.0
+    }
+  },
+  "earliest_min_sample_local_time": "2026-05-07T20:20:03.875032-04:00",
+  "earliest_min_sample_utc": "2026-05-08T00:20:03.875032+00:00",
+  "force_replay": false,
+  "freeze_local_time": "2026-05-07T12:50:03.875032-04:00",
+  "generated_at_utc": "2026-05-11T03:46:02.223702+00:00",
+  "lanes": [
+    {
+      "blockers": [
+        "overlay_selected_settled_lt_30",
+        "overlay_full_loss_cushion_lt_3",
+        "overlay_source_gate_zero_row_margin"
+      ],
+      "diagnostics": {
+        "primary_rows": 2,
+        "sidecar_add_rows": 0,
+        "sidecar_rows": 1
+      },
+      "live_ready": false,
+      "overlay_rule": "dual_lane_overlay_raw05_recross_le030_abs085",
+      "rows": [
+        {
+          "abs_d_sigma": 0.850077,
+          "ask_prob": 0.78,
+          "component": "strict_delayed_recheck_rescue:drop15_bid60",
+          "current_cents": 32.0,
+          "exit_bid": 96.0,
+          "exit_child_delta_cents": 0.0,
+          "exit_child_rescue": false,
+          "exit_child_selected_cents": 44.0,
+          "exit_child_weighted_cents": 44.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "exit_ts": "2026-05-07T17:12:12.158487+00:00",
+          "fair_drawdown_cents": -14.749774,
+          "final_weighted_cents": 44.0,
+          "hold_cents": 44.0,
+          "joined_exit": true,
+          "market": "KXBTC15M-26MAY071315-15",
+          "midprice_boundary_band": false,
+          "min_window_bid": 92.0,
+          "overlay_filter": "dual_lane_overlay_raw05_recross_le030_abs085",
+          "p_hold": 0.927498,
+          "parent_fill_scale": 1.0,
+          "parent_fill_shrink_delta_cents": 0.0,
+          "raw_edge": 0.07082699999999997,
+          "raw_net_cents": 20.0,
+          "recheck_bid": 98.0,
+          "recheck_missing": false,
+          "recross_hazard_score": 0.13242642354050885,
+          "selected_cents": 44.0,
+          "selected_delta_cents": 12.0,
+          "selected_suppressed": true,
+          "selected_weighted_cents": 44.0,
+          "side": "yes",
+          "side_won": true,
+          "source": "approved_entry",
+          "suppressed": true,
+          "weight": 1.0,
+          "weighted_net_cents": 20.0,
+          "window_drop_cents": 4.0
+        }
+      ],
+      "selected_markets": [
+        "KXBTC15M-26MAY071315-15"
+      ],
+      "sidecar_policy": "post_dual_overlay_filter_entry_cheap_penalty025_rank_only",
+      "strict_forward": true,
+      "summary": {
+        "avg_net_cents": 44.0,
+        "coverage_pct": 50.0,
+        "entries": 1,
+        "full_loss_cushion": 0,
+        "losses": 0,
+        "net_cents": 44.0,
+        "reconstructed_share": 0.0,
+        "settled": 1,
+        "source_counts": {
+          "approved_entry": 1
+        },
+        "source_gate_row_margin": 0,
+        "wins": 1,
+        "worst_loss_cents": 44.0
+      }
+    },
+    {
+      "blockers": [
+        "overlay_selected_settled_lt_30",
+        "overlay_full_loss_cushion_lt_3",
+        "overlay_source_gate_zero_row_margin"
+      ],
+      "diagnostics": {
+        "primary_rows": 2,
+        "sidecar_add_rows": 0,
+        "sidecar_rows": 1
+      },
+      "live_ready": false,
+      "overlay_rule": "dual_lane_overlay_raw05_recross_le030_abs085",
+      "rows": [
+        {
+          "abs_d_sigma": 0.850077,
+          "ask_prob": 0.78,
+          "component": "strict_delayed_recheck_rescue:drop15_bid60",
+          "current_cents": 32.0,
+          "exit_bid": 96.0,
+          "exit_child_delta_cents": 0.0,
+          "exit_child_rescue": false,
+          "exit_child_selected_cents": 44.0,
+          "exit_child_weighted_cents": 44.0,
+          "exit_reason": "mushroom_v28_exit_value_over_hold",
+          "exit_ts": "2026-05-07T17:12:12.158487+00:00",
+          "fair_drawdown_cents": -14.749774,
+          "final_weighted_cents": 44.0,
+          "hold_cents": 44.0,
+          "joined_exit": true,
+          "market": "KXBTC15M-26MAY071315-15",
+          "midprice_boundary_band": false,
+          "min_window_bid": 92.0,
+          "overlay_filter": "dual_lane_overlay_raw05_recross_le030_abs085",
+          "p_hold": 0.927498,
+          "parent_fill_scale": 1.0,
+          "parent_fill_shrink_delta_cents": 0.0,
+          "raw_edge": 0.07082699999999997,
+          "raw_net_cents": 20.0,
+          "recheck_bid": 98.0,
+          "recheck_missing": false,
+          "recross_hazard_score": 0.13242642354050885,
+          "selected_cents": 44.0,
+          "selected_delta_cents": 12.0,
+          "selected_suppressed": true,
+          "selected_weighted_cents": 44.0,
+          "side": "yes",
+          "side_won": true,
+          "source": "approved_entry",
+          "suppressed": true,
+          "weight": 1.0,
+          "weighted_net_cents": 20.0,
+          "window_drop_cents": 4.0
+        }
+      ],
+      "selected_markets": [
+        "KXBTC15M-26MAY071315-15"
+      ],
+      "sidecar_policy": "post_dual_overlay_filter_bridge_cheap_penalty025_rank_only",
+      "strict_forward": true,
+      "summary": {
+        "avg_net_cents": 44.0,
+        "coverage_pct": 50.0,
+        "entries": 1,
+        "full_loss_cushion": 0,
+        "losses": 0,
+        "net_cents": 44.0,
+        "reconstructed_share": 0.0,
+        "settled": 1,
+        "source_counts": {
+          "approved_entry": 1
+        },
+        "source_gate_row_margin": 0,
+        "wins": 1,
+        "worst_loss_cents": 44.0
+      }
+    }
+  ],
+  "live_baseline_cents": -255.98999999999998,
+  "market_windows_remaining_to_min_sample": 0,
+  "possible_market_windows_since_freeze": 331,
+  "pre_sample_short_circuit": false,
+  "promotion_use": "own_freeze_only",
+  "read": [
+    "Research-only own-freeze dual-lane overlay filter v2; no live bot changes or orders.",
+    "This is an overlay-only branch, not a replacement for live v28.",
+    "The rule is observable: raw edge >= 0.05, recross hazard <= 0.30, and abs distance >= 0.85.",
+    "Rows before this freeze are diagnostic only and cannot promote this branch."
+  ],
+  "state": {
+    "base_candidate": "dual_lane_overlap_union",
+    "candidate_family": "dual_lane_overlay_filter_v2_watch",
+    "freeze_ts_utc": "2026-05-07T16:50:03.875032+00:00",
+    "note": "Born after the refreshed same-window frontier preferred an observable raw-edge plus low-recross plus distance filter over the earlier NO-only rule.",
+    "overlay_rule": {
+      "abs_d_sigma_min": 0.85,
+      "name": "dual_lane_overlay_raw05_recross_le030_abs085",
+      "raw_edge_min": 0.05,
+      "recross_hazard_score_max": 0.3,
+      "use": "risk_control_overlay_only"
+    }
+  }
+}

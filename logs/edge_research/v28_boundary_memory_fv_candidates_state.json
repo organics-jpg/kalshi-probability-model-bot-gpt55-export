@@ -1,0 +1,11 @@
+{
+  "entry_policy": "raw_v28_p50_edge0_fixed_selection",
+  "freeze_ts": "2026-05-06T01:40:40.929142+00:00",
+  "hypothesis": "Boundary information should be forgotten when raw probability is weak, edge is thin, and recross/strike geometry is turbulent; strong raw conviction can retain or sharpen FV information.",
+  "promotion_floor": {
+    "min_settled": 30,
+    "must_improve_brier_vs_raw": true,
+    "must_improve_logloss_vs_raw": true,
+    "must_not_change_entry_selection": true
+  }
+}

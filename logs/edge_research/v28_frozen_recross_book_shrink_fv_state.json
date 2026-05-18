@@ -1,0 +1,7 @@
+{
+  "entry_policy": "book_plus_05_no_cheap_yes_boundary",
+  "freeze_ts_utc": "2026-05-06T08:42:25.757266+00:00",
+  "physics": "High recross plus large raw/book disagreement means the executable book can encode path instability not captured by static boundary FV.",
+  "rule": "On book_plus_05_no_cheap_yes_boundary rows, shrink raw v28 75% toward book when recross_hazard >= 0.65 and abs(raw-book) >= 0.08; otherwise keep raw.",
+  "variant": "recross_book_shrink_065_delta08"
+}

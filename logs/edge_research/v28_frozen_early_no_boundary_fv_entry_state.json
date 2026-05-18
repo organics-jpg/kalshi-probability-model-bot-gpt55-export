@@ -1,0 +1,8 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "early_no_boundary_fv_entry",
+  "freeze_ts_utc": "2026-05-06T11:24:55.409912+00:00",
+  "physics": "Early NO near the strike is a path-decay thesis: there is enough time for BTC to recross and invalidate the NO edge. This should reduce confidence only in that asymmetric state, not in all boundary heat.",
+  "rule": "For NO rows with stc>=720, raw p<0.70, abs_d<=0.45, and recross>=0.55, shrink FV toward 50 by a continuous recross/near/clock heat. Apply the unchanged target-coverage policy to adjusted rows.",
+  "source_artifact": "v28_frozen_early_no_boundary_decay_repair_entry_latest"
+}

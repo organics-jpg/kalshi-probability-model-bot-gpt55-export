@@ -1,0 +1,151 @@
+{
+  "blockers": [
+    "research_only",
+    "not_frozen_forward",
+    "join_audit_not_watch",
+    "selected_decisions_lt_30"
+  ],
+  "exact_join": {
+    "ambiguous": 0,
+    "matched": 0,
+    "unmatched": 100
+  },
+  "exit_clock_rows": 100,
+  "exit_clock_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_clock_materialized_snapshot_latest.json",
+  "generated_at_utc": "2026-05-07T17:10:00.208127+00:00",
+  "interpretation": [
+    "Exact entry timestamp join is not viable because artifacts differ by small capture offsets.",
+    "A 0.5s join is stable if unmatched and ambiguous counts are zero.",
+    "The joined exit-clock denominator is the relevant surface for any future recross exit watch; it is smaller than the continuous-scorecard replay."
+  ],
+  "materialized_snapshot_generated_at_utc": "2026-05-07T17:09:30.045449+00:00",
+  "rule": {
+    "recross_hazard_score_min": 0.45
+  },
+  "scorecard_rows": 170,
+  "tolerance_join": {
+    "ambiguous": 0,
+    "matched": 100,
+    "summary": {
+      "candidate_net_cents": 487.0,
+      "current_net_cents": 363.0,
+      "delta_cents": 124.0,
+      "flat_rows": 4,
+      "harmful_rows": 0,
+      "helpful_rows": 4,
+      "loss_flips": 0,
+      "max_join_diff_seconds": 0.124754,
+      "new_losses": 0,
+      "rows": 100,
+      "selected_examples": [
+        {
+          "actual_gross_cents": 0,
+          "entry_ts": "2026-05-06T14:02:01.281253+00:00",
+          "exit_reason": "exit_trigger",
+          "exit_ts": "2026-05-06T14:03:26.021060+00:00",
+          "hold_delta_cents": 60.0,
+          "hold_gross_cents": 60,
+          "join_diff_seconds": 0.02563,
+          "market": "KXBTC15M-26MAY061015-15",
+          "recross_hazard_score": 0.5588405505167043,
+          "scorecard_entry_ts": "2026-05-06T14:02:01.255623+00:00",
+          "side": "no"
+        },
+        {
+          "actual_gross_cents": 54,
+          "entry_ts": "2026-05-06T14:03:29.196191+00:00",
+          "exit_reason": null,
+          "exit_ts": "",
+          "hold_delta_cents": 0.0,
+          "hold_gross_cents": 54,
+          "join_diff_seconds": 0.077676,
+          "market": "KXBTC15M-26MAY061015-15",
+          "recross_hazard_score": 0.5053900102338842,
+          "scorecard_entry_ts": "2026-05-06T14:03:29.118515+00:00",
+          "side": "no"
+        },
+        {
+          "actual_gross_cents": 40,
+          "entry_ts": "2026-05-06T15:16:07.783170+00:00",
+          "exit_reason": null,
+          "exit_ts": "",
+          "hold_delta_cents": 0.0,
+          "hold_gross_cents": 40,
+          "join_diff_seconds": 0.028548,
+          "market": "KXBTC15M-26MAY061130-30",
+          "recross_hazard_score": 0.5363298971132572,
+          "scorecard_entry_ts": "2026-05-06T15:16:07.754622+00:00",
+          "side": "yes"
+        },
+        {
+          "actual_gross_cents": 16,
+          "entry_ts": "2026-05-06T15:45:31.422761+00:00",
+          "exit_reason": "exit_trigger",
+          "exit_ts": "2026-05-06T15:51:20.077451+00:00",
+          "hold_delta_cents": 20.0,
+          "hold_gross_cents": 36,
+          "join_diff_seconds": 0.07026,
+          "market": "KXBTC15M-26MAY061200-00",
+          "recross_hazard_score": 0.5526871033269218,
+          "scorecard_entry_ts": "2026-05-06T15:45:31.352501+00:00",
+          "side": "yes"
+        },
+        {
+          "actual_gross_cents": 16,
+          "entry_ts": "2026-05-07T13:47:02.591907+00:00",
+          "exit_reason": "exit_trigger",
+          "exit_ts": "2026-05-07T13:57:21.055475+00:00",
+          "hold_delta_cents": 42.0,
+          "hold_gross_cents": 58,
+          "join_diff_seconds": 0.104632,
+          "market": "KXBTC15M-26MAY071000-00",
+          "recross_hazard_score": 0.48411120022028664,
+          "scorecard_entry_ts": "2026-05-07T13:47:02.487275+00:00",
+          "side": "no"
+        },
+        {
+          "actual_gross_cents": 48,
+          "entry_ts": "2026-05-07T14:17:02.903080+00:00",
+          "exit_reason": null,
+          "exit_ts": "",
+          "hold_delta_cents": 0.0,
+          "hold_gross_cents": 48,
+          "join_diff_seconds": 0.064104,
+          "market": "KXBTC15M-26MAY071030-30",
+          "recross_hazard_score": 0.572086869997676,
+          "scorecard_entry_ts": "2026-05-07T14:17:02.838976+00:00",
+          "side": "no"
+        },
+        {
+          "actual_gross_cents": 50,
+          "entry_ts": "2026-05-07T14:32:42.856405+00:00",
+          "exit_reason": null,
+          "exit_ts": "",
+          "hold_delta_cents": 0.0,
+          "hold_gross_cents": 50,
+          "join_diff_seconds": 0.106246,
+          "market": "KXBTC15M-26MAY071045-45",
+          "recross_hazard_score": 0.4699176077596592,
+          "scorecard_entry_ts": "2026-05-07T14:32:42.750159+00:00",
+          "side": "no"
+        },
+        {
+          "actual_gross_cents": 44,
+          "entry_ts": "2026-05-07T15:31:46.752356+00:00",
+          "exit_reason": "exit_trigger",
+          "exit_ts": "2026-05-07T15:42:14.190856+00:00",
+          "hold_delta_cents": 2.0,
+          "hold_gross_cents": 46,
+          "join_diff_seconds": 0.037008,
+          "market": "KXBTC15M-26MAY071145-45",
+          "recross_hazard_score": 0.5850484031165768,
+          "scorecard_entry_ts": "2026-05-07T15:31:46.715348+00:00",
+          "side": "yes"
+        }
+      ],
+      "selected_rows": 8
+    },
+    "tolerance_seconds": 0.5,
+    "unmatched": 0
+  }
+}

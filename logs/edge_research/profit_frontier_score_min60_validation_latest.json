@@ -1,0 +1,141 @@
+{
+  "all_metric": {
+    "accuracy": 0.7568493150684932,
+    "accuracy_minus_break_even": 0.04202054794520549,
+    "ask_cost_cents": 20300.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 295,
+    "coverage": 0.9898305084745763,
+    "coverage_pass": true,
+    "entry_cost_cents": 20873.0,
+    "entry_fee_cents": 573.0,
+    "fee_aware_break_even_accuracy": 0.7148287671232877,
+    "gross_pnl_cents": 1800.0,
+    "gross_roi_on_ask": 0.08866995073891626,
+    "losses": 71,
+    "markets": 292,
+    "mean_ask": 69.52054794520548,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.285,
+    "net_edge_per_base_market_cents": 4.159322033898305,
+    "net_edge_per_selected_cents": 4.2020547945205475,
+    "net_pnl_cents": 1227.0,
+    "net_roi_on_cost": 0.05878407512096968,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7045171643411514,
+    "wilson_minus_break_even": -0.010311602782136275,
+    "wins": 221
+  },
+  "fresh_metric": {
+    "accuracy": 0.7272727272727273,
+    "accuracy_minus_break_even": -0.004242424242424159,
+    "ask_cost_cents": 2349.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 33,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 2414.0,
+    "entry_fee_cents": 65.0,
+    "fee_aware_break_even_accuracy": 0.7315151515151515,
+    "gross_pnl_cents": 51.0,
+    "gross_roi_on_ask": 0.021711366538952746,
+    "losses": 9,
+    "markets": 33,
+    "mean_ask": 71.18181818181819,
+    "median_ask": 69.0,
+    "median_seconds_to_close": 773.162,
+    "net_edge_per_base_market_cents": -0.42424242424242425,
+    "net_edge_per_selected_cents": -0.42424242424242425,
+    "net_pnl_cents": -14.0,
+    "net_roi_on_cost": -0.00579950289975145,
+    "p75_ask": 77.0,
+    "positive_net": false,
+    "wilson95_lower": 0.5578244099712737,
+    "wilson_minus_break_even": -0.17369074154387776,
+    "wins": 24
+  },
+  "generated_utc": "20260504_075204Z",
+  "lock": {
+    "created_utc": "2026-05-03T22:17:12.0720043+00:00",
+    "discovery_metrics": {
+      "combined_all_net_pnl_cents": 1835.0,
+      "current_all_accuracy": 0.7626459143968871,
+      "current_all_coverage": 0.9884615384615385,
+      "current_all_net_pnl_cents": 1301.0,
+      "current_all_net_roi_on_cost": 0.07109678124487677,
+      "current_holdout_net_pnl_cents": 47.0,
+      "max_median_ask": 68.0,
+      "min_oos_net_roi": 0.012523314681588063,
+      "v21_all_accuracy": 0.7385321100917431,
+      "v21_all_coverage": 0.9864253393665159,
+      "v21_all_net_pnl_cents": 534.0,
+      "v21_all_net_roi_on_cost": 0.03430553771039445,
+      "v21_train_net_pnl_cents": -19.0
+    },
+    "lock_close_dt": "2026-05-03T22:15:00+00:00",
+    "policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "research_note": "Forward-registered after refreshed 20260503_221153Z cross-dataset profit frontier. Diagnostic only: current holdout edge was small and v21 train split was negative, so this is not promotion evidence.",
+    "source_frontier_csv": "logs\\edge_research\\cross_dataset_profit_frontier_latest.csv"
+  },
+  "name": "score_min60",
+  "registry_recompute_divergence": {
+    "compared": 33,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY031845-45",
+        "recomputed": "2026-05-03T22:34:15.030000+00:00 yes 81.0c",
+        "strict": "2026-05-03T22:35:00.056000+00:00 yes 86.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY031945-45",
+        "recomputed": "2026-05-03T23:31:35.210000+00:00 yes 63.0c",
+        "strict": "2026-05-03T23:32:05.265000+00:00 yes 66.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032045-45",
+        "recomputed": "2026-05-04T00:38:11.191000+00:00 no 78.0c",
+        "strict": "2026-05-04T00:34:55.918000+00:00 yes 65.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032115-15",
+        "recomputed": "2026-05-04T01:01:13.732000+00:00 no 69.0c",
+        "strict": "2026-05-04T01:02:13.838000+00:00 no 81.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032130-30",
+        "recomputed": "2026-05-04T01:18:00.227000+00:00 yes 73.0c",
+        "strict": "2026-05-04T01:17:45.202000+00:00 yes 73.0c"
+      }
+    ],
+    "mismatches": 11,
+    "missing_recompute": 5
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.7027027027027027,
+    "base_markets": 38,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7262162162162162,
+    "losses": 11,
+    "markets": 37,
+    "median_ask": 69.0,
+    "net_pnl_cents": -87.0,
+    "net_roi_on_cost": -0.0323781168589505,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 38,
+    "wilson95_lower": 0.5421686408886435,
+    "wilson_minus_break_even": -0.18404757532757277,
+    "wins": 26
+  }
+}

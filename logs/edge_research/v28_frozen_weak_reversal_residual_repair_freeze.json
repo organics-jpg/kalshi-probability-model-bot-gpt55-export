@@ -1,0 +1,18 @@
+{
+  "base_target_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T10:25:15.561162+00:00",
+  "policy": "weak_reversal_skip_edge_5_8pp_no_repair_farthest_boundary",
+  "residual_skip": {
+    "raw_edge_high": 0.08,
+    "raw_edge_low": 0.05,
+    "repair_scorer": "farthest_boundary",
+    "side": "no"
+  },
+  "weak_reversal": {
+    "abs_d_max": 0.25,
+    "max_delay": 240.0,
+    "no_replacement_mode": "abstain",
+    "p_max": 0.6,
+    "recross_floor": 0.75
+  }
+}

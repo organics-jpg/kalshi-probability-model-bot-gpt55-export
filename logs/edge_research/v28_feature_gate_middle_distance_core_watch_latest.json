@@ -1,0 +1,381 @@
+{
+  "feature_gate_freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+  "generated_at_utc": "2026-05-07T13:46:47.922942+00:00",
+  "interpretation": [
+    "Research-only middle-distance core watch; no live bot changes or orders.",
+    "Own-freeze watch has only 7 possible 15m windows since birth, so heavy replay was skipped.",
+    "This cannot be live-ready until at least 30 post-freeze market windows exist and then clear sample/source/PnL/cushion/live-baseline gates."
+  ],
+  "lanes": [
+    {
+      "broad_required": false,
+      "future_denominator": 0,
+      "lane": "post_middle_core_freeze_entry",
+      "rules": [
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "middle_core_raw03_recross50_abs075_125_ask35",
+          "rule_params": {
+            "abs_max": 1.25,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.03,
+            "recross_max": 0.5
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "middle_core_raw05_recross60_abs075_125_ask35",
+          "rule_params": {
+            "abs_max": 1.25,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.05,
+            "recross_max": 0.6
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "abs_floor_raw03_recross50_abs075_ask35",
+          "rule_params": {
+            "abs_max": null,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.03,
+            "recross_max": 0.5
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "abs_floor_raw05_recross60_abs075_ask35",
+          "rule_params": {
+            "abs_max": null,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.05,
+            "recross_max": 0.6
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "upper_abs_tail_raw03_recross50_abs125_ask35",
+          "rule_params": {
+            "abs_max": null,
+            "abs_min": 1.25,
+            "ask_min": 0.35,
+            "raw_min": 0.03,
+            "recross_max": 0.5
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        }
+      ]
+    },
+    {
+      "broad_required": false,
+      "future_denominator": 0,
+      "lane": "post_middle_core_freeze_bridge",
+      "rules": [
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "middle_core_raw03_recross50_abs075_125_ask35",
+          "rule_params": {
+            "abs_max": 1.25,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.03,
+            "recross_max": 0.5
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "middle_core_raw05_recross60_abs075_125_ask35",
+          "rule_params": {
+            "abs_max": 1.25,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.05,
+            "recross_max": 0.6
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "abs_floor_raw03_recross50_abs075_ask35",
+          "rule_params": {
+            "abs_max": null,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.03,
+            "recross_max": 0.5
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "abs_floor_raw05_recross60_abs075_ask35",
+          "rule_params": {
+            "abs_max": null,
+            "abs_min": 0.75,
+            "ask_min": 0.35,
+            "raw_min": 0.05,
+            "recross_max": 0.6
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        },
+        {
+          "blockers": [
+            "own_freeze_presample_window_lt_30",
+            "settled_lt_30"
+          ],
+          "delta_vs_live_cents": 0.0,
+          "full_loss_cushion_estimate": 0,
+          "future_denominator": 0,
+          "live_ready": false,
+          "net_without_top_win_cents": 0.0,
+          "reconstructed_share": null,
+          "rows": [],
+          "rule": "upper_abs_tail_raw03_recross50_abs125_ask35",
+          "rule_params": {
+            "abs_max": null,
+            "abs_min": 1.25,
+            "ask_min": 0.35,
+            "raw_min": 0.03,
+            "recross_max": 0.5
+          },
+          "source_counts": {},
+          "summary": {
+            "coverage_pct": 0.0,
+            "entries": 0,
+            "losses": 0,
+            "net_cents": 0.0,
+            "settled": 0,
+            "wins": 0
+          },
+          "top_win_cents": 0.0
+        }
+      ]
+    }
+  ],
+  "live_baseline_cents": 925.0,
+  "possible_market_windows_since_watch_freeze": 7,
+  "pre_sample_short_circuit": true,
+  "state": {
+    "candidate_family": "feature_gate_middle_distance_observable_core",
+    "freeze_ts_utc": "2026-05-07T12:00:53.752707+00:00",
+    "physics": "Low-abs-distance repair rows behave like boundary-noise filler. The abs 0.75-1.25 pocket has enough distance from the strike to avoid the worst recross noise while avoiding far-tail overpayment.",
+    "promotion_note": "This is a frozen watch lane only. It cannot be live-tested until its own post-freeze rows clear sample, source, net, cushion, and controlled live-test gates.",
+    "rules": {
+      "abs_floor_raw03_recross50_abs075_ask35": {
+        "abs_max": null,
+        "abs_min": 0.75,
+        "ask_min": 0.35,
+        "raw_min": 0.03,
+        "recross_max": 0.5
+      },
+      "abs_floor_raw05_recross60_abs075_ask35": {
+        "abs_max": null,
+        "abs_min": 0.75,
+        "ask_min": 0.35,
+        "raw_min": 0.05,
+        "recross_max": 0.6
+      },
+      "middle_core_raw03_recross50_abs075_125_ask35": {
+        "abs_max": 1.25,
+        "abs_min": 0.75,
+        "ask_min": 0.35,
+        "raw_min": 0.03,
+        "recross_max": 0.5
+      },
+      "middle_core_raw05_recross60_abs075_125_ask35": {
+        "abs_max": 1.25,
+        "abs_min": 0.75,
+        "ask_min": 0.35,
+        "raw_min": 0.05,
+        "recross_max": 0.6
+      },
+      "upper_abs_tail_raw03_recross50_abs125_ask35": {
+        "abs_max": null,
+        "abs_min": 1.25,
+        "ask_min": 0.35,
+        "raw_min": 0.03,
+        "recross_max": 0.5
+      }
+    }
+  }
+}

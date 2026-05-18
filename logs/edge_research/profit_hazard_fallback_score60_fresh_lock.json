@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-05-04T07:45:01+00:00",
+  "diagnostic_metrics": {
+    "audit": "hazard_fallback_causal_frontier_latest",
+    "combined_all_net_pnl_cents": 1964.0,
+    "current_all_accuracy": 0.7534,
+    "current_all_coverage": 0.9898,
+    "current_all_net_pnl_cents": 1268.0,
+    "current_all_net_roi_on_cost": 0.0612,
+    "min_oos_coverage": 0.9778,
+    "noncausal_gap_cents": -52.0,
+    "selection_warning": "Diagnostic row was visible only after scanning validation/holdout; this lock is forward-test only and not promotion evidence.",
+    "v21_all_accuracy": 0.7397,
+    "v21_all_coverage": 0.991,
+    "v21_all_net_pnl_cents": 696.0,
+    "v21_all_net_roi_on_cost": 0.0449
+  },
+  "fallback_policy": {
+    "ask_max": 95.0,
+    "chooser": "score_min_book_rv15",
+    "label": "fallback=score_min_book_rv15; score>=0.60; ask<=95; sec>=60",
+    "min_score": 0.6,
+    "min_seconds_to_close": 60.0
+  },
+  "lock_close_dt": "2026-05-04T07:45:00+00:00",
+  "primary_policy": {
+    "ask_max": 80.0,
+    "ask_min": 0.0,
+    "chooser": "hazard_discounted_mean_15",
+    "gate": "touch_loss15<=0.80",
+    "label": "primary=hazard_discounted_mean_15>=0.45; 0<=ask<=80; sec>=60; touch_loss15<=0.80",
+    "min_score": 0.45,
+    "min_seconds_to_close": 60.0
+  },
+  "research_note": "Forward-registered after the causal hazard fallback scan. Physical hypothesis: use path/touch hazard when it is the first available high-confidence signal, otherwise use a conservative terminal prior based on min(book, realized-vol Brownian). Causal arbitration chooses the earliest eligible primary/fallback row by timestamp. This lock is research-only and requires strict live validation before any promotion.",
+  "source_audit_csv": "logs\\edge_research\\hazard_fallback_causal_frontier_latest.csv"
+}

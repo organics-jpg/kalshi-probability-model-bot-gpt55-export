@@ -1,0 +1,18 @@
+{
+  "entry_policy": "raw_v28_p50_edge0_fixed_selection",
+  "freeze_ts": "2026-05-06T15:17:20.853664+00:00",
+  "hypothesis": "FV direction is useful, but probability magnitude needs stateful humility. Combine the robust noise_shrink_light overlay with a small phi-shrink exception for high-recross/near-strike geometry.",
+  "promotion_floor": {
+    "min_settled": 30,
+    "must_improve_brier_vs_raw": true,
+    "must_improve_logloss_vs_raw": true,
+    "must_not_change_entry_selection": true
+  },
+  "rules": [
+    "If p_raw < 0.60 and phi_penalty >= 2.0, keep raw probability.",
+    "If p_raw >= 0.60 and recross >= 0.75, use phi_half_shrink_to50.",
+    "If p_raw >= 0.60 and abs_d_sigma <= 0.25, use phi_quarter_shrink_to50.",
+    "Otherwise use noise_shrink_light."
+  ],
+  "state_version": "hybrid_confidence_shrink_v1"
+}

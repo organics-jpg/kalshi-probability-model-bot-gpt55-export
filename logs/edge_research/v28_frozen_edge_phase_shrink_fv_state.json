@@ -1,0 +1,7 @@
+{
+  "entry_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "freeze_ts_utc": "2026-05-06T05:40:31.466696+00:00",
+  "physics": "Boundary turbulence should forget confidence only when the executable edge is not wide; wide-edge boundary motion may be valid acceleration.",
+  "rule": "shrink halfway toward 50 when abs_d<0.45 and recross>=0.55 and edge<8pp, or when abs_d>=0.45 and recross>=0.40 and edge<2pp",
+  "variant": "edge_phase_shrink"
+}

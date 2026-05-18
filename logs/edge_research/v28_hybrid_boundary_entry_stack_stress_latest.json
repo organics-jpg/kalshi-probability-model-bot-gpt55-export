@@ -1,0 +1,260 @@
+{
+  "diagnostic": {
+    "best_broad_positive": {
+      "approved_entry_share": 0.5,
+      "blockers": [
+        "reconstructed_share_gt_35pct"
+      ],
+      "candidate": "all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair",
+      "coverage_pct": 75.0,
+      "delta_vs_target_cents": 1409.0,
+      "entries": 114,
+      "full_loss_cushion_estimate": 8,
+      "losses": 31,
+      "net_cents": 803.0,
+      "reconstructed_share": 0.5,
+      "settled": 114,
+      "wins": 83
+    },
+    "best_full_loss_runway": [
+      {
+        "added_full_losses": 1,
+        "still_positive": true,
+        "stressed_net_cents": 703.0,
+        "stressed_settled": 115
+      },
+      {
+        "added_full_losses": 2,
+        "still_positive": true,
+        "stressed_net_cents": 603.0,
+        "stressed_settled": 116
+      },
+      {
+        "added_full_losses": 3,
+        "still_positive": true,
+        "stressed_net_cents": 503.0,
+        "stressed_settled": 117
+      },
+      {
+        "added_full_losses": 4,
+        "still_positive": true,
+        "stressed_net_cents": 403.0,
+        "stressed_settled": 118
+      },
+      {
+        "added_full_losses": 5,
+        "still_positive": true,
+        "stressed_net_cents": 303.0,
+        "stressed_settled": 119
+      },
+      {
+        "added_full_losses": 6,
+        "still_positive": true,
+        "stressed_net_cents": 203.0,
+        "stressed_settled": 120
+      },
+      {
+        "added_full_losses": 7,
+        "still_positive": true,
+        "stressed_net_cents": 103.0,
+        "stressed_settled": 121
+      }
+    ],
+    "best_watch_source_broad_positive": {},
+    "broad_positive_count": 20,
+    "clean_gate_count": 0,
+    "family_best": [
+      {
+        "approved_entry_share": 0.5,
+        "blockers": [
+          "reconstructed_share_gt_35pct"
+        ],
+        "candidate": "all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair",
+        "coverage_pct": 75.0,
+        "delta_vs_target_cents": 1409.0,
+        "entries": 114,
+        "family": "all_three",
+        "full_loss_cushion_estimate": 8,
+        "losses": 31,
+        "net_cents": 803.0,
+        "reconstructed_share": 0.5,
+        "settled": 114,
+        "wins": 83
+      },
+      {
+        "approved_entry_share": 0.47368421052631576,
+        "blockers": [
+          "reconstructed_share_gt_35pct"
+        ],
+        "candidate": "early_no_plus_boundary_clock_approved_first_hybrid_edge_repair",
+        "coverage_pct": 75.0,
+        "delta_vs_target_cents": 1337.0,
+        "entries": 114,
+        "family": "early_no_plus_boundary_clock",
+        "full_loss_cushion_estimate": 7,
+        "losses": 32,
+        "net_cents": 731.0,
+        "reconstructed_share": 0.5263157894736842,
+        "settled": 114,
+        "wins": 82
+      },
+      {
+        "approved_entry_share": 0.4824561403508772,
+        "blockers": [
+          "reconstructed_share_gt_35pct"
+        ],
+        "candidate": "hybrid_veto_plus_early_no_approved_first_hybrid_edge_repair",
+        "coverage_pct": 75.0,
+        "delta_vs_target_cents": 1202.0,
+        "entries": 114,
+        "family": "hybrid_veto_plus_early_no",
+        "full_loss_cushion_estimate": 5,
+        "losses": 32,
+        "net_cents": 596.0,
+        "reconstructed_share": 0.5175438596491229,
+        "settled": 114,
+        "wins": 82
+      },
+      {
+        "approved_entry_share": 0.4473684210526316,
+        "blockers": [
+          "reconstructed_share_gt_35pct"
+        ],
+        "candidate": "hybrid_veto_plus_boundary_clock_approved_first_raw_clean_repair",
+        "coverage_pct": 75.0,
+        "delta_vs_target_cents": 913.0,
+        "entries": 114,
+        "family": "hybrid_veto_plus_boundary_clock",
+        "full_loss_cushion_estimate": 3,
+        "losses": 33,
+        "net_cents": 307.0,
+        "reconstructed_share": 0.5526315789473685,
+        "settled": 114,
+        "wins": 81
+      }
+    ],
+    "lowest_reconstructed_broad_positive": {
+      "approved_entry_share": 0.5,
+      "blockers": [
+        "reconstructed_share_gt_35pct"
+      ],
+      "candidate": "all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair",
+      "coverage_pct": 75.0,
+      "delta_vs_target_cents": 1409.0,
+      "entries": 114,
+      "full_loss_cushion_estimate": 8,
+      "losses": 31,
+      "net_cents": 803.0,
+      "reconstructed_share": 0.5,
+      "settled": 114,
+      "wins": 83
+    },
+    "watch_full_loss_runway": [],
+    "watch_gate_count": 0
+  },
+  "generated_from": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_hybrid_boundary_entry_stack_latest.json",
+  "interpretation": [
+    "Best diagnostic broad-positive variant is all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair with net 803.0c, coverage 75.0%, reconstructed share 0.5.",
+    "Lowest-reconstructed broad-positive variant is all_three_with_boundary_fv_edge_approved_first_hybrid_edge_repair with net 803.0c and reconstructed share 0.5.",
+    "No diagnostic broad-positive variant clears the strict <=35% reconstructed-share gate yet.",
+    "Keep testing, but do not promote: the edge is promising and source-quality limited."
+  ],
+  "post_freeze": {
+    "best_broad_positive": {
+      "approved_entry_share": 0.3333333333333333,
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "hybrid_veto_plus_boundary_clock_hybrid_edge_repair",
+      "coverage_pct": 75.86206896551724,
+      "delta_vs_target_cents": 90.0,
+      "entries": 66,
+      "full_loss_cushion_estimate": 1,
+      "losses": 24,
+      "net_cents": 173.0,
+      "reconstructed_share": 0.6666666666666666,
+      "settled": 66,
+      "wins": 42
+    },
+    "best_full_loss_runway": [
+      {
+        "added_full_losses": 1,
+        "still_positive": true,
+        "stressed_net_cents": 73.0,
+        "stressed_settled": 67
+      },
+      {
+        "added_full_losses": 2,
+        "still_positive": false,
+        "stressed_net_cents": -27.0,
+        "stressed_settled": 68
+      },
+      {
+        "added_full_losses": 3,
+        "still_positive": false,
+        "stressed_net_cents": -127.0,
+        "stressed_settled": 69
+      },
+      {
+        "added_full_losses": 4,
+        "still_positive": false,
+        "stressed_net_cents": -227.0,
+        "stressed_settled": 70
+      },
+      {
+        "added_full_losses": 5,
+        "still_positive": false,
+        "stressed_net_cents": -327.0,
+        "stressed_settled": 71
+      },
+      {
+        "added_full_losses": 6,
+        "still_positive": false,
+        "stressed_net_cents": -427.0,
+        "stressed_settled": 72
+      },
+      {
+        "added_full_losses": 7,
+        "still_positive": false,
+        "stressed_net_cents": -527.0,
+        "stressed_settled": 73
+      }
+    ],
+    "best_watch_source_broad_positive": {},
+    "broad_positive_count": 8,
+    "clean_gate_count": 0,
+    "forward_denominator": 87,
+    "lowest_reconstructed_broad_positive": {
+      "approved_entry_share": 0.36363636363636365,
+      "blockers": [
+        "reconstructed_share_gt_35pct",
+        "full_loss_cushion_lt_3"
+      ],
+      "candidate": "all_three_with_boundary_fv_edge_hybrid_edge_repair",
+      "coverage_pct": 75.86206896551724,
+      "delta_vs_target_cents": 5.0,
+      "entries": 66,
+      "full_loss_cushion_estimate": 0,
+      "losses": 24,
+      "net_cents": 88.0,
+      "reconstructed_share": 0.6363636363636364,
+      "settled": 66,
+      "wins": 42
+    },
+    "watch_full_loss_runway": [],
+    "watch_gate_count": 0
+  },
+  "purpose": "Stress audit for the combined hybrid-veto / early-NO / boundary-clock entry stack.",
+  "requirements": {
+    "coverage_band": [
+      75.0,
+      90.0
+    ],
+    "max_reconstructed_share": 0.35,
+    "min_settled": 30,
+    "watch_reconstructed_share": 0.45
+  },
+  "stack_freeze_utc": "2026-05-06T15:37:04.750154+00:00",
+  "stack_generated_at_utc": "2026-05-10T02:42:45.995846+00:00"
+}

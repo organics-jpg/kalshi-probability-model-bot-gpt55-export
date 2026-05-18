@@ -1,0 +1,50 @@
+{
+  "candidate_minus_live_same_markets_cents": 52.0,
+  "candidate_summary": {
+    "coverage_pct": 100.0,
+    "entries": 1,
+    "full_loss_cushion": 0,
+    "losses": 0,
+    "net_cents": 44.0,
+    "wins": 1
+  },
+  "comparison_rows": [
+    {
+      "candidate_component": "strict_delayed_recheck_rescue:drop15_bid60",
+      "candidate_minus_live_cents": 52.0,
+      "candidate_net_cents": 44.0,
+      "candidate_side": "yes",
+      "candidate_source": "approved_entry",
+      "live_net_cents": -8.0,
+      "live_qty": 8.0,
+      "live_sides": "yes",
+      "live_trade_count": 3,
+      "market": "KXBTC15M-26MAY071315-15"
+    }
+  ],
+  "filter_watch_generated_at_utc": "2026-05-11T03:46:02.223702+00:00",
+  "freeze_local_time": "2026-05-07T12:50:03.875032-04:00",
+  "freeze_ts_utc": "2026-05-07T16:50:03.875032+00:00",
+  "generated_at_utc": "2026-05-11T03:47:37.708127+00:00",
+  "live_post_freeze_markets": 1,
+  "live_post_freeze_trades": 3,
+  "live_same_selected_markets_summary": {
+    "coverage_pct": 100.0,
+    "entries": 1,
+    "full_loss_cushion": 0,
+    "losses": 1,
+    "net_cents": -8.0,
+    "wins": 0
+  },
+  "overlay_policy": "post_dual_overlay_filter_entry_cheap_penalty025_rank_only",
+  "overlay_rule": "dual_lane_overlay_raw05_recross_le030_abs085",
+  "promotion_use": "overlay_same_window_research_only",
+  "read": [
+    "This is a strict selected-market comparator for the overlay filter.",
+    "It remains empty until the overlay watch has selected own-freeze rows.",
+    "A positive standalone overlay PnL is insufficient; selected rows should also improve live v28 on the same markets."
+  ],
+  "selected_markets": [
+    "KXBTC15M-26MAY071315-15"
+  ]
+}

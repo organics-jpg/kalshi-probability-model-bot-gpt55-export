@@ -1,0 +1,1059 @@
+{
+  "interpretation": [
+    "diagnostic_existing_false_conviction_freeze: approved-only directional 62/70, realized 321.0c, hold 705.0c, exit-vs-hold -384.0c.",
+    "post_freeze_candidate: approved-only directional 46/51, realized 241.0c, hold 552.0c, exit-vs-hold -311.0c."
+  ],
+  "purpose": "Separate FV bridge side accuracy from realized exit/state PnL.",
+  "requirements": [
+    "research-only, no live bot changes, no orders",
+    "use existing source-quality rows",
+    "compare approved-only and reconstructed/all-source scenarios"
+  ],
+  "source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_fv_bridge_source_quality_latest.json",
+  "windows": [
+    {
+      "freeze_ts_utc": "2026-05-06T09:10:09.146392+00:00",
+      "future_denominator": 113,
+      "scenarios": [
+        {
+          "scenario": "lead_reconstructed_only",
+          "summary": {
+            "directional_losses": 35,
+            "directional_win_rate": 0.6153846153846154,
+            "directional_wins": 56,
+            "exit_vs_hold_cents": -420.00000000000006,
+            "hold_to_settlement_net_cents": -90.99999999999996,
+            "negative_realized_winners": 0,
+            "realized_net_cents": -511.0,
+            "settled": 91,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.81,
+                "exit_vs_hold_cents": -84.0,
+                "hold_net_cents": -81.0,
+                "market": "KXBTC15M-26MAY060700-00",
+                "realized_net_cents": -165.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T10:49:26.808090+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY060900-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T12:47:30.877954+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -76.0,
+                "hold_net_cents": -73.0,
+                "market": "KXBTC15M-26MAY071015-15",
+                "realized_net_cents": -149.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:04:40.080143+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_all_sources",
+          "summary": {
+            "directional_losses": 31,
+            "directional_win_rate": 0.6593406593406593,
+            "directional_wins": 60,
+            "exit_vs_hold_cents": -520.0,
+            "hold_to_settlement_net_cents": 113.00000000000001,
+            "negative_realized_winners": 2,
+            "realized_net_cents": -407.0,
+            "settled": 91,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.81,
+                "exit_vs_hold_cents": -84.0,
+                "hold_net_cents": -81.0,
+                "market": "KXBTC15M-26MAY060700-00",
+                "realized_net_cents": -165.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T10:49:26.808090+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY060900-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T12:47:30.877954+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_first_market_only",
+          "summary": {
+            "directional_losses": 31,
+            "directional_win_rate": 0.6593406593406593,
+            "directional_wins": 60,
+            "exit_vs_hold_cents": -520.0,
+            "hold_to_settlement_net_cents": 113.00000000000001,
+            "negative_realized_winners": 2,
+            "realized_net_cents": -407.0,
+            "settled": 91,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.81,
+                "exit_vs_hold_cents": -84.0,
+                "hold_net_cents": -81.0,
+                "market": "KXBTC15M-26MAY060700-00",
+                "realized_net_cents": -165.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T10:49:26.808090+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY060900-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T12:47:30.877954+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_approved_preferred",
+          "summary": {
+            "directional_losses": 31,
+            "directional_win_rate": 0.6593406593406593,
+            "directional_wins": 60,
+            "exit_vs_hold_cents": -520.0,
+            "hold_to_settlement_net_cents": 113.00000000000001,
+            "negative_realized_winners": 2,
+            "realized_net_cents": -407.0,
+            "settled": 91,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.81,
+                "exit_vs_hold_cents": -84.0,
+                "hold_net_cents": -81.0,
+                "market": "KXBTC15M-26MAY060700-00",
+                "realized_net_cents": -165.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T10:49:26.808090+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY060900-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T12:47:30.877954+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_approved_only",
+          "summary": {
+            "directional_losses": 8,
+            "directional_win_rate": 0.8857142857142857,
+            "directional_wins": 62,
+            "exit_vs_hold_cents": -384.0,
+            "hold_to_settlement_net_cents": 705.0,
+            "negative_realized_winners": 24,
+            "realized_net_cents": 321.0,
+            "settled": 70,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.42,
+                "exit_vs_hold_cents": -120.0,
+                "hold_net_cents": 58.00000000000001,
+                "market": "KXBTC15M-26MAY062015-15",
+                "realized_net_cents": -62.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T00:10:50.463746+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -65.0,
+                "hold_net_cents": 27.0,
+                "market": "KXBTC15M-26MAY071000-00",
+                "realized_net_cents": -38.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T13:45:58.883423+00:00"
+              },
+              {
+                "ask_prob": 0.59,
+                "exit_vs_hold_cents": -59.0,
+                "hold_net_cents": 41.0,
+                "market": "KXBTC15M-26MAY060945-45",
+                "realized_net_cents": -18.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T13:30:42.918976+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -59.0,
+                "hold_net_cents": 17.000000000000004,
+                "market": "KXBTC15M-26MAY061100-00",
+                "realized_net_cents": -42.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T14:49:02.524922+00:00"
+              },
+              {
+                "ask_prob": 0.75,
+                "exit_vs_hold_cents": -57.0,
+                "hold_net_cents": 25.0,
+                "market": "KXBTC15M-26MAY060615-15",
+                "realized_net_cents": -32.0,
+                "side": "yes",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T10:04:35.124553+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -49.0,
+                "hold_net_cents": 23.0,
+                "market": "KXBTC15M-26MAY071030-30",
+                "realized_net_cents": -26.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T14:16:08.501513+00:00"
+              },
+              {
+                "ask_prob": 0.76,
+                "exit_vs_hold_cents": -46.0,
+                "hold_net_cents": 24.0,
+                "market": "KXBTC15M-26MAY060930-30",
+                "realized_net_cents": -22.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T13:20:00.426065+00:00"
+              }
+            ]
+          }
+        }
+      ],
+      "window": "diagnostic_existing_false_conviction_freeze"
+    },
+    {
+      "freeze_ts_utc": "2026-05-06T14:14:08.956655+00:00",
+      "future_denominator": 93,
+      "scenarios": [
+        {
+          "scenario": "lead_all_sources",
+          "summary": {
+            "directional_losses": 28,
+            "directional_win_rate": 0.6266666666666667,
+            "directional_wins": 47,
+            "exit_vs_hold_cents": -672.0,
+            "hold_to_settlement_net_cents": -93.0,
+            "negative_realized_winners": 2,
+            "realized_net_cents": -765.0,
+            "settled": 75,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -76.0,
+                "hold_net_cents": -73.0,
+                "market": "KXBTC15M-26MAY071015-15",
+                "realized_net_cents": -149.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:04:40.080143+00:00"
+              },
+              {
+                "ask_prob": 0.71,
+                "exit_vs_hold_cents": -74.0,
+                "hold_net_cents": -71.0,
+                "market": "KXBTC15M-26MAY071115-15",
+                "realized_net_cents": -145.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T15:05:56.894101+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_first_market_only",
+          "summary": {
+            "directional_losses": 28,
+            "directional_win_rate": 0.6266666666666667,
+            "directional_wins": 47,
+            "exit_vs_hold_cents": -672.0,
+            "hold_to_settlement_net_cents": -93.0,
+            "negative_realized_winners": 2,
+            "realized_net_cents": -765.0,
+            "settled": 75,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -76.0,
+                "hold_net_cents": -73.0,
+                "market": "KXBTC15M-26MAY071015-15",
+                "realized_net_cents": -149.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:04:40.080143+00:00"
+              },
+              {
+                "ask_prob": 0.71,
+                "exit_vs_hold_cents": -74.0,
+                "hold_net_cents": -71.0,
+                "market": "KXBTC15M-26MAY071115-15",
+                "realized_net_cents": -145.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T15:05:56.894101+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_approved_preferred",
+          "summary": {
+            "directional_losses": 28,
+            "directional_win_rate": 0.6266666666666667,
+            "directional_wins": 47,
+            "exit_vs_hold_cents": -672.0,
+            "hold_to_settlement_net_cents": -93.0,
+            "negative_realized_winners": 2,
+            "realized_net_cents": -765.0,
+            "settled": 75,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -76.0,
+                "hold_net_cents": -73.0,
+                "market": "KXBTC15M-26MAY071015-15",
+                "realized_net_cents": -149.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:04:40.080143+00:00"
+              },
+              {
+                "ask_prob": 0.71,
+                "exit_vs_hold_cents": -74.0,
+                "hold_net_cents": -71.0,
+                "market": "KXBTC15M-26MAY071115-15",
+                "realized_net_cents": -145.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T15:05:56.894101+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_reconstructed_only",
+          "summary": {
+            "directional_losses": 31,
+            "directional_win_rate": 0.5866666666666667,
+            "directional_wins": 44,
+            "exit_vs_hold_cents": -410.0,
+            "hold_to_settlement_net_cents": -135.0,
+            "negative_realized_winners": 0,
+            "realized_net_cents": -545.0,
+            "settled": 75,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -85.0,
+                "hold_net_cents": -83.0,
+                "market": "KXBTC15M-26MAY061215-15",
+                "realized_net_cents": -168.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T16:03:34.159210+00:00"
+              },
+              {
+                "ask_prob": 0.79,
+                "exit_vs_hold_cents": -82.0,
+                "hold_net_cents": -79.0,
+                "market": "KXBTC15M-26MAY071230-30",
+                "realized_net_cents": -161.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:19:16.945246+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -81.0,
+                "hold_net_cents": -78.0,
+                "market": "KXBTC15M-26MAY070045-45",
+                "realized_net_cents": -159.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T04:33:14.073127+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -80.0,
+                "hold_net_cents": -77.0,
+                "market": "KXBTC15M-26MAY071100-00",
+                "realized_net_cents": -157.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:51:06.139249+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -77.0,
+                "hold_net_cents": -74.0,
+                "market": "KXBTC15M-26MAY071300-00",
+                "realized_net_cents": -151.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T16:47:37.986948+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -76.0,
+                "hold_net_cents": -73.0,
+                "market": "KXBTC15M-26MAY071015-15",
+                "realized_net_cents": -149.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T14:04:40.080143+00:00"
+              },
+              {
+                "ask_prob": 0.71,
+                "exit_vs_hold_cents": -74.0,
+                "hold_net_cents": -71.0,
+                "market": "KXBTC15M-26MAY071115-15",
+                "realized_net_cents": -145.0,
+                "side": "no",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-07T15:05:56.894101+00:00"
+              },
+              {
+                "ask_prob": 0.7,
+                "exit_vs_hold_cents": -73.0,
+                "hold_net_cents": -70.0,
+                "market": "KXBTC15M-26MAY061100-00",
+                "realized_net_cents": -143.0,
+                "side": "yes",
+                "side_won": false,
+                "source": "rejected_actionable",
+                "ts_wall": "2026-05-06T14:45:54.664644+00:00"
+              }
+            ]
+          }
+        },
+        {
+          "scenario": "lead_approved_only",
+          "summary": {
+            "directional_losses": 5,
+            "directional_win_rate": 0.9019607843137255,
+            "directional_wins": 46,
+            "exit_vs_hold_cents": -311.0,
+            "hold_to_settlement_net_cents": 552.0,
+            "negative_realized_winners": 16,
+            "realized_net_cents": 241.0,
+            "settled": 51,
+            "worst_exit_drag": [
+              {
+                "ask_prob": 0.67,
+                "exit_vs_hold_cents": -124.0,
+                "hold_net_cents": 32.99999999999999,
+                "market": "KXBTC15M-26MAY061800-00",
+                "realized_net_cents": -91.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T21:48:44.171608+00:00"
+              },
+              {
+                "ask_prob": 0.42,
+                "exit_vs_hold_cents": -120.0,
+                "hold_net_cents": 58.00000000000001,
+                "market": "KXBTC15M-26MAY062015-15",
+                "realized_net_cents": -62.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T00:10:50.463746+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -65.0,
+                "hold_net_cents": 27.0,
+                "market": "KXBTC15M-26MAY071000-00",
+                "realized_net_cents": -38.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T13:45:58.883423+00:00"
+              },
+              {
+                "ask_prob": 0.83,
+                "exit_vs_hold_cents": -59.0,
+                "hold_net_cents": 17.000000000000004,
+                "market": "KXBTC15M-26MAY061100-00",
+                "realized_net_cents": -42.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T14:49:02.524922+00:00"
+              },
+              {
+                "ask_prob": 0.77,
+                "exit_vs_hold_cents": -49.0,
+                "hold_net_cents": 23.0,
+                "market": "KXBTC15M-26MAY071030-30",
+                "realized_net_cents": -26.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T14:16:08.501513+00:00"
+              },
+              {
+                "ask_prob": 0.73,
+                "exit_vs_hold_cents": -41.0,
+                "hold_net_cents": 27.0,
+                "market": "KXBTC15M-26MAY062115-15",
+                "realized_net_cents": -14.0,
+                "side": "yes",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T01:02:05.343442+00:00"
+              },
+              {
+                "ask_prob": 0.78,
+                "exit_vs_hold_cents": -40.0,
+                "hold_net_cents": 21.999999999999996,
+                "market": "KXBTC15M-26MAY061030-30",
+                "realized_net_cents": -18.0,
+                "side": "yes",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-06T14:21:21.955274+00:00"
+              },
+              {
+                "ask_prob": 0.74,
+                "exit_vs_hold_cents": -38.0,
+                "hold_net_cents": 26.0,
+                "market": "KXBTC15M-26MAY071045-45",
+                "realized_net_cents": -12.0,
+                "side": "no",
+                "side_won": true,
+                "source": "approved_entry",
+                "ts_wall": "2026-05-07T14:31:17.596817+00:00"
+              }
+            ]
+          }
+        }
+      ],
+      "window": "post_freeze_candidate"
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "generated_at_utc": "2026-05-07T15:45:43.898352+00:00",
+  "interpretation": [
+    "Compact refresh only; diagnostic lanes are intentionally excluded.",
+    "Selection uses observable feature gates; source labels are audit-only.",
+    "post_feature_freeze_entry: best post_feature_freeze_entry_raw05_recross60_abs085 settled 43, coverage 66.66666666666667%, net 353.0c, recon 0.28, blockers ['coverage_too_low'].",
+    "post_feature_freeze_bridge: best post_feature_freeze_bridge_raw05_recross60_abs085 settled 42, coverage 66.66666666666667%, net 177.0c, recon 0.28, blockers ['coverage_too_low', 'full_loss_cushion_lt_3']."
+  ],
+  "lanes": [
+    {
+      "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+      "future_denominator": 75,
+      "lane": "post_feature_freeze_entry",
+      "variants": [
+        {
+          "blockers": [
+            "coverage_too_low"
+          ],
+          "candidate": "post_feature_freeze_entry_raw05_recross60_abs085",
+          "full_loss_cushion_estimate": 3,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 0.0,
+            "clean_rows_needed_for_source_gate": 0,
+            "rows_needed_for_75pct_coverage": 7,
+            "settled_needed_for_30": 0
+          },
+          "reconstructed_share": 0.28,
+          "rule": "raw05_recross60_abs085",
+          "source_counts": {
+            "approved_entry": 36,
+            "rejected_actionable": 14
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 296.0,
+              "rows": 36,
+              "settled": 29
+            },
+            "rejected_actionable": {
+              "net_cents": 57.0,
+              "rows": 14,
+              "settled": 14
+            }
+          },
+          "summary": {
+            "avg_net_cents": 8.209302325581396,
+            "coverage_pct": 66.66666666666667,
+            "entries": 50,
+            "losses": 14,
+            "net_cents": 353.0,
+            "settled": 43,
+            "wins": 29
+          }
+        },
+        {
+          "blockers": [
+            "reconstructed_share_gt_35pct",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+          "full_loss_cushion_estimate": 2,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 14.0,
+            "clean_rows_needed_for_source_gate": 3,
+            "rows_needed_for_75pct_coverage": 0,
+            "settled_needed_for_30": 0
+          },
+          "reconstructed_share": 0.3684210526315789,
+          "rule": "raw03_recross70_abs075",
+          "source_counts": {
+            "approved_entry": 36,
+            "rejected_actionable": 21
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 317.0,
+              "rows": 36,
+              "settled": 29
+            },
+            "rejected_actionable": {
+              "net_cents": -31.0,
+              "rows": 21,
+              "settled": 21
+            }
+          },
+          "summary": {
+            "avg_net_cents": 5.72,
+            "coverage_pct": 76.0,
+            "entries": 57,
+            "losses": 19,
+            "net_cents": 286.0,
+            "settled": 50,
+            "wins": 31
+          }
+        },
+        {
+          "blockers": [
+            "coverage_too_low",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_entry_raw05_recross60_abs085_ask65",
+          "full_loss_cushion_estimate": 2,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 73.0,
+            "clean_rows_needed_for_source_gate": 0,
+            "rows_needed_for_75pct_coverage": 14,
+            "settled_needed_for_30": 0
+          },
+          "reconstructed_share": 0.046511627906976744,
+          "rule": "raw05_recross60_abs085_ask65",
+          "source_counts": {
+            "approved_entry": 41,
+            "rejected_actionable": 2
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 213.0,
+              "rows": 41,
+              "settled": 33
+            },
+            "rejected_actionable": {
+              "net_cents": 14.0,
+              "rows": 2,
+              "settled": 2
+            }
+          },
+          "summary": {
+            "avg_net_cents": 6.485714285714286,
+            "coverage_pct": 57.333333333333336,
+            "entries": 43,
+            "losses": 4,
+            "net_cents": 227.0,
+            "settled": 35,
+            "wins": 31
+          }
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_entry_raw07_recross60_abs085",
+          "full_loss_cushion_estimate": 2,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 23.0,
+            "clean_rows_needed_for_source_gate": 0,
+            "rows_needed_for_75pct_coverage": 23,
+            "settled_needed_for_30": 1
+          },
+          "reconstructed_share": 0.23529411764705882,
+          "rule": "raw07_recross60_abs085",
+          "source_counts": {
+            "approved_entry": 26,
+            "rejected_actionable": 8
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 199.0,
+              "rows": 26,
+              "settled": 21
+            },
+            "rejected_actionable": {
+              "net_cents": 78.0,
+              "rows": 8,
+              "settled": 8
+            }
+          },
+          "summary": {
+            "avg_net_cents": 9.551724137931034,
+            "coverage_pct": 45.333333333333336,
+            "entries": 34,
+            "losses": 9,
+            "net_cents": 277.0,
+            "settled": 29,
+            "wins": 20
+          }
+        }
+      ]
+    },
+    {
+      "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+      "future_denominator": 75,
+      "lane": "post_feature_freeze_bridge",
+      "variants": [
+        {
+          "blockers": [
+            "coverage_too_low",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+          "full_loss_cushion_estimate": 1,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 123.0,
+            "clean_rows_needed_for_source_gate": 0,
+            "rows_needed_for_75pct_coverage": 7,
+            "settled_needed_for_30": 0
+          },
+          "reconstructed_share": 0.28,
+          "rule": "raw05_recross60_abs085",
+          "source_counts": {
+            "approved_entry": 36,
+            "rejected_actionable": 14
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 120.0,
+              "rows": 36,
+              "settled": 28
+            },
+            "rejected_actionable": {
+              "net_cents": 57.0,
+              "rows": 14,
+              "settled": 14
+            }
+          },
+          "summary": {
+            "avg_net_cents": 4.214285714285714,
+            "coverage_pct": 66.66666666666667,
+            "entries": 50,
+            "losses": 15,
+            "net_cents": 177.0,
+            "settled": 42,
+            "wins": 27
+          }
+        },
+        {
+          "blockers": [
+            "reconstructed_share_gt_35pct",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_bridge_raw03_recross70_abs075",
+          "full_loss_cushion_estimate": 1,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 190.0,
+            "clean_rows_needed_for_source_gate": 3,
+            "rows_needed_for_75pct_coverage": 0,
+            "settled_needed_for_30": 0
+          },
+          "reconstructed_share": 0.3684210526315789,
+          "rule": "raw03_recross70_abs075",
+          "source_counts": {
+            "approved_entry": 36,
+            "rejected_actionable": 21
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 141.0,
+              "rows": 36,
+              "settled": 28
+            },
+            "rejected_actionable": {
+              "net_cents": -31.0,
+              "rows": 21,
+              "settled": 21
+            }
+          },
+          "summary": {
+            "avg_net_cents": 2.2448979591836733,
+            "coverage_pct": 76.0,
+            "entries": 57,
+            "losses": 20,
+            "net_cents": 110.0,
+            "settled": 49,
+            "wins": 29
+          }
+        },
+        {
+          "blockers": [
+            "coverage_too_low",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085_ask65",
+          "full_loss_cushion_estimate": 0,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 215.0,
+            "clean_rows_needed_for_source_gate": 0,
+            "rows_needed_for_75pct_coverage": 14,
+            "settled_needed_for_30": 0
+          },
+          "reconstructed_share": 0.046511627906976744,
+          "rule": "raw05_recross60_abs085_ask65",
+          "source_counts": {
+            "approved_entry": 41,
+            "rejected_actionable": 2
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 71.0,
+              "rows": 41,
+              "settled": 31
+            },
+            "rejected_actionable": {
+              "net_cents": 14.0,
+              "rows": 2,
+              "settled": 2
+            }
+          },
+          "summary": {
+            "avg_net_cents": 2.5757575757575757,
+            "coverage_pct": 57.333333333333336,
+            "entries": 43,
+            "losses": 5,
+            "net_cents": 85.0,
+            "settled": 33,
+            "wins": 28
+          }
+        },
+        {
+          "blockers": [
+            "settled_lt_30",
+            "coverage_too_low",
+            "full_loss_cushion_lt_3"
+          ],
+          "candidate": "post_feature_freeze_bridge_raw07_recross60_abs085",
+          "full_loss_cushion_estimate": 2,
+          "gate_gap": {
+            "cents_needed_for_cushion3": 100.0,
+            "clean_rows_needed_for_source_gate": 0,
+            "rows_needed_for_75pct_coverage": 23,
+            "settled_needed_for_30": 2
+          },
+          "reconstructed_share": 0.23529411764705882,
+          "rule": "raw07_recross60_abs085",
+          "source_counts": {
+            "approved_entry": 26,
+            "rejected_actionable": 8
+          },
+          "source_slices": {
+            "approved_entry": {
+              "net_cents": 122.0,
+              "rows": 26,
+              "settled": 20
+            },
+            "rejected_actionable": {
+              "net_cents": 78.0,
+              "rows": 8,
+              "settled": 8
+            }
+          },
+          "summary": {
+            "avg_net_cents": 7.142857142857143,
+            "coverage_pct": 45.333333333333336,
+            "entries": 34,
+            "losses": 9,
+            "net_cents": 200.0,
+            "settled": 28,
+            "wins": 19
+          }
+        }
+      ]
+    }
+  ],
+  "state": {
+    "candidate_family": "boundary_clock_feature_gate",
+    "freeze_ts_utc": "2026-05-06T16:47:25.847566+00:00",
+    "origin": "Derived from boundary-clock approved-source feature contrast; frozen before promotion use.",
+    "rules": {
+      "raw03_recross70_abs075": {
+        "abs_d_min": 0.75,
+        "ask_min": null,
+        "raw_edge_min": 0.03,
+        "recross_max": 0.7
+      },
+      "raw05_recross60_abs085": {
+        "abs_d_min": 0.85,
+        "ask_min": null,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "raw05_recross60_abs085_ask65": {
+        "abs_d_min": 0.85,
+        "ask_min": 0.65,
+        "raw_edge_min": 0.05,
+        "recross_max": 0.6
+      },
+      "raw07_recross60_abs085": {
+        "abs_d_min": 0.85,
+        "ask_min": null,
+        "raw_edge_min": 0.07,
+        "recross_max": 0.6
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "all_metric": {
+    "accuracy": 0.7620689655172413,
+    "accuracy_minus_break_even": 0.04806896551724138,
+    "ask_cost_cents": 20137.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 295,
+    "coverage": 0.9830508474576272,
+    "coverage_pass": true,
+    "entry_cost_cents": 20706.0,
+    "entry_fee_cents": 569.0,
+    "fee_aware_break_even_accuracy": 0.714,
+    "gross_pnl_cents": 1963.0,
+    "gross_roi_on_ask": 0.0974822466107166,
+    "losses": 69,
+    "markets": 290,
+    "mean_ask": 69.43793103448276,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.285,
+    "net_edge_per_base_market_cents": 4.725423728813559,
+    "net_edge_per_selected_cents": 4.8068965517241375,
+    "net_pnl_cents": 1394.0,
+    "net_roi_on_cost": 0.06732348111658457,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7098353414814217,
+    "wilson_minus_break_even": -0.004164658518578279,
+    "wins": 221
+  },
+  "fresh_metric": {
+    "accuracy": 0.6818181818181818,
+    "accuracy_minus_break_even": -0.052727272727272734,
+    "ask_cost_cents": 1573.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 22,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 1616.0,
+    "entry_fee_cents": 43.0,
+    "fee_aware_break_even_accuracy": 0.7345454545454545,
+    "gross_pnl_cents": -73.0,
+    "gross_roi_on_ask": -0.046408137317228225,
+    "losses": 7,
+    "markets": 22,
+    "mean_ask": 71.5,
+    "median_ask": 69.0,
+    "median_seconds_to_close": 768.308,
+    "net_edge_per_base_market_cents": -5.2727272727272725,
+    "net_edge_per_selected_cents": -5.2727272727272725,
+    "net_pnl_cents": -116.0,
+    "net_roi_on_cost": -0.07178217821782178,
+    "p75_ask": 78.0,
+    "positive_net": false,
+    "wilson95_lower": 0.4731859774104275,
+    "wilson_minus_break_even": -0.261359477135027,
+    "wins": 15
+  },
+  "generated_utc": "20260504_075204Z",
+  "lock": {
+    "created_utc": "2026-05-04T01:11:05.1940693+00:00",
+    "discovery_metrics": {
+      "current_all_accuracy": 0.7677902621722846,
+      "current_all_coverage": 0.9816176470588235,
+      "current_all_net_pnl_cents": 1481.0,
+      "current_delta_vs_score_min60_cents": 167.0,
+      "current_holdout_net_pnl_cents": 110.0,
+      "current_validation_net_pnl_cents": 701.0,
+      "min_oos_net_roi": 0.02756892230576441,
+      "v21_all_accuracy": 0.7385321100917431,
+      "v21_all_coverage": 0.9864253393665159,
+      "v21_all_net_pnl_cents": 534.0,
+      "v21_delta_vs_score_min60_cents": 0.0,
+      "v21_holdout_net_pnl_cents": 155.0,
+      "v21_train_net_pnl_cents": -19.0,
+      "v21_validation_net_pnl_cents": 398.0
+    },
+    "lock_close_dt": "2026-05-04T01:15:00+00:00",
+    "policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120; abs_book_rv15_gap<=0.20",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "research_note": "Forward-registered from candidate_tradeable_veto_scan_latest.csv after observing the 21:00 EDT settlement but before the 21:15 EDT settlement. Interpretable coherence gate: keep the score_min_book_rv15 side only when book pressure and Brownian RV15 are within 20 percentage points. Diagnostic only; v21 train remains negative and promotion requires strict pre-resolution live evidence.",
+    "source_base_lock": "logs\\edge_research\\profit_frontier_score_min60_lock.json",
+    "source_scan_csv": "logs\\edge_research\\candidate_tradeable_veto_scan_latest.csv",
+    "veto": {
+      "feature": "abs_book_rv15_gap",
+      "op": "<=",
+      "threshold": 0.2
+    }
+  },
+  "name": "score_min60_gap020",
+  "registry_recompute_divergence": {
+    "compared": 22,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY032130-30",
+        "recomputed": "2026-05-04T01:18:00.227000+00:00 yes 73.0c",
+        "strict": "2026-05-04T01:17:45.202000+00:00 yes 73.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032200-00",
+        "recomputed": "2026-05-04T01:48:02.822000+00:00 yes 68.0c",
+        "strict": "2026-05-04T01:49:02.931000+00:00 yes 77.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032230-30",
+        "recomputed": "2026-05-04T02:17:05.641000+00:00 no 79.0c",
+        "strict": "2026-05-04T02:18:05.671000+00:00 no 66.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY032330-30",
+        "recomputed": "2026-05-04T03:19:11.329000+00:00 no 69.0c",
+        "strict": "2026-05-04T03:18:11.263000+00:00 no 61.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040130-30",
+        "recomputed": "2026-05-04T05:17:06.838000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:19:06.925000+00:00 no 62.0c"
+      }
+    ],
+    "mismatches": 7,
+    "missing_recompute": 5
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.6923076923076923,
+    "base_markets": 27,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7242307692307692,
+    "losses": 8,
+    "markets": 26,
+    "median_ask": 69.0,
+    "net_pnl_cents": -83.0,
+    "net_roi_on_cost": -0.044078597981943704,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 27,
+    "wilson95_lower": 0.5001174167780164,
+    "wilson_minus_break_even": -0.22411335245275288,
+    "wins": 18
+  }
+}

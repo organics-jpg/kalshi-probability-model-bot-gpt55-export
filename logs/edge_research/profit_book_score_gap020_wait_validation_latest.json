@@ -1,0 +1,162 @@
+{
+  "all_metric": {
+    "accuracy": 0.7568493150684932,
+    "accuracy_minus_break_even": 0.044349315068493156,
+    "ask_cost_cents": 20231.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 295,
+    "coverage": 0.9898305084745763,
+    "coverage_pass": true,
+    "entry_cost_cents": 20805.0,
+    "entry_fee_cents": 574.0,
+    "fee_aware_break_even_accuracy": 0.7125,
+    "gross_pnl_cents": 1869.0,
+    "gross_roi_on_ask": 0.09238297662003855,
+    "losses": 71,
+    "markets": 292,
+    "mean_ask": 69.28424657534246,
+    "median_ask": 68.0,
+    "median_seconds_to_close": 768.285,
+    "net_edge_per_base_market_cents": 4.389830508474576,
+    "net_edge_per_selected_cents": 4.434931506849315,
+    "net_pnl_cents": 1295.0,
+    "net_roi_on_cost": 0.06224465272770968,
+    "p75_ask": 73.0,
+    "positive_net": true,
+    "wilson95_lower": 0.7045171643411514,
+    "wilson_minus_break_even": -0.007982835658848608,
+    "wins": 221
+  },
+  "fresh_metric": {
+    "accuracy": 0.5625,
+    "accuracy_minus_break_even": -0.15437500000000004,
+    "ask_cost_cents": 1115.0,
+    "ask_eq_100": 0,
+    "ask_ge_95": 0,
+    "base_markets": 16,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "entry_cost_cents": 1147.0,
+    "entry_fee_cents": 32.0,
+    "fee_aware_break_even_accuracy": 0.716875,
+    "gross_pnl_cents": -215.0,
+    "gross_roi_on_ask": -0.19282511210762332,
+    "losses": 7,
+    "markets": 16,
+    "mean_ask": 69.6875,
+    "median_ask": 69.0,
+    "median_seconds_to_close": 768.308,
+    "net_edge_per_base_market_cents": -15.4375,
+    "net_edge_per_selected_cents": -15.4375,
+    "net_pnl_cents": -247.0,
+    "net_roi_on_cost": -0.2153443766346992,
+    "p75_ask": 72.75,
+    "positive_net": false,
+    "wilson95_lower": 0.331785563988119,
+    "wilson_minus_break_even": -0.38508943601188106,
+    "wins": 9
+  },
+  "generated_utc": "20260504_075208Z",
+  "lock": {
+    "anchor_lock": "logs\\edge_research\\profit_frontier_book_margin_lock.json",
+    "anchor_policy": {
+      "ask_max": 95.0,
+      "chooser": "book_p_side",
+      "gate": "margin_rv15>=0",
+      "label": "choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "created_utc": "2026-05-04T02:40:00+00:00",
+    "discovery_metrics": {
+      "current_all_accuracy": 0.7720588235294118,
+      "current_all_coverage": 0.9819494584837545,
+      "current_all_net_pnl_cents": 1654.0,
+      "current_delta_vs_anchor_cents": 442.0,
+      "current_holdout_net_pnl_cents": 210.0,
+      "current_train_net_pnl_cents": 802.0,
+      "current_validation_net_pnl_cents": 642.0,
+      "min_oos_net_roi": 0.05134474327628362,
+      "v21_all_accuracy": 0.7351598173515982,
+      "v21_all_coverage": 0.9909502262443439,
+      "v21_all_net_pnl_cents": 493.0,
+      "v21_delta_vs_anchor_cents": 68.0,
+      "v21_holdout_net_pnl_cents": 179.0,
+      "v21_train_net_pnl_cents": -84.0,
+      "v21_validation_net_pnl_cents": 398.0
+    },
+    "lock_close_dt": "2026-05-04T02:45:00+00:00",
+    "reference_lock": "logs\\edge_research\\profit_frontier_score_min60_gap020_lock.json",
+    "reference_policy": {
+      "ask_max": 95.0,
+      "chooser": "score_min_book_rv15",
+      "gate": "none",
+      "label": "choose=score_min_book_rv15; score_min_book_rv15>=0.6; ask<=95; sec_to_close>=120; abs_book_rv15_gap<=0.20",
+      "min_score": 0.6,
+      "min_seconds_to_close": 120.0
+    },
+    "reference_veto": {
+      "feature": "abs_book_rv15_gap",
+      "op": "<=",
+      "threshold": 0.2
+    },
+    "research_note": "Forward-registered from book_to_score_wait_scan_latest.csv after the 22:30 EDT settlement. Causal rule: start from the high-coverage book_margin anchor, but when the anchor appears with at least 480 seconds to close, wait for the first later score_min60 row that passes the 20 percentage point book/Brownian coherence veto. Diagnostic only; the v21 train split remains negative, so promotion requires strict pre-resolution live evidence and sample size.",
+    "source_scan_csv": "logs\\edge_research\\book_to_score_wait_scan_latest.csv",
+    "wait_rule": {
+      "condition": {
+        "feature": "seconds_to_close",
+        "op": ">=",
+        "threshold": 480.0
+      },
+      "label": "book_margin_wait_for_score_min60_gap020_enter_ref_if_seconds_to_close>=480",
+      "mode": "enter_ref"
+    }
+  },
+  "name": "book_score_gap020_wait",
+  "registry_recompute_divergence": {
+    "compared": 16,
+    "examples": [
+      {
+        "market": "KXBTC15M-26MAY032330-30",
+        "recomputed": "2026-05-04T03:19:11.329000+00:00 no 69.0c",
+        "strict": "2026-05-04T03:18:11.263000+00:00 no 61.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040130-30",
+        "recomputed": "2026-05-04T05:17:06.838000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:19:06.925000+00:00 no 62.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040145-45",
+        "recomputed": "2026-05-04T05:31:08.227000+00:00 no 66.0c",
+        "strict": "2026-05-04T05:35:08.515000+00:00 no 69.0c"
+      },
+      {
+        "market": "KXBTC15M-26MAY040245-45",
+        "recomputed": "2026-05-04T06:32:13.465000+00:00 yes 75.0c",
+        "strict": "2026-05-04T06:33:13.573000+00:00 yes 71.0c"
+      }
+    ],
+    "mismatches": 4,
+    "missing_recompute": 5
+  },
+  "strict_registered_metric": {
+    "accuracy": 0.6,
+    "base_markets": 21,
+    "coverage": 1.0,
+    "coverage_pass": true,
+    "fee_aware_break_even_accuracy": 0.7090000000000001,
+    "losses": 8,
+    "markets": 20,
+    "median_ask": 69.0,
+    "net_pnl_cents": -218.0,
+    "net_roi_on_cost": -0.153737658674189,
+    "pending": 1,
+    "positive_net": false,
+    "registered_markets": 21,
+    "wilson95_lower": 0.38658150076225317,
+    "wilson_minus_break_even": -0.3224184992377469,
+    "wins": 12
+  }
+}

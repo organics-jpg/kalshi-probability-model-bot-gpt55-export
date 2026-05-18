@@ -1,0 +1,115 @@
+{
+  "blocked_checks": [
+    "strict_own_freeze_sample",
+    "positive_selected_net",
+    "selected_source_quality",
+    "selected_full_loss_cushion",
+    "selected_same_window_live_edge"
+  ],
+  "checks": {
+    "diagnostic_filter_shape_positive": {
+      "blocker": "",
+      "evidence": "best_filter=yes_recross_le0.3 rows=4 diagnostic_delta=130c ($1.30)",
+      "status": "pass"
+    },
+    "diagnostic_overlay_split_understood": {
+      "blocker": "",
+      "evidence": "helpful_delta=439c ($4.39) harmful_delta=-464c ($-4.64)",
+      "status": "pass"
+    },
+    "overlay_filter_frozen": {
+      "blocker": "",
+      "evidence": "freeze=2026-05-07T16:34:55.927871+00:00 local=2026-05-07T12:34:55.927871-04:00 rule={'name': 'dual_lane_overlay_no_recross_le030', 'recross_hazard_score_max': 0.3, 'side': 'no', 'use': 'risk_control_overlay_only'}",
+      "status": "pass"
+    },
+    "positive_selected_net": {
+      "blocker": "overlay_selected_net_not_positive",
+      "evidence": "selected_net=0c ($0.00)",
+      "status": "blocked"
+    },
+    "same_window_parent_candidate_not_replacement": {
+      "blocker": "",
+      "evidence": "current_union_delta_vs_live=-181c ($-1.81)",
+      "status": "pass"
+    },
+    "selected_full_loss_cushion": {
+      "blocker": "overlay_full_loss_cushion_lt_3",
+      "evidence": "selected_full_loss_cushion=0/3",
+      "status": "blocked"
+    },
+    "selected_same_window_live_edge": {
+      "blocker": "overlay_selected_rows_not_beating_live_same_markets",
+      "evidence": "selected_candidate_minus_live=0c ($0.00) candidate=0c ($0.00) live_same=0c ($0.00) selected_markets=0",
+      "status": "blocked"
+    },
+    "selected_source_quality": {
+      "blocker": "overlay_source_share_unknown_or_gt_35pct",
+      "evidence": "selected_reconstructed_share=n/a max=35.00%",
+      "status": "blocked"
+    },
+    "strict_own_freeze_sample": {
+      "blocker": "overlay_waiting_for_30_selected_rows",
+      "evidence": "selected_settled=0/30; windows_remaining=1",
+      "status": "blocked"
+    }
+  },
+  "decision": "not_live_ready",
+  "diagnostic": {
+    "best_rule": "yes_recross_le0.3",
+    "best_rule_summary": {
+      "bucket_counts": {
+        "candidate_improves_live_loss": 3,
+        "candidate_vs_no_live_pnl": 1
+      },
+      "candidate_full_loss_cushion": 0,
+      "candidate_minus_live_cents": 130.0,
+      "candidate_net_cents": 87.0,
+      "coverage_pct": 22.22222222222222,
+      "delta_full_loss_cushion": 1,
+      "harmful_rows": 1,
+      "helpful_rows": 3,
+      "helpful_share": 0.75,
+      "live_net_cents": -43.0,
+      "rows": 4,
+      "source_counts": {
+        "approved_entry": 3,
+        "rejected_actionable": 1
+      }
+    },
+    "frontier_generated_at_utc": "2026-05-11T03:47:11.028829+00:00",
+    "overlay_same_window_delta_cents": 0.0,
+    "overlay_same_window_generated_at_utc": "2026-05-11T03:47:37.726264+00:00",
+    "same_window_delta_cents": -181.0
+  },
+  "generated_at_utc": "2026-05-11T03:47:38.104222+00:00",
+  "next_actions": [
+    "Keep collecting strict own-freeze overlay rows; do not promote from the diagnostic filter frontier.",
+    "At/after the overlay 30-window gate, force replay the overlay watch and compare selected markets against live v28 same-window PnL.",
+    "If selected rows remain too sparse, keep it as a diagnostic risk flag rather than a live overlay.",
+    "Do not let overlay-specific gates weaken the main broad dual-lane readiness gate."
+  ],
+  "promotion_use": "overlay_own_freeze_required",
+  "watch": {
+    "best_policy": "post_dual_overlay_filter_entry_cheap_penalty025_rank_only",
+    "earliest_min_sample_local_time": "2026-05-07T20:04:55.927871-04:00",
+    "freeze_local_time": "2026-05-07T12:34:55.927871-04:00",
+    "freeze_ts_utc": "2026-05-07T16:34:55.927871+00:00",
+    "generated_at_utc": "2026-05-08T00:04:55.439978+00:00",
+    "summary": {
+      "avg_net_cents": 0.0,
+      "coverage_pct": 0.0,
+      "entries": 0,
+      "full_loss_cushion": 0,
+      "losses": 0,
+      "net_cents": 0,
+      "reconstructed_share": null,
+      "settled": 0,
+      "source_counts": {},
+      "source_gate_row_margin": null,
+      "wins": 0,
+      "worst_loss_cents": 0.0
+    },
+    "windows_remaining": 1,
+    "windows_since_freeze": 29
+  }
+}

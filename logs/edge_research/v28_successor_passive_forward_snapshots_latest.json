@@ -1,0 +1,108 @@
+{
+  "builder_script": "build_v28_successor_passive_forward_snapshots.py",
+  "checkpoint_count": 876,
+  "dataset_count": 3,
+  "dataset_summaries": [
+    {
+      "checkpoint_count": 29,
+      "dataset_tag": "particle_shadow_forward_20260511T053112Z-47457a12",
+      "ended_at_utc": "2026-05-11T05:31:43.216135+00:00",
+      "manifest_dataset_tag": "particle_shadow_forward_20260511T053112Z-47457a12",
+      "manifest_markets": [
+        "KXBTC15M-26MAY110145-45"
+      ],
+      "manifest_records_book_checkpoints": true,
+      "manifest_records_raw_market_feed": true,
+      "manifest_records_settlement_labels": false,
+      "manifest_records_strategy_decisions": false,
+      "metadata_markets": [
+        "KXBTC15M-26MAY110145-45"
+      ],
+      "row_count": 58,
+      "started_at_utc": "2026-05-11T05:31:13.115325+00:00"
+    },
+    {
+      "checkpoint_count": 29,
+      "dataset_tag": "particle_shadow_forward_20260511T053340Z-0dc86f34",
+      "ended_at_utc": "2026-05-11T05:34:11.292787+00:00",
+      "manifest_dataset_tag": "particle_shadow_forward_20260511T053340Z-0dc86f34",
+      "manifest_markets": [
+        "KXBTC15M-26MAY110145-45"
+      ],
+      "manifest_records_book_checkpoints": true,
+      "manifest_records_raw_market_feed": true,
+      "manifest_records_settlement_labels": false,
+      "manifest_records_strategy_decisions": false,
+      "metadata_markets": [
+        "KXBTC15M-26MAY110145-45"
+      ],
+      "row_count": 58,
+      "started_at_utc": "2026-05-11T05:33:41.197788+00:00"
+    },
+    {
+      "checkpoint_count": 818,
+      "dataset_tag": "particle_shadow_forward_20260511T053741Z-long900",
+      "ended_at_utc": "2026-05-11T05:52:42.962917+00:00",
+      "manifest_dataset_tag": "particle_shadow_forward_20260511T053741Z-long900",
+      "manifest_markets": [
+        "KXBTC15M-26MAY110145-45",
+        "KXBTC15M-26MAY110200-00"
+      ],
+      "manifest_records_book_checkpoints": true,
+      "manifest_records_raw_market_feed": true,
+      "manifest_records_settlement_labels": false,
+      "manifest_records_strategy_decisions": false,
+      "metadata_markets": [
+        "KXBTC15M-26MAY110145-45",
+        "KXBTC15M-26MAY110200-00"
+      ],
+      "row_count": 1634,
+      "started_at_utc": "2026-05-11T05:37:42.899658+00:00"
+    }
+  ],
+  "eligible_for_candidate_prediction_rows": 1622,
+  "exclusion_reason_counts": {
+    "missing_btc_state": 1750,
+    "missing_candidate_prediction": 1750,
+    "missing_settlement_label": 1750,
+    "missing_top_book": 128,
+    "missing_v28_baseline": 1750,
+    "not_frozen_candidate_prediction_registry": 1750
+  },
+  "forward_promotion_rows": 0,
+  "generated_utc": "2026-05-12T07:29:26Z",
+  "market_count": 2,
+  "missing_counts": {
+    "ask_cents": 64,
+    "btc_state": 1750,
+    "candidate_prediction": 1750,
+    "market_close_ts_utc": 0,
+    "settlement_label": 1750,
+    "strike": 0,
+    "v28_baseline": 1750
+  },
+  "outputs": {
+    "audit_json": "logs/edge_research/v28_successor_passive_forward_snapshots_latest.json",
+    "audit_md": "logs/edge_research/v28_successor_passive_forward_snapshots_latest.md",
+    "snapshots_csv": "research_particle/v28_successor/passive_forward_snapshots_latest.csv",
+    "snapshots_json": "research_particle/v28_successor/passive_forward_snapshots_latest.json"
+  },
+  "post_resolution_rejected_rows": 2,
+  "pre_resolution_rows": 1750,
+  "promotion_status": {
+    "allowed_for_forward_promotion": false,
+    "reason": "passive rows lack BTC state, v28 baseline, frozen candidate prediction, and settlement label"
+  },
+  "registered_pre_resolution_rows": 0,
+  "row_count": 1750,
+  "side_counts": {
+    "no": 875,
+    "yes": 875
+  },
+  "snapshot_status": "staging_not_promotable",
+  "source_dataset_counts": {
+    "particle_shadow_forward_20260511T053112Z-47457a12": 58,
+    "particle_shadow_forward_20260511T053340Z-0dc86f34": 58,
+    "particle_shadow_forward_20260511T053741Z-long900": 1634
+  }
+}

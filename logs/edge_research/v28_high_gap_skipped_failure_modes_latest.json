@@ -1,0 +1,143 @@
+{
+  "input_report": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_approved_entry_state_valve_full_surface_latest.json",
+  "interpretation": [
+    "The saved full-surface valve adapter has only 5 unique skipped high-gap rows, so this is mechanism evidence, not a candidate score.",
+    "Skipping them would have improved the broad adapter by 65.0c because 4 losers summed to -206.0c while 1 winner summed to 141.0c.",
+    "All skipped rows are rejected-actionable, so the dominant failure family remains source-quality plus FV/book dislocation, not approved-entry live behavior.",
+    "The single +141c skipped winner is the important fragility warning: a hard high-gap cutoff can remove large right-tail wins even when the small sample is net helpful."
+  ],
+  "next_research_implication": "Treat high raw/book gap on rejected-actionable rows as a continuous confidence/shrinkage input, not as a promotable hard veto. A useful next candidate would need to test a soft penalty across the full surface with strict forward freeze, source-share control, and explicit tail-winner cost accounting.",
+  "observability_limits": [
+    "Uses saved adapter skipped rows only; it does not rebuild selected/base rows.",
+    "No exit-path fields are present here, so exit-policy error cannot be directly scored.",
+    "No live-readiness or promotion gate is evaluated by this forensic probe."
+  ],
+  "rows": [
+    {
+      "ask_prob": 0.14,
+      "failure_modes": [
+        "source_quality_error",
+        "fv_overconfidence_or_book_dislocation",
+        "fv_error_side_lost_despite_large_edge",
+        "entry_timing_first_touch_not_reentry"
+      ],
+      "market": "KXBTC15M-26MAY061745-45",
+      "market_side_entry_index": 0,
+      "net_cents": -30.0,
+      "p_side": 0.510383,
+      "raw_book_gap": 0.370383,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-06T21:33:51.536807+00:00"
+    },
+    {
+      "ask_prob": 0.23,
+      "failure_modes": [
+        "source_quality_error",
+        "fv_overconfidence_or_book_dislocation",
+        "fv_error_side_lost_despite_large_edge",
+        "entry_timing_first_touch_not_reentry"
+      ],
+      "market": "KXBTC15M-26MAY061830-30",
+      "market_side_entry_index": 0,
+      "net_cents": -49.0,
+      "p_side": 0.553162,
+      "raw_book_gap": 0.32316200000000006,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-06T22:19:06.460649+00:00"
+    },
+    {
+      "ask_prob": 0.22,
+      "failure_modes": [
+        "source_quality_error",
+        "fv_overconfidence_or_book_dislocation",
+        "fv_error_side_lost_despite_large_edge",
+        "entry_timing_first_touch_not_reentry"
+      ],
+      "market": "KXBTC15M-26MAY062100-00",
+      "market_side_entry_index": 0,
+      "net_cents": -47.0,
+      "p_side": 0.615588,
+      "raw_book_gap": 0.39558800000000005,
+      "side": "no",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-07T00:48:36.454910+00:00"
+    },
+    {
+      "ask_prob": 0.38,
+      "failure_modes": [
+        "source_quality_error",
+        "fv_overconfidence_or_book_dislocation",
+        "fv_error_side_lost_despite_large_edge",
+        "entry_timing_first_touch_not_reentry"
+      ],
+      "market": "KXBTC15M-26MAY062230-30",
+      "market_side_entry_index": 0,
+      "net_cents": -80.0,
+      "p_side": 0.718015,
+      "raw_book_gap": 0.33801499999999995,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-07T02:22:19.050425+00:00"
+    },
+    {
+      "ask_prob": 0.28,
+      "failure_modes": [
+        "source_quality_error",
+        "fv_overconfidence_or_book_dislocation",
+        "fragility_error_hard_cutoff_misses_right_tail",
+        "entry_timing_first_touch_not_reentry"
+      ],
+      "market": "KXBTC15M-26MAY070615-15",
+      "market_side_entry_index": 0,
+      "net_cents": 141.0,
+      "p_side": 0.610872,
+      "raw_book_gap": 0.33087199999999994,
+      "side": "no",
+      "side_won": true,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-07T10:03:17.740674+00:00"
+    }
+  ],
+  "summary": {
+    "ask_buckets": {
+      "ask_20_30c": 3,
+      "ask_30_40c": 1,
+      "ask_lt_20c": 1
+    },
+    "avg_net_cents": -13.0,
+    "gap_buckets": {
+      "gap_30_35pp": 3,
+      "gap_35_40pp": 2
+    },
+    "loss_avg_net_cents": -51.5,
+    "loss_net_cents": -206.0,
+    "losses": 4,
+    "mode_counts": {
+      "entry_timing_first_touch_not_reentry": 5,
+      "fragility_error_hard_cutoff_misses_right_tail": 1,
+      "fv_error_side_lost_despite_large_edge": 4,
+      "fv_overconfidence_or_book_dislocation": 5,
+      "source_quality_error": 5
+    },
+    "net_cents": -65.0,
+    "rows": 5,
+    "side_counts": {
+      "no": 3,
+      "yes": 2
+    },
+    "source_counts": {
+      "rejected_actionable": 5
+    },
+    "surface_counts": {
+      "entry_surface": 5
+    },
+    "win_net_cents": 141.0,
+    "wins": 1
+  }
+}

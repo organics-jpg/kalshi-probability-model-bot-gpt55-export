@@ -1,0 +1,322 @@
+{
+  "blockers": [
+    "research_only",
+    "not_promotion_evidence",
+    "raw05_losses_mostly_no_exit_observation",
+    "approved_losses_exit_helped_vs_hold",
+    "raw05_bridge_coverage_gap",
+    "raw03_bridge_source_gap",
+    "fresh_v28_live_collection_unhealthy"
+  ],
+  "conclusion": "Do not repair the current feature-gate gap with broad exit suppression. The raw05 bridge is cleaner but under-covered; its losing rows are mostly no-exit-observation/source rows, and the approved losing rows were helped by exits versus holding. Raw03 restores coverage by admitting risky rows and still fails source/cushion gates.",
+  "exit_state_frontier_best": {
+    "baseline_live_net_cents": 410.0,
+    "blockers": [
+      "diagnostic_counterfactual_uses_settlement_outcomes",
+      "selected_side_live_subset_only",
+      "not_frozen_forward_shadow_policy"
+    ],
+    "delta_vs_baseline_cents": 0.0,
+    "delta_vs_hold_all_oracle_cents": 5660.0,
+    "description": "Actual live selected-side exits/state on feature-gate rows.",
+    "family_counts": {},
+    "hold_all_oracle_net_cents": -5250.0,
+    "selected_side_live_traded_markets": 36,
+    "simulated_net_cents": 410.0,
+    "source_counts": {},
+    "suppressed_losers": 0,
+    "suppressed_markets": 0,
+    "suppressed_winners": 0,
+    "variant": "baseline_live",
+    "worst_market_cents": -168.0
+  },
+  "exit_state_frontier_generated_at_utc": "2026-05-07T15:01:09.161768+00:00",
+  "forward_collection_blockers": [
+    "research_only",
+    "live_watchdog_restart_failed",
+    "live_lock_not_v28",
+    "no_live_ready_candidate_rows",
+    "exit_watches_still_need_suppression_density_or_cushion"
+  ],
+  "generated_at_utc": "2026-05-07T17:39:10.699753+00:00",
+  "joint_gap_generated_at_utc": "2026-05-07T17:37:08.289216+00:00",
+  "near_promotion_exit_attribution": {
+    "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+    "candidate_missing_gates": [
+      "coverage+9.7pp"
+    ],
+    "candidate_net_cents": 350.0,
+    "candidate_settled": 41,
+    "failure_class_counts": {
+      "entry_or_fv_failure_exit_helped": 3,
+      "no_exit_observation": 10
+    },
+    "loss_source_counts": {
+      "approved_entry": 3,
+      "rejected_actionable": 10
+    },
+    "source_loss_share": 0.7692307692307693
+  },
+  "near_promotion_exit_attribution_generated_at_utc": "2026-05-07T15:01:05.948716+00:00",
+  "next": [
+    "Treat raw05 as a clean-core coverage/source wait, not an exit-suppression repair.",
+    "Do not relax to raw03 for coverage; raw03 marginal rows are source-risk and negative/weak.",
+    "When v28 collection is healthy again, watch for clean raw05-eligible rows or a separately frozen continuous size/source-quality proxy."
+  ],
+  "raw03_bridge": {
+    "avg_cents_needed_per_clean_row_for_cushion": 4.25,
+    "avg_cents_needed_per_clean_row_for_live_snapshot": 262.5,
+    "candidate": "post_feature_freeze_bridge_raw03_recross70_abs075",
+    "cents_needed_for_cushion3": 17.0,
+    "cents_needed_to_match_live_snapshot": 1050.0,
+    "clean_rows_needed_for_coverage_and_source": 4,
+    "clean_rows_needed_for_source_gate": 4,
+    "coverage_pct": 75.0,
+    "drop_risky_losses": {
+      "coverage_pct": 72.22222222222221,
+      "drop_count": 2,
+      "dropped_rows": [
+        {
+          "abs_d_sigma": 0.819952,
+          "ask_prob": 0.64,
+          "market": "KXBTC15M-26MAY070615-15",
+          "net_cents": -68.0,
+          "raw_edge": 0.20093099999999997,
+          "recross_hazard_score": 0.2533484847166239,
+          "side": "yes",
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.784861,
+          "ask_prob": 0.13,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -15.0,
+          "raw_edge": 0.041601,
+          "recross_hazard_score": 0.13225659322745886,
+          "side": "no",
+          "source": "rejected_actionable"
+        }
+      ],
+      "entries": 52,
+      "net_cents": 366.0,
+      "passes_coverage": false,
+      "passes_source": true,
+      "read": "source_passes_only_by_breaking_coverage",
+      "reconstructed_share": 0.34615384615384615,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 18
+      }
+    },
+    "entries": 54,
+    "entries_needed_for_75pct": 0,
+    "full_loss_cushion": 2,
+    "future_denominator": 72,
+    "joint_blockers": [
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3",
+      "does_not_beat_live_snapshot",
+      "fresh_v28_live_collection_unhealthy"
+    ],
+    "lane": "post_feature_freeze_bridge",
+    "live_snapshot_net_cents": 1333.0,
+    "losses": 18,
+    "net_cents": 283.0,
+    "original_blockers": [
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3"
+    ],
+    "reconstructed_share": 0.37037037037037035,
+    "required_entries_for_75pct": 54,
+    "settled": 48,
+    "settled_needed_for_30": 0,
+    "source_counts": {
+      "approved_entry": 34,
+      "rejected_actionable": 20
+    },
+    "wins": 30
+  },
+  "raw03_entry": {
+    "avg_cents_needed_per_clean_row_for_cushion": 6.5,
+    "avg_cents_needed_per_clean_row_for_live_snapshot": 264.75,
+    "candidate": "post_feature_freeze_entry_raw03_recross70_abs075",
+    "cents_needed_for_cushion3": 26.0,
+    "cents_needed_to_match_live_snapshot": 1059.0,
+    "clean_rows_needed_for_coverage_and_source": 4,
+    "clean_rows_needed_for_source_gate": 4,
+    "coverage_pct": 75.0,
+    "drop_risky_losses": {
+      "coverage_pct": 72.22222222222221,
+      "drop_count": 2,
+      "dropped_rows": [
+        {
+          "abs_d_sigma": 0.784861,
+          "ask_prob": 0.13,
+          "market": "KXBTC15M-26MAY062345-45",
+          "net_cents": -15.0,
+          "raw_edge": 0.041601,
+          "recross_hazard_score": 0.13225659322745886,
+          "side": "no",
+          "source": "rejected_actionable"
+        },
+        {
+          "abs_d_sigma": 0.758696,
+          "ask_prob": 0.09,
+          "market": "KXBTC15M-26MAY070200-00",
+          "net_cents": -11.0,
+          "raw_edge": 0.08693400000000001,
+          "recross_hazard_score": 0.12224159683597033,
+          "side": "yes",
+          "source": "rejected_actionable"
+        }
+      ],
+      "entries": 52,
+      "net_cents": 300.0,
+      "passes_coverage": false,
+      "passes_source": true,
+      "read": "source_passes_only_by_breaking_coverage",
+      "reconstructed_share": 0.34615384615384615,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 18
+      }
+    },
+    "entries": 54,
+    "entries_needed_for_75pct": 0,
+    "full_loss_cushion": 2,
+    "future_denominator": 72,
+    "joint_blockers": [
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3",
+      "does_not_beat_live_snapshot",
+      "fresh_v28_live_collection_unhealthy"
+    ],
+    "lane": "post_feature_freeze_entry",
+    "live_snapshot_net_cents": 1333.0,
+    "losses": 16,
+    "net_cents": 274.0,
+    "original_blockers": [
+      "reconstructed_share_gt_35pct",
+      "full_loss_cushion_lt_3"
+    ],
+    "reconstructed_share": 0.37037037037037035,
+    "required_entries_for_75pct": 54,
+    "settled": 42,
+    "settled_needed_for_30": 0,
+    "source_counts": {
+      "approved_entry": 34,
+      "rejected_actionable": 20
+    },
+    "wins": 26
+  },
+  "raw03_raw05_autopsy_generated_at_utc": "2026-05-07T16:02:31.323096+00:00",
+  "raw03_raw05_interpretation": [
+    "Autopsy compares strict post-freeze raw03 broad rows to raw05 clean rows.",
+    "post_feature_freeze_entry: raw03 adds 7 market rows versus raw05, marginal net -83.0c with W/L 2/5; raw03 net 288.0c vs raw05 355.0c and live 1463c.",
+    "post_feature_freeze_entry: raw03 source share 0.3620689655172414 needs 3 clean rows; dropping reconstructed losses has blockers ['coverage_too_low_after_drop'].",
+    "post_feature_freeze_bridge: raw03 adds 7 market rows versus raw05, marginal net -15.0c with W/L 2/4; raw03 net 294.0c vs raw05 293.0c and live 1463c.",
+    "post_feature_freeze_bridge: raw03 source share 0.3620689655172414 needs 3 clean rows; dropping reconstructed losses has blockers ['coverage_too_low_after_drop']."
+  ],
+  "raw05_bridge": {
+    "avg_cents_needed_per_clean_row_for_cushion": 0.0,
+    "avg_cents_needed_per_clean_row_for_live_snapshot": 140.42857142857142,
+    "candidate": "post_feature_freeze_bridge_raw05_recross60_abs085",
+    "cents_needed_for_cushion3": 0.0,
+    "cents_needed_to_match_live_snapshot": 983.0,
+    "clean_rows_needed_for_coverage_and_source": 7,
+    "clean_rows_needed_for_source_gate": 0,
+    "coverage_pct": 65.27777777777777,
+    "drop_risky_losses": {
+      "coverage_pct": 65.27777777777779,
+      "drop_count": 0,
+      "dropped_rows": [],
+      "entries": 47,
+      "net_cents": 350.0,
+      "passes_coverage": false,
+      "passes_source": true,
+      "read": "source_passes_only_by_breaking_coverage",
+      "reconstructed_share": 0.2765957446808511,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 13
+      }
+    },
+    "entries": 47,
+    "entries_needed_for_75pct": 7,
+    "full_loss_cushion": 3,
+    "future_denominator": 72,
+    "joint_blockers": [
+      "coverage_too_low",
+      "does_not_beat_live_snapshot",
+      "fresh_v28_live_collection_unhealthy"
+    ],
+    "lane": "post_feature_freeze_bridge",
+    "live_snapshot_net_cents": 1333.0,
+    "losses": 13,
+    "net_cents": 350.0,
+    "original_blockers": [
+      "coverage_too_low"
+    ],
+    "reconstructed_share": 0.2765957446808511,
+    "required_entries_for_75pct": 54,
+    "settled": 41,
+    "settled_needed_for_30": 0,
+    "source_counts": {
+      "approved_entry": 34,
+      "rejected_actionable": 13
+    },
+    "wins": 28
+  },
+  "raw05_entry": {
+    "avg_cents_needed_per_clean_row_for_cushion": 0.8571428571428571,
+    "avg_cents_needed_per_clean_row_for_live_snapshot": 148.42857142857142,
+    "candidate": "post_feature_freeze_entry_raw05_recross60_abs085",
+    "cents_needed_for_cushion3": 6.0,
+    "cents_needed_to_match_live_snapshot": 1039.0,
+    "clean_rows_needed_for_coverage_and_source": 7,
+    "clean_rows_needed_for_source_gate": 0,
+    "coverage_pct": 65.27777777777777,
+    "drop_risky_losses": {
+      "coverage_pct": 65.27777777777779,
+      "drop_count": 0,
+      "dropped_rows": [],
+      "entries": 47,
+      "net_cents": 294.0,
+      "passes_coverage": false,
+      "passes_source": true,
+      "read": "source_passes_only_by_breaking_coverage",
+      "reconstructed_share": 0.2765957446808511,
+      "source_counts": {
+        "approved_entry": 34,
+        "rejected_actionable": 13
+      }
+    },
+    "entries": 47,
+    "entries_needed_for_75pct": 7,
+    "full_loss_cushion": 2,
+    "future_denominator": 72,
+    "joint_blockers": [
+      "coverage_too_low",
+      "full_loss_cushion_lt_3",
+      "does_not_beat_live_snapshot",
+      "fresh_v28_live_collection_unhealthy"
+    ],
+    "lane": "post_feature_freeze_entry",
+    "live_snapshot_net_cents": 1333.0,
+    "losses": 12,
+    "net_cents": 294.0,
+    "original_blockers": [
+      "coverage_too_low",
+      "full_loss_cushion_lt_3"
+    ],
+    "reconstructed_share": 0.2765957446808511,
+    "required_entries_for_75pct": 54,
+    "settled": 36,
+    "settled_needed_for_30": 0,
+    "source_counts": {
+      "approved_entry": 34,
+      "rejected_actionable": 13
+    },
+    "wins": 24
+  }
+}

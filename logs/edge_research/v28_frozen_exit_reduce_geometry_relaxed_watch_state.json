@@ -1,0 +1,9 @@
+{
+  "candidate": "side_geometry_or_no_deep_loss20_suppress_reduce_p_hold_ge_075",
+  "freeze_ts_utc": "2026-05-07T01:18:56.563250+00:00",
+  "no_deep_current_loss_cents": -20.0,
+  "p_hold_floor": 0.75,
+  "physics": "Side-consistent fair-drawdown is the main guard. The NO-side deep-loss exception treats a probability_reduce exit that is already a large realized loss as less useful loss control when p_hold remains high.",
+  "research_only": true,
+  "rule": "Suppress mushroom_v28_probability_reduce when p_hold >= 0.75 and fair_drawdown sign agrees with the held side; additionally, for NO side only, allow sign-disagree suppression if current_cents <= -20."
+}

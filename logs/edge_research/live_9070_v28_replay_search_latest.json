@@ -1,0 +1,3108 @@
+{
+  "baseline_metrics": {
+    "all": {
+      "contract_accuracy": 0.9839454144089905,
+      "contract_retention": 1.0,
+      "contract_wilson95_lower": 0.9800643275391608,
+      "contracts": 4983,
+      "trade_accuracy": 0.9842829076620825,
+      "trade_retention": 1.0,
+      "trade_wilson95_lower": 0.969295510265341,
+      "trades": 509,
+      "winning_contracts": 4903,
+      "winning_trades": 501
+    },
+    "holdout": {
+      "contract_accuracy": 0.949290060851927,
+      "contract_retention": 1.0,
+      "contract_wilson95_lower": 0.9337671312369501,
+      "contracts": 986,
+      "trade_accuracy": 0.9509803921568627,
+      "trade_retention": 1.0,
+      "trade_wilson95_lower": 0.8903407284663869,
+      "trades": 102,
+      "winning_contracts": 936,
+      "winning_trades": 97
+    },
+    "train": {
+      "contract_accuracy": 1.0,
+      "contract_retention": 1.0,
+      "contract_wilson95_lower": 0.998722380320932,
+      "contracts": 3003,
+      "trade_accuracy": 1.0,
+      "trade_retention": 1.0,
+      "trade_wilson95_lower": 0.9875612611772506,
+      "trades": 305,
+      "winning_contracts": 3003,
+      "winning_trades": 305
+    },
+    "validation": {
+      "contract_accuracy": 0.9698189134808853,
+      "contract_retention": 1.0,
+      "contract_wilson95_lower": 0.9572417179813374,
+      "contracts": 994,
+      "trade_accuracy": 0.9705882352941176,
+      "trade_retention": 1.0,
+      "trade_wilson95_lower": 0.9170680330254163,
+      "trades": 102,
+      "winning_contracts": 964,
+      "winning_trades": 99
+    }
+  },
+  "candidate_count": 777,
+  "diagnostics": {
+    "btc_candle_max": "2026-04-07T14:45:59.999000+00:00",
+    "btc_candle_min": "2026-03-24T01:28:59.999000+00:00",
+    "btc_candle_rows": 20958,
+    "input_trade_labels": 634,
+    "skipped": {
+      "bad_horizon": 0,
+      "missing_close_time": 0,
+      "missing_metadata": 0,
+      "missing_price": 0,
+      "missing_strike": 1,
+      "not_ready": 0,
+      "outside_btc_window": 0,
+      "prediction_error": 0,
+      "unresolved": 124
+    },
+    "usable_replayed_entries": 509
+  },
+  "generated_utc": "20260502_040343Z",
+  "metadata_stats": {
+    "cache_hits": 100,
+    "fetched": 410,
+    "missing_after": 1,
+    "requested": 510
+  },
+  "oracle_limits": {
+    "all": {
+      "retention_75": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 3738,
+        "required_trades": 382,
+        "retention": 0.75
+      },
+      "retention_80": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 3987,
+        "required_trades": 408,
+        "retention": 0.8
+      }
+    },
+    "holdout": {
+      "retention_75": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 740,
+        "required_trades": 77,
+        "retention": 0.75
+      },
+      "retention_80": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 789,
+        "required_trades": 82,
+        "retention": 0.8
+      }
+    },
+    "train": {
+      "retention_75": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 2253,
+        "required_trades": 229,
+        "retention": 0.75
+      },
+      "retention_80": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 2403,
+        "required_trades": 244,
+        "retention": 0.8
+      }
+    },
+    "validation": {
+      "retention_75": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 746,
+        "required_trades": 77,
+        "retention": 0.75
+      },
+      "retention_80": {
+        "max_contract_accuracy": 1.0,
+        "max_trade_accuracy": 1.0,
+        "required_contracts": 796,
+        "required_trades": 82,
+        "retention": 0.8
+      }
+    }
+  },
+  "requirements": {
+    "min_all_selected_contracts": 750,
+    "min_all_selected_trades": 75,
+    "min_contract_retention": 0.75,
+    "min_holdout_selected_contracts": 300,
+    "min_holdout_selected_trades": 30,
+    "min_target_accuracy": 0.95,
+    "min_trade_retention": 0.75
+  },
+  "target_observed_pass_count": 0,
+  "target_pass_count": 0,
+  "top_high_volume_results": [],
+  "top_results": [
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.32871763997591813,
+        "contract_wilson95_lower": 0.9976601884128163,
+        "contracts": 1638,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3320235756385069,
+        "trade_wilson95_lower": 0.9777738692536981,
+        "trades": 169,
+        "winning_contracts": 1638,
+        "winning_trades": 169
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2657200811359026,
+        "contract_wilson95_lower": 0.9855492895017182,
+        "contracts": 262,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2647058823529412,
+        "trade_wilson95_lower": 0.8754409628553642,
+        "trades": 27,
+        "winning_contracts": 262,
+        "winning_trades": 27
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00003",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.34465534465534464,
+        "contract_wilson95_lower": 0.99630203488193,
+        "contracts": 1035,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.35081967213114756,
+        "trade_wilson95_lower": 0.9653415324210405,
+        "trades": 107,
+        "winning_contracts": 1035,
+        "winning_trades": 107
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.34305835010060365,
+        "contract_wilson95_lower": 0.9888598127372102,
+        "contracts": 341,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3431372549019608,
+        "trade_wilson95_lower": 0.9010957324106112,
+        "trades": 35,
+        "winning_contracts": 341,
+        "winning_trades": 35
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.32871763997591813,
+        "contract_wilson95_lower": 0.9976601884128163,
+        "contracts": 1638,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3320235756385069,
+        "trade_wilson95_lower": 0.9777738692536981,
+        "trades": 169,
+        "winning_contracts": 1638,
+        "winning_trades": 169
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2657200811359026,
+        "contract_wilson95_lower": 0.9855492895017182,
+        "contracts": 262,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2647058823529412,
+        "trade_wilson95_lower": 0.8754409628553642,
+        "trades": 27,
+        "winning_contracts": 262,
+        "winning_trades": 27
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.55,
+        "rule_id": "replay_rule_00058",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.34465534465534464,
+        "contract_wilson95_lower": 0.99630203488193,
+        "contracts": 1035,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.35081967213114756,
+        "trade_wilson95_lower": 0.9653415324210405,
+        "trades": 107,
+        "winning_contracts": 1035,
+        "winning_trades": 107
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.34305835010060365,
+        "contract_wilson95_lower": 0.9888598127372102,
+        "contracts": 341,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3431372549019608,
+        "trade_wilson95_lower": 0.9010957324106112,
+        "trades": 35,
+        "winning_contracts": 341,
+        "winning_trades": 35
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.32871763997591813,
+        "contract_wilson95_lower": 0.9976601884128163,
+        "contracts": 1638,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3320235756385069,
+        "trade_wilson95_lower": 0.9777738692536981,
+        "trades": 169,
+        "winning_contracts": 1638,
+        "winning_trades": 169
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2657200811359026,
+        "contract_wilson95_lower": 0.9855492895017182,
+        "contracts": 262,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2647058823529412,
+        "trade_wilson95_lower": 0.8754409628553642,
+        "trades": 27,
+        "winning_contracts": 262,
+        "winning_trades": 27
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00113",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.34465534465534464,
+        "contract_wilson95_lower": 0.99630203488193,
+        "contracts": 1035,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.35081967213114756,
+        "trade_wilson95_lower": 0.9653415324210405,
+        "trades": 107,
+        "winning_contracts": 1035,
+        "winning_trades": 107
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.34305835010060365,
+        "contract_wilson95_lower": 0.9888598127372102,
+        "contracts": 341,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3431372549019608,
+        "trade_wilson95_lower": 0.9010957324106112,
+        "trades": 35,
+        "winning_contracts": 341,
+        "winning_trades": 35
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.30664258478828016,
+        "contract_wilson95_lower": 0.9974921689031033,
+        "contracts": 1528,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3104125736738703,
+        "trade_wilson95_lower": 0.9762632104477463,
+        "trades": 158,
+        "winning_contracts": 1528,
+        "winning_trades": 158
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.24543610547667344,
+        "contract_wilson95_lower": 0.9843736780105564,
+        "contracts": 242,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.24509803921568626,
+        "trade_wilson95_lower": 0.8668035060468212,
+        "trades": 25,
+        "winning_contracts": 242,
+        "winning_trades": 25
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.65,
+        "rule_id": "replay_rule_00168",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.318015318015318,
+        "contract_wilson95_lower": 0.9959934988219117,
+        "contracts": 955,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.32459016393442625,
+        "trade_wilson95_lower": 0.9626454664260378,
+        "trades": 99,
+        "winning_contracts": 955,
+        "winning_trades": 99
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.3329979879275654,
+        "contract_wilson95_lower": 0.9885271125212639,
+        "contracts": 331,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.3333333333333333,
+        "trade_wilson95_lower": 0.8984820937803899,
+        "trades": 34,
+        "winning_contracts": 331,
+        "winning_trades": 34
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.25627132249648804,
+        "contract_wilson95_lower": 0.9970007220252685,
+        "contracts": 1277,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2593320235756385,
+        "trade_wilson95_lower": 0.9717200032979587,
+        "trades": 132,
+        "winning_contracts": 1277,
+        "winning_trades": 132
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1947261663286004,
+        "contract_wilson95_lower": 0.9803841471883398,
+        "contracts": 192,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 192,
+        "winning_trades": 20
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.7,
+        "rule_id": "replay_rule_00223",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2713952713952714,
+        "contract_wilson95_lower": 0.9953084943412744,
+        "contracts": 815,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2786885245901639,
+        "trade_wilson95_lower": 0.9567589957857581,
+        "trades": 85,
+        "winning_contracts": 815,
+        "winning_trades": 85
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2716297786720322,
+        "contract_wilson95_lower": 0.9859714521095407,
+        "contracts": 270,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2647058823529412,
+        "trade_wilson95_lower": 0.8754409628553642,
+        "trades": 27,
+        "winning_contracts": 270,
+        "winning_trades": 27
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23600240818783866,
+        "contract_wilson95_lower": 0.9967439696989833,
+        "contracts": 1176,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23772102161100198,
+        "trade_wilson95_lower": 0.9692282059826209,
+        "trades": 121,
+        "winning_contracts": 1176,
+        "winning_trades": 121
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1744421906693712,
+        "contract_wilson95_lower": 0.9781530650312552,
+        "contracts": 172,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17647058823529413,
+        "trade_wilson95_lower": 0.8241154494176252,
+        "trades": 18,
+        "winning_contracts": 172,
+        "winning_trades": 18
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00008",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2544122544122544,
+        "contract_wilson95_lower": 0.9949968847741514,
+        "contracts": 764,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.25901639344262295,
+        "trade_wilson95_lower": 0.9536271631644004,
+        "trades": 79,
+        "winning_contracts": 764,
+        "winning_trades": 79
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2414486921529175,
+        "contract_wilson95_lower": 0.9842455102000642,
+        "contracts": 240,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23529411764705882,
+        "trade_wilson95_lower": 0.8620194241710247,
+        "trades": 24,
+        "winning_contracts": 240,
+        "winning_trades": 24
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23600240818783866,
+        "contract_wilson95_lower": 0.9967439696989833,
+        "contracts": 1176,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23772102161100198,
+        "trade_wilson95_lower": 0.9692282059826209,
+        "trades": 121,
+        "winning_contracts": 1176,
+        "winning_trades": 121
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1744421906693712,
+        "contract_wilson95_lower": 0.9781530650312552,
+        "contracts": 172,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17647058823529413,
+        "trade_wilson95_lower": 0.8241154494176252,
+        "trades": 18,
+        "winning_contracts": 172,
+        "winning_trades": 18
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.55,
+        "rule_id": "replay_rule_00063",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2544122544122544,
+        "contract_wilson95_lower": 0.9949968847741514,
+        "contracts": 764,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.25901639344262295,
+        "trade_wilson95_lower": 0.9536271631644004,
+        "trades": 79,
+        "winning_contracts": 764,
+        "winning_trades": 79
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2414486921529175,
+        "contract_wilson95_lower": 0.9842455102000642,
+        "contracts": 240,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23529411764705882,
+        "trade_wilson95_lower": 0.8620194241710247,
+        "trades": 24,
+        "winning_contracts": 240,
+        "winning_trades": 24
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23600240818783866,
+        "contract_wilson95_lower": 0.9967439696989833,
+        "contracts": 1176,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23772102161100198,
+        "trade_wilson95_lower": 0.9692282059826209,
+        "trades": 121,
+        "winning_contracts": 1176,
+        "winning_trades": 121
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1744421906693712,
+        "contract_wilson95_lower": 0.9781530650312552,
+        "contracts": 172,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17647058823529413,
+        "trade_wilson95_lower": 0.8241154494176252,
+        "trades": 18,
+        "winning_contracts": 172,
+        "winning_trades": 18
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00118",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2544122544122544,
+        "contract_wilson95_lower": 0.9949968847741514,
+        "contracts": 764,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.25901639344262295,
+        "trade_wilson95_lower": 0.9536271631644004,
+        "trades": 79,
+        "winning_contracts": 764,
+        "winning_trades": 79
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2414486921529175,
+        "contract_wilson95_lower": 0.9842455102000642,
+        "contracts": 240,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23529411764705882,
+        "trade_wilson95_lower": 0.8620194241710247,
+        "trades": 24,
+        "winning_contracts": 240,
+        "winning_trades": 24
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23600240818783866,
+        "contract_wilson95_lower": 0.9967439696989833,
+        "contracts": 1176,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23772102161100198,
+        "trade_wilson95_lower": 0.9692282059826209,
+        "trades": 121,
+        "winning_contracts": 1176,
+        "winning_trades": 121
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1744421906693712,
+        "contract_wilson95_lower": 0.9781530650312552,
+        "contracts": 172,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17647058823529413,
+        "trade_wilson95_lower": 0.8241154494176252,
+        "trades": 18,
+        "winning_contracts": 172,
+        "winning_trades": 18
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.65,
+        "rule_id": "replay_rule_00173",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2544122544122544,
+        "contract_wilson95_lower": 0.9949968847741514,
+        "contracts": 764,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.25901639344262295,
+        "trade_wilson95_lower": 0.9536271631644004,
+        "trades": 79,
+        "winning_contracts": 764,
+        "winning_trades": 79
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2414486921529175,
+        "contract_wilson95_lower": 0.9842455102000642,
+        "contracts": 240,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23529411764705882,
+        "trade_wilson95_lower": 0.8620194241710247,
+        "trades": 24,
+        "winning_contracts": 240,
+        "winning_trades": 24
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23600240818783866,
+        "contract_wilson95_lower": 0.9967439696989833,
+        "contracts": 1176,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23772102161100198,
+        "trade_wilson95_lower": 0.9692282059826209,
+        "trades": 121,
+        "winning_contracts": 1176,
+        "winning_trades": 121
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1744421906693712,
+        "contract_wilson95_lower": 0.9781530650312552,
+        "contracts": 172,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17647058823529413,
+        "trade_wilson95_lower": 0.8241154494176252,
+        "trades": 18,
+        "winning_contracts": 172,
+        "winning_trades": 18
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.7,
+        "rule_id": "replay_rule_00228",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2544122544122544,
+        "contract_wilson95_lower": 0.9949968847741514,
+        "contracts": 764,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.25901639344262295,
+        "trade_wilson95_lower": 0.9536271631644004,
+        "trades": 79,
+        "winning_contracts": 764,
+        "winning_trades": 79
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2414486921529175,
+        "contract_wilson95_lower": 0.9842455102000642,
+        "contracts": 240,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.23529411764705882,
+        "trade_wilson95_lower": 0.8620194241710247,
+        "trades": 24,
+        "winning_contracts": 240,
+        "winning_trades": 24
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22737306843267108,
+        "contract_wilson95_lower": 0.9966208133129539,
+        "contracts": 1133,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22593320235756384,
+        "trade_wilson95_lower": 0.9676746189886368,
+        "trades": 115,
+        "winning_contracts": 1133,
+        "winning_trades": 115
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2028397565922921,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00002",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.24075924075924077,
+        "contract_wilson95_lower": 0.9947146668545113,
+        "contracts": 723,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.24262295081967214,
+        "trade_wilson95_lower": 0.9506484964337834,
+        "trades": 74,
+        "winning_contracts": 723,
+        "winning_trades": 74
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2112676056338028,
+        "contract_wilson95_lower": 0.9820353008956163,
+        "contracts": 210,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.20588235294117646,
+        "trade_wilson95_lower": 0.8453561767357979,
+        "trades": 21,
+        "winning_contracts": 210,
+        "winning_trades": 21
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22737306843267108,
+        "contract_wilson95_lower": 0.9966208133129539,
+        "contracts": 1133,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22593320235756384,
+        "trade_wilson95_lower": 0.9676746189886368,
+        "trades": 115,
+        "winning_contracts": 1133,
+        "winning_trades": 115
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2028397565922921,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.55,
+        "rule_id": "replay_rule_00057",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.24075924075924077,
+        "contract_wilson95_lower": 0.9947146668545113,
+        "contracts": 723,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.24262295081967214,
+        "trade_wilson95_lower": 0.9506484964337834,
+        "trades": 74,
+        "winning_contracts": 723,
+        "winning_trades": 74
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2112676056338028,
+        "contract_wilson95_lower": 0.9820353008956163,
+        "contracts": 210,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.20588235294117646,
+        "trade_wilson95_lower": 0.8453561767357979,
+        "trades": 21,
+        "winning_contracts": 210,
+        "winning_trades": 21
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22737306843267108,
+        "contract_wilson95_lower": 0.9966208133129539,
+        "contracts": 1133,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22593320235756384,
+        "trade_wilson95_lower": 0.9676746189886368,
+        "trades": 115,
+        "winning_contracts": 1133,
+        "winning_trades": 115
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2028397565922921,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00112",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.24075924075924077,
+        "contract_wilson95_lower": 0.9947146668545113,
+        "contracts": 723,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.24262295081967214,
+        "trade_wilson95_lower": 0.9506484964337834,
+        "trades": 74,
+        "winning_contracts": 723,
+        "winning_trades": 74
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2112676056338028,
+        "contract_wilson95_lower": 0.9820353008956163,
+        "contracts": 210,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.20588235294117646,
+        "trade_wilson95_lower": 0.8453561767357979,
+        "trades": 21,
+        "winning_contracts": 210,
+        "winning_trades": 21
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22596829219345776,
+        "contract_wilson95_lower": 0.9965998773633402,
+        "contracts": 1126,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22789783889980353,
+        "trade_wilson95_lower": 0.9679443532129076,
+        "trades": 116,
+        "winning_contracts": 1126,
+        "winning_trades": 116
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1643002028397566,
+        "contract_wilson95_lower": 0.976835727585841,
+        "contracts": 162,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16666666666666666,
+        "trade_wilson95_lower": 0.8156763396284354,
+        "trades": 17,
+        "winning_contracts": 162,
+        "winning_trades": 17
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.75,
+        "rule_id": "replay_rule_00278",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.24442224442224442,
+        "contract_wilson95_lower": 0.994793462445056,
+        "contracts": 734,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.24918032786885247,
+        "trade_wilson95_lower": 0.9518847317689024,
+        "trades": 76,
+        "winning_contracts": 734,
+        "winning_trades": 76
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23138832997987926,
+        "contract_wilson95_lower": 0.9835717853452937,
+        "contracts": 230,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22549019607843138,
+        "trade_wilson95_lower": 0.8568788745827373,
+        "trades": 23,
+        "winning_contracts": 230,
+        "winning_trades": 23
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22596829219345776,
+        "contract_wilson95_lower": 0.9965998773633402,
+        "contracts": 1126,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22789783889980353,
+        "trade_wilson95_lower": 0.9679443532129076,
+        "trades": 116,
+        "winning_contracts": 1126,
+        "winning_trades": 116
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1643002028397566,
+        "contract_wilson95_lower": 0.976835727585841,
+        "contracts": 162,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16666666666666666,
+        "trade_wilson95_lower": 0.8156763396284354,
+        "trades": 17,
+        "winning_contracts": 162,
+        "winning_trades": 17
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.75,
+        "rule_id": "replay_rule_00283",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.24442224442224442,
+        "contract_wilson95_lower": 0.994793462445056,
+        "contracts": 734,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.24918032786885247,
+        "trade_wilson95_lower": 0.9518847317689024,
+        "trades": 76,
+        "winning_contracts": 734,
+        "winning_trades": 76
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.23138832997987926,
+        "contract_wilson95_lower": 0.9835717853452937,
+        "contracts": 230,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22549019607843138,
+        "trade_wilson95_lower": 0.8568788745827373,
+        "trades": 23,
+        "winning_contracts": 230,
+        "winning_trades": 23
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.20931165964278547,
+        "contract_wilson95_lower": 0.996330294860273,
+        "contracts": 1043,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.2082514734774067,
+        "trade_wilson95_lower": 0.9650260010779157,
+        "trades": 106,
+        "winning_contracts": 1043,
+        "winning_trades": 106
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18255578093306288,
+        "contract_wilson95_lower": 0.9791037501849419,
+        "contracts": 180,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17647058823529413,
+        "trade_wilson95_lower": 0.8241154494176252,
+        "trades": 18,
+        "winning_contracts": 180,
+        "winning_trades": 18
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.65,
+        "rule_id": "replay_rule_00167",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22077922077922077,
+        "contract_wilson95_lower": 0.994239111657101,
+        "contracts": 663,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.22295081967213115,
+        "trade_wilson95_lower": 0.9465268034119507,
+        "trades": 68,
+        "winning_contracts": 663,
+        "winning_trades": 68
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.19747140276941602,
+        "contract_wilson95_lower": 0.9961111174099168,
+        "contracts": 984,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19646365422396855,
+        "trade_wilson95_lower": 0.963005192523998,
+        "trades": 100,
+        "winning_contracts": 984,
+        "winning_trades": 100
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15415821501014199,
+        "contract_wilson95_lower": 0.97534932906233,
+        "contracts": 152,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1568627450980392,
+        "trade_wilson95_lower": 0.8063865817272801,
+        "trades": 16,
+        "winning_contracts": 152,
+        "winning_trades": 16
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.8,
+        "rule_id": "replay_rule_00333",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2037962037962038,
+        "contract_wilson95_lower": 0.9937620323148029,
+        "contracts": 612,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.20327868852459016,
+        "trade_wilson95_lower": 0.9416539087749994,
+        "trades": 62,
+        "winning_contracts": 612,
+        "winning_trades": 62
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22132796780684105,
+        "contract_wilson95_lower": 0.9828378639180563,
+        "contracts": 220,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.21568627450980393,
+        "trade_wilson95_lower": 0.8513404742740388,
+        "trades": 22,
+        "winning_contracts": 220,
+        "winning_trades": 22
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.19747140276941602,
+        "contract_wilson95_lower": 0.9961111174099168,
+        "contracts": 984,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19646365422396855,
+        "trade_wilson95_lower": 0.963005192523998,
+        "trades": 100,
+        "winning_contracts": 984,
+        "winning_trades": 100
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15415821501014199,
+        "contract_wilson95_lower": 0.97534932906233,
+        "contracts": 152,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1568627450980392,
+        "trade_wilson95_lower": 0.8063865817272801,
+        "trades": 16,
+        "winning_contracts": 152,
+        "winning_trades": 16
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.8,
+        "rule_id": "replay_rule_00338",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2037962037962038,
+        "contract_wilson95_lower": 0.9937620323148029,
+        "contracts": 612,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.20327868852459016,
+        "trade_wilson95_lower": 0.9416539087749994,
+        "trades": 62,
+        "winning_contracts": 612,
+        "winning_trades": 62
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.22132796780684105,
+        "contract_wilson95_lower": 0.9828378639180563,
+        "contracts": 220,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.21568627450980393,
+        "trade_wilson95_lower": 0.8513404742740388,
+        "trades": 22,
+        "winning_contracts": 220,
+        "winning_trades": 22
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18121613485851895,
+        "contract_wilson95_lower": 0.995763758521885,
+        "contracts": 903,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1807465618860511,
+        "trade_wilson95_lower": 0.9599171967079013,
+        "trades": 92,
+        "winning_contracts": 903,
+        "winning_trades": 92
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15212981744421908,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.7,
+        "rule_id": "replay_rule_00222",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.19413919413919414,
+        "contract_wilson95_lower": 0.9934537701485373,
+        "contracts": 583,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19672131147540983,
+        "trade_wilson95_lower": 0.939826069522067,
+        "trades": 60,
+        "winning_contracts": 583,
+        "winning_trades": 60
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1710261569416499,
+        "contract_wilson95_lower": 0.9779017220274088,
+        "contracts": 170,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16666666666666666,
+        "trade_wilson95_lower": 0.8156763396284354,
+        "trades": 17,
+        "winning_contracts": 170,
+        "winning_trades": 17
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00013",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.55,
+        "rule_id": "replay_rule_00068",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00123",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.65,
+        "rule_id": "replay_rule_00178",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.7,
+        "rule_id": "replay_rule_00233",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.75,
+        "rule_id": "replay_rule_00288",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17900862933975517,
+        "contract_wilson95_lower": 0.9957117418972283,
+        "contracts": 892,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.17681728880157171,
+        "trade_wilson95_lower": 0.959062931578319,
+        "trades": 90,
+        "winning_contracts": 892,
+        "winning_trades": 90
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.8,
+        "rule_id": "replay_rule_00343",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18315018315018314,
+        "contract_wilson95_lower": 0.9930637207461483,
+        "contracts": 550,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18032786885245902,
+        "trade_wilson95_lower": 0.934712856210572,
+        "trades": 55,
+        "winning_contracts": 550,
+        "winning_trades": 55
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.2012072434607646,
+        "contract_wilson95_lower": 0.9811539940816792,
+        "contracts": 200,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.19607843137254902,
+        "trade_wilson95_lower": 0.8388698745050667,
+        "trades": 20,
+        "winning_contracts": 200,
+        "winning_trades": 20
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16897451334537428,
+        "contract_wilson95_lower": 0.9954582512848742,
+        "contracts": 842,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16699410609037327,
+        "trade_wilson95_lower": 0.9567589957857581,
+        "trades": 85,
+        "winning_contracts": 842,
+        "winning_trades": 85
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.85,
+        "rule_id": "replay_rule_00388",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16983016983016982,
+        "contract_wilson95_lower": 0.992523766078885,
+        "contracts": 510,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16721311475409836,
+        "trade_wilson95_lower": 0.9299509861127317,
+        "trades": 51,
+        "winning_contracts": 510,
+        "winning_trades": 51
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.19114688128772636,
+        "contract_wilson95_lower": 0.980181756650791,
+        "contracts": 190,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18627450980392157,
+        "trade_wilson95_lower": 0.8318156346315495,
+        "trades": 19,
+        "winning_contracts": 190,
+        "winning_trades": 19
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16897451334537428,
+        "contract_wilson95_lower": 0.9954582512848742,
+        "contracts": 842,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16699410609037327,
+        "trade_wilson95_lower": 0.9567589957857581,
+        "trades": 85,
+        "winning_contracts": 842,
+        "winning_trades": 85
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.85,
+        "rule_id": "replay_rule_00393",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16983016983016982,
+        "contract_wilson95_lower": 0.992523766078885,
+        "contracts": 510,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16721311475409836,
+        "trade_wilson95_lower": 0.9299509861127317,
+        "trades": 51,
+        "winning_contracts": 510,
+        "winning_trades": 51
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.19114688128772636,
+        "contract_wilson95_lower": 0.980181756650791,
+        "contracts": 190,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18627450980392157,
+        "trade_wilson95_lower": 0.8318156346315495,
+        "trades": 19,
+        "winning_contracts": 190,
+        "winning_trades": 19
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16897451334537428,
+        "contract_wilson95_lower": 0.9954582512848742,
+        "contracts": 842,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16699410609037327,
+        "trade_wilson95_lower": 0.9567589957857581,
+        "trades": 85,
+        "winning_contracts": 842,
+        "winning_trades": 85
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1440162271805274,
+        "contract_wilson95_lower": 0.9736590931531194,
+        "contracts": 142,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 142,
+        "winning_trades": 15
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.85,
+        "rule_id": "replay_rule_00398",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16983016983016982,
+        "contract_wilson95_lower": 0.992523766078885,
+        "contracts": 510,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16721311475409836,
+        "trade_wilson95_lower": 0.9299509861127317,
+        "trades": 51,
+        "winning_contracts": 510,
+        "winning_trades": 51
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.19114688128772636,
+        "contract_wilson95_lower": 0.980181756650791,
+        "contracts": 190,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18627450980392157,
+        "trade_wilson95_lower": 0.8318156346315495,
+        "trades": 19,
+        "winning_contracts": 190,
+        "winning_trades": 19
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16516154926750953,
+        "contract_wilson95_lower": 0.9953538864033932,
+        "contracts": 823,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1650294695481336,
+        "trade_wilson95_lower": 0.9562667346678565,
+        "trades": 84,
+        "winning_contracts": 823,
+        "winning_trades": 84
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13184584178498987,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00007",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18081918081918083,
+        "contract_wilson95_lower": 0.9929749309489254,
+        "contracts": 543,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18360655737704917,
+        "trade_wilson95_lower": 0.9358038555118847,
+        "trades": 56,
+        "winning_contracts": 543,
+        "winning_trades": 56
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16516154926750953,
+        "contract_wilson95_lower": 0.9953538864033932,
+        "contracts": 823,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1650294695481336,
+        "trade_wilson95_lower": 0.9562667346678565,
+        "trades": 84,
+        "winning_contracts": 823,
+        "winning_trades": 84
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13184584178498987,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.55,
+        "rule_id": "replay_rule_00062",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18081918081918083,
+        "contract_wilson95_lower": 0.9929749309489254,
+        "contracts": 543,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18360655737704917,
+        "trade_wilson95_lower": 0.9358038555118847,
+        "trades": 56,
+        "winning_contracts": 543,
+        "winning_trades": 56
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16516154926750953,
+        "contract_wilson95_lower": 0.9953538864033932,
+        "contracts": 823,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1650294695481336,
+        "trade_wilson95_lower": 0.9562667346678565,
+        "trades": 84,
+        "winning_contracts": 823,
+        "winning_trades": 84
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13184584178498987,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00117",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18081918081918083,
+        "contract_wilson95_lower": 0.9929749309489254,
+        "contracts": 543,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18360655737704917,
+        "trade_wilson95_lower": 0.9358038555118847,
+        "trades": 56,
+        "winning_contracts": 543,
+        "winning_trades": 56
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16516154926750953,
+        "contract_wilson95_lower": 0.9953538864033932,
+        "contracts": 823,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1650294695481336,
+        "trade_wilson95_lower": 0.9562667346678565,
+        "trades": 84,
+        "winning_contracts": 823,
+        "winning_trades": 84
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13184584178498987,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.65,
+        "rule_id": "replay_rule_00172",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18081918081918083,
+        "contract_wilson95_lower": 0.9929749309489254,
+        "contracts": 543,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18360655737704917,
+        "trade_wilson95_lower": 0.9358038555118847,
+        "trades": 56,
+        "winning_contracts": 543,
+        "winning_trades": 56
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16516154926750953,
+        "contract_wilson95_lower": 0.9953538864033932,
+        "contracts": 823,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1650294695481336,
+        "trade_wilson95_lower": 0.9562667346678565,
+        "trades": 84,
+        "winning_contracts": 823,
+        "winning_trades": 84
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13184584178498987,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.7,
+        "rule_id": "replay_rule_00227",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.18081918081918083,
+        "contract_wilson95_lower": 0.9929749309489254,
+        "contracts": 543,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.18360655737704917,
+        "trade_wilson95_lower": 0.9358038555118847,
+        "trades": 56,
+        "winning_contracts": 543,
+        "winning_trades": 56
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15713425647200482,
+        "contract_wilson95_lower": 0.9951176958615305,
+        "contracts": 783,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.15717092337917485,
+        "trade_wilson95_lower": 0.954180263735425,
+        "trades": 80,
+        "winning_contracts": 783,
+        "winning_trades": 80
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12170385395537525,
+        "contract_wilson95_lower": 0.9689797289440706,
+        "contracts": 120,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11764705882352941,
+        "trade_wilson95_lower": 0.7574992425007574,
+        "trades": 12,
+        "winning_contracts": 120,
+        "winning_trades": 12
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.75,
+        "rule_id": "replay_rule_00277",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17082917082917082,
+        "contract_wilson95_lower": 0.9925671617764512,
+        "contracts": 513,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1737704918032787,
+        "trade_wilson95_lower": 0.9324156955469233,
+        "trades": 53,
+        "winning_contracts": 513,
+        "winning_trades": 53
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15713425647200482,
+        "contract_wilson95_lower": 0.9951176958615305,
+        "contracts": 783,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.15717092337917485,
+        "trade_wilson95_lower": 0.954180263735425,
+        "trades": 80,
+        "winning_contracts": 783,
+        "winning_trades": 80
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12170385395537525,
+        "contract_wilson95_lower": 0.9689797289440706,
+        "contracts": 120,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11764705882352941,
+        "trade_wilson95_lower": 0.7574992425007574,
+        "trades": 12,
+        "winning_contracts": 120,
+        "winning_trades": 12
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.75,
+        "rule_id": "replay_rule_00282",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.17082917082917082,
+        "contract_wilson95_lower": 0.9925671617764512,
+        "contracts": 513,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1737704918032787,
+        "trade_wilson95_lower": 0.9324156955469233,
+        "trades": 53,
+        "winning_contracts": 513,
+        "winning_trades": 53
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.15090543259557343,
+        "contract_wilson95_lower": 0.9750288608542813,
+        "contracts": 150,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.14705882352941177,
+        "trade_wilson95_lower": 0.7961107336956521,
+        "trades": 15,
+        "winning_contracts": 150,
+        "winning_trades": 15
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13285169576560305,
+        "contract_wilson95_lower": 0.9942304596168218,
+        "contracts": 662,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.13163064833005894,
+        "trade_wilson95_lower": 0.9457719757882372,
+        "trades": 67,
+        "winning_contracts": 662,
+        "winning_trades": 67
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -30.0,
+        "p_min": 0.8,
+        "rule_id": "replay_rule_00332",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13719613719613719,
+        "contract_wilson95_lower": 0.9907618670185954,
+        "contracts": 412,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1377049180327869,
+        "trade_wilson95_lower": 0.916198387490838,
+        "trades": 42,
+        "winning_contracts": 412,
+        "winning_trades": 42
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.14084507042253522,
+        "contract_wilson95_lower": 0.9732928443510084,
+        "contracts": 140,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.13725490196078433,
+        "trade_wilson95_lower": 0.7846829880728186,
+        "trades": 14,
+        "winning_contracts": 140,
+        "winning_trades": 14
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13285169576560305,
+        "contract_wilson95_lower": 0.9942304596168218,
+        "contracts": 662,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.13163064833005894,
+        "trade_wilson95_lower": 0.9457719757882372,
+        "trades": 67,
+        "winning_contracts": 662,
+        "winning_trades": 67
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -20.0,
+        "p_min": 0.8,
+        "rule_id": "replay_rule_00337",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13719613719613719,
+        "contract_wilson95_lower": 0.9907618670185954,
+        "contracts": 412,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1377049180327869,
+        "trade_wilson95_lower": 0.916198387490838,
+        "trades": 42,
+        "winning_contracts": 412,
+        "winning_trades": 42
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.14084507042253522,
+        "contract_wilson95_lower": 0.9732928443510084,
+        "contracts": 140,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.13725490196078433,
+        "trade_wilson95_lower": 0.7846829880728186,
+        "trades": 14,
+        "winning_contracts": 140,
+        "winning_trades": 14
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1288380493678507,
+        "contract_wilson95_lower": 0.9940517922660911,
+        "contracts": 642,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12770137524557956,
+        "trade_wilson95_lower": 0.9441965323292892,
+        "trades": 65,
+        "winning_contracts": 642,
+        "winning_trades": 65
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.09330628803245436,
+        "contract_wilson95_lower": 0.9599171967079013,
+        "contracts": 92,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.09803921568627451,
+        "trade_wilson95_lower": 0.7224598312333834,
+        "trades": 10,
+        "winning_contracts": 92,
+        "winning_trades": 10
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -30.0,
+        "p_min": 0.9,
+        "rule_id": "replay_rule_00443",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12987012987012986,
+        "contract_wilson95_lower": 0.9902458247173481,
+        "contracts": 390,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12786885245901639,
+        "trade_wilson95_lower": 0.910330146399761,
+        "trades": 39,
+        "winning_contracts": 390,
+        "winning_trades": 39
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16096579476861167,
+        "contract_wilson95_lower": 0.9765529633499672,
+        "contracts": 160,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1568627450980392,
+        "trade_wilson95_lower": 0.8063865817272801,
+        "trades": 16,
+        "winning_contracts": 160,
+        "winning_trades": 16
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1288380493678507,
+        "contract_wilson95_lower": 0.9940517922660911,
+        "contracts": 642,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12770137524557956,
+        "trade_wilson95_lower": 0.9441965323292892,
+        "trades": 65,
+        "winning_contracts": 642,
+        "winning_trades": 65
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.09330628803245436,
+        "contract_wilson95_lower": 0.9599171967079013,
+        "contracts": 92,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.09803921568627451,
+        "trade_wilson95_lower": 0.7224598312333834,
+        "trades": 10,
+        "winning_contracts": 92,
+        "winning_trades": 10
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -20.0,
+        "p_min": 0.9,
+        "rule_id": "replay_rule_00448",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12987012987012986,
+        "contract_wilson95_lower": 0.9902458247173481,
+        "contracts": 390,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12786885245901639,
+        "trade_wilson95_lower": 0.910330146399761,
+        "trades": 39,
+        "winning_contracts": 390,
+        "winning_trades": 39
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16096579476861167,
+        "contract_wilson95_lower": 0.9765529633499672,
+        "contracts": 160,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1568627450980392,
+        "trade_wilson95_lower": 0.8063865817272801,
+        "trades": 16,
+        "winning_contracts": 160,
+        "winning_trades": 16
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1288380493678507,
+        "contract_wilson95_lower": 0.9940517922660911,
+        "contracts": 642,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12770137524557956,
+        "trade_wilson95_lower": 0.9441965323292892,
+        "trades": 65,
+        "winning_contracts": 642,
+        "winning_trades": 65
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.09330628803245436,
+        "contract_wilson95_lower": 0.9599171967079013,
+        "contracts": 92,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.09803921568627451,
+        "trade_wilson95_lower": 0.7224598312333834,
+        "trades": 10,
+        "winning_contracts": 92,
+        "winning_trades": 10
+      },
+      "rule": {
+        "ask_max": 92.0,
+        "edge_min": -10.0,
+        "p_min": 0.9,
+        "rule_id": "replay_rule_00453",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12987012987012986,
+        "contract_wilson95_lower": 0.9902458247173481,
+        "contracts": 390,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12786885245901639,
+        "trade_wilson95_lower": 0.910330146399761,
+        "trades": 39,
+        "winning_contracts": 390,
+        "winning_trades": 39
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.16096579476861167,
+        "contract_wilson95_lower": 0.9765529633499672,
+        "contracts": 160,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.1568627450980392,
+        "trade_wilson95_lower": 0.8063865817272801,
+        "trades": 16,
+        "winning_contracts": 160,
+        "winning_trades": 16
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00012",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.55,
+        "rule_id": "replay_rule_00067",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00122",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.65,
+        "rule_id": "replay_rule_00177",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.7,
+        "rule_id": "replay_rule_00232",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.75,
+        "rule_id": "replay_rule_00287",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12241621513144692,
+        "contract_wilson95_lower": 0.9937417079585352,
+        "contracts": 610,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11984282907662082,
+        "trade_wilson95_lower": 0.9407540837980556,
+        "trades": 61,
+        "winning_contracts": 610,
+        "winning_trades": 61
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11156186612576065,
+        "contract_wilson95_lower": 0.9662548664108728,
+        "contracts": 110,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.10784313725490197,
+        "trade_wilson95_lower": 0.7411599827511859,
+        "trades": 11,
+        "winning_contracts": 110,
+        "winning_trades": 11
+      },
+      "rule": {
+        "ask_max": 90.0,
+        "edge_min": -10.0,
+        "p_min": 0.8,
+        "rule_id": "replay_rule_00342",
+        "side_filter": "all"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.12321012321012322,
+        "contract_wilson95_lower": 0.9897239900535412,
+        "contracts": 370,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12131147540983607,
+        "trade_wilson95_lower": 0.9059390425448562,
+        "trades": 37,
+        "winning_contracts": 370,
+        "winning_trades": 37
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.13078470824949698,
+        "contract_wilson95_lower": 0.9712974142568528,
+        "contracts": 130,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.12745098039215685,
+        "trade_wilson95_lower": 0.7718981569447084,
+        "trades": 13,
+        "winning_contracts": 130,
+        "winning_trades": 13
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11499096929560505,
+        "contract_wilson95_lower": 0.9933402861374769,
+        "contracts": 573,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11591355599214145,
+        "trade_wilson95_lower": 0.9388685202159079,
+        "trades": 59,
+        "winning_contracts": 573,
+        "winning_trades": 59
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11359026369168357,
+        "contract_wilson95_lower": 0.9668374746205163,
+        "contracts": 112,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11764705882352941,
+        "trade_wilson95_lower": 0.7574992425007574,
+        "trades": 12,
+        "winning_contracts": 112,
+        "winning_trades": 12
+      },
+      "rule": {
+        "ask_max": 100.0,
+        "edge_min": -20.0,
+        "p_min": 0.5,
+        "rule_id": "replay_rule_00697",
+        "side_filter": "no"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.0969030969030969,
+        "contract_wilson95_lower": 0.9869706310100068,
+        "contracts": 291,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.09836065573770492,
+        "trade_wilson95_lower": 0.886482908609522,
+        "trades": 30,
+        "winning_contracts": 291,
+        "winning_trades": 30
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1710261569416499,
+        "contract_wilson95_lower": 0.9779017220274088,
+        "contracts": 170,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16666666666666666,
+        "trade_wilson95_lower": 0.8156763396284354,
+        "trades": 17,
+        "winning_contracts": 170,
+        "winning_trades": 17
+      }
+    },
+    {
+      "all": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11499096929560505,
+        "contract_wilson95_lower": 0.9933402861374769,
+        "contracts": 573,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11591355599214145,
+        "trade_wilson95_lower": 0.9388685202159079,
+        "trades": 59,
+        "winning_contracts": 573,
+        "winning_trades": 59
+      },
+      "holdout": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.11359026369168357,
+        "contract_wilson95_lower": 0.9668374746205163,
+        "contracts": 112,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.11764705882352941,
+        "trade_wilson95_lower": 0.7574992425007574,
+        "trades": 12,
+        "winning_contracts": 112,
+        "winning_trades": 12
+      },
+      "rule": {
+        "ask_max": 100.0,
+        "edge_min": -20.0,
+        "p_min": 0.6,
+        "rule_id": "replay_rule_00703",
+        "side_filter": "no"
+      },
+      "target_observed_pass": false,
+      "target_pass": false,
+      "train": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.0969030969030969,
+        "contract_wilson95_lower": 0.9869706310100068,
+        "contracts": 291,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.09836065573770492,
+        "trade_wilson95_lower": 0.886482908609522,
+        "trades": 30,
+        "winning_contracts": 291,
+        "winning_trades": 30
+      },
+      "validation": {
+        "contract_accuracy": 1.0,
+        "contract_retention": 0.1710261569416499,
+        "contract_wilson95_lower": 0.9779017220274088,
+        "contracts": 170,
+        "trade_accuracy": 1.0,
+        "trade_retention": 0.16666666666666666,
+        "trade_wilson95_lower": 0.8156763396284354,
+        "trades": 17,
+        "winning_contracts": 170,
+        "winning_trades": 17
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "entry_policy": "raw_v28_p50_edge0_fixed_selection",
+  "freeze_ts": "2026-05-05T23:30:17.615882+00:00",
+  "overlays": [
+    "raw_probability",
+    "entry_conditioned_plus03_probability",
+    "entry_conditioned_plus05_probability",
+    "entry_conditioned_logit125_probability",
+    "noise_shrink_light_probability",
+    "book_probability",
+    "entry_conditioned_logit125_p60_only_probability"
+  ],
+  "promotion_floor": {
+    "min_settled": 30,
+    "must_improve_brier_vs_raw": true,
+    "must_not_reduce_entry_pnl": true,
+    "required_coverage_pct_max": 90.0,
+    "required_coverage_pct_min": 70.0
+  }
+}

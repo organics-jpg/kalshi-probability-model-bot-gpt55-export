@@ -1,0 +1,9 @@
+{
+  "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+  "candidate": "skip_early_no_boundary_decay_repair_calm_geometry",
+  "coverage_floor": 75.0,
+  "danger_rule": "early NO boundary decay OR cheap near-boundary turbulence",
+  "freeze_ts_utc": "2026-05-06T09:10:09.146392+00:00",
+  "physics": "Early NO positions near the strike are fragile because there is still enough clock for BTC to recross repeatedly; cheap contracts near the boundary are often cheap because the path is unresolved, not because they are underpriced.",
+  "repair_rule": "clean repair rows ranked by farthest abs_d_sigma, then lowest recross hazard"
+}

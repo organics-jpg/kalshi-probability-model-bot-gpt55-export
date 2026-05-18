@@ -1,0 +1,54 @@
+{
+  "blockers": [
+    "brier_not_better",
+    "logloss_not_better"
+  ],
+  "brier_delta_vs_raw": 0.002992138690551288,
+  "diagnostic": "frozen_no_mid_edge_fv",
+  "freeze": {
+    "freeze_ts_utc": "2026-05-06T10:33:21.044716+00:00",
+    "fv_adjustment": "if side=no and raw_edge_prob in [0.05,0.08), p_side=ask_prob",
+    "target_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "variant": "no_mid_to_book"
+  },
+  "future_denominator": 107,
+  "interpretation": [
+    "Frozen forward denominator is 107; scored rows 78.",
+    "Raw Brier/logloss 0.21644742203030767/0.6144511667103113; variant 0.21943956072085896/0.6216444824843713.",
+    "Promotion blocked by: brier_not_better, logloss_not_better.",
+    "This is a frozen calibration overlay, not live order logic."
+  ],
+  "logloss_delta_vs_raw": 0.007193315774060016,
+  "raw": {
+    "avg_net_cents": 1.7692307692307692,
+    "avg_p": 0.646067717948718,
+    "brier": 0.21644742203030767,
+    "logloss": 0.6144511667103113,
+    "losses": 32,
+    "net_cents": 138.0,
+    "rows": 78,
+    "win_rate": 0.5897435897435898,
+    "wins": 46
+  },
+  "ready_for_consideration": false,
+  "target_summary": {
+    "avg_net_cents": 2.0256410256410255,
+    "coverage_pct": 72.89719626168224,
+    "entries": 78,
+    "losses": 32,
+    "net_cents": 158.0,
+    "settled": 78,
+    "wins": 46
+  },
+  "variant": {
+    "avg_net_cents": 1.7692307692307692,
+    "avg_p": 0.6377595769230769,
+    "brier": 0.21943956072085896,
+    "logloss": 0.6216444824843713,
+    "losses": 32,
+    "net_cents": 138.0,
+    "rows": 78,
+    "win_rate": 0.5897435897435898,
+    "wins": 46
+  }
+}

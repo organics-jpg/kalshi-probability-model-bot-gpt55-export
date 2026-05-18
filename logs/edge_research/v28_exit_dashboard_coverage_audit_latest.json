@@ -1,0 +1,771 @@
+{
+  "covered_gates": [
+    "dual_exit_book_gap_else_reduce",
+    "exit_book_gap_loss_guard",
+    "exit_book_gap_loss_guard_v2",
+    "exit_book_gap_loss_guard_v3",
+    "exit_book_gap_suppression",
+    "exit_book_gap_value_only",
+    "exit_clip_separator_watch",
+    "exit_common_clock_residual_child_watch",
+    "exit_midband_reduce_rescue",
+    "exit_reduce_depth_gate",
+    "exit_reduce_drift_guard",
+    "exit_reduce_geometry_relaxed_watch",
+    "exit_reduce_geometry_suppression",
+    "exit_reduce_loss_control_refinement",
+    "exit_reduce_observable_loss_control",
+    "exit_shallow_drawdown",
+    "exit_shallow_duration_lte52",
+    "exit_value_reduce_depth_composite",
+    "feature_gate_exit_bid_delayed_recheck",
+    "feature_gate_exit_bid_suppression_watch",
+    "frozen_feature_gate_value_exit_watch",
+    "frozen_value_exit_feature_side_guard",
+    "matched_unchanged_loss_guard_watch",
+    "soft_frontier_midprice_delayed_recheck_exit",
+    "soft_frontier_midprice_delayed_recheck_rescue"
+  ],
+  "dashboard_lanes": 28,
+  "dashboard_lanes_without_gate_map": [],
+  "dashboard_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_exit_policy_watch_dashboard_latest.json",
+  "dashboard_status_counts": {
+    "dashboard_covered": 25,
+    "intentionally_excluded": 11
+  },
+  "generated_at_utc": "2026-05-07T11:29:25.021402+00:00",
+  "intentionally_excluded_gates": [
+    {
+      "gate": "exit_reduce_suppression",
+      "reason": "legacy_blanket_reduce_watch_superseded_by_guarded_children"
+    },
+    {
+      "gate": "exit_reduce_yes_suppression",
+      "reason": "legacy_side_specific_reduce_watch_not_current_dashboard_child"
+    },
+    {
+      "gate": "feature_gate_book_gap_exit_stack",
+      "reason": "entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "reason": "coverage_size_entry_overlay_tracked_with_feature_gate_family"
+    },
+    {
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "reason": "coverage_size_entry_overlay_tracked_with_feature_gate_family"
+    },
+    {
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "reason": "coverage_size_entry_overlay_tracked_with_feature_gate_family"
+    },
+    {
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "reason": "entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "reason": "entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "reason": "entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "reason": "entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard"
+    },
+    {
+      "gate": "soft_frontier_midprice_boundary_exit_stack",
+      "reason": "entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard"
+    }
+  ],
+  "interpretation": [
+    "Research-only dashboard coverage audit; it checks reporting visibility, not candidate quality.",
+    "Tracker has 36 exit-like gates; dashboard has 28 lanes.",
+    "Dashboard status counts: {'dashboard_covered': 25, 'intentionally_excluded': 11}.",
+    "Registry active missing rows: 0.",
+    "No active exit/state tracker gate is missing dashboard coverage or an explicit exclusion."
+  ],
+  "missing_dashboard_review_gates": [],
+  "registry_active_missing_rows": 0,
+  "registry_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_candidate_registry_coverage_audit_latest.json",
+  "rows": [
+    {
+      "dashboard_lane": "dual_exit_book_gap_else_reduce",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "dual_exit_book_gap_else_reduce",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -350.0,
+      "max_settled": 25,
+      "policies": [
+        "dual_exit_book_gap_else_reduce"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "book_gap_loss_guard",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_book_gap_loss_guard",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 2.0,
+      "max_settled": 27,
+      "policies": [
+        "book_gap_loss_guard_value_p85_reduce_p79_gap0"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "book_gap_loss_guard_v2",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_book_gap_loss_guard_v2",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -10.0,
+      "max_settled": 10,
+      "policies": [
+        "book_gap_loss_guard_v2_value_gap0_or_p85_shallowdd_reduce_p79_gap0"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "book_gap_loss_guard_v3",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_book_gap_loss_guard_v3",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 92.0,
+      "max_settled": 12,
+      "policies": [
+        "book_gap_loss_guard_v3_value_gap0_or_p85_shallow_or_p95_extreme_reduce_p79_gap0"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "book_gap_suppression",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_book_gap_suppression",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -180.0,
+      "max_settled": 55,
+      "policies": [
+        "suppress_soft_gap15_or_p_hold75"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "book_gap_value_only",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_book_gap_value_only",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -306.0,
+      "max_settled": 18,
+      "policies": [
+        "value_only_gap15_or_p75"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "exit_clip_separator_watch",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_clip_separator_watch",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 0,
+      "max_settled": 1,
+      "policies": [
+        "fair_drawdown_lte10_p_hold_ge060_exit_clip_separator"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "common_clock_residual_child_exit70_79",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_common_clock_residual_child_watch",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 36.0,
+      "max_settled": 1,
+      "policies": [
+        "parent_loss_guard_plus_residual_exit70_79"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "midband_reduce_rescue",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 4,
+      "gate": "exit_midband_reduce_rescue",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 733.0,
+      "max_settled": 99,
+      "policies": [
+        "diagnostic_midband_p60_75_exit50_75_asklt80",
+        "diagnostic_midband_p65_75_exit50_75_asklt80",
+        "diagnostic_midband_p60_75_exit50_70_asklt80",
+        "diagnostic_midband_p60_75_exit50_75_asklt80_fairddgte0",
+        "post_birth_midband_p60_75_exit50_75_asklt80",
+        "post_birth_midband_p60_75_exit50_75_asklt80_fairddgte0",
+        "post_birth_midband_p60_75_exit50_70_asklt80",
+        "post_birth_midband_p65_75_exit50_75_asklt80"
+      ],
+      "positive_rows": 8,
+      "post_birth_rows": 4,
+      "target_coverage_rows": 0,
+      "tracker_rows": 8
+    },
+    {
+      "dashboard_lane": "reduce_depth_gate",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_depth_gate",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 116.0,
+      "max_settled": 21,
+      "policies": [
+        "post_depth_gate_birth_reduce_suppress_p_hold_ge_079_entry_depth_lte_384",
+        "post_depth_gate_birth_reduce_suppress_p_hold_ge_075_entry_depth_lte_384_drawdown_lte_2p5",
+        "post_depth_gate_birth_reduce_suppress_p_hold_ge_075_entry_depth_lte_384",
+        "post_depth_gate_birth_reduce_suppress_p_hold_ge_075_entry_depth_lte_295"
+      ],
+      "positive_rows": 2,
+      "post_birth_rows": 4,
+      "target_coverage_rows": 0,
+      "tracker_rows": 4
+    },
+    {
+      "dashboard_lane": "exit_reduce_drift_guard",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 5,
+      "gate": "exit_reduce_drift_guard",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 786.0,
+      "max_settled": 99,
+      "policies": [
+        "diagnostic_two_regime_drift_guard",
+        "diagnostic_entry_band_moderate_drawdown",
+        "diagnostic_blanket_p75_control",
+        "diagnostic_mid_p_moderate_drawdown",
+        "diagnostic_high_p_favorable_fv",
+        "post_birth_diagnostic_blanket_p75_control",
+        "post_birth_entry_band_moderate_drawdown",
+        "post_birth_high_p_favorable_fv"
+      ],
+      "positive_rows": 10,
+      "post_birth_rows": 5,
+      "target_coverage_rows": 0,
+      "tracker_rows": 10
+    },
+    {
+      "dashboard_lane": "reduce_geometry_relaxed",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_geometry_relaxed_watch",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -106.0,
+      "max_settled": 6,
+      "policies": [
+        "side_geometry_or_no_deep_loss20_suppress_reduce_p_hold_ge_075"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "reduce_side_geometry",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_geometry_suppression",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -114.0,
+      "max_settled": 21,
+      "policies": [
+        "side_geometry_suppress_reduce_p_hold_ge_075"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "reduce_loss_control_refinement",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_loss_control_refinement",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 42.0,
+      "max_settled": 21,
+      "policies": [
+        "post_refinement_birth_reduce_suppress_p_hold_ge_079",
+        "post_refinement_birth_reduce_suppress_p_hold_ge_075_drawdown_lte_2p5",
+        "post_refinement_birth_reduce_suppress_p_hold_ge_079_or_drawdown_lte_2p5",
+        "post_refinement_birth_reduce_suppress_p_hold_ge_075_fair_drawdown_lte_0"
+      ],
+      "positive_rows": 4,
+      "post_birth_rows": 4,
+      "target_coverage_rows": 0,
+      "tracker_rows": 4
+    },
+    {
+      "dashboard_lane": "reduce_observable_loss_control",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_observable_loss_control",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -158.0,
+      "max_settled": 10,
+      "policies": [
+        "post_observable_birth_reduce_suppress_p75_entry_stc_lte_596",
+        "post_observable_birth_reduce_suppress_p75_duration_lte_52",
+        "post_observable_birth_reduce_suppress_p75_entry_book_age_gte_672",
+        "post_observable_birth_reduce_suppress_p75_exit_sigma_gte_110",
+        "post_observable_birth_reduce_suppress_p75_exit_cents_lte_72",
+        "post_observable_birth_reduce_suppress_p75_entry_volshock_gte_0468",
+        "post_observable_birth_reduce_suppress_p75_depth_lte384_or_duration_lte52",
+        "post_observable_birth_reduce_suppress_p75_depth_lte384_and_duration_lte75"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 8,
+      "target_coverage_rows": 0,
+      "tracker_rows": 8
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:legacy_blanket_reduce_watch_superseded_by_guarded_children",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_suppression",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 482.0,
+      "max_settled": 56,
+      "policies": [
+        "suppress_reduce_p_hold_ge_075"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:legacy_side_specific_reduce_watch_not_current_dashboard_child",
+      "diagnostic_rows": 0,
+      "gate": "exit_reduce_yes_suppression",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 373.0,
+      "max_settled": 35,
+      "policies": [
+        "suppress_yes_reduce_p_hold_ge_075"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "exit_shallow_drawdown",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 1,
+      "gate": "exit_shallow_drawdown",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1576.0,
+      "max_settled": 100,
+      "policies": [
+        "diagnostic_shallow_drawdown_any_exit_lte5",
+        "post_birth_shallow_drawdown_any_exit_lte5"
+      ],
+      "positive_rows": 2,
+      "post_birth_rows": 1,
+      "target_coverage_rows": 0,
+      "tracker_rows": 2
+    },
+    {
+      "dashboard_lane": "exit_shallow_duration_lte52",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 1,
+      "gate": "exit_shallow_duration_lte52",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1320.0,
+      "max_settled": 100,
+      "policies": [
+        "diagnostic_shallow_drawdown_duration_lte52_reduce_or_collapse",
+        "post_birth_shallow_drawdown_duration_lte52_reduce_or_collapse"
+      ],
+      "positive_rows": 2,
+      "post_birth_rows": 1,
+      "target_coverage_rows": 0,
+      "tracker_rows": 2
+    },
+    {
+      "dashboard_lane": "value_reduce_depth_composite",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "exit_value_reduce_depth_composite",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": -110.0,
+      "max_settled": 17,
+      "policies": [
+        "value_v2_reduce_depth384"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard",
+      "diagnostic_rows": 0,
+      "gate": "feature_gate_book_gap_exit_stack",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 174.0,
+      "max_settled": 16,
+      "policies": [
+        "post_stack_entry_raw05_recross60_abs085_ask65_book_gap_exit",
+        "post_stack_entry_raw05_recross60_abs085_book_gap_exit",
+        "post_stack_entry_raw07_recross60_abs085_book_gap_exit",
+        "post_stack_entry_raw03_recross70_abs075_book_gap_exit",
+        "post_stack_bridge_raw05_recross60_abs085_ask65_book_gap_exit",
+        "post_stack_bridge_raw05_recross60_abs085_book_gap_exit",
+        "post_stack_bridge_raw07_recross60_abs085_book_gap_exit",
+        "post_stack_bridge_raw03_recross70_abs075_book_gap_exit"
+      ],
+      "positive_rows": 24,
+      "post_birth_rows": 32,
+      "target_coverage_rows": 0,
+      "tracker_rows": 32
+    },
+    {
+      "dashboard_lane": "feature_gate_exit_bid_delayed_recheck",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "feature_gate_exit_bid_delayed_recheck",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 0,
+      "max_settled": 0,
+      "policies": [
+        "delay60_bid_ge60_drop_lte10"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": "feature_gate_exit_bid_suppression",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "feature_gate_exit_bid_suppression_watch",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 0,
+      "max_settled": 0,
+      "policies": [
+        "feature_gate_exit_bid_min_ge_60_suppress"
+      ],
+      "positive_rows": 0,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:coverage_size_entry_overlay_tracked_with_feature_gate_family",
+      "diagnostic_rows": 5,
+      "gate": "feature_gate_size_shrink_delayed_recheck_exit",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 358.0,
+      "max_settled": 37,
+      "policies": [
+        "diagnostic_prefreeze_context_delay60_bid60_drop10",
+        "diagnostic_prefreeze_context_delay60_bid60_drop11",
+        "diagnostic_prefreeze_context_delay60_bid65_drop10",
+        "diagnostic_prefreeze_context_delay120_bid60_drop10",
+        "diagnostic_prefreeze_context_base_no_exit_overlay",
+        "post_delayed_recheck_overlay_birth_base_no_exit_overlay",
+        "post_delayed_recheck_overlay_birth_delay60_bid60_drop10",
+        "post_delayed_recheck_overlay_birth_delay60_bid60_drop11"
+      ],
+      "positive_rows": 5,
+      "post_birth_rows": 5,
+      "target_coverage_rows": 5,
+      "tracker_rows": 10
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:coverage_size_entry_overlay_tracked_with_feature_gate_family",
+      "diagnostic_rows": 5,
+      "gate": "feature_gate_size_shrink_delayed_recheck_rescue",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 510.0,
+      "max_settled": 37,
+      "policies": [
+        "diagnostic_prefreeze_context_combo_high60_or_collapse40",
+        "diagnostic_prefreeze_context_high_bid_delay60_bid60_drop10",
+        "diagnostic_prefreeze_context_collapse_rebound_delay60_exit45_recheck40_rebound10_drop15",
+        "diagnostic_prefreeze_context_collapse_rebound_delay60_exit50_recheck45_rebound10_drop15",
+        "diagnostic_prefreeze_context_base_no_exit_overlay",
+        "post_rescue_overlay_birth_base_no_exit_overlay",
+        "post_rescue_overlay_birth_high_bid_delay60_bid60_drop10",
+        "post_rescue_overlay_birth_collapse_rebound_delay60_exit45_recheck40_rebound10_drop15"
+      ],
+      "positive_rows": 5,
+      "post_birth_rows": 5,
+      "target_coverage_rows": 5,
+      "tracker_rows": 10
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:coverage_size_entry_overlay_tracked_with_feature_gate_family",
+      "diagnostic_rows": 0,
+      "gate": "feature_gate_size_shrink_exit_overlay",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 157.5,
+      "max_settled": 37,
+      "policies": [
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_base_current_exit_control",
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_only",
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_or_reduce_p75",
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_or_clip_p60_drawdown10",
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_book_gap_or_reduce_p75_or_clip",
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_reduce_p75_only",
+        "post_feature_freeze_entry_repair_low_absd_quarter_else_half_clip_p60_drawdown10_only",
+        "post_feature_freeze_bridge_repair_low_absd_quarter_else_half_base_current_exit_control"
+      ],
+      "positive_rows": 14,
+      "post_birth_rows": 14,
+      "target_coverage_rows": 14,
+      "tracker_rows": 14
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard",
+      "diagnostic_rows": 0,
+      "gate": "feature_gate_soft_frontier_exit_stack",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 140.0,
+      "max_settled": 9,
+      "policies": [
+        "post_soft_stack_entry_soft_raw03_recross50_abs50_ask35_book_gap_exit",
+        "post_soft_stack_entry_soft_raw03_recross50_abs65_ask35_book_gap_exit",
+        "post_soft_stack_entry_soft_raw03_recross50_abs50_ask50_book_gap_exit",
+        "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask35_book_gap_exit",
+        "post_soft_stack_bridge_soft_raw03_recross50_abs65_ask35_book_gap_exit",
+        "post_soft_stack_bridge_soft_raw03_recross50_abs50_ask50_book_gap_exit",
+        "post_soft_stack_entry_soft_raw03_recross50_abs50_ask35_loss_guard_v1_exit",
+        "post_soft_stack_entry_soft_raw03_recross50_abs65_ask35_loss_guard_v1_exit"
+      ],
+      "positive_rows": 24,
+      "post_birth_rows": 24,
+      "target_coverage_rows": 0,
+      "tracker_rows": 24
+    },
+    {
+      "dashboard_lane": "feature_gate_value_exit",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 2,
+      "gate": "frozen_feature_gate_value_exit_watch",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1000.0,
+      "max_settled": 20,
+      "policies": [
+        "diagnostic_prefreeze_context_suppress_value_over_hold",
+        "diagnostic_prefreeze_context_suppress_value_or_reduce_p_hold80",
+        "post_value_exit_birth_suppress_value_over_hold",
+        "post_value_exit_birth_suppress_value_or_reduce_p_hold80"
+      ],
+      "positive_rows": 2,
+      "post_birth_rows": 2,
+      "target_coverage_rows": 0,
+      "tracker_rows": 4
+    },
+    {
+      "dashboard_lane": "value_exit_feature_side_guard",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 1,
+      "gate": "frozen_value_exit_feature_side_guard",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 383.0,
+      "max_settled": 87,
+      "policies": [
+        "diagnostic_prefreeze_context_value_only_gap15_or_p75_feature_gate_same_side",
+        "post_feature_side_guard_birth_value_only_gap15_or_p75_feature_gate_same_side"
+      ],
+      "positive_rows": 2,
+      "post_birth_rows": 1,
+      "target_coverage_rows": 0,
+      "tracker_rows": 2
+    },
+    {
+      "dashboard_lane": "matched_unchanged_loss_guard_watch",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 0,
+      "gate": "matched_unchanged_loss_guard_watch",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 18.0,
+      "max_settled": 1,
+      "policies": [
+        "guarded_matched_unchanged_loss_hold_watch"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 0,
+      "target_coverage_rows": 0,
+      "tracker_rows": 1
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard",
+      "diagnostic_rows": 6,
+      "gate": "soft_frontier_midprice_boundary_clip_exit_stack",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 952.0,
+      "max_settled": 47,
+      "policies": [
+        "diagnostic_bridge_quarter_midprice_boundary_clip_separator_weighted_exit_stack",
+        "diagnostic_entry_quarter_midprice_boundary_clip_separator_weighted_exit_stack",
+        "diagnostic_bridge_half_midprice_boundary_clip_separator_weighted_exit_stack",
+        "diagnostic_entry_half_midprice_boundary_clip_separator_weighted_exit_stack",
+        "diagnostic_bridge_control_no_shrink_clip_separator_weighted_exit_stack",
+        "diagnostic_entry_control_no_shrink_clip_separator_weighted_exit_stack",
+        "post_midprice_shrink_birth_entry_control_no_shrink_clip_separator_weighted_exit_stack",
+        "post_midprice_shrink_birth_entry_half_midprice_boundary_clip_separator_weighted_exit_stack"
+      ],
+      "positive_rows": 14,
+      "post_birth_rows": 9,
+      "target_coverage_rows": 12,
+      "tracker_rows": 15
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard",
+      "diagnostic_rows": 24,
+      "gate": "soft_frontier_midprice_boundary_dual_exit_guard",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1214.0,
+      "max_settled": 54,
+      "policies": [
+        "diagnostic_bridge_quarter_midprice_boundary_or_reduce_p_hold80",
+        "diagnostic_bridge_half_midprice_boundary_or_reduce_p_hold80",
+        "diagnostic_bridge_control_no_shrink_or_reduce_p_hold80",
+        "diagnostic_bridge_quarter_midprice_boundary_or_no_midprice_boundary_suppress",
+        "diagnostic_bridge_quarter_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary",
+        "diagnostic_bridge_half_midprice_boundary_or_no_midprice_boundary_suppress",
+        "diagnostic_bridge_half_midprice_boundary_or_reduce_p_hold80_no_midprice_boundary",
+        "diagnostic_entry_quarter_midprice_boundary_or_reduce_p_hold80"
+      ],
+      "positive_rows": 60,
+      "post_birth_rows": 36,
+      "target_coverage_rows": 48,
+      "tracker_rows": 60
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard",
+      "diagnostic_rows": 24,
+      "gate": "soft_frontier_midprice_boundary_dual_exit_stack",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1116.0,
+      "max_settled": 47,
+      "policies": [
+        "diagnostic_bridge_quarter_midprice_boundary_book_gap_or_clip",
+        "diagnostic_entry_quarter_midprice_boundary_book_gap_or_clip",
+        "diagnostic_bridge_half_midprice_boundary_book_gap_or_clip",
+        "diagnostic_entry_half_midprice_boundary_book_gap_or_clip",
+        "diagnostic_bridge_quarter_midprice_boundary_book_gap_only",
+        "diagnostic_bridge_control_no_shrink_book_gap_or_clip",
+        "diagnostic_entry_quarter_midprice_boundary_book_gap_only",
+        "diagnostic_entry_control_no_shrink_book_gap_or_clip"
+      ],
+      "positive_rows": 56,
+      "post_birth_rows": 36,
+      "target_coverage_rows": 48,
+      "tracker_rows": 60
+    },
+    {
+      "dashboard_lane": null,
+      "dashboard_status": "intentionally_excluded:entry_exit_stack_tracked_in_candidate_table_not_exit_dashboard",
+      "diagnostic_rows": 24,
+      "gate": "soft_frontier_midprice_boundary_exit_stack",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1066.0,
+      "max_settled": 51,
+      "policies": [
+        "diagnostic_entry_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+        "diagnostic_bridge_quarter_midprice_boundary_book_gap_weighted_exit_stack",
+        "diagnostic_entry_half_midprice_boundary_book_gap_weighted_exit_stack",
+        "diagnostic_bridge_half_midprice_boundary_book_gap_weighted_exit_stack",
+        "diagnostic_entry_control_no_shrink_book_gap_weighted_exit_stack",
+        "diagnostic_bridge_control_no_shrink_book_gap_weighted_exit_stack",
+        "diagnostic_entry_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack",
+        "diagnostic_bridge_quarter_midprice_boundary_loss_guard_v2_weighted_exit_stack"
+      ],
+      "positive_rows": 60,
+      "post_birth_rows": 36,
+      "target_coverage_rows": 48,
+      "tracker_rows": 60
+    },
+    {
+      "dashboard_lane": "soft_frontier_midprice_delayed_recheck_exit",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 1,
+      "gate": "soft_frontier_midprice_delayed_recheck_exit",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 955.5,
+      "max_settled": 45,
+      "policies": [
+        "diagnostic_prefreeze_context_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte10",
+        "post_delayed_recheck_birth_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte10"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 1,
+      "target_coverage_rows": 1,
+      "tracker_rows": 2
+    },
+    {
+      "dashboard_lane": "soft_frontier_midprice_delayed_recheck_rescue",
+      "dashboard_status": "dashboard_covered",
+      "diagnostic_rows": 1,
+      "gate": "soft_frontier_midprice_delayed_recheck_rescue",
+      "live_ready_rows": 0,
+      "max_net_cents_after_entry_fee": 1055.5,
+      "max_settled": 45,
+      "policies": [
+        "diagnostic_prefreeze_context_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte11",
+        "post_clean_rescue_birth_diagnostic_entry_quarter_midprice_boundary_latest_delay60_bid_ge60_drop_lte11"
+      ],
+      "positive_rows": 1,
+      "post_birth_rows": 1,
+      "target_coverage_rows": 1,
+      "tracker_rows": 2
+    }
+  ],
+  "tracker_exit_like_gates": 36,
+  "tracker_source": "C:\\Users\\organ\\Desktop\\KALSHI PROBABILITY MODEL BOT\\logs\\edge_research\\v28_candidate_pnl_tracker_latest.json"
+}

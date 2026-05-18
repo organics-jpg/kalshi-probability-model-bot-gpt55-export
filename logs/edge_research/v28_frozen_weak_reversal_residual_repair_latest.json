@@ -1,0 +1,80 @@
+{
+  "blockers": [
+    "net_not_positive"
+  ],
+  "candidate_summary": {
+    "avg_net_cents": -13.91358024691358,
+    "coverage_pct": 75.0,
+    "entries": 81,
+    "losses": 38,
+    "net_cents": -1127.0,
+    "settled": 81,
+    "wins": 43
+  },
+  "chosen_repairs": 7,
+  "delta_vs_weak_reversal_cents": -406.0,
+  "diagnostic": "frozen_weak_reversal_residual_repair",
+  "freeze": {
+    "base_target_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "freeze_ts_utc": "2026-05-06T10:25:15.561162+00:00",
+    "policy": "weak_reversal_skip_edge_5_8pp_no_repair_farthest_boundary",
+    "residual_skip": {
+      "raw_edge_high": 0.08,
+      "raw_edge_low": 0.05,
+      "repair_scorer": "farthest_boundary",
+      "side": "no"
+    },
+    "weak_reversal": {
+      "abs_d_max": 0.25,
+      "max_delay": 240.0,
+      "no_replacement_mode": "abstain",
+      "p_max": 0.6,
+      "recross_floor": 0.75
+    }
+  },
+  "future_denominator": 108,
+  "interpretation": [
+    "Frozen forward denominator is 108; candidate has 81 settled rows and net -1127.0c.",
+    "Promotion blocked by: net_not_positive.",
+    "This is a forward validator, not live order logic."
+  ],
+  "live_ready": false,
+  "needed_repairs": 7,
+  "policy": "weak_reversal_skip_edge_5_8pp_no_repair_farthest_boundary",
+  "repair_summary": {
+    "avg_net_cents": -19.857142857142858,
+    "coverage_pct": 6.481481481481482,
+    "entries": 7,
+    "losses": 3,
+    "net_cents": -139.0,
+    "settled": 7,
+    "wins": 4
+  },
+  "skipped_summary": {
+    "avg_net_cents": 38.42857142857143,
+    "coverage_pct": 6.481481481481482,
+    "entries": 7,
+    "losses": 1,
+    "net_cents": 269.0,
+    "settled": 7,
+    "wins": 6
+  },
+  "target_summary": {
+    "avg_net_cents": 2.9873417721518987,
+    "coverage_pct": 73.14814814814815,
+    "entries": 79,
+    "losses": 32,
+    "net_cents": 236.0,
+    "settled": 79,
+    "wins": 47
+  },
+  "weak_reversal_summary": {
+    "avg_net_cents": -8.901234567901234,
+    "coverage_pct": 75.0,
+    "entries": 81,
+    "losses": 36,
+    "net_cents": -721.0,
+    "settled": 81,
+    "wins": 45
+  }
+}

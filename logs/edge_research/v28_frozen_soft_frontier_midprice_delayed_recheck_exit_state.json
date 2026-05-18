@@ -1,0 +1,11 @@
+{
+  "candidate_family": "soft_frontier_midprice_delayed_recheck_exit",
+  "entry_lane": "diagnostic_entry",
+  "entry_policy": "diagnostic_entry_quarter_midprice_boundary",
+  "exit_source": "latest",
+  "freeze_ts_utc": "2026-05-07T08:05:51.308715+00:00",
+  "physics": "A broad v28 entry can be correct while the exit clips a still-supported side. The delayed recheck tries to keep only exits where the post-signal book still supports the held thesis, avoiding blind hold-through air pockets.",
+  "recheck_policy": "delay60_bid_ge60_drop_lte10",
+  "rule": "Broad soft-frontier/mid-price entry; on latest v28 exit, wait 60s and suppress only if held bid remains >=60c with <=10c immediate drop.",
+  "strict_forward_note": "Rows before this timestamp are diagnostic only."
+}

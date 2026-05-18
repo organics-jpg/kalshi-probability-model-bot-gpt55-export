@@ -1,0 +1,61 @@
+{
+  "controllers": {
+    "reward_memory_logit125": {
+      "candidate_name": "logit125",
+      "objective": 0.6208877044603069,
+      "training_settled_rows": 31,
+      "weights": {
+        "bias": 1.0,
+        "edge_strength": 0.0,
+        "high_recross": 0.0,
+        "near_strike": 0.0,
+        "raw_strength": 0.0,
+        "spectral_dominant_weak": 0.0,
+        "spectral_noise": 0.0,
+        "thin_edge": 0.0,
+        "turbulent_boundary": 0.0,
+        "weak_raw": 0.0
+      }
+    },
+    "reward_memory_plus05": {
+      "candidate_name": "plus05",
+      "objective": 0.6073209493033028,
+      "training_settled_rows": 31,
+      "weights": {
+        "bias": 1.0,
+        "edge_strength": 0.75,
+        "high_recross": 0.0,
+        "near_strike": 0.0,
+        "raw_strength": 0.0,
+        "spectral_dominant_weak": 0.0,
+        "spectral_noise": 0.0,
+        "thin_edge": 0.0,
+        "turbulent_boundary": 0.0,
+        "weak_raw": 0.0
+      }
+    }
+  },
+  "entry_policy": "raw_v28_p50_edge0_fixed_selection",
+  "features": [
+    "bias",
+    "raw_strength",
+    "edge_strength",
+    "weak_raw",
+    "thin_edge",
+    "near_strike",
+    "high_recross",
+    "turbulent_boundary",
+    "spectral_noise",
+    "spectral_dominant_weak"
+  ],
+  "freeze_ts": "2026-05-06T01:46:48.111889+00:00",
+  "hypothesis": "A tiny reward-calibrated controller can learn how much FV adjustment to retain without changing entry selection.",
+  "l2_penalty": 0.003,
+  "promotion_floor": {
+    "min_settled": 30,
+    "must_improve_brier_vs_raw": true,
+    "must_improve_logloss_vs_raw": true,
+    "must_not_change_entry_selection": true,
+    "must_validate_only_post_freeze": true
+  }
+}

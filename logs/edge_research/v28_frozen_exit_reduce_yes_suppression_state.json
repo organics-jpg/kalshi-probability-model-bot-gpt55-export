@@ -1,0 +1,9 @@
+{
+  "candidate": "suppress_yes_reduce_p_hold_ge_075",
+  "freeze_ts_utc": "2026-05-06T11:04:54.847536+00:00",
+  "p_hold_floor": 0.75,
+  "physics": "A YES-side high-probability reduce exit can be a turbulence clip; NO-side evidence is intentionally excluded until it earns its own forward proof.",
+  "rule": "If exit reason is mushroom_v28_probability_reduce, side is YES, and p_hold >= 0.75, score as held to settlement; otherwise keep current v28 exit.",
+  "side": "yes",
+  "source": "Derived from the full reduce-suppression robustness profile, then frozen separately before promotion evidence."
+}

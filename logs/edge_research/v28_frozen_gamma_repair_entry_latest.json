@@ -1,0 +1,66 @@
+{
+  "available_repairs": 14,
+  "blockers": [
+    "repairs_all_simulated"
+  ],
+  "candidate_summary": {
+    "avg_net_cents": 0.5512820512820513,
+    "coverage_pct": 75.72815533980582,
+    "entries": 78,
+    "losses": 33,
+    "net_cents": 43.0,
+    "settled": 78,
+    "wins": 45
+  },
+  "delta_net_cents": -31.0,
+  "freeze": {
+    "base_policy": "raw_p50_turbulence_valve_edge4_p60_recross75_near25",
+    "candidate": "target_plus_gamma_repair_to_75pct",
+    "coverage_floor": 75.0,
+    "freeze_ts_utc": "2026-05-06T11:43:09.046274+00:00",
+    "physics": "Near-boundary low-priced sides can be undercounted by static FV because the contract has gamma: small spot recrosses can move terminal probability and tradable exit value sharply.",
+    "repair_rule": "Fill missed markets with first cheap-convex row: 0.30 <= raw p <= 0.45, ask <= 40c, raw-book edge >= 3pp."
+  },
+  "future_denominator": 103,
+  "interpretation": [
+    "Candidate has 78 entries, coverage 75.72815533980582, net 43.0c.",
+    "Repairs used/needed/available: 1/1/14.",
+    "Delta versus target: -31.0c.",
+    "Blockers: repairs_all_simulated."
+  ],
+  "needed_repairs": 1,
+  "promotion_ready": false,
+  "repair_rows": [
+    {
+      "abs_d_sigma": 0.414768,
+      "ask_cents": 28.0,
+      "market": "KXBTC15M-26MAY060845-45",
+      "net_cents": -31.0,
+      "p_side": 0.322909,
+      "raw_edge_prob": 0.042908999999999975,
+      "recross_hazard_score": 0.3564544847937936,
+      "side": "yes",
+      "side_won": false,
+      "source": "rejected_actionable",
+      "ts_wall": "2026-05-06T12:38:51.250094+00:00"
+    }
+  ],
+  "repair_summary": {
+    "avg_net_cents": -31.0,
+    "coverage_pct": 0.970873786407767,
+    "entries": 1,
+    "losses": 1,
+    "net_cents": -31.0,
+    "settled": 1,
+    "wins": 0
+  },
+  "target_summary": {
+    "avg_net_cents": 0.961038961038961,
+    "coverage_pct": 74.75728155339806,
+    "entries": 77,
+    "losses": 32,
+    "net_cents": 74.0,
+    "settled": 77,
+    "wins": 45
+  }
+}
