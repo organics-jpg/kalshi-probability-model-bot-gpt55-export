@@ -1,0 +1,1493 @@
+[
+  {
+    "allowed_for_forward_collection": false,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28_raw",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Raw v28 YES-axis probability from the feature table.",
+    "feature_columns": [],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": false,
+      "candidate_id": "v28_raw",
+      "fail_reasons": [
+        "v28_raw_is_control_baseline"
+      ],
+      "status": "baseline_not_collected_as_challenger",
+      "warnings": []
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.15820989236893082,
+    "holdout_logloss": 0.47502181876886274,
+    "holdout_rows": 159,
+    "model_hash": "92cd09ac8c08636c3053fd48",
+    "model_parameters": {
+      "coefficients": {},
+      "feature_columns": [],
+      "intercept": 0.0,
+      "weights": []
+    },
+    "model_track": "baseline",
+    "model_type": "baseline_v28_raw",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28_raw",
+      "fail_reasons": [
+        "v28_raw_is_control_baseline"
+      ],
+      "promotable": false,
+      "status": "baseline_not_candidate"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_logistic_calibration_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "One-dimensional train-only logistic recalibration of v28.",
+    "feature_columns": [
+      "v28_logit_yes"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_logistic_calibration_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.18540582848094078,
+    "holdout_logloss": 0.5560000007099699,
+    "holdout_rows": 159,
+    "model_hash": "7d371feef5f09d24d2b83d90",
+    "model_parameters": {
+      "coefficients": {
+        "v28_logit_yes": 0.6649195991008601
+      },
+      "feature_columns": [
+        "v28_logit_yes"
+      ],
+      "intercept": 0.09958523595247391,
+      "l2_strength": 0.2,
+      "means": [
+        0.1902253483456512
+      ],
+      "scales": [
+        1.8324178129842246
+      ],
+      "weights": [
+        0.09958523595247391,
+        0.6649195991008601
+      ]
+    },
+    "model_track": "pure_physics",
+    "model_type": "regularized_logistic",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_logistic_calibration_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_logistic_boundary_physics_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Small boundary/time/volatility regularized logistic surface.",
+    "feature_columns": [
+      "v28_logit_yes",
+      "v28_abs_logit_yes",
+      "minutes_to_close",
+      "late_window_lte_180s",
+      "final_avg_effective_horizon_minutes",
+      "final_avg_variance_compression",
+      "final_avg_uncertainty_scale",
+      "final_avg_elapsed_window_fraction",
+      "final_avg_sigma_proxy_dollars",
+      "final_avg_d_sigma_proxy",
+      "final_avg_abs_d_sigma_proxy",
+      "log1p_sigma_t_dollars",
+      "recross_hazard_score",
+      "recross_hazard_high"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_logistic_boundary_physics_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.18787531688405204,
+    "holdout_logloss": 0.5619276137359726,
+    "holdout_rows": 159,
+    "model_hash": "71c9c323a2b22c1cda078553",
+    "model_parameters": {
+      "coefficients": {
+        "final_avg_abs_d_sigma_proxy": 0.0,
+        "final_avg_d_sigma_proxy": 0.0,
+        "final_avg_effective_horizon_minutes": 0.019591261859019715,
+        "final_avg_elapsed_window_fraction": -0.029611779042289045,
+        "final_avg_sigma_proxy_dollars": -0.05883054933129053,
+        "final_avg_uncertainty_scale": 0.0688581813496145,
+        "final_avg_variance_compression": 0.06559368017496224,
+        "late_window_lte_180s": -0.05912886628745462,
+        "log1p_sigma_t_dollars": -0.06076712301041129,
+        "minutes_to_close": 0.019592969632424885,
+        "recross_hazard_high": -0.021512060000111778,
+        "recross_hazard_score": -0.05034848035034122,
+        "v28_abs_logit_yes": 0.042504564586921596,
+        "v28_logit_yes": 0.5799643761307592
+      },
+      "feature_columns": [
+        "v28_logit_yes",
+        "v28_abs_logit_yes",
+        "minutes_to_close",
+        "late_window_lte_180s",
+        "final_avg_effective_horizon_minutes",
+        "final_avg_variance_compression",
+        "final_avg_uncertainty_scale",
+        "final_avg_elapsed_window_fraction",
+        "final_avg_sigma_proxy_dollars",
+        "final_avg_d_sigma_proxy",
+        "final_avg_abs_d_sigma_proxy",
+        "log1p_sigma_t_dollars",
+        "recross_hazard_score",
+        "recross_hazard_high"
+      ],
+      "intercept": 0.10461277556353525,
+      "l2_strength": 0.25,
+      "means": [
+        0.1902253483456512,
+        1.4497848971552338,
+        10.18211918175721,
+        0.08450704225352113,
+        9.182480809500763,
+        0.857821572887048,
+        0.9229065557428083,
+        0.0017445115135255988,
+        93.28349659802522,
+        0.0,
+        0.0,
+        4.555816343589906,
+        0.5261788721606756,
+        0.641851106639839
+      ],
+      "scales": [
+        1.8324178129842246,
+        1.136690140924826,
+        4.335740075526835,
+        0.2781467275793169,
+        4.33499679300648,
+        0.12498229844153592,
+        0.07787850957738261,
+        0.015881629754029025,
+        31.564147277234582,
+        1.0,
+        1.0,
+        0.33892363956335475,
+        0.41018590652273,
+        0.47945621650475345
+      ],
+      "weights": [
+        0.10461277556353525,
+        0.5799643761307592,
+        0.042504564586921596,
+        0.019592969632424885,
+        -0.05912886628745462,
+        0.019591261859019715,
+        0.06559368017496224,
+        0.0688581813496145,
+        -0.029611779042289045,
+        -0.05883054933129053,
+        0.0,
+        0.0,
+        -0.06076712301041129,
+        -0.05034848035034122,
+        -0.021512060000111778
+      ]
+    },
+    "model_track": "pure_physics",
+    "model_type": "regularized_logistic",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_logistic_boundary_physics_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Book/source-aware diagnostic logistic surface; never pure FV evidence by itself.",
+    "feature_columns": [
+      "v28_logit_yes",
+      "v28_abs_logit_yes",
+      "minutes_to_close",
+      "recross_hazard_score",
+      "ask_frac",
+      "edge_cents",
+      "side_is_yes",
+      "source_is_entry",
+      "source_is_rejected_actionable"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.18662744541995946,
+    "holdout_logloss": 0.5605055542563622,
+    "holdout_rows": 159,
+    "model_hash": "4fd4aac68789e9c885f46767",
+    "model_parameters": {
+      "coefficients": {
+        "ask_frac": -0.01772940475576555,
+        "edge_cents": 0.03635089719432068,
+        "minutes_to_close": 0.02524714790276406,
+        "recross_hazard_score": -0.04448611480162152,
+        "side_is_yes": 0.25592992521460367,
+        "source_is_entry": -0.0035297899156266745,
+        "source_is_rejected_actionable": 0.0035297899156266845,
+        "v28_abs_logit_yes": 0.03895141949244248,
+        "v28_logit_yes": 0.4135008399018996
+      },
+      "feature_columns": [
+        "v28_logit_yes",
+        "v28_abs_logit_yes",
+        "minutes_to_close",
+        "recross_hazard_score",
+        "ask_frac",
+        "edge_cents",
+        "side_is_yes",
+        "source_is_entry",
+        "source_is_rejected_actionable"
+      ],
+      "intercept": 0.10295903654934598,
+      "l2_strength": 0.35,
+      "means": [
+        0.1902253483456512,
+        1.4497848971552338,
+        10.18211918175721,
+        0.5261788721606756,
+        0.7058148893360161,
+        -1.7723270663983903,
+        0.545271629778672,
+        0.22736418511066397,
+        0.772635814889336
+      ],
+      "scales": [
+        1.8324178129842246,
+        1.136690140924826,
+        4.335740075526835,
+        0.41018590652273,
+        0.2020403717342176,
+        9.208486150438272,
+        0.4979462616961622,
+        0.4191297083715585,
+        0.41912970837155855
+      ],
+      "weights": [
+        0.10295903654934598,
+        0.4135008399018996,
+        0.03895141949244248,
+        0.02524714790276406,
+        -0.04448611480162152,
+        -0.01772940475576555,
+        0.03635089719432068,
+        0.25592992521460367,
+        -0.0035297899156266745,
+        0.0035297899156266845
+      ]
+    },
+    "model_track": "book_aware_diagnostic",
+    "model_type": "regularized_logistic",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_monotonic_tabular_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Ten-bin monotonic tabular calibration of v28 probability, fit on train only.",
+    "feature_columns": [
+      "target_v28_p_yes"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_monotonic_tabular_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.1646895075188704,
+    "holdout_logloss": 0.49069236876656935,
+    "holdout_rows": 159,
+    "model_hash": "be73833bdead411c157e790e",
+    "model_parameters": {
+      "bins": 10,
+      "bucket_table": [
+        {
+          "avg_v28_p_yes": 0.05428180555555557,
+          "bucket": 0,
+          "monotonic_p_yes": 0.0729577876984127,
+          "p_max": 0.1,
+          "p_min": 0.0,
+          "rows": 36,
+          "shrunk_empirical_yes_rate": 0.0729577876984127,
+          "wins": 3.0
+        },
+        {
+          "avg_v28_p_yes": 0.13610314634146342,
+          "bucket": 1,
+          "monotonic_p_yes": 0.10511826398852223,
+          "p_max": 0.2,
+          "p_min": 0.1,
+          "rows": 82,
+          "shrunk_empirical_yes_rate": 0.10511826398852224,
+          "wins": 8.0
+        },
+        {
+          "avg_v28_p_yes": 0.24523894444444444,
+          "bucket": 2,
+          "monotonic_p_yes": 0.15538891812865496,
+          "p_max": 0.3,
+          "p_min": 0.2,
+          "rows": 18,
+          "shrunk_empirical_yes_rate": 0.15538891812865496,
+          "wins": 1.0
+        },
+        {
+          "avg_v28_p_yes": 0.36675725,
+          "bucket": 3,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.4,
+          "p_min": 0.3,
+          "rows": 32,
+          "shrunk_empirical_yes_rate": 0.6025989423076923,
+          "wins": 24.0
+        },
+        {
+          "avg_v28_p_yes": 0.46142485964912283,
+          "bucket": 4,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.5,
+          "p_min": 0.4,
+          "rows": 57,
+          "shrunk_empirical_yes_rate": 0.3795908726361358,
+          "wins": 20.0
+        },
+        {
+          "avg_v28_p_yes": 0.5401407721518987,
+          "bucket": 5,
+          "monotonic_p_yes": 0.5434627822529088,
+          "p_max": 0.6,
+          "p_min": 0.5,
+          "rows": 79,
+          "shrunk_empirical_yes_rate": 0.5434627822529088,
+          "wins": 43.0
+        },
+        {
+          "avg_v28_p_yes": 0.6456984285714286,
+          "bucket": 6,
+          "monotonic_p_yes": 0.6739402521008403,
+          "p_max": 0.7,
+          "p_min": 0.6,
+          "rows": 14,
+          "shrunk_empirical_yes_rate": 0.6739402521008403,
+          "wins": 10.0
+        },
+        {
+          "avg_v28_p_yes": 0.75818925,
+          "bucket": 7,
+          "monotonic_p_yes": 0.6844208928571429,
+          "p_max": 0.8,
+          "p_min": 0.7,
+          "rows": 8,
+          "shrunk_empirical_yes_rate": 0.6844208928571429,
+          "wins": 4.0
+        },
+        {
+          "avg_v28_p_yes": 0.8614432352941177,
+          "bucket": 8,
+          "monotonic_p_yes": 0.821790393567499,
+          "p_max": 0.9,
+          "p_min": 0.8,
+          "rows": 119,
+          "shrunk_empirical_yes_rate": 0.821790393567499,
+          "wins": 97.0
+        },
+        {
+          "avg_v28_p_yes": 0.9419710769230769,
+          "bucket": 9,
+          "monotonic_p_yes": 0.9561030769230769,
+          "p_max": 1.0,
+          "p_min": 0.9,
+          "rows": 52,
+          "shrunk_empirical_yes_rate": 0.9561030769230769,
+          "wins": 50.0
+        }
+      ],
+      "feature_columns": [
+        "target_v28_p_yes"
+      ],
+      "shrink_strength": 20.0
+    },
+    "model_track": "pure_physics",
+    "model_type": "monotonic_tabular_calibration",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_monotonic_tabular_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_boundary_monotonic_blend_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Boundary-only monotonic correction: full inside abs(d_sigma)<=1, linearly tapered to raw v28 by abs(d_sigma)>=2.",
+    "feature_columns": [
+      "target_v28_p_yes",
+      "final_avg_abs_d_sigma_proxy"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_boundary_monotonic_blend_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.1646895075188704,
+    "holdout_logloss": 0.49069236876656935,
+    "holdout_rows": 159,
+    "model_hash": "631a5c49f164f77440c3381c",
+    "model_parameters": {
+      "bins": 10,
+      "boundary_blend": {
+        "distance_feature": "abs_d_sigma",
+        "fallback_distance_features": [
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "full_correction_abs_d_lte": 1.0,
+        "missing_distance_policy": "raw_v28",
+        "zero_correction_abs_d_gte": 2.0
+      },
+      "bucket_table": [
+        {
+          "avg_v28_p_yes": 0.05428180555555557,
+          "bucket": 0,
+          "monotonic_p_yes": 0.0729577876984127,
+          "p_max": 0.1,
+          "p_min": 0.0,
+          "rows": 36,
+          "shrunk_empirical_yes_rate": 0.0729577876984127,
+          "wins": 3.0
+        },
+        {
+          "avg_v28_p_yes": 0.13610314634146342,
+          "bucket": 1,
+          "monotonic_p_yes": 0.10511826398852223,
+          "p_max": 0.2,
+          "p_min": 0.1,
+          "rows": 82,
+          "shrunk_empirical_yes_rate": 0.10511826398852224,
+          "wins": 8.0
+        },
+        {
+          "avg_v28_p_yes": 0.24523894444444444,
+          "bucket": 2,
+          "monotonic_p_yes": 0.15538891812865496,
+          "p_max": 0.3,
+          "p_min": 0.2,
+          "rows": 18,
+          "shrunk_empirical_yes_rate": 0.15538891812865496,
+          "wins": 1.0
+        },
+        {
+          "avg_v28_p_yes": 0.36675725,
+          "bucket": 3,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.4,
+          "p_min": 0.3,
+          "rows": 32,
+          "shrunk_empirical_yes_rate": 0.6025989423076923,
+          "wins": 24.0
+        },
+        {
+          "avg_v28_p_yes": 0.46142485964912283,
+          "bucket": 4,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.5,
+          "p_min": 0.4,
+          "rows": 57,
+          "shrunk_empirical_yes_rate": 0.3795908726361358,
+          "wins": 20.0
+        },
+        {
+          "avg_v28_p_yes": 0.5401407721518987,
+          "bucket": 5,
+          "monotonic_p_yes": 0.5434627822529088,
+          "p_max": 0.6,
+          "p_min": 0.5,
+          "rows": 79,
+          "shrunk_empirical_yes_rate": 0.5434627822529088,
+          "wins": 43.0
+        },
+        {
+          "avg_v28_p_yes": 0.6456984285714286,
+          "bucket": 6,
+          "monotonic_p_yes": 0.6739402521008403,
+          "p_max": 0.7,
+          "p_min": 0.6,
+          "rows": 14,
+          "shrunk_empirical_yes_rate": 0.6739402521008403,
+          "wins": 10.0
+        },
+        {
+          "avg_v28_p_yes": 0.75818925,
+          "bucket": 7,
+          "monotonic_p_yes": 0.6844208928571429,
+          "p_max": 0.8,
+          "p_min": 0.7,
+          "rows": 8,
+          "shrunk_empirical_yes_rate": 0.6844208928571429,
+          "wins": 4.0
+        },
+        {
+          "avg_v28_p_yes": 0.8614432352941177,
+          "bucket": 8,
+          "monotonic_p_yes": 0.821790393567499,
+          "p_max": 0.9,
+          "p_min": 0.8,
+          "rows": 119,
+          "shrunk_empirical_yes_rate": 0.821790393567499,
+          "wins": 97.0
+        },
+        {
+          "avg_v28_p_yes": 0.9419710769230769,
+          "bucket": 9,
+          "monotonic_p_yes": 0.9561030769230769,
+          "p_max": 1.0,
+          "p_min": 0.9,
+          "rows": 52,
+          "shrunk_empirical_yes_rate": 0.9561030769230769,
+          "wins": 50.0
+        }
+      ],
+      "feature_columns": [
+        "target_v28_p_yes"
+      ],
+      "shrink_strength": 20.0
+    },
+    "model_track": "pure_physics",
+    "model_type": "monotonic_tabular_calibration",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_boundary_monotonic_blend_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_boundary_monotonic_light_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Conservative one-third-strength boundary-only monotonic correction, frozen separately for future evidence.",
+    "feature_columns": [
+      "target_v28_p_yes",
+      "final_avg_abs_d_sigma_proxy"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_boundary_monotonic_light_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.1600721011659854,
+    "holdout_logloss": 0.4794974250811264,
+    "holdout_rows": 159,
+    "model_hash": "4b1b6170f9698bf3786aa5d7",
+    "model_parameters": {
+      "bins": 10,
+      "boundary_blend": {
+        "correction_scale": 0.33,
+        "distance_feature": "abs_d_sigma",
+        "fallback_distance_features": [
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "full_correction_abs_d_lte": 1.0,
+        "missing_distance_policy": "raw_v28",
+        "zero_correction_abs_d_gte": 2.0
+      },
+      "bucket_table": [
+        {
+          "avg_v28_p_yes": 0.05428180555555557,
+          "bucket": 0,
+          "monotonic_p_yes": 0.0729577876984127,
+          "p_max": 0.1,
+          "p_min": 0.0,
+          "rows": 36,
+          "shrunk_empirical_yes_rate": 0.0729577876984127,
+          "wins": 3.0
+        },
+        {
+          "avg_v28_p_yes": 0.13610314634146342,
+          "bucket": 1,
+          "monotonic_p_yes": 0.10511826398852223,
+          "p_max": 0.2,
+          "p_min": 0.1,
+          "rows": 82,
+          "shrunk_empirical_yes_rate": 0.10511826398852224,
+          "wins": 8.0
+        },
+        {
+          "avg_v28_p_yes": 0.24523894444444444,
+          "bucket": 2,
+          "monotonic_p_yes": 0.15538891812865496,
+          "p_max": 0.3,
+          "p_min": 0.2,
+          "rows": 18,
+          "shrunk_empirical_yes_rate": 0.15538891812865496,
+          "wins": 1.0
+        },
+        {
+          "avg_v28_p_yes": 0.36675725,
+          "bucket": 3,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.4,
+          "p_min": 0.3,
+          "rows": 32,
+          "shrunk_empirical_yes_rate": 0.6025989423076923,
+          "wins": 24.0
+        },
+        {
+          "avg_v28_p_yes": 0.46142485964912283,
+          "bucket": 4,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.5,
+          "p_min": 0.4,
+          "rows": 57,
+          "shrunk_empirical_yes_rate": 0.3795908726361358,
+          "wins": 20.0
+        },
+        {
+          "avg_v28_p_yes": 0.5401407721518987,
+          "bucket": 5,
+          "monotonic_p_yes": 0.5434627822529088,
+          "p_max": 0.6,
+          "p_min": 0.5,
+          "rows": 79,
+          "shrunk_empirical_yes_rate": 0.5434627822529088,
+          "wins": 43.0
+        },
+        {
+          "avg_v28_p_yes": 0.6456984285714286,
+          "bucket": 6,
+          "monotonic_p_yes": 0.6739402521008403,
+          "p_max": 0.7,
+          "p_min": 0.6,
+          "rows": 14,
+          "shrunk_empirical_yes_rate": 0.6739402521008403,
+          "wins": 10.0
+        },
+        {
+          "avg_v28_p_yes": 0.75818925,
+          "bucket": 7,
+          "monotonic_p_yes": 0.6844208928571429,
+          "p_max": 0.8,
+          "p_min": 0.7,
+          "rows": 8,
+          "shrunk_empirical_yes_rate": 0.6844208928571429,
+          "wins": 4.0
+        },
+        {
+          "avg_v28_p_yes": 0.8614432352941177,
+          "bucket": 8,
+          "monotonic_p_yes": 0.821790393567499,
+          "p_max": 0.9,
+          "p_min": 0.8,
+          "rows": 119,
+          "shrunk_empirical_yes_rate": 0.821790393567499,
+          "wins": 97.0
+        },
+        {
+          "avg_v28_p_yes": 0.9419710769230769,
+          "bucket": 9,
+          "monotonic_p_yes": 0.9561030769230769,
+          "p_max": 1.0,
+          "p_min": 0.9,
+          "rows": 52,
+          "shrunk_empirical_yes_rate": 0.9561030769230769,
+          "wins": 50.0
+        }
+      ],
+      "feature_columns": [
+        "target_v28_p_yes"
+      ],
+      "shrink_strength": 20.0
+    },
+    "model_track": "pure_physics",
+    "model_type": "monotonic_tabular_calibration",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_boundary_monotonic_light_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Tiny boundary monotonic correction that is disabled inside the final 240 seconds and fades in by 600 seconds, frozen separately for future evidence.",
+    "feature_columns": [
+      "target_v28_p_yes",
+      "final_avg_abs_d_sigma_proxy",
+      "seconds_to_close"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.158698136786613,
+    "holdout_logloss": 0.4760882145651602,
+    "holdout_rows": 159,
+    "model_hash": "8dfbc48a962472ac6230eede",
+    "model_parameters": {
+      "bins": 10,
+      "boundary_blend": {
+        "correction_scale": 0.1,
+        "distance_feature": "abs_d_sigma",
+        "fallback_distance_features": [
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "full_correction_abs_d_lte": 1.0,
+        "missing_distance_policy": "raw_v28",
+        "time_gate": {
+          "full_correction_seconds_gte": 600.0,
+          "missing_time_policy": "full_correction",
+          "seconds_to_close_feature": "seconds_to_close",
+          "zero_correction_seconds_lte": 240.0
+        },
+        "zero_correction_abs_d_gte": 2.0
+      },
+      "bucket_table": [
+        {
+          "avg_v28_p_yes": 0.05428180555555557,
+          "bucket": 0,
+          "monotonic_p_yes": 0.0729577876984127,
+          "p_max": 0.1,
+          "p_min": 0.0,
+          "rows": 36,
+          "shrunk_empirical_yes_rate": 0.0729577876984127,
+          "wins": 3.0
+        },
+        {
+          "avg_v28_p_yes": 0.13610314634146342,
+          "bucket": 1,
+          "monotonic_p_yes": 0.10511826398852223,
+          "p_max": 0.2,
+          "p_min": 0.1,
+          "rows": 82,
+          "shrunk_empirical_yes_rate": 0.10511826398852224,
+          "wins": 8.0
+        },
+        {
+          "avg_v28_p_yes": 0.24523894444444444,
+          "bucket": 2,
+          "monotonic_p_yes": 0.15538891812865496,
+          "p_max": 0.3,
+          "p_min": 0.2,
+          "rows": 18,
+          "shrunk_empirical_yes_rate": 0.15538891812865496,
+          "wins": 1.0
+        },
+        {
+          "avg_v28_p_yes": 0.36675725,
+          "bucket": 3,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.4,
+          "p_min": 0.3,
+          "rows": 32,
+          "shrunk_empirical_yes_rate": 0.6025989423076923,
+          "wins": 24.0
+        },
+        {
+          "avg_v28_p_yes": 0.46142485964912283,
+          "bucket": 4,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.5,
+          "p_min": 0.4,
+          "rows": 57,
+          "shrunk_empirical_yes_rate": 0.3795908726361358,
+          "wins": 20.0
+        },
+        {
+          "avg_v28_p_yes": 0.5401407721518987,
+          "bucket": 5,
+          "monotonic_p_yes": 0.5434627822529088,
+          "p_max": 0.6,
+          "p_min": 0.5,
+          "rows": 79,
+          "shrunk_empirical_yes_rate": 0.5434627822529088,
+          "wins": 43.0
+        },
+        {
+          "avg_v28_p_yes": 0.6456984285714286,
+          "bucket": 6,
+          "monotonic_p_yes": 0.6739402521008403,
+          "p_max": 0.7,
+          "p_min": 0.6,
+          "rows": 14,
+          "shrunk_empirical_yes_rate": 0.6739402521008403,
+          "wins": 10.0
+        },
+        {
+          "avg_v28_p_yes": 0.75818925,
+          "bucket": 7,
+          "monotonic_p_yes": 0.6844208928571429,
+          "p_max": 0.8,
+          "p_min": 0.7,
+          "rows": 8,
+          "shrunk_empirical_yes_rate": 0.6844208928571429,
+          "wins": 4.0
+        },
+        {
+          "avg_v28_p_yes": 0.8614432352941177,
+          "bucket": 8,
+          "monotonic_p_yes": 0.821790393567499,
+          "p_max": 0.9,
+          "p_min": 0.8,
+          "rows": 119,
+          "shrunk_empirical_yes_rate": 0.821790393567499,
+          "wins": 97.0
+        },
+        {
+          "avg_v28_p_yes": 0.9419710769230769,
+          "bucket": 9,
+          "monotonic_p_yes": 0.9561030769230769,
+          "p_max": 1.0,
+          "p_min": 0.9,
+          "rows": 52,
+          "shrunk_empirical_yes_rate": 0.9561030769230769,
+          "wins": 50.0
+        }
+      ],
+      "feature_columns": [
+        "target_v28_p_yes"
+      ],
+      "shrink_strength": 20.0
+    },
+    "model_track": "pure_physics",
+    "model_type": "monotonic_tabular_calibration",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Micro-strength boundary monotonic correction using the same causal time gate as the time-safe candidate; frozen separately and starts forward evidence only after this manifest exists.",
+    "feature_columns": [
+      "target_v28_p_yes",
+      "final_avg_abs_d_sigma_proxy",
+      "seconds_to_close"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.15835471561706901,
+    "holdout_logloss": 0.47533780168747886,
+    "holdout_rows": 159,
+    "model_hash": "5229f8966bde26448e9c4403",
+    "model_parameters": {
+      "bins": 10,
+      "boundary_blend": {
+        "correction_scale": 0.03,
+        "distance_feature": "abs_d_sigma",
+        "fallback_distance_features": [
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "full_correction_abs_d_lte": 1.0,
+        "missing_distance_policy": "raw_v28",
+        "time_gate": {
+          "full_correction_seconds_gte": 600.0,
+          "missing_time_policy": "full_correction",
+          "seconds_to_close_feature": "seconds_to_close",
+          "zero_correction_seconds_lte": 240.0
+        },
+        "zero_correction_abs_d_gte": 2.0
+      },
+      "bucket_table": [
+        {
+          "avg_v28_p_yes": 0.05428180555555557,
+          "bucket": 0,
+          "monotonic_p_yes": 0.0729577876984127,
+          "p_max": 0.1,
+          "p_min": 0.0,
+          "rows": 36,
+          "shrunk_empirical_yes_rate": 0.0729577876984127,
+          "wins": 3.0
+        },
+        {
+          "avg_v28_p_yes": 0.13610314634146342,
+          "bucket": 1,
+          "monotonic_p_yes": 0.10511826398852223,
+          "p_max": 0.2,
+          "p_min": 0.1,
+          "rows": 82,
+          "shrunk_empirical_yes_rate": 0.10511826398852224,
+          "wins": 8.0
+        },
+        {
+          "avg_v28_p_yes": 0.24523894444444444,
+          "bucket": 2,
+          "monotonic_p_yes": 0.15538891812865496,
+          "p_max": 0.3,
+          "p_min": 0.2,
+          "rows": 18,
+          "shrunk_empirical_yes_rate": 0.15538891812865496,
+          "wins": 1.0
+        },
+        {
+          "avg_v28_p_yes": 0.36675725,
+          "bucket": 3,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.4,
+          "p_min": 0.3,
+          "rows": 32,
+          "shrunk_empirical_yes_rate": 0.6025989423076923,
+          "wins": 24.0
+        },
+        {
+          "avg_v28_p_yes": 0.46142485964912283,
+          "bucket": 4,
+          "monotonic_p_yes": 0.4597735493719763,
+          "p_max": 0.5,
+          "p_min": 0.4,
+          "rows": 57,
+          "shrunk_empirical_yes_rate": 0.3795908726361358,
+          "wins": 20.0
+        },
+        {
+          "avg_v28_p_yes": 0.5401407721518987,
+          "bucket": 5,
+          "monotonic_p_yes": 0.5434627822529088,
+          "p_max": 0.6,
+          "p_min": 0.5,
+          "rows": 79,
+          "shrunk_empirical_yes_rate": 0.5434627822529088,
+          "wins": 43.0
+        },
+        {
+          "avg_v28_p_yes": 0.6456984285714286,
+          "bucket": 6,
+          "monotonic_p_yes": 0.6739402521008403,
+          "p_max": 0.7,
+          "p_min": 0.6,
+          "rows": 14,
+          "shrunk_empirical_yes_rate": 0.6739402521008403,
+          "wins": 10.0
+        },
+        {
+          "avg_v28_p_yes": 0.75818925,
+          "bucket": 7,
+          "monotonic_p_yes": 0.6844208928571429,
+          "p_max": 0.8,
+          "p_min": 0.7,
+          "rows": 8,
+          "shrunk_empirical_yes_rate": 0.6844208928571429,
+          "wins": 4.0
+        },
+        {
+          "avg_v28_p_yes": 0.8614432352941177,
+          "bucket": 8,
+          "monotonic_p_yes": 0.821790393567499,
+          "p_max": 0.9,
+          "p_min": 0.8,
+          "rows": 119,
+          "shrunk_empirical_yes_rate": 0.821790393567499,
+          "wins": 97.0
+        },
+        {
+          "avg_v28_p_yes": 0.9419710769230769,
+          "bucket": 9,
+          "monotonic_p_yes": 0.9561030769230769,
+          "p_max": 1.0,
+          "p_min": 0.9,
+          "rows": 52,
+          "shrunk_empirical_yes_rate": 0.9561030769230769,
+          "wins": 50.0
+        }
+      ],
+      "feature_columns": [
+        "target_v28_p_yes"
+      ],
+      "shrink_strength": 20.0
+    },
+    "model_track": "pure_physics",
+    "model_type": "monotonic_tabular_calibration",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": false,
+        "holdout_brier_better_than_v28": false,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": false,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "high_recross_brier_not_degraded",
+        "holdout_brier_better_than_v28",
+        "holdout_logloss_better_than_v28",
+        "near_boundary_brier_not_degraded",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  },
+  {
+    "allowed_for_forward_collection": true,
+    "allowed_for_forward_registry": false,
+    "baseline": "v28_raw",
+    "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+    "created_utc": "2026-05-12T07:29:20Z",
+    "description": "Fixed late-window d_sigma logit residual: no change at or beyond 600 seconds, full conservative counter-tilt inside 240 seconds, and no retrospective credit before this manifest exists.",
+    "feature_columns": [
+      "target_v28_p_yes",
+      "seconds_to_close"
+    ],
+    "feature_manifest_hash": "a58dc512780c61f24226431e",
+    "feature_table_hash": "5e97c9adf75860f1005f2d798c3b7c8b428e7e3225b830fff312672483e11228",
+    "forward_collection_gate": {
+      "allowed": true,
+      "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+      "checks": {
+        "feature_surface_declared": true,
+        "has_frozen_model_payload": true,
+        "has_holdout_rows": true,
+        "has_training_rows": true,
+        "has_validation_rows": true,
+        "simple_inspectable_model_type": true
+      },
+      "fail_reasons": [],
+      "status": "allowed_for_shadow_forward_collection",
+      "warnings": [
+        "forward_collection_only_not_promotion",
+        "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+      ]
+    },
+    "forward_rows": 0,
+    "holdout_brier": 0.1582098923689308,
+    "holdout_logloss": 0.47502181876886274,
+    "holdout_rows": 159,
+    "model_hash": "6c24b9d069769194cd6bf7fd",
+    "model_parameters": {
+      "base_probability_feature": "target_v28_p_yes",
+      "feature_columns": [
+        "target_v28_p_yes",
+        "seconds_to_close"
+      ],
+      "fit_source": "fixed_physics_hypothesis_no_retrospective_credit",
+      "max_abs_logit_adjustment": 0.75,
+      "residual_terms": [
+        {
+          "coefficient": -0.2,
+          "feature": "d_sigma",
+          "rationale": "Final-average settlement should be less sensitive to instantaneous signed boundary distance as close approaches."
+        }
+      ],
+      "time_gate": {
+        "full_correction_seconds_lte": 240.0,
+        "missing_time_policy": "zero_correction",
+        "seconds_to_close_feature": "seconds_to_close",
+        "zero_correction_seconds_gte": 600.0
+      }
+    },
+    "model_track": "pure_physics",
+    "model_type": "fixed_logit_residual",
+    "promotion_gate": {
+      "allowed_for_forward_registry": false,
+      "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+      "checks": {
+        "broad_market_coverage": true,
+        "high_recross_brier_not_degraded": true,
+        "holdout_brier_better_than_v28": true,
+        "holdout_logloss_better_than_v28": false,
+        "near_boundary_brier_not_degraded": true,
+        "post_freeze_forward_rows_present": false,
+        "source_quality_promotable": false,
+        "true_boundary_abs_d_lte_1_brier_not_degraded": false
+      },
+      "fail_reasons": [
+        "holdout_logloss_better_than_v28",
+        "no_post_lock_forward_rows",
+        "post_freeze_forward_rows_present",
+        "seed_rows_are_posthoc_diagnostic",
+        "source_quality_promotable",
+        "source_rows_are_diagnostic_not_forward_registered",
+        "strike_missing_in_current_seed_boundary_distance_is_proxy",
+        "true_boundary_abs_d_lte_1_brier_not_degraded"
+      ],
+      "minimum_forward_rows_required": 200,
+      "observed_forward_rows": 0,
+      "promotable": false,
+      "status": "fail"
+    },
+    "training_rows": 497,
+    "validation_rows": 139
+  }
+]

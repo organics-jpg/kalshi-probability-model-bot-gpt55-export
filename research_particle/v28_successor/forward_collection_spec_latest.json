@@ -1,0 +1,2471 @@
+{
+  "collection_candidates": {
+    "logged_collection_candidates": [
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_calibration_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_calibration_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes"
+        ],
+        "model_hash": "065072105a4f4792a473a741",
+        "model_track": "pure_physics",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_boundary_physics_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_boundary_physics_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes",
+          "v28_abs_logit_yes",
+          "minutes_to_close",
+          "late_window_lte_180s",
+          "final_avg_effective_horizon_minutes",
+          "final_avg_variance_compression",
+          "final_avg_uncertainty_scale",
+          "final_avg_elapsed_window_fraction",
+          "final_avg_sigma_proxy_dollars",
+          "final_avg_d_sigma_proxy",
+          "final_avg_abs_d_sigma_proxy",
+          "log1p_sigma_t_dollars",
+          "recross_hazard_score",
+          "recross_hazard_high",
+          "v28_api_replay_p_anchor",
+          "v28_api_replay_p_static_boundary_field",
+          "v28_api_replay_p_recent_transport",
+          "v28_api_replay_p_long_transport",
+          "v28_api_replay_edge_gate",
+          "v28_api_replay_static_gate",
+          "log1p_v28_api_replay_transport_recent_n",
+          "log1p_v28_api_replay_transport_long_n",
+          "d_sigma",
+          "abs_d_sigma",
+          "boundary_zone_abs_d_lte_1",
+          "arrow",
+          "arrow_x_d_sigma",
+          "distance_per_sigma_from_prices",
+          "btc_drift_from_prev_event_dollars",
+          "btc_drift_from_first_event_dollars",
+          "prior_btc_path_range_per_sigma",
+          "prior_adverse_path_memory_per_sigma",
+          "prior_recross_seen"
+        ],
+        "model_hash": "a938bf30c29577fc972b5a7d",
+        "model_track": "pure_physics",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes",
+          "v28_abs_logit_yes",
+          "minutes_to_close",
+          "recross_hazard_score",
+          "ask_frac",
+          "edge_cents",
+          "book_implied_yes_from_side_ask",
+          "v28_minus_book_implied_yes",
+          "v28_book_disagreement_abs",
+          "btc_age_ms",
+          "book_age_ms",
+          "feed_age_ms",
+          "freshness_max_age_ms",
+          "v28_api_replay_available",
+          "v28_api_replay_abs_p_delta",
+          "v28_api_replay_minus_logged_sigma",
+          "v28_api_replay_minus_logged_d_sigma",
+          "side_is_yes",
+          "source_is_entry",
+          "source_is_rejected_actionable",
+          "source_is_logged_approved",
+          "source_is_signal_seen",
+          "source_is_plan_built"
+        ],
+        "model_hash": "1612cf1a1fd3d451ff05ccad",
+        "model_track": "book_aware_diagnostic",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_monotonic_tabular_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_monotonic_tabular_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes"
+        ],
+        "model_hash": "f01a85e32739def20cd8c3b0",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_blend_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_blend_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "model_hash": "db7461bb1e38cb2256cf3530",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_light_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_light_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "model_hash": "c1edea2fdb0e0eb8b405faf0",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy",
+          "seconds_to_close"
+        ],
+        "model_hash": "9b461a310d06c06b55af2e2d",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy",
+          "seconds_to_close"
+        ],
+        "model_hash": "9c831d7954e3c65fec6c0794",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "d_sigma",
+          "seconds_to_close"
+        ],
+        "model_hash": "b160fbf8edd98b998b089805",
+        "model_track": "pure_physics",
+        "model_type": "fixed_logit_residual",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      }
+    ],
+    "logged_manifest_path": "research_particle/v28_successor/candidate_manifests_logged_events_latest.json",
+    "recommended_candidates": [
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_calibration_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_calibration_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes"
+        ],
+        "model_hash": "065072105a4f4792a473a741",
+        "model_track": "pure_physics",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_boundary_physics_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_boundary_physics_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes",
+          "v28_abs_logit_yes",
+          "minutes_to_close",
+          "late_window_lte_180s",
+          "final_avg_effective_horizon_minutes",
+          "final_avg_variance_compression",
+          "final_avg_uncertainty_scale",
+          "final_avg_elapsed_window_fraction",
+          "final_avg_sigma_proxy_dollars",
+          "final_avg_d_sigma_proxy",
+          "final_avg_abs_d_sigma_proxy",
+          "log1p_sigma_t_dollars",
+          "recross_hazard_score",
+          "recross_hazard_high",
+          "v28_api_replay_p_anchor",
+          "v28_api_replay_p_static_boundary_field",
+          "v28_api_replay_p_recent_transport",
+          "v28_api_replay_p_long_transport",
+          "v28_api_replay_edge_gate",
+          "v28_api_replay_static_gate",
+          "log1p_v28_api_replay_transport_recent_n",
+          "log1p_v28_api_replay_transport_long_n",
+          "d_sigma",
+          "abs_d_sigma",
+          "boundary_zone_abs_d_lte_1",
+          "arrow",
+          "arrow_x_d_sigma",
+          "distance_per_sigma_from_prices",
+          "btc_drift_from_prev_event_dollars",
+          "btc_drift_from_first_event_dollars",
+          "prior_btc_path_range_per_sigma",
+          "prior_adverse_path_memory_per_sigma",
+          "prior_recross_seen"
+        ],
+        "model_hash": "a938bf30c29577fc972b5a7d",
+        "model_track": "pure_physics",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes",
+          "v28_abs_logit_yes",
+          "minutes_to_close",
+          "recross_hazard_score",
+          "ask_frac",
+          "edge_cents",
+          "book_implied_yes_from_side_ask",
+          "v28_minus_book_implied_yes",
+          "v28_book_disagreement_abs",
+          "btc_age_ms",
+          "book_age_ms",
+          "feed_age_ms",
+          "freshness_max_age_ms",
+          "v28_api_replay_available",
+          "v28_api_replay_abs_p_delta",
+          "v28_api_replay_minus_logged_sigma",
+          "v28_api_replay_minus_logged_d_sigma",
+          "side_is_yes",
+          "source_is_entry",
+          "source_is_rejected_actionable",
+          "source_is_logged_approved",
+          "source_is_signal_seen",
+          "source_is_plan_built"
+        ],
+        "model_hash": "1612cf1a1fd3d451ff05ccad",
+        "model_track": "book_aware_diagnostic",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_monotonic_tabular_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_monotonic_tabular_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes"
+        ],
+        "model_hash": "f01a85e32739def20cd8c3b0",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_blend_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_blend_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "model_hash": "db7461bb1e38cb2256cf3530",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_light_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_light_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "model_hash": "c1edea2fdb0e0eb8b405faf0",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy",
+          "seconds_to_close"
+        ],
+        "model_hash": "9b461a310d06c06b55af2e2d",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "abs_d_sigma",
+          "final_avg_abs_d_sigma_proxy",
+          "seconds_to_close"
+        ],
+        "model_hash": "9c831d7954e3c65fec6c0794",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "d_sigma",
+          "seconds_to_close"
+        ],
+        "model_hash": "b160fbf8edd98b998b089805",
+        "model_track": "pure_physics",
+        "model_type": "fixed_logit_residual",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      }
+    ],
+    "recommended_manifest": "logged_events_diagnostic",
+    "seed_collection_candidates": [
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_calibration_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_calibration_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes"
+        ],
+        "model_hash": "7d371feef5f09d24d2b83d90",
+        "model_track": "pure_physics",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_boundary_physics_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_boundary_physics_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes",
+          "v28_abs_logit_yes",
+          "minutes_to_close",
+          "late_window_lte_180s",
+          "final_avg_effective_horizon_minutes",
+          "final_avg_variance_compression",
+          "final_avg_uncertainty_scale",
+          "final_avg_elapsed_window_fraction",
+          "final_avg_sigma_proxy_dollars",
+          "final_avg_d_sigma_proxy",
+          "final_avg_abs_d_sigma_proxy",
+          "log1p_sigma_t_dollars",
+          "recross_hazard_score",
+          "recross_hazard_high"
+        ],
+        "model_hash": "71c9c323a2b22c1cda078553",
+        "model_track": "pure_physics",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "v28_logit_yes",
+          "v28_abs_logit_yes",
+          "minutes_to_close",
+          "recross_hazard_score",
+          "ask_frac",
+          "edge_cents",
+          "side_is_yes",
+          "source_is_entry",
+          "source_is_rejected_actionable"
+        ],
+        "model_hash": "4fd4aac68789e9c885f46767",
+        "model_track": "book_aware_diagnostic",
+        "model_type": "regularized_logistic",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_monotonic_tabular_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_monotonic_tabular_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes"
+        ],
+        "model_hash": "be73833bdead411c157e790e",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_blend_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_blend_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "model_hash": "631a5c49f164f77440c3381c",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_light_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_light_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "final_avg_abs_d_sigma_proxy"
+        ],
+        "model_hash": "4b1b6170f9698bf3786aa5d7",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "final_avg_abs_d_sigma_proxy",
+          "seconds_to_close"
+        ],
+        "model_hash": "8dfbc48a962472ac6230eede",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "final_avg_abs_d_sigma_proxy",
+          "seconds_to_close"
+        ],
+        "model_hash": "5229f8966bde26448e9c4403",
+        "model_track": "pure_physics",
+        "model_type": "monotonic_tabular_calibration",
+        "promotion_fail_reasons": [
+          "high_recross_brier_not_degraded",
+          "holdout_brier_better_than_v28",
+          "holdout_logloss_better_than_v28",
+          "near_boundary_brier_not_degraded",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      },
+      {
+        "allowed_for_forward_collection": true,
+        "allowed_for_forward_registry": false,
+        "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+        "collection_gate": {
+          "allowed": true,
+          "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+          "checks": {
+            "feature_surface_declared": true,
+            "has_frozen_model_payload": true,
+            "has_holdout_rows": true,
+            "has_training_rows": true,
+            "has_validation_rows": true,
+            "simple_inspectable_model_type": true
+          },
+          "fail_reasons": [],
+          "status": "allowed_for_shadow_forward_collection",
+          "warnings": [
+            "forward_collection_only_not_promotion",
+            "current_fit_uses_diagnostic_rows_until_frozen_post_lock_evidence_exists"
+          ]
+        },
+        "feature_columns": [
+          "target_v28_p_yes",
+          "seconds_to_close"
+        ],
+        "model_hash": "6c24b9d069769194cd6bf7fd",
+        "model_track": "pure_physics",
+        "model_type": "fixed_logit_residual",
+        "promotion_fail_reasons": [
+          "holdout_logloss_better_than_v28",
+          "no_post_lock_forward_rows",
+          "post_freeze_forward_rows_present",
+          "seed_rows_are_posthoc_diagnostic",
+          "source_quality_promotable",
+          "source_rows_are_diagnostic_not_forward_registered",
+          "strike_missing_in_current_seed_boundary_distance_is_proxy",
+          "true_boundary_abs_d_lte_1_brier_not_degraded"
+        ],
+        "promotion_gate_status": "fail"
+      }
+    ],
+    "seed_manifest_path": "research_particle/v28_successor/candidate_manifests_latest.json"
+  },
+  "field_groups": {
+    "btc_and_feed": {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "fields": [
+        "btc_spot",
+        "btc_source",
+        "btc_tick_ts_utc",
+        "btc_tick_age_ms",
+        "reference_spot",
+        "btc_stale_flag",
+        "btc_return_15s",
+        "btc_return_60s",
+        "btc_return_180s",
+        "btc_return_300s",
+        "btc_return_900s",
+        "signed_move_1m_dollars",
+        "signed_move_3m_dollars",
+        "signed_move_5m_dollars",
+        "max_adverse_move_3m",
+        "max_adverse_move_5m",
+        "max_adverse_move_15m"
+      ],
+      "latest_missing_count_passive": 1750,
+      "latest_missing_count_shadow": 1506,
+      "source": "BTC tick/history buffer"
+    },
+    "candidate_prediction": {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "fields": [
+        "candidate_id",
+        "model_hash",
+        "model_type",
+        "model_track",
+        "candidate_p_yes",
+        "candidate_fair_yes_cents",
+        "candidate_fair_no_cents",
+        "candidate_fair_side_cents",
+        "candidate_edge_cents",
+        "candidate_feature_manifest_hash",
+        "candidate_feature_table_hash"
+      ],
+      "latest_missing_count_passive": 1750,
+      "latest_missing_count_shadow": 0,
+      "source": "frozen collection candidate manifests"
+    },
+    "causality": {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "fields": [
+        "is_pre_resolution",
+        "is_pre_resolution_registered",
+        "is_recomputed_after_resolution",
+        "is_backfilled",
+        "is_simulated",
+        "is_sidecar",
+        "is_diagnostic_only",
+        "allowed_for_forward_promotion",
+        "exclusion_reason"
+      ],
+      "latest_missing_count_passive": 0,
+      "latest_missing_count_shadow": 0,
+      "source": "collector runtime flags"
+    },
+    "identity_and_clock": {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "fields": [
+        "row_id",
+        "market_ticker",
+        "decision_ts_utc",
+        "market_close_ts_utc",
+        "strike",
+        "seconds_to_close",
+        "side",
+        "source_file",
+        "source_line_or_offset",
+        "source_type",
+        "source_quality_tier"
+      ],
+      "latest_missing_count_passive": 0,
+      "latest_missing_count_shadow": 0,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    "market_and_book": {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "fields": [
+        "yes_bid_cents",
+        "yes_ask_cents",
+        "no_bid_cents",
+        "no_ask_cents",
+        "ask_cents",
+        "bid_cents",
+        "book_implied_yes_from_side_ask",
+        "book_mid_yes_cents",
+        "book_width_cents",
+        "book_source_event_count",
+        "raw_capture_ts_utc"
+      ],
+      "latest_missing_count_passive": 128,
+      "latest_missing_count_shadow": 0,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    "v28_baseline": {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "fields": [
+        "v28_p_yes",
+        "v28_p_no",
+        "v28_p_side",
+        "v28_best_side",
+        "v28_fair_yes_cents",
+        "v28_fair_no_cents",
+        "v28_best_fair_cents",
+        "v28_yes_edge_cents",
+        "v28_no_edge_cents",
+        "v28_best_edge_cents",
+        "v28_p_anchor",
+        "v28_p_static_boundary_field",
+        "v28_p_recent_transport",
+        "v28_p_long_transport",
+        "v28_edge_gate",
+        "v28_static_gate",
+        "v28_arrow",
+        "v28_volshock",
+        "v28_transport_recent_n",
+        "v28_transport_long_n",
+        "v28_learned_horizon_minutes",
+        "v28_effective_horizon_minutes",
+        "v28_sigma_t_dollars",
+        "v28_d_sigma"
+      ],
+      "latest_missing_count_passive": 1750,
+      "latest_missing_count_shadow": 1506,
+      "source": "v28 FV API called at decision time"
+    }
+  },
+  "field_requirements": [
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_spot",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_source",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_tick_ts_utc",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_tick_age_ms",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "reference_spot",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_stale_flag",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_return_15s",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_return_60s",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_return_180s",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_return_300s",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "btc_return_900s",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "signed_move_1m_dollars",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "signed_move_3m_dollars",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "signed_move_5m_dollars",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "max_adverse_move_3m",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "max_adverse_move_5m",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Persist current BTC spot/tick age plus 15s/60s/180s/300s/900s returns and side-aware adverse moves using only ticks earlier than decision_ts_utc.",
+      "field": "max_adverse_move_15m",
+      "group": "btc_and_feed",
+      "required_before_freeze": true,
+      "source": "BTC tick/history buffer"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_id",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "model_hash",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "model_type",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "model_track",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_p_yes",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_fair_yes_cents",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_fair_no_cents",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_fair_side_cents",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_edge_cents",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_feature_manifest_hash",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Score all allowed_for_forward_collection manifests against the packet before close; store model_hash, candidate probability, fair cents, and feature/table hashes.",
+      "field": "candidate_feature_table_hash",
+      "group": "candidate_prediction",
+      "required_before_freeze": true,
+      "source": "frozen collection candidate manifests"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_pre_resolution",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_pre_resolution_registered",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_recomputed_after_resolution",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_backfilled",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_simulated",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_sidecar",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "is_diagnostic_only",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "allowed_for_forward_promotion",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Set pre-resolution flags at write time; settlement fields must be absent before freeze.",
+      "field": "exclusion_reason",
+      "group": "causality",
+      "required_before_freeze": true,
+      "source": "collector runtime flags"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "row_id",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "market_ticker",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "decision_ts_utc",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "market_close_ts_utc",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "strike",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "seconds_to_close",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "side",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "source_file",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "source_line_or_offset",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "source_type",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Write every watched market/side row with decision_ts_utc and market_close_ts_utc before close.",
+      "field": "source_quality_tier",
+      "group": "identity_and_clock",
+      "required_before_freeze": true,
+      "source": "native passive market metadata plus checkpoint clock"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "yes_bid_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "yes_ask_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "no_bid_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "no_ask_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "ask_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "bid_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "book_implied_yes_from_side_ask",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "book_mid_yes_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "book_width_cents",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "book_source_event_count",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Capture top of book, side ask/bid, derived YES book price, width, raw_capture_ts_utc, and source event count.",
+      "field": "raw_capture_ts_utc",
+      "group": "market_and_book",
+      "required_before_freeze": true,
+      "source": "Kalshi passive orderbook checkpoint"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_yes",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_no",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_side",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_best_side",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_fair_yes_cents",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_fair_no_cents",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_best_fair_cents",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_yes_edge_cents",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_no_edge_cents",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_best_edge_cents",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_anchor",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_static_boundary_field",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_recent_transport",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_p_long_transport",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_edge_gate",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_static_gate",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_arrow",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_volshock",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_transport_recent_n",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_transport_long_n",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_learned_horizon_minutes",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_effective_horizon_minutes",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_sigma_t_dollars",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    },
+    {
+      "collector_rule": "Call predict_many/edge_many before close and store p_yes/fair cents plus native components: p_anchor, static boundary, recent/long transport, gates, counts, sigma, d_sigma, arrow, volshock.",
+      "field": "v28_d_sigma",
+      "group": "v28_baseline",
+      "required_before_freeze": true,
+      "source": "v28 FV API called at decision time"
+    }
+  ],
+  "forward_evidence_score": {
+    "audit_json": "logs/edge_research/v28_successor_forward_evidence_score_latest.json",
+    "clean_forward_markets": 88,
+    "clean_forward_rows": 3126,
+    "evidence_status": "scored_forward_evidence",
+    "promotable_candidate_count": 3,
+    "promotion_allowed": false,
+    "purpose": "Score settled frozen-forward rows candidate-vs-v28 on probability quality before economics or promotion.",
+    "script": "score_v28_successor_forward_evidence.py"
+  },
+  "forward_packet_freeze_handoff": {
+    "audit_json": "logs/edge_research/v28_successor_forward_packet_freeze_handoff_latest.json",
+    "frozen_prediction_rows": 0,
+    "handoff_status": "blocked_non_promotable_input_rows",
+    "packet_ready_rows": 18,
+    "promotion_allowed": false,
+    "purpose": "One-command research handoff for validating a real sidecar packet CSV, freezing eligible rows, and materializing a registry-shaped handoff without promotion.",
+    "registry_rows": 0,
+    "script": "run_v28_successor_forward_packet_freeze.py"
+  },
+  "freeze_acceptance_gates": [
+    "row is written before market_close_ts_utc",
+    "all packet contract groups are complete",
+    "row has no temporal blockers",
+    "candidate prediction comes from allowed_for_forward_collection manifest and frozen model_hash",
+    "settlement fields are absent before freeze",
+    "frozen prediction ledger is written before resolution"
+  ],
+  "generated_utc": "2026-05-12T07:30:47Z",
+  "inputs": {
+    "candidate_manifests_hash": "ca5254fa0ae1312b6f26eb4d5181ab6d63a8cd943cec4afba57280cefc2b5da8",
+    "candidate_manifests_json": "research_particle/v28_successor/candidate_manifests_latest.json",
+    "forward_evidence_score_hash": "276b35397a5dc61b2cfa0a51aa9da74c9e24623028568563fdc87487b2420a12",
+    "forward_evidence_score_json": "logs/edge_research/v28_successor_forward_evidence_score_latest.json",
+    "forward_label_join_hash": "a62d226d3f08fc60a6cec4232444ce03899ccfe97fb9522519263a7f677231ca",
+    "forward_label_join_json": "logs/edge_research/v28_successor_forward_label_join_latest.json",
+    "forward_packet_freeze_handoff_hash": "9fcb0ff8a1bbf8cb0688b055177a62a2e0e332a830d8882ed57e65fe6cfc2652",
+    "forward_packet_freeze_handoff_json": "logs/edge_research/v28_successor_forward_packet_freeze_handoff_latest.json",
+    "forward_preflight_json": "logs/edge_research/v28_successor_forward_freeze_preflight_latest.json",
+    "frozen_forward_json": "logs/edge_research/v28_successor_frozen_forward_predictions_latest.json",
+    "logged_candidate_manifests_hash": "f779b3b24d0efd48cf259dc116b9d838fe063bb752a02a6f2b094ef7b99e1b1b",
+    "logged_candidate_manifests_json": "research_particle/v28_successor/candidate_manifests_logged_events_latest.json",
+    "packet_adapter_hash": "8593e2a16aa0dc9e126331ca408e3cd48b03c55eabf05763ab29dfcb1e46f410",
+    "packet_adapter_json": "logs/edge_research/v28_successor_forward_packet_adapter_latest.json",
+    "packet_contract_json": "logs/edge_research/v28_successor_forward_packet_contract_latest.json",
+    "packet_scoring_json": "logs/edge_research/v28_successor_forward_packet_candidate_scoring_latest.json",
+    "packet_template_hash": "c239a14f7dc38c5c495618e544851116e3b84fb64be2a364e53b0d8a30d1cc41",
+    "packet_template_json": "research_particle/v28_successor/forward_packet_template_latest.json",
+    "public_rest_sidecar_batch_hash": "296d1a4428223bc0ba754e55e963b3ed68807454b57df0936c9f76ace4ca330e",
+    "public_rest_sidecar_batch_json": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+    "public_rest_sidecar_bundle_hash": "dbfab1a602731fc45c469444201b7e929f9480d1e002e700a21eed6f0ec974fc",
+    "public_rest_sidecar_bundle_json": "logs/edge_research/v28_successor_public_rest_sidecar_bundle_latest.json",
+    "shadow_packet_json": "logs/edge_research/v28_successor_shadow_forward_packets_latest.json",
+    "sidecar_batch_evidence_score_hash": "a613f8525a014e6035295b82772d767e2985aded0b68b1235e494539ddf0ba34",
+    "sidecar_batch_evidence_score_json": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.json",
+    "sidecar_bundle_batch_handoff_hash": "77cb811847cd3e7411678e975688b7e0f565370ab712c1fb91e2a40863d9dc59",
+    "sidecar_bundle_batch_handoff_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_handoff_latest.json",
+    "sidecar_bundle_batch_label_join_hash": "6f38ae3cb5e45abd471c796d1404b095f558430e9564c8d7ae6002345dd3e8d9",
+    "sidecar_bundle_batch_label_join_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_label_join_latest.json",
+    "sidecar_bundle_batch_settlement_labels_hash": "522f646ed2c5ba6307c1c4814d4de8a3b5650c0baec26a7d9d0e5153c1f4e976",
+    "sidecar_bundle_batch_settlement_labels_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_settlement_labels_latest.json",
+    "sidecar_bundle_freeze_handoff_hash": "86ce3bd62e336c3533d6bb9ce34510db106c16ac29f225a095b5def02b94200e",
+    "sidecar_bundle_freeze_handoff_json": "logs/edge_research/v28_successor_sidecar_bundle_freeze_handoff_latest.json",
+    "sidecar_collection_cycle_hash": "b1f8da3b70b790e923f4a76c29f13bc049ff616c474bfe39704dce6327fa2653",
+    "sidecar_collection_cycle_json": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json",
+    "sidecar_input_bundle_contract_hash": "637faa5b0f8e638a72579ae019dc3a3d9c0fe56c9fcb46720d81682e53d268f6",
+    "sidecar_input_bundle_contract_json": "logs/edge_research/v28_successor_sidecar_input_bundle_contract_latest.json",
+    "sidecar_packet_collector_hash": "72e8b94da525e5bb2ca0165588b112d31d589c5a67f9d4059633f79173603bc9",
+    "sidecar_packet_collector_json": "logs/edge_research/v28_successor_sidecar_packet_collector_latest.json"
+  },
+  "latest_blockers": {
+    "forward_preflight": [
+      "insufficient_freeze_ready_markets",
+      "insufficient_freeze_ready_rows",
+      "market_already_closed_now",
+      "missing_btc_state",
+      "missing_candidate_prediction",
+      "missing_top_book",
+      "missing_v28_baseline",
+      "row_not_registered_pre_resolution",
+      "staging_registration_not_before_close"
+    ],
+    "frozen_forward": {},
+    "packet_adapter": {
+      "btc_and_feed": 0,
+      "candidate_prediction": 0,
+      "causality": 0,
+      "identity_and_clock": 0,
+      "market_and_book": 0,
+      "v28_baseline": 0
+    },
+    "packet_contract": {
+      "btc_and_feed": 1750,
+      "candidate_prediction": 1750,
+      "causality": 0,
+      "identity_and_clock": 0,
+      "market_and_book": 128,
+      "v28_baseline": 1750
+    },
+    "packet_scoring": {
+      "incomplete_input_packet:btc_and_feed,v28_baseline": 13554,
+      "packet_not_registered_before_close": 5994,
+      "temporal_blockers:is_recomputed_after_resolution_true": 5994
+    },
+    "public_rest_sidecar_batch": {},
+    "public_rest_sidecar_bundle": {},
+    "shadow_packets": {
+      "btc_and_feed": 1506,
+      "candidate_prediction": 0,
+      "causality": 0,
+      "identity_and_clock": 0,
+      "market_and_book": 0,
+      "v28_baseline": 1506
+    },
+    "sidecar_batch_evidence_score": [
+      {
+        "candidate_id": "v28s_boundary_monotonic_blend_v001",
+        "delta_brier_candidate_minus_v28": -0.0012990272728537477,
+        "delta_logloss_candidate_minus_v28": -0.013564709181522194,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [],
+        "forward_evidence_promotable": true,
+        "market_shortfall": 0,
+        "markets": 47,
+        "near_boundary_delta_brier_candidate_minus_v28": -0.00029157806472454584,
+        "near_boundary_rows": 184,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 234,
+        "rows_per_market": 4.9787234042553195,
+        "status": "pass"
+      },
+      {
+        "candidate_id": "v28s_boundary_monotonic_light_v001",
+        "delta_brier_candidate_minus_v28": -0.0007212087458586536,
+        "delta_logloss_candidate_minus_v28": -0.006753968019003964,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [],
+        "forward_evidence_promotable": true,
+        "market_shortfall": 0,
+        "markets": 45,
+        "near_boundary_delta_brier_candidate_minus_v28": -0.0003427968915931112,
+        "near_boundary_rows": 178,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 228,
+        "rows_per_market": 5.066666666666666,
+        "status": "pass"
+      },
+      {
+        "candidate_id": "v28s_boundary_monotonic_micro_time_safe_v001",
+        "delta_brier_candidate_minus_v28": -0.00016214996205315968,
+        "delta_logloss_candidate_minus_v28": -0.0018974969456564406,
+        "estimated_additional_markets_needed": 30,
+        "estimated_markets_to_row_floor": 12,
+        "fail_reasons": [
+          "insufficient_forward_rows",
+          "insufficient_forward_markets"
+        ],
+        "forward_evidence_promotable": false,
+        "market_shortfall": 30,
+        "markets": 10,
+        "near_boundary_delta_brier_candidate_minus_v28": -2.0885070546511342e-05,
+        "near_boundary_rows": 74,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 106,
+        "rows": 94,
+        "rows_per_market": 9.4,
+        "status": "fail"
+      },
+      {
+        "candidate_id": "v28s_boundary_monotonic_time_safe_v001",
+        "delta_brier_candidate_minus_v28": -0.0002283605261196031,
+        "delta_logloss_candidate_minus_v28": -0.0023925328139765556,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [],
+        "forward_evidence_promotable": true,
+        "market_shortfall": 0,
+        "markets": 44,
+        "near_boundary_delta_brier_candidate_minus_v28": -8.205392621885021e-05,
+        "near_boundary_rows": 176,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 226,
+        "rows_per_market": 5.136363636363637,
+        "status": "pass"
+      },
+      {
+        "candidate_id": "v28s_late_dsigma_residual_tilt_v001",
+        "delta_brier_candidate_minus_v28": 0.000737207094893666,
+        "delta_logloss_candidate_minus_v28": 0.0014705718642465948,
+        "estimated_additional_markets_needed": 36,
+        "estimated_markets_to_row_floor": 21,
+        "fail_reasons": [
+          "insufficient_forward_rows",
+          "insufficient_forward_markets",
+          "forward_brier_not_better_than_v28",
+          "forward_logloss_not_better_than_v28",
+          "near_boundary_brier_degraded"
+        ],
+        "forward_evidence_promotable": false,
+        "market_shortfall": 36,
+        "markets": 4,
+        "near_boundary_delta_brier_candidate_minus_v28": 0.002706024968356424,
+        "near_boundary_rows": 12,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 168,
+        "rows": 32,
+        "rows_per_market": 8.0,
+        "status": "fail"
+      },
+      {
+        "candidate_id": "v28s_logistic_book_reliability_diag_v001",
+        "delta_brier_candidate_minus_v28": 0.22590977076748825,
+        "delta_logloss_candidate_minus_v28": 0.7603210372694437,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [
+          "forward_brier_not_better_than_v28",
+          "forward_logloss_not_better_than_v28",
+          "near_boundary_brier_degraded"
+        ],
+        "forward_evidence_promotable": false,
+        "market_shortfall": 0,
+        "markets": 88,
+        "near_boundary_delta_brier_candidate_minus_v28": 0.16640232745409334,
+        "near_boundary_rows": 392,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 578,
+        "rows_per_market": 6.568181818181818,
+        "status": "fail"
+      },
+      {
+        "candidate_id": "v28s_logistic_boundary_physics_v001",
+        "delta_brier_candidate_minus_v28": 0.3267802484657371,
+        "delta_logloss_candidate_minus_v28": 1.84910706590922,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [
+          "forward_brier_not_better_than_v28",
+          "forward_logloss_not_better_than_v28",
+          "near_boundary_brier_degraded"
+        ],
+        "forward_evidence_promotable": false,
+        "market_shortfall": 0,
+        "markets": 88,
+        "near_boundary_delta_brier_candidate_minus_v28": 0.3013285260731586,
+        "near_boundary_rows": 392,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 578,
+        "rows_per_market": 6.568181818181818,
+        "status": "fail"
+      },
+      {
+        "candidate_id": "v28s_logistic_calibration_v001",
+        "delta_brier_candidate_minus_v28": 0.024120099963944097,
+        "delta_logloss_candidate_minus_v28": 0.06552818723765519,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [
+          "forward_brier_not_better_than_v28",
+          "forward_logloss_not_better_than_v28",
+          "near_boundary_brier_degraded"
+        ],
+        "forward_evidence_promotable": false,
+        "market_shortfall": 0,
+        "markets": 88,
+        "near_boundary_delta_brier_candidate_minus_v28": 0.017007574251918206,
+        "near_boundary_rows": 392,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 578,
+        "rows_per_market": 6.568181818181818,
+        "status": "fail"
+      },
+      {
+        "candidate_id": "v28s_monotonic_tabular_v001",
+        "delta_brier_candidate_minus_v28": 0.0007538697215135892,
+        "delta_logloss_candidate_minus_v28": 0.006744982807650235,
+        "estimated_additional_markets_needed": 0,
+        "estimated_markets_to_row_floor": 0,
+        "fail_reasons": [
+          "forward_brier_not_better_than_v28",
+          "forward_logloss_not_better_than_v28"
+        ],
+        "forward_evidence_promotable": false,
+        "market_shortfall": 0,
+        "markets": 88,
+        "near_boundary_delta_brier_candidate_minus_v28": -0.001653917396952892,
+        "near_boundary_rows": 392,
+        "required_markets": 40,
+        "required_rows": 200,
+        "row_shortfall": 0,
+        "rows": 578,
+        "rows_per_market": 6.568181818181818,
+        "status": "fail"
+      }
+    ],
+    "sidecar_bundle_batch_label_join": {},
+    "sidecar_bundle_batch_settlement_labels": {},
+    "sidecar_collection_cycle": []
+  },
+  "outputs": {
+    "audit_json": "logs/edge_research/v28_successor_forward_collection_spec_latest.json",
+    "markdown": "logs/edge_research/v28_successor_forward_collection_spec_latest.md",
+    "spec_json": "research_particle/v28_successor/forward_collection_spec_latest.json"
+  },
+  "packet_contract": {
+    "field_count": 83,
+    "field_group_count": 6,
+    "forbidden_before_freeze": [
+      "y_yes_win",
+      "settlement_price",
+      "settlement_ts_utc",
+      "settlement_source",
+      "settlement_margin_dollars",
+      "settlement_side",
+      "final_average_window_end_utc"
+    ],
+    "template": "research_particle/v28_successor/forward_packet_template_latest.json"
+  },
+  "post_resolution_label_join": {
+    "audit_json": "logs/edge_research/v28_successor_forward_label_join_latest.json",
+    "join_status": "joined_labels_available",
+    "joined_markets": 88,
+    "joined_rows": 3126,
+    "promotion_allowed": false,
+    "purpose": "Attach labels only after frozen predictions and market resolution, then compute row-level probability metrics.",
+    "script": "join_v28_successor_forward_labels.py"
+  },
+  "promotion_acceptance_gates": [
+    "settled labels joined only after freeze and resolution",
+    "source contract reports promotion-grade forward rows",
+    "chronological holdout and post-lock forward rows beat v28 on Brier/log loss/calibration",
+    "near-boundary and recross slices improve or do not degrade",
+    "broad market coverage floor is met",
+    "promotion verifier reports promotable"
+  ],
+  "public_rest_sidecar_batch": {
+    "audit_json": "logs/edge_research/v28_successor_public_rest_sidecar_batch_latest.json",
+    "batch_status": "contract_demo_ready_not_evidence",
+    "bundle_ready_files": 2,
+    "markets_selected": 2,
+    "mode": "fixture",
+    "packet_markets": 2,
+    "packet_rows": 36,
+    "promotion_allowed": false,
+    "purpose": "Research-only batch builder for turning active nearest-close BTC15M public markets into separate sidecar input bundles.",
+    "script": "build_v28_successor_public_rest_sidecar_batch.py"
+  },
+  "public_rest_sidecar_bundle": {
+    "audit_json": "logs/edge_research/v28_successor_public_rest_sidecar_bundle_latest.json",
+    "bundle_ready": true,
+    "bundle_status": "contract_demo_ready_not_evidence",
+    "mode": "fixture",
+    "packet_rows": 18,
+    "promotion_allowed": false,
+    "purpose": "Research-only one-shot builder for turning current public Kalshi market/orderbook snapshots plus BTC candles into a sidecar input bundle.",
+    "script": "build_v28_successor_public_rest_sidecar_bundle.py"
+  },
+  "purpose": "Handoff for collecting complete pre-resolution packet rows and frozen collection-candidate predictions for later post-lock scoring.",
+  "research_only_guardrails": [
+    "Do not change live order logic, strategy thresholds, secrets, live state, or processes.",
+    "Do not place trades.",
+    "Capture and score sidecar rows only.",
+    "Settlement labels are forbidden before freeze and must be joined only after resolution.",
+    "allowed_for_forward_collection is not promotion approval.",
+    "allowed_for_forward_registry remains false until settled forward evidence clears promotion verifier."
+  ],
+  "sidecar_adapter": {
+    "adapter_status": "contract_demo_ready",
+    "audit_json": "logs/edge_research/v28_successor_forward_packet_adapter_latest.json",
+    "demo_packet_ready_rows": 9,
+    "promotion_allowed": false,
+    "purpose": "Reference implementation for turning passive book checkpoints plus decision-time BTC/v28/candidate inputs into packet-contract rows before close.",
+    "script": "build_v28_successor_forward_packet_adapter.py"
+  },
+  "sidecar_batch_evidence_score": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_batch_evidence_score_latest.json",
+    "clean_forward_markets": 88,
+    "clean_forward_rows": 3126,
+    "evidence_status": "scored_sidecar_batch_evidence",
+    "promotable_candidate_count": 3,
+    "promotion_allowed": false,
+    "purpose": "Apply probability-first evidence scoring to non-canonical sidecar batch labeled rows without granting promotion.",
+    "script": "score_v28_successor_sidecar_batch_evidence.py"
+  },
+  "sidecar_bundle_batch_handoff": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_handoff_latest.json",
+    "batch_handoff_status": "frozen_batch_handoff_ready_for_settlement_labels",
+    "frozen_prediction_rows": 3126,
+    "input_bundle_files": 290,
+    "packet_markets": 88,
+    "packet_rows": 3126,
+    "promotion_allowed": false,
+    "purpose": "Batch research handoff for broad-market sidecar bundle directories before label join and forward evidence scoring.",
+    "registry_rows": 3126,
+    "script": "run_v28_successor_sidecar_bundle_batch_handoff.py"
+  },
+  "sidecar_bundle_batch_label_join": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_label_join_latest.json",
+    "batch_label_join_status": "joined_batch_labels_available",
+    "frozen_rows": 3126,
+    "joined_markets": 88,
+    "joined_rows": 3126,
+    "labeled_rows": 3126,
+    "promotion_allowed": false,
+    "purpose": "Post-resolution label join for non-canonical sidecar batch frozen rows, kept separate from the promotion ledger.",
+    "script": "run_v28_successor_sidecar_batch_label_join_handoff.py"
+  },
+  "sidecar_bundle_batch_settlement_labels": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_bundle_batch_settlement_labels_latest.json",
+    "frozen_markets": 88,
+    "frozen_rows": 3126,
+    "label_fetch_status": "settlement_labels_available",
+    "label_markets": 88,
+    "label_rows": 88,
+    "promotion_allowed": false,
+    "purpose": "Post-close public Kalshi settlement label fetch for sidecar batch frozen rows, written to a separate label CSV.",
+    "script": "fetch_v28_successor_sidecar_batch_settlement_labels.py"
+  },
+  "sidecar_bundle_freeze_handoff": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_bundle_freeze_handoff_latest.json",
+    "bundle_handoff_status": "blocked_non_promotable_bundle_rows",
+    "frozen_prediction_rows": 0,
+    "packet_rows": 18,
+    "promotion_allowed": false,
+    "purpose": "One-command research handoff from sidecar input bundle to packet rows and non-promoting freeze/registry-shaped artifacts.",
+    "registry_rows": 0,
+    "script": "run_v28_successor_sidecar_bundle_freeze_handoff.py"
+  },
+  "sidecar_collection_cycle": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_collection_cycle_latest.json",
+    "collect_mode": "none",
+    "cycle_status": "sidecar_cycle_ready_for_external_promotion_verifier",
+    "promotion_allowed": false,
+    "purpose": "Repeatable one-cycle sidecar collector/freeze/label/score/audit runner for accumulating forward evidence without writing canonical promotion ledgers.",
+    "script": "run_v28_successor_sidecar_collection_cycle.py",
+    "sidecar_clean_forward_markets": 88,
+    "sidecar_clean_forward_rows": 3126,
+    "sidecar_frozen_markets": 88,
+    "sidecar_frozen_rows": 3126,
+    "sidecar_joined_rows": 3126
+  },
+  "sidecar_input_bundle_contract": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_input_bundle_contract_latest.json",
+    "bundle_ready": true,
+    "bundle_status": "contract_demo_ready_not_evidence",
+    "promotion_allowed": false,
+    "purpose": "Validate the serialized market/checkpoint/BTC/v28/candidate input bundle before packet collection.",
+    "script": "validate_v28_successor_sidecar_input_bundle.py",
+    "template_json": "research_particle/v28_successor/sidecar_input_bundle_template_latest.json"
+  },
+  "sidecar_packet_collector": {
+    "audit_json": "logs/edge_research/v28_successor_sidecar_packet_collector_latest.json",
+    "collector_status": "contract_demo_ready_not_evidence",
+    "demo_packet_ready_rows": 18,
+    "input_bundle_csv": "research_particle/v28_successor/forward_sidecar_packet_collection_latest.csv",
+    "input_modes": [
+      "demo",
+      "input_bundle_json"
+    ],
+    "promotion_allowed": false,
+    "purpose": "Executable research-only bridge for emitting complete YES/NO candidate packet rows from an open-market checkpoint or serialized input bundle before freeze.",
+    "script": "collect_v28_successor_forward_packets.py"
+  },
+  "spec_version": "v28_successor_forward_collection_spec_v1"
+}

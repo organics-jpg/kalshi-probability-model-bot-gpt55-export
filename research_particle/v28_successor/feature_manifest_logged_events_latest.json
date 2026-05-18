@@ -1,0 +1,1227 @@
+[
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "v28_logit_yes",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing p_yes is imputed to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "logit(clamp(v28_p_yes))",
+    "source_columns": [
+      "v28_p_yes"
+    ],
+    "timestamp_basis": "v28 prediction logged before the source decision row; seed decision_ts inferred from seconds_to_close"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "v28_p_yes_centered",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing p_yes is imputed to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "v28_p_yes - 0.5",
+    "source_columns": [
+      "v28_p_yes"
+    ],
+    "timestamp_basis": "v28 prediction logged before the source decision row; seed decision_ts inferred from seconds_to_close"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "v28_abs_logit_yes",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing p_yes is imputed to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "abs(logit(clamp(v28_p_yes)))",
+    "source_columns": [
+      "v28_p_yes"
+    ],
+    "timestamp_basis": "v28 prediction logged before the source decision row; seed decision_ts inferred from seconds_to_close"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "v28_side_probability",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing p_side is imputed to 0.5",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamp(v28_p_side)",
+    "source_columns": [
+      "v28_p_side"
+    ],
+    "timestamp_basis": "v28 side probability from source row"
+  },
+  {
+    "feature_family": "time_geometry",
+    "feature_name": "seconds_to_close",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close is imputed to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(seconds_to_close)",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "source row seconds_to_close at decision time"
+  },
+  {
+    "feature_family": "time_geometry",
+    "feature_name": "minutes_to_close",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close is imputed to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "seconds_to_close / 60",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "source row seconds_to_close at decision time"
+  },
+  {
+    "feature_family": "time_geometry",
+    "feature_name": "time_frac_15m",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close is imputed to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clip(seconds_to_close / 900, 0, 1)",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "source row seconds_to_close at decision time"
+  },
+  {
+    "feature_family": "time_geometry",
+    "feature_name": "late_window_lte_180s",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if seconds_to_close <= 180 and present else 0",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "source row seconds_to_close at decision time"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_effective_horizon_minutes",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close maps to the minimum horizon floor",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "if h >= avg: h - 2avg/3 else h^3/(3avg^2), avg=90s",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "decision-time clock transformed with a predeclared 90s final-average Brownian variance proxy"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_variance_compression",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close maps to the minimum horizon floor",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "effective final-average horizon / raw horizon, clipped to [0, 1]",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "decision-time clock transformed with a predeclared 90s final-average Brownian variance proxy"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_uncertainty_scale",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close maps to the minimum horizon floor",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "sqrt(final_avg_variance_compression)",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "decision-time clock transformed with a predeclared 90s final-average Brownian variance proxy"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_elapsed_window_fraction",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing seconds_to_close maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clip((90s - seconds_to_close) / 90s, 0, 1)",
+    "source_columns": [
+      "seconds_to_close"
+    ],
+    "timestamp_basis": "decision-time clock only; no future final-average samples are read"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_sigma_proxy_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing sigma maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "sigma_t_dollars * final_avg_uncertainty_scale",
+    "source_columns": [
+      "seconds_to_close",
+      "sigma_t_dollars"
+    ],
+    "timestamp_basis": "decision-time clock and v28 sigma transformed with a predeclared 90s final-average Brownian variance proxy"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_d_sigma_proxy",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing strike/BTC/sigma maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "(strike - btc_price) / final_avg_sigma_proxy_dollars",
+    "source_columns": [
+      "seconds_to_close",
+      "sigma_t_dollars",
+      "strike",
+      "btc_price"
+    ],
+    "timestamp_basis": "decision-time strike, BTC, clock, and v28 sigma; no future final-average samples are read"
+  },
+  {
+    "feature_family": "final_avg_physics",
+    "feature_name": "final_avg_abs_d_sigma_proxy",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing strike/BTC/sigma maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "abs(final_avg_d_sigma_proxy)",
+    "source_columns": [
+      "seconds_to_close",
+      "sigma_t_dollars",
+      "strike",
+      "btc_price"
+    ],
+    "timestamp_basis": "decision-time strike, BTC, clock, and v28 sigma; no future final-average samples are read"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "sigma_t_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing sigma is imputed to 0 with companion missing flag",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(sigma_t_dollars)",
+    "source_columns": [
+      "sigma_t_dollars"
+    ],
+    "timestamp_basis": "v28 sigma at source decision row"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "log1p_sigma_t_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing sigma is imputed to 0 with companion missing flag",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "log1p(max(sigma_t_dollars, 0))",
+    "source_columns": [
+      "sigma_t_dollars"
+    ],
+    "timestamp_basis": "v28 sigma at source decision row"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "sigma_t_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if sigma_t_dollars missing else 0",
+    "source_columns": [
+      "sigma_t_dollars"
+    ],
+    "timestamp_basis": "observed missingness in source row"
+  },
+  {
+    "feature_family": "boundary_reliability",
+    "feature_name": "recross_hazard_score",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing recross score is imputed to 0 with companion missing flag",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(recross_hazard_score)",
+    "source_columns": [
+      "recross_hazard_score"
+    ],
+    "timestamp_basis": "predeclared recross score stored in source calibration row"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "recross_hazard_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if recross_hazard_score missing else 0",
+    "source_columns": [
+      "recross_hazard_score"
+    ],
+    "timestamp_basis": "observed missingness in source row"
+  },
+  {
+    "feature_family": "boundary_reliability",
+    "feature_name": "recross_hazard_high",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if h6_recross_hazard_high true else 0",
+    "source_columns": [
+      "h6_recross_hazard_high"
+    ],
+    "timestamp_basis": "predeclared recross high flag stored in source calibration row"
+  },
+  {
+    "feature_family": "book_aware_execution",
+    "feature_name": "ask_cents",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing ask is imputed to 100 with companion missing flag",
+    "model_track_allowed": [
+      "book_aware"
+    ],
+    "normalization_or_transform": "float(ask_cents), missing=>100",
+    "source_columns": [
+      "ask_cents"
+    ],
+    "timestamp_basis": "executable ask recorded in source row"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "ask_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if ask_cents missing else 0",
+    "source_columns": [
+      "ask_cents"
+    ],
+    "timestamp_basis": "observed missingness in source row"
+  },
+  {
+    "feature_family": "book_aware_execution",
+    "feature_name": "ask_frac",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing ask is imputed to 100",
+    "model_track_allowed": [
+      "book_aware"
+    ],
+    "normalization_or_transform": "ask_cents / 100",
+    "source_columns": [
+      "ask_cents"
+    ],
+    "timestamp_basis": "executable ask recorded in source row"
+  },
+  {
+    "feature_family": "book_aware_execution",
+    "feature_name": "edge_cents",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing edge is imputed to 0 with companion missing flag",
+    "model_track_allowed": [
+      "book_aware"
+    ],
+    "normalization_or_transform": "float(edge_cents)",
+    "source_columns": [
+      "edge_cents"
+    ],
+    "timestamp_basis": "v28 model edge after executable price in source row"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "edge_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if edge_cents missing else 0",
+    "source_columns": [
+      "edge_cents"
+    ],
+    "timestamp_basis": "observed missingness in source row"
+  },
+  {
+    "feature_family": "row_context",
+    "feature_name": "side_is_yes",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing/NO maps to 0",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if side == yes else 0",
+    "source_columns": [
+      "side"
+    ],
+    "timestamp_basis": "side considered by the row; not a settlement label"
+  },
+  {
+    "feature_family": "source_reliability",
+    "feature_name": "source_is_entry",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if source_type == entry else 0",
+    "source_columns": [
+      "source_type"
+    ],
+    "timestamp_basis": "source type assigned by seed builder"
+  },
+  {
+    "feature_family": "source_reliability",
+    "feature_name": "source_is_rejected_actionable",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if source_type == rejected_actionable else 0",
+    "source_columns": [
+      "source_type"
+    ],
+    "timestamp_basis": "source type assigned by seed builder"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_available",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if reconstructed v28 API replay is available for this row",
+    "source_columns": [
+      "api_replay_available"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id; uses predecision BTC cache and logged market geometry"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_p_anchor",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamped replay p_anchor",
+    "source_columns": [
+      "replay_p_anchor"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_p_static_boundary_field",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamped replay p_static_boundary_field",
+    "source_columns": [
+      "replay_p_static_boundary_field"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_p_recent_transport",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamped replay p_recent_transport",
+    "source_columns": [
+      "replay_p_recent_transport"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_p_long_transport",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamped replay p_long_transport",
+    "source_columns": [
+      "replay_p_long_transport"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_edge_gate",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamped replay transport edge gate",
+    "source_columns": [
+      "replay_edge_gate"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_static_gate",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0.5",
+    "model_track_allowed": [
+      "pure_physics",
+      "reliability"
+    ],
+    "normalization_or_transform": "clamped replay static boundary gate",
+    "source_columns": [
+      "replay_static_gate"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "log1p_v28_api_replay_transport_recent_n",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "reliability"
+    ],
+    "normalization_or_transform": "log1p(replay transport recent sample count)",
+    "source_columns": [
+      "replay_transport_recent_n"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "log1p_v28_api_replay_transport_long_n",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "reliability"
+    ],
+    "normalization_or_transform": "log1p(replay transport long sample count)",
+    "source_columns": [
+      "replay_transport_long_n"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_minus_logged_p_yes",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "replay p_yes minus originally logged p_yes",
+    "source_columns": [
+      "replay_minus_logged_v28_p_yes"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_abs_p_delta",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "abs(replay p_yes minus originally logged p_yes)",
+    "source_columns": [
+      "replay_minus_logged_v28_p_yes"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_minus_logged_sigma",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "replay sigma_t minus originally logged sigma_t",
+    "source_columns": [
+      "replay_minus_logged_sigma_t_dollars"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "v28_api_replay",
+    "feature_name": "v28_api_replay_minus_logged_d_sigma",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "replay d_sigma minus originally logged d_sigma",
+    "source_columns": [
+      "replay_minus_logged_d_sigma"
+    ],
+    "timestamp_basis": "research-only v28 API replay joined by row_id"
+  },
+  {
+    "feature_family": "boundary_geometry",
+    "feature_name": "d_sigma",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing d_sigma is imputed to 0 with companion missing flag",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(d_sigma)",
+    "source_columns": [
+      "d_sigma"
+    ],
+    "timestamp_basis": "logged v28 output before event decision resolution"
+  },
+  {
+    "feature_family": "boundary_geometry",
+    "feature_name": "abs_d_sigma",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing distance is imputed to abs(d_sigma) or 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "abs_d_sigma if present else abs(d_sigma)",
+    "source_columns": [
+      "abs_d_sigma",
+      "d_sigma"
+    ],
+    "timestamp_basis": "logged v28 output before event decision resolution"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "d_sigma_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if d_sigma missing else 0",
+    "source_columns": [
+      "d_sigma"
+    ],
+    "timestamp_basis": "observed missingness in logged event"
+  },
+  {
+    "feature_family": "boundary_geometry",
+    "feature_name": "boundary_zone_abs_d_lte_1",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if abs_d_sigma <= 1 else 0",
+    "source_columns": [
+      "abs_d_sigma",
+      "d_sigma"
+    ],
+    "timestamp_basis": "logged v28 distance to strike before event decision resolution"
+  },
+  {
+    "feature_family": "boundary_geometry",
+    "feature_name": "strike_minus_btc_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing strike/BTC maps to 0 with companion missing flags",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "strike - btc_price",
+    "source_columns": [
+      "strike",
+      "btc_price"
+    ],
+    "timestamp_basis": "logged strike and BTC price before event decision resolution"
+  },
+  {
+    "feature_family": "boundary_geometry",
+    "feature_name": "strike_distance_dollars_abs",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing strike/BTC maps to 0 with companion missing flags",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "abs(strike - btc_price)",
+    "source_columns": [
+      "strike",
+      "btc_price"
+    ],
+    "timestamp_basis": "logged strike and BTC price before event decision resolution"
+  },
+  {
+    "feature_family": "boundary_geometry",
+    "feature_name": "distance_per_sigma_from_prices",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing or zero sigma maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "(strike - btc_price) / sigma_t_dollars",
+    "source_columns": [
+      "strike",
+      "btc_price",
+      "sigma_t_dollars"
+    ],
+    "timestamp_basis": "logged strike, BTC price, and v28 sigma before event decision resolution"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "strike_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if strike missing else 0",
+    "source_columns": [
+      "strike"
+    ],
+    "timestamp_basis": "observed missingness in logged event"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "btc_price_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if btc_price missing else 0",
+    "source_columns": [
+      "btc_price"
+    ],
+    "timestamp_basis": "observed missingness in logged event"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "arrow",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing arrow maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(arrow)",
+    "source_columns": [
+      "arrow"
+    ],
+    "timestamp_basis": "logged v28 boundary arrow before event decision resolution"
+  },
+  {
+    "feature_family": "v28_derived",
+    "feature_name": "arrow_x_d_sigma",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing values map to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "arrow * d_sigma",
+    "source_columns": [
+      "arrow",
+      "d_sigma"
+    ],
+    "timestamp_basis": "logged v28 arrow and distance before event decision resolution"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "btc_age_ms",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing age maps to 0 with companion missing flag",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(btc_age_ms)",
+    "source_columns": [
+      "btc_age_ms"
+    ],
+    "timestamp_basis": "logged feed age before event decision resolution"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "book_age_ms",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing age maps to 0 with companion missing flag",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(book_age_ms)",
+    "source_columns": [
+      "book_age_ms"
+    ],
+    "timestamp_basis": "logged book age before event decision resolution"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "feed_age_ms",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing age maps to 0 with companion missing flag",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "float(feed_age_ms)",
+    "source_columns": [
+      "feed_age_ms"
+    ],
+    "timestamp_basis": "logged feed age before event decision resolution"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "freshness_max_age_ms",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing ages are ignored; all missing maps to 0",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "max(btc_age_ms, book_age_ms, feed_age_ms)",
+    "source_columns": [
+      "btc_age_ms",
+      "book_age_ms",
+      "feed_age_ms"
+    ],
+    "timestamp_basis": "logged BTC/book/feed ages before event decision resolution"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "log1p_freshness_max_age_ms",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing ages are ignored; all missing maps to 0",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "log1p(max_age_ms)",
+    "source_columns": [
+      "btc_age_ms",
+      "book_age_ms",
+      "feed_age_ms"
+    ],
+    "timestamp_basis": "logged BTC/book/feed ages before event decision resolution"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "btc_age_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if btc_age_ms missing else 0",
+    "source_columns": [
+      "btc_age_ms"
+    ],
+    "timestamp_basis": "observed missingness in logged event"
+  },
+  {
+    "feature_family": "missingness",
+    "feature_name": "book_age_missing",
+    "leakage_risk": "low",
+    "missing_value_policy": "missingness indicator",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if book_age_ms missing else 0",
+    "source_columns": [
+      "book_age_ms"
+    ],
+    "timestamp_basis": "observed missingness in logged event"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "freshness_gt_1000ms",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing ages map to 0",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if max_age_ms > 1000 else 0",
+    "source_columns": [
+      "btc_age_ms",
+      "book_age_ms",
+      "feed_age_ms"
+    ],
+    "timestamp_basis": "logged BTC/book/feed ages before event decision resolution"
+  },
+  {
+    "feature_family": "book_aware_execution",
+    "feature_name": "book_implied_yes_from_side_ask",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing ask maps to 0.5",
+    "model_track_allowed": [
+      "book_aware"
+    ],
+    "normalization_or_transform": "YES ask / 100 for YES side, 1 - NO ask / 100 for NO side",
+    "source_columns": [
+      "ask_cents",
+      "side"
+    ],
+    "timestamp_basis": "logged side ask before event decision resolution"
+  },
+  {
+    "feature_family": "book_aware_execution",
+    "feature_name": "v28_minus_book_implied_yes",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing values map to neutral 0.5",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "v28_p_yes - book_implied_yes_from_side_ask",
+    "source_columns": [
+      "v28_p_yes",
+      "ask_cents",
+      "side"
+    ],
+    "timestamp_basis": "logged v28 probability and side ask before event decision resolution"
+  },
+  {
+    "feature_family": "book_aware_execution",
+    "feature_name": "v28_book_disagreement_abs",
+    "leakage_risk": "medium",
+    "missing_value_policy": "missing values map to neutral 0.5",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "abs(v28_p_yes - book_implied_yes)",
+    "source_columns": [
+      "v28_p_yes",
+      "ask_cents",
+      "side"
+    ],
+    "timestamp_basis": "logged v28 probability and side ask before event decision resolution"
+  },
+  {
+    "feature_family": "source_reliability",
+    "feature_name": "history_bars_log1p",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing history maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "log1p(history_bars)",
+    "source_columns": [
+      "history_bars"
+    ],
+    "timestamp_basis": "logged v28 history count before event decision resolution"
+  },
+  {
+    "feature_family": "path_memory",
+    "feature_name": "prior_logged_event_count",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing count maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "count of prior logged rows for this market",
+    "source_columns": [
+      "prior_logged_event_count"
+    ],
+    "timestamp_basis": "derived only from earlier logged events in the same market"
+  },
+  {
+    "feature_family": "path_memory",
+    "feature_name": "log1p_prior_logged_event_count",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing count maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "log1p(prior_logged_event_count)",
+    "source_columns": [
+      "prior_logged_event_count"
+    ],
+    "timestamp_basis": "derived only from earlier logged events in the same market"
+  },
+  {
+    "feature_family": "short_term_drift",
+    "feature_name": "btc_drift_from_prev_event_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing drift maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "current btc - prior event btc",
+    "source_columns": [
+      "btc_drift_from_prev_event_dollars"
+    ],
+    "timestamp_basis": "current logged BTC minus previous earlier logged BTC in the same market"
+  },
+  {
+    "feature_family": "short_term_drift",
+    "feature_name": "btc_drift_from_first_event_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing drift maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "current btc - first market event btc",
+    "source_columns": [
+      "btc_drift_from_first_event_dollars"
+    ],
+    "timestamp_basis": "current logged BTC minus first earlier logged BTC in the same market"
+  },
+  {
+    "feature_family": "realized_vol_regime",
+    "feature_name": "prior_btc_path_range_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing range maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "prior max btc - prior min btc",
+    "source_columns": [
+      "prior_btc_path_range_dollars"
+    ],
+    "timestamp_basis": "range of earlier logged BTC values in the same market"
+  },
+  {
+    "feature_family": "realized_vol_regime",
+    "feature_name": "prior_btc_path_range_per_sigma",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing or zero sigma maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "prior path range / sigma_t",
+    "source_columns": [
+      "prior_btc_path_range_per_sigma"
+    ],
+    "timestamp_basis": "range of earlier logged BTC values in the same market scaled by current v28 sigma"
+  },
+  {
+    "feature_family": "adverse_path_memory",
+    "feature_name": "prior_adverse_path_memory_dollars",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing adverse memory maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "YES: max(0, strike-prior_min_btc); NO: max(0, prior_max_btc-strike)",
+    "source_columns": [
+      "prior_adverse_path_memory_dollars"
+    ],
+    "timestamp_basis": "prior-only same-market BTC excursion against the row side"
+  },
+  {
+    "feature_family": "adverse_path_memory",
+    "feature_name": "prior_adverse_path_memory_per_sigma",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing or zero sigma maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "prior adverse path memory / sigma_t",
+    "source_columns": [
+      "prior_adverse_path_memory_per_sigma"
+    ],
+    "timestamp_basis": "prior-only same-market BTC excursion against the row side scaled by sigma"
+  },
+  {
+    "feature_family": "recross_hazard",
+    "feature_name": "prior_recross_seen",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "pure_physics",
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if prior min btc <= strike <= prior max btc else 0",
+    "source_columns": [
+      "prior_recross_seen"
+    ],
+    "timestamp_basis": "prior-only same-market BTC range crossing the strike before the row"
+  },
+  {
+    "feature_family": "feed_freshness",
+    "feature_name": "btc_event_dt_seconds",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing elapsed time maps to 0",
+    "model_track_allowed": [
+      "book_aware",
+      "reliability"
+    ],
+    "normalization_or_transform": "decision_ts - previous same-market event ts",
+    "source_columns": [
+      "btc_event_dt_seconds"
+    ],
+    "timestamp_basis": "elapsed seconds since previous earlier logged event in the same market"
+  },
+  {
+    "feature_family": "source_reliability",
+    "feature_name": "source_is_logged_approved",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if source_type == mushroom_v28_approved else 0",
+    "source_columns": [
+      "source_type"
+    ],
+    "timestamp_basis": "logged event type"
+  },
+  {
+    "feature_family": "source_reliability",
+    "feature_name": "source_is_signal_seen",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if source_type == signal_seen else 0",
+    "source_columns": [
+      "source_type"
+    ],
+    "timestamp_basis": "logged event type"
+  },
+  {
+    "feature_family": "source_reliability",
+    "feature_name": "source_is_plan_built",
+    "leakage_risk": "low",
+    "missing_value_policy": "missing maps to 0",
+    "model_track_allowed": [
+      "reliability"
+    ],
+    "normalization_or_transform": "1 if source_type == plan_built else 0",
+    "source_columns": [
+      "source_type"
+    ],
+    "timestamp_basis": "logged event type"
+  }
+]
