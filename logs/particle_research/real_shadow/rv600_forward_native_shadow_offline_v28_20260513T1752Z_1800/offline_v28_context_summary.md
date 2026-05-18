@@ -1,0 +1,21 @@
+# RV600 Native Offline V28 Context Replay
+
+- generated_utc: 2026-05-13T18:02:36+00:00
+- research_only: True
+- contexts_written: 388
+- issue_count: 2
+- distinct_markets: 1
+- checkpoint_rows_read: 390
+- spot_ticks_read: 3570
+- warmup_candle_rows: 240
+- warmup_end_utc: 2026-05-13T17:53:00+00:00
+- first_context_ts_utc: 2026-05-13T17:53:06.283929+00:00
+- last_context_ts_utc: 2026-05-13T17:59:59.709309+00:00
+- min_current_calibrated_p_yes: 0.5234967960072602
+- max_current_calibrated_p_yes: 0.99999999
+- output: `logs\particle_research\real_shadow\rv600_forward_native_shadow_offline_v28_20260513T1752Z_1800\offline_v28_contexts.ndjson`
+- issues: `logs\particle_research\real_shadow\rv600_forward_native_shadow_offline_v28_20260513T1752Z_1800\offline_v28_context_issues.ndjson`
+
+## Modeling Choice
+
+Causal offline v28 event replay from public Coinbase candles and native independent spot ticks; no live bot state, orders, or restarts.

@@ -1,0 +1,62 @@
+Search arXiv and related working-paper sources for implementable research that can help a Kalshi BTC 15-minute probability-value bot. This is not a generic trading bot: it prices P(BTC settles above/below a fixed strike at the 15m market close), compares fair probability to Kalshi ask/fees, and must pass strict forward-shadow validation before any live promotion.
+
+Recent local diagnostics from the project:
+
+- 632 matched live v28 filled trades; 630 finalized labels.
+- Current v28 side probability is overconfident: Brier about 0.1814 and log loss about 0.5753.
+- A simple Brownian terminal probability using current BTC price, strike, and horizon sigma did better on the same labels: Brier about 0.1712 and log loss about 0.5274.
+- A rough jump-adjusted terminal probability looked better still, but only covered 80 rows because the available BTC 1m cache did not cover the full v28 window. Treat this as weak evidence, not proof.
+- The best replay candidate so far is a hybrid FPT/fillability gate:
+  edge >= 3c, depth_ratio >= 8, book_age <= 750ms, ask <= 85c, seconds_to_close >= 120, 0.80 <= abs_d_sigma <= 1.10.
+  It passes local CPCV-style checks but still lacks forward anytime-valid edge proof.
+- Entry submit logs include 999 IOC-style entry attempts: 569 filled any, 430 zero-filled.
+- Fill rate rises monotonically with displayed depth ratio:
+  depth_ratio <1 -> about 33% fill-any,
+  1-3 -> about 40%,
+  3-8 -> about 49%,
+  8-20 -> about 52%,
+  >=20 -> about 63%.
+- A simple queue-reactive fill proxy only reached Spearman rho about 0.20 against fill-any, so we need better sparse-book/IOC fill models.
+- Empirical Kalshi depth decay did not match the Polymarket/Dubach-style 0.55 slope in this sample: cross-sectional log(depth) vs log(seconds-to-close) slope about 0.095, within-market median slope about -0.226, only about 6% of market slopes in 0.55 +/- 0.20.
+
+Please search for papers in these precise areas:
+
+1. Short-horizon terminal probability calibration for crypto or high-volatility assets:
+   - Brownian terminal probability vs learned probability models.
+   - Brownian bridge, local volatility, stochastic volatility, jump diffusion, realized-volatility scaling, and short-horizon distribution calibration.
+   - Methods that correct overconfident model probabilities without destroying ranking.
+   - Online or prequential calibration for binary event probabilities under nonstationarity.
+
+2. Sparse limit-order-book and IOC fill probability:
+   - Fill probability for immediate-or-cancel or marketable limit orders under sparse displayed depth.
+   - Queue-reactive models when queue position is not observed.
+   - Hidden liquidity, cancellation, stale-book risk, and execution probability in thin prediction-market books.
+   - Practical features beyond displayed depth ratio: book age, depth slope, order age, recent cancels, top-of-book churn, adverse selection, time-to-close.
+
+3. Prediction-market microstructure near expiry:
+   - Whether depth decay laws differ between centralized regulated binary markets and crypto/decentralized prediction markets.
+   - Empirical models of depth/liquidity evaporation near resolution.
+   - When public order-book depth is a bad proxy for executable liquidity.
+
+4. Anytime-valid validation:
+   - E-processes or test martingales for small financial edge detection.
+   - Online model selection among probability estimators with nonstationary binary outcomes.
+   - Selective conformal risk control for trade/no-trade gates, especially when coverage is sparse.
+
+For each useful paper, return:
+
+- Citation, year, and link.
+- The exact idea that maps to this Kalshi BTC 15m problem.
+- A concrete experiment using existing columns if possible:
+  p28, p22, probability_gap, BTC price, strike, sigma_t, d_sigma, seconds_to_close, ask, edge, depth_ratio, eligible_depth, depth_required, book_age_ms, fill_count, target_count, realized PnL, settlement side.
+- Additional columns we should log if the experiment cannot be done cleanly now.
+- Promotion gate with numeric pass/fail thresholds.
+- Failure modes and how it could overfit this project.
+
+Prioritize papers that can improve one of these decisions:
+
+- Replace or shrink v28 probability with a better terminal-probability calibrator.
+- Decide when the Brownian/jump terminal probability should override or veto v28.
+- Predict IOC fill probability better than depth_ratio alone.
+- Decide whether the robust hybrid FPT/fillability gate is real enough for forward shadowing.
+- Build an anytime-valid monitor that tells us when a frozen candidate has enough evidence or should be reset.

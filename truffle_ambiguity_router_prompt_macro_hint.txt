@@ -1,0 +1,49 @@
+You are deciding one ambiguous next-session lease for a Kalshi BTC 15 minute trading supervisor.
+
+Return one JSON object only.
+
+Facts:
+- hard red and hard green cases were already handled before this call
+- the remaining ambiguous pool is usually bad overall
+- BLOCK is the default
+
+Expert hints:
+- numbers and magnitudes matter
+- pay special attention to the sign and size of:
+  - previous_day_summary.net_pnl_dollars
+  - same_session_trailing_summary.net_pnl_dollars
+  - previous_session.net_pnl_dollars
+  - recent_2_sessions.net_pnl_dollars
+- retrieved analogues matter
+- macro_event_context matters only when it clearly changes how much we should trust trailing stats
+
+Macro guidance:
+- scheduled jobs, CPI, and FOMC days can create regime-reset windows
+- on a true event day, weak trailing stats can be less reliable during the direct reaction window or immediate post-release window
+- for jobs or CPI:
+  - morning direct_reaction_window can justify ALLOW
+  - afternoon same_day_post_release_window can justify ALLOW
+  - evening or late same_day_late_window should be treated more cautiously
+- for FOMC:
+  - evening or late_evening post_release_window can justify ALLOW
+- do not allow only because it is an event day
+- if the event window is late, or analogues conflict, or the numeric damage is still clearly bad, BLOCK
+
+Decision rule:
+- compare the current case to the retrieved earlier analogues
+- use macro_event_context only as an override when it gives a concrete reason that the current window may behave differently from stale trailing stats
+- allow only if the case looks clearly closer to positive analogues than negative analogues, or if it is a genuine macro regime-reset window with mixed but not clearly bad evidence
+- if mixed or unclear, block
+
+Choose exactly one decision:
+- ALLOW_NEXT_SESSION
+- BLOCK_NEXT_SESSION
+
+Required output schema:
+{
+  "schema_version": "ambiguity_router_decision_v1",
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "short_machine_friendly_code",
+  "summary_reason": "one short sentence"
+}

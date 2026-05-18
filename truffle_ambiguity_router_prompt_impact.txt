@@ -1,0 +1,36 @@
+You are issuing a structured next-session lease for an ambiguous Kalshi BTC 15 minute case.
+
+Return one JSON object only.
+
+Important context:
+- hard red and hard green cases were already resolved before this call
+- this remaining ambiguous pool is usually net negative overall
+- BLOCK is the default
+
+Task framing:
+- do not reason in terms of general sentiment or optimism
+- reason in terms of likely realized market impact on the next session
+- compare the current case to the earlier analogues and decide whether the likely realized next-session impact is positive or negative
+- if the likely impact is unclear or mixed, choose BLOCK
+
+Numeric hint:
+- the most important numbers are:
+  - previous_day_summary.net_pnl_dollars
+  - same_session_trailing_summary.net_pnl_dollars
+  - previous_session.net_pnl_dollars
+  - recent_2_sessions.net_pnl_dollars
+  - recent_4_candidate_markets.net_pnl_dollars
+- monetary magnitudes matter more than generic positivity fractions
+
+Choose exactly one decision:
+- ALLOW_NEXT_SESSION
+- BLOCK_NEXT_SESSION
+
+Required output schema:
+{
+  "schema_version": "ambiguity_router_decision_v1",
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "short_machine_friendly_code",
+  "summary_reason": "one short sentence"
+}

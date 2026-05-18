@@ -1,0 +1,37 @@
+I am working on a Kalshi BTC 15-minute binary prediction-market trading bot. The bot currently uses a fair-value probability engine for P(BTC settlement > strike) and then places small IOC limit orders when the model's probability edge is large enough. I need arXiv research that can help turn recent retrospective candidate filters into robust, forward-validatable strategy components.
+
+Current local findings from recorded live v28 trades:
+
+- Baseline live v28 replay: 632 entries, +$13.61 net, W/L 285/336 plus 11 flat.
+- Brownian/FPT sanity gate: keep entries when v28 edge >= 3c, seconds_to_close >= 120, and 0.70 <= abs_d_sigma <= 1.10. Same-window replay +$27.37, but train-only dynamic walk-forward was mixed, so it may be a replay peak.
+- Depth-decay/fillability gate: require depth/required >= 3, book_age <= 750ms, ask <= 80c, seconds_to_close >= 600. Same-window replay +$21.42 and parameter neighborhood was stable, but walk-forward margin was thin.
+- Hybrid FPT + fillability gate: require edge >= 3c, depth/required >= 8, book_age <= 750ms, ask <= 83c to 85c, seconds_to_close >= 120, and abs_d_sigma <= 1.10 with lower bound around 0.7 to 0.85. Same-window replay around +$15.85 to +$26.13 depending on variant. This was the best dynamic train-only walk-forward family: 6/6 positive multi-schedule runs and 6/6 beat-live runs.
+- Consensus/conformal proxy using v22-v28 probability disagreement improves hit rate, but low coverage and weak walk-forward make it more likely to be a risk supervisor than a standalone strategy.
+
+Please search arXiv for papers that help with this specific question:
+
+How can a short-horizon binary prediction-market bot robustly select and validate online gates that combine:
+1. first-passage or terminal-distribution probability sanity checks,
+2. limit-order-book fillability and liquidity-decay features,
+3. calibrated uncertainty or model disagreement,
+4. strict walk-forward or prequential validation under nonstationary drift,
+without overfitting parameter thresholds to a short retrospective live sample?
+
+Prioritize papers on:
+
+- Online conformal prediction, adaptive conformal inference, conformal risk control, and martingale/e-process monitoring for time-series or non-exchangeable data.
+- Walk-forward validation, purged cross-validation, prequential testing, sequential model selection, multiple-testing correction, and false-discovery control for trading strategies.
+- Limit order book fill probability, queue-reactive models, state-dependent order flow, liquidity decay near event resolution, adverse selection, and IOC/passive fill modeling.
+- First-passage-time models, Brownian bridge or jump-diffusion barrier probabilities, and ways to use these as robust sanity bounds rather than overfit directional signals.
+- Parameter stability regions, robust optimization, distributionally robust decision rules, and online threshold adaptation under regime drift.
+
+For each useful paper, return:
+
+1. Citation, arXiv id, year, and direct link.
+2. The exact concept that maps to this bot.
+3. A concrete experiment we can run on our recorded live v28 trade/event log.
+4. What feature columns or labels we would need to record if we do not have enough data now.
+5. A promotion gate: what evidence would prove the idea is not just retrospective overfit?
+6. Failure modes specific to BTC 15-minute Kalshi markets.
+
+Please be skeptical. I do not want generic ML papers unless they tell me how to avoid fooling myself with small, nonstationary, overlapping live-trade samples. I especially want implementation-level ideas for choosing a stable hybrid FPT plus fillability gate online, and for deciding when the Brownian/FPT gate is a real effect versus a parameter peak.

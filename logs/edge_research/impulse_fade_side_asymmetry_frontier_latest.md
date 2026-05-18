@@ -1,0 +1,55 @@
+# Impulse Fade Side-Asymmetry Frontier
+
+Generated UTC: `20260504_105148Z`
+
+## Scope
+
+- Research-only scan; no orders are submitted and no bot files or live processes are touched.
+- Tests whether the impulse fade branch should be side-restricted or require a real trigger-margin cushion.
+- Strict pass requires current+v21 coverage, positive validation/holdout, positive all splits, and block stability.
+
+## Diagnostics
+
+- Current markets: 307
+- V21 markets: 221
+- Candidate specs: 51
+- Strict pass rows: 0
+
+## Top Rows
+
+| policy | strict | combined all net | combined OOS net | min split cov | current/v21 net | current/v21 acc | fades current/v21 | min block+ | worst block |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2265.0c | 1659.0c | 97.78% | 1524.0c/741.0c | 69.84%/67.58% | 31/36 | 0.667 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=90; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2131.0c | 1530.0c | 97.78% | 1554.0c/577.0c | 69.18%/65.75% | 35/40 | 0.667 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=80; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2044.0c | 1530.0c | 97.78% | 1391.0c/653.0c | 68.85%/66.67% | 34/38 | 0.600 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2414.0c | 1491.0c | 97.78% | 1312.0c/1102.0c | 70.49%/71.23% | 17/22 | 0.667 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2474.0c | 1483.0c | 97.78% | 1445.0c/1029.0c | 70.49%/70.78% | 21/23 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=70; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2298.0c | 1410.0c | 97.78% | 1312.0c/986.0c | 70.49%/71.69% | 17/17 | 0.667 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=70; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2217.0c | 1402.0c | 97.78% | 1304.0c/913.0c | 70.16%/71.23% | 20/18 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=90; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2319.0c | 1362.0c | 97.78% | 1342.0c/977.0c | 69.84%/69.86% | 21/25 | 0.636 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=100; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2319.0c | 1362.0c | 97.78% | 1342.0c/977.0c | 69.84%/69.86% | 21/25 | 0.636 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=80; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2193.0c | 1362.0c | 97.78% | 1179.0c/1014.0c | 69.51%/70.32% | 20/24 | 0.667 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=90; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2379.0c | 1354.0c | 97.78% | 1475.0c/904.0c | 69.84%/69.41% | 25/26 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=100; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2379.0c | 1354.0c | 97.78% | 1475.0c/904.0c | 69.84%/69.41% | 25/26 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=80; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2253.0c | 1354.0c | 97.78% | 1312.0c/941.0c | 69.51%/69.86% | 24/25 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=100; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2041.0c | 1237.0c | 97.78% | 1537.0c/504.0c | 68.20%/65.30% | 44/41 | 0.600 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2286.0c | 1230.0c | 97.78% | 1028.0c/1258.0c | 70.16%/72.15% | 10/20 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=70; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2170.0c | 1149.0c | 97.78% | 1028.0c/1142.0c | 70.16%/72.60% | 10/15 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1841.0c | 1148.0c | 97.78% | 865.0c/976.0c | 68.52%/68.95% | 21/33 | 0.533 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=90; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2236.0c | 1101.0c | 97.78% | 1103.0c/1133.0c | 69.84%/70.78% | 13/23 | 0.600 | -334.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=100; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2236.0c | 1101.0c | 97.78% | 1103.0c/1133.0c | 69.84%/70.78% | 13/23 | 0.600 | -334.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=80; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 2110.0c | 1101.0c | 97.78% | 940.0c/1170.0c | 69.51%/71.23% | 12/22 | 0.600 | -334.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=no; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=70; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1255.0c | 1078.0c | 97.78% | 1277.0c/-22.0c | 70.82%/67.58% | 12/12 | 0.545 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=50; trigger_ask<=70; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1793.0c | 1034.0c | 97.78% | 1067.0c/726.0c | 70.82%/71.69% | 4/7 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=no; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1227.0c | 1021.0c | 97.78% | 1163.0c/64.0c | 70.16%/67.58% | 14/14 | 0.545 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=no; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=80; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1227.0c | 1021.0c | 97.78% | 1163.0c/64.0c | 70.16%/67.58% | 14/14 | 0.545 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=no; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=90; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1188.0c | 1021.0c | 97.78% | 1163.0c/25.0c | 70.16%/67.12% | 14/15 | 0.545 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=no; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=10; trigger_ask<=100; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1188.0c | 1021.0c | 97.78% | 1163.0c/25.0c | 70.16%/67.12% | 14/15 | 0.545 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=90; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1752.0c | 1019.0c | 97.78% | 940.0c/812.0c | 68.20%/67.12% | 24/37 | 0.600 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=any; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=25; trigger_ask<=80; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1665.0c | 1019.0c | 97.78% | 777.0c/888.0c | 67.87%/68.04% | 23/35 | 0.533 | -411.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=yes; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=50; trigger_ask<=76; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1625.0c | 974.0c | 97.78% | 1067.0c/558.0c | 70.82%/70.32% | 4/10 | 0.600 | -332.0c |
+| `base=choose=book_p_side; book_p_side>=0.6; ask<=95; sec_to_close>=120; margin_rv15>=0; fade_trigger_side=none; impulse_3_5m>=60; impulse_3_5m-margin>=20; trigger_abs_margin>=0; trigger_ask<=100; sec>=600; trigger_score<=0.82; fade_ask<=45` | False | 1376.0c | 853.0c | 97.78% | 951.0c/425.0c | 70.82%/71.23% | 0/0 | 0.600 | -332.0c |
+
+## Read
+
+- No side-asymmetry fade variant clears the strict gate. Do not forward-lock a replacement from this scan.

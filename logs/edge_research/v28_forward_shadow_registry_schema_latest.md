@@ -1,0 +1,32 @@
+# v28 Forward Shadow Registry Schema
+
+Research-only schema for the next forward-shadow registry. This file is not wired into live trading.
+
+| column | description |
+|---|---|
+| decision_ts_utc | Decision timestamp for every shadow candidate, not just filled trades. |
+| market | Kalshi ticker. |
+| side | yes/no side considered. |
+| shadow_candidate | Frozen candidate id, e.g. hybrid_fpt_depth_robust_rank1. |
+| shadow_accept | Whether candidate would trade. |
+| p28_raw | Raw v28 side probability. |
+| p_brownian_terminal | Terminal Brownian side probability. |
+| p_calibrated | Chosen calibrated/shrunk side probability. |
+| calibrator_id | Frozen calibrator version/window. |
+| aci_q | ACI threshold before outcome. |
+| aci_bias | Online bias before outcome. |
+| edge_cents | Fee/slippage-adjusted model edge. |
+| ask_cents | Executable ask/limit. |
+| depth_ratio | eligible_depth / required_depth. |
+| eligible_depth | Displayed executable depth. |
+| depth_required | Required contracts. |
+| book_age_ms | Order book age. |
+| seconds_to_close | Seconds to market close at decision. |
+| abs_d_sigma | Normalized distance proxy. |
+| fill_probability | Forward fill model estimate. |
+| e_process_value_pre | Anytime monitor value before decision. |
+| fill_count | Observed IOC fill count when sent or simulated as blank. |
+| target_count | Intended count. |
+| settlement_side | Finalized yes/no label. |
+| realized_pnl_cents | Resolved PnL for accepted shadow decision. |
+| post_fill_return_5m | Signed BTC move after fill where available. |

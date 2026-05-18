@@ -1,0 +1,17 @@
+You are deciding one ambiguous next-session lease.
+
+Return one JSON object only.
+
+Rules:
+- if signal_direction is negative and signal_strength is strong or moderate, choose BLOCK_NEXT_SESSION
+- if signal_direction is positive and signal_strength is strong or moderate and late_window_positive_guard is pass or n_a, choose ALLOW_NEXT_SESSION
+- if signal_direction is positive and late_window_positive_guard is fail, choose BLOCK_NEXT_SESSION
+- if signal_direction is mixed or weak, block unless macro_tiebreak_allowed is true and the macro window is favorable
+
+Output schema:
+{
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "ALLOW_SIGNAL or ALLOW_MACRO_TIEBREAK or BLOCK_SIGNAL or BLOCK_GUARD or BLOCK_DEFAULT",
+  "summary_reason": "very short phrase"
+}

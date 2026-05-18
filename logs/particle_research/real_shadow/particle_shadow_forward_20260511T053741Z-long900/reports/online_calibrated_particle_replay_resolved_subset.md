@@ -1,0 +1,29 @@
+# Online Calibrated Particle Replay Report
+
+- candidate_count: 333
+- source_candidate_count: 753
+- skipped_unlabeled_count: 420
+- denominator_scope: resolved_labeled_subset
+- selected_count: 333
+- all_candidate_denominator: True
+- coverage_rate: 0.066066
+- final_q: 0.134000
+- total_counterfactual_pnl_cents: -1487.0000
+- avg_selected_pnl_cents: -4.4655
+- online_brier: 0.072604
+- raw_particle_brier: 0.072604
+- brownian_brier: 0.072488
+- market_brier: 0.003769
+- current_calibrated_brier: 0.019211
+- online_log_loss: 0.304416
+- raw_particle_log_loss: 0.304416
+- brownian_log_loss: 0.304308
+- market_log_loss: 0.044018
+- current_calibrated_log_loss: 0.134249
+- online_beats_raw_particle: False
+- online_beats_brownian: False
+- online_beats_market: False
+- online_beats_current_calibrated: False
+- ev_rank_correlation_sign: -0.310591
+- top_ev_bucket_pnl_cents: -4.5595
+- shadow_counterfactual_positive: False

@@ -1,0 +1,30 @@
+# Sanitized GitHub export ignore rules.
+#
+# This export intentionally includes research logs, stats, research_data,
+# trial_archives, state snapshots, zip handoffs, and generated artifacts.
+# Keep only secret material and local runtime/cache junk ignored.
+
+venv/
+.venv/
+env/
+node_modules/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+*.pyc
+*.pyo
+*.pyd
+
+.env
+.env.*
+.streamlit/secrets.toml
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.p8
+
+restored_raw/

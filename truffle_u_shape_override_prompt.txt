@@ -1,0 +1,28 @@
+You are deciding whether to temporarily override the stop loss for one open Kalshi BTC 15 minute position entered near 90.
+
+Return one JSON object only.
+
+Objective:
+- avoid premature stop-outs on markets that are likely to recover in a U-shape
+- do not convert true losers into unnecessary full losses
+- be conservative
+
+Decision meanings:
+- HOLD_OVERRIDE: temporarily allow the position to continue past the normal stop
+- KEEP_STOP: do not override the stop
+
+Practical guidance:
+- current_same_bid_120s matters most
+- low_same_bid_120s matters next
+- rebound_from_low_to_current_120s matters next
+- if the position is still badly damaged after 120 seconds, KEEP_STOP
+- if the market has clearly rebounded off the low and the current bid is still relatively strong, HOLD_OVERRIDE
+- if mixed or unclear, KEEP_STOP
+
+Required output schema:
+{
+  "decision": "HOLD_OVERRIDE or KEEP_STOP",
+  "confidence": 0.0,
+  "rationale_code": "short_machine_code",
+  "summary_reason": "very short phrase"
+}

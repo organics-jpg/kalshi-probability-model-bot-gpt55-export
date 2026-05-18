@@ -1,0 +1,49 @@
+Search arXiv and related papers for implementable methods to turn an online calibrated terminal probability into a robust trading decision for a Kalshi BTC 15m probability-value bot.
+
+Project context:
+- We price P(BTC settles above/below a strike at 15m close), compare fair value to Kalshi ask/fees, and must pass forward-shadow validation before live promotion.
+- Current local v28 scorer snapshot has 470 matched filled trades and 469 settlement labels.
+- Raw v28 probability is overconfident and weakly ranked: all-row Brier about 0.1765636018942985, log loss about 0.5626490134692773, AUC about 0.4966966966966967.
+- Brownian terminal probability is better: Brier about 0.16592583513020145, log loss about 0.513721948680271, AUC about 0.5767676767676768.
+- A locked capped-ACI calibrator selected only on rows 1-200 is now promising:
+  calibrator_id=capped_aci_brownian_terminal_p_side_eta0.20_cap0.90,
+  source=Brownian terminal probability,
+  eta=0.2,
+  cap=0.9,
+  max_bias=0.25,
+  target coverage=0.9.
+- This calibrator achieved all-row Brier about 0.16422649376615975, log loss about 0.5113244516148143, and coverage about 0.8976545842217484 in retrospective prequential replay.
+- The robust hybrid baseline replay is 158 entries, net 16.82 dollars, avg 10.645569620253164 cents per entry.
+- A train-locked calibrated gate selected on rows 1-200 produced forward-after-200 replay of 209 entries, net 5.83 dollars, avg 2.789473684210526 cents per entry. This is still retrospective and must be forward-shadowed.
+- The most interesting practical overlay was robust_hybrid + p_calibrated >= 0.80: forward-after-200 replay of 52 entries, net 10.67 dollars, avg 20.51923076923077 cents per entry, win rate 0.6274509803921569.
+
+What I need from the literature:
+1. Online probability calibration for binary time series where the base model ranking is weak:
+   - capped/bounded ACI,
+   - calibration with probability clipping,
+   - beta calibration / temperature scaling / logistic recalibration,
+   - calibration that preserves ranking vs calibration that intentionally shrinks to base rates.
+2. Decision rules that turn calibrated probabilities into trade/no-trade gates:
+   - conformal selective classification,
+   - reject-option classification,
+   - risk-controlling prediction sets,
+   - Kelly/fractional Kelly with imprecise probability intervals,
+   - cost-sensitive calibration for asymmetric payoff/fees.
+3. Validation methods specifically for small nonstationary binary trading samples:
+   - prequential scoring,
+   - locked train/validation/OOS protocols,
+   - e-processes for calibrated edge,
+   - avoiding selection bias when choosing calibration hyperparameters.
+
+For each paper, return:
+- citation, year, link;
+- exact mapping to this Kalshi BTC 15m problem;
+- a concrete experiment using these existing columns: p28, Brownian terminal p, p_calibrated, ACI bias/q, settlement side, ask, fee, edge, depth_ratio, book_age_ms, seconds_to_close, abs_d_sigma, realized PnL;
+- promotion gates with numeric thresholds;
+- failure modes and how this could overfit the 470-row retrospective log.
+
+Prioritize methods that can answer:
+- Should p_calibrated replace p28 for fair value?
+- Should p_calibrated be only a risk monitor?
+- How should we size/skip trades when calibrated probability improves Brier/log loss but hard edge gates reduce replay PnL?
+- What forward-shadow sample size is needed before live use?

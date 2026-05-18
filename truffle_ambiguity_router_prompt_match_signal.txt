@@ -1,0 +1,32 @@
+You are deciding one ambiguous next-session lease for a Kalshi BTC 15 minute trading supervisor.
+
+Return one JSON object only.
+BLOCK is the default.
+
+Primary field:
+- same_label_match_signal
+
+Interpretation:
+- if same_label_match_signal.available is true and preferred_label is positive with moderate or strong preference_strength, you must choose ALLOW_NEXT_SESSION
+- if same_label_match_signal.available is true and preferred_label is negative with moderate or strong preference_strength, you must choose BLOCK_NEXT_SESSION
+- do not override a strong or moderate same_label_match_signal with other numeric fields
+- if preferred_label is mixed or the strength is weak, use macro_event_context only as a small tie-breaker
+- jobs or CPI direct_reaction_window and same_day_post_release_window can support ALLOW in a close call
+- jobs or CPI same_day_late_window should stay conservative
+- FOMC post_release_window can support ALLOW in a close call
+- if still mixed or unclear, BLOCK_NEXT_SESSION
+
+Use exactly one rationale_code:
+- ALLOW_MATCH_SIGNAL
+- ALLOW_MACRO_TIEBREAK
+- BLOCK_MATCH_SIGNAL
+- BLOCK_LATE_EVENT
+- BLOCK_DEFAULT
+
+Required output schema:
+{
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "one allowed code",
+  "summary_reason": "very short phrase"
+}

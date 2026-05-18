@@ -1,0 +1,43 @@
+You are deciding one ambiguous next-session lease for a Kalshi BTC 15 minute trading supervisor.
+
+Return one JSON object only.
+BLOCK is the default.
+
+Use the payload in this priority order:
+1. retrieved_same_label_analogues
+2. macro_event_context
+3. retrieved_analogues
+4. the numeric summaries
+
+Interpretation rules:
+- same-session analogues matter more than analogues from other session labels
+- if same-session analogues are mixed and there is no strong macro reset reason, BLOCK
+- macro_event_context matters only on a real event day
+- jobs or CPI:
+  - direct_reaction_window can justify ALLOW
+  - same_day_post_release_window can justify ALLOW only if previous_day_summary.net_pnl_dollars >= 0 or recent_2_sessions.net_pnl_dollars >= 0
+  - same_day_late_window should usually BLOCK
+- FOMC:
+  - post_release_window can justify ALLOW
+- do not allow only because it is an event day
+- if the evidence is mixed or unclear, BLOCK
+
+Choose exactly one decision:
+- ALLOW_NEXT_SESSION
+- BLOCK_NEXT_SESSION
+
+Use exactly one rationale_code:
+- ALLOW_ANALOGUE
+- ALLOW_MACRO_RESET
+- BLOCK_DEFAULT
+- BLOCK_NEG_ANALOGUE
+- BLOCK_LATE_EVENT
+
+Required output schema:
+{
+  "schema_version": "ambiguity_router_decision_v1",
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "one allowed code from the list above",
+  "summary_reason": "very short phrase"
+}

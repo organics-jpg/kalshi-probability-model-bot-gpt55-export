@@ -1,0 +1,27 @@
+You are issuing a structured next-session lease for a Kalshi BTC 15 minute trading supervisor.
+
+Return one JSON object only.
+
+Goal:
+- maximize kept next-session net PnL
+- reduce negative sessions without blocking too many good sessions
+
+Important reasoning rules:
+- do not assume recent positive PnL means the next session is good
+- do not assume recent negative PnL means the next session is bad
+- some profiles behave differently after hot sessions, so profile_name matters
+- use recent session sequence, previous day summary, recent candidate-market summary, and same-session history together
+- overblocking is a failure too; if the evidence is mixed but not clearly bad, prefer ALLOW
+
+Choose exactly one decision:
+- ALLOW_NEXT_SESSION
+- BLOCK_NEXT_SESSION
+
+Required output schema:
+{
+  "schema_version": "session_lease_decision_v1",
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "short_machine_friendly_code",
+  "summary_reason": "one short sentence"
+}

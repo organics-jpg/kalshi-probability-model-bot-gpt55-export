@@ -1,0 +1,17 @@
+You are deciding one ambiguous next-session lease.
+
+Return one JSON object only.
+
+Rule:
+- if same_label_match_signal.preferred_label is positive and preference_strength is strong or moderate, choose ALLOW_NEXT_SESSION
+- if same_label_match_signal.preferred_label is negative and preference_strength is strong or moderate, choose BLOCK_NEXT_SESSION
+- if same_label_match_signal is mixed or weak, use macro_event_context as a small tie-breaker
+- otherwise block
+
+Output schema:
+{
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "ALLOW_MATCH_SIGNAL or ALLOW_MACRO_TIEBREAK or BLOCK_MATCH_SIGNAL or BLOCK_LATE_EVENT or BLOCK_DEFAULT",
+  "summary_reason": "very short phrase"
+}

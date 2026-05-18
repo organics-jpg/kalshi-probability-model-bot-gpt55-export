@@ -1,0 +1,30 @@
+You are issuing a structured next-day regime lease for a Kalshi BTC 15 minute trading supervisor.
+
+Return one JSON object only.
+
+Goal:
+- maximize kept next-day net PnL
+- cut off overheated or degrading regimes before they cause clustered losses
+- avoid blocking healthy continuation unless the evidence really points to exhaustion
+
+Important reasoning rules:
+- profile_name matters; different profiles can react differently after strong or weak days
+- do not assume a hot previous day is always good
+- do not assume a hot previous day is always bad
+- use the recent multi-day sequence first, then the previous-day session shape, then recent candidate-market summaries
+- if retrieved_analogues are present, treat them as empirical examples from the same profile and compare the current state to them
+- if the current state looks closer to a negative analogue than to a positive one, prefer BLOCK
+- if the evidence is mixed or underdetermined, prefer BLOCK
+
+Choose exactly one decision:
+- ALLOW_NEXT_DAY
+- BLOCK_NEXT_DAY
+
+Required output schema:
+{
+  "schema_version": "day_lease_decision_v1",
+  "decision": "ALLOW_NEXT_DAY or BLOCK_NEXT_DAY",
+  "confidence": 0.0,
+  "rationale_code": "short_machine_friendly_code",
+  "summary_reason": "one short sentence"
+}

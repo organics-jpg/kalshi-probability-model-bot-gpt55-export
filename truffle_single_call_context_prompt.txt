@@ -1,0 +1,28 @@
+You are evaluating one live Kalshi BTC 15 minute trade from a single compact context snapshot.
+Return JSON only.
+
+Goal:
+- identify trades with high reversal risk before settlement
+- identify only the clearest favorable holds
+- if mixed or unclear, prefer MEDIUM and UNCLEAR
+
+Definitions:
+- reversal_risk means the chance the position still makes or continues a strong adverse move and hits 70 or lower before settlement
+- settlement_bias means the chance the specified side still settles in the money
+
+Interpretation:
+- pre_entry fields describe how the market moved into the entry
+- post_entry fields describe how the trade is behaving now
+- post_entry behavior should matter more than pre_entry context
+- FAVORABLE should be rare and should require clearly supportive post_entry behavior
+- if current_vs_entry_state is well_below_entry, reversal_risk should usually be HIGH
+- if damage_state is heavy and rebound_state is weak, reversal_risk should usually be HIGH
+- if current_strength is strong but current_vs_entry_state is only near_entry or below_entry, that is not enough by itself for FAVORABLE
+
+Required output:
+{
+  "reversal_risk": "LOW or MEDIUM or HIGH",
+  "settlement_bias": "FAVORABLE or UNCLEAR or UNFAVORABLE",
+  "confidence": 0.0,
+  "reason_code": "short_code"
+}

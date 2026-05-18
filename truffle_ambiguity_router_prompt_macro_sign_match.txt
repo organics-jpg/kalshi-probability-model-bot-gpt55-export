@@ -1,0 +1,41 @@
+You are deciding one ambiguous next-session lease for a Kalshi BTC 15 minute trading supervisor.
+
+Return one JSON object only.
+BLOCK is the default.
+
+Primary comparison rule:
+- use retrieved_same_label_analogues first
+- if the same-label analogues split between one positive and one negative example, compare the current case to both using:
+  - previous_day_summary.net_pnl_dollars
+  - recent_2_sessions.net_pnl_dollars
+- prefer the analogue with the closer sign pattern and smaller magnitude gap on those two fields
+
+Macro rule:
+- macro_event_context can break a close tie only on a real event day
+- jobs or CPI:
+  - direct_reaction_window can justify ALLOW
+  - same_day_post_release_window can justify ALLOW
+  - same_day_late_window should still be conservative
+- FOMC:
+  - post_release_window can justify ALLOW
+
+Decision rule:
+- if the positive same-label analogue is clearly closer, ALLOW_NEXT_SESSION
+- if the negative same-label analogue is clearly closer, BLOCK_NEXT_SESSION
+- if still mixed, use macro_event_context as a small tie-breaker only
+- if still mixed or unclear, BLOCK_NEXT_SESSION
+
+Choose exactly one rationale_code:
+- ALLOW_ANALOGUE
+- ALLOW_MACRO_RESET
+- BLOCK_DEFAULT
+- BLOCK_NEG_ANALOGUE
+- BLOCK_LATE_EVENT
+
+Required output schema:
+{
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "one allowed code",
+  "summary_reason": "very short phrase"
+}

@@ -1,0 +1,53 @@
+Search arXiv and related research for methods that convert calibrated probabilities into PnL-aware trade/no-trade thresholds for a small, nonstationary binary prediction-market strategy.
+
+Project context:
+- We trade Kalshi BTC 15m binary markets by estimating P(side settles true), comparing fair value to ask/fees, and gating execution with a robust liquidity/expiry filter.
+- Current local replay snapshot has 470 matched filled v28 trades and 469 settlement labels.
+- A capped-ACI probability overlay on Brownian terminal probability improves calibration and appears useful as a risk filter.
+- Latest rolling walk-forward threshold test:
+  - For each split, train/calibrate on 200 rows, pick the robust overlay threshold from train PnL only, then test the next slice.
+  - Candidate aci_p_calibrated locked threshold 0.70 in all 4 splits.
+  - Aggregate WFA result: 70 test entries, 38/31 W/L plus 1 flat, +$11.46, 16.4c avg/entry, 25.9% coverage, 4/4 positive test windows.
+  - The stricter fixed overlay robust_hybrid + p_calibrated >= 0.80 had 52 forward entries, 32/19 W/L plus 1 flat, +$10.67, 20.5c avg/entry, 19.3% coverage, 62.7% win rate.
+- Beta/temperature calibration on Brownian probability improved pure probability scores:
+  - beta2_brownian forward Brier 0.16055, log loss 0.49944, rank tau about 1.0.
+  - But its robust overlay was lower quality than ACI: about 87-88 forward entries, +$11.12 to +$11.32, 12.8c avg/entry, 53-54% win rate.
+- RCPS-style classification-risk thresholds failed:
+  - No usable alpha=0.20 threshold for any score.
+  - Higher alpha thresholds did not pass forward loss/win/PnL gates.
+  - This suggests classification loss is the wrong objective; a high loss rate can still be profitable because payoff sizes are asymmetric.
+- E-process sanity check remains the promotion brake:
+  - ACI p_cal >= 0.70 WFA-style overlay has forward max capital about 5.98 and all-window max about 11.50, below watch threshold 20 and promotion threshold 100.
+  - ACI p_cal >= 0.80 has forward max capital about 5.44 and all-window max about 9.91.
+
+What I need from the literature:
+1. PnL-aware selective prediction:
+   - conformal/risk-control methods for expected utility, not just classification error;
+   - cost-sensitive selective classification;
+   - reject-option classification with asymmetric payoff;
+   - conformal decision theory or risk-controlling decisions with user-defined loss functions.
+2. Threshold selection under nonstationary financial payoffs:
+   - online threshold adaptation using prequential utility;
+   - validation protocols for small rolling samples;
+   - methods that prevent threshold overfitting when the chosen threshold is repeatedly 0.70 across WFA splits.
+3. E-process design and sample sizing for small positive-edge strategies:
+   - how to choose lambda without tuning on the same data;
+   - expected detection time/power for edges around 10-20 cents per accepted trade;
+   - e-processes for bounded but asymmetric PnL rather than binary wins/losses.
+4. Calibration vs decision separation:
+   - when a smoother beta/temperature calibrator should replace ACI for fair value;
+   - when ACI should remain a risk overlay despite worse Brier/log loss;
+   - how to combine a smooth calibrated probability with an online uncertainty/risk threshold.
+
+For each paper, return:
+- citation, year, link;
+- exact mapping to Kalshi BTC 15m;
+- concrete experiment using columns: p28, Brownian terminal p, p_calibrated, beta2_brownian p, ask, fee, edge, depth_ratio, book_age_ms, seconds_to_close, abs_d_sigma, side_correct, realized PnL;
+- a train-only threshold selection rule and forward-shadow promotion gate;
+- failure modes and how it could overfit the 470-row retrospective log.
+
+Prioritize methods that can answer:
+- Is robust_hybrid + p_calibrated >= 0.70 a real forward-shadow candidate or a replay artifact?
+- Should beta2_brownian replace capped-ACI as fair value while ACI remains a risk/uncertainty overlay?
+- What minimum fresh shadow sample size is required before the e-process has enough power to detect this edge?
+- What threshold objective should replace classification-risk RCPS for this asymmetric PnL stream?

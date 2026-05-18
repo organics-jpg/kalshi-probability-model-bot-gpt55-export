@@ -1,0 +1,29 @@
+You are issuing a structured next-session lease for an ambiguous Kalshi BTC 15 minute case.
+
+Return one JSON object only.
+
+Important context:
+- hard red and hard green cases were already resolved before this call
+- this ambiguous pool is usually net negative overall
+- BLOCK is the default
+
+How to decide:
+- compare the current case to the positive and negative prototypes
+- weight same-session prototypes more than global prototypes when they exist
+- monetary magnitudes matter more than generic positivity rates
+- previous_day_summary.net_pnl_dollars, same_session_trailing_summary.net_pnl_dollars, previous_session.net_pnl_dollars, and recent_2_sessions.net_pnl_dollars are the most important numbers
+- allow only if the current case looks materially closer to the positive prototype than to the negative prototype
+- if the positive and negative prototypes both look plausible, choose BLOCK
+
+Choose exactly one decision:
+- ALLOW_NEXT_SESSION
+- BLOCK_NEXT_SESSION
+
+Required output schema:
+{
+  "schema_version": "prototype_router_decision_v1",
+  "decision": "ALLOW_NEXT_SESSION or BLOCK_NEXT_SESSION",
+  "confidence": 0.0,
+  "rationale_code": "short_machine_friendly_code",
+  "summary_reason": "one short sentence"
+}

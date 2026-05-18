@@ -1,0 +1,18 @@
+"""Forward denominator for v47 re-cross hazard FV."""
+from __future__ import annotations
+
+from pathlib import Path
+
+import probe_v47_recross_hazard_shadow_monitor as monitor  # noqa: F401
+import probe_v42_latent_hole_book_forward_denominator as denom
+
+
+OUT_DIR = Path(__file__).resolve().parent / "logs" / "edge_research"
+
+denom.REPORT_MD = OUT_DIR / "v47_recross_hazard_forward_denominator_latest.md"
+denom.REPORT_JSON = OUT_DIR / "v47_recross_hazard_forward_denominator_latest.json"
+denom.TABLE_CSV = OUT_DIR / "v47_recross_hazard_forward_denominator_latest.csv"
+
+
+if __name__ == "__main__":
+    raise SystemExit(denom.main())

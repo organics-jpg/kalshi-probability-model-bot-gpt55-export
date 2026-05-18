@@ -1,0 +1,24 @@
+# Particle Replay Report
+
+- candidate_count: 4512
+- source_candidate_count: 4512
+- skipped_unlabeled_count: 0
+- denominator_scope: all_labeled_candidates
+- selected_count: 4379
+- all_candidate_denominator: True
+- total_counterfactual_pnl_cents: -2384.0000
+- avg_selected_pnl_cents: -0.5444
+- particle_brier: 0.166918
+- brownian_brier: 0.166997
+- market_brier: 0.127912
+- current_calibrated_brier: 0.122272
+- particle_log_loss: 0.516681
+- brownian_log_loss: 0.516914
+- market_log_loss: 0.386150
+- current_calibrated_log_loss: 0.374592
+- particle_beats_brownian: True
+- particle_beats_market: False
+- particle_beats_current_calibrated: False
+- ev_rank_correlation_sign: 0.170948
+- top_ev_bucket_pnl_cents: -6.2225
+- shadow_counterfactual_positive: False
