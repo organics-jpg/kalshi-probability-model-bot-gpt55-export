@@ -1,0 +1,34 @@
+2026-05-07 22:02:27,074 | INFO | Starting WS bot. run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc dry_run=False base_url=https://api.elections.kalshi.com/trade-api/v2 ws_url=wss://api.elections.kalshi.com/trade-api/ws/v2 series=KXBTC15M
+2026-05-07 22:02:28,385 | INFO | Watching market KXBTC15M-26MAY072215-15 close_time=2026-05-08T02:15:00Z status=active strike=79728.40 run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc
+2026-05-07 22:02:28,396 | INFO | Heartbeat | watch=KXBTC15M-26MAY072215-15 yes_bid=None yes_ask=None no_bid=None no_ask=None book_ready=False position=False pending=False dry_run=False trust=cold run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc
+2026-05-07 22:02:28,528 | INFO | Mushroom v28 BTC tick stream connected | source=coinbase url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:02:28,536 | INFO | WS connected for KXBTC15M-26MAY072215-15
+2026-05-07 22:02:28,566 | INFO | WS subscribed payload: {'type': 'subscribed', 'id': 1, 'msg': {'channel': 'ticker', 'sid': 1}}
+2026-05-07 22:02:28,567 | INFO | WS subscribed payload: {'type': 'subscribed', 'id': 1, 'msg': {'channel': 'orderbook_delta', 'sid': 2}}
+2026-05-07 22:02:28,569 | INFO | Orderbook snapshot ready for KXBTC15M-26MAY072215-15
+2026-05-07 22:02:32,406 | INFO | Mushroom v28 BTC REST fallback refreshed stale tick | previous_age_ms=3016.0 threshold_ms=3000.0 source=coinbase_spot_rest
+2026-05-07 22:02:39,472 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=6687.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=binance_book_ticker next_url=wss://stream.binance.us:9443/ws/btcusdt@bookTicker
+2026-05-07 22:02:39,878 | INFO | Mushroom v28 BTC tick stream connected | source=binance_book_ticker url=wss://stream.binance.us:9443/ws/btcusdt@bookTicker
+2026-05-07 22:02:43,056 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=3047.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=binance_trade next_url=wss://stream.binance.us:9443/ws/btcusdt@trade
+2026-05-07 22:02:48,073 | INFO | Heartbeat | watch=KXBTC15M-26MAY072215-15 yes_bid=9 yes_ask=10 no_bid=90 no_ask=91 book_ready=True position=False pending=False dry_run=False trust=synced run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc
+2026-05-07 22:02:48,394 | INFO | Mushroom v28 BTC tick stream connected | source=binance_trade url=wss://stream.binance.us:9443/ws/btcusdt@trade
+2026-05-07 22:02:48,486 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=5125.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=coinbase next_url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:02:53,663 | INFO | Mushroom v28 BTC tick stream connected | source=coinbase url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:02:54,129 | INFO | Mushroom v28 BTC REST fallback refreshed stale tick | previous_age_ms=5109.0 threshold_ms=3000.0 source=coinbase_spot_rest
+2026-05-07 22:02:57,665 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=3063.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=binance_book_ticker next_url=wss://stream.binance.us:9443/ws/btcusdt@bookTicker
+2026-05-07 22:02:58,046 | INFO | Mushroom v28 BTC tick stream connected | source=binance_book_ticker url=wss://stream.binance.us:9443/ws/btcusdt@bookTicker
+2026-05-07 22:03:03,097 | INFO | Heartbeat | watch=KXBTC15M-26MAY072215-15 yes_bid=11 yes_ask=13 no_bid=87 no_ask=89 book_ready=True position=False pending=False dry_run=False trust=synced run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc
+2026-05-07 22:03:13,434 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=3047.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=binance_trade next_url=wss://stream.binance.us:9443/ws/btcusdt@trade
+2026-05-07 22:03:18,443 | INFO | Heartbeat | watch=KXBTC15M-26MAY072215-15 yes_bid=17 yes_ask=18 no_bid=82 no_ask=83 book_ready=True position=False pending=False dry_run=False trust=synced run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc
+2026-05-07 22:03:18,801 | INFO | Mushroom v28 BTC tick stream connected | source=binance_trade url=wss://stream.binance.us:9443/ws/btcusdt@trade
+2026-05-07 22:03:19,075 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=5109.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=coinbase next_url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:03:24,303 | INFO | Mushroom v28 BTC tick stream connected | source=coinbase url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:03:25,312 | INFO | Mushroom v28 BTC REST fallback refreshed stale tick | previous_age_ms=5125.0 threshold_ms=3000.0 source=coinbase_spot_rest
+2026-05-07 22:03:29,128 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=3016.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=binance_book_ticker next_url=wss://stream.binance.us:9443/ws/btcusdt@bookTicker
+2026-05-07 22:03:29,597 | INFO | Mushroom v28 BTC tick stream connected | source=binance_book_ticker url=wss://stream.binance.us:9443/ws/btcusdt@bookTicker
+2026-05-07 22:03:34,191 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=3062.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=binance_trade next_url=wss://stream.binance.us:9443/ws/btcusdt@trade
+2026-05-07 22:03:39,203 | INFO | Heartbeat | watch=KXBTC15M-26MAY072215-15 yes_bid=11 yes_ask=12 no_bid=88 no_ask=89 book_ready=True position=False pending=False dry_run=False trust=synced run_id=44094e8b-f9c7-4610-ac87-a32a9c8f15cc
+2026-05-07 22:03:39,595 | INFO | Mushroom v28 BTC tick stream connected | source=binance_trade url=wss://stream.binance.us:9443/ws/btcusdt@trade
+2026-05-07 22:03:40,083 | WARNING | Mushroom v28 BTC tick stream stale. Restarting | age_ms=5125.0 threshold_ms=3000.0 source=coinbase_spot_rest next_source=coinbase next_url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:03:45,247 | INFO | Mushroom v28 BTC tick stream connected | source=coinbase url=wss://ws-feed.exchange.coinbase.com
+2026-05-07 22:03:46,307 | INFO | Mushroom v28 BTC REST fallback refreshed stale tick | previous_age_ms=5109.0 threshold_ms=3000.0 source=coinbase_spot_rest

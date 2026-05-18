@@ -1,0 +1,76 @@
+2026-05-10 19:33:37.813 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 591, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 6563, in <module>
+    dataset_options = discover_datasets()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 639, in discover_datasets
+    current_tag = current_strategy_tag()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 262, in current_strategy_tag
+    current_dataset = resolve_current_live_dataset()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 237, in resolve_current_live_dataset
+    return build_dataset_record(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 216, in build_dataset_record
+    paths = dataset_paths(canonical, log_source_tag=log_source_tag)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dataset_paths() got an unexpected keyword argument 'log_source_tag'
+Task exception was never retrieved
+future: <Task finished name='Task-4111' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\tornado\websocket.py:1086> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\tornado\websocket.py", line 1088, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\tornado\websocket.py", line 1090, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py:5325: FutureWarning:
+
+The default value of observed=False is deprecated and will change to observed=True in a future version of pandas. Specify observed=False to silence this warning and retain the current behavior
+
+C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py:5325: FutureWarning:
+
+The default value of observed=False is deprecated and will change to observed=True in a future version of pandas. Specify observed=False to silence this warning and retain the current behavior
+
+2026-05-10 20:12:38.128 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\runtime\fragment.py", line 246, in wrapped_fragment
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 7550, in live_dashboard
+    render_btc_day_map_tab(trades, market_results)
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 5887, in render_btc_day_map_tab
+    st.dataframe(table[show_cols], width="stretch", hide_index=True)
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\runtime\metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\elements\arrow.py", line 556, in dataframe
+    proto.width = width
+    ^^^^^^^^^^^
+TypeError: 'str' object cannot be interpreted as an integer
+2026-05-10 20:12:46.321 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\runtime\fragment.py", line 246, in wrapped_fragment
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 7550, in live_dashboard
+    render_btc_day_map_tab(trades, market_results)
+  File "C:\Users\organ\Desktop\KALSHI PROBABILITY MODEL BOT\dashboard.py", line 5887, in render_btc_day_map_tab
+    st.dataframe(table[show_cols], width="stretch", hide_index=True)
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\runtime\metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\organ\AppData\Roaming\Python\Python312\site-packages\streamlit\elements\arrow.py", line 556, in dataframe
+    proto.width = width
+    ^^^^^^^^^^^
+TypeError: 'str' object cannot be interpreted as an integer
