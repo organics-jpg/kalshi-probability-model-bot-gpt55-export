@@ -1,0 +1,129 @@
+name: BTC15M immutable tape inventory
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.issue.title, '[btc15m-data-inventory]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-lfs
+          python -m pip install --upgrade pip
+          python -m pip install pandas pyarrow
+      - name: Clone immutable public capture source
+        run: |
+          GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/Shad0wSeven/btpred-data.git source
+          cd source
+          git rev-parse HEAD | tee ../source_commit.txt
+          git lfs install --local
+          git lfs pull --include='kalshi_15m_live/*.jsonl.gz,kalshi_perp/*.jsonl.gz,kalshi_ticks/*.csv.gz,kalshi_ticks/*.json,spot_1s/*.csv.gz' --exclude=''
+      - name: Inventory files and schemas
+        run: |
+          cat > /tmp/inventory.py <<'PY'
+          from __future__ import annotations
+          import csv, gzip, hashlib, json
+          from collections import Counter
+          from pathlib import Path
+          from typing import Any
+
+          root = Path('source')
+          out = Path('research_compute_output')
+          out.mkdir(exist_ok=True)
+
+          def sha256(path: Path) -> str:
+              h = hashlib.sha256()
+              with path.open('rb') as f:
+                  for b in iter(lambda: f.read(1024 * 1024), b''):
+                      h.update(b)
+              return h.hexdigest()
+
+          records: list[dict[str, Any]] = []
+          schemas: dict[str, Any] = {}
+          patterns = [
+              'kalshi_15m_live/*.jsonl.gz',
+              'kalshi_perp/*.jsonl.gz',
+              'kalshi_ticks/*.csv.gz',
+              'kalshi_ticks/*.json',
+              'spot_1s/*.csv.gz',
+          ]
+          files = sorted({p for pat in patterns for p in root.glob(pat) if p.is_file()})
+          for path in files:
+              rel = str(path.relative_to(root))
+              rec: dict[str, Any] = {
+                  'path': rel,
+                  'bytes': path.stat().st_size,
+                  'sha256': sha256(path),
+              }
+              if path.name.endswith('.jsonl.gz'):
+                  types = Counter(); rows = 0; min_ns = None; max_ns = None; first = None
+                  with gzip.open(path, 'rt', encoding='utf-8', errors='strict') as f:
+                      for line in f:
+                          obj = json.loads(line)
+                          rows += 1
+                          typ = str(obj.get('type', ''))
+                          types[typ] += 1
+                          if first is None:
+                              first = obj
+                          ns = obj.get('received_ns')
+                          if isinstance(ns, int):
+                              min_ns = ns if min_ns is None else min(min_ns, ns)
+                              max_ns = ns if max_ns is None else max(max_ns, ns)
+                  rec.update({'rows': rows, 'types': dict(types), 'min_received_ns': min_ns, 'max_received_ns': max_ns})
+                  if first is not None:
+                      schemas[rel] = {'top_keys': sorted(first.keys()), 'sample': first}
+              elif path.name.endswith('.csv.gz'):
+                  rows = 0; header = None; first_row = None
+                  with gzip.open(path, 'rt', encoding='utf-8', errors='replace', newline='') as f:
+                      reader = csv.reader(f)
+                      try:
+                          header = next(reader)
+                      except StopIteration:
+                          header = []
+                      for row in reader:
+                          rows += 1
+                          if first_row is None:
+                              first_row = row
+                  rec.update({'rows': rows, 'columns': header})
+                  schemas[rel] = {'columns': header, 'first_row': first_row}
+              elif path.suffix == '.json':
+                  obj = json.loads(path.read_text())
+                  rec['json_type'] = type(obj).__name__
+                  schemas[rel] = obj
+              records.append(rec)
+
+          summary = {
+              'source_commit': Path('source_commit.txt').read_text().strip(),
+              'file_count': len(records),
+              'total_bytes': sum(r['bytes'] for r in records),
+              'files': records,
+          }
+          (out / 'inventory.json').write_text(json.dumps(summary, indent=2, sort_keys=True, default=str))
+          (out / 'schemas.json').write_text(json.dumps(schemas, indent=2, sort_keys=True, default=str))
+          with (out / 'inventory.csv').open('w', newline='') as f:
+              cols = ['path','bytes','sha256','rows','types','min_received_ns','max_received_ns','columns']
+              w = csv.DictWriter(f, fieldnames=cols, extrasaction='ignore')
+              w.writeheader()
+              for r in records:
+                  rr = dict(r)
+                  for k in ('types','columns'):
+                      if k in rr: rr[k] = json.dumps(rr[k], sort_keys=True)
+                  w.writerow(rr)
+          PY
+          python /tmp/inventory.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: btc15m-data-inventory
+          path: research_compute_output
+          if-no-files-found: error
+          retention-days: 30
