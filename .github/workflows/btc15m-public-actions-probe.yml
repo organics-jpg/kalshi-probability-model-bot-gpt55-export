@@ -1,0 +1,29 @@
+name: BTC15M public Actions probe
+
+on:
+  push:
+    branches: [research/btc15m-public-actions-probe-20260812]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/btc15m-public-actions-probe-20260812
+          fetch-depth: 0
+      - name: Persist probe
+        run: |
+          mkdir -p research/results
+          printf '{"actor":"%s","run_id":"%s","status":"ok"}\n' "$GITHUB_ACTOR" "$GITHUB_RUN_ID" > research/results/public_actions_probe.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/results/public_actions_probe.json
+          git commit -m 'research: persist public Actions probe'
+          git push origin HEAD:research/btc15m-public-actions-probe-20260812
