@@ -3,6 +3,8 @@ name: BTC15M public Actions probe
 on:
   push:
     branches: [research/btc15m-public-actions-probe-20260812]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
