@@ -35,3 +35,42 @@ jobs:
           name: btc15m-public-compute-probe
           path: research_compute_output/probe.json
           if-no-files-found: error
+
+  single-cycle:
+    if: github.event_name == 'issues' && contains(github.event.issue.title, '[btc15m-single-cycle-price-priority]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y git-lfs
+          git lfs install
+          python -m pip install --upgrade pip
+          python -m pip install pandas numpy pyarrow
+      - name: Fetch immutable Vela development corpus
+        env:
+          VELA_COMMIT: ecade821de06c98a6e025229c5554404236345e1
+          GIT_LFS_SKIP_SMUDGE: "1"
+        run: |
+          git clone --filter=blob:none https://github.com/routsiddharth/vela.git vela
+          cd vela
+          git checkout "$VELA_COMMIT"
+          test "$(git rev-parse HEAD)" = "$VELA_COMMIT"
+          git lfs pull --include='backtest/data/markets.parquet,backtest/data/trades.parquet' --exclude=''
+          ls -lh backtest/data/markets.parquet backtest/data/trades.parquet
+          git rev-parse HEAD > ../vela_commit.txt
+      - name: Run single-cycle development and gated validation
+        run: |
+          mkdir -p research_compute_output/single-cycle
+          sha256sum research/single_cycle_price_priority.py > research_compute_output/single-cycle/scorer_sha256.txt
+          cp vela_commit.txt research_compute_output/single-cycle/
+          python -u research/single_cycle_price_priority.py --vela vela --output research_compute_output/single-cycle
+      - uses: actions/upload-artifact@v4
+        with:
+          name: btc15m-single-cycle-price-priority
+          path: research_compute_output/single-cycle
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 30
