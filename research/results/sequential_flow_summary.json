@@ -1,0 +1,93 @@
+{
+  "counts": {
+    "candidate_count": 5544,
+    "decision_rows": 28688,
+    "nonzero_both_count": 5320,
+    "passer_count": 0,
+    "source_markets": 232,
+    "tick_markets": 288,
+    "tick_rows": 46944
+  },
+  "frozen_spec": {
+    "annual_denominator": 35040,
+    "edge_thresholds": [0.015, 0.02, 0.03, 0.04, 0.05, 0.07, 0.1],
+    "latencies": [1.0, 2.0, 3.0],
+    "lockbox_days": ["2026-08-09", "2026-08-10"],
+    "lockbox_opened": false,
+    "max_spread": 0.06,
+    "qty": 100,
+    "schedules": [
+      ["seq600_60", 600, 60],
+      ["seq300_30", 300, 30],
+      ["anchor600", 600, 600],
+      ["anchor300", 300, 300],
+      ["anchor120", 120, 120],
+      ["anchor60", 60, 60]
+    ],
+    "stale_tolerance": 2.0,
+    "stress": 0.01,
+    "train_days": ["2026-07-31", "2026-08-01"],
+    "validation_days": ["2026-08-02", "2026-08-03"]
+  },
+  "mechanism": "sequential informed-flow posterior correction",
+  "passer_count": 0,
+  "provenance": {
+    "discovery_script_sha256": "9a18967bca3385105919f618ebeee70874e578273b033ef5b6b775dca600185d",
+    "feature_artifact_digest": "sha256:610fd3a68838058dc6b4a7bf9fcf6c7a4a0e8d1d9e09801e89e2fd8bfa911067",
+    "feature_artifact_id": 9169858469,
+    "feature_builder_commit": "960f91a206e58f88e78669b09e0b6716078f904e",
+    "full_result_sha256": "5f32a286d687e2099a45dc3e1d3caf198194e7d1af16703134680f1b538b0261",
+    "lockbox_labels_sealed_sha256": "944a7506fd522bba3ed3f474da45cd87dcf9c4e4118e2468c7c5b2b0b4d8d494",
+    "lockbox_opened": false,
+    "report_sha256": "83b461427e53ae7558e1d144c6e60ebea53a3be6e3e6e56debc49cf2143c5f65",
+    "source_data_commit": "e45c6a9b851e2f61872b1e2b36b354b56eceaa70"
+  },
+  "spec_sha256": "2c229db38ae3c467e4f55db7115eec082bb5a5aeacd16524327eac9a4c67239e",
+  "status": "closed_without_lockbox_touch",
+  "strongest_min_point_estimate": {
+    "candidate": "gauss:z_30:scale=0.5:seq600_60:edge=0.07:lat=2s",
+    "train": {
+      "annual_after_best_2h_removed": 48949.65540618557,
+      "annual_after_best_day_removed": 28261.60592164949,
+      "annual_after_top10pct_winners_removed": -18611.839175257704,
+      "annual_net": 133479.13994226806,
+      "chronological_half_annual": [312608.3588571429, -49381.93770000001],
+      "lcb_annual_2h_cluster_t": -179291.35699036779,
+      "net_pnl": 369.50561000000005,
+      "source_markets": 97,
+      "trades": 53
+    },
+    "validation": {
+      "annual_after_best_2h_removed": 31442.559999999994,
+      "annual_after_best_day_removed": -35187.94666666666,
+      "annual_after_top10pct_winners_removed": -16619.34222222223,
+      "annual_net": 77729.10222222221,
+      "chronological_half_annual": [-57068.82352941176, 214538.93731343278],
+      "lcb_annual_2h_cluster_t": -92132.77152677916,
+      "net_pnl": 299.46999999999997,
+      "source_markets": 135,
+      "trades": 49
+    }
+  },
+  "validation_leader": {
+    "candidate": "beta10:cap=30:anchor120:edge=0.015:lat=1s",
+    "train": {
+      "annual_net": -3734.9786226804076,
+      "lcb_annual_2h_cluster_t": -138526.56601232392,
+      "net_pnl": -10.339409999999987,
+      "source_markets": 97,
+      "trades": 42
+    },
+    "validation": {
+      "annual_after_best_2h_removed": 72922.19043555556,
+      "annual_after_best_day_removed": 42691.15530666667,
+      "annual_after_top10pct_winners_removed": 13852.537102222228,
+      "annual_net": 101810.7237688889,
+      "chronological_half_annual": [117369.73150588236, 86019.49203582092],
+      "lcb_annual_2h_cluster_t": 2562.990455578116,
+      "net_pnl": 392.25022,
+      "source_markets": 135,
+      "trades": 45
+    }
+  }
+}
