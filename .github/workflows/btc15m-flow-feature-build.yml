@@ -1,0 +1,64 @@
+name: BTC15M sequential flow feature build
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.issue.title, '[btc15m-flow-feature-build]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y git-lfs
+          git lfs install
+          python -m pip install --upgrade pip
+          python -m pip install pandas numpy pyarrow
+
+      - name: Fetch immutable public historical tape
+        env:
+          GIT_LFS_SKIP_SMUDGE: "1"
+          SOURCE_COMMIT: e45c6a9b851e2f61872b1e2b36b354b56eceaa70
+        run: |
+          git clone --depth 1 --filter=blob:none https://github.com/Shad0wSeven/btpred-data.git source
+          cd source
+          test "$(git rev-parse HEAD)" = "$SOURCE_COMMIT"
+          git lfs pull --include='kalshi_15m_live/*.jsonl.gz,kalshi_perp/*.jsonl.gz,kalshi_ticks/KXBTC15M-1s-*.csv.gz' --exclude=''
+          git rev-parse HEAD > ../source_commit.txt
+
+      - name: Build label-free live flow panel and separate training tape
+        run: |
+          mkdir -p research_compute_output
+          cp source_commit.txt research_compute_output/
+          sha256sum research/build_flow_feature_panel.py > research_compute_output/builder_sha256.txt
+          python research/build_flow_feature_panel.py --root source --output research_compute_output
+
+      - name: Enforce lockbox label firewall
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          p = pd.read_parquet('research_compute_output/live_flow_features.parquet')
+          forbidden = {'outcome_yes', 'market_result', 'result', 'explicit_result'} & set(p.columns)
+          if forbidden:
+              raise SystemExit(f'live feature panel leaked labels: {sorted(forbidden)}')
+          if p.duplicated(['ticker', 'received_ns']).any():
+              raise SystemExit('duplicate live snapshot keys')
+          print({'rows': len(p), 'markets': p.ticker.nunique(), 'columns': len(p.columns)})
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: btc15m-sequential-flow-features
+          path: research_compute_output
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 30
